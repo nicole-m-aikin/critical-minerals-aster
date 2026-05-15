@@ -3,3 +3,7 @@ data/*.csv
 data/*.h5
 __pycache__/
 .ipynb_checkpoints/
+data/mrds.csv
+data/mrds-csv.zip
+data/mrds.met
+data/mrds_mcdermitt.geojson
