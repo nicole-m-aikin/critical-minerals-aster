@@ -11,6 +11,10 @@ data/mrds.csv
 data/mrds-csv.zip
 data/mrds.met
 data/mrds_mcdermitt.geojson
+results/*.csv
+results/*.parquet
+results/*.json
+!results/.gitkeep
 
 # Optional: large per-site generated outputs (uncomment if you do not want them in git)
 # figures/sites/

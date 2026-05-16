@@ -1,0 +1,4 @@
+# Registry of study sites (one YAML per site under sites/)
+sites:
+  - mcdermitt
+  - silver_peak

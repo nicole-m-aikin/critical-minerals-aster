@@ -103,7 +103,11 @@ critical-minerals-aster/
 │   ├── 01_data_download.ipynb      # EarthData auth, ASTER download
 │   ├── 02_band_ratios.ipynb        # TIR band ratios, false-color composite
 │   ├── 03_classification.ipynb     # anomaly classification, vectorization
-│   └── 04_deposit_overlay.ipynb   # MRDS spatial join, commodity analysis
+│   ├── 04_deposit_overlay.ipynb   # MRDS spatial join, commodity analysis
+│   └── 05_national_synthesis.ipynb # aggregate multi-site results
+├── scripts/
+│   └── synthesize_national.py
+├── results/                        # per-site CSV summaries (generated)
 ├── tests/                          # lightweight unit tests
 ├── data/                           # not committed (downloaded by notebooks)
 ├── figures/                        # output maps
@@ -137,9 +141,40 @@ Or follow the manual dependency list below, then from the repo root run `pip ins
 
 Create a free account at [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov). The notebooks use `earthaccess.login(strategy="interactive")` to authenticate on first run.
 
-### 4. Run notebooks in order
+### 4. Run the pipeline
 
-Run `00` through `04` in sequence. Notebook `01` downloads ~200MB of ASTER data to `data/aster/`.
+**CLI (recommended after ASTER data exists):**
+
+```bash
+# Process McDermitt using cached data/aster/ rasters
+python -m critical_minerals_aster run --site mcdermitt
+
+# Download from EarthData then process
+python -m critical_minerals_aster run --site mcdermitt --download
+
+# All sites in sites/index.yaml (skips sites without data)
+python -m critical_minerals_aster run-batch --all-sites
+
+# Aggregate results/*_summary.csv
+python -m critical_minerals_aster synthesize
+```
+
+Outputs: `data/vectors/strong_anomaly_zones.geojson`, `figures/02_classification.png`, `results/{site_id}_summary.csv`, `results/{site_id}_provenance.json`.
+
+**Notebooks:** Run `00` through `04` in sequence for interactive QC. Notebook `01` downloads ~200MB of ASTER data to `data/aster/`. Notebook `05_national_synthesis.ipynb` compares sites after batch runs.
+
+### Multi-site configuration
+
+Each study area has a YAML under `sites/` (see `sites/mcdermitt.yaml`). Set `layout: nested` for `data/sites/{id}/` paths. Set `granule_id: null` to auto-select the best ASTER scene; set an explicit id for reproducibility. Optional `structure_layers` accept GeoJSON/Shapefile paths for fault/structure proximity analysis.
+
+---
+
+## Interpretation limits
+
+- **TIR-only:** SWIR clay/argillic mapping is not available for all LP DAAC v004 granules; this workflow uses B10–B14 only.
+- **Scene-relative thresholds:** Percentile classification is per-scene; cross-site comparison of raw scores is not meaningful—use standardized hit rates and zone areas instead.
+- **MRDS uncertainty:** Deposit locations are report-derived and may be displaced from true geology.
+- **Structure vs alteration:** Low hit rates for structurally controlled commodities (e.g. Hg along faults) are expected when comparing point deposits to broad alteration polygons—use `structure_layers` when testing structural controls.
 
 ---
 

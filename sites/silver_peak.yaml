@@ -1,0 +1,18 @@
+# Silver Peak lithium district, NV — second US test site (nested layout)
+id: silver_peak
+name: "Silver Peak, NV"
+bbox_wgs84: [-117.85, 37.65, -117.45, 38.05]
+granule_id: null
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+# Optional structural geology layers (GeoJSON/Shapefile paths relative to repo root)
+structure_layers: []

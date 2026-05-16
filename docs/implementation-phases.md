@@ -39,4 +39,4 @@ The original multi-site plan is split into **independent milestones**. Complete 
 
 ---
 
-**Current status:** Phases **A** and **B** are implemented in-repo (site YAML, `src/critical_minerals_aster/`, notebooks 02–04 wired to the library where noted); **C–F** remain.
+**Current status:** Phases **A–F** implemented. Use `python -m critical_minerals_aster run --site mcdermitt` for batch processing; `synthesize` for national tables; optional `structure_layers` in site YAML.

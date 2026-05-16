@@ -19,6 +19,10 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
+parquet = ["pyarrow>=14.0"]
+
+[project.scripts]
+critical-minerals-aster = "critical_minerals_aster.__main__:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]

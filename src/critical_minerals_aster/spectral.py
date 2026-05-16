@@ -1,13 +1,119 @@
-"""ASTER TIR band I/O and alteration ratios."""
+"""ASTER TIR band I/O, granule selection, and alteration ratios."""
 
 from __future__ import annotations
 
 import os
+import re
 from pathlib import Path
+from typing import Any, Sequence
 
 import numpy as np
 import rasterio
 from rasterio.profiles import Profile
+from shapely.geometry import Polygon, box
+
+from critical_minerals_aster.config import BBox
+
+REQUIRED_TIR_BANDS = (10, 11, 12, 13, 14)
+_GRANULE_ID_RE = re.compile(r"(AST_L1T_\d+_\d+)")
+
+
+def extract_granule_id(granule: Any) -> str:
+    """Parse AST_L1T granule id prefix from earthaccess data links."""
+    for link in granule.data_links():
+        match = _GRANULE_ID_RE.search(str(link))
+        if match:
+            return match.group(1)
+    raise ValueError("Could not determine granule id from data links")
+
+
+def _granule_footprint(granule: Any) -> Polygon:
+    """Footprint polygon from CMR UMM metadata (lon/lat order)."""
+    points = granule["umm"]["SpatialExtent"]["HorizontalSpatialDomain"]["Geometry"][
+        "GPolygons"
+    ][0]["Boundary"]["Points"]
+    lons = [float(p["Longitude"]) for p in points]
+    lats = [float(p["Latitude"]) for p in points]
+    poly = Polygon(zip(lons, lats))
+    if not poly.is_valid:
+        poly = poly.buffer(0)
+    return poly
+
+
+def _bbox_coverage_fraction(bbox_wgs84: BBox, footprint: Polygon) -> float:
+    """Fraction of study bbox area intersecting the granule footprint (0–1)."""
+    lon0, lat0, lon1, lat1 = bbox_wgs84
+    study = box(lon0, lat0, lon1, lat1)
+    if study.area == 0:
+        return 0.0
+    return float(study.intersection(footprint).area / study.area)
+
+
+def _tir_band_count(granule: Any, bands: Sequence[int] = REQUIRED_TIR_BANDS) -> int:
+    """Count TIR band files present in granule data links."""
+    urls = [str(u).upper() for u in granule.data_links()]
+    return sum(
+        1 for band in bands if any(f"TIR_B{band}" in url for url in urls)
+    )
+
+
+def score_granule(granule: Any, bbox_wgs84: BBox) -> tuple[float, float, int]:
+    """
+    Score one granule for ranking.
+
+    Returns (coverage_fraction, composite_score, tir_band_count).
+    Composite favors bbox coverage, then band completeness.
+    """
+    footprint = _granule_footprint(granule)
+    coverage = _bbox_coverage_fraction(bbox_wgs84, footprint)
+    band_count = _tir_band_count(granule)
+    composite = coverage * 10.0 + band_count
+    return coverage, composite, band_count
+
+
+def select_granule(
+    results: Sequence[Any],
+    bbox_wgs84: BBox,
+    granule_id_override: str | None = None,
+) -> Any:
+    """
+    Choose the best earthaccess ASTER L1T granule for a study bbox.
+
+    If ``granule_id_override`` is set (non-empty), return the matching granule
+    from ``results``. Otherwise rank by bbox coverage and TIR B10–B14 availability.
+    """
+    if not results:
+        raise ValueError("No granules in search results")
+
+    if granule_id_override:
+        for granule in results:
+            granule_id = extract_granule_id(granule)
+            if granule_id == granule_id_override or granule_id_override in granule_id:
+                return granule
+        raise ValueError(
+            f"granule_id override {granule_id_override!r} not found in search results"
+        )
+
+    best: Any | None = None
+    best_score = -1.0
+    for granule in results:
+        try:
+            band_count = _tir_band_count(granule)
+        except (AttributeError, TypeError):
+            continue
+        if band_count == 0:
+            continue
+        try:
+            _, composite, _ = score_granule(granule, bbox_wgs84)
+        except (KeyError, IndexError, TypeError, ValueError):
+            continue
+        if composite > best_score:
+            best_score = composite
+            best = granule
+
+    if best is None:
+        raise ValueError("No granule with TIR bands found in search results")
+    return best
 
 
 def band_ratio(a: np.ndarray, b: np.ndarray) -> np.ndarray:
