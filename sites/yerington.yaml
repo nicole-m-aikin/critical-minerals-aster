@@ -1,0 +1,17 @@
+# Yerington district, NV — porphyry Cu + Cu skarn; tilted cross-section exposed at surface
+id: yerington
+name: "Yerington, NV"
+bbox_wgs84: [-119.3, 38.8, -118.8, 39.2]
+granule_id: null
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

@@ -1,0 +1,17 @@
+# Oatman district, NV/AZ — low-sulfidation epithermal Au/Ag; hyper-arid Mojave
+id: oatman
+name: "Oatman, NV/AZ"
+bbox_wgs84: [-114.7, 34.8, -114.0, 35.4]
+granule_id: null
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

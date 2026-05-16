@@ -1,0 +1,17 @@
+# Marysvale volcanic field, UT — epithermal Au + large alunite deposits + minor uranium
+id: marysvale
+name: "Marysvale, UT"
+bbox_wgs84: [-112.5, 38.2, -111.8, 38.8]
+granule_id: null
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-06-01"
+  end: "2023-09-30"
+
+structure_layers: []

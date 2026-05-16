@@ -1,0 +1,18 @@
+# Goldfield–Cuprite district, NV — high-sulfidation epithermal Au/Ag
+# Best-documented ASTER TIR alteration target in western US (Rowan & Mars 2003)
+id: goldfield
+name: "Goldfield–Cuprite, NV"
+bbox_wgs84: [-118.0, 37.6, -117.4, 38.0]
+granule_id: null
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []
