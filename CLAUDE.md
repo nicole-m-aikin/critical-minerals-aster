@@ -91,8 +91,36 @@ Classification uses per-scene percentile thresholds (default 70th/90th). Combine
 
 - `data/vectors/strong_anomaly_zones.geojson` — vectorized strong anomaly polygons
 - `figures/0*.png` — band ratio maps, classification maps, deposit overlay
-- `results/{site_id}_summary.csv` — MRDS hit rates by commodity
+- `results/{site_id}_summary.csv` — MRDS hit rates by commodity, Earth MRI category, and mineral system
 - `results/{site_id}_provenance.json` — granule id, git commit, package versions
+
+### Summary CSV row types
+
+Each `results/*_summary.csv` contains four `row_type` values:
+
+| `row_type` | Key column | Description |
+|---|---|---|
+| `site` | — | Site-level totals |
+| `commodity` | `commodity_group` | Simplified commodity buckets (Gold/Silver, Uranium, etc.) |
+| `earth_mri` | `earth_mri_category` | 8 Earth MRI priority groups (Energy, REE, Battery Metals…) |
+| `mineral_system` | `mineral_system` | One of 24 OFR 2020-1042 mineral systems (Placer, Porphyry Cu-Mo-Au…) |
+
+### Earth MRI / mineral-system classification (`mrds.py`)
+
+Two independent classifiers operate on each MRDS row:
+
+**`reclassify_mrds_earth_mri(df)`** — adds `earth_mri_category` from `commod1`.
+Priority: Energy > REE > Battery Metals > PGM > Base Metals > Specialty/High-Tech > Gold/Silver > Industrial > Non-Critical.
+Reflects the 2022 Final List of 50 Critical Minerals (includes scandium, cesium, rubidium, arsenic vs. the 2018 list).
+
+**`reclassify_mrds_mineral_system(df)`** — adds `mineral_system` from a three-field cascade:
+  1. `model` field (USGS deposit-model code string, e.g. `"53: Porphyry Cu"`) — most specific
+  2. `dep_type` field (e.g. `"Placer"`, `"Stratabound"`)
+  3. `commod1` field — broadest fallback
+
+Coverage: ~84% of critical-mineral MRDS deposits are assigned a system; bulk non-critical (sand/gravel/stone) remain `"Unknown System"`.
+
+**`is_critical_mineral(earth_mri_category)`** — returns `True` for all categories except `"Non-Critical"`.
 
 ### EarthData / ASTER data
 
