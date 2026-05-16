@@ -21,7 +21,9 @@ from critical_minerals_aster.metrics import (
 )
 from critical_minerals_aster.mrds import (
     filter_mrds_bbox,
+    is_critical_mineral,
     mrds_to_points_gdf,
+    reclassify_mrds_earth_mri,
     spatial_join_deposits_zones,
 )
 from critical_minerals_aster.paths import SitePaths, site_paths_for
@@ -60,6 +62,7 @@ __all__ = [
     "compute_site_summary",
     "extract_granule_id",
     "filter_mrds_bbox",
+    "is_critical_mineral",
     "list_site_ids",
     "load_site_by_id",
     "load_site_config",
@@ -68,6 +71,7 @@ __all__ = [
     "load_tir_band",
     "load_tir_bands_10_14",
     "mrds_to_points_gdf",
+    "reclassify_mrds_earth_mri",
     "nearest_structure_distance_m",
     "read_mrds_national",
     "run_batch",
