@@ -19,3 +19,6 @@ results/*.json
 # Optional: large per-site generated outputs (uncomment if you do not want them in git)
 # figures/sites/
 # data/sites/*/vectors/
+.DS_Store
+.netrc
+.claude/
