@@ -25,7 +25,12 @@ from critical_minerals_aster.mrds import (
     spatial_join_deposits_zones,
 )
 from critical_minerals_aster.paths import SitePaths, site_paths_for
-from critical_minerals_aster.pipeline import run_batch, run_site
+from critical_minerals_aster.pipeline import (
+    run_batch,
+    run_site,
+    save_band_ratio_figure,
+    save_composite_figure,
+)
 from critical_minerals_aster.spectral import (
     alteration_ratios,
     band_ratio,
@@ -67,6 +72,8 @@ __all__ = [
     "read_mrds_national",
     "run_batch",
     "run_site",
+    "save_band_ratio_figure",
+    "save_composite_figure",
     "score_granule",
     "search_bbox",
     "select_granule",

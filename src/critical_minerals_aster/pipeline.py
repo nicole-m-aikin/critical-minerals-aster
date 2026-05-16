@@ -55,9 +55,12 @@ def run_classification(
     np.ndarray,
     np.ndarray,
     np.ndarray,
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
 ]:
     """Classify, vectorize, return zones and class maps."""
-    b10, b11, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+    _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
         paths.aster_dir, granule_id
     )
     silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
@@ -72,7 +75,112 @@ def run_classification(
     zones = vectorize_strong_zones(
         combined, transform, crs, min_score=cp.strong_score_min
     )
-    return zones, silica_cls, carbonate_cls, mafic_cls, combined
+    return (
+        zones,
+        silica,
+        carbonate,
+        mafic,
+        silica_cls,
+        carbonate_cls,
+        mafic_cls,
+        combined,
+    )
+
+
+def save_band_ratio_figure(
+    site: SiteConfig,
+    paths: SitePaths,
+    silica: np.ndarray,
+    carbonate: np.ndarray,
+    mafic: np.ndarray,
+) -> None:
+    paths.figures_dir.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    ratios = [
+        (silica, "Silica/quartz (B13/B14)", "RdYlGn_r"),
+        (carbonate, "Carbonate/dolomite (B13/B12)", "YlOrBr"),
+        (mafic, "Mafic minerals (B12/B13)", "PuBu"),
+    ]
+    for ax, (ratio, title, cmap) in zip(axes, ratios):
+        vmin, vmax = _percentile_limits(ratio, 2, 98)
+        im = ax.imshow(
+            ratio,
+            cmap=cmap,
+            vmin=vmin,
+            vmax=vmax,
+        )
+        ax.set_title(title)
+        ax.axis("off")
+        plt.colorbar(im, ax=ax, shrink=0.8)
+    plt.suptitle(f"ASTER TIR Band Ratios — {site.name}", fontsize=13)
+    plt.tight_layout()
+    plt.savefig(
+        paths.figures_dir / "01_tir_band_ratios.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
+
+
+def _percentile_limits(
+    ratio: np.ndarray,
+    low_pct: float,
+    high_pct: float,
+) -> tuple[float | None, float | None]:
+    finite = ratio[np.isfinite(ratio)]
+    if finite.size == 0:
+        return None, None
+    return (
+        float(np.percentile(finite, low_pct)),
+        float(np.percentile(finite, high_pct)),
+    )
+
+
+def _normalize_ratio_channel(
+    ratio: np.ndarray,
+    low_pct: float,
+    high_pct: float,
+    scale: float = 1.0,
+) -> np.ndarray:
+    p_low, p_high = _percentile_limits(ratio, low_pct, high_pct)
+    if p_low is None or p_high is None or p_high == p_low:
+        return np.zeros_like(ratio, dtype=float)
+    return np.clip((ratio - p_low) / (p_high - p_low), 0, 1) * scale
+
+
+def save_composite_figure(
+    site: SiteConfig,
+    paths: SitePaths,
+    silica: np.ndarray,
+    carbonate: np.ndarray,
+    mafic: np.ndarray,
+) -> None:
+    paths.figures_dir.mkdir(parents=True, exist_ok=True)
+    rgb = np.dstack(
+        [
+            _normalize_ratio_channel(silica, 20, 80, scale=0.6),
+            _normalize_ratio_channel(carbonate, 2, 98),
+            _normalize_ratio_channel(mafic, 20, 80, scale=0.8),
+        ]
+    )
+    nan_mask = np.isnan(silica) | np.isnan(carbonate) | np.isnan(mafic)
+    rgb[nan_mask] = 0
+
+    fig, ax = plt.subplots(figsize=(8, 8))
+    ax.imshow(rgb)
+    ax.set_title(
+        f"False-color composite — {site.name}\n"
+        "Red=silica · Green=carbonate · Blue=mafic",
+        fontsize=12,
+    )
+    ax.axis("off")
+    plt.tight_layout()
+    plt.savefig(
+        paths.figures_dir / "00_composite_rgb.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+    plt.close(fig)
 
 
 def save_classification_figure(
@@ -177,13 +285,22 @@ def run_site(
     else:
         granule_id = resolve_granule_id(site, paths)
 
-    zones, silica_cls, carbonate_cls, mafic_cls, combined = run_classification(
-        site, paths, granule_id
-    )
+    (
+        zones,
+        silica,
+        carbonate,
+        mafic,
+        silica_cls,
+        carbonate_cls,
+        mafic_cls,
+        combined,
+    ) = run_classification(site, paths, granule_id)
     paths.vectors_dir.mkdir(parents=True, exist_ok=True)
     zones.to_file(paths.strong_zones_geojson, driver="GeoJSON")
 
     if not skip_figures:
+        save_composite_figure(site, paths, silica, carbonate, mafic)
+        save_band_ratio_figure(site, paths, silica, carbonate, mafic)
         save_classification_figure(
             site, paths, silica_cls, carbonate_cls, mafic_cls, combined
         )
