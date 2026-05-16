@@ -7,7 +7,12 @@ import sys
 from pathlib import Path
 
 from critical_minerals_aster.config import list_site_ids, load_site_by_id
-from critical_minerals_aster.pipeline import run_batch, run_site
+from critical_minerals_aster.paths import site_paths_for
+from critical_minerals_aster.pipeline import (
+    download_and_mosaic_aster,
+    run_batch,
+    run_site,
+)
 from critical_minerals_aster.synthesis import write_national_summary
 
 
@@ -18,12 +23,18 @@ def _repo_root() -> Path:
 def cmd_run(args: argparse.Namespace) -> int:
     repo = Path(args.repo_root) if args.repo_root else _repo_root()
     site = load_site_by_id(args.site, repo / "sites")
-    run_site(
-        site,
-        repo,
-        download=args.download,
-        skip_figures=args.skip_figures,
-    )
+    if getattr(args, "mosaic", False):
+        paths = site_paths_for(site, repo)
+        download_and_mosaic_aster(site, paths)
+        # Re-run without download so run_site picks up the freshly built mosaic.
+        run_site(site, repo, download=False, skip_figures=args.skip_figures)
+    else:
+        run_site(
+            site,
+            repo,
+            download=args.download,
+            skip_figures=args.skip_figures,
+        )
     print(f"Finished site {args.site}; outputs under {repo / 'results'}")
     return 0
 
@@ -70,6 +81,11 @@ def main(argv: list[str] | None = None) -> int:
         "--download",
         action="store_true",
         help="Download ASTER from EarthData before processing",
+    )
+    p_run.add_argument(
+        "--mosaic",
+        action="store_true",
+        help="Download ALL covering ASTER granules, merge per-band, then process",
     )
     p_run.add_argument("--skip-figures", action="store_true")
     p_run.set_defaults(func=cmd_run)

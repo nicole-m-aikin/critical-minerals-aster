@@ -42,6 +42,10 @@ def resolve_granule_id(site: SiteConfig, paths: SitePaths) -> str:
     aster_dir = paths.aster_dir
     if not aster_dir.is_dir():
         raise FileNotFoundError(f"ASTER directory not found: {aster_dir}")
+    # Check for a pre-built mosaic before scanning for individual granule files.
+    mosaic_b10 = aster_dir / f"{site.id}_mosaic_TIR_B10.tif"
+    if mosaic_b10.is_file():
+        return f"{site.id}_mosaic"
     for name in sorted(aster_dir.iterdir()):
         match = _GRANULE_ID_RE.search(name.name)
         if match and "TIR_B10" in name.name:
@@ -407,6 +411,99 @@ def download_aster(
     paths.aster_dir.mkdir(parents=True, exist_ok=True)
     earthaccess.download(target, str(paths.aster_dir))
     return granule_id
+
+
+def download_and_mosaic_aster(
+    site: SiteConfig,
+    paths: SitePaths,
+    interactive_login: bool = True,
+) -> str:
+    """Download all bbox-covering ASTER granules, merge per-band, return mosaic granule_id.
+
+    If ``site.granule_id`` is pinned, falls back to :func:`download_aster` so
+    single-granule overrides are honoured without change.  Otherwise, every
+    granule that covers >5 % of the site bbox (and has ≥3 TIR bands) is
+    downloaded to a temporary directory, then merged band-by-band with
+    ``rasterio.merge`` and written as ``{site_id}_mosaic_TIR_B{n}.tif``.
+    """
+    import shutil
+    import tempfile
+
+    import earthaccess
+    import rasterio
+    from rasterio.merge import merge as rasterio_merge
+
+    from critical_minerals_aster.spectral import score_granule
+
+    if interactive_login:
+        earthaccess.login(strategy="netrc")
+
+    # Honour a pinned granule_id — single-granule path.
+    if site.granule_id:
+        return download_aster(site, paths, interactive_login=False)
+
+    bbox = search_bbox(site)
+    results = earthaccess.search_data(
+        short_name="AST_L1T",
+        bounding_box=bbox,
+        temporal=(site.temporal_start, site.temporal_end),
+        count=20,
+    )
+
+    covering = []
+    for g in results:
+        try:
+            coverage, _, band_count = score_granule(g, site.bbox_wgs84)
+            if coverage > 0.05 and band_count >= 3:
+                covering.append(g)
+        except Exception:
+            continue
+
+    if not covering:
+        # No granule meets the threshold — fall back to best single granule.
+        return download_aster(site, paths, interactive_login=False)
+
+    paths.aster_dir.mkdir(parents=True, exist_ok=True)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        for granule in covering:
+            try:
+                earthaccess.download(granule, tmpdir)
+            except Exception as exc:
+                print(f"  Warning: could not download granule: {exc}", file=sys.stderr)
+
+        mosaic_id = f"{site.id}_mosaic"
+        for band_num in (10, 11, 12, 13, 14):
+            pattern = f"*_TIR_B{band_num}.tif"
+            band_files = list(Path(tmpdir).glob(pattern))
+            if not band_files:
+                continue
+            if len(band_files) == 1:
+                shutil.copy(
+                    band_files[0],
+                    paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif",
+                )
+            else:
+                datasets = [rasterio.open(f) for f in band_files]
+                try:
+                    merged, merged_transform = rasterio_merge(datasets)
+                    profile = datasets[0].profile.copy()
+                    profile.update(
+                        {
+                            "height": merged.shape[1],
+                            "width": merged.shape[2],
+                            "transform": merged_transform,
+                            "count": 1,
+                        }
+                    )
+                    out_path = paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif"
+                    with rasterio.open(out_path, "w", **profile) as dst:
+                        dst.write(merged[0], 1)
+                finally:
+                    for ds in datasets:
+                        ds.close()
+
+    return mosaic_id
 
 
 def run_site(

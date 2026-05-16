@@ -29,6 +29,7 @@ from critical_minerals_aster.mrds import (
 )
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.pipeline import (
+    download_and_mosaic_aster,
     run_batch,
     run_site,
     save_band_ratio_figure,
@@ -56,6 +57,7 @@ from critical_minerals_aster.synthesis import load_site_summaries, write_nationa
 
 __all__ = [
     "ClassificationParams",
+    "download_and_mosaic_aster",
     "SiteConfig",
     "SitePaths",
     "StructureLayer",
