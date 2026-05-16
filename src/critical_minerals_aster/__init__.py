@@ -24,6 +24,7 @@ from critical_minerals_aster.mrds import (
     is_critical_mineral,
     mrds_to_points_gdf,
     reclassify_mrds_earth_mri,
+    reclassify_mrds_mineral_system,
     spatial_join_deposits_zones,
 )
 from critical_minerals_aster.paths import SitePaths, site_paths_for
@@ -74,6 +75,7 @@ __all__ = [
     "load_tir_bands_10_14",
     "mrds_to_points_gdf",
     "reclassify_mrds_earth_mri",
+    "reclassify_mrds_mineral_system",
     "nearest_structure_distance_m",
     "read_mrds_national",
     "run_batch",

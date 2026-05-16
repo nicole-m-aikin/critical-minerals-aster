@@ -14,6 +14,7 @@ from critical_minerals_aster.mrds import (
     is_critical_mineral,
     mrds_to_points_gdf,
     reclassify_mrds_earth_mri,
+    reclassify_mrds_mineral_system,
     spatial_join_deposits_zones,
 )
 from critical_minerals_aster.paths import SitePaths
@@ -89,6 +90,7 @@ def compute_site_summary(
             "commodity_group": "",
             "earth_mri_category": "",
             "is_critical_mineral": False,
+            "mineral_system": "",
         }
     ]
 
@@ -98,6 +100,7 @@ def compute_site_summary(
         deposits["inside_zone"] = deposits.index.isin(hit_ids)
         deposits["commodity_group"] = deposits["commod1"].apply(simplify_commodity)
         deposits = reclassify_mrds_earth_mri(deposits)
+        deposits = reclassify_mrds_mineral_system(deposits)
 
         for grp, grp_df in deposits.groupby("commodity_group"):
             inside_n = int(grp_df["inside_zone"].sum())
@@ -109,6 +112,7 @@ def compute_site_summary(
                     "commodity_group": grp,
                     "earth_mri_category": "",
                     "is_critical_mineral": False,
+                    "mineral_system": "",
                     "n_deposits_bbox": total,
                     "n_deposits_in_zones": inside_n,
                     "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
@@ -125,6 +129,24 @@ def compute_site_summary(
                     "commodity_group": "",
                     "earth_mri_category": grp,
                     "is_critical_mineral": is_critical_mineral(grp),
+                    "mineral_system": "",
+                    "n_deposits_bbox": total,
+                    "n_deposits_in_zones": inside_n,
+                    "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
+                }
+            )
+
+        for grp, grp_df in deposits.groupby("mineral_system"):
+            inside_n = int(grp_df["inside_zone"].sum())
+            total = len(grp_df)
+            rows.append(
+                {
+                    **base,
+                    "row_type": "mineral_system",
+                    "commodity_group": "",
+                    "earth_mri_category": "",
+                    "is_critical_mineral": False,
+                    "mineral_system": grp,
                     "n_deposits_bbox": total,
                     "n_deposits_in_zones": inside_n,
                     "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
