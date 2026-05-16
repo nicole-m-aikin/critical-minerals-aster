@@ -11,7 +11,8 @@ def load_site_summaries(results_dir: Path) -> pd.DataFrame:
     """Load all *_summary.csv files; return site-level rows only."""
     results_dir = Path(results_dir)
     frames: list[pd.DataFrame] = []
-    for path in sorted(results_dir.glob("*_summary.csv")):
+    for path in sorted(p for p in results_dir.glob("*_summary.csv") 
+                   if "national" not in p.name):
         df = pd.read_csv(path)
         site_rows = df[df["row_type"] == "site"] if "row_type" in df.columns else df
         frames.append(site_rows)
