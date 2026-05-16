@@ -1,0 +1,17 @@
+# Stillwater Complex, MT — Layered mafic intrusion (PGE + Cr + Ni)
+# Only US primary platinum-group mine; mafic TIR band ratio target
+id: stillwater
+name: "Stillwater Complex, MT"
+bbox_wgs84: [-110.42, 45.18, -109.70, 45.72]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

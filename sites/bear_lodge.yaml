@@ -1,0 +1,17 @@
+# Bear Lodge, WY — Carbonatite-hosted REE deposit (Black Hills margin)
+# Alkalic carbonatite intrusive; carbonate TIR signature target
+id: bear_lodge
+name: "Bear Lodge, WY"
+bbox_wgs84: [-104.52, 44.32, -103.90, 44.78]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

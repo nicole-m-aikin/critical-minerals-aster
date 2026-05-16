@@ -1,0 +1,17 @@
+# Jerome, AZ — VMS Cu–Zn–Ag deposit (United Verde mine)
+# Volcanic-hosted massive sulfide with propylitic/argillic alteration halo
+id: jerome
+name: "Jerome, AZ"
+bbox_wgs84: [-112.30, 34.52, -111.88, 35.00]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

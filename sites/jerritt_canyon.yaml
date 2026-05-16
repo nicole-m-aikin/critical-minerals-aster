@@ -1,0 +1,17 @@
+# Jerritt Canyon, NV — Carlin-type gold district
+# Sediment-hosted gold with silicification and argillic alteration
+id: jerritt_canyon
+name: "Jerritt Canyon, NV"
+bbox_wgs84: [-116.05, 41.20, -115.40, 41.70]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

@@ -1,0 +1,17 @@
+# Mountain Pass, CA — Carbonatite REE deposit (active mine, Bastnäsite)
+# Largest US rare earth producer; strong carbonatite/alkalic TIR signature expected
+id: mountain_pass
+name: "Mountain Pass, CA"
+bbox_wgs84: [-115.75, 35.28, -115.30, 35.68]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

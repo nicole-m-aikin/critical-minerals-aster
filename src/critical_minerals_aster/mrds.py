@@ -532,8 +532,8 @@ def reclassify_mrds_mineral_system(
         Lacustrine Evaporite, Marine Evaporite, Basin Brine Path,
         Marine Chemocline, Petroleum, Hybrid Magmatic REE, Arsenide,
         Volcanogenic Seafloor, Orogenic, Coeur d'Alene-type, Metamorphic,
-        Porphyry Cu-Mo-Au, Alkalic Porphyry, Porphyry Sn, Reduced
-        Intrusion-Related, Carlin-type, Climax-type, IOA-IOCG,
+        Porphyry Cu-Mo-Au, Porphyry Sn, Reduced Intrusion-Related,
+        Carlin-type, Climax-type, IOA-IOCG,
         Magmatic REE, Mafic Magmatic  (plus "Unknown System").
 
     Parameters

@@ -1,0 +1,17 @@
+# Steamboat Springs, NV — Active geothermal/siliceous sinter deposit
+# Strong silica alteration; modern analog for epithermal Au systems
+id: steamboat_springs
+name: "Steamboat Springs, NV"
+bbox_wgs84: [-119.90, 39.25, -119.55, 39.58]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []

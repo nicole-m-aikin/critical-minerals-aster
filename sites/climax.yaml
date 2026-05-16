@@ -1,0 +1,17 @@
+# Climax, CO — Climax-type porphyry molybdenum deposit
+# World's largest Mo producer; high-silica/argillic alteration halo
+id: climax
+name: "Climax, CO"
+bbox_wgs84: [-106.45, 39.22, -106.02, 39.58]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers: []
