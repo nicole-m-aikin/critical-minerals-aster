@@ -116,6 +116,51 @@ def select_granule(
     return best
 
 
+def clip_bands_to_bbox(
+    bands: list[np.ndarray],
+    transform: rasterio.Affine,
+    crs: rasterio.crs.CRS,
+    bbox_wgs84: BBox,
+) -> tuple[list[np.ndarray], rasterio.Affine]:
+    """Clip a list of co-registered arrays to a WGS84 bounding box.
+
+    Reprojects the bbox to the raster CRS, computes the pixel window, and
+    returns sliced arrays with an updated affine transform.  Any band pixels
+    outside the bbox are not included in downstream percentile statistics or
+    zone vectorisation, making results site-specific rather than whole-scene.
+
+    Returns (clipped_bands, new_transform).  If the bbox window is empty or
+    entirely outside the raster the original arrays and transform are returned
+    unchanged so the pipeline degrades gracefully.
+    """
+    from rasterio.crs import CRS as RasterioCRS
+    from rasterio.warp import transform_bounds
+    from rasterio.windows import from_bounds, Window
+
+    if not bands:
+        return bands, transform
+
+    rows, cols = bands[0].shape
+    try:
+        dst_crs = RasterioCRS.from_epsg(4326)
+        lon0, lat0, lon1, lat1 = bbox_wgs84
+        # transform bbox from WGS84 into the raster CRS
+        x0, y0, x1, y1 = transform_bounds(dst_crs, crs, lon0, lat0, lon1, lat1)
+        window = from_bounds(x0, y0, x1, y1, transform)
+        # clamp to actual raster extent
+        row_off = max(0, int(window.row_off))
+        col_off = max(0, int(window.col_off))
+        row_end = min(rows, int(window.row_off + window.height))
+        col_end = min(cols, int(window.col_off + window.width))
+        if row_end <= row_off or col_end <= col_off:
+            return bands, transform
+        clipped = [b[row_off:row_end, col_off:col_end] for b in bands]
+        new_transform = transform * rasterio.Affine.translation(col_off, row_off)
+        return clipped, new_transform
+    except Exception:
+        return bands, transform
+
+
 def band_ratio(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     with np.errstate(divide="ignore", invalid="ignore"):
         return np.where(b != 0, a / b, np.nan)

@@ -36,6 +36,7 @@ from critical_minerals_aster.pipeline import (
 from critical_minerals_aster.spectral import (
     alteration_ratios,
     band_ratio,
+    clip_bands_to_bbox,
     extract_granule_id,
     load_tir_band,
     load_tir_bands_10_14,
@@ -57,6 +58,7 @@ __all__ = [
     "alteration_ratios",
     "annotate_deposits_with_structure",
     "band_ratio",
+    "clip_bands_to_bbox",
     "classify_percentiles",
     "combined_score",
     "compute_site_summary",

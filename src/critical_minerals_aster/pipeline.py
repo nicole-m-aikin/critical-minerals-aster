@@ -25,6 +25,7 @@ from critical_minerals_aster.metrics import compute_site_summary, write_site_sum
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.spectral import (
     alteration_ratios,
+    clip_bands_to_bbox,
     extract_granule_id,
     load_tir_bands_10_14,
     select_granule,
@@ -62,6 +63,13 @@ def run_classification(
     """Classify, vectorize, return zones and class maps."""
     _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
         paths.aster_dir, granule_id
+    )
+    # Clip to site bbox so percentile thresholds and zone counts are
+    # site-specific rather than whole-scene artifacts.  Shared-granule sites
+    # (e.g. goldfield/silver_peak on the same ASTER swath) would otherwise
+    # produce identical zone polygons from the full 60-90 km scene.
+    (b12, b13, b14), transform = clip_bands_to_bbox(
+        [b12, b13, b14], transform, crs, site.bbox_wgs84
     )
     silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
@@ -255,7 +263,7 @@ def download_aster(
     import earthaccess
 
     if interactive_login:
-        earthaccess.login(strategy="interactive")
+        earthaccess.login(strategy="netrc")
 
     bbox = search_bbox(site)
     results = earthaccess.search_data(
