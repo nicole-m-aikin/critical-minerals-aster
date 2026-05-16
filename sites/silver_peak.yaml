@@ -2,7 +2,7 @@
 id: silver_peak
 name: "Silver Peak, NV"
 bbox_wgs84: [-117.90, 37.20, -117.45, 37.80]
-granule_id: null
+granule_id: "AST_L1T_00408012010184449_20250705114939"
 layout: nested
 
 classification:
