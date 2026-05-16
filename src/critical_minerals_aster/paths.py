@@ -57,6 +57,10 @@ class SitePaths:
         return self.results_dir / f"{self.site.id}_provenance.json"
 
     @property
+    def dem_dir(self) -> Path:
+        return self.repo_root / "data" / "dem" / self.site.id
+
+    @property
     def strong_zones_geojson(self) -> Path:
         return self.vectors_dir / "strong_anomaly_zones.geojson"
 

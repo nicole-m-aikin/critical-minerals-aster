@@ -65,14 +65,21 @@ def run_classification(
     np.ndarray,  # mafic_cls
     np.ndarray,  # combined
     BBox,        # raster_bbox — WGS84 extent of the analysed (clipped) raster
+    Any,         # transform — affine transform of the clipped raster
+    tuple[int, int],  # shape — (rows, cols) of the clipped raster
+    Any,         # crs — coordinate reference system of the raster
 ]:
-    """Classify, vectorize, return zones, class maps, and raster WGS84 extent.
+    """Classify, vectorize, return zones, class maps, raster extent, and raster metadata.
 
     The raster_bbox is the WGS84 bounding box of the ASTER data *actually
     analysed* (i.e. after bbox clipping).  It is the intersection of the ASTER
     granule footprint and site.bbox_wgs84, so MRDS deposit queries should use
     it rather than the raw site bbox to avoid counting deposits that fall
     outside the TIR coverage.
+
+    Elements 10–12 (transform, shape, crs) describe the clipped raster pixel
+    grid so callers can reproject auxiliary data (e.g. a DEM hillshade) to
+    exactly the same extent.
     """
     _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
         paths.aster_dir, granule_id
@@ -111,6 +118,9 @@ def run_classification(
         mafic_cls,
         combined,
         raster_bbox,
+        transform,
+        b12.shape,
+        crs,
     )
 
 
@@ -120,6 +130,7 @@ def save_band_ratio_figure(
     silica: np.ndarray,
     carbonate: np.ndarray,
     mafic: np.ndarray,
+    hillshade: np.ndarray | None = None,
 ) -> None:
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -136,6 +147,8 @@ def save_band_ratio_figure(
             vmin=vmin,
             vmax=vmax,
         )
+        if hillshade is not None:
+            ax.imshow(hillshade, cmap="gray", alpha=0.25, vmin=0, vmax=255)
         ax.set_title(title)
         ax.axis("off")
         plt.colorbar(im, ax=ax, shrink=0.8)
@@ -217,6 +230,7 @@ def save_classification_figure(
     carbonate_cls: np.ndarray,
     mafic_cls: np.ndarray,
     combined: np.ndarray,
+    hillshade: np.ndarray | None = None,
 ) -> None:
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 4, figsize=(18, 5))
@@ -224,6 +238,8 @@ def save_classification_figure(
     titles = ["Silica classes", "Carbonate classes", "Mafic classes", "Combined score"]
     for ax, arr, title in zip(axes, arrays, titles):
         im = ax.imshow(arr, cmap="YlOrRd" if title != "Combined score" else "RdYlGn")
+        if hillshade is not None:
+            ax.imshow(hillshade, cmap="gray", alpha=0.25, vmin=0, vmax=255)
         ax.set_title(title)
         ax.axis("off")
         plt.colorbar(im, ax=ax, shrink=0.8)
@@ -261,6 +277,25 @@ def save_deposit_overlay_figure(
     if len(inside):
         inside.plot(ax=ax, color="gold", markersize=70, marker="*", zorder=4,
                     edgecolor="black", linewidth=0.5)
+
+    # Add terrain basemap for structural geology context (semi-transparent).
+    try:
+        import contextily as cx
+
+        crs_str = zones.crs.to_string() if len(zones) else deposits.crs.to_string()
+        providers_to_try = [
+            cx.providers.OpenTopoMap,
+            cx.providers.Stadia.StamenTerrain,  # type: ignore[attr-defined]
+            cx.providers.CartoDB.Positron,  # type: ignore[attr-defined]
+        ]
+        for provider in providers_to_try:
+            try:
+                cx.add_basemap(ax, crs=crs_str, source=provider, alpha=0.35, zoom=11)
+                break
+            except Exception:
+                continue
+    except Exception:
+        pass  # basemap is fully optional
 
     legend_elements = [
         mlines.Line2D([], [], color="#c0392b", linewidth=6, alpha=0.5, label="Strong anomaly zone (< 10 km²)"),
@@ -530,15 +565,31 @@ def run_site(
         mafic_cls,
         combined,
         raster_bbox,  # WGS84 extent of the analysed (clipped) ASTER data
+        raster_transform,
+        raster_shape,
+        raster_crs,
     ) = run_classification(site, paths, granule_id)
     paths.vectors_dir.mkdir(parents=True, exist_ok=True)
     zones.to_file(paths.strong_zones_geojson, driver="GeoJSON")
 
+    # Compute hillshade for structural geology context in figs 01 and 02.
+    # Gracefully degrades to None if DEM download/computation fails.
+    hillshade: np.ndarray | None = None
+    if not skip_figures:
+        try:
+            from critical_minerals_aster.terrain import compute_hillshade_for_site
+
+            hillshade = compute_hillshade_for_site(
+                site, paths, raster_transform, raster_shape, raster_crs
+            )
+        except Exception as exc:
+            print(f"  [terrain] Hillshade skipped for {site.id}: {exc}", file=sys.stderr)
+
     if not skip_figures:
         save_composite_figure(site, paths, silica, carbonate, mafic)
-        save_band_ratio_figure(site, paths, silica, carbonate, mafic)
+        save_band_ratio_figure(site, paths, silica, carbonate, mafic, hillshade=hillshade)
         save_classification_figure(
-            site, paths, silica_cls, carbonate_cls, mafic_cls, combined
+            site, paths, silica_cls, carbonate_cls, mafic_cls, combined, hillshade=hillshade
         )
 
     # Use raster_bbox (actual TIR coverage) instead of site.bbox_wgs84 so

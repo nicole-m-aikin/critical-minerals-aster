@@ -54,6 +54,7 @@ from critical_minerals_aster.structure import (
     nearest_structure_distance_m,
 )
 from critical_minerals_aster.synthesis import load_site_summaries, write_national_summary
+from critical_minerals_aster.terrain import compute_hillshade_for_site
 
 __all__ = [
     "ClassificationParams",
@@ -67,6 +68,7 @@ __all__ = [
     "clip_bands_to_bbox",
     "classify_percentiles",
     "combined_score",
+    "compute_hillshade_for_site",
     "compute_site_summary",
     "extract_granule_id",
     "filter_mrds_bbox",
