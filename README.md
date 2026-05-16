@@ -97,7 +97,8 @@ critical-minerals-aster/
 ├── src/
 │   └── critical_minerals_aster/    # shared library (paths, spectral, classification, MRDS helpers)
 ├── docs/
-│   └── implementation-phases.md     # piecewise rollout plan (Phases A–F)
+│   ├── implementation-phases.md     # piecewise rollout plan (Phases A–F)
+│   └── structure_layers.md          # optional fault/structure overlay config
 ├── notebooks/
 │   ├── 00_verify_setup.ipynb       # environment verification
 │   ├── 01_data_download.ipynb      # EarthData auth, ASTER download

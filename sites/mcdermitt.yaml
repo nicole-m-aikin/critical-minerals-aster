@@ -13,3 +13,5 @@ classification:
 temporal:
   start: "2010-01-01"
   end: "2023-12-31"
+
+structure_layers: []

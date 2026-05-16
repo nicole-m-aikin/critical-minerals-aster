@@ -67,7 +67,7 @@ def points_on_structure(
     buffered["geometry"] = buffered.geometry.buffer(buf)
     joined = gpd.sjoin(points, buffered, how="left", predicate="within")
     on_idx = joined[joined["index_right"].notna()].index.unique()
-    return points.index.isin(on_idx)
+    return pd.Series(points.index.isin(on_idx), index=points.index)
 
 
 def annotate_deposits_with_structure(
