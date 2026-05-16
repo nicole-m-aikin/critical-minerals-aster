@@ -1,7 +1,7 @@
 # Tonopah–Manhattan district, NV — low/intermediate-sulfidation epithermal Ag/Au
 id: tonopah
 name: "Tonopah–Manhattan, NV"
-bbox_wgs84: [-117.4, 38.0, -116.7, 38.8]
+bbox_wgs84: [-117.4, 38.0, -116.7, 38.65]
 granule_id: null
 layout: nested
 
