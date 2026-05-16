@@ -161,6 +161,28 @@ def clip_bands_to_bbox(
         return bands, transform
 
 
+def raster_bbox_wgs84(
+    transform: rasterio.Affine,
+    shape: tuple[int, int],
+    crs: rasterio.crs.CRS,
+) -> BBox:
+    """Return the WGS84 (lon0, lat0, lon1, lat1) extent of a raster.
+
+    Derived from the affine transform and pixel dimensions so it correctly
+    represents the area actually analysed by the pipeline, which may be a
+    clipped subset of the original ASTER scene.
+    """
+    from rasterio.warp import transform_bounds
+
+    rows, cols = shape
+    x_min = transform.c
+    y_max = transform.f
+    x_max = transform.c + cols * transform.a
+    y_min = transform.f + rows * transform.e  # transform.e is negative (north-up)
+    lon0, lat0, lon1, lat1 = transform_bounds(crs, "EPSG:4326", x_min, y_min, x_max, y_max)
+    return (lon0, lat0, lon1, lat1)
+
+
 def band_ratio(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     with np.errstate(divide="ignore", invalid="ignore"):
         return np.where(b != 0, a / b, np.nan)

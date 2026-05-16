@@ -20,7 +20,7 @@ from critical_minerals_aster.classification import (
     combined_score,
     vectorize_strong_zones,
 )
-from critical_minerals_aster.config import SiteConfig, search_bbox
+from critical_minerals_aster.config import BBox, SiteConfig, search_bbox
 from critical_minerals_aster.metrics import compute_site_summary, write_site_summary
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.spectral import (
@@ -28,6 +28,7 @@ from critical_minerals_aster.spectral import (
     clip_bands_to_bbox,
     extract_granule_id,
     load_tir_bands_10_14,
+    raster_bbox_wgs84,
     select_granule,
 )
 from critical_minerals_aster.structure import annotate_deposits_with_structure
@@ -52,15 +53,23 @@ def run_classification(
     site: SiteConfig, paths: SitePaths, granule_id: str
 ) -> tuple[
     gpd.GeoDataFrame,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
+    np.ndarray,  # silica
+    np.ndarray,  # carbonate
+    np.ndarray,  # mafic
+    np.ndarray,  # silica_cls
+    np.ndarray,  # carbonate_cls
+    np.ndarray,  # mafic_cls
+    np.ndarray,  # combined
+    BBox,        # raster_bbox — WGS84 extent of the analysed (clipped) raster
 ]:
-    """Classify, vectorize, return zones and class maps."""
+    """Classify, vectorize, return zones, class maps, and raster WGS84 extent.
+
+    The raster_bbox is the WGS84 bounding box of the ASTER data *actually
+    analysed* (i.e. after bbox clipping).  It is the intersection of the ASTER
+    granule footprint and site.bbox_wgs84, so MRDS deposit queries should use
+    it rather than the raw site bbox to avoid counting deposits that fall
+    outside the TIR coverage.
+    """
     _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
         paths.aster_dir, granule_id
     )
@@ -71,6 +80,11 @@ def run_classification(
     (b12, b13, b14), transform = clip_bands_to_bbox(
         [b12, b13, b14], transform, crs, site.bbox_wgs84
     )
+    # Record the actual raster extent AFTER clipping so downstream MRDS
+    # queries are constrained to the true TIR coverage area, not the full
+    # (possibly larger) site.bbox_wgs84.
+    raster_bbox: BBox = raster_bbox_wgs84(transform, b12.shape, crs)
+
     silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
     cp = site.classification
@@ -92,6 +106,7 @@ def run_classification(
         carbonate_cls,
         mafic_cls,
         combined,
+        raster_bbox,
     )
 
 
@@ -417,6 +432,7 @@ def run_site(
         carbonate_cls,
         mafic_cls,
         combined,
+        raster_bbox,  # WGS84 extent of the analysed (clipped) ASTER data
     ) = run_classification(site, paths, granule_id)
     paths.vectors_dir.mkdir(parents=True, exist_ok=True)
     zones.to_file(paths.strong_zones_geojson, driver="GeoJSON")
@@ -428,11 +444,17 @@ def run_site(
             site, paths, silica_cls, carbonate_cls, mafic_cls, combined
         )
 
-    summary = compute_site_summary(site, paths, zones, granule_id)
+    # Use raster_bbox (actual TIR coverage) instead of site.bbox_wgs84 so
+    # MRDS deposits that lie outside the ASTER scene footprint are excluded.
+    summary = compute_site_summary(site, paths, zones, granule_id, mrds_bbox=raster_bbox)
 
-    provenance_extra: dict[str, Any] = {"n_zones": len(zones)}
+    provenance_extra: dict[str, Any] = {
+        "n_zones": len(zones),
+        "raster_bbox_wgs84": list(raster_bbox),
+    }
 
     # Always compute MRDS join so figures 03+04 have deposit data.
+    # Uses raster_bbox so only deposits within the TIR coverage area are shown.
     # Degrades gracefully if mrds.csv is missing.
     _deposits_gdf: gpd.GeoDataFrame | None = None
     try:
@@ -440,7 +462,7 @@ def run_site(
         from critical_minerals_aster.mrds import mrds_to_points_gdf, spatial_join_deposits_zones
 
         mrds = read_mrds_national(paths)
-        local = filter_mrds_bbox(mrds, site.bbox_wgs84)
+        local = filter_mrds_bbox(mrds, raster_bbox)  # constrained to actual TIR coverage
         _deposits_gdf = mrds_to_points_gdf(local, zones.crs)
         joined, hits, _ = spatial_join_deposits_zones(_deposits_gdf, zones)
         hit_ids = joined[joined["index_right"].notna()].index.unique()

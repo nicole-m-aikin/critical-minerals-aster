@@ -43,6 +43,7 @@ from critical_minerals_aster.spectral import (
     extract_granule_id,
     load_tir_band,
     load_tir_bands_10_14,
+    raster_bbox_wgs84,
     score_granule,
     select_granule,
 )
@@ -76,6 +77,7 @@ __all__ = [
     "load_tir_band",
     "load_tir_bands_10_14",
     "mrds_to_points_gdf",
+    "raster_bbox_wgs84",
     "reclassify_mrds_earth_mri",
     "reclassify_mrds_mineral_system",
     "nearest_structure_distance_m",

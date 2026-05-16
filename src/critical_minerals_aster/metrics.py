@@ -8,7 +8,7 @@ from typing import Any
 import geopandas as gpd
 import pandas as pd
 
-from critical_minerals_aster.config import SiteConfig
+from critical_minerals_aster.config import BBox, SiteConfig
 from critical_minerals_aster.mrds import (
     filter_mrds_bbox,
     is_critical_mineral,
@@ -55,10 +55,21 @@ def compute_site_summary(
     paths: SitePaths,
     zones: gpd.GeoDataFrame,
     granule_id: str,
+    mrds_bbox: BBox | None = None,
 ) -> pd.DataFrame:
-    """Site-level summary row plus one row per commodity group."""
+    """Site-level summary row plus one row per commodity group.
+
+    Parameters
+    ----------
+    mrds_bbox:
+        WGS84 bounding box used to filter MRDS deposits.  Defaults to
+        ``site.bbox_wgs84`` when not supplied, but callers should pass the
+        actual raster extent (from ``run_classification``) so only deposits
+        within the TIR coverage area are counted.
+    """
     mrds = read_mrds_national(paths)
-    local = filter_mrds_bbox(mrds, site.bbox_wgs84)
+    effective_bbox: BBox = mrds_bbox if mrds_bbox is not None else site.bbox_wgs84
+    local = filter_mrds_bbox(mrds, effective_bbox)
     deposits = mrds_to_points_gdf(local, zones.crs)
     joined, _, _ = spatial_join_deposits_zones(deposits, zones)
 
