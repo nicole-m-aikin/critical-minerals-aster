@@ -32,7 +32,9 @@ from critical_minerals_aster.pipeline import (
     run_batch,
     run_site,
     save_band_ratio_figure,
+    save_commodity_correlation_figure,
     save_composite_figure,
+    save_deposit_overlay_figure,
 )
 from critical_minerals_aster.spectral import (
     alteration_ratios,
@@ -81,7 +83,9 @@ __all__ = [
     "run_batch",
     "run_site",
     "save_band_ratio_figure",
+    "save_commodity_correlation_figure",
     "save_composite_figure",
+    "save_deposit_overlay_figure",
     "score_granule",
     "search_bbox",
     "select_granule",

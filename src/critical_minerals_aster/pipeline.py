@@ -214,6 +214,121 @@ def save_classification_figure(
     plt.close()
 
 
+def save_deposit_overlay_figure(
+    site: SiteConfig,
+    paths: SitePaths,
+    zones: gpd.GeoDataFrame,
+    deposits: gpd.GeoDataFrame,
+) -> None:
+    """Figure 03 — spatial map of strong anomaly zones with MRDS deposit overlay."""
+    import matplotlib.lines as mlines
+
+    paths.figures_dir.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(10, 10))
+
+    if len(zones) > 0:
+        small = zones[zones["area_km2"] < 10]
+        large = zones[zones["area_km2"] >= 10]
+        if len(small):
+            small.plot(ax=ax, color="#c0392b", alpha=0.35, linewidth=0)
+        if len(large):
+            large.plot(ax=ax, color="#4a0000", alpha=0.85, linewidth=0)
+
+    outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
+    inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
+
+    if len(outside):
+        outside.plot(ax=ax, color="steelblue", markersize=20, alpha=0.8, zorder=3)
+    if len(inside):
+        inside.plot(ax=ax, color="gold", markersize=70, marker="*", zorder=4,
+                    edgecolor="black", linewidth=0.5)
+
+    legend_elements = [
+        mlines.Line2D([], [], color="#c0392b", linewidth=6, alpha=0.5, label="Strong anomaly zone (< 10 km²)"),
+        mlines.Line2D([], [], color="#4a0000", linewidth=6, alpha=0.9, label="Strong anomaly zone (≥ 10 km²)"),
+        mlines.Line2D([], [], marker="o", color="w", markerfacecolor="steelblue",
+                      markersize=9, label=f"MRDS deposit (outside zone, n={len(outside)})"),
+        mlines.Line2D([], [], marker="*", color="w", markerfacecolor="gold",
+                      markeredgecolor="black", markersize=13,
+                      label=f"MRDS deposit (inside zone, n={len(inside)})"),
+    ]
+    ax.legend(handles=legend_elements, loc="upper right", framealpha=0.95, fontsize=9)
+    ax.set_title(f"Strong alteration zones vs MRDS deposits\n{site.name}", fontsize=13)
+    ax.set_xlabel(f"Easting (m, {zones.crs})" if len(zones) else "Easting (m)")
+    ax.set_ylabel("Northing (m)")
+    plt.tight_layout()
+    plt.savefig(paths.figures_dir / "03_deposit_overlay.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+
+def save_commodity_correlation_figure(
+    site: SiteConfig,
+    paths: SitePaths,
+    deposits: gpd.GeoDataFrame,
+) -> None:
+    """Figure 04 — horizontal stacked bar chart of hit rate by commodity group."""
+    if "inside_zone" not in deposits.columns or "commodity_group" not in deposits.columns:
+        return
+    if len(deposits) == 0:
+        return
+
+    paths.figures_dir.mkdir(parents=True, exist_ok=True)
+
+    ct = pd.crosstab(deposits["commodity_group"], deposits["inside_zone"])
+    ct.columns = [str(c) for c in ct.columns]
+    outside_col = "False" if "False" in ct.columns else ct.columns[0]
+    inside_col = "True" if "True" in ct.columns else (ct.columns[1] if len(ct.columns) > 1 else None)
+
+    ct = ct.rename(columns={outside_col: "Outside zone", inside_col: "Inside zone"} if inside_col else {outside_col: "Outside zone"})
+    if "Inside zone" not in ct.columns:
+        ct["Inside zone"] = 0
+    if "Outside zone" not in ct.columns:
+        ct["Outside zone"] = 0
+
+    ct["Total"] = ct["Outside zone"] + ct["Inside zone"]
+    ct["% inside"] = (ct["Inside zone"] / ct["Total"] * 100).round(1)
+    ct = ct[ct["Total"] > 0].sort_values("% inside", ascending=True)
+
+    if len(ct) == 0:
+        return
+
+    fig, ax = plt.subplots(figsize=(10, max(4, len(ct) * 0.55)))
+    fig.patch.set_facecolor("#f5f0e8")
+    ax.set_facecolor("#f5f0e8")
+
+    y = range(len(ct))
+    width = 0.6
+    ax.barh(y, ct["Outside zone"], width, color="#7f8c8d", alpha=0.8, label="Outside zone")
+    ax.barh(y, ct["Inside zone"], width, left=ct["Outside zone"],
+            color="#e74c3c", alpha=0.9, label="Inside zone")
+
+    ax.set_yticks(list(y))
+    ax.set_yticklabels(ct.index.tolist(), fontsize=10)
+    ax.set_xlabel("Number of MRDS deposits", fontsize=11)
+    ax.set_title(f"Commodity correlation with anomaly zones\n{site.name}", fontsize=13)
+    ax.legend(loc="lower right", framealpha=0.9)
+
+    for i, (_, row) in enumerate(ct.iterrows()):
+        ax.text(
+            row["Total"] + ct["Total"].max() * 0.01,
+            i,
+            f"{row['% inside']:.0f}% inside",
+            va="center",
+            fontsize=9,
+            color="#333333",
+        )
+
+    ax.set_xlim(0, ct["Total"].max() * 1.25)
+    plt.tight_layout()
+    plt.savefig(
+        paths.figures_dir / "04_commodity_correlation.png",
+        dpi=150,
+        bbox_inches="tight",
+        facecolor="#f5f0e8",
+    )
+    plt.close(fig)
+
+
 def write_provenance(
     paths: SitePaths,
     granule_id: str,
@@ -316,14 +431,30 @@ def run_site(
     summary = compute_site_summary(site, paths, zones, granule_id)
 
     provenance_extra: dict[str, Any] = {"n_zones": len(zones)}
-    if site.structure_layers:
-        from critical_minerals_aster.metrics import filter_mrds_bbox, read_mrds_national
-        from critical_minerals_aster.mrds import mrds_to_points_gdf
+
+    # Always compute MRDS join so figures 03+04 have deposit data.
+    # Degrades gracefully if mrds.csv is missing.
+    _deposits_gdf: gpd.GeoDataFrame | None = None
+    try:
+        from critical_minerals_aster.metrics import filter_mrds_bbox, read_mrds_national, simplify_commodity
+        from critical_minerals_aster.mrds import mrds_to_points_gdf, spatial_join_deposits_zones
 
         mrds = read_mrds_national(paths)
         local = filter_mrds_bbox(mrds, site.bbox_wgs84)
-        deposits = mrds_to_points_gdf(local, zones.crs)
-        annotated = annotate_deposits_with_structure(deposits, site, paths)
+        _deposits_gdf = mrds_to_points_gdf(local, zones.crs)
+        joined, hits, _ = spatial_join_deposits_zones(_deposits_gdf, zones)
+        hit_ids = joined[joined["index_right"].notna()].index.unique()
+        _deposits_gdf["inside_zone"] = _deposits_gdf.index.isin(hit_ids)
+        _deposits_gdf["commodity_group"] = _deposits_gdf["commod1"].apply(simplify_commodity)
+    except FileNotFoundError:
+        pass  # mrds.csv not downloaded yet — skip deposit figures
+
+    if not skip_figures and _deposits_gdf is not None:
+        save_deposit_overlay_figure(site, paths, zones, _deposits_gdf)
+        save_commodity_correlation_figure(site, paths, _deposits_gdf)
+
+    if site.structure_layers and _deposits_gdf is not None:
+        annotated = annotate_deposits_with_structure(_deposits_gdf, site, paths)
         provenance_extra["n_deposits_on_structure"] = int(annotated["on_structure"].sum())
         provenance_extra["mean_nearest_structure_m"] = float(
             annotated["nearest_structure_m"].mean()
