@@ -1,0 +1,19 @@
+name: aster-minerals
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rasterio
+  - geopandas
+  - matplotlib
+  - numpy
+  - scipy
+  - scikit-learn
+  - pyyaml
+  - jupyter
+  - ipykernel
+  - pip
+  - pip:
+      - earthaccess
+      - spectral
+      - matplotlib-scalebar

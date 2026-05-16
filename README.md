@@ -92,15 +92,23 @@ The 0% hit rate for mercury is geologically coherent: McDermitt Hg deposits are 
 
 ```
 critical-minerals-aster/
+├── sites/
+│   └── mcdermitt.yaml              # per-site bbox, granule, classification params
+├── src/
+│   └── critical_minerals_aster/    # shared library (paths, spectral, classification, MRDS helpers)
+├── docs/
+│   └── implementation-phases.md     # piecewise rollout plan (Phases A–F)
 ├── notebooks/
 │   ├── 00_verify_setup.ipynb       # environment verification
 │   ├── 01_data_download.ipynb      # EarthData auth, ASTER download
 │   ├── 02_band_ratios.ipynb        # TIR band ratios, false-color composite
 │   ├── 03_classification.ipynb     # anomaly classification, vectorization
-│   └── 04_deposit_overlay.ipynb    # MRDS spatial join, commodity analysis
+│   └── 04_deposit_overlay.ipynb   # MRDS spatial join, commodity analysis
+├── tests/                          # lightweight unit tests
 ├── data/                           # not committed (downloaded by notebooks)
 ├── figures/                        # output maps
 ├── environment.yml
+├── pyproject.toml
 └── README.md
 ```
 
@@ -118,12 +126,12 @@ cd critical-minerals-aster
 ### 2. Create the environment
 
 ```bash
-conda create -n aster-minerals python=3.11 \
-  rasterio geopandas matplotlib numpy scipy \
-  scikit-learn jupyter ipykernel -c conda-forge
+conda env create -f environment.yml
 conda activate aster-minerals
-pip install earthaccess spectral matplotlib-scalebar
+pip install -e .
 ```
+
+Or follow the manual dependency list below, then from the repo root run `pip install -e .` so notebooks can import `critical_minerals_aster` (adds `src/` to the package path).
 
 ### 3. Set up EarthData credentials
 

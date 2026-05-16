@@ -1,9 +1,17 @@
 data/aster/
+data/sites/*/aster/
 data/*.csv
+data/mrds/*.csv
 data/*.h5
 __pycache__/
+*.egg-info/
 .ipynb_checkpoints/
+.pytest_cache/
 data/mrds.csv
 data/mrds-csv.zip
 data/mrds.met
 data/mrds_mcdermitt.geojson
+
+# Optional: large per-site generated outputs (uncomment if you do not want them in git)
+# figures/sites/
+# data/sites/*/vectors/
