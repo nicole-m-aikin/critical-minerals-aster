@@ -3,7 +3,7 @@
 id: goldfield
 name: "Goldfield–Cuprite, NV"
 bbox_wgs84: [-117.65, 37.55, -117.05, 38.05]
-granule_id: "AST_L1T_00402072010054840"
+granule_id: "AST_L1T_00402072010054840_20250702175723"
 layout: nested
 
 classification:
