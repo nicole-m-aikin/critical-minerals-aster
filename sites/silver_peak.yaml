@@ -1,7 +1,7 @@
 # Silver Peak lithium district, NV — second US test site (nested layout)
 id: silver_peak
 name: "Silver Peak, NV"
-bbox_wgs84: [-117.85, 37.65, -117.45, 38.05]
+bbox_wgs84: [-117.85, 37.50, -117.45, 37.90]
 granule_id: null
 layout: nested
 

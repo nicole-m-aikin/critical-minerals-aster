@@ -2,8 +2,8 @@
 # Best-documented ASTER TIR alteration target in western US (Rowan & Mars 2003)
 id: goldfield
 name: "Goldfield–Cuprite, NV"
-bbox_wgs84: [-118.0, 37.6, -117.4, 38.0]
-granule_id: null
+bbox_wgs84: [-117.65, 37.55, -117.05, 38.05]
+granule_id: "AST_L1T_00402072010054840"
 layout: nested
 
 classification:
