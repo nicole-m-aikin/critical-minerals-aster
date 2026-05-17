@@ -1,0 +1,14 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,4,0,0.0,flat,site,,,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,commodity,Gold/Silver,,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,commodity,Lithium,,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,commodity,Other,,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,commodity,Stone,,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,earth_mri,,Base Metals,True,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,earth_mri,,Battery Metals – Li/Brine,True,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,earth_mri,,Gold/Silver,True,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,earth_mri,,Non-Critical,False,
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,mineral_system,,,False,Lacustrine Evaporite
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,mineral_system,,,False,Orogenic
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,mineral_system,,,False,Porphyry Cu-Mo-Au
+synth,Synthetic Test Site,AST_L1T_99999999_99999999,1,0.0,0.0,1,0,0.0,flat,mineral_system,,,False,Unknown System

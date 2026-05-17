@@ -1,0 +1,18 @@
+{
+  "site_id": "synth",
+  "granule_id": "AST_L1T_99999999_99999999",
+  "timestamp_utc": "<normalized>",
+  "python": "<normalized>",
+  "packages": {
+    "rasterio": "<normalized>",
+    "geopandas": "<normalized>"
+  },
+  "git_commit": "<normalized>",
+  "n_zones": 1,
+  "raster_bbox_wgs84": [
+    -120.0,
+    35.0,
+    -119.9,
+    35.1
+  ]
+}
