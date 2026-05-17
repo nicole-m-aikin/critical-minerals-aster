@@ -15,4 +15,7 @@ temporal:
   end: "2023-12-31"
 
 # Optional structural geology layers (GeoJSON/Shapefile paths relative to repo root)
-structure_layers: []
+structure_layers:
+  - path: data/structures/silver_peak_faults.geojson
+    type: faults
+    buffer_m: 500

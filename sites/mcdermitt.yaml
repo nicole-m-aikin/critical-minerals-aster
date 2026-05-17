@@ -1,9 +1,9 @@
-# McDermitt Caldera case study (legacy flat layout matches existing data/aster paths)
+# McDermitt Caldera case study
 id: mcdermitt
 name: "McDermitt Caldera, NV/OR"
 bbox_wgs84: [-118.1, 41.8, -117.3, 42.4]
 granule_id: "AST_L1T_00407232010184946_20250705074029"
-layout: flat
+layout: nested
 
 classification:
   low_pct: 70
@@ -14,4 +14,7 @@ temporal:
   start: "2010-01-01"
   end: "2023-12-31"
 
-structure_layers: []
+structure_layers:
+  - path: data/structures/mcdermitt_faults.geojson
+    type: faults
+    buffer_m: 500

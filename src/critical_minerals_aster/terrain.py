@@ -41,6 +41,15 @@ def compute_hillshade_for_site(
     dem_merged = dem_dir / "dem_merged.tif"
     dem_reprojected = dem_dir / "dem_reprojected.tif"
 
+    # Purge a corrupt cached merge (e.g. an HGT binary that was wrongly
+    # saved with a .tif extension on a previous run).
+    if dem_merged.is_file() and not dem_reprojected.is_file():
+        try:
+            with rio.open(dem_merged):
+                pass
+        except Exception:
+            dem_merged.unlink(missing_ok=True)
+
     if not dem_reprojected.is_file():
         dem_dir.mkdir(parents=True, exist_ok=True)
         try:
@@ -74,22 +83,39 @@ def compute_hillshade_for_site(
                     except Exception:
                         pass
 
-                hgt_files = list(tmppath.glob("**/*.hgt")) + list(
-                    tmppath.glob("**/*dem.tif")
+                # Collect every candidate file and validate with rasterio
+                # (avoids misreading .num/.lsm auxiliary files or empty zips).
+                candidates = (
+                    list(tmppath.glob("**/*.hgt"))
+                    + list(tmppath.glob("**/*.tif"))
+                    + list(tmppath.glob("**/*dem.tif"))
                 )
-                if not hgt_files:
+                valid_files: list[Path] = []
+                for f in candidates:
+                    try:
+                        with rio.open(f) as ds:
+                            if ds.count >= 1 and ds.width > 0 and ds.height > 0:
+                                valid_files.append(f)
+                    except Exception:
+                        pass
+
+                if not valid_files:
                     print(
-                        f"  [terrain] No .hgt or dem.tif files after download for {site.id}",
+                        f"  [terrain] No readable DEM files after download for {site.id}",
                         file=sys.stderr,
                     )
                     return None
 
-                if len(hgt_files) == 1:
-                    import shutil
-
-                    shutil.copy(hgt_files[0], dem_merged)
+                # Always write a proper GeoTIFF (HGT binaries cannot be
+                # renamed to .tif and read back by GDAL).
+                if len(valid_files) == 1:
+                    with rio.open(valid_files[0]) as src:
+                        profile = src.profile.copy()
+                        profile.update(driver="GTiff", dtype="float32", count=1)
+                        with rio.open(dem_merged, "w", **profile) as dst:
+                            dst.write(src.read(1).astype("float32"), 1)
                 else:
-                    datasets = [rio.open(f) for f in hgt_files]
+                    datasets = [rio.open(f) for f in valid_files]
                     try:
                         merged, merged_t = rmerge(datasets)
                         profile = datasets[0].profile.copy()
@@ -98,9 +124,11 @@ def compute_hillshade_for_site(
                             width=merged.shape[2],
                             transform=merged_t,
                             count=1,
+                            driver="GTiff",
+                            dtype="float32",
                         )
                         with rio.open(dem_merged, "w", **profile) as dst:
-                            dst.write(merged[0], 1)
+                            dst.write(merged[0].astype("float32"), 1)
                     finally:
                         for ds in datasets:
                             ds.close()

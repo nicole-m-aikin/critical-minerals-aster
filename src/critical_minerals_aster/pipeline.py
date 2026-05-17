@@ -135,7 +135,7 @@ def save_band_ratio_figure(
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     ratios = [
-        (silica, "Silica/quartz (B13/B14)", "RdYlGn_r"),
+        (silica, "Silica/quartz (B13/B14)", "magma"),
         (carbonate, "Carbonate/dolomite (B13/B12)", "YlOrBr"),
         (mafic, "Mafic minerals (B12/B13)", "PuBu"),
     ]
@@ -237,7 +237,7 @@ def save_classification_figure(
     arrays = [silica_cls, carbonate_cls, mafic_cls, combined]
     titles = ["Silica classes", "Carbonate classes", "Mafic classes", "Combined score"]
     for ax, arr, title in zip(axes, arrays, titles):
-        im = ax.imshow(arr, cmap="YlOrRd" if title != "Combined score" else "RdYlGn")
+        im = ax.imshow(arr, cmap="YlOrRd" if title != "Combined score" else "viridis")
         if hillshade is not None:
             ax.imshow(hillshade, cmap="gray", alpha=0.25, vmin=0, vmax=255)
         ax.set_title(title)

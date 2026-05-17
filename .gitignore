@@ -1,5 +1,6 @@
 data/aster/
 data/sites/*/aster/
+data/dem/
 data/*.csv
 data/mrds/*.csv
 data/*.h5

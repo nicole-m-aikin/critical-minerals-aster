@@ -1,0 +1,163 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 84290,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.4370579996983,
+            35.637557000238886
+          ],
+          [
+            -115.4245279998747,
+            35.628080999771186
+          ],
+          [
+            -115.41384200058094,
+            35.62066000126055
+          ],
+          [
+            -115.40285599991488,
+            35.612790999647615
+          ],
+          [
+            -115.3922409998679,
+            35.60304599969147
+          ],
+          [
+            -115.38528600039312,
+            35.59764999975263
+          ],
+          [
+            -115.3708169996052,
+            35.58595800000463
+          ],
+          [
+            -115.36090899973797,
+            35.57796999970677
+          ],
+          [
+            -115.3414399994348,
+            35.56277900132957
+          ],
+          [
+            -115.32603999995777,
+            35.54992700135184
+          ],
+          [
+            -115.31871600041205,
+            35.543984998692906
+          ],
+          [
+            -115.31142299993016,
+            35.5377019996499
+          ],
+          [
+            -115.30542400015717,
+            35.5311430000226
+          ],
+          [
+            -115.29953699963882,
+            35.526094999982114
+          ],
+          [
+            -115.2961409995556,
+            35.52303899935816
+          ],
+          [
+            -115.29225199955285,
+            35.51932699972727
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 84290,
+        "fault_name": "Stateline fault",
+        "section_name": "",
+        "fault_id": "485",
+        "section_id": "",
+        "Location": "California",
+        "linetype": "Inferred",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Unspecified",
+        "slip_sense": "Right lateral",
+        "mapped_scale": "1:750,000",
+        "class": "A",
+        "mapped_certainty": "",
+        "strike": "",
+        "total_fault_length": null,
+        "cooperators": "California Geological Survey",
+        "earthquake": "",
+        "last_review": 1494806400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=485&section_id=",
+        "symbology": "undifferentiated Quaternary Inferred",
+        "ref_id": "485",
+        "Fault_ID_num": 485,
+        "Shape_Length": 22870.085205780844,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/485.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84291,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43868700014292,
+            35.63870699973299
+          ],
+          [
+            -115.4534260003693,
+            35.64984799991668
+          ],
+          [
+            -115.46435100003765,
+            35.65787499990902
+          ],
+          [
+            -115.48182300144674,
+            35.670104999824375
+          ],
+          [
+            -115.49306599933583,
+            35.67740200011857
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 84291,
+        "fault_name": "Stateline fault",
+        "section_name": "",
+        "fault_id": "485",
+        "section_id": "",
+        "Location": "California",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Unspecified",
+        "slip_sense": "Right lateral",
+        "mapped_scale": "1:750,000",
+        "class": "A",
+        "mapped_certainty": "",
+        "strike": "",
+        "total_fault_length": null,
+        "cooperators": "California Geological Survey",
+        "earthquake": "",
+        "last_review": 1494806400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=485&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "485",
+        "Fault_ID_num": 485,
+        "Shape_Length": 8049.659451838681,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/485.pdf",
+        "type": "faults"
+      }
+    }
+  ]
+}
