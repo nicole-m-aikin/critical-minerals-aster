@@ -1,20 +1,40 @@
 # critical-minerals-aster
 
-Spectral alteration mapping of the McDermitt Caldera (NV/OR) using ASTER thermal infrared data and band ratio analysis. This project demonstrates a reproducible remote sensing pipeline for critical mineral exploration targeting.
+Spectral alteration mapping across 15 critical mineral sites in the western US using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs spatial significance tests to determine where — and for which deposit types — the method produces signal above chance.
 
 ---
 
 ## Scientific questions
 
 1. Do ASTER-derived TIR alteration zones spatially correlate with known mineral occurrences in the USGS MRDS database?
-2. Which TIR band ratio combinations best distinguish silica, carbonate, and mafic alteration in an arid caldera setting?
-3. Does the correlation between alteration zones and MRDS deposits vary by commodity type — and does that pattern make geological sense?
+2. Which TIR band ratio combinations best distinguish silica, carbonate, and mafic alteration?
+3. Does the correlation vary by commodity type — and does that pattern make geological sense?
+4. Are observed hit rates statistically significant above the null hypothesis of random deposit distribution?
+5. Which Earth MRI deposit categories are TIR-detectable, and which are systematically invisible to this method?
 
 ---
 
-## Study area
+## Study sites (15)
 
-The **McDermitt Caldera** straddles the Nevada/Oregon border and hosts one of the largest known lithium claystone deposits in North America (Lithium Americas, Jindalee Resources). The caldera is also historically significant for mercury, uranium, and gold mineralization — making it an ideal test case for multi-commodity exploration targeting.
+| Site | State | Primary Deposit Type | Significance |
+|---|---|---|---|
+| Yerington | NV | Porphyry Cu | p = 0.000048 ** |
+| Mountain Pass | CA | Carbonatite REE | p = 0.001 ** |
+| Jerome | AZ | VMS Cu-Zn-Ag | p = 0.010 * |
+| McDermitt | NV/OR | Caldera (Li, Hg, Au) | p = 0.013 * |
+| Silver Peak | NV | Li brine / epithermal | — |
+| Jerritt Canyon | NV | Carlin-type Au | — |
+| Tonopah | NV | Epithermal Au-Ag | — |
+| Darwin | CA | Polymetallic skarn | — |
+| Stillwater | MT | PGM layered intrusion | — |
+| Marysvale | UT | Uranium / epithermal | — |
+| Bear Lodge | WY | Carbonatite REE | — |
+| Oatman | AZ | Low-sulfidation Au | anti-correlated |
+| Goldfield | NV | Epithermal Au | anti-correlated |
+| Climax | CO | Porphyry Mo | anti-correlated |
+| Steamboat Springs | NV | Geothermal / Au-Ag | anti-correlated |
+
+Significance = one-sided binomial test, H₀: hit rate ≤ zone coverage fraction. Anti-correlated sites have deposits actively avoiding anomaly zones (p ≈ 1).
 
 ---
 
@@ -22,10 +42,12 @@ The **McDermitt Caldera** straddles the Nevada/Oregon border and hosts one of th
 
 | Dataset | Source | Notes |
 |---|---|---|
-| ASTER L1T (v004) | NASA EarthData / LP DAAC | July 23, 2010 granule, UTM Zone 11N |
-| MRDS national deposit database | USGS mrdata.usgs.gov | Filtered to McDermitt bbox |
+| ASTER L1T (v004) | NASA EarthData / LP DAAC | TIR bands B10–B14, 90 m resolution |
+| MRDS national deposit database | USGS mrdata.usgs.gov | ~5,000 deposits across 15 bboxes |
+| USGS Quaternary Faults | USGS QFAULTS REST API | 13 sites |
+| USGS SGMC fault data | USGS FeatureServer | Bear Lodge, Jerome (all-age faults) |
 
-**Note on SWIR availability:** ASTER SWIR bands (B04–B09), which are standard for clay/argillic alteration mapping, are not yet available in the LP DAAC v004 cloud archive for this area. This project uses TIR bands (B10–B14, 8–12 µm) instead, which are well-suited for silica, carbonate, and mafic mineral mapping in arid volcanic terranes.
+**Note on SWIR availability:** ASTER SWIR bands (B04–B09), standard for clay/argillic mapping, are not available in LP DAAC v004 for these areas. TIR bands (B10–B14, 8–12 µm) are used instead, which are well-suited for silica, carbonate, and mafic mineral mapping in arid volcanic terranes.
 
 ---
 
@@ -33,7 +55,7 @@ The **McDermitt Caldera** straddles the Nevada/Oregon border and hosts one of th
 
 ### Band ratios
 
-| Ratio | Formula | Target mineral |
+| Ratio | Formula | Target mineralogy |
 |---|---|---|
 | Silica/quartz | B13/B14 | Silicic alteration, rhyolite |
 | Carbonate/dolomite | B13/B12 | Hydrothermal carbonate |
@@ -41,50 +63,76 @@ The **McDermitt Caldera** straddles the Nevada/Oregon border and hosts one of th
 
 ### Classification
 
-Percentile-based thresholds (70th and 90th) applied to each ratio band produce a 3-class anomaly map (background / moderate / strong). An additive combined score (0–6) identifies pixels anomalous across multiple indicators.
+Percentile-based thresholds (70th/90th) applied per scene produce a 3-class anomaly map per ratio. An additive combined score (0–6) identifies pixels anomalous across multiple indicators. Strong anomaly zones (score ≥ 3) are vectorized to polygons via `rasterio.features.shapes`.
 
-Strong anomaly zones (combined score ≥ 3) are vectorized to polygons using `rasterio.features.shapes`.
+Classification thresholds are scene-relative; cross-site comparison of raw scores is not meaningful — use hit rates and zone coverage fractions instead.
 
-### Deposit overlay
+### Deposit validation
 
-MRDS deposits within the scene bounding box are spatially joined to strong anomaly zones. Hit rate and commodity breakdown are used to evaluate whether the alteration signature correlates with known mineralization.
+MRDS deposits within each scene bbox are spatially joined to strong anomaly zones. Hit rate = fraction of deposits falling inside a zone. Results are broken down by commodity group, Earth MRI category, and USGS mineral system.
+
+### Statistical significance
+
+Two complementary tests evaluate whether observed hit rates exceed chance:
+
+**Binomial test** — exact one-sided test via `scipy.stats.binomtest`. Under H₀, each deposit has probability p = zone area / bbox area of falling in a zone. Tests whether observed hits significantly exceed that expectation.
+
+**Spatial permutation test** — Monte Carlo (10,000 iterations). The anomaly zone union is rasterised onto a 1,000×1,000 grid; each iteration samples n_deposit random grid cells and counts zone hits. Returns P(random hits ≥ observed). Mathematically equivalent to placing random points uniformly in the bbox.
+
+Both tests agree throughout (p-values never diverge by more than 0.01), confirming consistency.
+
+### Structure proximity
+
+MRDS deposits are annotated with distance to the nearest mapped fault. Deposits within 500 m of a fault are flagged as structurally controlled. Per-site structure GeoJSONs are fetched automatically from USGS QFAULTS (and SGMC as fallback) on first run.
 
 ---
 
 ## Key results
 
-- **8,587 strong anomaly zones** identified, totaling **441 km²**
-- Largest single zone: **185.9 km²** centered on the caldera floor
-- **21 of 142 MRDS deposits (15%)** fall within strong anomaly zones
+### Site-level
 
-### Commodity correlation
+4 of 15 sites show hit rates significantly above chance. 5 sites are anti-correlated — deposits actively avoid the anomaly zones. The anti-correlations are geologically coherent: Climax (deep porphyry Mo, no surface expression), Goldfield/Oatman (epithermal Au with eroded/covered alteration), Steamboat Springs (active geothermal surface ≠ MRDS deposit locations).
 
-| Commodity | % inside anomaly zone | Interpretation |
-|---|---|---|
-| Mercury | 0% | Fault-hosted, structurally controlled — not alteration-zone associated |
-| Lithium | 0% | Lake sediment-hosted claystone — different TIR signature than volcanic alteration |
-| Antimony | 0% | Structurally controlled |
-| Uranium | 11% | Weak association |
-| Gold/Silver | 30% | Moderate association with silicic/epithermal alteration |
-| Sand/Gravel | 44% | Spatial overlap with caldera floor, not geologically meaningful |
+### By Earth MRI category (national pooled)
 
-The 0% hit rate for mercury is geologically coherent: McDermitt Hg deposits are structurally controlled along caldera-margin faults, outside the broad hydrothermal alteration footprint mapped here. Similarly, Li claystone deposits are hosted in lacustrine sediments with a distinct spectral character not captured by TIR ratios alone.
+| Category | Deposits | Hits | Expected | Ratio | TIR-detectable? |
+|---|---|---|---|---|---|
+| Base Metals | 951 | 92 | 85 | 1.08 | Yes — porphyry/skarn/VMS halos |
+| Battery Metals – Co/Ni | 202 | 20 | 18 | 1.12 | Maybe |
+| PGM | 25 | 3 | 2.4 | 1.26 | Yes — mafic ratio |
+| REE | 28 | 3 | 3.5 | 0.87 | Yes (carbonatite), but small n |
+| Gold/Silver | 2145 | 147 | 212 | 0.69 | No — placer/Carlin/epithermal |
+| Energy | 289 | 11 | 30 | 0.37 | No — roll-front U |
+| Battery Metals – Li/Brine | 9 | 0 | 0.9 | 0.00 | No — brine-hosted |
+| Industrial | 214 | 11 | 24 | 0.47 | No — sand/gravel/stone |
+
+No category reaches national significance individually — the signal is site-specific rather than category-wide. The strongest per-site results are Base Metals at Mountain Pass (ratio 2.53, p < 0.001) and Yerington (ratio 2.50, p = 0.001).
+
+### Dilution finding
+
+The whole MRDS catalog dilutes the signal, but the main diluter is **within-category heterogeneity** rather than cross-category mixing. "Gold/Silver" spans placer/Carlin (TIR-invisible) and caldera-hosted/VMS-associated Au (TIR-visible): Jerome and McDermitt both show significant Gold/Silver hits because those deposits are co-spatial with the alteration system. Filtering by mineral system helps but reduces n too much for most individual sites.
 
 ---
 
 ## Figures
 
-**TIR band ratio maps**
-![Band ratios](figures/01_tir_band_ratios.png)
+Each site generates five figures:
 
-**Alteration classification and combined score**
-![Classification](figures/02_classification.png)
+| Figure | Content |
+|---|---|
+| `00_composite_rgb.png` | False-color TIR composite |
+| `01_tir_band_ratios.png` | Three band ratio maps with global colorbars |
+| `02_classification.png` | Per-ratio classification + combined score |
+| `03_deposit_overlay.png` | Anomaly zones, MRDS deposits, fault corridors, scale bar |
+| `05_structure_proximity.png` | Strip chart: deposit distance to nearest fault by commodity group |
 
-**Deposit overlay map**
-![Deposit overlay](figures/03_deposit_overlay.png)
+National synthesis figures in `figures/`:
 
-**Commodity correlation with anomaly zones**
-![Commodity correlation](figures/04_commodity_correlation.png)
+| Figure | Content |
+|---|---|
+| `05_national_hit_rates.png` | Stacked bar by Earth MRI category across all sites |
+| `06_structure_hit_rate.png` | Log-scale scatter: mean fault distance vs hit rate |
+| `index.html` | Sortable site gallery (no external deps) |
 
 ---
 
@@ -93,26 +141,43 @@ The 0% hit rate for mercury is geologically coherent: McDermitt Hg deposits are 
 ```
 critical-minerals-aster/
 ├── sites/
-│   └── mcdermitt.yaml              # per-site bbox, granule, classification params
+│   ├── index.yaml                   # list of 15 site IDs
+│   └── {site_id}.yaml               # bbox, granule, classification params, structure layers
 ├── src/
-│   └── critical_minerals_aster/    # shared library (paths, spectral, classification, MRDS helpers)
+│   └── critical_minerals_aster/
+│       ├── config.py                # SiteConfig, ClassificationParams, StructureLayer
+│       ├── paths.py                 # SitePaths — all file/dir paths
+│       ├── spectral.py              # TIR I/O, granule selection, band ratios
+│       ├── classification.py        # percentile classification, vectorization
+│       ├── metrics.py               # MRDS spatial join, per-site summary CSV
+│       ├── mrds.py                  # MRDS CSV → GeoDataFrame, Earth MRI / mineral-system classifiers
+│       ├── structure.py             # distance-to-fault annotation, buffer flags
+│       ├── significance.py          # binomial + spatial permutation p-values
+│       ├── synthesis.py             # national summary CSV + figures
+│       ├── terrain.py               # hillshade DEM overlay
+│       └── pipeline.py             # run_site() / run_batch() orchestration
 ├── docs/
-│   ├── roadmap.md                   # live planning document — current status, backlog, deferred work
-│   ├── architecture.md              # design rationale and phase history (A–F complete)
-│   └── structure_layers.md          # optional fault/structure overlay config
+│   ├── roadmap.md                   # live planning doc — current status, backlog
+│   ├── architecture.md              # design rationale
+│   └── structure_layers.md          # fault overlay config reference
 ├── notebooks/
-│   ├── 00_verify_setup.ipynb       # environment verification
-│   ├── 01_data_download.ipynb      # EarthData auth, ASTER download
-│   ├── 02_band_ratios.ipynb        # TIR band ratios, false-color composite
-│   ├── 03_classification.ipynb     # anomaly classification, vectorization
-│   ├── 04_deposit_overlay.ipynb   # MRDS spatial join, commodity analysis
-│   └── 05_national_synthesis.ipynb # aggregate multi-site results
+│   ├── 00_verify_setup.ipynb
+│   ├── 01_data_download.ipynb
+│   ├── 02_band_ratios.ipynb
+│   ├── 03_classification.ipynb
+│   ├── 04_deposit_overlay.ipynb
+│   └── 05_national_synthesis.ipynb
 ├── scripts/
-│   └── synthesize_national.py
-├── results/                        # per-site CSV summaries (generated)
-├── tests/                          # lightweight unit tests
-├── data/                           # not committed (downloaded by notebooks)
-├── figures/                        # output maps
+│   ├── synthesize_national.py
+│   ├── compute_significance.py            # whole-catalog binomial + permutation, all sites
+│   ├── compute_significance_filtered.py   # TIR-detectable systems only
+│   ├── compute_significance_by_category.py # per-(site × Earth MRI category)
+│   ├── download_usgs_faults.py
+│   └── download_sgmc_structures.py
+├── results/                         # generated per-site CSVs + results.duckdb
+├── tests/
+├── data/                            # not committed (ASTER rasters, MRDS CSV, structure GeoJSONs)
+├── figures/
 ├── environment.yml
 ├── pyproject.toml
 └── README.md
@@ -122,73 +187,87 @@ critical-minerals-aster/
 
 ## Reproducing this analysis
 
-### 1. Clone the repo
+### 1. Clone and set up
 
 ```bash
 git clone git@github.com:nicole-m-aikin/critical-minerals-aster.git
 cd critical-minerals-aster
-```
-
-### 2. Create the environment
-
-```bash
 conda env create -f environment.yml
 conda activate aster-minerals
 pip install -e .
 ```
 
-Or follow the manual dependency list below, then from the repo root run `pip install -e .` so notebooks can import `critical_minerals_aster` (adds `src/` to the package path).
+### 2. EarthData credentials
 
-### 3. Set up EarthData credentials
+Create a free account at [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov). The pipeline uses `earthaccess.login(strategy="interactive")` on first run; credentials are cached.
 
-Create a free account at [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov). The notebooks use `earthaccess.login(strategy="interactive")` to authenticate on first run.
-
-### 4. Run the pipeline
-
-**CLI (recommended after ASTER data exists):**
+### 3. Run the pipeline
 
 ```bash
-# Process McDermitt using cached data/aster/ rasters
+# Single site (uses cached ASTER rasters)
 python -m critical_minerals_aster run --site mcdermitt
 
 # Download from EarthData then process
 python -m critical_minerals_aster run --site mcdermitt --download
 
-# All sites in sites/index.yaml (skips sites without data)
-python -m critical_minerals_aster run-batch --all-sites
+# All 15 sites in parallel (4 workers, ~90 s)
+python -m critical_minerals_aster run-batch --all --workers 4
 
-# Aggregate results/*_summary.csv
-python -m critical_minerals_aster synthesize
+# Skip already-processed sites
+python -m critical_minerals_aster run-batch --all --workers 4 --skip-existing
+
+# Regenerate national summary + synthesis figures
+python scripts/synthesize_national.py
 ```
 
-Outputs: `data/vectors/strong_anomaly_zones.geojson`, `figures/02_classification.png`, `results/{site_id}_summary.csv`, `results/{site_id}_provenance.json`.
+### 4. Significance tests
 
-**Notebooks:** Run `00` through `04` in sequence for interactive QC. Notebook `01` downloads ~200MB of ASTER data to `data/aster/`. Notebook `05_national_synthesis.ipynb` compares sites after batch runs.
+```bash
+# Whole-catalog: binomial + permutation for all 15 sites
+python scripts/compute_significance.py
 
-### Multi-site configuration
+# TIR-detectable mineral systems only (filters MRDS before testing)
+python scripts/compute_significance_filtered.py
 
-Each study area has a YAML under `sites/` (see `sites/mcdermitt.yaml`). Set `layout: nested` for `data/sites/{id}/` paths. Set `granule_id: null` to auto-select the best ASTER scene; set an explicit id for reproducibility. Optional `structure_layers` accept GeoJSON/Shapefile paths for fault/structure proximity analysis.
+# Per-(site × Earth MRI category) binomial test + national pooled test
+python scripts/compute_significance_by_category.py
+```
+
+### 5. Query results
+
+```bash
+python -c "
+import duckdb
+con = duckdb.connect('results/results.duckdb')
+print(con.execute(\"\"\"
+    SELECT site_id, hit_rate_pct, n_deposits_bbox, n_deposits_in_zones
+    FROM site_summaries WHERE row_type='site'
+    ORDER BY hit_rate_pct DESC
+\"\"\").fetchdf())
+"
+```
 
 ---
 
 ## Interpretation limits
 
-- **TIR-only:** SWIR clay/argillic mapping is not available for all LP DAAC v004 granules; this workflow uses B10–B14 only.
-- **Scene-relative thresholds:** Percentile classification is per-scene; cross-site comparison of raw scores is not meaningful—use standardized hit rates and zone areas instead.
-- **MRDS uncertainty:** Deposit locations are report-derived and may be displaced from true geology.
-- **Structure vs alteration:** Low hit rates for structurally controlled commodities (e.g. Hg along faults) are expected when comparing point deposits to broad alteration polygons—use `structure_layers` when testing structural controls.
+- **TIR-only:** SWIR clay/argillic mapping (B04–B09) is not available in LP DAAC v004 for these areas.
+- **Scene-relative thresholds:** Percentile classification is per-scene; don't compare raw scores across sites.
+- **MRDS uncertainty:** Deposit locations are report-derived and may be offset from true geology.
+- **Significance null model:** Both tests assume deposits are uniformly distributed within the bbox. Spatial clustering of real deposits means p-values are conservative — the true null distribution is not uniform.
+- **Anti-correlations are informative:** p ≈ 1 at a site means the method is physically incapable of detecting the dominant deposit type there, not that the zones are wrong.
 
 ---
 
 ## Dependencies
 
-- `rasterio` — raster I/O and feature extraction
+- `rasterio` — raster I/O, feature extraction, rasterization for permutation test
 - `geopandas` / `shapely` — vector operations and spatial joins
+- `scipy` — binomial significance tests
 - `earthaccess` — NASA EarthData authentication and download
-- `numpy` / `scipy` — array operations
-- `matplotlib` — visualization
-- `scikit-learn` — available for classification extension (notebook 03)
-- `spectral` — available for SAM extension
+- `duckdb` — SQL-queryable national results
+- `numpy` / `pandas` — array and tabular operations
+- `matplotlib` / `contextily` — visualization and basemap tiles
 
 ---
 
