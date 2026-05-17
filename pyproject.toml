@@ -26,3 +26,8 @@ critical-minerals-aster = "critical_minerals_aster.__main__:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+  "slow: opt-in tests that require local data or network access; deselect with `-m 'not slow'`",
+]
