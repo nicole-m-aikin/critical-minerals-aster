@@ -56,6 +56,8 @@ def compute_site_summary(
     zones: gpd.GeoDataFrame,
     granule_id: str,
     mrds_bbox: BBox | None = None,
+    n_on_structure: int | None = None,
+    mean_nearest_m: float | None = None,
 ) -> pd.DataFrame:
     """Site-level summary row plus one row per commodity group.
 
@@ -66,6 +68,12 @@ def compute_site_summary(
         ``site.bbox_wgs84`` when not supplied, but callers should pass the
         actual raster extent (from ``run_classification``) so only deposits
         within the TIR coverage area are counted.
+    n_on_structure:
+        Count of MRDS deposits that lie within the configured buffer of any
+        structure layer.  None when no structure layers are configured.
+    mean_nearest_m:
+        Mean nearest-structure distance (metres) across all deposits in the
+        site bbox.  None when no structure layers are configured.
     """
     mrds = read_mrds_national(paths)
     effective_bbox: BBox = mrds_bbox if mrds_bbox is not None else site.bbox_wgs84
@@ -102,6 +110,8 @@ def compute_site_summary(
             "earth_mri_category": "",
             "is_critical_mineral": False,
             "mineral_system": "",
+            "n_deposits_on_structure": n_on_structure,
+            "mean_nearest_structure_m": mean_nearest_m,
         }
     ]
 

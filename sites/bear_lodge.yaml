@@ -14,4 +14,8 @@ temporal:
   start: "2010-01-01"
   end: "2023-12-31"
 
-structure_layers: []
+structure_layers:
+  - path: data/structures/bear_lodge_faults_sgmc.geojson
+    type: faults
+    label: "SGMC Structural Faults (all ages)"
+    buffer_m: 500

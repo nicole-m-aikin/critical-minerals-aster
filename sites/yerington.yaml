@@ -2,7 +2,7 @@
 id: yerington
 name: "Yerington, NV"
 bbox_wgs84: [-119.3, 38.8, -118.8, 39.2]
-granule_id: null
+granule_id: "AST_L1T_00403082010185704_20250703035429"
 layout: nested
 
 classification:

@@ -26,6 +26,14 @@ def compute_hillshade_for_site(
     Returns a (rows, cols) uint8 hillshade array, or None if DEM unavailable.
     The result is cached under data/dem/{site_id}/ so subsequent runs skip the
     download and reprojection steps.
+
+    Cache invalidation
+    ------------------
+    ``dem_merged.tif``    — raw NASADEM tiles merged to a single WGS84 GeoTIFF.
+                            Kept across runs; only re-downloaded if missing.
+    ``dem_reprojected.tif`` — DEM reprojected to the TIR raster pixel grid.
+                            Invalidated whenever the TIR shape changes (e.g.
+                            after switching from a single granule to a mosaic).
     """
     import tempfile
 
@@ -41,6 +49,24 @@ def compute_hillshade_for_site(
     dem_merged = dem_dir / "dem_merged.tif"
     dem_reprojected = dem_dir / "dem_reprojected.tif"
 
+    # Invalidate the cached reprojection when the TIR raster dimensions have
+    # changed — e.g. after switching from a single granule to a mosaic, or
+    # after modifying the site bbox.  dem_merged.tif is kept so only the
+    # cheap reprojection step needs to re-run, not the full DEM download.
+    if dem_reprojected.is_file():
+        try:
+            with rio.open(dem_reprojected) as _ds:
+                if (_ds.height, _ds.width) != shape:
+                    print(
+                        f"  [terrain] DEM cache shape mismatch for {site.id} "
+                        f"(cached {_ds.height}×{_ds.width} vs expected "
+                        f"{shape[0]}×{shape[1]}); regenerating reprojection.",
+                        file=sys.stderr,
+                    )
+                    dem_reprojected.unlink()
+        except Exception:
+            dem_reprojected.unlink(missing_ok=True)
+
     # Purge a corrupt cached merge (e.g. an HGT binary that was wrongly
     # saved with a .tif extension on a previous run).
     if dem_merged.is_file() and not dem_reprojected.is_file():
@@ -50,74 +76,100 @@ def compute_hillshade_for_site(
         except Exception:
             dem_merged.unlink(missing_ok=True)
 
-    if not dem_reprojected.is_file():
-        dem_dir.mkdir(parents=True, exist_ok=True)
+    # Validate that dem_merged covers the required bbox sufficiently.
+    # A stale merge built from a different granule/mosaic may cover only a tiny
+    # fraction of the current raster extent — reprojecting it would fill most of
+    # the output with nodata and produce a flat-grey hillshade.
+    # Threshold: the merged DEM must overlap at least 80 % of the required bbox.
+    if dem_merged.is_file() and not dem_reprojected.is_file():
         try:
-            import earthaccess
-
-            earthaccess.login(strategy="netrc")
-            results = earthaccess.search_data(
-                short_name="NASADEM_HGT",
-                bounding_box=bbox,
-                count=20,
-            )
-            if not results:
+            from rasterio.warp import transform_bounds as _tb
+            from shapely.geometry import box as _box
+            lon0_req, lat0_req, lon1_req, lat1_req = bbox
+            with rio.open(dem_merged) as _ds:
+                lon0_m, lat0_m, lon1_m, lat1_m = _tb(
+                    _ds.crs, "EPSG:4326", *_ds.bounds
+                )
+            req_box = _box(lon0_req, lat0_req, lon1_req, lat1_req)
+            merged_box = _box(lon0_m, lat0_m, lon1_m, lat1_m)
+            overlap_frac = req_box.intersection(merged_box).area / req_box.area
+            if overlap_frac < 0.80:
                 print(
-                    f"  [terrain] No NASADEM tiles found for {site.id}",
+                    f"  [terrain] dem_merged coverage too small for {site.id} "
+                    f"({overlap_frac:.0%} of required bbox); re-downloading.",
                     file=sys.stderr,
                 )
-                return None
+                dem_merged.unlink(missing_ok=True)
+        except Exception:
+            pass  # if check fails, keep the file and let reprojection proceed
 
-            with tempfile.TemporaryDirectory() as tmpdir:
-                earthaccess.download(results, tmpdir)
-                tmppath = Path(tmpdir)
+    if not dem_reprojected.is_file():
+        dem_dir.mkdir(parents=True, exist_ok=True)
 
-                # NASADEM_HGT tiles are delivered as .zip archives containing
-                # a single .hgt elevation file.  Extract all zips first.
-                import zipfile
+        if not dem_merged.is_file():
+            # No merged DEM on disk yet — download NASADEM tiles.
+            try:
+                import earthaccess
 
-                for zf in tmppath.glob("**/*.zip"):
-                    try:
-                        with zipfile.ZipFile(zf) as z:
-                            z.extractall(zf.parent)
-                    except Exception:
-                        pass
-
-                # Collect every candidate file and validate with rasterio
-                # (avoids misreading .num/.lsm auxiliary files or empty zips).
-                candidates = (
-                    list(tmppath.glob("**/*.hgt"))
-                    + list(tmppath.glob("**/*.tif"))
-                    + list(tmppath.glob("**/*dem.tif"))
+                earthaccess.login(strategy="netrc")
+                results = earthaccess.search_data(
+                    short_name="NASADEM_HGT",
+                    bounding_box=bbox,
+                    count=20,
                 )
-                valid_files: list[Path] = []
-                for f in candidates:
-                    try:
-                        with rio.open(f) as ds:
-                            if ds.count >= 1 and ds.width > 0 and ds.height > 0:
-                                valid_files.append(f)
-                    except Exception:
-                        pass
-
-                if not valid_files:
+                if not results:
                     print(
-                        f"  [terrain] No readable DEM files after download for {site.id}",
+                        f"  [terrain] No NASADEM tiles found for {site.id}",
                         file=sys.stderr,
                     )
                     return None
 
-                # Always write a proper GeoTIFF (HGT binaries cannot be
-                # renamed to .tif and read back by GDAL).
-                if len(valid_files) == 1:
-                    with rio.open(valid_files[0]) as src:
-                        profile = src.profile.copy()
-                        profile.update(driver="GTiff", dtype="float32", count=1)
-                        with rio.open(dem_merged, "w", **profile) as dst:
-                            dst.write(src.read(1).astype("float32"), 1)
-                else:
+                with tempfile.TemporaryDirectory() as tmpdir:
+                    earthaccess.download(results, tmpdir)
+                    tmppath = Path(tmpdir)
+
+                    # NASADEM_HGT tiles are delivered as .zip archives containing
+                    # a single .hgt elevation file.  Extract all zips first.
+                    import zipfile
+
+                    for zf in tmppath.glob("**/*.zip"):
+                        try:
+                            with zipfile.ZipFile(zf) as z:
+                                z.extractall(zf.parent)
+                        except Exception:
+                            pass
+
+                    # Collect every candidate file and validate with rasterio
+                    # (avoids misreading .num/.lsm auxiliary files or empty zips).
+                    candidates = (
+                        list(tmppath.glob("**/*.hgt"))
+                        + list(tmppath.glob("**/*.tif"))
+                        + list(tmppath.glob("**/*dem.tif"))
+                    )
+                    valid_files: list[Path] = []
+                    for f in candidates:
+                        try:
+                            with rio.open(f) as ds:
+                                if ds.count >= 1 and ds.width > 0 and ds.height > 0:
+                                    valid_files.append(f)
+                        except Exception:
+                            pass
+
+                    if not valid_files:
+                        print(
+                            f"  [terrain] No readable DEM files after download for {site.id}",
+                            file=sys.stderr,
+                        )
+                        return None
+
+                    # Merge (clipping to site bbox so the output stays small even
+                    # when many 1°×1° NASADEM tiles are required).
+                    lon0, lat0, lon1, lat1 = bbox
                     datasets = [rio.open(f) for f in valid_files]
                     try:
-                        merged, merged_t = rmerge(datasets)
+                        merged, merged_t = rmerge(
+                            datasets, bounds=(lon0, lat0, lon1, lat1)
+                        )
                         profile = datasets[0].profile.copy()
                         profile.update(
                             height=merged.shape[1],
@@ -133,14 +185,15 @@ def compute_hillshade_for_site(
                         for ds in datasets:
                             ds.close()
 
-        except Exception as exc:
-            print(
-                f"  [terrain] DEM download failed for {site.id}: {exc}",
-                file=sys.stderr,
-            )
-            return None
+            except Exception as exc:
+                print(
+                    f"  [terrain] DEM download failed for {site.id}: {exc}",
+                    file=sys.stderr,
+                )
+                return None
 
-        # Reproject / resample to match TIR raster pixel grid exactly.
+        # Reproject / resample dem_merged to match TIR raster pixel grid exactly.
+        # This runs whether dem_merged was just downloaded or already existed.
         rows, cols = shape
         try:
             with rio.open(dem_merged) as src:

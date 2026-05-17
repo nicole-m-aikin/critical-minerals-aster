@@ -23,7 +23,8 @@ SITES = {
     "mountain_pass":[-115.7, 35.3, -115.3, 35.7],
     "climax":       [-106.5, 39.3, -106.1, 39.6],
     "jerome":       [-112.4, 34.5, -112.0, 34.9],
-    "stillwater":   [-118.2, 39.4, -117.8, 39.7],
+    # NOTE: Stillwater (MT) returns 0 Quaternary features — use download_sgmc_structures.py instead.
+    "stillwater":   [-110.42, 45.18, -109.70, 45.72],
 }
 
 # USGS Quaternary Fault and Fold Database - layer 21 = National Database (polylines)

@@ -4,7 +4,6 @@ id: mountain_pass
 name: "Mountain Pass, CA"
 bbox_wgs84: [-115.75, 35.28, -115.30, 35.68]
 layout: nested
-
 classification:
   low_pct: 70
   high_pct: 90

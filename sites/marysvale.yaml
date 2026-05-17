@@ -14,4 +14,7 @@ temporal:
   start: "2010-06-01"
   end: "2023-09-30"
 
-structure_layers: []
+structure_layers:
+  - path: data/structures/marysvale_faults.geojson
+    type: faults
+    buffer_m: 500

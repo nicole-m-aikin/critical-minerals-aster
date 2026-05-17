@@ -1,0 +1,6329 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 36048,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -116.0272421258726,
+            41.4875011379044
+          ],
+          [
+            -116.02812713980234,
+            41.486750025892704
+          ],
+          [
+            -116.02892048065729,
+            41.485788362248286
+          ],
+          [
+            -116.02953826106133,
+            41.4848461441958
+          ],
+          [
+            -116.03011826012117,
+            41.483793371696855
+          ],
+          [
+            -116.03091159738284,
+            41.482652821037725
+          ],
+          [
+            -116.0313388091825,
+            41.48132172105617
+          ],
+          [
+            -116.03201046963899,
+            41.47969284433475
+          ],
+          [
+            -116.03222378807791,
+            41.478387856744384
+          ],
+          [
+            -116.03262822129693,
+            41.47694231474298
+          ],
+          [
+            -116.03284209579304,
+            41.47566066097449
+          ],
+          [
+            -116.03293319214937,
+            41.47469900505953
+          ],
+          [
+            -116.03305539357075,
+            41.47313902167848
+          ],
+          [
+            -116.03297148373667,
+            41.47199070519555
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36048,
+        "fault_name": "Eastern Independence Valley fault zone",
+        "section_name": "northern section",
+        "fault_id": "1553",
+        "section_id": "a",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N4\u00b0W",
+        "total_fault_length": 42,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475625600000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1553&section_id=a",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1553a",
+        "Fault_ID_num": 1553,
+        "Shape_Length": 2442.93023863212,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1553a.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36049,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -116.03149960402513,
+            41.495538770044476
+          ],
+          [
+            -116.03180459284386,
+            41.494294894296004
+          ],
+          [
+            -116.03202568530328,
+            41.492807131107874
+          ],
+          [
+            -116.03220900180835,
+            41.49145714521408
+          ],
+          [
+            -116.03223952925667,
+            41.48966772121648
+          ],
+          [
+            -116.03239173261188,
+            41.48829440167677
+          ],
+          [
+            -116.032368930675,
+            41.48682608780486
+          ],
+          [
+            -116.03252169996887,
+            41.48609331575614
+          ],
+          [
+            -116.03258281056101,
+            41.485887763024806
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36049,
+        "fault_name": "Eastern Independence Valley fault zone",
+        "section_name": "northern section",
+        "fault_id": "1553",
+        "section_id": "a",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N4\u00b0W",
+        "total_fault_length": 42,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475625600000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1553&section_id=a",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1553a",
+        "Fault_ID_num": 1553,
+        "Shape_Length": 1442.5513133996492,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1553a.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36050,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -116.03033958524422,
+            41.496545993259524
+          ],
+          [
+            -116.02979009656471,
+            41.49484824332509
+          ],
+          [
+            -116.02921783828766,
+            41.49358548718387
+          ],
+          [
+            -116.02888225644364,
+            41.492643280246874
+          ],
+          [
+            -116.02842444802539,
+            41.4915216319915
+          ],
+          [
+            -116.02782163265564,
+            41.490350541276676
+          ],
+          [
+            -116.02724215012714,
+            41.48897000979968
+          ],
+          [
+            -116.02681489341171,
+            41.48764225281405
+          ],
+          [
+            -116.02648652863265,
+            41.48635671513733
+          ],
+          [
+            -116.02612039328913,
+            41.4854606198966
+          ],
+          [
+            -116.02575425974224,
+            41.48468618913904
+          ],
+          [
+            -116.02532700662009,
+            41.483648427291
+          ],
+          [
+            -116.02512087470342,
+            41.48259566628949
+          ],
+          [
+            -116.0249069633764,
+            41.48161123567556
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36050,
+        "fault_name": "Eastern Independence Valley fault zone",
+        "section_name": "northern section",
+        "fault_id": "1553",
+        "section_id": "a",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N4\u00b0W",
+        "total_fault_length": 42,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475625600000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1553&section_id=a",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1553a",
+        "Fault_ID_num": 1553,
+        "Shape_Length": 2305.140764646494,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1553a.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36194,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.94524579859016,
+            41.46976007385841
+          ],
+          [
+            -115.94324680363958,
+            41.467410681756775
+          ],
+          [
+            -115.94198006859617,
+            41.465872938976
+          ],
+          [
+            -115.94098055629868,
+            41.463893531914195
+          ],
+          [
+            -115.93987438163758,
+            41.46229523174878
+          ],
+          [
+            -115.93905822357439,
+            41.46112747904142
+          ],
+          [
+            -115.93791371420689,
+            41.459567513099785
+          ],
+          [
+            -115.93701310642219,
+            41.458312539326755
+          ],
+          [
+            -115.93619694656235,
+            41.45701200772106
+          ],
+          [
+            -115.93435797030992,
+            41.45544427367069
+          ],
+          [
+            -115.93260344198245,
+            41.45405153272441
+          ],
+          [
+            -115.93106225455176,
+            41.452674347861375
+          ],
+          [
+            -115.92942162272081,
+            41.45140049528275
+          ],
+          [
+            -115.92794155037386,
+            41.45015330592034
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36194,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 3522.0217113635913,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36195,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.94203011104571,
+            41.22229668379327
+          ],
+          [
+            -115.94141950638418,
+            41.22044283571124
+          ],
+          [
+            -115.94083168928641,
+            41.21901619968436
+          ],
+          [
+            -115.94032831831697,
+            41.21762734131952
+          ],
+          [
+            -115.93996994262088,
+            41.21550627228297
+          ],
+          [
+            -115.93923711318176,
+            41.21365631266938
+          ],
+          [
+            -115.93896263115006,
+            41.21179079217248
+          ],
+          [
+            -115.93829869440842,
+            41.20978083429462
+          ],
+          [
+            -115.93813089090997,
+            41.20851419422444
+          ],
+          [
+            -115.93838254764862,
+            41.20728198821691
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36195,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2275.8448679565568,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36196,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.93354178260235,
+            41.45241876722146
+          ],
+          [
+            -115.93236671793878,
+            41.45097324203444
+          ],
+          [
+            -115.93131388164598,
+            41.44957716169933
+          ],
+          [
+            -115.93017714989222,
+            41.44803997371688
+          ],
+          [
+            -115.92902485302949,
+            41.445884458715376
+          ],
+          [
+            -115.92816257456133,
+            41.44421782484614
+          ],
+          [
+            -115.92759030011462,
+            41.442184522686176
+          ],
+          [
+            -115.92728526188854,
+            41.44040677231364
+          ],
+          [
+            -115.92720856822115,
+            41.4388962390631
+          ],
+          [
+            -115.92762855936257,
+            41.43741236277912
+          ],
+          [
+            -115.92813188631456,
+            41.43595126479691
+          ],
+          [
+            -115.92846021695767,
+            41.4351312721953
+          ],
+          [
+            -115.92870410237079,
+            41.4342651681404
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36196,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2868.047169956284,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36197,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91639525699038,
+            41.288835546851054
+          ],
+          [
+            -115.9183180801948,
+            41.287683866146274
+          ],
+          [
+            -115.92032423381987,
+            41.285924971309385
+          ],
+          [
+            -115.92214760184423,
+            41.284197190057164
+          ],
+          [
+            -115.92394874195519,
+            41.2821638561122
+          ],
+          [
+            -115.92471152931073,
+            41.281122194306654
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36197,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1481.5504437948534,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36198,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.92058614842075,
+            41.4408796252347
+          ],
+          [
+            -115.91903772865372,
+            41.438831336272
+          ],
+          [
+            -115.91786266399014,
+            41.437339705760344
+          ],
+          [
+            -115.91645869691406,
+            41.435455302268124
+          ],
+          [
+            -115.91529862872581,
+            41.43375811590326
+          ],
+          [
+            -115.91430690841509,
+            41.432426478112525
+          ],
+          [
+            -115.9132846274184,
+            41.43100762120497
+          ],
+          [
+            -115.91223900908892,
+            41.429401545062994
+          ],
+          [
+            -115.9116134124436,
+            41.428085456946846
+          ],
+          [
+            -115.91133894298832,
+            41.42718158430736
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36198,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2286.8184846657423,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36199,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.9175629940962,
+            41.31877291698079
+          ],
+          [
+            -115.91738741478065,
+            41.317662933754484
+          ],
+          [
+            -115.91715072397464,
+            41.31667128279786
+          ],
+          [
+            -115.9169451283522,
+            41.314557979690264
+          ],
+          [
+            -115.91672342683502,
+            41.312925227270576
+          ],
+          [
+            -115.9167311721094,
+            41.31083469867141
+          ],
+          [
+            -115.91672336934283,
+            41.309255275055364
+          ],
+          [
+            -115.91684556537432,
+            41.30734418684988
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36199,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1699.7249943565214,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36200,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91100790841624,
+            41.257284924312884
+          ],
+          [
+            -115.9118245767225,
+            41.25574382230897
+          ],
+          [
+            -115.91271735029962,
+            41.25357717032033
+          ],
+          [
+            -115.91377012460865,
+            41.251074408914015
+          ],
+          [
+            -115.9147617883255,
+            41.24872109467087
+          ],
+          [
+            -115.91521955631956,
+            41.24694723017127
+          ],
+          [
+            -115.91563176984725,
+            41.245345026736366
+          ],
+          [
+            -115.91589842395955,
+            41.2439028251839
+          ],
+          [
+            -115.91597508438927,
+            41.24328894430803
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36200,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2151.6828177713887,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36201,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.90697398500532,
+            41.36925628880842
+          ],
+          [
+            -115.90634838836,
+            41.36793242521722
+          ],
+          [
+            -115.90617280455288,
+            41.366669666817344
+          ],
+          [
+            -115.90625667216614,
+            41.36503746524144
+          ],
+          [
+            -115.90641664594855,
+            41.363026932772534
+          ],
+          [
+            -115.90646994119773,
+            41.36058918803367
+          ],
+          [
+            -115.90649324798777,
+            41.3587736550032
+          ],
+          [
+            -115.90648544611955,
+            41.35726311930678
+          ],
+          [
+            -115.90647762987825,
+            41.35484815176861
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36201,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2150.7533084380734,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36203,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.97032023326562,
+            41.20292548372936
+          ],
+          [
+            -115.97080078343362,
+            41.201391614068115
+          ],
+          [
+            -115.9709918829423,
+            41.20010996670621
+          ],
+          [
+            -115.97101463816676,
+            41.19854610399202
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36203,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 655.3578214259587,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36205,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.96985468316625,
+            41.204359911910785
+          ],
+          [
+            -115.96919135009247,
+            41.20599989391243
+          ],
+          [
+            -115.96845857634892,
+            41.20800653678909
+          ],
+          [
+            -115.96806968757758,
+            41.20893708319079
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36205,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 705.8926925999397,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36207,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.96806968757758,
+            41.20893708319079
+          ],
+          [
+            -115.96797022700764,
+            41.20799487681172
+          ],
+          [
+            -115.9677413102221,
+            41.20670545824284
+          ],
+          [
+            -115.96768796017567,
+            41.20548881406909
+          ],
+          [
+            -115.96748959868624,
+            41.20408883980934
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36207,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 720.7719090209926,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36208,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.96521641904627,
+            41.21999582771206
+          ],
+          [
+            -115.96548306956534,
+            41.21826029679079
+          ],
+          [
+            -115.96623861110976,
+            41.21556699678612
+          ],
+          [
+            -115.96667359243834,
+            41.213343140229455
+          ],
+          [
+            -115.96716191572847,
+            41.211352054813624
+          ],
+          [
+            -115.96786357632216,
+            41.209414299049655
+          ],
+          [
+            -115.96806968757758,
+            41.20893708319079
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36208,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1669.5838679555286,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36209,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.96683344494821,
+            41.20267387300867
+          ],
+          [
+            -115.96639840612747,
+            41.20112890602795
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36209,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 233.65765466229644,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36231,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91553319771113,
+            41.301030954992285
+          ],
+          [
+            -115.91637264998792,
+            41.29965040478872
+          ],
+          [
+            -115.91764655358729,
+            41.29785707688005
+          ],
+          [
+            -115.91889768040264,
+            41.29602263930531
+          ],
+          [
+            -115.92076714906905,
+            41.293718197885546
+          ],
+          [
+            -115.92282718274657,
+            41.29129986507452
+          ],
+          [
+            -115.92453609821722,
+            41.28933931107855
+          ],
+          [
+            -115.92648168832419,
+            41.28742041871593
+          ],
+          [
+            -115.92822116358246,
+            41.2855737498901
+          ],
+          [
+            -115.9301284252712,
+            41.28404818793932
+          ],
+          [
+            -115.93147900636825,
+            41.28272040819244
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36231,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 3254.2022875779594,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36232,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.92249221804511,
+            41.32921715767443
+          ],
+          [
+            -115.92263663929504,
+            41.32754662190702
+          ],
+          [
+            -115.92258327487556,
+            41.325589982155435
+          ],
+          [
+            -115.9228354831798,
+            41.32423944033093
+          ],
+          [
+            -115.92276656712615,
+            41.32268279478734
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36232,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 971.2915454031378,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36233,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91898914237326,
+            41.283029472057486
+          ],
+          [
+            -115.9206674998529,
+            41.28102336369498
+          ],
+          [
+            -115.92218585660062,
+            41.27933336279397
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36233,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 653.0866622824623,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36234,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.92204928842293,
+            41.32055449866676
+          ],
+          [
+            -115.92137812383649,
+            41.31872730807375
+          ],
+          [
+            -115.92113365272179,
+            41.31764399320047
+          ],
+          [
+            -115.92096585101999,
+            41.316469010943614
+          ],
+          [
+            -115.9206835931712,
+            41.314790702826414
+          ],
+          [
+            -115.92034022383196,
+            41.31324572784407
+          ],
+          [
+            -115.92008852038092,
+            41.31154019819111
+          ],
+          [
+            -115.920111277402,
+            41.31005243872398
+          ],
+          [
+            -115.92028680910683,
+            41.30828634918372
+          ],
+          [
+            -115.9204012338128,
+            41.306798587667025
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36234,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2059.936277426715,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36235,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91854090909763,
+            41.395435797131725
+          ],
+          [
+            -115.9192503491017,
+            41.39347525699296
+          ],
+          [
+            -115.91957088955462,
+            41.39196860609425
+          ],
+          [
+            -115.91995976844451,
+            41.39045417608683
+          ],
+          [
+            -115.92008196896754,
+            41.38867253185054
+          ],
+          [
+            -115.92007416440435,
+            41.387020886302274
+          ],
+          [
+            -115.91991413133312,
+            41.38536535369581
+          ],
+          [
+            -115.91957075840061,
+            41.383633714719295
+          ],
+          [
+            -115.91940295400386,
+            41.38230206694675
+          ],
+          [
+            -115.91925793267932,
+            41.38119208317001
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36235,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2136.429117668323,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36236,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91892164655607,
+            41.33596545299172
+          ],
+          [
+            -115.91919607199394,
+            41.334134362096584
+          ],
+          [
+            -115.91939437329627,
+            41.33170827882776
+          ],
+          [
+            -115.91951656932771,
+            41.329804968927434
+          ],
+          [
+            -115.91949322031687,
+            41.328817204113015
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36236,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1062.4681041664574,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36237,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91888398917938,
+            41.378617121754395
+          ],
+          [
+            -115.91914341904017,
+            41.37720213682938
+          ],
+          [
+            -115.91901339239435,
+            41.37570660202544
+          ],
+          [
+            -115.91863946236914,
+            41.373955518770956
+          ],
+          [
+            -115.9180366353213,
+            41.3721055502112
+          ],
+          [
+            -115.91744936260265,
+            41.37030502673735
+          ],
+          [
+            -115.91662541884088,
+            41.368634503329936
+          ],
+          [
+            -115.91579369926204,
+            41.36705897996977
+          ],
+          [
+            -115.91494698230953,
+            41.365780673283794
+          ],
+          [
+            -115.91404637632144,
+            41.36445348121561
+          ],
+          [
+            -115.9137413515701,
+            41.36359516177028
+          ],
+          [
+            -115.91347410007812,
+            41.362397404284394
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36237,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2514.9343304747204,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36238,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91269569371474,
+            41.35937245286623
+          ],
+          [
+            -115.91278011019863,
+            41.35756414312679
+          ],
+          [
+            -115.91284841360127,
+            41.3555463900047
+          ],
+          [
+            -115.91309283800354,
+            41.353673077790454
+          ],
+          [
+            -115.91338227159481,
+            41.352250316095805
+          ],
+          [
+            -115.91390115107934,
+            41.35056421972266
+          ],
+          [
+            -115.9146261490058,
+            41.34885534409989
+          ],
+          [
+            -115.91531281581909,
+            41.347417020298295
+          ],
+          [
+            -115.91612892986483,
+            41.34585313993799
+          ],
+          [
+            -115.91686170181177,
+            41.343892600220805
+          ],
+          [
+            -115.91747946514782,
+            41.34167984077099
+          ],
+          [
+            -115.91789889933374,
+            41.34007763419016
+          ],
+          [
+            -115.91834944397462,
+            41.33843376168114
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36238,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 3186.562864931885,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36239,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91379015075125,
+            41.56044245778153
+          ],
+          [
+            -115.91311120495784,
+            41.55866082630192
+          ],
+          [
+            -115.91298172718268,
+            41.557013072753605
+          ],
+          [
+            -115.91298891011168,
+            41.55483088469253
+          ],
+          [
+            -115.91305776238495,
+            41.552675917018284
+          ],
+          [
+            -115.9133399762163,
+            41.551584819150214
+          ],
+          [
+            -115.91357663468295,
+            41.55068816374346
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36239,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1467.7257312793795,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36240,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.90518772458874,
+            41.328496848241386
+          ],
+          [
+            -115.90629440859458,
+            41.32723407424096
+          ],
+          [
+            -115.9073544179349,
+            41.32557852395141
+          ],
+          [
+            -115.90815553999686,
+            41.3244224182476
+          ],
+          [
+            -115.90899498688376,
+            41.32283187326482
+          ],
+          [
+            -115.90989499728883,
+            41.32151576573411
+          ],
+          [
+            -115.910452217768,
+            41.32028744097645
+          ],
+          [
+            -115.91113111056082,
+            41.319105225289704
+          ],
+          [
+            -115.91153555186466,
+            41.317895792212035
+          ],
+          [
+            -115.91190165756375,
+            41.316892465115586
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36240,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1884.7010547014809,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36241,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91170500466995,
+            41.42333274171248
+          ],
+          [
+            -115.91069048781227,
+            41.42097111569198
+          ],
+          [
+            -115.91002654298579,
+            41.41882393118904
+          ],
+          [
+            -115.9093931561503,
+            41.4168361881907
+          ],
+          [
+            -115.90885921371509,
+            41.41458177877143
+          ],
+          [
+            -115.90855361583861,
+            41.4126934748478
+          ],
+          [
+            -115.90818024276884,
+            41.410961836217865
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36241,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1881.514856081127,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36242,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.91007829313266,
+            41.31876191231097
+          ],
+          [
+            -115.91065052086697,
+            41.3178346932181
+          ],
+          [
+            -115.91120718798392,
+            41.316675254753754
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36242,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 334.1536252815627,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36243,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.90964427300145,
+            41.38160775621514
+          ],
+          [
+            -115.90983537071352,
+            41.38035277072032
+          ],
+          [
+            -115.90981201721108,
+            41.37915890027419
+          ],
+          [
+            -115.9100642309052,
+            41.37806390929956
+          ],
+          [
+            -115.91034644563486,
+            41.376965586811
+          ],
+          [
+            -115.91059032655642,
+            41.37602726425208
+          ],
+          [
+            -115.91021641359916,
+            41.37521839124016
+          ],
+          [
+            -115.90940026002758,
+            41.374280081225955
+          ],
+          [
+            -115.90848465666582,
+            41.373299548778405
+          ],
+          [
+            -115.90784350658963,
+            41.37230012677341
+          ],
+          [
+            -115.90758403630468,
+            41.37110236571219
+          ],
+          [
+            -115.9075534639406,
+            41.37013349123489
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36243,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1796.3127742118795,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36244,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.90973109697029,
+            41.55933251533166
+          ],
+          [
+            -115.91004384723308,
+            41.557184767986165
+          ],
+          [
+            -115.90986880241515,
+            41.55491480429068
+          ],
+          [
+            -115.90980765499208,
+            41.553030389208836
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36244,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 940.0528675590651,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36245,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.90943407800475,
+            41.57131400217408
+          ],
+          [
+            -115.90939571724718,
+            41.569757912795566
+          ],
+          [
+            -115.90930402800277,
+            41.56874681919934
+          ],
+          [
+            -115.90881565979687,
+            41.56768628731294
+          ],
+          [
+            -115.90850285922839,
+            41.56703796469668
+          ],
+          [
+            -115.90865560786101,
+            41.56513410307415
+          ],
+          [
+            -115.90850280712613,
+            41.56414634275539
+          ],
+          [
+            -115.9085261148145,
+            41.562639699331974
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36245,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1307.7089245977238,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36246,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.89809981397777,
+            41.335431854724725
+          ],
+          [
+            -115.89932816939897,
+            41.33419185602297
+          ],
+          [
+            -115.90047263025744,
+            41.332772968770435
+          ],
+          [
+            -115.90137319492304,
+            41.331430196862925
+          ],
+          [
+            -115.90225821064939,
+            41.33048797375239
+          ],
+          [
+            -115.90322711734514,
+            41.329587974290625
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36246,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1040.4181144166234,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36247,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.89979024930638,
+            41.59385874416834
+          ],
+          [
+            -115.89998134342521,
+            41.5925543173017
+          ],
+          [
+            -115.89898184190746,
+            41.59130268016049
+          ],
+          [
+            -115.89804345457517,
+            41.59020437174343
+          ],
+          [
+            -115.89733341359816,
+            41.58932328194105
+          ],
+          [
+            -115.8969750495802,
+            41.5881710818434
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36247,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 935.5056655089109,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36248,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.89931757736343,
+            41.600866415702185
+          ],
+          [
+            -115.89930198261013,
+            41.59859645114129
+          ],
+          [
+            -115.89939363232865,
+            41.597494246868905
+          ],
+          [
+            -115.89940916689487,
+            41.59623537821991
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36248,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 689.7041365214674,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36249,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.89757039725497,
+            41.606630231933465
+          ],
+          [
+            -115.89820372210669,
+            41.60498969628508
+          ],
+          [
+            -115.89871482667242,
+            41.60346416021845
+          ],
+          [
+            -115.89898926199172,
+            41.6024875047408
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36249,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 636.9076219177807,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36250,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.89602109444401,
+            41.5864316732583
+          ],
+          [
+            -115.89535771555616,
+            41.58513836496916
+          ],
+          [
+            -115.89481601167688,
+            41.584142829296326
+          ],
+          [
+            -115.89377040412722,
+            41.58325396582722
+          ],
+          [
+            -115.89282424187613,
+            41.582323433737045
+          ],
+          [
+            -115.892343648589,
+            41.58109901267413
+          ],
+          [
+            -115.89182472239209,
+            41.58014514376923
+          ],
+          [
+            -115.89164192062167,
+            41.57911516224732
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36250,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1214.1091185717623,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36251,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87749709756527,
+            41.61752468079683
+          ],
+          [
+            -115.87832875695698,
+            41.615434707119874
+          ],
+          [
+            -115.87905319613134,
+            41.61372917078089
+          ],
+          [
+            -115.87948040523605,
+            41.6120391947415
+          ],
+          [
+            -115.88024373337737,
+            41.610215885204006
+          ],
+          [
+            -115.88105984562647,
+            41.6085792370048
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36251,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1391.7192972024563,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36252,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87101987336253,
+            41.63051730431576
+          ],
+          [
+            -115.87159208762212,
+            41.628926769940875
+          ],
+          [
+            -115.87229374372424,
+            41.62689735176974
+          ],
+          [
+            -115.87318651999631,
+            41.62499015167955
+          ],
+          [
+            -115.8741704087944,
+            41.622991289292685
+          ],
+          [
+            -115.8747959614223,
+            41.62157964069032
+          ],
+          [
+            -115.87545207024453,
+            41.62014910074291
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36252,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 1622.1962974734533,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36253,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87008099195681,
+            41.63288671924164
+          ],
+          [
+            -115.87048543415897,
+            41.631837288814815
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36253,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 162.654956818452,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36255,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.821878254397,
+            41.7023970333015
+          ],
+          [
+            -115.82154265189169,
+            41.700417069898926
+          ],
+          [
+            -115.8211226032581,
+            41.69853266177448
+          ],
+          [
+            -115.82068809893497,
+            41.695866599216046
+          ],
+          [
+            -115.82050472763265,
+            41.694027743842874
+          ],
+          [
+            -115.82024523129652,
+            41.691662785941524
+          ],
+          [
+            -115.82026798113108,
+            41.68999170230952
+          ],
+          [
+            -115.81998572418061,
+            41.688515619863026
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36255,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 2082.8298925579184,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36256,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87561692098063,
+            41.41265610983193
+          ],
+          [
+            -115.87565467896869,
+            41.411393348700706
+          ],
+          [
+            -115.87567021712815,
+            41.41022225305748
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36256,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 361.3134282892299,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36257,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.8742813875629,
+            41.41701606705302
+          ],
+          [
+            -115.8746097074262,
+            41.4154177498155
+          ],
+          [
+            -115.87495303364634,
+            41.414181653096335
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36257,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 427.47612924902035,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36258,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87293869187741,
+            41.42522875119387
+          ],
+          [
+            -115.87303812010802,
+            41.4239509878298
+          ],
+          [
+            -115.87345755159899,
+            41.4223221147846
+          ],
+          [
+            -115.87370921103258,
+            41.4212043490313
+          ],
+          [
+            -115.87396086956785,
+            41.42010991669398
+          ],
+          [
+            -115.87418252706759,
+            41.41907992909521
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36258,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 924.3340529965988,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36259,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.87271772967372,
+            41.43525361497742
+          ],
+          [
+            -115.87247380563302,
+            41.43348364212286
+          ],
+          [
+            -115.8723287834102,
+            41.43242310320431
+          ],
+          [
+            -115.87222153804001,
+            41.43111478807198
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36259,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 617.1233140127442,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36260,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.8722142904323,
+            41.42944036672211
+          ],
+          [
+            -115.87232093842285,
+            41.42810871781774
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36260,
+        "fault_name": "Eastern Independence Mountains fault zone",
+        "section_name": "",
+        "fault_id": "1556",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N1\u00b0E",
+        "total_fault_length": 76,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 1475539200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1556&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1556",
+        "Fault_ID_num": 1556,
+        "Shape_Length": 198.06572220823236,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1556.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36268,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.6772835963969,
+            41.39765162328394
+          ],
+          [
+            -115.67630687525646,
+            41.39615999082565
+          ],
+          [
+            -115.67488012959973,
+            41.39424503869145
+          ],
+          [
+            -115.67383451755846,
+            41.392845076306436
+          ],
+          [
+            -115.67279723110325,
+            41.39110567272376
+          ],
+          [
+            -115.67211052386578,
+            41.38985459001895
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36268,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 1293.7967324407557,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36269,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.6737657542184,
+            41.36252278120288
+          ],
+          [
+            -115.67262845922095,
+            41.36027172183605
+          ],
+          [
+            -115.67088891838563,
+            41.357754561100876
+          ],
+          [
+            -115.66917993464303,
+            41.35544295277046
+          ],
+          [
+            -115.6679820931954,
+            41.353951325747964
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36269,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 1427.983904519636,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36270,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.6716902057376,
+            41.36835882468739
+          ],
+          [
+            -115.67201074259727,
+            41.366131079699315
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36270,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 332.3607476059003,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36271,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.67143879962894,
+            41.38752352369008
+          ],
+          [
+            -115.67115653279697,
+            41.38515078725443
+          ],
+          [
+            -115.6706225984466,
+            41.383094716704434
+          ],
+          [
+            -115.6704086646617,
+            41.38063475807535
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36271,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 1029.98223831753,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36272,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.67035529395402,
+            41.37799480088901
+          ],
+          [
+            -115.67049248107097,
+            41.375194843814995
+          ],
+          [
+            -115.67067579667773,
+            41.37350098017416
+          ],
+          [
+            -115.67111078519284,
+            41.37151378273378
+          ],
+          [
+            -115.67138521691885,
+            41.36988880618033
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36272,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 1209.4668118483687,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36273,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.66706648444378,
+            41.35239080675851
+          ],
+          [
+            -115.66611309614453,
+            41.350903066853284
+          ],
+          [
+            -115.66516691772377,
+            41.34856478330764
+          ],
+          [
+            -115.6643807544079,
+            41.34671482320143
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36273,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 895.151766458659,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36274,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.66647136314445,
+            41.34528815098681
+          ],
+          [
+            -115.66551740980489,
+            41.34312930872301
+          ],
+          [
+            -115.66443401013122,
+            41.34110713366441
+          ],
+          [
+            -115.66364840287254,
+            41.33932217168122
+          ],
+          [
+            -115.66281668598864,
+            41.33786498522702
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36274,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 1174.218263198314,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36275,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.66342736610865,
+            41.34528819010216
+          ],
+          [
+            -115.66281677761678,
+            41.3444526578422
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36275,
+        "fault_name": "unnamed fault southeast of Double Mountain",
+        "section_name": "",
+        "fault_id": "1560",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N16\u00b0W",
+        "total_fault_length": 7,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1560&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1560",
+        "Fault_ID_num": 1560,
+        "Shape_Length": 141.31181652666098,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1560.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36310,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.68378894595286,
+            41.20473011022912
+          ],
+          [
+            -115.68619956513628,
+            41.20354731876845
+          ],
+          [
+            -115.68882408217208,
+            41.202502295696135
+          ],
+          [
+            -115.69144915436668,
+            41.20126616782059
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36310,
+        "fault_name": "Adobe Range fault",
+        "section_name": "",
+        "fault_id": "1561",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0E",
+        "total_fault_length": 40,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1561&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1561",
+        "Fault_ID_num": 1561,
+        "Shape_Length": 995.6574913669916,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1561.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36311,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.66328780294779,
+            41.21233305322329
+          ],
+          [
+            -115.66568343104582,
+            41.21165358624517
+          ],
+          [
+            -115.66793460465624,
+            41.210821901268204
+          ],
+          [
+            -115.67087191058236,
+            41.20958243595327
+          ],
+          [
+            -115.67401533225548,
+            41.20827018972515
+          ],
+          [
+            -115.67680762943347,
+            41.206721287008975
+          ],
+          [
+            -115.67808932591792,
+            41.20582850509531
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36311,
+        "fault_name": "Adobe Range fault",
+        "section_name": "",
+        "fault_id": "1561",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0E",
+        "total_fault_length": 40,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1561&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1561",
+        "Fault_ID_num": 1561,
+        "Shape_Length": 1919.919756321799,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1561.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36312,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.65388806717337,
+            41.2140609336776
+          ],
+          [
+            -115.65545977756078,
+            41.213431477237975
+          ],
+          [
+            -115.65731372064414,
+            41.212714239803226
+          ],
+          [
+            -115.65888543192989,
+            41.21217255970397
+          ],
+          [
+            -115.66059493130545,
+            41.21190920699794
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36312,
+        "fault_name": "Adobe Range fault",
+        "section_name": "",
+        "fault_id": "1561",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0E",
+        "total_fault_length": 40,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1561&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1561",
+        "Fault_ID_num": 1561,
+        "Shape_Length": 816.9840803258355,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1561.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36313,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.6451066993012,
+            41.21715489519896
+          ],
+          [
+            -115.64766232992771,
+            41.21626987392532
+          ],
+          [
+            -115.64976072436282,
+            41.21557930007463
+          ],
+          [
+            -115.65212579357151,
+            41.214827612676004
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36313,
+        "fault_name": "Adobe Range fault",
+        "section_name": "",
+        "fault_id": "1561",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0E",
+        "total_fault_length": 40,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1561&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1561",
+        "Fault_ID_num": 1561,
+        "Shape_Length": 853.9740295605859,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1561.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36356,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.51435908092564,
+            41.37372077771276
+          ],
+          [
+            -115.51543465537489,
+            41.37204579031701
+          ],
+          [
+            -115.51535074823576,
+            41.37092081125656
+          ],
+          [
+            -115.5159918659726,
+            41.36941360671031
+          ],
+          [
+            -115.51639630368317,
+            41.36768196232748
+          ],
+          [
+            -115.51726574711407,
+            41.36482866626826
+          ],
+          [
+            -115.51789130064024,
+            41.36291369010088
+          ],
+          [
+            -115.5183112989682,
+            41.361498708795196
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36356,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1880.0188864796767,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36357,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.50288444255911,
+            41.39261060627513
+          ],
+          [
+            -115.50422725143233,
+            41.3909628388232
+          ],
+          [
+            -115.5058367278926,
+            41.38886840877716
+          ],
+          [
+            -115.50728620002772,
+            41.38685842476539
+          ],
+          [
+            -115.50888845942298,
+            41.385008434980904
+          ],
+          [
+            -115.51004070598003,
+            41.38347455611848
+          ],
+          [
+            -115.51072738357313,
+            41.38238734319004
+          ],
+          [
+            -115.51156683584992,
+            41.38038458876647
+          ],
+          [
+            -115.51259684864625,
+            41.378317387738086
+          ],
+          [
+            -115.51330629763349,
+            41.37649407704408
+          ],
+          [
+            -115.51362684976452,
+            41.37528853800665
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36357,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 2854.516262083288,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36358,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.51349036423183,
+            41.485618904131165
+          ],
+          [
+            -115.51276588104004,
+            41.48470726077902
+          ],
+          [
+            -115.5122469611313,
+            41.483757285192716
+          ],
+          [
+            -115.51176637862399,
+            41.48289897122686
+          ],
+          [
+            -115.51149913521684,
+            41.4819495452058
+          ],
+          [
+            -115.51105688202607,
+            41.48072123880171
+          ],
+          [
+            -115.51057573986832,
+            41.47976737266864
+          ],
+          [
+            -115.51017182138398,
+            41.4784285106769
+          ],
+          [
+            -115.50975179341162,
+            41.47736019991174
+          ],
+          [
+            -115.5097673441475,
+            41.47701687181527
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36358,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1353.693053817238,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36359,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.507699478059,
+            41.47602913727031
+          ],
+          [
+            -115.5067227650034,
+            41.47518249673751
+          ],
+          [
+            -115.50554048686807,
+            41.4740991957587
+          ],
+          [
+            -115.50471655837771,
+            41.47332477528124
+          ],
+          [
+            -115.50354150269725,
+            41.47228703072642
+          ],
+          [
+            -115.50248089507897,
+            41.471272615922935
+          ],
+          [
+            -115.50148140344272,
+            41.470288199764596
+          ],
+          [
+            -115.50012300610436,
+            41.46904100875852
+          ],
+          [
+            -115.49888739588894,
+            41.467907705239384
+          ],
+          [
+            -115.49794846058431,
+            41.46685494905126
+          ],
+          [
+            -115.49697230178924,
+            41.46543220078264
+          ],
+          [
+            -115.4963311580013,
+            41.46456610870532
+          ],
+          [
+            -115.49590391206566,
+            41.46377667968697
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36359,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 2254.731739287131,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36360,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49125696393179,
+            41.404474375820165
+          ],
+          [
+            -115.49263753618295,
+            41.40181552378957
+          ],
+          [
+            -115.49391199943273,
+            41.39973277401937
+          ],
+          [
+            -115.49501812468648,
+            41.39792446481983
+          ],
+          [
+            -115.49582701807395,
+            41.395967826024986
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36360,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1362.8293097505928,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36361,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49288237920017,
+            41.43594883426765
+          ],
+          [
+            -115.49179897862818,
+            41.43325944197824
+          ],
+          [
+            -115.49095948413054,
+            41.43131059230311
+          ],
+          [
+            -115.49027277240147,
+            41.429410626284934
+          ],
+          [
+            -115.48987608176192,
+            41.42855231015722
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36361,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1148.3587898447927,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36362,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49279096843348,
+            41.45828734633409
+          ],
+          [
+            -115.49117367124036,
+            41.45675793676153
+          ],
+          [
+            -115.49012806458899,
+            41.45540351981979
+          ],
+          [
+            -115.4893574672804,
+            41.45407632676359
+          ],
+          [
+            -115.48857909325638,
+            41.452908572168916
+          ],
+          [
+            -115.48756459975488,
+            41.45153193399976
+          ],
+          [
+            -115.48685511573336,
+            41.45013918580956
+          ],
+          [
+            -115.48608451842476,
+            41.44872032490725
+          ],
+          [
+            -115.48521446773275,
+            41.44686258322955
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36362,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1906.0645305507567,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36363,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.48925826812018,
+            41.42716011475945
+          ],
+          [
+            -115.48858656274798,
+            41.425744588058954
+          ],
+          [
+            -115.48787707782814,
+            41.42437128103628
+          ],
+          [
+            -115.48739649532081,
+            41.42328463830782
+          ],
+          [
+            -115.48709869841426,
+            41.42239965472739
+          ],
+          [
+            -115.48711423926865,
+            41.42123189521831
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36363,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 920.5340985832972,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36364,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.48551188914355,
+            41.41467868424817
+          ],
+          [
+            -115.48578632536115,
+            41.41314148484802
+          ],
+          [
+            -115.48615243106026,
+            41.41161150701164
+          ],
+          [
+            -115.48662576685817,
+            41.41042930215727
+          ],
+          [
+            -115.48709854839561,
+            41.40935709480076
+          ],
+          [
+            -115.4882813493504,
+            41.40791877973763
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36364,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 1062.5919353794668,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36365,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.48657253359278,
+            41.419428040222286
+          ],
+          [
+            -115.48613750375519,
+            41.41808917598548
+          ],
+          [
+            -115.48594692706595,
+            41.41677308829475
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36365,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 401.0786132633035,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36366,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.4849243487269,
+            41.43732996970822
+          ],
+          [
+            -115.48442098404567,
+            41.43607499269187
+          ],
+          [
+            -115.48340648964586,
+            41.43469780001626
+          ],
+          [
+            -115.4823914418838,
+            41.433481158969066
+          ],
+          [
+            -115.48121638800002,
+            41.43216896625452
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36366,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 875.9433025009496,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36367,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.47929352886301,
+            41.430722892266516
+          ],
+          [
+            -115.47873682940669,
+            41.429445136667766
+          ],
+          [
+            -115.4777295538685,
+            41.42777072883246
+          ],
+          [
+            -115.47704285112262,
+            41.426671861308954
+          ],
+          [
+            -115.47641004190385,
+            41.42576799323867
+          ],
+          [
+            -115.47572278399912,
+            41.424646347700396
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36367,
+        "fault_name": "unnamed fault west of Stag Mountain",
+        "section_name": "",
+        "fault_id": "1563",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N7\u00b0W",
+        "total_fault_length": 14,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1563&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1563",
+        "Fault_ID_num": 1563,
+        "Shape_Length": 987.2722951589258,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1563.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36368,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54958035324785,
+            41.59859202281312
+          ],
+          [
+            -115.55020589868921,
+            41.59578097269651
+          ],
+          [
+            -115.55077033982663,
+            41.59377823628354
+          ],
+          [
+            -115.55108310715741,
+            41.59204271824225
+          ],
+          [
+            -115.55144976981198,
+            41.59044441828783
+          ],
+          [
+            -115.55170142205907,
+            41.58854835030622
+          ],
+          [
+            -115.55201419028815,
+            41.586740054315
+          ],
+          [
+            -115.55230418622482,
+            41.58555785711662
+          ],
+          [
+            -115.55244918419315,
+            41.58491675890293
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36368,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 2061.5199496160635,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36369,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.55239540385372,
+            41.54962424969039
+          ],
+          [
+            -115.5512203338002,
+            41.547652086740335
+          ],
+          [
+            -115.55047250968241,
+            41.54637379197864
+          ],
+          [
+            -115.5494502340756,
+            41.54521049803499
+          ],
+          [
+            -115.5486257360533,
+            41.543539990306506
+          ],
+          [
+            -115.54784790461173,
+            41.5415106028845
+          ],
+          [
+            -115.54717619025634,
+            41.53988898073228
+          ],
+          [
+            -115.54641336157833,
+            41.538199584944856
+          ],
+          [
+            -115.54614611637454,
+            41.537253497195756
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36369,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 1976.2571307428327,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36370,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.5482768321936,
+            41.676551320226096
+          ],
+          [
+            -115.54921516742363,
+            41.67349971725259
+          ],
+          [
+            -115.54990961364724,
+            41.671359760795475
+          ],
+          [
+            -115.55015349277217,
+            41.66976146412963
+          ],
+          [
+            -115.55029071402507,
+            41.66925758573544
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36370,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 1111.1531646855751,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36371,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.5501073454177,
+            41.622803673305576
+          ],
+          [
+            -115.54996952678513,
+            41.619999852907064
+          ],
+          [
+            -115.5498094928156,
+            41.6178443468233
+          ],
+          [
+            -115.54969501061746,
+            41.61518218989604
+          ],
+          [
+            -115.54953497485128,
+            41.612820578724936
+          ],
+          [
+            -115.54944328381025,
+            41.61118784108688
+          ],
+          [
+            -115.54929048038039,
+            41.60960510204048
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36371,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 1967.531806023051,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36372,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54848929902964,
+            41.60661073412971
+          ],
+          [
+            -115.54845873205547,
+            41.60578297679893
+          ],
+          [
+            -115.54874094139525,
+            41.60384135206308
+          ],
+          [
+            -115.54903092924702,
+            41.60197195130012
+          ],
+          [
+            -115.54906147555998,
+            41.601125302712965
+          ],
+          [
+            -115.54915313426169,
+            41.60020587908682
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36372,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 957.5372519581987,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36373,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54319565012952,
+            41.687766098196114
+          ],
+          [
+            -115.54405010157663,
+            41.68540503525696
+          ],
+          [
+            -115.54512567063598,
+            41.68294452830855
+          ],
+          [
+            -115.5457512268571,
+            41.68085012912512
+          ],
+          [
+            -115.54629289839704,
+            41.67946571223422
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36373,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 1285.2032274948367,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36374,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54309436238627,
+            41.539576256285905
+          ],
+          [
+            -115.5429876874463,
+            41.539137935092235
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36374,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 66.26137031064869,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36375,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54178993583021,
+            41.54509614225619
+          ],
+          [
+            -115.54220158970747,
+            41.54292952093144
+          ],
+          [
+            -115.5427665886987,
+            41.540987895313734
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36375,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 621.0389704969441,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36376,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54201288241238,
+            41.69251154927573
+          ],
+          [
+            -115.54224954087903,
+            41.69106991572577
+          ],
+          [
+            -115.54255453329101,
+            41.68947161681494
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36376,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 457.18864539447156,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36377,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54121182682574,
+            41.699805270873014
+          ],
+          [
+            -115.54150181377923,
+            41.69777198504248
+          ],
+          [
+            -115.54164679378127,
+            41.69557481477443
+          ],
+          [
+            -115.54182233985915,
+            41.69431595268962
+          ],
+          [
+            -115.54183733363955,
+            41.693743744201875
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36377,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 906.8359465577377,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36378,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.5402104963381,
+            41.55044825312504
+          ],
+          [
+            -115.54082105518557,
+            41.548811620330106
+          ],
+          [
+            -115.5411793859659,
+            41.54749164678862
+          ],
+          [
+            -115.54143105078938,
+            41.54650777911518
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36378,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 602.1015888235818,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36379,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.53890609762978,
+            41.55821086101748
+          ],
+          [
+            -115.53946276295011,
+            41.556459787929306
+          ],
+          [
+            -115.53979109359321,
+            41.55513981325111
+          ],
+          [
+            -115.54029443042668,
+            41.553839285030975
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36379,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 668.9153109038058,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36380,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.53814278296319,
+            41.562227443247224
+          ],
+          [
+            -115.53852445017795,
+            41.561045244985046
+          ],
+          [
+            -115.53869222133707,
+            41.559992490113885
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36380,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 338.67015385815927,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36381,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.53759402371571,
+            41.57443438209776
+          ],
+          [
+            -115.5377390028194,
+            41.572328874831214
+          ],
+          [
+            -115.53790676140207,
+            41.57026892227587
+          ],
+          [
+            -115.53800563267723,
+            41.56839229878938
+          ],
+          [
+            -115.53799839225601,
+            41.566995665305456
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36381,
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "section_name": "",
+        "fault_id": "1564",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N2\u00b0E",
+        "total_fault_length": 18,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908323200000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1564&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1564",
+        "Fault_ID_num": 1564,
+        "Shape_Length": 1108.0499672427145,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1564.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36382,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.4461901992148,
+            41.58967425289049
+          ],
+          [
+            -115.44609906063765,
+            41.58724097671798
+          ],
+          [
+            -115.44590069375828,
+            41.58460492824223
+          ],
+          [
+            -115.44587733306933,
+            41.58206054580736
+          ],
+          [
+            -115.44583953016554,
+            41.57983281968732
+          ],
+          [
+            -115.44577839981046,
+            41.57822285620658
+          ],
+          [
+            -115.44518335756287,
+            41.57631568395558
+          ],
+          [
+            -115.444366636256,
+            41.57370686173861
+          ],
+          [
+            -115.4436115833951,
+            41.57112414916019
+          ],
+          [
+            -115.44290931104868,
+            41.568793653333714
+          ],
+          [
+            -115.44230649388233,
+            41.566947034682244
+          ],
+          [
+            -115.44219202515893,
+            41.565135411022126
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36382,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 3696.839630487251,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36383,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.45119562635094,
+            41.61334032369825
+          ],
+          [
+            -115.45077614096104,
+            41.61078427567959
+          ],
+          [
+            -115.45011220242274,
+            41.60822489831928
+          ],
+          [
+            -115.44930325423803,
+            41.60548219029166
+          ],
+          [
+            -115.44890655641193,
+            41.603781123742095
+          ],
+          [
+            -115.44851763530127,
+            41.602167272913256
+          ],
+          [
+            -115.44798370544245,
+            41.60016065912313
+          ],
+          [
+            -115.44796035283834,
+            41.598326258075176
+          ],
+          [
+            -115.44797589728603,
+            41.59708628829671
+          ],
+          [
+            -115.44811310596253,
+            41.59521688532544
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36383,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 2731.842953071109,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36384,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.4151435992405,
+            41.431543251718146
+          ],
+          [
+            -115.4146935747242,
+            41.43073104789055
+          ],
+          [
+            -115.4132590676234,
+            41.42927385822017
+          ],
+          [
+            -115.41199234695306,
+            41.42814110722788
+          ],
+          [
+            -115.41104675064058,
+            41.42740445766511
+          ],
+          [
+            -115.41029116058712,
+            41.426473922715076
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36384,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 932.4982369915771,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36385,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.40674324101629,
+            41.424436756686035
+          ],
+          [
+            -115.40465260443197,
+            41.42330789887782
+          ],
+          [
+            -115.40337088728627,
+            41.422544585841784
+          ],
+          [
+            -115.40169248758585,
+            41.42172460913622
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36385,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "E",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 691.9900823985103,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36389,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.44028549829211,
+            41.64053088979993
+          ],
+          [
+            -115.43976656580698,
+            41.638249835701636
+          ],
+          [
+            -115.4389731782396,
+            41.63578156776991
+          ],
+          [
+            -115.43862980890036,
+            41.63355773226874
+          ],
+          [
+            -115.43830921544681,
+            41.6309561302721
+          ],
+          [
+            -115.43833197336623,
+            41.628778403231465
+          ],
+          [
+            -115.4385914068203,
+            41.62685955692577
+          ],
+          [
+            -115.43869861356292,
+            41.62491404469363
+          ],
+          [
+            -115.43881303916716,
+            41.62269742919008
+          ],
+          [
+            -115.43903413432153,
+            41.620199151246055
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36389,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 3050.0133807117413,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36390,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43614944541653,
+            41.55102133728496
+          ],
+          [
+            -115.43612665515779,
+            41.55005580525947
+          ],
+          [
+            -115.43605775078225,
+            41.548663615291176
+          ],
+          [
+            -115.43572216893818,
+            41.547118651708146
+          ],
+          [
+            -115.43557714402041,
+            41.545215363675986
+          ],
+          [
+            -115.43538656912781,
+            41.54399483873775
+          ],
+          [
+            -115.43508098742099,
+            41.54244987721919
+          ],
+          [
+            -115.43482151444105,
+            41.540404926334936
+          ],
+          [
+            -115.43463093775188,
+            41.53902440301351
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36390,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1794.2229567190725,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36394,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.50172765501829,
+            41.67480840833121
+          ],
+          [
+            -115.50154486133272,
+            41.67397676319326
+          ],
+          [
+            -115.50122428674379,
+            41.673492332976245
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36394,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 206.13797857469768,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36395,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.50053757591304,
+            41.67212681776611
+          ],
+          [
+            -115.4995686305897,
+            41.67040631304691
+          ],
+          [
+            -115.49855357564115,
+            41.66894135875689
+          ],
+          [
+            -115.49739406530671,
+            41.66717919011674
+          ],
+          [
+            -115.49658513059673,
+            41.665924228332194
+          ],
+          [
+            -115.49601287591297,
+            41.664810371076854
+          ],
+          [
+            -115.4956850743776,
+            41.66381484271699
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36395,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1354.7107713795624,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36396,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49487613966762,
+            41.66253710375395
+          ],
+          [
+            -115.49467778536466,
+            41.66145713173567
+          ],
+          [
+            -115.49499055628874,
+            41.65970272867189
+          ],
+          [
+            -115.4954099985595,
+            41.65819609524268
+          ],
+          [
+            -115.49583722024063,
+            41.65669668189202
+          ],
+          [
+            -115.49614999026636,
+            41.65491172426105
+          ],
+          [
+            -115.49608163655806,
+            41.65344675973495
+          ],
+          [
+            -115.49592161606326,
+            41.65208457279882
+          ],
+          [
+            -115.49576882431153,
+            41.65135237131366
+          ],
+          [
+            -115.49580714644154,
+            41.650299616902075
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36396,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1841.489365428925,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36397,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49544044605773,
+            41.648594661797276
+          ],
+          [
+            -115.49543320922982,
+            41.64717525080252
+          ],
+          [
+            -115.49521929520783,
+            41.64568028994327
+          ],
+          [
+            -115.49503593378697,
+            41.643982555945236
+          ],
+          [
+            -115.49489147301122,
+            41.64299480431491
+          ],
+          [
+            -115.49472312243874,
+            41.6418653879839
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36397,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1006.4531351083565,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36398,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43907244207851,
+            41.617566990742596
+          ],
+          [
+            -115.43899576368248,
+            41.616510349276616
+          ],
+          [
+            -115.43882796737057,
+            41.61536204423047
+          ],
+          [
+            -115.43881295472555,
+            41.6141720708178
+          ],
+          [
+            -115.4387896003248,
+            41.61231433672123
+          ],
+          [
+            -115.43907958458334,
+            41.60964050783488
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36398,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1182.7844758182,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36399,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43850007869862,
+            41.60568449299756
+          ],
+          [
+            -115.43844617259505,
+            41.60401009020806
+          ],
+          [
+            -115.43818726106217,
+            41.60274345381885
+          ],
+          [
+            -115.43788167755869,
+            41.601247934666105
+          ],
+          [
+            -115.43757665190903,
+            41.59961186374326
+          ],
+          [
+            -115.43766830522084,
+            41.59799023625054
+          ],
+          [
+            -115.43803441541151,
+            41.59657915429534
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36399,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1366.80651906905,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36400,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43701915834203,
+            41.57475966667857
+          ],
+          [
+            -115.43704969926505,
+            41.573180259958875
+          ],
+          [
+            -115.43711857489451,
+            41.57146363279785
+          ],
+          [
+            -115.43719466758898,
+            41.56960978702861
+          ],
+          [
+            -115.43719464423276,
+            41.56724484189904
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36400,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1118.4469618489127,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36401,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43714932602333,
+            41.59103262317946
+          ],
+          [
+            -115.4370731991929,
+            41.58974709789707
+          ],
+          [
+            -115.43714930266712,
+            41.588717119703325
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36401,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 345.06028328216973,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36402,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.4370576188126,
+            41.58715715688621
+          ],
+          [
+            -115.43700427056282,
+            41.58605440720842
+          ],
+          [
+            -115.43693536618724,
+            41.58470777203397
+          ],
+          [
+            -115.43685923306862,
+            41.582823371076515
+          ],
+          [
+            -115.43682865441635,
+            41.58041287224957
+          ],
+          [
+            -115.43684418988087,
+            41.57849013772414
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36402,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1290.2590401013306,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36403,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43698128716629,
+            41.565589325841394
+          ],
+          [
+            -115.43700405317053,
+            41.56435324467544
+          ],
+          [
+            -115.43704959955207,
+            41.563139938251574
+          ],
+          [
+            -115.43700401993287,
+            41.561080542312766
+          ],
+          [
+            -115.436683425581,
+            41.55834116420816
+          ],
+          [
+            -115.43661506827945,
+            41.55617065903848
+          ],
+          [
+            -115.43642392924487,
+            41.554004043814174
+          ],
+          [
+            -115.43614944541653,
+            41.55102133728496
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36403,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 2170.76771319144,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36404,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.43463093775188,
+            41.53902440301351
+          ],
+          [
+            -115.43433313904863,
+            41.53796776272663
+          ],
+          [
+            -115.43416534363504,
+            41.536933900032786
+          ],
+          [
+            -115.43399031858003,
+            41.53504949810957
+          ],
+          [
+            -115.43312804640007,
+            41.53294733066833
+          ],
+          [
+            -115.43282246469322,
+            41.53149403410096
+          ],
+          [
+            -115.43268522457568,
+            41.53016295468708
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36404,
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "section_name": "",
+        "fault_id": "1567",
+        "section_id": "",
+        "Location": "Nevada",
+        "linetype": "Well Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N8\u00b0W",
+        "total_fault_length": 34,
+        "cooperators": "Piedmont Geosciences, Inc.",
+        "earthquake": "",
+        "last_review": 908236800000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1567&section_id=",
+        "symbology": "undifferentiated Quaternary Well Constrained",
+        "ref_id": "1567",
+        "Fault_ID_num": 1567,
+        "Shape_Length": 1340.726914953709,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1567.pdf",
+        "type": "faults"
+      }
+    }
+  ]
+}

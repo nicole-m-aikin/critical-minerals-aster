@@ -14,4 +14,7 @@ temporal:
   start: "2010-01-01"
   end: "2023-12-31"
 
-structure_layers: []
+structure_layers:
+  - path: data/structures/steamboat_springs_faults.geojson
+    type: faults
+    buffer_m: 500

@@ -23,6 +23,10 @@ class StructureLayer:
     path: str
     type: Literal["faults", "contacts", "folds"] = "faults"
     buffer_m: float = 500.0
+    label: str = ""
+
+    def display_label(self) -> str:
+        return self.label if self.label else self.type.replace("_", " ").title()
 
 
 @dataclass
@@ -37,6 +41,11 @@ class SiteConfig:
     temporal_start: str = "2010-01-01"
     temporal_end: str = "2023-12-31"
     structure_layers: list[StructureLayer] = field(default_factory=list)
+    # Cap on granule bundle size (MB) for mosaic candidate selection.
+    # Full VNIR+SWIR+TIR bundles run 90–110 MB; TIR-only extracts ~4–6 MB.
+    # Default 150 accepts both so all coverage-qualifying granules are used.
+    # Override per-site in YAML only if download bandwidth is a hard constraint.
+    max_bundle_mb: float = 150.0
 
 
 def _as_classification(obj: Any) -> ClassificationParams:
@@ -92,6 +101,7 @@ def load_site_config(path: Union[str, Path]) -> SiteConfig:
         temporal_start=temporal.get("start", "2010-01-01"),
         temporal_end=temporal.get("end", "2023-12-31"),
         structure_layers=_as_structure_layers(raw.get("structure_layers")),
+        max_bundle_mb=float(raw.get("max_bundle_mb", 150.0)),
     )
 
 

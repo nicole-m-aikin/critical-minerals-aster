@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import pandas as pd
 
 
@@ -50,3 +51,32 @@ def write_national_summary(results_dir: Path) -> Path:
     except ImportError:
         parquet_path = None
     return csv_path
+
+
+def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
+    """Generate figures/05_national_hit_rates.png showing all sites sorted by hit rate.
+
+    Always filters to site-level rows (one row per site) so commodity/earth_mri/
+    mineral_system sub-rows do not inflate or hide sites.  Sites with a 0% hit
+    rate are included as zero-length bars so the chart shows every site.
+    """
+    results_dir = Path(results_dir)
+    figures_dir = Path(figures_dir)
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    df = load_site_summaries(results_dir, row_types=["site"])
+    out = figures_dir / "05_national_hit_rates.png"
+
+    if df.empty:
+        return out
+
+    df = df.sort_values("hit_rate_pct", ascending=True).reset_index(drop=True)
+
+    fig, ax = plt.subplots(figsize=(8, max(3, len(df) * 0.5)))
+    ax.barh(df["site_name"], df["hit_rate_pct"], color="#E69F00")
+    ax.set_xlabel("MRDS hit rate (% in strong TIR zones)")
+    ax.set_title("Alteration\u2013deposit correlation by site")
+    plt.tight_layout()
+    plt.savefig(out, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return out

@@ -1,0 +1,5510 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 8620,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43597742786068,
+            34.82471367331615
+          ],
+          [
+            -114.43648097220499,
+            34.824828342814
+          ],
+          [
+            -114.43749126698086,
+            34.82503124827018
+          ],
+          [
+            -114.43867147000788,
+            34.825235206269305
+          ],
+          [
+            -114.43950192835206,
+            34.82530403601613
+          ],
+          [
+            -114.43956424897489,
+            34.825304128931585
+          ],
+          [
+            -114.4396681795617,
+            34.82530428969012
+          ],
+          [
+            -114.44039654976373,
+            34.82533925171051
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8620,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "N",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 500.8564930741594,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8621,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4280660630698,
+            34.82339572033675
+          ],
+          [
+            -114.42759861842352,
+            34.823339626094054
+          ],
+          [
+            -114.4272620574158,
+            34.82328353328808
+          ],
+          [
+            -114.4267572150059,
+            34.823190043964104
+          ],
+          [
+            -114.42634586296258,
+            34.82309655527147
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8621,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "N",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 195.94381627988895,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8622,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42296155624938,
+            34.8222177582914
+          ],
+          [
+            -114.42260629680902,
+            34.82197468563306
+          ],
+          [
+            -114.42212015462842,
+            34.821825103236684
+          ],
+          [
+            -114.42169010505077,
+            34.821806404311864
+          ],
+          [
+            -114.42114786757223,
+            34.821731613732304
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8622,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "N",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 218.4233832526292,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8623,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42159661558252,
+            34.82055365075003
+          ],
+          [
+            -114.4210543790023,
+            34.82060974394008
+          ],
+          [
+            -114.42066172359496,
+            34.82062844166165
+          ],
+          [
+            -114.42006339441177,
+            34.820684536275735
+          ],
+          [
+            -114.4194276683633,
+            34.82072193168062
+          ],
+          [
+            -114.41909110555896,
+            34.82077802475613
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8623,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "N",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 280.8415667583389,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8624,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43410546008114,
+            34.8237322813034
+          ],
+          [
+            -114.43446072041982,
+            34.82390056090227
+          ],
+          [
+            -114.43468509262831,
+            34.824087537831154
+          ],
+          [
+            -114.4351151431043,
+            34.824311913272666
+          ],
+          [
+            -114.435740572663,
+            34.824659734742
+          ],
+          [
+            -114.43593784629265,
+            34.82491024307432
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8624,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 262.5194705986215,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8625,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43048903229182,
+            34.82233302269989
+          ],
+          [
+            -114.43110542659537,
+            34.8225612413428
+          ],
+          [
+            -114.43162726333381,
+            34.82273196723497
+          ],
+          [
+            -114.43250464966845,
+            34.82309951463486
+          ],
+          [
+            -114.43311762857728,
+            34.82340083080607
+          ],
+          [
+            -114.43360257869352,
+            34.82365373005794
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8625,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 390.94917064643107,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8626,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42286806767946,
+            34.8203292761327
+          ],
+          [
+            -114.42226973669963,
+            34.81986183086076
+          ],
+          [
+            -114.42163401065116,
+            34.8193195938541
+          ],
+          [
+            -114.42105437810396,
+            34.81883345210283
+          ],
+          [
+            -114.42060563099201,
+            34.81834730674521
+          ],
+          [
+            -114.42006339441177,
+            34.81801074663819
+          ],
+          [
+            -114.41959594796884,
+            34.81786116515614
+          ],
+          [
+            -114.41920329435817,
+            34.817468510722215
+          ],
+          [
+            -114.41897891855639,
+            34.817094553677904
+          ],
+          [
+            -114.4188293382818,
+            34.816720597148695
+          ],
+          [
+            -114.41860496337834,
+            34.8164214321782
+          ],
+          [
+            -114.41828710080325,
+            34.81625315131274
+          ],
+          [
+            -114.41785705032729,
+            34.81627184928561
+          ],
+          [
+            -114.4176139778895,
+            34.81623445407314
+          ],
+          [
+            -114.41735220881571,
+            34.816028776782424
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8626,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 884.7942016591841,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8627,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41811881940109,
+            34.81571091489143
+          ],
+          [
+            -114.4176139778895,
+            34.81543044736843
+          ],
+          [
+            -114.41731481374707,
+            34.815243469226886
+          ],
+          [
+            -114.41703434624063,
+            34.81494430479284
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8627,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 160.8991457701428,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8628,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41184854458194,
+            34.81027049589133
+          ],
+          [
+            -114.40904095628117,
+            34.80840749306161
+          ],
+          [
+            -114.4083812155702,
+            34.808092597076204
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8628,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 486.7969712280218,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8629,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41716523077753,
+            34.81522477175815
+          ],
+          [
+            -114.41705304377494,
+            34.8154117492046
+          ],
+          [
+            -114.41690346080543,
+            34.81556133070878
+          ],
+          [
+            -114.41674775042733,
+            34.815718154291936
+          ],
+          [
+            -114.41649210876209,
+            34.815916592238146
+          ],
+          [
+            -114.41621164215397,
+            34.81625315131274
+          ],
+          [
+            -114.41570680064238,
+            34.816645807114206
+          ],
+          [
+            -114.4151271671969,
+            34.81692627418734
+          ],
+          [
+            -114.41458493241329,
+            34.817094553677904
+          ],
+          [
+            -114.41415488103904,
+            34.81713194997501
+          ],
+          [
+            -114.41359845377225,
+            34.81722781132655
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8629,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 504.66644099952543,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8630,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.48021429568058,
+            34.83605414277871
+          ],
+          [
+            -114.47972815260165,
+            34.83625981872839
+          ],
+          [
+            -114.47922331109008,
+            34.836465494901525
+          ],
+          [
+            -114.47879326241073,
+            34.83655898390131
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8630,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 173.14778970185415,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8631,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47813883792963,
+            34.836278517320864
+          ],
+          [
+            -114.47750311277946,
+            34.836278518058194
+          ],
+          [
+            -114.47684868829836,
+            34.836185028739905
+          ],
+          [
+            -114.47638124275373,
+            34.8360915393155
+          ],
+          [
+            -114.4760259842117,
+            34.835829769099675
+          ],
+          [
+            -114.47582030774086,
+            34.835568000263514
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8631,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 293.6622931179685,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8632,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.45433650842634,
+            34.823563997673496
+          ],
+          [
+            -114.45398124718933,
+            34.82333962388175
+          ],
+          [
+            -114.45358859357866,
+            34.8230591572574
+          ],
+          [
+            -114.45308375206707,
+            34.82304045935018
+          ],
+          [
+            -114.4525789105555,
+            34.82298436634046
+          ],
+          [
+            -114.45220495358082,
+            34.82298436634046
+          ],
+          [
+            -114.45168141633155,
+            34.82302176217612
+          ],
+          [
+            -114.45110178288604,
+            34.82320874036251
+          ],
+          [
+            -114.45069043084273,
+            34.82333962388175
+          ],
+          [
+            -114.45029777633371,
+            34.82337702103103
+          ],
+          [
+            -114.4498303307891,
+            34.823414416688465
+          ],
+          [
+            -114.44936288344786,
+            34.82348920721496
+          ],
+          [
+            -114.44900762760078,
+            34.823414416688465
+          ],
+          [
+            -114.4485588795905,
+            34.823395718124445
+          ],
+          [
+            -114.44820362015014,
+            34.82345181232893
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8632,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 719.789300376922,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8633,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44867106569473,
+            34.822778689678096
+          ],
+          [
+            -114.44812882821618,
+            34.822759991707144
+          ],
+          [
+            -114.44769877863854,
+            34.822722595752644
+          ],
+          [
+            -114.44702565841973,
+            34.822591712727785
+          ],
+          [
+            -114.4466330021141,
+            34.82249822335604
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8633,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 231.07177595507872,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8634,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4274116385887,
+            34.823657488785315
+          ],
+          [
+            -114.42701898497802,
+            34.82347051088022
+          ],
+          [
+            -114.4265515394334,
+            34.8234331159857
+          ],
+          [
+            -114.42619627999305,
+            34.82337702176848
+          ],
+          [
+            -114.42599060442053,
+            34.82328353328808
+          ],
+          [
+            -114.42593451181756,
+            34.823227439706436
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8634,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 179.0984033865664,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8635,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42154052297956,
+            34.82092760831647
+          ],
+          [
+            -114.4210543790023,
+            34.82103979267424
+          ],
+          [
+            -114.42038125698686,
+            34.821058491773094
+          ],
+          [
+            -114.419820321974,
+            34.821039794886616
+          ],
+          [
+            -114.41916589659458,
+            34.821077190130225
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8635,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 266.71020768847154,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8636,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41783835279297,
+            34.815673518686836
+          ],
+          [
+            -114.41752049021788,
+            34.81584179926122
+          ],
+          [
+            -114.41716005288822,
+            34.81608248721857
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8636,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 93.82338723006376,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8637,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41684736820244,
+            34.81625315131274
+          ],
+          [
+            -114.41658559823034,
+            34.81640273423928
+          ],
+          [
+            -114.41619294461965,
+            34.816664502785414
+          ],
+          [
+            -114.41587508024794,
+            34.81696366982331
+          ],
+          [
+            -114.41555721767288,
+            34.81724413728931
+          ],
+          [
+            -114.41520195913081,
+            34.817468510722215
+          ],
+          [
+            -114.41482800305447,
+            34.817748978682076
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8637,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SE",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 303.86448023211994,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8638,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.51102770738015,
+            34.89462899170858
+          ],
+          [
+            -114.51089211297624,
+            34.89405949763936
+          ],
+          [
+            -114.5106751626486,
+            34.89343576719386
+          ],
+          [
+            -114.51024126199331,
+            34.8928391543317
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8638,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 261.06665804037675,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8639,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.50967176873074,
+            34.89061541495696
+          ],
+          [
+            -114.50931922399916,
+            34.89007303987635
+          ],
+          [
+            -114.5088039683185,
+            34.88950354517254
+          ],
+          [
+            -114.50834294842312,
+            34.88887981329614
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8639,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 278.6535775633955,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8640,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.50910227277322,
+            34.88898828781617
+          ],
+          [
+            -114.50853277861232,
+            34.88850015098002
+          ],
+          [
+            -114.50788193032436,
+            34.888012012717695
+          ],
+          [
+            -114.50750226635269,
+            34.88749675632415
+          ],
+          [
+            -114.50723107934145,
+            34.88706285614051
+          ],
+          [
+            -114.50714972341774,
+            34.88690014380991
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8640,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 361.60898115987885,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8641,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.50283783610512,
+            34.87711026834046
+          ],
+          [
+            -114.50251241241028,
+            34.87664924904295
+          ],
+          [
+            -114.502295460286,
+            34.8761611096624
+          ],
+          [
+            -114.5021056300968,
+            34.87570009167453
+          ],
+          [
+            -114.50167173033985,
+            34.87513059833104
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8641,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 299.9475976591019,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8642,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.475652027237,
+            34.83528753325638
+          ],
+          [
+            -114.47531546712761,
+            34.834913575269056
+          ],
+          [
+            -114.47499760365422,
+            34.83444613166373
+          ],
+          [
+            -114.47453015721128,
+            34.834090871893366
+          ],
+          [
+            -114.47421229463622,
+            34.83382910268977
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8642,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 256.6976696186073,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8643,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47387573542512,
+            34.8336982181446
+          ],
+          [
+            -114.47344568405084,
+            34.83343644769261
+          ],
+          [
+            -114.47271646943244,
+            34.83308118872709
+          ],
+          [
+            -114.47206204495133,
+            34.83278202418917
+          ],
+          [
+            -114.471650692908,
+            34.83255764970371
+          ],
+          [
+            -114.47129543436596,
+            34.832202392845325
+          ],
+          [
+            -114.4708653847883,
+            34.83184713371677
+          ],
+          [
+            -114.47041663677801,
+            34.83141708315998
+          ],
+          [
+            -114.47009877420294,
+            34.83098703330668
+          ],
+          [
+            -114.46989309773211,
+            34.83076265909148
+          ],
+          [
+            -114.46946304725616,
+            34.83044479580237
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8643,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 670.1252497357993,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8644,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.46536822256057,
+            34.82973428001829
+          ],
+          [
+            -114.46503166155286,
+            34.82924813631954
+          ],
+          [
+            -114.46467640390912,
+            34.82893027234591
+          ],
+          [
+            -114.46430244693444,
+            34.82861241009494
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8644,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 194.25479616696256,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8645,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.46314318184007,
+            34.828350641909374
+          ],
+          [
+            -114.46269443472808,
+            34.82812626788459
+          ],
+          [
+            -114.46209610374827,
+            34.827808404742456
+          ],
+          [
+            -114.4613107974252,
+            34.827509238745186
+          ],
+          [
+            -114.46048809244023,
+            34.8272848646402
+          ],
+          [
+            -114.45983366706082,
+            34.827004396702314
+          ],
+          [
+            -114.45912314997672,
+            34.826611743081706
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8645,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 508.23932232583195,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8646,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.45835653759474,
+            34.82618169173017
+          ],
+          [
+            -114.45807607188493,
+            34.82601341310492
+          ],
+          [
+            -114.45768341737592,
+            34.82577034132416
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8646,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 93.41774840704821,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8647,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44440796229192,
+            34.821432447047684
+          ],
+          [
+            -114.44394051584898,
+            34.821264168306016
+          ],
+          [
+            -114.44366004924086,
+            34.82100239815109
+          ],
+          [
+            -114.44315520862762,
+            34.82083411631851
+          ],
+          [
+            -114.44261297025075,
+            34.82057234700936
+          ],
+          [
+            -114.4421081296375,
+            34.82034797318045
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8647,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 298.67780791193985,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8648,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44169677759416,
+            34.81999271601078
+          ],
+          [
+            -114.44124802868556,
+            34.81973094624021
+          ],
+          [
+            -114.44076188470831,
+            34.8193569876662
+          ],
+          [
+            -114.44036923109763,
+            34.818889542776816
+          ],
+          [
+            -114.44001397165727,
+            34.81853428374249
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8648,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 274.7630376860173,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8649,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43539561061073,
+            34.82487284735864
+          ],
+          [
+            -114.43500295610173,
+            34.82466717024998
+          ],
+          [
+            -114.43459160495672,
+            34.82440540132319
+          ],
+          [
+            -114.43419894865107,
+            34.824012749322854
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8649,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 178.67853310644537,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8650,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43320796495887,
+            34.82378837306637
+          ],
+          [
+            -114.43264702994601,
+            34.82354530209318
+          ],
+          [
+            -114.4321047933658,
+            34.82330223114011
+          ],
+          [
+            -114.43169344132247,
+            34.8231152516911
+          ],
+          [
+            -114.43135688031475,
+            34.82300306499787
+          ],
+          [
+            -114.43077724686924,
+            34.82272259796496
+          ],
+          [
+            -114.4302724071543,
+            34.82231124503168
+          ],
+          [
+            -114.42980496160969,
+            34.821937289321966
+          ],
+          [
+            -114.429431004635,
+            34.821656822347364
+          ],
+          [
+            -114.42901965169337,
+            34.821357656128576
+          ],
+          [
+            -114.42860829875173,
+            34.820946303753466
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8650,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 648.6312753623215,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8651,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41605942981562,
+            34.81518681408401
+          ],
+          [
+            -114.41654332441139,
+            34.815545095126495
+          ],
+          [
+            -114.41684697474035,
+            34.81580215371222
+          ],
+          [
+            -114.41716005288822,
+            34.81608248721857
+          ],
+          [
+            -114.41738814591866,
+            34.81633222070616
+          ],
+          [
+            -114.41740714798186,
+            34.81635562394
+          ],
+          [
+            -114.41758765455674,
+            34.816636367826746
+          ],
+          [
+            -114.4179007668406,
+            34.81687785512516
+          ],
+          [
+            -114.4182613550872,
+            34.81708036126732
+          ],
+          [
+            -114.41842271766505,
+            34.81719722733282
+          ],
+          [
+            -114.41866941121177,
+            34.817462106319354
+          ],
+          [
+            -114.41900156598301,
+            34.81778153231145
+          ],
+          [
+            -114.41900152555883,
+            34.81780487687169
+          ],
+          [
+            -114.41903000664492,
+            34.81785162792167
+          ],
+          [
+            -114.41928634719943,
+            34.818124384871005
+          ],
+          [
+            -114.4197325188415,
+            34.818404950158595
+          ],
+          [
+            -114.42010249178789,
+            34.81870089692323
+          ],
+          [
+            -114.4204541157463,
+            34.819028478335106
+          ],
+          [
+            -114.42063477862804,
+            34.819168975640245
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8651,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 748.3535550700138,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8652,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41906265142232,
+            34.820307885843526
+          ],
+          [
+            -114.41870935659749,
+            34.82004790028055
+          ],
+          [
+            -114.4183441087895,
+            34.819958009836206
+          ],
+          [
+            -114.41807651773435,
+            34.81990813530984
+          ],
+          [
+            -114.41767540109538,
+            34.81976845712395
+          ],
+          [
+            -114.41717748559464,
+            34.81948922836255
+          ],
+          [
+            -114.4168738729949,
+            34.81928977982671
+          ],
+          [
+            -114.41643693244072,
+            34.819000735048554
+          ],
+          [
+            -114.41627888913783,
+            34.81882113172217
+          ],
+          [
+            -114.41615747643728,
+            34.81872142993657
+          ],
+          [
+            -114.41596368467768,
+            34.81866192386037
+          ],
+          [
+            -114.41576953179532,
+            34.81849250520652
+          ],
+          [
+            -114.41535753655826,
+            34.81830358926093
+          ],
+          [
+            -114.41527278859603,
+            34.81827382206502
+          ],
+          [
+            -114.4149217620173,
+            34.818114922153306
+          ],
+          [
+            -114.41452151225256,
+            34.81786594926035
+          ],
+          [
+            -114.41413321996257,
+            34.8176168782658
+          ],
+          [
+            -114.4141090992989,
+            34.817616963077526
+          ],
+          [
+            -114.41359845377225,
+            34.81722781132655
+          ],
+          [
+            -114.41302775317392,
+            34.8169087688998
+          ],
+          [
+            -114.41255899429238,
+            34.81665396535991
+          ],
+          [
+            -114.41201401695223,
+            34.81649452320892
+          ],
+          [
+            -114.41156664695758,
+            34.81642484018373
+          ],
+          [
+            -114.41087749720086,
+            34.81627558917462
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8652,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 1083.2170770780317,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8653,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41270908570839,
+            34.817350394249
+          ],
+          [
+            -114.41229774624146,
+            34.817210940350336
+          ],
+          [
+            -114.41187488228776,
+            34.81709138317443
+          ],
+          [
+            -114.41135396901743,
+            34.81678309002992
+          ],
+          [
+            -114.41089142827427,
+            34.8164249670344
+          ],
+          [
+            -114.4103433643228,
+            34.81599677190369
+          ],
+          [
+            -114.41000330797031,
+            34.815727874675986
+          ],
+          [
+            -114.40953258177828,
+            34.81540969670606
+          ],
+          [
+            -114.40911951125783,
+            34.8150987606499
+          ],
+          [
+            -114.40898563892428,
+            34.81486038931252
+          ],
+          [
+            -114.40864650334497,
+            34.814601565852705
+          ],
+          [
+            -114.40828273506223,
+            34.81429316972601
+          ],
+          [
+            -114.40784208087265,
+            34.81390784626311
+          ],
+          [
+            -114.4074236635796,
+            34.81354196670841
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8653,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 793.6841494806238,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8654,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41017224424434,
+            34.810606409065436
+          ],
+          [
+            -114.40991047427222,
+            34.81038203612182
+          ],
+          [
+            -114.40957391326451,
+            34.810176359710695
+          ],
+          [
+            -114.40914386368685,
+            34.80989589326274
+          ],
+          [
+            -114.40863902217527,
+            34.80957802836435
+          ],
+          [
+            -114.40822766923364,
+            34.80933495824082
+          ],
+          [
+            -114.40772282772204,
+            34.808867511808245
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8654,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 361.9113942100938,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8655,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.40852463879183,
+            34.813553155033034
+          ],
+          [
+            -114.40816392567937,
+            34.81323646806831
+          ],
+          [
+            -114.40802332765934,
+            34.81309192264904
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8655,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 83.86989984129612,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8656,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.40758118585964,
+            34.81263737272596
+          ],
+          [
+            -114.40706562295514,
+            34.81232485893393
+          ],
+          [
+            -114.40647985940613,
+            34.81200400897848
+          ],
+          [
+            -114.4059814624084,
+            34.811654621363765
+          ],
+          [
+            -114.40549552863695,
+            34.81132537917305
+          ],
+          [
+            -114.40496038784914,
+            34.81085592018342
+          ],
+          [
+            -114.40446050593624,
+            34.81041533833274
+          ],
+          [
+            -114.40428522575968,
+            34.81024923427604
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8656,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 491.42983885401844,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8657,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4070123124346,
+            34.807876528344515
+          ],
+          [
+            -114.40626439758694,
+            34.80744647802041
+          ],
+          [
+            -114.40583245525896,
+            34.80687606600581
+          ],
+          [
+            -114.40471965013278,
+            34.80586991127754
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8657,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 376.9716922552774,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8658,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.40428522575968,
+            34.81024923427604
+          ],
+          [
+            -114.40303651092091,
+            34.80906588069495
+          ],
+          [
+            -114.40246388702957,
+            34.80850553893404
+          ],
+          [
+            -114.40195201979415,
+            34.80804506898132
+          ],
+          [
+            -114.4011872435686,
+            34.80764701513211
+          ],
+          [
+            -114.40060394859,
+            34.807337834739414
+          ],
+          [
+            -114.40001056642907,
+            34.80687473834497
+          ],
+          [
+            -114.39916707083516,
+            34.8062112629769
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8658,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 795.2278940056099,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8659,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.40410110795739,
+            34.80531065124149
+          ],
+          [
+            -114.4040304509687,
+            34.80524676517673
+          ],
+          [
+            -114.40246701406508,
+            34.80366514424141
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8659,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 287.8668477891423,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8660,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.39574842691856,
+            34.794833425014346
+          ],
+          [
+            -114.3970524636058,
+            34.79657011170884
+          ],
+          [
+            -114.39750209466003,
+            34.79870992925807
+          ],
+          [
+            -114.3982594256485,
+            34.79970689613168
+          ],
+          [
+            -114.39871494156614,
+            34.80065374126144
+          ],
+          [
+            -114.39928639225772,
+            34.80114629193528
+          ],
+          [
+            -114.40002505176304,
+            34.80190460587977
+          ],
+          [
+            -114.40064947970018,
+            34.80234760618377
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8660,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 1183.977503819207,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8661,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.39810787177524,
+            34.805380320062426
+          ],
+          [
+            -114.39686404556824,
+            34.80428827722104
+          ],
+          [
+            -114.39599822863615,
+            34.80341701725691
+          ],
+          [
+            -114.39445727476743,
+            34.80211184089674
+          ],
+          [
+            -114.39362179484081,
+            34.80068219591373
+          ],
+          [
+            -114.39266246418596,
+            34.79897679591352
+          ],
+          [
+            -114.39173719764669,
+            34.797710886323486
+          ],
+          [
+            -114.39087435683314,
+            34.79722597293571
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8661,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "SW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 1387.7828341002,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8663,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.5113802512134,
+            34.89514424831894
+          ],
+          [
+            -114.51146160713711,
+            34.89416797416236
+          ],
+          [
+            -114.51108194406375,
+            34.89330017270376
+          ],
+          [
+            -114.5106751644452,
+            34.892866272957725
+          ],
+          [
+            -114.51048533066275,
+            34.89259508629476
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8663,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 374.6679286517051,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8664,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.50321750007679,
+            34.87689331801474
+          ],
+          [
+            -114.50313614415307,
+            34.87624246802389
+          ],
+          [
+            -114.50302766809094,
+            34.87570009167453
+          ],
+          [
+            -114.50286495624356,
+            34.87523907331212
+          ],
+          [
+            -114.5027293618396,
+            34.874778053838305
+          ],
+          [
+            -114.50253952985378,
+            34.87415432295623
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8664,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 380.06445220313987,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8665,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.49485469592304,
+            34.869747619656835
+          ],
+          [
+            -114.49489209189001,
+            34.86942975731405
+          ],
+          [
+            -114.49489209189001,
+            34.86913059224061
+          ],
+          [
+            -114.49502297642691,
+            34.868831425341675
+          ],
+          [
+            -114.49506037239387,
+            34.8685696582951
+          ],
+          [
+            -114.4952286519994,
+            34.86819569971415
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8665,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 216.89011911007591,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8666,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4943685528441,
+            34.87264578201858
+          ],
+          [
+            -114.49453683424629,
+            34.872290524278526
+          ],
+          [
+            -114.49474250981879,
+            34.87195396285951
+          ],
+          [
+            -114.49476120735311,
+            34.871542611254846
+          ],
+          [
+            -114.49483599659209,
+            34.870925583305514
+          ],
+          [
+            -114.49496688472225,
+            34.870084181263174
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8666,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 357.873903962776,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8667,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.49388240886685,
+            34.871785682738825
+          ],
+          [
+            -114.49395719990245,
+            34.871336935049214
+          ],
+          [
+            -114.49401329520038,
+            34.870906883741526
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8667,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 120.13786994711383,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8668,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.48266371310118,
+            34.845253473070876
+          ],
+          [
+            -114.48266371310118,
+            34.84474863071396
+          ],
+          [
+            -114.48260761959988,
+            34.844318581934786
+          ],
+          [
+            -114.48251413013163,
+            34.84379504212305
+          ],
+          [
+            -114.48242064156172,
+            34.8433275958658
+          ],
+          [
+            -114.48225236015952,
+            34.84286015063997
+          ],
+          [
+            -114.48199059108573,
+            34.84239270497122
+          ],
+          [
+            -114.48172881931701,
+            34.841925258859575
+          ],
+          [
+            -114.48152314374448,
+            34.841570001135764
+          ],
+          [
+            -114.48129877243429,
+            34.84119604514467
+          ],
+          [
+            -114.4809435120956,
+            34.84070990129089
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8668,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 655.6044191139397,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8669,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47449276304096,
+            34.83882142071352
+          ],
+          [
+            -114.47402531659803,
+            34.83865314063845
+          ],
+          [
+            -114.47353917441741,
+            34.83852225565198
+          ],
+          [
+            -114.47316521744273,
+            34.83854095373058
+          ],
+          [
+            -114.47282865643501,
+            34.838466162865295
+          ],
+          [
+            -114.47249209632561,
+            34.83841006930306
+          ],
+          [
+            -114.47232381492344,
+            34.83833527831885
+          ],
+          [
+            -114.4719685563814,
+            34.838279183930126
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8669,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 294.1019099973189,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8670,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47413750270228,
+            34.838877514732765
+          ],
+          [
+            -114.47365136141998,
+            34.83880272269863
+          ],
+          [
+            -114.47309042640713,
+            34.83882142071352
+          ],
+          [
+            -114.47269777189811,
+            34.838727932071166
+          ],
+          [
+            -114.47232381492344,
+            34.83861574526524
+          ],
+          [
+            -114.47187506781145,
+            34.83852225565198
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8670,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 258.9268659550462,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8671,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47155720523638,
+            34.83824178912435
+          ],
+          [
+            -114.47103366439386,
+            34.83805481115419
+          ],
+          [
+            -114.47069710518277,
+            34.837849135265124
+          ],
+          [
+            -114.47052882467891,
+            34.83779304128246
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8671,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 130.48746487067496,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8672,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47140762136854,
+            34.8402798520533
+          ],
+          [
+            -114.47099627022351,
+            34.84014896670415
+          ],
+          [
+            -114.47052882378058,
+            34.83992459165166
+          ],
+          [
+            -114.47004268070165,
+            34.83971891674778
+          ],
+          [
+            -114.46961262932737,
+            34.839606729817824
+          ],
+          [
+            -114.46907039364545,
+            34.839344959719995
+          ],
+          [
+            -114.46867773823814,
+            34.839195378645115
+          ],
+          [
+            -114.46807940905495,
+            34.83897100394255
+          ],
+          [
+            -114.46761196440865,
+            34.83872793280849
+          ],
+          [
+            -114.4670136334288,
+            34.83842876666982
+          ],
+          [
+            -114.46678925762704,
+            34.83807350933897
+          ],
+          [
+            -114.46650879191724,
+            34.837849135265124
+          ],
+          [
+            -114.46600395040566,
+            34.83758736473941
+          ],
+          [
+            -114.46557389992971,
+            34.83738168915713
+          ],
+          [
+            -114.46495687141555,
+            34.837119920094246
+          ],
+          [
+            -114.46441463483534,
+            34.83683945173823
+          ],
+          [
+            -114.46394719018905,
+            34.83652159126345
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8672,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 987.5420238098387,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8673,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.47067840675014,
+            34.839419751998776
+          ],
+          [
+            -114.47037924081106,
+            34.839120586162466
+          ],
+          [
+            -114.47004267980333,
+            34.83893360797647
+          ],
+          [
+            -114.46965002709096,
+            34.83869053673193
+          ],
+          [
+            -114.469238673251,
+            34.83837267381943
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8673,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 215.375658893368,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8674,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.46269443472808,
+            34.8267613256341
+          ],
+          [
+            -114.46226438515045,
+            34.8268735138449
+          ],
+          [
+            -114.46192782324442,
+            34.827004396702314
+          ],
+          [
+            -114.4615164712011,
+            34.82715398001632
+          ],
+          [
+            -114.4611238175904,
+            34.82715398001632
+          ],
+          [
+            -114.46071246644539,
+            34.82709788685847
+          ],
+          [
+            -114.4602824150711,
+            34.8269483027051
+          ],
+          [
+            -114.45994585406338,
+            34.826742627829915
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8674,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 330.6032199148906,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8675,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.45201797464433,
+            34.807521266816494
+          ],
+          [
+            -114.45177490400317,
+            34.80804480566565
+          ],
+          [
+            -114.45145703963146,
+            34.808643134867594
+          ],
+          [
+            -114.45119527055768,
+            34.80896099968421
+          ],
+          [
+            -114.45091480215294,
+            34.80926016297742
+          ],
+          [
+            -114.45074652344569,
+            34.8095780268892
+          ],
+          [
+            -114.45031647296972,
+            34.80989589031249
+          ],
+          [
+            -114.44994251599505,
+            34.8102137532473
+          ],
+          [
+            -114.44971814288822,
+            34.81049421935095
+          ],
+          [
+            -114.4496433518526,
+            34.81056901201922
+          ],
+          [
+            -114.44953116485004,
+            34.810812082928074
+          ],
+          [
+            -114.44932548927751,
+            34.81112994527906
+          ],
+          [
+            -114.44911981370501,
+            34.811260831025415
+          ],
+          [
+            -114.44895153140452,
+            34.81141041268978
+          ],
+          [
+            -114.44887674126724,
+            34.81165348480447
+          ],
+          [
+            -114.44874585673034,
+            34.81180306870623
+          ],
+          [
+            -114.44857757622647,
+            34.81187785871143
+          ],
+          [
+            -114.44844668989295,
+            34.81197134833507
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8675,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 737.813615866564,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8676,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44235119938034,
+            34.80722210163637
+          ],
+          [
+            -114.44283734156095,
+            34.80722210163637
+          ],
+          [
+            -114.4431178099657,
+            34.807259497251074
+          ],
+          [
+            -114.44358525640862,
+            34.807128613263
+          ],
+          [
+            -114.44418358559184,
+            34.807184706004755
+          ],
+          [
+            -114.44453884413387,
+            34.80727819505208
+          ],
+          [
+            -114.44491280200685,
+            34.80740908027781
+          ],
+          [
+            -114.44524936301458,
+            34.80753996529566
+          ],
+          [
+            -114.44558592312399,
+            34.80757736002854
+          ],
+          [
+            -114.44594118166603,
+            34.807577359290995
+          ],
+          [
+            -114.44622164917247,
+            34.80753996529566
+          ],
+          [
+            -114.44672649068404,
+            34.807409078802664
+          ],
+          [
+            -114.44719393622866,
+            34.80744647728286
+          ],
+          [
+            -114.4475304981347,
+            34.80739038103133
+          ],
+          [
+            -114.44796054681403,
+            34.807296892848804
+          ],
+          [
+            -114.44833450289038,
+            34.80735298621362
+          ],
+          [
+            -114.44857757622647,
+            34.80739038103133
+          ],
+          [
+            -114.44885804193629,
+            34.80735298695122
+          ],
+          [
+            -114.44926939487794,
+            34.80724079870827
+          ],
+          [
+            -114.44981163235646,
+            34.807203403085076
+          ],
+          [
+            -114.4503538689367,
+            34.807166006707334
+          ],
+          [
+            -114.45093350058556,
+            34.80714731035611
+          ],
+          [
+            -114.45138224859586,
+            34.80718470526715
+          ],
+          [
+            -114.45175620467221,
+            34.80724079870827
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8676,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 1071.935172167483,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8677,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.45055954630583,
+            34.82449889000512
+          ],
+          [
+            -114.44996121622432,
+            34.82434930776819
+          ],
+          [
+            -114.44941897874578,
+            34.82425581891648
+          ],
+          [
+            -114.44878325179899,
+            34.82419972525956
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8677,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 202.48099148034578,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8678,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44943767807673,
+            34.824704566059104
+          ],
+          [
+            -114.44878325269731,
+            34.82468586926281
+          ],
+          [
+            -114.44812882911451,
+            34.82464847270781
+          ],
+          [
+            -114.44758659073766,
+            34.82461107687321
+          ],
+          [
+            -114.44710044765873,
+            34.824611076135824
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8678,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 260.61234147855964,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8679,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44940028121147,
+            34.82380707080381
+          ],
+          [
+            -114.44882064776594,
+            34.82380707080381
+          ],
+          [
+            -114.44814752575051,
+            34.82369488284051
+          ],
+          [
+            -114.44738091606348,
+            34.82350790575776
+          ],
+          [
+            -114.44674518911667,
+            34.82328353107577
+          ],
+          [
+            -114.44627774536869,
+            34.82309655379662
+          ],
+          [
+            -114.44597857942962,
+            34.82292827329253
+          ],
+          [
+            -114.4454363419511,
+            34.82270389998135
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8679,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 472.89393876898373,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8680,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4483345037887,
+            34.81210223274501
+          ],
+          [
+            -114.44779226720848,
+            34.812270513238
+          ],
+          [
+            -114.44732482256218,
+            34.81242009601968
+          ],
+          [
+            -114.44680128261795,
+            34.812532283849634
+          ],
+          [
+            -114.44631513774239,
+            34.81260707393053
+          ],
+          [
+            -114.4458850908597,
+            34.812681866156126
+          ],
+          [
+            -114.44541764262014,
+            34.81271926224346
+          ],
+          [
+            -114.44523066458194,
+            34.812924938207864
+          ],
+          [
+            -114.44502498900944,
+            34.81313061365889
+          ],
+          [
+            -114.44465103203476,
+            34.81331759069498
+          ],
+          [
+            -114.44429577439104,
+            34.813448476654145
+          ],
+          [
+            -114.44403400441892,
+            34.81361675734786
+          ],
+          [
+            -114.44366004834257,
+            34.81371024721118
+          ],
+          [
+            -114.44317390436531,
+            34.81371024721118
+          ],
+          [
+            -114.44281864492496,
+            34.813728942811046
+          ],
+          [
+            -114.44242599131427,
+            34.813598060247514
+          ],
+          [
+            -114.44197724330398,
+            34.8135045702569
+          ],
+          [
+            -114.44162198476192,
+            34.81348587165601
+          ],
+          [
+            -114.44113584168299,
+            34.813541965970856
+          ],
+          [
+            -114.4407992815736,
+            34.813523268116
+          ],
+          [
+            -114.44029444006202,
+            34.81346717378843
+          ],
+          [
+            -114.43993918241829,
+            34.81337368586188
+          ],
+          [
+            -114.43941564157576,
+            34.813242801259
+          ],
+          [
+            -114.43900429043076,
+            34.81322410333625
+          ],
+          [
+            -114.43848074958821,
+            34.8131867067405
+          ],
+          [
+            -114.43808809597752,
+            34.81316801028011
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8680,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 1211.9753680149308,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8681,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44805403538396,
+            34.81174697394516
+          ],
+          [
+            -114.44766138267158,
+            34.81191525516366
+          ],
+          [
+            -114.4472874256969,
+            34.812064835640086
+          ],
+          [
+            -114.44691346872222,
+            34.81223311768449
+          ],
+          [
+            -114.44661430368147,
+            34.81234530503153
+          ],
+          [
+            -114.44627774357205,
+            34.812326606905124
+          ],
+          [
+            -114.4458476939944,
+            34.812438792649765
+          ],
+          [
+            -114.44539894508581,
+            34.81256968000488
+          ],
+          [
+            -114.44506238407808,
+            34.81271926076836
+          ],
+          [
+            -114.44483801186959,
+            34.812924938207864
+          ],
+          [
+            -114.44444535556393,
+            34.8131867067405
+          ],
+          [
+            -114.44403400531723,
+            34.813392383013195
+          ],
+          [
+            -114.44371614094554,
+            34.81348587165601
+          ],
+          [
+            -114.44328609136788,
+            34.81356066382147
+          ],
+          [
+            -114.44294953036017,
+            34.81346717526352
+          ],
+          [
+            -114.44251948078252,
+            34.813354987968836
+          ],
+          [
+            -114.4421081296375,
+            34.813317592170016
+          ],
+          [
+            -114.44175287019715,
+            34.81328019635423
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8681,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 772.6999603347826,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8682,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44584769219777,
+            34.80279071696369
+          ],
+          [
+            -114.44601597359996,
+            34.80337035021968
+          ],
+          [
+            -114.44609076643219,
+            34.80372560824914
+          ],
+          [
+            -114.44616555567117,
+            34.80404347064097
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8682,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 173.5504468106984,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8683,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44603467203258,
+            34.82451758831869
+          ],
+          [
+            -114.44549243455405,
+            34.82455498272084
+          ],
+          [
+            -114.44470712733268,
+            34.82453628589059
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8683,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 148.03098414876322,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8684,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44592248323337,
+            34.8006404680756
+          ],
+          [
+            -114.44582899556178,
+            34.80116400563542
+          ],
+          [
+            -114.44586639063043,
+            34.80157535866855
+          ],
+          [
+            -114.44586638973209,
+            34.801968012860485
+          ],
+          [
+            -114.4458476930961,
+            34.80251024972327
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8684,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 254.42624641518267,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8685,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44397791181595,
+            34.82089021226748
+          ],
+          [
+            -114.44347307120269,
+            34.82059104621433
+          ],
+          [
+            -114.4430243222941,
+            34.82034797318045
+          ],
+          [
+            -114.44235120027865,
+            34.82006750595673
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8685,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 213.18941013711782,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8687,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.44222031843672,
+            34.82326483395688
+          ],
+          [
+            -114.44186505719972,
+            34.82302176291358
+          ],
+          [
+            -114.44149110112335,
+            34.822759991707144
+          ],
+          [
+            -114.44096756207745,
+            34.822460828020155
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8687,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 177.19969335308247,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8688,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43971480661651,
+            34.80959672563928
+          ],
+          [
+            -114.43973350325253,
+            34.80991458825294
+          ],
+          [
+            -114.43967741244619,
+            34.810157660354555
+          ],
+          [
+            -114.43971480661651,
+            34.810438126649125
+          ],
+          [
+            -114.43986438958605,
+            34.81081208366564
+          ],
+          [
+            -114.43978959765211,
+            34.811242134128044
+          ],
+          [
+            -114.4396400146826,
+            34.811578695333175
+          ],
+          [
+            -114.43941564157576,
+            34.81182176695144
+          ],
+          [
+            -114.43917256913797,
+            34.81202744220591
+          ],
+          [
+            -114.43887340499552,
+            34.81247619032253
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8688,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 425.35426842400784,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8689,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43866772942302,
+            34.82440540132319
+          ],
+          [
+            -114.43786372287069,
+            34.82427451728525
+          ],
+          [
+            -114.43698492618105,
+            34.82419972525956
+          ],
+          [
+            -114.43621831469738,
+            34.824050143216766
+          ],
+          [
+            -114.43552649514763,
+            34.82384446774084
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8689,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 359.2201224513782,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8690,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43382498987977,
+            34.79918203776176
+          ],
+          [
+            -114.43423634282142,
+            34.79931292330366
+          ],
+          [
+            -114.43462899643211,
+            34.799481203355505
+          ],
+          [
+            -114.43498425677078,
+            34.79957469302637
+          ],
+          [
+            -114.43524602494625,
+            34.79964948306386
+          ],
+          [
+            -114.43595654292864,
+            34.79983645970494
+          ],
+          [
+            -114.43633049990332,
+            34.800023440347836
+          ],
+          [
+            -114.4367792470153,
+            34.80026651064003
+          ],
+          [
+            -114.43719059905864,
+            34.80052828176069
+          ],
+          [
+            -114.43748976409938,
+            34.80079004983714
+          ],
+          [
+            -114.43786372107407,
+            34.80097702831719
+          ],
+          [
+            -114.43831246908435,
+            34.80122010096111
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8690,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 577.6175451889776,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8691,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43502165363606,
+            34.80142577685668
+          ],
+          [
+            -114.43533951531282,
+            34.801537962687775
+          ],
+          [
+            -114.43571347228749,
+            34.80161275463236
+          ],
+          [
+            -114.43610612499985,
+            34.80161275463236
+          ],
+          [
+            -114.43649878040718,
+            34.80168754724667
+          ],
+          [
+            -114.43700362102045,
+            34.801706244836424
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8691,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 226.19645951511865,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8692,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43455420629479,
+            34.80122010022346
+          ],
+          [
+            -114.43403066724889,
+            34.801070519242245
+          ],
+          [
+            -114.43341363963309,
+            34.800939632802645
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8692,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 132.6492788497813,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8694,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42894212528773,
+            34.82083042973383
+          ],
+          [
+            -114.42930775308308,
+            34.8211471428185
+          ],
+          [
+            -114.42981622468673,
+            34.82153096414417
+          ],
+          [
+            -114.43020301409523,
+            34.82179823625206
+          ],
+          [
+            -114.4307718605708,
+            34.82211418530162
+          ],
+          [
+            -114.43146400171743,
+            34.822346812294825
+          ],
+          [
+            -114.43221867908257,
+            34.822512916298905
+          ],
+          [
+            -114.4330564811542,
+            34.82269582419148
+          ],
+          [
+            -114.43395730183965,
+            34.82279515465569
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8694,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 636.7171369310781,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8695,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43371280557216,
+            34.80045349030749
+          ],
+          [
+            -114.43320796226395,
+            34.80037869878644
+          ],
+          [
+            -114.43264452544301,
+            34.80021888287556
+          ],
+          [
+            -114.43170330302765,
+            34.799933104646044
+          ],
+          [
+            -114.4310699170905,
+            34.799679340342635
+          ],
+          [
+            -114.42982543062175,
+            34.79921993494325
+          ],
+          [
+            -114.42873786366347,
+            34.79893443429946
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8695,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 592.6209276909653,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8696,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.43203000143188,
+            34.800995728281016
+          ],
+          [
+            -114.43126338994819,
+            34.800771354252554
+          ],
+          [
+            -114.43070245403702,
+            34.80062177024411
+          ],
+          [
+            -114.43017891588943,
+            34.80052828176069
+          ],
+          [
+            -114.42956188737527,
+            34.80039739593546
+          ],
+          [
+            -114.42887006692719,
+            34.80022911701614
+          ],
+          [
+            -114.42881397522255,
+            34.800191721162314
+          ],
+          [
+            -114.4280847588075,
+            34.800079534236716
+          ],
+          [
+            -114.42759861572858,
+            34.79996734715845
+          ],
+          [
+            -114.42701898318138,
+            34.799724275984154
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8696,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 586.4528932708644,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8697,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42875788441619,
+            34.8241249339034
+          ],
+          [
+            -114.42842132161186,
+            34.82397535172478
+          ],
+          [
+            -114.427860386599,
+            34.82375097831616
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8697,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 112.06585473655993,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8700,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.42602800038749,
+            34.818758658823995
+          ],
+          [
+            -114.42574753198275,
+            34.81847819208906
+          ],
+          [
+            -114.42514920190123,
+            34.81821642266831
+          ],
+          [
+            -114.42462566285535,
+            34.81799204905996
+          ],
+          [
+            -114.42398993680688,
+            34.81771158119012
+          ],
+          [
+            -114.42346639865929,
+            34.817468510722215
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8700,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 337.7151012558968,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8701,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.41658559823034,
+            34.81640273423928
+          ],
+          [
+            -114.41621164215397,
+            34.81625315131274
+          ],
+          [
+            -114.4155759152072,
+            34.8159165907631
+          ],
+          [
+            -114.41522065666514,
+            34.815729612987305
+          ],
+          [
+            -114.41479060708751,
+            34.81567352016188
+          ],
+          [
+            -114.4142670680416,
+            34.81543044736843
+          ],
+          [
+            -114.41404269403645,
+            34.815243469226886
+          ],
+          [
+            -114.41355655005921,
+            34.81509388567061
+          ],
+          [
+            -114.41316389644851,
+            34.81498169764083
+          ],
+          [
+            -114.41239728496484,
+            34.814832117296916
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8701,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "Unspecified",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 520.2962039066778,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8702,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.51157008319923,
+            34.89829002599443
+          ],
+          [
+            -114.51162431988284,
+            34.897503583291886
+          ],
+          [
+            -114.51162431988284,
+            34.896744256299634
+          ],
+          [
+            -114.51151584561734,
+            34.89625611912762
+          ],
+          [
+            -114.51143448879532,
+            34.8958222180482
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8702,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 336.8987855871655,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8703,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.50492598255947,
+            34.88500182863913
+          ],
+          [
+            -114.50479038725722,
+            34.884405215696056
+          ],
+          [
+            -114.50470903313015,
+            34.8840255533386
+          ],
+          [
+            -114.50438360763867,
+            34.88345605872436
+          ],
+          [
+            -114.50419377565285,
+            34.88302216004901
+          ],
+          [
+            -114.50424801323474,
+            34.88250690184392
+          ],
+          [
+            -114.50427513157656,
+            34.8820458840751
+          ],
+          [
+            -114.50430225171496,
+            34.88163910175996
+          ],
+          [
+            -114.50424801323474,
+            34.88112384520083
+          ],
+          [
+            -114.504003943667,
+            34.880635708811035
+          ],
+          [
+            -114.50378699423769,
+            34.88009333270892
+          ],
+          [
+            -114.50365139983376,
+            34.87952383811336
+          ],
+          [
+            -114.50362428059364,
+            34.87898146425444
+          ],
+          [
+            -114.50351580722645,
+            34.87860179968674
+          ],
+          [
+            -114.50338021282252,
+            34.878086543984445
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8703,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 966.7561547030856,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8704,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.49898691478896,
+            34.85763143011827
+          ],
+          [
+            -114.49894951972033,
+            34.85703310002529
+          ],
+          [
+            -114.49898691478896,
+            34.85639737312668
+          ],
+          [
+            -114.49908040335889,
+            34.8557242522413
+          ],
+          [
+            -114.49913649686017,
+            34.85495764089846
+          ],
+          [
+            -114.49911779842752,
+            34.85456498791078
+          ],
+          [
+            -114.49911779842752,
+            34.85424712512231
+          ],
+          [
+            -114.49919259036147,
+            34.85372358507895
+          ],
+          [
+            -114.4992299854301,
+            34.85303176522653
+          ],
+          [
+            -114.49928607893139,
+            34.852657808976545
+          ],
+          [
+            -114.49949175540222,
+            34.85174161594725
+          ],
+          [
+            -114.49962263993909,
+            34.851199378768534
+          ],
+          [
+            -114.49971612940735,
+            34.85091890973305
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8704,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 917.4919588344511,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8705,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.4952286519994,
+            34.86621373064366
+          ],
+          [
+            -114.49530344393332,
+            34.86587717014769
+          ],
+          [
+            -114.49552781704014,
+            34.865391026906686
+          ],
+          [
+            -114.4957147977733,
+            34.8649048837401
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8705,
+        "fault_name": "Needles graben faults",
+        "section_name": "",
+        "fault_id": "1011",
+        "section_id": "",
+        "Location": "Arizona",
+        "linetype": "Moderately Constrained",
+        "age": "late Quaternary",
+        "dip_direction": "W",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:130,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N31\u00b0W",
+        "total_fault_length": 4,
+        "cooperators": "Arizona Geological Survey",
+        "earthquake": "",
+        "last_review": 886464000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=1011&section_id=",
+        "symbology": "late Quaternary Moderately Constrained",
+        "ref_id": "1011",
+        "Fault_ID_num": 1011,
+        "Shape_Length": 186.1059277412055,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/1011.pdf",
+        "type": "faults"
+      }
+    }
+  ]
+}

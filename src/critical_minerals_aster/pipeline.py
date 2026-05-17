@@ -124,6 +124,76 @@ def run_classification(
     )
 
 
+def compute_global_limits(
+    site_ids: list[str],
+    repo_root: Path,
+    *,
+    low_pct: float = 2,
+    high_pct: float = 98,
+    subsample: int = 10,
+) -> dict[str, tuple[float, float]]:
+    """Compute cross-site percentile limits for each band ratio.
+
+    Loads TIR bands for every site in *site_ids*, computes the three
+    alteration ratios, and collects every *subsample*-th finite pixel from
+    all sites.  Returns 2nd–98th percentile limits suitable for passing as
+    the *global_limits* argument to :func:`save_band_ratio_figure`.
+
+    Parameters
+    ----------
+    site_ids:
+        List of site IDs to include (must have ASTER data on disk).
+    repo_root:
+        Repository root path.
+    low_pct / high_pct:
+        Percentile bounds (default 2 / 98).
+    subsample:
+        Take every N-th pixel to keep memory usage bounded.
+    """
+    from critical_minerals_aster.config import load_site_by_id
+
+    sites_dir = repo_root / "sites"
+    all_silica: list[np.ndarray] = []
+    all_carbonate: list[np.ndarray] = []
+    all_mafic: list[np.ndarray] = []
+
+    for site_id in site_ids:
+        try:
+            site = load_site_by_id(site_id, sites_dir)
+            paths = site_paths_for(site, repo_root)
+            granule_id = resolve_granule_id(site, paths)
+            _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+                paths.aster_dir, granule_id
+            )
+            (b12, b13, b14), _ = clip_bands_to_bbox(
+                [b12, b13, b14], transform, crs, site.bbox_wgs84
+            )
+            silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
+            flat = silica.ravel()
+            all_silica.append(flat[np.isfinite(flat)][::subsample])
+            flat = carbonate.ravel()
+            all_carbonate.append(flat[np.isfinite(flat)][::subsample])
+            flat = mafic.ravel()
+            all_mafic.append(flat[np.isfinite(flat)][::subsample])
+        except Exception as exc:
+            print(f"  [global_limits] skipping {site_id}: {exc}", file=sys.stderr)
+
+    def _limits(arrays: list[np.ndarray]) -> tuple[float, float]:
+        combined = np.concatenate(arrays) if arrays else np.array([])
+        if combined.size == 0:
+            return (0.0, 1.0)
+        return (
+            float(np.percentile(combined, low_pct)),
+            float(np.percentile(combined, high_pct)),
+        )
+
+    return {
+        "silica": _limits(all_silica),
+        "carbonate": _limits(all_carbonate),
+        "mafic": _limits(all_mafic),
+    }
+
+
 def save_band_ratio_figure(
     site: SiteConfig,
     paths: SitePaths,
@@ -131,16 +201,30 @@ def save_band_ratio_figure(
     carbonate: np.ndarray,
     mafic: np.ndarray,
     hillshade: np.ndarray | None = None,
+    global_limits: dict[str, tuple[float, float]] | None = None,
 ) -> None:
+    """Save Figure 01 — TIR band ratio panels.
+
+    Parameters
+    ----------
+    global_limits:
+        Optional dict with keys ``"silica"``, ``"carbonate"``, ``"mafic"``
+        mapping to ``(vmin, vmax)`` tuples.  When supplied the same colorbar
+        range is used for every site, making cross-site comparisons valid.
+        When *None* (default) per-site 2nd–98th percentile limits are used.
+    """
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     ratios = [
-        (silica, "Silica/quartz (B13/B14)", "magma"),
-        (carbonate, "Carbonate/dolomite (B13/B12)", "YlOrBr"),
-        (mafic, "Mafic minerals (B12/B13)", "PuBu"),
+        (silica, "Silica/quartz (B13/B14)", "magma", "silica"),
+        (carbonate, "Carbonate/dolomite (B13/B12)", "YlOrBr", "carbonate"),
+        (mafic, "Mafic minerals (B12/B13)", "PuBu", "mafic"),
     ]
-    for ax, (ratio, title, cmap) in zip(axes, ratios):
-        vmin, vmax = _percentile_limits(ratio, 2, 98)
+    for ax, (ratio, title, cmap, key) in zip(axes, ratios):
+        if global_limits is not None and key in global_limits:
+            vmin, vmax = global_limits[key]
+        else:
+            vmin, vmax = _percentile_limits(ratio, 2, 98)
         im = ax.imshow(
             ratio,
             cmap=cmap,
@@ -152,8 +236,9 @@ def save_band_ratio_figure(
         ax.set_title(title)
         ax.axis("off")
         plt.colorbar(im, ax=ax, shrink=0.8)
-    plt.suptitle(f"ASTER TIR Band Ratios — {site.name}", fontsize=13)
+    plt.suptitle(f"ASTER TIR Band Ratios — {site.name}", fontsize=11, y=1.02)
     plt.tight_layout()
+    plt.subplots_adjust(top=0.88)
     plt.savefig(
         paths.figures_dir / "01_tir_band_ratios.png",
         dpi=150,
@@ -254,9 +339,13 @@ def save_deposit_overlay_figure(
     paths: SitePaths,
     zones: gpd.GeoDataFrame,
     deposits: gpd.GeoDataFrame,
+    repo_root: Path,
 ) -> None:
     """Figure 03 — spatial map of strong anomaly zones with MRDS deposit overlay."""
     import matplotlib.lines as mlines
+    import matplotlib.ticker
+
+    from critical_minerals_aster.structure import load_structure_layers
 
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, ax = plt.subplots(figsize=(10, 10))
@@ -269,17 +358,38 @@ def save_deposit_overlay_figure(
         if len(large):
             large.plot(ax=ax, color="#4a0000", alpha=0.85, linewidth=0)
 
+    # Draw fault / structure lines before deposit points so they don't obscure stars/dots.
+    has_structure = False
+    if site.structure_layers:
+        target_crs = zones.crs if len(zones) else deposits.crs
+        structs = load_structure_layers(site, repo_root, target_crs)
+        if not structs.empty:
+            structs.plot(ax=ax, color="#555555", linewidth=0.6, alpha=0.5, zorder=2)
+            has_structure = True
+
     outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
     inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
 
+    # Dense-deposit handling: reduce marker size/alpha for large sets; cap display at 500.
+    _n_outside = len(outside)
+    _outside_capped_note = ""
+    if _n_outside > 500:
+        outside = outside.iloc[:500]
+        _outside_capped_note = f" (showing 500 of {_n_outside})"
+    _outside_ms = 8 if _n_outside > 100 else 20
+    _outside_alpha = 0.5 if _n_outside > 100 else 0.8
+
     if len(outside):
-        outside.plot(ax=ax, color="steelblue", markersize=20, alpha=0.8, zorder=3)
+        outside.plot(ax=ax, color="steelblue", markersize=_outside_ms, alpha=_outside_alpha, zorder=3)
     if len(inside):
         inside.plot(ax=ax, color="gold", markersize=70, marker="*", zorder=4,
                     edgecolor="black", linewidth=0.5)
 
     # Add terrain basemap for structural geology context (semi-transparent).
+    # Hard 30-second wall-clock limit per provider — tile servers can hang
+    # indefinitely when rate-limited, and zoom=11 may require many tiles.
     try:
+        import concurrent.futures
         import contextily as cx
 
         crs_str = zones.crs.to_string() if len(zones) else deposits.crs.to_string()
@@ -289,27 +399,79 @@ def save_deposit_overlay_figure(
             cx.providers.CartoDB.Positron,  # type: ignore[attr-defined]
         ]
         for provider in providers_to_try:
+            # Use shutdown(wait=False) so the timeout actually fires: the
+            # context-manager form calls shutdown(wait=True) on __exit__,
+            # which blocks indefinitely even after _fut.result() times out.
+            _pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+            _fut = _pool.submit(
+                cx.add_basemap, ax, crs=crs_str, source=provider, alpha=0.35, zoom=11
+            )
             try:
-                cx.add_basemap(ax, crs=crs_str, source=provider, alpha=0.35, zoom=11)
+                _fut.result(timeout=30)
+                _pool.shutdown(wait=False)
                 break
             except Exception:
+                _pool.shutdown(wait=False)
                 continue
     except Exception:
         pass  # basemap is fully optional
+
+    # Format UTM tick labels as km integers for readability.
+    km_fmt = matplotlib.ticker.FuncFormatter(lambda x, _: f"{x / 1000:.0f}")
+    ax.xaxis.set_major_formatter(km_fmt)
+    ax.yaxis.set_major_formatter(km_fmt)
+
+    _crs_label = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
+    _epsg = _crs_label.to_epsg() if _crs_label is not None else None
+    _epsg_suffix = f" (EPSG:{_epsg})" if _epsg else ""
+    ax.set_xlabel(f"Easting (km{_epsg_suffix})")
+    ax.set_ylabel("Northing (km)")
 
     legend_elements = [
         mlines.Line2D([], [], color="#c0392b", linewidth=6, alpha=0.5, label="Strong anomaly zone (< 10 km²)"),
         mlines.Line2D([], [], color="#4a0000", linewidth=6, alpha=0.9, label="Strong anomaly zone (≥ 10 km²)"),
         mlines.Line2D([], [], marker="o", color="w", markerfacecolor="steelblue",
-                      markersize=9, label=f"MRDS deposit (outside zone, n={len(outside)})"),
+                      markersize=9, label=f"MRDS deposit (outside zone, n={_n_outside}{_outside_capped_note})"),
         mlines.Line2D([], [], marker="*", color="w", markerfacecolor="gold",
                       markeredgecolor="black", markersize=13,
                       label=f"MRDS deposit (inside zone, n={len(inside)})"),
     ]
+    if has_structure:
+        legend_elements.append(
+            mlines.Line2D([], [], color="#555555", linewidth=1.5, alpha=0.6, label="Fault / structure")
+        )
     ax.legend(handles=legend_elements, loc="upper right", framealpha=0.95, fontsize=9)
     ax.set_title(f"Strong alteration zones vs MRDS deposits\n{site.name}", fontsize=13)
-    ax.set_xlabel(f"Easting (m, {zones.crs})" if len(zones) else "Easting (m)")
-    ax.set_ylabel("Northing (m)")
+
+    # Scale bar using matplotlib-scalebar.
+    try:
+        from matplotlib_scalebar.scalebar import ScaleBar
+        ax.add_artist(ScaleBar(1, "m", length_fraction=0.2, location="lower left",
+                               box_alpha=0.7, font_properties={"size": 9}))
+    except Exception:
+        # Fallback: manual 10-km line scale bar in the lower-left corner.
+        xlim = ax.get_xlim()
+        ylim = ax.get_ylim()
+        bar_len_m = 10_000
+        bar_x0 = xlim[0] + (xlim[1] - xlim[0]) * 0.05
+        bar_y = ylim[0] + (ylim[1] - ylim[0]) * 0.04
+        ax.plot([bar_x0, bar_x0 + bar_len_m], [bar_y, bar_y],
+                color="black", linewidth=3, solid_capstyle="butt", zorder=10)
+        ax.text(bar_x0 + bar_len_m / 2, bar_y + (ylim[1] - ylim[0]) * 0.015,
+                "10 km", ha="center", va="bottom", fontsize=8, zorder=10)
+
+    # North arrow — simple text annotation in the upper-left corner.
+    ax.annotate(
+        "N\n↑",
+        xy=(0.04, 0.96),
+        xycoords="axes fraction",
+        ha="center",
+        va="top",
+        fontsize=13,
+        fontweight="bold",
+        bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.8, edgecolor="gray"),
+    )
+
     plt.tight_layout()
     plt.savefig(paths.figures_dir / "03_deposit_overlay.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
@@ -448,6 +610,144 @@ def download_aster(
     return granule_id
 
 
+def _feathered_mosaic(corrected_paths: list[Path], out_path: Path) -> None:
+    """Merge granules with distance-weighted (feathered) blending at overlaps.
+
+    For each granule:
+    1. Reproject to a common grid (union extent at the reference resolution).
+    2. Compute a per-pixel distance-to-nearest-nodata weight via EDT.
+    3. Normalize each granule's weights to [0, 1] so mosaic scale is preserved.
+    4. Blend: output = sum(w_i * v_i) / sum(w_i) at every pixel.
+
+    All corrected granule files are expected to use 0 as the nodata sentinel.
+    """
+    import rasterio
+    from rasterio.enums import Resampling
+    from rasterio.transform import from_bounds
+    from rasterio.warp import reproject as warp_reproject
+    from rasterio.warp import transform_bounds
+    from scipy.ndimage import distance_transform_edt
+
+    datasets = [rasterio.open(p) for p in corrected_paths]
+    try:
+        ref_ds = datasets[0]
+        dst_crs = ref_ds.crs
+        res_x = abs(ref_ds.transform.a)   # pixel width in CRS units
+        res_y = abs(ref_ds.transform.e)   # pixel height in CRS units
+
+        # Build union extent in the reference CRS.
+        all_bounds = [
+            transform_bounds(ds.crs, dst_crs, *ds.bounds) for ds in datasets
+        ]
+        left   = min(b[0] for b in all_bounds)
+        bottom = min(b[1] for b in all_bounds)
+        right  = max(b[2] for b in all_bounds)
+        top    = max(b[3] for b in all_bounds)
+
+        out_width  = max(1, int(round((right - left) / res_x)))
+        out_height = max(1, int(round((top - bottom) / res_y)))
+        out_transform = from_bounds(left, bottom, right, top, out_width, out_height)
+
+        acc_val = np.zeros((out_height, out_width), dtype=np.float64)
+        acc_w   = np.zeros((out_height, out_width), dtype=np.float64)
+
+        for ds in datasets:
+            src_arr = ds.read(1).astype(np.float32)
+            # Build a float32 valid mask (1.0 = valid pixel).
+            valid_src = ((src_arr > 0) & np.isfinite(src_arr)).astype(np.float32)
+            # Zero out invalid pixels so bilinear resampling stays clean.
+            src_arr[valid_src < 0.5] = 0.0
+
+            # Reproject data to the common grid.
+            dst_val = np.zeros((out_height, out_width), dtype=np.float32)
+            warp_reproject(
+                source=src_arr,
+                destination=dst_val,
+                src_transform=ds.transform,
+                src_crs=ds.crs,
+                dst_transform=out_transform,
+                dst_crs=dst_crs,
+                resampling=Resampling.bilinear,
+                src_nodata=0.0,
+                dst_nodata=0.0,
+            )
+
+            # Reproject valid mask (nearest-neighbor to keep it binary).
+            dst_valid_f = np.zeros((out_height, out_width), dtype=np.float32)
+            warp_reproject(
+                source=valid_src,
+                destination=dst_valid_f,
+                src_transform=ds.transform,
+                src_crs=ds.crs,
+                dst_transform=out_transform,
+                dst_crs=dst_crs,
+                resampling=Resampling.nearest,
+                src_nodata=0.0,
+                dst_nodata=0.0,
+            )
+            dst_valid = dst_valid_f > 0.5
+
+            # EDT: distance (pixels) from each valid pixel to nearest nodata.
+            edt = distance_transform_edt(dst_valid)
+            max_dist = float(edt.max())
+            weight = (edt / max_dist) if max_dist > 0 else dst_valid.astype(np.float64)
+
+            valid_and_finite = dst_valid & (np.abs(dst_val) > 0)
+            acc_val[valid_and_finite] += weight[valid_and_finite] * dst_val[valid_and_finite]
+            acc_w[valid_and_finite]   += weight[valid_and_finite]
+
+        # Weighted average; pixels never covered by any granule stay 0 (nodata).
+        out_arr = np.zeros((out_height, out_width), dtype=np.float32)
+        nonzero_w = acc_w > 0
+        out_arr[nonzero_w] = (acc_val[nonzero_w] / acc_w[nonzero_w]).astype(np.float32)
+
+        profile = datasets[0].profile.copy()
+        profile.update(
+            height=out_height,
+            width=out_width,
+            transform=out_transform,
+            crs=dst_crs,
+            dtype=rasterio.float32,
+            count=1,
+            nodata=0.0,
+        )
+        with rasterio.open(out_path, "w", **profile) as dst:
+            dst.write(out_arr, 1)
+    finally:
+        for ds in datasets:
+            ds.close()
+
+
+def _normalise_to_reference(
+    src: np.ndarray,
+    ref: np.ndarray,
+    min_pixels: int = 100,
+) -> np.ndarray:
+    """Linearly rescale *src* so its mean/std match *ref* over valid pixels.
+
+    "Valid" means finite and > 0 (ASTER uses 0 as nodata).  If either array
+    has fewer than *min_pixels* valid samples the src is returned unchanged so
+    the caller can fall back gracefully.  The correction is multiplicative-
+    additive (mean + std match), which removes both additive path-radiance
+    offsets and multiplicative gain differences between acquisitions.
+    """
+    src_valid = np.isfinite(src) & (src > 0)
+    ref_valid = np.isfinite(ref) & (ref > 0)
+    sv = src[src_valid]
+    rv = ref[ref_valid]
+    if sv.size < min_pixels or rv.size < min_pixels:
+        return src
+    s_mu, s_sd = float(sv.mean()), float(sv.std())
+    r_mu, r_sd = float(rv.mean()), float(rv.std())
+    if s_sd < 1e-6:
+        return src
+    out = src.astype(np.float64)
+    out[src_valid] = (src[src_valid] - s_mu) / s_sd * r_sd + r_mu
+    # Clip to [0, ∞) — negative radiance is non-physical.
+    out = np.clip(out, 0, None)
+    return out.astype(src.dtype)
+
+
 def download_and_mosaic_aster(
     site: SiteConfig,
     paths: SitePaths,
@@ -455,27 +755,26 @@ def download_and_mosaic_aster(
 ) -> str:
     """Download all bbox-covering ASTER granules, merge per-band, return mosaic granule_id.
 
-    If ``site.granule_id`` is pinned, falls back to :func:`download_aster` so
-    single-granule overrides are honoured without change.  Otherwise, every
-    granule that covers >5 % of the site bbox (and has ≥3 TIR bands) is
-    downloaded to a temporary directory, then merged band-by-band with
-    ``rasterio.merge`` and written as ``{site_id}_mosaic_TIR_B{n}.tif``.
+    Always searches the full archive for every granule covering >5% of the site
+    bbox (and has ≥3 TIR bands), regardless of whether ``site.granule_id`` is
+    pinned.  Falls back to single-granule download only when no granule meets
+    the coverage threshold.
+
+    Before merging, each secondary granule is linearly normalised to the
+    reference (first) granule's mean/std per band, eliminating the seam
+    artefacts that arise from different acquisition dates, solar angles, and
+    atmospheric conditions.
     """
     import shutil
     import tempfile
 
     import earthaccess
     import rasterio
-    from rasterio.merge import merge as rasterio_merge
 
     from critical_minerals_aster.spectral import score_granule
 
     if interactive_login:
         earthaccess.login(strategy="netrc")
-
-    # Honour a pinned granule_id — single-granule path.
-    if site.granule_id:
-        return download_aster(site, paths, interactive_login=False)
 
     bbox = search_bbox(site)
     results = earthaccess.search_data(
@@ -489,7 +788,12 @@ def download_and_mosaic_aster(
     for g in results:
         try:
             coverage, _, band_count = score_granule(g, site.bbox_wgs84)
-            if coverage > 0.05 and band_count >= 3:
+            # Skip bundles larger than the per-site cap (default 20 MB keeps
+            # TIR-only extracts; sites where only full VNIR+SWIR+TIR bundles
+            # exist set a higher cap in their YAML).
+            # 30% coverage threshold avoids edge-clipping granules that would
+            # leave large nodata gaps in the merged output.
+            if coverage > 0.30 and band_count >= 3 and g.size() < site.max_bundle_mb:
                 covering.append(g)
         except Exception:
             continue
@@ -510,7 +814,7 @@ def download_and_mosaic_aster(
         mosaic_id = f"{site.id}_mosaic"
         for band_num in (10, 11, 12, 13, 14):
             pattern = f"*_TIR_B{band_num}.tif"
-            band_files = list(Path(tmpdir).glob(pattern))
+            band_files = sorted(Path(tmpdir).glob(pattern))
             if not band_files:
                 continue
             if len(band_files) == 1:
@@ -518,25 +822,35 @@ def download_and_mosaic_aster(
                     band_files[0],
                     paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif",
                 )
-            else:
-                datasets = [rasterio.open(f) for f in band_files]
-                try:
-                    merged, merged_transform = rasterio_merge(datasets)
-                    profile = datasets[0].profile.copy()
-                    profile.update(
-                        {
-                            "height": merged.shape[1],
-                            "width": merged.shape[2],
-                            "transform": merged_transform,
-                            "count": 1,
-                        }
-                    )
-                    out_path = paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif"
-                    with rasterio.open(out_path, "w", **profile) as dst:
-                        dst.write(merged[0], 1)
-                finally:
-                    for ds in datasets:
-                        ds.close()
+                continue
+
+            # Read the reference (first) granule and normalise each secondary
+            # granule to match its mean/std before merging.  Writing corrected
+            # arrays to temporary GeoTIFFs lets _feathered_mosaic reproject and
+            # distance-weight-blend them without modifying the originals.
+            with rasterio.open(band_files[0]) as ds0:
+                ref_arr = ds0.read(1).astype(np.float64)
+                ref_profile = ds0.profile.copy()
+            ref_arr[ref_arr == 0] = np.nan
+
+            corrected_paths: list[Path] = [band_files[0]]
+            for idx, bf in enumerate(band_files[1:], start=1):
+                with rasterio.open(bf) as ds:
+                    src_arr = ds.read(1).astype(np.float64)
+                    src_profile = ds.profile.copy()
+                src_arr[src_arr == 0] = np.nan
+                normed = _normalise_to_reference(src_arr, ref_arr)
+                # Write corrected array back to a temp GeoTIFF (restoring 0 nodata).
+                tmp_path = Path(tmpdir) / f"normed_{idx}_B{band_num}.tif"
+                write_arr = normed.copy()
+                write_arr[~np.isfinite(write_arr)] = 0
+                src_profile.update(dtype=rasterio.float32)
+                with rasterio.open(tmp_path, "w", **src_profile) as dst:
+                    dst.write(write_arr.astype(np.float32), 1)
+                corrected_paths.append(tmp_path)
+
+            out_path = paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif"
+            _feathered_mosaic(corrected_paths, out_path)
 
     return mosaic_id
 
@@ -547,8 +861,17 @@ def run_site(
     *,
     download: bool = False,
     skip_figures: bool = False,
+    global_limits: dict[str, tuple[float, float]] | None = None,
 ) -> pd.DataFrame:
-    """Run classification, write vectors/summary/provenance; optional EarthData download."""
+    """Run classification, write vectors/summary/provenance; optional EarthData download.
+
+    Parameters
+    ----------
+    global_limits:
+        Cross-site colorbar limits for Figure 01.  Pass the output of
+        :func:`compute_global_limits` to make band-ratio colorbars
+        comparable across sites.  When *None* per-site percentiles are used.
+    """
     paths = site_paths_for(site, repo_root)
     if download:
         granule_id = download_aster(site, paths)
@@ -587,19 +910,13 @@ def run_site(
 
     if not skip_figures:
         save_composite_figure(site, paths, silica, carbonate, mafic)
-        save_band_ratio_figure(site, paths, silica, carbonate, mafic, hillshade=hillshade)
+        save_band_ratio_figure(
+            site, paths, silica, carbonate, mafic,
+            hillshade=hillshade, global_limits=global_limits,
+        )
         save_classification_figure(
             site, paths, silica_cls, carbonate_cls, mafic_cls, combined, hillshade=hillshade
         )
-
-    # Use raster_bbox (actual TIR coverage) instead of site.bbox_wgs84 so
-    # MRDS deposits that lie outside the ASTER scene footprint are excluded.
-    summary = compute_site_summary(site, paths, zones, granule_id, mrds_bbox=raster_bbox)
-
-    provenance_extra: dict[str, Any] = {
-        "n_zones": len(zones),
-        "raster_bbox_wgs84": list(raster_bbox),
-    }
 
     # Always compute MRDS join so figures 03+04 have deposit data.
     # Uses raster_bbox so only deposits within the TIR coverage area are shown.
@@ -619,16 +936,30 @@ def run_site(
     except FileNotFoundError:
         pass  # mrds.csv not downloaded yet — skip deposit figures
 
-    if not skip_figures and _deposits_gdf is not None:
-        save_deposit_overlay_figure(site, paths, zones, _deposits_gdf)
-        save_commodity_correlation_figure(site, paths, _deposits_gdf)
-
+    # Compute structure metrics before summary so they appear in the summary CSV.
+    n_on_structure: int | None = None
+    mean_nearest_m: float | None = None
+    provenance_extra: dict[str, Any] = {
+        "n_zones": len(zones),
+        "raster_bbox_wgs84": list(raster_bbox),
+    }
     if site.structure_layers and _deposits_gdf is not None:
         annotated = annotate_deposits_with_structure(_deposits_gdf, site, paths)
-        provenance_extra["n_deposits_on_structure"] = int(annotated["on_structure"].sum())
-        provenance_extra["mean_nearest_structure_m"] = float(
-            annotated["nearest_structure_m"].mean()
-        )
+        n_on_structure = int(annotated["on_structure"].sum())
+        mean_nearest_m = float(annotated["nearest_structure_m"].mean())
+        provenance_extra["n_deposits_on_structure"] = n_on_structure
+        provenance_extra["mean_nearest_structure_m"] = mean_nearest_m
+
+    # Use raster_bbox (actual TIR coverage) instead of site.bbox_wgs84 so
+    # MRDS deposits that lie outside the ASTER scene footprint are excluded.
+    summary = compute_site_summary(
+        site, paths, zones, granule_id, mrds_bbox=raster_bbox,
+        n_on_structure=n_on_structure, mean_nearest_m=mean_nearest_m,
+    )
+
+    if not skip_figures and _deposits_gdf is not None:
+        save_deposit_overlay_figure(site, paths, zones, _deposits_gdf, repo_root)
+        save_commodity_correlation_figure(site, paths, _deposits_gdf)
 
     write_site_summary(summary, paths.site_summary_csv)
     write_provenance(paths, granule_id, provenance_extra)
