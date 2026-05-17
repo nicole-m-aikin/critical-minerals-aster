@@ -31,9 +31,23 @@ from critical_minerals_aster.spectral import (
     raster_bbox_wgs84,
     select_granule,
 )
-from critical_minerals_aster.structure import annotate_deposits_with_structure
+from critical_minerals_aster.structure import (
+    annotate_deposits_with_structure,
+    load_structure_layers,
+    structure_buffer_union,
+)
 
 _GRANULE_ID_RE = re.compile(r"(AST_L1T_\d+_\d+)")
+
+
+def _bbox_annotation(site: "SiteConfig") -> str:
+    """Return a compact geographic extent string for figure annotations."""
+    west, south, east, north = site.bbox_wgs84
+    ew_dir = "W" if west < 0 else "E"
+    return (
+        f"{south:.2f}°–{north:.2f}°N · "
+        f"{abs(west):.2f}°–{abs(east):.2f}°{ew_dir}"
+    )
 
 
 def resolve_granule_id(site: SiteConfig, paths: SitePaths) -> str:
@@ -232,13 +246,19 @@ def save_band_ratio_figure(
             vmax=vmax,
         )
         if hillshade is not None:
-            ax.imshow(hillshade, cmap="gray", alpha=0.25, vmin=0, vmax=255)
+            _hs_cmap = plt.cm.gray.copy()
+            _hs_cmap.set_bad(alpha=0.0)
+            ax.imshow(hillshade, cmap=_hs_cmap, alpha=0.25, vmin=0, vmax=1)
         ax.set_title(title)
         ax.axis("off")
         plt.colorbar(im, ax=ax, shrink=0.8)
     plt.suptitle(f"ASTER TIR Band Ratios — {site.name}", fontsize=11, y=1.02)
     plt.tight_layout()
     plt.subplots_adjust(top=0.88)
+    fig.text(
+        0.5, 0.01, _bbox_annotation(site),
+        ha="center", fontsize=7.5, color="#555555",
+    )
     plt.savefig(
         paths.figures_dir / "01_tir_band_ratios.png",
         dpi=150,
@@ -299,6 +319,10 @@ def save_composite_figure(
         fontsize=12,
     )
     ax.axis("off")
+    fig.text(
+        0.5, 0.01, _bbox_annotation(site),
+        ha="center", fontsize=7.5, color="#555555",
+    )
     plt.tight_layout()
     plt.savefig(
         paths.figures_dir / "00_composite_rgb.png",
@@ -324,12 +348,18 @@ def save_classification_figure(
     for ax, arr, title in zip(axes, arrays, titles):
         im = ax.imshow(arr, cmap="YlOrRd" if title != "Combined score" else "viridis")
         if hillshade is not None:
-            ax.imshow(hillshade, cmap="gray", alpha=0.25, vmin=0, vmax=255)
+            _hs_cmap = plt.cm.gray.copy()
+            _hs_cmap.set_bad(alpha=0.0)
+            ax.imshow(hillshade, cmap=_hs_cmap, alpha=0.25, vmin=0, vmax=1)
         ax.set_title(title)
         ax.axis("off")
         plt.colorbar(im, ax=ax, shrink=0.8)
     plt.suptitle(f"Alteration classification — {site.name}", fontsize=13)
     plt.tight_layout()
+    fig.text(
+        0.5, 0.01, _bbox_annotation(site),
+        ha="center", fontsize=7.5, color="#555555",
+    )
     plt.savefig(paths.figures_dir / "02_classification.png", dpi=150, bbox_inches="tight")
     plt.close()
 
@@ -340,12 +370,18 @@ def save_deposit_overlay_figure(
     zones: gpd.GeoDataFrame,
     deposits: gpd.GeoDataFrame,
     repo_root: Path,
+    hillshade: np.ndarray | None = None,
+    raster_transform: "rasterio.Affine | None" = None,
+    raster_shape: "tuple[int, int] | None" = None,
+    structs: "gpd.GeoDataFrame | None" = None,
+    n_on_structure: "int | None" = None,
+    n_total_deposits: "int | None" = None,
+    hs_transform: "rasterio.Affine | None" = None,
+    hs_shape: "tuple[int, int] | None" = None,
 ) -> None:
     """Figure 03 — spatial map of strong anomaly zones with MRDS deposit overlay."""
     import matplotlib.lines as mlines
     import matplotlib.ticker
-
-    from critical_minerals_aster.structure import load_structure_layers
 
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, ax = plt.subplots(figsize=(10, 10))
@@ -354,18 +390,25 @@ def save_deposit_overlay_figure(
         small = zones[zones["area_km2"] < 10]
         large = zones[zones["area_km2"] >= 10]
         if len(small):
-            small.plot(ax=ax, color="#c0392b", alpha=0.35, linewidth=0)
+            small.plot(ax=ax, color="#c0392b", alpha=0.55, linewidth=0)
         if len(large):
-            large.plot(ax=ax, color="#4a0000", alpha=0.85, linewidth=0)
+            large.plot(ax=ax, color="#4a0000", alpha=0.90, linewidth=0)
 
-    # Draw fault / structure lines before deposit points so they don't obscure stars/dots.
+    # Draw structural corridor buffer fill before deposit points.
     has_structure = False
+    _buffer_m: float = 500.0
     if site.structure_layers:
-        target_crs = zones.crs if len(zones) else deposits.crs
-        structs = load_structure_layers(site, repo_root, target_crs)
-        if not structs.empty:
-            structs.plot(ax=ax, color="#555555", linewidth=0.6, alpha=0.5, zorder=2)
-            has_structure = True
+        if structs is None:
+            target_crs = zones.crs if len(zones) else deposits.crs
+            structs = load_structure_layers(site, repo_root, target_crs)
+        _buffer_m = site.structure_layers[0].buffer_m
+        if structs is not None and not structs.empty:
+            union_geom = structure_buffer_union(structs, _buffer_m)
+            if union_geom is not None:
+                gpd.GeoSeries([union_geom], crs=structs.crs).plot(
+                    ax=ax, color="#e67e22", alpha=0.25, linewidth=0, zorder=1
+                )
+                has_structure = True
 
     outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
     inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
@@ -385,36 +428,52 @@ def save_deposit_overlay_figure(
         inside.plot(ax=ax, color="gold", markersize=70, marker="*", zorder=4,
                     edgecolor="black", linewidth=0.5)
 
-    # Add terrain basemap for structural geology context (semi-transparent).
-    # Hard 30-second wall-clock limit per provider — tile servers can hang
-    # indefinitely when rate-limited, and zoom=11 may require many tiles.
-    try:
-        import concurrent.futures
-        import contextily as cx
+    # Compute view bounds from the hillshade grid (covers full site.bbox_wgs84)
+    # so axes limits always match the configured site area.  Fall back to the
+    # ASTER raster extent, then zone bounds if neither is available.
+    _limit_transform = hs_transform if hs_transform is not None else raster_transform
+    _limit_shape = hs_shape if hs_shape is not None else raster_shape
+    if _limit_transform is not None and _limit_shape is not None:
+        _r = _limit_transform
+        _rc, _cc = _limit_shape
+        _rx0, _rx1 = _r.c, _r.c + _r.a * _cc
+        _ry0, _ry1 = _r.f + _r.e * _rc, _r.f
+        _mx = (_rx1 - _rx0) * 0.01
+        _my = (_ry1 - _ry0) * 0.01
+        _xlim: tuple[float, float] = (_rx0 - _mx, _rx1 + _mx)
+        _ylim: tuple[float, float] = (_ry0 - _my, _ry1 + _my)
+    elif len(zones) > 0:
+        _zb = zones.total_bounds  # xmin, ymin, xmax, ymax
+        _zm = max(_zb[2] - _zb[0], _zb[3] - _zb[1]) * 0.02
+        _xlim = (_zb[0] - _zm, _zb[2] + _zm)
+        _ylim = (_zb[1] - _zm, _zb[3] + _zm)
+    else:
+        _xlim = ax.get_xlim()
+        _ylim = ax.get_ylim()
 
-        crs_str = zones.crs.to_string() if len(zones) else deposits.crs.to_string()
-        providers_to_try = [
-            cx.providers.OpenTopoMap,
-            cx.providers.Stadia.StamenTerrain,  # type: ignore[attr-defined]
-            cx.providers.CartoDB.Positron,  # type: ignore[attr-defined]
-        ]
-        for provider in providers_to_try:
-            # Use shutdown(wait=False) so the timeout actually fires: the
-            # context-manager form calls shutdown(wait=True) on __exit__,
-            # which blocks indefinitely even after _fut.result() times out.
-            _pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-            _fut = _pool.submit(
-                cx.add_basemap, ax, crs=crs_str, source=provider, alpha=0.35, zoom=11
-            )
-            try:
-                _fut.result(timeout=30)
-                _pool.shutdown(wait=False)
-                break
-            except Exception:
-                _pool.shutdown(wait=False)
-                continue
-    except Exception:
-        pass  # basemap is fully optional
+    # Light neutral background — visible where ASTER doesn't cover the bbox
+    # (swath rotation gaps) and at the axes margin.  #f0f0f0 means even the
+    # darkest hillshade shadow (alpha-blended over this) stays above medium gray.
+    ax.set_facecolor("#f0f0f0")
+
+    # Hillshade now covers site.bbox_wgs84 (full configured site area).
+    # Use hs_transform/hs_shape for extent; fall back to raster grid if absent.
+    _hs_t = hs_transform if hs_transform is not None else raster_transform
+    _hs_s = hs_shape if hs_shape is not None else raster_shape
+    if hillshade is not None and _hs_t is not None and _hs_s is not None:
+        rows, cols = _hs_s
+        t = _hs_t
+        _hs_extent = (t.c, t.c + t.a * cols, t.f + t.e * rows, t.f)
+        _hs_cmap = plt.cm.gray.copy()
+        _hs_cmap.set_bad(alpha=0.0)  # NaN nodata pixels → show background color
+        ax.imshow(
+            hillshade, cmap=_hs_cmap, alpha=0.35, vmin=0, vmax=1,
+            extent=_hs_extent, origin="upper", zorder=0,
+        )
+
+    # Restore limits — hillshade imshow may have expanded the view to its own extent.
+    ax.set_xlim(_xlim)
+    ax.set_ylim(_ylim)
 
     # Format UTM tick labels as km integers for readability.
     km_fmt = matplotlib.ticker.FuncFormatter(lambda x, _: f"{x / 1000:.0f}")
@@ -438,10 +497,32 @@ def save_deposit_overlay_figure(
     ]
     if has_structure:
         legend_elements.append(
-            mlines.Line2D([], [], color="#555555", linewidth=1.5, alpha=0.6, label="Fault / structure")
+            mlines.Line2D(
+                [], [], color="#e67e22", linewidth=6, alpha=0.4,
+                label=f"Structural corridor (±{_buffer_m:.0f} m)",
+            )
         )
     ax.legend(handles=legend_elements, loc="upper right", framealpha=0.95, fontsize=9)
-    ax.set_title(f"Strong alteration zones vs MRDS deposits\n{site.name}", fontsize=13)
+
+    # Structure fraction annotation — placed above the scale bar to avoid overlap.
+    # y=0.09 clears the matplotlib-scalebar "lower left" widget (~0.02–0.07 height).
+    if has_structure and n_on_structure is not None and n_total_deposits is not None:
+        _pct = (n_on_structure / n_total_deposits * 100) if n_total_deposits > 0 else 0.0
+        ax.text(
+            0.02, 0.09,
+            f"{n_on_structure}/{n_total_deposits} deposits ({_pct:.0f}%) within {_buffer_m:.0f} m of structure",
+            transform=ax.transAxes,
+            fontsize=8.5,
+            va="bottom",
+            ha="left",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.85, edgecolor="none"),
+            zorder=10,
+        )
+
+    ax.set_title(
+        f"Strong alteration zones vs MRDS deposits\n{site.name}\n{_bbox_annotation(site)}",
+        fontsize=12,
+    )
 
     # Scale bar using matplotlib-scalebar.
     try:
@@ -474,6 +555,110 @@ def save_deposit_overlay_figure(
 
     plt.tight_layout()
     plt.savefig(paths.figures_dir / "03_deposit_overlay.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+
+def save_structure_proximity_figure(
+    site: SiteConfig,
+    paths: SitePaths,
+    annotated: gpd.GeoDataFrame,
+) -> None:
+    """Figure 05b — strip chart of deposit-to-structure distances by commodity group.
+
+    One horizontal strip per commodity group.  Each deposit is a point at its
+    ``nearest_structure_m`` value (log x-axis if the range spans > 10×).
+    Points are coloured gold (inside anomaly zone) or steelblue (outside).
+    A vertical dashed line marks the ``buffer_m`` threshold from the first
+    structure layer.
+
+    Only written when the site has structure data and ``nearest_structure_m``
+    is present in *annotated*.
+    """
+    if "nearest_structure_m" not in annotated.columns:
+        return
+    if "commodity_group" not in annotated.columns:
+        return
+    if annotated["nearest_structure_m"].isna().all():
+        return
+
+    buffer_m = site.structure_layers[0].buffer_m if site.structure_layers else 500.0
+
+    groups = (
+        annotated.groupby("commodity_group")["nearest_structure_m"]
+        .median()
+        .sort_values()
+        .index.tolist()
+    )
+    # Drop groups with no structure data at all.
+    groups = [g for g in groups if not annotated.loc[annotated["commodity_group"] == g, "nearest_structure_m"].isna().all()]
+    if not groups:
+        return
+
+    n_groups = len(groups)
+    fig, ax = plt.subplots(figsize=(10, max(3, n_groups * 0.65 + 1.5)))
+
+    # Use log scale when range spans more than 10× — typical for fault-distance data.
+    valid = annotated["nearest_structure_m"].dropna()
+    use_log = (valid.max() / max(valid.min(), 1)) > 10
+
+    # Jitter positions on y so overlapping points are readable.
+    rng = np.random.default_rng(42)
+    y_positions = {grp: i for i, grp in enumerate(groups)}
+
+    for grp in groups:
+        sub = annotated[annotated["commodity_group"] == grp].copy()
+        sub = sub.dropna(subset=["nearest_structure_m"])
+        if sub.empty:
+            continue
+        y_base = y_positions[grp]
+        jitter = rng.uniform(-0.25, 0.25, size=len(sub))
+
+        inside_mask = sub.get("inside_zone", pd.Series(False, index=sub.index)).fillna(False)
+        ax.scatter(
+            sub.loc[~inside_mask, "nearest_structure_m"],
+            y_base + jitter[~inside_mask.values],
+            color="steelblue", alpha=0.7, s=18, linewidths=0, zorder=3,
+        )
+        ax.scatter(
+            sub.loc[inside_mask, "nearest_structure_m"],
+            y_base + jitter[inside_mask.values],
+            color="gold", alpha=0.9, s=30, marker="*",
+            edgecolors="black", linewidths=0.4, zorder=4,
+        )
+
+    ax.axvline(buffer_m, color="#e67e22", linestyle="--", linewidth=1.5,
+               alpha=0.8, label=f"Buffer threshold ({buffer_m:.0f} m)", zorder=2)
+
+    ax.set_yticks(range(n_groups))
+    ax.set_yticklabels(groups, fontsize=9)
+    ax.set_ylim(-0.6, n_groups - 0.4)
+
+    if use_log:
+        ax.set_xscale("log")
+        ax.set_xlabel("Distance to nearest structure (m, log scale)", fontsize=10)
+    else:
+        ax.set_xlabel("Distance to nearest structure (m)", fontsize=10)
+
+    import matplotlib.lines as mlines
+    legend_elements = [
+        mlines.Line2D([], [], marker="o", color="w", markerfacecolor="steelblue",
+                      markersize=7, label="Outside anomaly zone"),
+        mlines.Line2D([], [], marker="*", color="w", markerfacecolor="gold",
+                      markeredgecolor="black", markersize=10, label="Inside anomaly zone"),
+        mlines.Line2D([], [], color="#e67e22", linestyle="--", linewidth=1.5,
+                      label=f"Buffer threshold ({buffer_m:.0f} m)"),
+    ]
+    ax.legend(handles=legend_elements, loc="upper right", fontsize=8.5, framealpha=0.9)
+    ax.grid(axis="x", alpha=0.3, zorder=0)
+
+    ax.set_title(
+        f"Structural proximity by commodity group\n{site.name}", fontsize=12
+    )
+    plt.tight_layout()
+
+    paths.figures_dir.mkdir(parents=True, exist_ok=True)
+    out = paths.figures_dir / "05_structure_proximity.png"
+    plt.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -855,6 +1040,135 @@ def download_and_mosaic_aster(
     return mosaic_id
 
 
+def auto_fetch_structure(
+    site: SiteConfig,
+    repo_root: Path,
+    target_crs,
+    *,
+    buffer_m: float = 500.0,
+    timeout: int = 30,
+) -> "gpd.GeoDataFrame | None":
+    """Auto-download fault data for a site that has no configured structure layers.
+
+    Query order:
+    1. USGS Quaternary Faults API (earthquake.usgs.gov) — fast, US-wide.
+    2. USGS SGMC FeatureServer (ArcGIS REST) — all geological ages, all 48 states.
+
+    Result is cached to ``data/structures/{site_id}_faults_auto.geojson`` so
+    subsequent runs skip the network call.  Returns a GeoDataFrame in
+    *target_crs* suitable for direct use as a structure layer, or ``None`` when
+    both sources return no features.
+
+    The function intentionally does **not** mutate the site YAML — callers use
+    the returned GDF directly.  Run ``scripts/download_usgs_faults.py`` or
+    ``scripts/download_sgmc_structures.py`` manually (or via ``run_site`` with
+    ``--download-structures``) to persist the result permanently.
+    """
+    import json
+    import urllib.parse
+    import urllib.request
+
+    out_dir = repo_root / "data" / "structures"
+    out_path = out_dir / f"{site.id}_faults_auto.geojson"
+
+    # ---- Serve from cache when available --------------------------------
+    if out_path.is_file() and out_path.stat().st_size > 100:
+        try:
+            gdf = gpd.read_file(out_path)
+            if not gdf.empty:
+                if gdf.crs is None:
+                    gdf = gdf.set_crs("EPSG:4326")
+                return gdf.to_crs(target_crs)
+        except Exception:
+            pass  # fall through to re-fetch
+
+    west, south, east, north = site.bbox_wgs84
+
+    def _http_get(url: str) -> dict | None:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "critical-minerals-aster/1.0"})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            return None if "error" in data else data
+        except Exception:
+            return None
+
+    # ---- 1. USGS Quaternary Faults API ----------------------------------
+    _QFAULTS_URL = (
+        "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query"
+    )
+    params: dict = {
+        "where": "1=1",
+        "geometry": f"{west},{south},{east},{north}",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": "4326",
+        "outSR": "4326",
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "FAULT_NAME,AGE,SLIP_RATE",
+        "f": "geojson",
+    }
+    data = _http_get(_QFAULTS_URL + "?" + urllib.parse.urlencode(params))
+    features = (data or {}).get("features", [])
+    source_label = "USGS Quaternary Faults"
+
+    # ---- 2. SGMC fallback -----------------------------------------------
+    if not features:
+        _SGMC_URL = (
+            "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services"
+            "/SB_5888bf4fe4b05ccb964bab9d_USGS_SGMC_feature/FeatureServer/1/query"
+        )
+        _FAULT_RULE_IDS = (
+            "11,12,13,21,22,23,24,29,30,31,33,34,35,36,"
+            "42,43,44,45,46,47,48,49,50,51,52,53,54,62,63,64,65,66"
+        )
+        sgmc_params: dict = {
+            "where": f"RuleID IN ({_FAULT_RULE_IDS})",
+            "geometry": f"{west},{south},{east},{north}",
+            "geometryType": "esriGeometryEnvelope",
+            "inSR": "4326",
+            "outSR": "4326",
+            "spatialRel": "esriSpatialRelIntersects",
+            "outFields": "STATE,DESCRIPTION,RuleID",
+            "resultRecordCount": 2000,
+            "f": "geojson",
+        }
+        sgmc_data = _http_get(_SGMC_URL + "?" + urllib.parse.urlencode(sgmc_params))
+        features = (sgmc_data or {}).get("features", [])
+        source_label = "USGS SGMC (all ages)"
+
+    if not features:
+        print(
+            f"  [auto_fetch_structure] No fault features found for {site.id}; "
+            "structure annotation skipped.",
+            file=sys.stderr,
+        )
+        return None
+
+    # Keep only line geometries.
+    line_features = [
+        f for f in features
+        if (f.get("geometry") or {}).get("type", "") in ("LineString", "MultiLineString")
+    ]
+    if not line_features:
+        return None
+
+    # Cache to disk.
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(
+        json.dumps({"type": "FeatureCollection", "features": line_features}, indent=2)
+    )
+    print(
+        f"  [auto_fetch_structure] {site.id}: {len(line_features)} features "
+        f"from {source_label} → {out_path.relative_to(repo_root)}",
+        file=sys.stderr,
+    )
+
+    gdf = gpd.read_file(out_path)
+    if gdf.crs is None:
+        gdf = gdf.set_crs("EPSG:4326")
+    return gdf.to_crs(target_crs)
+
+
 def run_site(
     site: SiteConfig,
     repo_root: Path,
@@ -862,6 +1176,7 @@ def run_site(
     download: bool = False,
     skip_figures: bool = False,
     global_limits: dict[str, tuple[float, float]] | None = None,
+    skip_existing: bool = False,
 ) -> pd.DataFrame:
     """Run classification, write vectors/summary/provenance; optional EarthData download.
 
@@ -873,6 +1188,17 @@ def run_site(
         comparable across sites.  When *None* per-site percentiles are used.
     """
     paths = site_paths_for(site, repo_root)
+
+    if skip_existing:
+        overlay_exists = (paths.figures_dir / "03_deposit_overlay.png").exists()
+        prov_exists = paths.site_provenance_json.exists()
+        if overlay_exists and prov_exists:
+            print(
+                f"Skipping {site.id} (outputs exist, use --force to regenerate)",
+                file=sys.stderr,
+            )
+            return pd.DataFrame()
+
     if download:
         granule_id = download_aster(site, paths)
     else:
@@ -898,13 +1224,17 @@ def run_site(
     # Compute hillshade for structural geology context in figs 01 and 02.
     # Gracefully degrades to None if DEM download/computation fails.
     hillshade: np.ndarray | None = None
+    hs_transform = raster_transform  # fallback: use ASTER grid if terrain fails
+    hs_shape = raster_shape
     if not skip_figures:
         try:
             from critical_minerals_aster.terrain import compute_hillshade_for_site
 
-            hillshade = compute_hillshade_for_site(
+            _hs_result = compute_hillshade_for_site(
                 site, paths, raster_transform, raster_shape, raster_crs
             )
+            if _hs_result is not None:
+                hillshade, hs_transform, hs_shape = _hs_result
         except Exception as exc:
             print(f"  [terrain] Hillshade skipped for {site.id}: {exc}", file=sys.stderr)
 
@@ -936,17 +1266,50 @@ def run_site(
     except FileNotFoundError:
         pass  # mrds.csv not downloaded yet — skip deposit figures
 
+    # Load structure layers once — reused for annotation metrics AND figure 03.
+    # When no layers are configured, attempt a lazy network fetch (USGS Quaternary
+    # Faults → SGMC fallback) and cache the result to data/structures/.
+    _structs_gdf: gpd.GeoDataFrame | None = None
+    _target_crs = zones.crs if len(zones) else (_deposits_gdf.crs if _deposits_gdf is not None else None)
+    if _deposits_gdf is not None and _target_crs is not None:
+        if site.structure_layers:
+            _structs_gdf = load_structure_layers(site, repo_root, _target_crs)
+        else:
+            _structs_gdf = auto_fetch_structure(site, repo_root, _target_crs)
+
     # Compute structure metrics before summary so they appear in the summary CSV.
     n_on_structure: int | None = None
     mean_nearest_m: float | None = None
+    _annotated_gdf: gpd.GeoDataFrame | None = None
     provenance_extra: dict[str, Any] = {
         "n_zones": len(zones),
         "raster_bbox_wgs84": list(raster_bbox),
     }
-    if site.structure_layers and _deposits_gdf is not None:
-        annotated = annotate_deposits_with_structure(_deposits_gdf, site, paths)
-        n_on_structure = int(annotated["on_structure"].sum())
-        mean_nearest_m = float(annotated["nearest_structure_m"].mean())
+    # Use whichever structure source is available — configured layers take
+    # priority; auto-fetched GDF (from lazy SGMC fetch) is used as fallback.
+    _buffer_m_for_annot = (
+        site.structure_layers[0].buffer_m if site.structure_layers else 500.0
+    )
+    if _deposits_gdf is not None and _structs_gdf is not None and not _structs_gdf.empty:
+        if site.structure_layers:
+            _annotated_gdf = annotate_deposits_with_structure(
+                _deposits_gdf, site, paths, structs=_structs_gdf
+            )
+        else:
+            # Auto-fetched structures: annotate manually without a StructureLayer config.
+            from critical_minerals_aster.structure import (
+                nearest_structure_distance_m,
+                points_on_structure,
+            )
+            _annotated_gdf = _deposits_gdf.copy()
+            _annotated_gdf["nearest_structure_m"] = nearest_structure_distance_m(
+                _annotated_gdf, _structs_gdf
+            )
+            _annotated_gdf["on_structure"] = points_on_structure(
+                _annotated_gdf, _structs_gdf, _buffer_m_for_annot
+            )
+        n_on_structure = int(_annotated_gdf["on_structure"].sum())
+        mean_nearest_m = float(_annotated_gdf["nearest_structure_m"].mean())
         provenance_extra["n_deposits_on_structure"] = n_on_structure
         provenance_extra["mean_nearest_structure_m"] = mean_nearest_m
 
@@ -955,11 +1318,29 @@ def run_site(
     summary = compute_site_summary(
         site, paths, zones, granule_id, mrds_bbox=raster_bbox,
         n_on_structure=n_on_structure, mean_nearest_m=mean_nearest_m,
+        annotated_deposits=_annotated_gdf,
     )
 
     if not skip_figures and _deposits_gdf is not None:
-        save_deposit_overlay_figure(site, paths, zones, _deposits_gdf, repo_root)
+        save_deposit_overlay_figure(
+            site, paths, zones, _deposits_gdf, repo_root,
+            hillshade=hillshade,
+            raster_transform=raster_transform,
+            raster_shape=raster_shape,
+            structs=_structs_gdf,
+            n_on_structure=n_on_structure,
+            n_total_deposits=len(_deposits_gdf),
+            hs_transform=hs_transform,
+            hs_shape=hs_shape,
+        )
         save_commodity_correlation_figure(site, paths, _deposits_gdf)
+        # Structure proximity strip chart — only when structure annotation exists.
+        if _annotated_gdf is not None and "commodity_group" in _deposits_gdf.columns:
+            # Merge commodity_group onto the annotated frame.
+            _prox_df = _annotated_gdf.copy()
+            _prox_df["commodity_group"] = _deposits_gdf["commodity_group"]
+            _prox_df["inside_zone"] = _deposits_gdf.get("inside_zone", False)
+            save_structure_proximity_figure(site, paths, _prox_df)
 
     write_site_summary(summary, paths.site_summary_csv)
     write_provenance(paths, granule_id, provenance_extra)
@@ -972,6 +1353,7 @@ def run_batch(
     *,
     download: bool = False,
     skip_figures: bool = False,
+    skip_existing: bool = False,
 ) -> list[pd.DataFrame]:
     from critical_minerals_aster.config import load_site_by_id
 
@@ -986,8 +1368,63 @@ def run_batch(
                     repo_root,
                     download=download,
                     skip_figures=skip_figures,
+                    skip_existing=skip_existing,
                 )
             )
         except FileNotFoundError as exc:
             print(f"Skipping {site_id}: {exc}", file=sys.stderr)
+    return outputs
+
+
+def _run_site_worker(
+    site_id: str,
+    repo_root: Path,
+    download: bool,
+    skip_figures: bool,
+    skip_existing: bool,
+) -> pd.DataFrame:
+    """Top-level function for ProcessPoolExecutor (must be picklable)."""
+    from critical_minerals_aster.config import load_site_by_id
+
+    site = load_site_by_id(site_id, repo_root / "sites")
+    return run_site(
+        site,
+        repo_root,
+        download=download,
+        skip_figures=skip_figures,
+        skip_existing=skip_existing,
+    )
+
+
+def run_batch_parallel(
+    site_ids: list[str],
+    repo_root: Path,
+    *,
+    workers: int = 2,
+    download: bool = False,
+    skip_figures: bool = False,
+    skip_existing: bool = False,
+) -> list[pd.DataFrame]:
+    """Run sites in parallel using ProcessPoolExecutor."""
+    import concurrent.futures
+
+    outputs: list[pd.DataFrame] = []
+    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(
+                _run_site_worker,
+                site_id,
+                repo_root,
+                download,
+                skip_figures,
+                skip_existing,
+            ): site_id
+            for site_id in site_ids
+        }
+        for future in concurrent.futures.as_completed(futures):
+            site_id = futures[future]
+            try:
+                outputs.append(future.result())
+            except Exception as exc:
+                print(f"Error processing {site_id}: {exc}", file=sys.stderr)
     return outputs

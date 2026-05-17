@@ -97,6 +97,7 @@ critical-minerals-aster/
 ├── src/
 │   └── critical_minerals_aster/    # shared library (paths, spectral, classification, MRDS helpers)
 ├── docs/
+│   ├── roadmap.md                   # live planning document — current status, backlog, deferred work
 │   ├── architecture.md              # design rationale and phase history (A–F complete)
 │   └── structure_layers.md          # optional fault/structure overlay config
 ├── notebooks/

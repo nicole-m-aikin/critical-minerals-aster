@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critical Minerals ASTER &mdash; Site Overview</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      padding: 1.5rem;
+    }
+    header {
+      max-width: 1200px;
+      margin: 0 auto 1.5rem;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.5rem; color: #1a1a2e; }
+    .sort-controls {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+    .sort-controls button {
+      padding: 0.4rem 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .sort-controls button:hover, .sort-controls button.active {
+      background: #2c3e50;
+      color: #fff;
+      border-color: #2c3e50;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: #e8ecf0;
+    }
+    .card-body { padding: 0.75rem 1rem 1rem; }
+    .card-body h3 { font-size: 0.95rem; margin-bottom: 0.35rem; color: #1a1a2e; }
+    .card-body .stats { font-size: 0.78rem; color: #555; margin-bottom: 0.25rem; }
+    .card-body .struct { font-size: 0.75rem; color: #777; }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Critical Minerals ASTER &mdash; Site Overview</h1>
+    <div class="sort-controls">
+      <button class="active" onclick="sortCards('hit-rate')">Sort by hit rate</button>
+      <button onclick="sortCards('deposits')">Sort by deposits</button>
+      <button onclick="sortCards('name')">Sort by site name</button>
+    </div>
+  </header>
+  <div class="grid" id="grid">
+    <div class="card" data-hit-rate="17.6" data-deposits="380" data-name="mountain_pass">
+      <img src="sites/mountain_pass/03_deposit_overlay.png" alt="Mountain Pass, CA" loading="lazy">
+      <div class="card-body">
+        <h3>Mountain Pass, CA</h3>
+        <p class="stats">Hit rate: 17.6% &middot; 67/380 deposits &middot; 1647 zones</p>
+        <p class="struct">0 on structure (20.2 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="15.9" data-deposits="126" data-name="mcdermitt">
+      <img src="sites/mcdermitt/03_deposit_overlay.png" alt="McDermitt Caldera, NV/OR" loading="lazy">
+      <div class="card-body">
+        <h3>McDermitt Caldera, NV/OR</h3>
+        <p class="stats">Hit rate: 15.9% &middot; 20/126 deposits &middot; 6233 zones</p>
+        <p class="struct">10 on structure (4.8 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="14.5" data-deposits="173" data-name="yerington">
+      <img src="sites/yerington/03_deposit_overlay.png" alt="Yerington, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Yerington, NV</h3>
+        <p class="stats">Hit rate: 14.5% &middot; 25/173 deposits &middot; 1018 zones</p>
+        <p class="struct">20 on structure (3.1 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="11.3" data-deposits="151" data-name="jerritt_canyon">
+      <img src="sites/jerritt_canyon/03_deposit_overlay.png" alt="Jerritt Canyon, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Jerritt Canyon, NV</h3>
+        <p class="stats">Hit rate: 11.3% &middot; 17/151 deposits &middot; 3807 zones</p>
+        <p class="struct">7 on structure (4.9 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="10.6" data-deposits="451" data-name="tonopah">
+      <img src="sites/tonopah/03_deposit_overlay.png" alt="Tonopah–Manhattan, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Tonopah–Manhattan, NV</h3>
+        <p class="stats">Hit rate: 10.6% &middot; 48/451 deposits &middot; 5666 zones</p>
+        <p class="struct">14 on structure (17.2 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="9.7" data-deposits="217" data-name="jerome">
+      <img src="sites/jerome/03_deposit_overlay.png" alt="Jerome, AZ" loading="lazy">
+      <div class="card-body">
+        <h3>Jerome, AZ</h3>
+        <p class="stats">Hit rate: 9.7% &middot; 21/217 deposits &middot; 2946 zones</p>
+        <p class="struct">33 on structure (2.7 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="7.8" data-deposits="281" data-name="silver_peak">
+      <img src="sites/silver_peak/03_deposit_overlay.png" alt="Silver Peak, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Silver Peak, NV</h3>
+        <p class="stats">Hit rate: 7.8% &middot; 22/281 deposits &middot; 2714 zones</p>
+        <p class="struct">2 on structure (16.2 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="7.6" data-deposits="262" data-name="darwin">
+      <img src="sites/darwin/03_deposit_overlay.png" alt="Darwin, CA" loading="lazy">
+      <div class="card-body">
+        <h3>Darwin, CA</h3>
+        <p class="stats">Hit rate: 7.6% &middot; 20/262 deposits &middot; 2987 zones</p>
+        <p class="struct">10 on structure (4.0 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="7.5" data-deposits="517" data-name="marysvale">
+      <img src="sites/marysvale/03_deposit_overlay.png" alt="Marysvale, UT" loading="lazy">
+      <div class="card-body">
+        <h3>Marysvale, UT</h3>
+        <p class="stats">Hit rate: 7.5% &middot; 39/517 deposits &middot; 9820 zones</p>
+        <p class="struct">30 on structure (4.3 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="6.2" data-deposits="241" data-name="stillwater">
+      <img src="sites/stillwater/03_deposit_overlay.png" alt="Stillwater Complex, MT" loading="lazy">
+      <div class="card-body">
+        <h3>Stillwater Complex, MT</h3>
+        <p class="stats">Hit rate: 6.2% &middot; 15/241 deposits &middot; 9015 zones</p>
+        <p class="struct">71 on structure (3.1 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="4.9" data-deposits="591" data-name="goldfield">
+      <img src="sites/goldfield/03_deposit_overlay.png" alt="Goldfield–Cuprite, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Goldfield–Cuprite, NV</h3>
+        <p class="stats">Hit rate: 4.9% &middot; 29/591 deposits &middot; 8625 zones</p>
+        <p class="struct">9 on structure (7.9 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="4.6" data-deposits="874" data-name="climax">
+      <img src="sites/climax/03_deposit_overlay.png" alt="Climax, CO" loading="lazy">
+      <div class="card-body">
+        <h3>Climax, CO</h3>
+        <p class="stats">Hit rate: 4.6% &middot; 40/874 deposits &middot; 4874 zones</p>
+        <p class="struct">38 on structure (4.5 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="3.5" data-deposits="564" data-name="oatman">
+      <img src="sites/oatman/03_deposit_overlay.png" alt="Oatman, NV/AZ" loading="lazy">
+      <div class="card-body">
+        <h3>Oatman, NV/AZ</h3>
+        <p class="stats">Hit rate: 3.5% &middot; 20/564 deposits &middot; 3502 zones</p>
+        <p class="struct">0 on structure (34.6 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="3.5" data-deposits="286" data-name="steamboat_springs">
+      <img src="sites/steamboat_springs/03_deposit_overlay.png" alt="Steamboat Springs, NV" loading="lazy">
+      <div class="card-body">
+        <h3>Steamboat Springs, NV</h3>
+        <p class="stats">Hit rate: 3.5% &middot; 10/286 deposits &middot; 2616 zones</p>
+        <p class="struct">25 on structure (3.3 km mean)</p>
+      </div>
+    </div>
+    <div class="card" data-hit-rate="3.2" data-deposits="125" data-name="bear_lodge">
+      <img src="sites/bear_lodge/03_deposit_overlay.png" alt="Bear Lodge, WY" loading="lazy">
+      <div class="card-body">
+        <h3>Bear Lodge, WY</h3>
+        <p class="stats">Hit rate: 3.2% &middot; 4/125 deposits &middot; 5325 zones</p>
+        <p class="struct">4 on structure (8.7 km mean)</p>
+      </div>
+    </div>
+  </div>
+  <footer>Generated 2026-05-17 15:32 &middot; 15 sites</footer>
+  <script>
+    function sortCards(key) {
+      const grid = document.getElementById('grid');
+      const cards = Array.from(grid.querySelectorAll('.card'));
+      cards.sort((a, b) => {
+        if (key === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+        if (key === 'deposits') return Number(b.dataset.deposits) - Number(a.dataset.deposits);
+        return Number(b.dataset.hitRate) - Number(a.dataset.hitRate);
+      });
+      cards.forEach(c => grid.appendChild(c));
+      document.querySelectorAll('.sort-controls button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

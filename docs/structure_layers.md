@@ -6,6 +6,7 @@ Add line or polygon structure data to a site YAML under `structure_layers`:
 structure_layers:
   - path: data/structures/mcdermitt_faults.geojson
     type: faults
+    label: "Quaternary Faults (QFaults)"   # optional; defaults to type.title()
     buffer_m: 500
 ```
 
@@ -18,4 +19,8 @@ When layers are configured, the CLI records in `results/{site_id}_provenance.jso
 
 Use `critical_minerals_aster.structure.annotate_deposits_with_structure()` in notebooks for per-deposit `nearest_structure_m` and `on_structure` columns.
 
-**Data sources (future):** USGS Quaternary faults, state geologic map WFS, SGMC contacts.
+**Data sources in use:**
+- USGS Quaternary Faults REST API — 13 of 15 sites
+- USGS SGMC FeatureServer (all geological ages) — Bear Lodge (WY) and Jerome (AZ), where Quaternary faults are absent
+
+Download scripts: `scripts/download_usgs_faults.py` (Quaternary), `scripts/download_sgmc_structures.py` (SGMC + WSGS fallback).

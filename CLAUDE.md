@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Spectral alteration mapping of the McDermitt Caldera (NV/OR) using ASTER thermal infrared (TIR, B10–B14) band ratio analysis. Produces strong anomaly zone polygons and validates them against USGS MRDS mineral deposit data. Multi-site capable via per-site YAML configuration.
 
+## Figure / plot quality check
+
+After saving any figure, map, or plot (`.png`, `.jpg`, `.pdf`), **always open and visually inspect the output file** with the Read tool (which renders images inline) to verify:
+- The hillshade / basemap covers the full data bbox (no white border or size mismatch)
+- All intended layers are visible (zones, deposits, annotations, scale bar, north arrow)
+- No obvious rendering artifacts (clipped labels, legend cut off, blank panels)
+
+Reading the file path is not enough — you must **look at the rendered image** and describe what you see before marking the task complete.
+
 ## Environment setup
 
 ```bash

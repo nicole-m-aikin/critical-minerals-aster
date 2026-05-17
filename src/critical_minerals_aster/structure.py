@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
+from typing import Optional
 
 import geopandas as gpd
 import pandas as pd
@@ -25,7 +27,14 @@ def load_structure_layers(
         path = Path(layer.path)
         if not path.is_absolute():
             path = repo_root / path
-        gdf = gpd.read_file(path)
+        try:
+            gdf = gpd.read_file(path)
+        except Exception as exc:
+            print(
+                f"  [structure] Warning: could not load {path}: {exc}",
+                file=sys.stderr,
+            )
+            continue
         if gdf.crs is None:
             gdf = gdf.set_crs("EPSG:4326")
         gdf = gdf.to_crs(target_crs)
@@ -36,6 +45,19 @@ def load_structure_layers(
     if not frames:
         return gpd.GeoDataFrame(geometry=[], crs=target_crs)
     return pd.concat(frames, ignore_index=True)
+
+
+def structure_buffer_union(
+    structs: gpd.GeoDataFrame,
+    buffer_m: float,
+) -> "Optional[object]":
+    """Return the unary union of all structure geometries buffered by *buffer_m* metres.
+
+    Returns ``None`` when *structs* is empty.
+    """
+    if structs is None or structs.empty:
+        return None
+    return structs.geometry.buffer(buffer_m).unary_union
 
 
 def nearest_structure_distance_m(
@@ -74,14 +96,20 @@ def annotate_deposits_with_structure(
     deposits: gpd.GeoDataFrame,
     site: SiteConfig,
     paths: SitePaths,
+    structs: "Optional[gpd.GeoDataFrame]" = None,
 ) -> gpd.GeoDataFrame:
-    """Add nearest_structure_m and on_structure columns when layers are configured."""
+    """Add nearest_structure_m and on_structure columns when layers are configured.
+
+    If *structs* is provided it is used directly (avoids a second disk read when
+    the caller already loaded the layers).
+    """
     if not site.structure_layers:
         return deposits
 
-    structures = load_structure_layers(site, paths.repo_root, deposits.crs)
+    if structs is None:
+        structs = load_structure_layers(site, paths.repo_root, deposits.crs)
     out = deposits.copy()
-    out["nearest_structure_m"] = nearest_structure_distance_m(out, structures)
+    out["nearest_structure_m"] = nearest_structure_distance_m(out, structs)
     default_buffer = site.structure_layers[0].buffer_m
-    out["on_structure"] = points_on_structure(out, structures, default_buffer)
+    out["on_structure"] = points_on_structure(out, structs, default_buffer)
     return out

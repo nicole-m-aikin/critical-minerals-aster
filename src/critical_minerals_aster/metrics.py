@@ -58,6 +58,7 @@ def compute_site_summary(
     mrds_bbox: BBox | None = None,
     n_on_structure: int | None = None,
     mean_nearest_m: float | None = None,
+    annotated_deposits: gpd.GeoDataFrame | None = None,
 ) -> pd.DataFrame:
     """Site-level summary row plus one row per commodity group.
 
@@ -74,6 +75,12 @@ def compute_site_summary(
     mean_nearest_m:
         Mean nearest-structure distance (metres) across all deposits in the
         site bbox.  None when no structure layers are configured.
+    annotated_deposits:
+        GeoDataFrame already annotated with ``nearest_structure_m`` and
+        ``on_structure`` columns (output of
+        :func:`~critical_minerals_aster.structure.annotate_deposits_with_structure`).
+        When supplied, per-group structure metrics are computed for
+        commodity / earth_mri / mineral_system sub-rows.
     """
     mrds = read_mrds_national(paths)
     effective_bbox: BBox = mrds_bbox if mrds_bbox is not None else site.bbox_wgs84
@@ -123,9 +130,32 @@ def compute_site_summary(
         deposits = reclassify_mrds_earth_mri(deposits)
         deposits = reclassify_mrds_mineral_system(deposits)
 
+        # Merge structure annotation columns if provided so per-group metrics
+        # are computed from the same deposit set used for site-level metrics.
+        _has_struct = False
+        if annotated_deposits is not None and not annotated_deposits.empty:
+            if "nearest_structure_m" in annotated_deposits.columns:
+                deposits = deposits.join(
+                    annotated_deposits[["nearest_structure_m", "on_structure"]],
+                    how="left",
+                )
+                _has_struct = True
+
+        def _struct_metrics(
+            grp_df: pd.DataFrame,
+        ) -> tuple[int | None, float | None]:
+            """Return (n_on_structure, mean_nearest_m) for a deposit sub-group."""
+            if not _has_struct or "on_structure" not in grp_df.columns:
+                return None, None
+            n_on = int(grp_df["on_structure"].sum())
+            valid = grp_df["nearest_structure_m"].dropna()
+            mean_m = float(valid.mean()) if not valid.empty else None
+            return n_on, mean_m
+
         for grp, grp_df in deposits.groupby("commodity_group"):
             inside_n = int(grp_df["inside_zone"].sum())
             total = len(grp_df)
+            n_on, mean_m = _struct_metrics(grp_df)
             rows.append(
                 {
                     **base,
@@ -137,12 +167,15 @@ def compute_site_summary(
                     "n_deposits_bbox": total,
                     "n_deposits_in_zones": inside_n,
                     "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
+                    "n_deposits_on_structure": n_on,
+                    "mean_nearest_structure_m": mean_m,
                 }
             )
 
         for grp, grp_df in deposits.groupby("earth_mri_category"):
             inside_n = int(grp_df["inside_zone"].sum())
             total = len(grp_df)
+            n_on, mean_m = _struct_metrics(grp_df)
             rows.append(
                 {
                     **base,
@@ -154,12 +187,15 @@ def compute_site_summary(
                     "n_deposits_bbox": total,
                     "n_deposits_in_zones": inside_n,
                     "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
+                    "n_deposits_on_structure": n_on,
+                    "mean_nearest_structure_m": mean_m,
                 }
             )
 
         for grp, grp_df in deposits.groupby("mineral_system"):
             inside_n = int(grp_df["inside_zone"].sum())
             total = len(grp_df)
+            n_on, mean_m = _struct_metrics(grp_df)
             rows.append(
                 {
                     **base,
@@ -171,6 +207,8 @@ def compute_site_summary(
                     "n_deposits_bbox": total,
                     "n_deposits_in_zones": inside_n,
                     "hit_rate_pct": round(inside_n / total * 100, 1) if total else 0.0,
+                    "n_deposits_on_structure": n_on,
+                    "mean_nearest_structure_m": mean_m,
                 }
             )
 

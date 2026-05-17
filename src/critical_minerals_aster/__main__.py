@@ -11,6 +11,7 @@ from critical_minerals_aster.paths import site_paths_for
 from critical_minerals_aster.pipeline import (
     download_and_mosaic_aster,
     run_batch,
+    run_batch_parallel,
     run_site,
 )
 from critical_minerals_aster.synthesis import write_national_summary
@@ -20,20 +21,49 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
+def _should_skip(site_id: str, repo_root: Path) -> bool:
+    """Return True if site outputs already exist and can be skipped."""
+    from critical_minerals_aster.config import load_site_by_id
+
+    try:
+        site = load_site_by_id(site_id, repo_root / "sites")
+        paths = site_paths_for(site, repo_root)
+        overlay = paths.figures_dir / "03_deposit_overlay.png"
+        prov = paths.site_provenance_json
+        return overlay.exists() and prov.exists()
+    except Exception:
+        return False
+
+
 def cmd_run(args: argparse.Namespace) -> int:
     repo = Path(args.repo_root) if args.repo_root else _repo_root()
+    skip_existing = getattr(args, "skip_existing", False)
+
+    if skip_existing and _should_skip(args.site, repo):
+        print(
+            f"Skipping {args.site} (outputs exist, use --force to regenerate)",
+            file=sys.stderr,
+        )
+        return 0
+
     site = load_site_by_id(args.site, repo / "sites")
     if getattr(args, "mosaic", False):
         paths = site_paths_for(site, repo)
         download_and_mosaic_aster(site, paths)
         # Re-run without download so run_site picks up the freshly built mosaic.
-        run_site(site, repo, download=False, skip_figures=args.skip_figures)
+        run_site(
+            site, repo,
+            download=False,
+            skip_figures=args.skip_figures,
+            skip_existing=False,
+        )
     else:
         run_site(
             site,
             repo,
             download=args.download,
             skip_figures=args.skip_figures,
+            skip_existing=skip_existing,
         )
     print(f"Finished site {args.site}; outputs under {repo / 'results'}")
     return 0
@@ -46,12 +76,27 @@ def cmd_run_batch(args: argparse.Namespace) -> int:
     if not site_ids:
         print("No sites specified.", file=sys.stderr)
         return 1
-    run_batch(
-        site_ids,
-        repo,
-        download=args.download,
-        skip_figures=args.skip_figures,
-    )
+
+    skip_existing = getattr(args, "skip_existing", False)
+    workers = getattr(args, "workers", 1)
+
+    if workers > 1 and len(site_ids) > 1:
+        run_batch_parallel(
+            site_ids,
+            repo,
+            workers=workers,
+            download=args.download,
+            skip_figures=args.skip_figures,
+            skip_existing=skip_existing,
+        )
+    else:
+        run_batch(
+            site_ids,
+            repo,
+            download=args.download,
+            skip_figures=args.skip_figures,
+            skip_existing=skip_existing,
+        )
     write_national_summary(repo / "results")
     print(f"Batch complete; national summary in {repo / 'results'}")
     return 0
@@ -88,6 +133,18 @@ def main(argv: list[str] | None = None) -> int:
         help="Download ALL covering ASTER granules, merge per-band, then process",
     )
     p_run.add_argument("--skip-figures", action="store_true")
+    p_run.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip site if 03_deposit_overlay.png and provenance JSON already exist",
+    )
+    p_run.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Number of parallel workers (default: 1; single-site run ignores this)",
+    )
     p_run.set_defaults(func=cmd_run)
 
     p_batch = sub.add_parser("run-batch", help="Process multiple sites")
@@ -104,6 +161,18 @@ def main(argv: list[str] | None = None) -> int:
     )
     p_batch.add_argument("--download", action="store_true")
     p_batch.add_argument("--skip-figures", action="store_true")
+    p_batch.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip sites whose outputs already exist",
+    )
+    p_batch.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Number of parallel worker processes (default: 1)",
+    )
     p_batch.set_defaults(func=cmd_run_batch)
 
     p_syn = sub.add_parser("synthesize", help="Aggregate results/*_summary.csv")
