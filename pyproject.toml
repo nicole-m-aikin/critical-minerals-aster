@@ -7,6 +7,7 @@ name = "critical-minerals-aster"
 version = "0.1.0"
 description = "ASTER TIR alteration mapping with MRDS validation (multi-site capable)"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
 dependencies = [
   "numpy>=1.24",
