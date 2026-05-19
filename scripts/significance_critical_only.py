@@ -35,6 +35,66 @@ def load_site_bbox(site_id: str) -> tuple:
     return tuple(bb)  # [min_lon, min_lat, max_lon, max_lat]
 
 
+def load_raster_bbox(site_id: str) -> tuple:
+    """Return the TIR raster bbox from provenance JSON (rectangular fallback)."""
+    import json
+    prov_path = ROOT / "results" / f"{site_id}_provenance.json"
+    if prov_path.exists():
+        with open(prov_path) as f:
+            prov = json.load(f)
+        rb = prov.get("raster_bbox_wgs84")
+        if rb is not None:
+            return tuple(rb)
+    return load_site_bbox(site_id)
+
+
+def load_tir_footprint(site_id: str, zones_crs) -> gpd.GeoDataFrame | None:
+    """Load the valid-pixel footprint polygon from provenance JSON.
+
+    Returns a GeoDataFrame in *zones_crs*, or None if the footprint is not
+    available (old provenance files or computation failure).  The footprint
+    polygon reflects the actual diagonal ASTER scene boundary, not just the
+    bounding rectangle, so it is a more accurate denominator for coverage_fraction.
+    """
+    import json
+    prov_path = ROOT / "results" / f"{site_id}_provenance.json"
+    if not prov_path.exists():
+        return None
+    with open(prov_path) as f:
+        prov = json.load(f)
+    geojson = prov.get("tir_footprint_wgs84")
+    if geojson is None:
+        return None
+    try:
+        gdf = gpd.GeoDataFrame.from_features(geojson["features"], crs="EPSG:4326")
+        return gdf.to_crs(zones_crs)
+    except Exception:
+        return None
+
+
+def coverage_fraction_from_footprint(
+    zones: gpd.GeoDataFrame,
+    footprint: gpd.GeoDataFrame | None,
+    bbox: tuple,
+) -> float:
+    """Compute zone coverage fraction using footprint polygon as denominator.
+
+    Falls back to the rectangular bbox if the footprint is unavailable.
+    """
+    from shapely.ops import unary_union
+    union = unary_union(zones.geometry)
+    if footprint is not None and len(footprint):
+        _fp = footprint if footprint.crs == zones.crs else footprint.to_crs(zones.crs)
+        denom_area = float(_fp.iloc[0].geometry.area)
+    else:
+        from critical_minerals_aster.significance import _bbox_in_crs
+        minx, miny, maxx, maxy = _bbox_in_crs(bbox, zones.crs)
+        denom_area = (maxx - minx) * (maxy - miny)
+    if denom_area == 0:
+        return 0.0
+    return min(float(union.area / denom_area), 1.0)
+
+
 def load_zones(site_id: str) -> gpd.GeoDataFrame | None:
     path = ROOT / "data" / "sites" / site_id / "vectors" / "strong_anomaly_zones.geojson"
     if not path.exists():
@@ -84,12 +144,13 @@ def main() -> None:
             continue
 
         try:
-            bbox = load_site_bbox(site_id)
+            bbox = load_raster_bbox(site_id)
         except FileNotFoundError:
             print(f"    no YAML, skipping")
             continue
 
-        p_cover = coverage_fraction(zones, bbox)
+        footprint = load_tir_footprint(site_id, zones.crs)
+        p_cover = coverage_fraction_from_footprint(zones, footprint, bbox)
 
         # All-deposits binomial baseline
         binom_all, _ = run_binomial(d["hits_all"], d["n_all"], p_cover)

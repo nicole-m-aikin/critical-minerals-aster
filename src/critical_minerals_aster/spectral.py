@@ -234,3 +234,42 @@ def alteration_ratios(
     carbonate = band_ratio(b13, b12)
     mafic = band_ratio(b12, b13)
     return silica, carbonate, mafic
+
+
+def compute_valid_data_footprint(
+    band: np.ndarray,
+    transform: rasterio.Affine,
+    crs: rasterio.crs.CRS,
+) -> "gpd.GeoDataFrame | None":
+    """Return a GeoDataFrame containing the polygon of valid (non-NaN) pixels.
+
+    The polygon is in the raster's native CRS, simplified to ~5 pixel widths to
+    remove pixel-level jaggedness while preserving scene-boundary shape.  Returns
+    None if no valid pixels exist or if the computation fails.
+    """
+    try:
+        import geopandas as gpd
+        from rasterio.features import shapes
+        from shapely.geometry import shape
+        from shapely.ops import unary_union
+
+        valid_mask = np.isfinite(band).astype(np.uint8)
+        if not valid_mask.any():
+            return None
+
+        geoms = [
+            shape(geom)
+            for geom, val in shapes(valid_mask, transform=transform)
+            if val == 1
+        ]
+        if not geoms:
+            return None
+
+        footprint = unary_union(geoms)
+        # Simplify to eliminate pixel-level staircasing; preserve scene boundary shape.
+        _tol = 0.005 if crs.is_geographic else 450.0  # degrees or ~5 × 90 m pixels
+        footprint = footprint.simplify(_tol)
+
+        return gpd.GeoDataFrame(geometry=[footprint], crs=crs)
+    except Exception:
+        return None

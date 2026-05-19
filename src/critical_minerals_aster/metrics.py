@@ -56,6 +56,7 @@ def compute_site_summary(
     zones: gpd.GeoDataFrame,
     granule_id: str,
     mrds_bbox: BBox | None = None,
+    tir_footprint: gpd.GeoDataFrame | None = None,
     n_on_structure: int | None = None,
     mean_nearest_m: float | None = None,
     annotated_deposits: gpd.GeoDataFrame | None = None,
@@ -65,10 +66,12 @@ def compute_site_summary(
     Parameters
     ----------
     mrds_bbox:
-        WGS84 bounding box used to filter MRDS deposits.  Defaults to
-        ``site.bbox_wgs84`` when not supplied, but callers should pass the
-        actual raster extent (from ``run_classification``) so only deposits
-        within the TIR coverage area are counted.
+        WGS84 bounding box used to pre-filter MRDS deposits (fast rectangular
+        clip).  Defaults to ``site.bbox_wgs84`` when not supplied.
+    tir_footprint:
+        GeoDataFrame (in raster CRS) containing the polygon of valid TIR
+        pixels.  When supplied, deposits are clipped to this polygon after the
+        bbox pre-filter so that diagonal scene-edge no-data areas are excluded.
     n_on_structure:
         Count of MRDS deposits that lie within the configured buffer of any
         structure layer.  None when no structure layers are configured.
@@ -86,6 +89,13 @@ def compute_site_summary(
     effective_bbox: BBox = mrds_bbox if mrds_bbox is not None else site.bbox_wgs84
     local = filter_mrds_bbox(mrds, effective_bbox)
     deposits = mrds_to_points_gdf(local, zones.crs)
+    # Polygon clip to actual valid-data footprint (handles diagonal scene edges).
+    if tir_footprint is not None and len(tir_footprint):
+        try:
+            _fp = tir_footprint if tir_footprint.crs == zones.crs else tir_footprint.to_crs(zones.crs)
+            deposits = gpd.clip(deposits, _fp)
+        except Exception:
+            pass  # fall back to bbox-only clipping on geometry errors
     joined, _, _ = spatial_join_deposits_zones(deposits, zones)
 
     inside = joined[joined["index_right"].notna()]

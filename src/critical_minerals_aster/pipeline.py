@@ -82,6 +82,7 @@ def run_classification(
     Any,         # transform — affine transform of the clipped raster
     tuple[int, int],  # shape — (rows, cols) of the clipped raster
     Any,         # crs — coordinate reference system of the raster
+    "gpd.GeoDataFrame | None",  # tir_footprint — valid-pixel polygon in raster CRS
 ]:
     """Classify, vectorize, return zones, class maps, raster extent, and raster metadata.
 
@@ -94,21 +95,32 @@ def run_classification(
     Elements 10–12 (transform, shape, crs) describe the clipped raster pixel
     grid so callers can reproject auxiliary data (e.g. a DEM hillshade) to
     exactly the same extent.
+
+    tir_footprint is the polygon of valid (non-NaN) pixels derived from B10.
+    It differs from raster_bbox in that it captures the actual scene boundary
+    (diagonal ASTER swath edge) rather than the bounding rectangle.  Use it
+    for all deposit and structure clipping instead of the bbox.
     """
-    _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+    b10, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
         paths.aster_dir, granule_id
     )
     # Clip to site bbox so percentile thresholds and zone counts are
     # site-specific rather than whole-scene artifacts.  Shared-granule sites
     # (e.g. goldfield/silver_peak on the same ASTER swath) would otherwise
     # produce identical zone polygons from the full 60-90 km scene.
-    (b12, b13, b14), transform = clip_bands_to_bbox(
-        [b12, b13, b14], transform, crs, site.bbox_wgs84
+    (b10, b12, b13, b14), transform = clip_bands_to_bbox(
+        [b10, b12, b13, b14], transform, crs, site.bbox_wgs84
     )
     # Record the actual raster extent AFTER clipping so downstream MRDS
     # queries are constrained to the true TIR coverage area, not the full
     # (possibly larger) site.bbox_wgs84.
     raster_bbox: BBox = raster_bbox_wgs84(transform, b12.shape, crs)
+
+    # Valid-pixel footprint — the actual scene shape (diagonal ASTER swath boundary),
+    # not the rectangular bounding box.  Used for spatial clipping of deposits and
+    # for figure 03 boundary annotation.
+    from critical_minerals_aster.spectral import compute_valid_data_footprint
+    tir_footprint = compute_valid_data_footprint(b10, transform, crs)
 
     silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
@@ -135,6 +147,7 @@ def run_classification(
         transform,
         b12.shape,
         crs,
+        tir_footprint,
     )
 
 
@@ -371,8 +384,7 @@ def save_deposit_overlay_figure(
     deposits: gpd.GeoDataFrame,
     repo_root: Path,
     hillshade: np.ndarray | None = None,
-    raster_transform: "rasterio.Affine | None" = None,
-    raster_shape: "tuple[int, int] | None" = None,
+    tir_footprint: "gpd.GeoDataFrame | None" = None,
     structs: "gpd.GeoDataFrame | None" = None,
     n_on_structure: "int | None" = None,
     n_total_deposits: "int | None" = None,
@@ -390,11 +402,13 @@ def save_deposit_overlay_figure(
         small = zones[zones["area_km2"] < 10]
         large = zones[zones["area_km2"] >= 10]
         if len(small):
-            small.plot(ax=ax, color="#c0392b", alpha=0.55, linewidth=0)
+            small.plot(ax=ax, color="#922b21", alpha=0.70, linewidth=0)
         if len(large):
             large.plot(ax=ax, color="#4a0000", alpha=0.90, linewidth=0)
 
     # Draw structural corridor buffer fill before deposit points.
+    # Clip corridor display to TIR footprint so fault buffers don't extend
+    # into no-data areas where we have no spectral information.
     has_structure = False
     _buffer_m: float = 500.0
     if site.structure_layers:
@@ -405,10 +419,20 @@ def save_deposit_overlay_figure(
         if structs is not None and not structs.empty:
             union_geom = structure_buffer_union(structs, _buffer_m)
             if union_geom is not None:
-                gpd.GeoSeries([union_geom], crs=structs.crs).plot(
-                    ax=ax, color="#e67e22", alpha=0.25, linewidth=0, zorder=1
-                )
-                has_structure = True
+                # Clip corridor to TIR footprint (same CRS as structs).
+                if tir_footprint is not None and len(tir_footprint):
+                    try:
+                        _fp_for_clip = tir_footprint
+                        if tir_footprint.crs != structs.crs:
+                            _fp_for_clip = tir_footprint.to_crs(structs.crs)
+                        union_geom = union_geom.intersection(_fp_for_clip.union_all())
+                    except Exception:
+                        pass
+                if union_geom is not None and not union_geom.is_empty:
+                    gpd.GeoSeries([union_geom], crs=structs.crs).plot(
+                        ax=ax, color="#e67e22", alpha=0.18, linewidth=0, zorder=1
+                    )
+                    has_structure = True
 
     outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
     inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
@@ -416,6 +440,7 @@ def save_deposit_overlay_figure(
     # Dense-deposit handling: reduce marker size/alpha for large sets; cap display at 500.
     _n_outside = len(outside)
     _outside_capped_note = ""
+    _show_cap_annotation = _n_outside > 500
     if _n_outside > 500:
         outside = outside.iloc[:500]
         _outside_capped_note = f" (showing 500 of {_n_outside})"
@@ -429,13 +454,11 @@ def save_deposit_overlay_figure(
                     edgecolor="black", linewidth=0.5)
 
     # Compute view bounds from the hillshade grid (covers full site.bbox_wgs84)
-    # so axes limits always match the configured site area.  Fall back to the
-    # ASTER raster extent, then zone bounds if neither is available.
-    _limit_transform = hs_transform if hs_transform is not None else raster_transform
-    _limit_shape = hs_shape if hs_shape is not None else raster_shape
-    if _limit_transform is not None and _limit_shape is not None:
-        _r = _limit_transform
-        _rc, _cc = _limit_shape
+    # so axes limits always match the configured site area.  Fall back to
+    # zone bounds if hillshade is absent.
+    if hs_transform is not None and hs_shape is not None:
+        _r = hs_transform
+        _rc, _cc = hs_shape
         _rx0, _rx1 = _r.c, _r.c + _r.a * _cc
         _ry0, _ry1 = _r.f + _r.e * _rc, _r.f
         _mx = (_rx1 - _rx0) * 0.01
@@ -456,13 +479,9 @@ def save_deposit_overlay_figure(
     # darkest hillshade shadow (alpha-blended over this) stays above medium gray.
     ax.set_facecolor("#f0f0f0")
 
-    # Hillshade now covers site.bbox_wgs84 (full configured site area).
-    # Use hs_transform/hs_shape for extent; fall back to raster grid if absent.
-    _hs_t = hs_transform if hs_transform is not None else raster_transform
-    _hs_s = hs_shape if hs_shape is not None else raster_shape
-    if hillshade is not None and _hs_t is not None and _hs_s is not None:
-        rows, cols = _hs_s
-        t = _hs_t
+    if hillshade is not None and hs_transform is not None and hs_shape is not None:
+        rows, cols = hs_shape
+        t = hs_transform
         _hs_extent = (t.c, t.c + t.a * cols, t.f + t.e * rows, t.f)
         _hs_cmap = plt.cm.gray.copy()
         _hs_cmap.set_bad(alpha=0.0)  # NaN nodata pixels → show background color
@@ -470,6 +489,29 @@ def save_deposit_overlay_figure(
             hillshade, cmap=_hs_cmap, alpha=0.35, vmin=0, vmax=1,
             extent=_hs_extent, origin="upper", zorder=0,
         )
+
+    # TIR valid-data footprint — actual scene polygon (diagonal ASTER swath shape),
+    # not just the bounding rectangle.  Drawn as a dashed boundary in the plot CRS.
+    _tir_coverage_pct: float | None = None
+    if tir_footprint is not None and len(tir_footprint):
+        _plot_crs = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
+        _fp_plot = tir_footprint
+        if _plot_crs is not None and _fp_plot.crs != _plot_crs:
+            _fp_plot = _fp_plot.to_crs(_plot_crs)
+        _fp_plot.plot(
+            ax=ax, facecolor="none", edgecolor="#2c3e50",
+            linewidth=1.2, linestyle="--", alpha=0.7, zorder=5,
+        )
+        # Coverage fraction: footprint area vs site bbox area (both in WGS84 degrees,
+        # which is approximate but good enough for the annotation label).
+        try:
+            from shapely.geometry import box as _box
+            _fp_wgs84 = tir_footprint.to_crs("EPSG:4326").iloc[0].geometry
+            _bbox_geom = _box(*site.bbox_wgs84)
+            if _bbox_geom.area > 0:
+                _tir_coverage_pct = min(100.0, _fp_wgs84.area / _bbox_geom.area * 100)
+        except Exception:
+            pass
 
     # Restore limits — hillshade imshow may have expanded the view to its own extent.
     ax.set_xlim(_xlim)
@@ -486,8 +528,9 @@ def save_deposit_overlay_figure(
     ax.set_xlabel(f"Easting (km{_epsg_suffix})")
     ax.set_ylabel("Northing (km)")
 
+    import matplotlib.patches as _mpatches
     legend_elements = [
-        mlines.Line2D([], [], color="#c0392b", linewidth=6, alpha=0.5, label="Strong anomaly zone (< 10 km²)"),
+        mlines.Line2D([], [], color="#922b21", linewidth=6, alpha=0.7, label="Strong anomaly zone (< 10 km²)"),
         mlines.Line2D([], [], color="#4a0000", linewidth=6, alpha=0.9, label="Strong anomaly zone (≥ 10 km²)"),
         mlines.Line2D([], [], marker="o", color="w", markerfacecolor="steelblue",
                       markersize=9, label=f"MRDS deposit (outside zone, n={_n_outside}{_outside_capped_note})"),
@@ -498,11 +541,38 @@ def save_deposit_overlay_figure(
     if has_structure:
         legend_elements.append(
             mlines.Line2D(
-                [], [], color="#e67e22", linewidth=6, alpha=0.4,
+                [], [], color="#e67e22", linewidth=6, alpha=0.25,
                 label=f"Structural corridor (±{_buffer_m:.0f} m)",
             )
         )
+    if tir_footprint is not None and len(tir_footprint):
+        legend_elements.append(
+            _mpatches.Patch(
+                facecolor="none", edgecolor="#2c3e50", linewidth=1.2,
+                linestyle="--", alpha=0.7, label="TIR data boundary",
+            )
+        )
     ax.legend(handles=legend_elements, loc="upper right", framealpha=0.95, fontsize=9)
+
+    # TIR coverage percentage — bottom-left, above structure annotation.
+    if _tir_coverage_pct is not None and _tir_coverage_pct < 99.0:
+        ax.text(
+            0.02, 0.14,
+            f"TIR data covers {_tir_coverage_pct:.0f}% of site bbox",
+            transform=ax.transAxes, fontsize=8, va="bottom", ha="left",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.85, edgecolor="none"),
+            zorder=10,
+        )
+
+    # Deposit-cap annotation — bottom-right, prominent warning when points are subsampled.
+    if _show_cap_annotation:
+        ax.text(
+            0.98, 0.03,
+            f"⚠ {_n_outside:,} deposits total\n(displaying 500)",
+            transform=ax.transAxes, fontsize=7.5, va="bottom", ha="right",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="#fff3cd", alpha=0.92, edgecolor="#d4a017"),
+            zorder=10,
+        )
 
     # Structure fraction annotation — placed above the scale bar to avoid overlap.
     # y=0.09 clears the matplotlib-scalebar "lower left" widget (~0.02–0.07 height).
@@ -1213,10 +1283,11 @@ def run_site(
         carbonate_cls,
         mafic_cls,
         combined,
-        raster_bbox,  # WGS84 extent of the analysed (clipped) ASTER data
+        raster_bbox,  # WGS84 bounding box of the analysed (clipped) ASTER data
         raster_transform,
         raster_shape,
         raster_crs,
+        tir_footprint,  # valid-pixel polygon (diagonal scene shape, not bbox rectangle)
     ) = run_classification(site, paths, granule_id)
     paths.vectors_dir.mkdir(parents=True, exist_ok=True)
     zones.to_file(paths.strong_zones_geojson, driver="GeoJSON")
@@ -1257,8 +1328,14 @@ def run_site(
         from critical_minerals_aster.mrds import mrds_to_points_gdf, spatial_join_deposits_zones
 
         mrds = read_mrds_national(paths)
-        local = filter_mrds_bbox(mrds, raster_bbox)  # constrained to actual TIR coverage
+        local = filter_mrds_bbox(mrds, raster_bbox)  # fast bbox pre-filter
         _deposits_gdf = mrds_to_points_gdf(local, zones.crs)
+        # Clip to actual valid-pixel footprint (handles diagonal scene edges).
+        if tir_footprint is not None and len(tir_footprint):
+            try:
+                _deposits_gdf = gpd.clip(_deposits_gdf, tir_footprint)
+            except Exception:
+                pass  # fall back to bbox-only clipping on geometry errors
         joined, hits, _ = spatial_join_deposits_zones(_deposits_gdf, zones)
         hit_ids = joined[joined["index_right"].notna()].index.unique()
         _deposits_gdf["inside_zone"] = _deposits_gdf.index.isin(hit_ids)
@@ -1285,6 +1362,14 @@ def run_site(
         "n_zones": len(zones),
         "raster_bbox_wgs84": list(raster_bbox),
     }
+    if tir_footprint is not None:
+        import json as _json
+        try:
+            provenance_extra["tir_footprint_wgs84"] = _json.loads(
+                tir_footprint.to_crs("EPSG:4326").to_json()
+            )
+        except Exception:
+            pass
     # Use whichever structure source is available — configured layers take
     # priority; auto-fetched GDF (from lazy SGMC fetch) is used as fallback.
     _buffer_m_for_annot = (
@@ -1313,10 +1398,12 @@ def run_site(
         provenance_extra["n_deposits_on_structure"] = n_on_structure
         provenance_extra["mean_nearest_structure_m"] = mean_nearest_m
 
-    # Use raster_bbox (actual TIR coverage) instead of site.bbox_wgs84 so
-    # MRDS deposits that lie outside the ASTER scene footprint are excluded.
+    # Use tir_footprint (actual valid-pixel polygon) so deposits in diagonal
+    # no-data corners of the ASTER scene are excluded.  mrds_bbox is the
+    # rectangular pre-filter; tir_footprint is the precise polygon clip.
     summary = compute_site_summary(
         site, paths, zones, granule_id, mrds_bbox=raster_bbox,
+        tir_footprint=tir_footprint,
         n_on_structure=n_on_structure, mean_nearest_m=mean_nearest_m,
         annotated_deposits=_annotated_gdf,
     )
@@ -1325,8 +1412,7 @@ def run_site(
         save_deposit_overlay_figure(
             site, paths, zones, _deposits_gdf, repo_root,
             hillshade=hillshade,
-            raster_transform=raster_transform,
-            raster_shape=raster_shape,
+            tir_footprint=tir_footprint,
             structs=_structs_gdf,
             n_on_structure=n_on_structure,
             n_total_deposits=len(_deposits_gdf),
