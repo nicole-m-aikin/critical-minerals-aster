@@ -188,6 +188,44 @@ def band_ratio(a: np.ndarray, b: np.ndarray) -> np.ndarray:
         return np.where(b != 0, a / b, np.nan)
 
 
+def load_ratio_mosaic(
+    aster_dir: os.PathLike[str] | str,
+    granule_id: str,
+) -> tuple[
+    np.ndarray,  # silica ratio
+    np.ndarray,  # carbonate ratio
+    np.ndarray,  # mafic ratio
+    np.ndarray,  # B10 (for valid-pixel footprint only)
+    "rasterio.Affine",
+    "rasterio.crs.CRS",
+]:
+    """Load pre-computed ratio mosaic files produced by download_and_mosaic_aster.
+
+    Returns ratio arrays (silica, carbonate, mafic) ready for classify_percentiles,
+    plus B10 for footprint computation and the shared transform/CRS.
+    Nodata (stored as 0 in the GeoTIFF) is restored to NaN.
+    """
+    aster_dir = Path(aster_dir)
+    transform = crs = None
+    ratios: dict[str, np.ndarray] = {}
+    for name in ("silica", "carbonate", "mafic"):
+        path = aster_dir / f"{granule_id}_ratio_{name}.tif"
+        with rasterio.open(path) as src:
+            arr = src.read(1).astype(float)
+            if transform is None:
+                transform = src.transform
+                crs = src.crs
+        arr[arr == 0] = np.nan
+        ratios[name] = arr
+
+    b10_path = aster_dir / f"{granule_id}_TIR_B10.tif"
+    with rasterio.open(b10_path) as src:
+        b10 = src.read(1).astype(float)
+    b10[b10 == 0] = np.nan
+
+    return ratios["silica"], ratios["carbonate"], ratios["mafic"], b10, transform, crs
+
+
 def load_tir_band(
     aster_dir: os.PathLike[str] | str,
     granule_id: str,

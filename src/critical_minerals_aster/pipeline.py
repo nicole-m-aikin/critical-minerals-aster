@@ -25,8 +25,10 @@ from critical_minerals_aster.metrics import compute_site_summary, write_site_sum
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.spectral import (
     alteration_ratios,
+    band_ratio,
     clip_bands_to_bbox,
     extract_granule_id,
+    load_ratio_mosaic,
     load_tir_bands_10_14,
     raster_bbox_wgs84,
     select_granule,
@@ -101,28 +103,34 @@ def run_classification(
     (diagonal ASTER swath edge) rather than the bounding rectangle.  Use it
     for all deposit and structure clipping instead of the bbox.
     """
-    b10, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
-        paths.aster_dir, granule_id
-    )
-    # Clip to site bbox so percentile thresholds and zone counts are
-    # site-specific rather than whole-scene artifacts.  Shared-granule sites
-    # (e.g. goldfield/silver_peak on the same ASTER swath) would otherwise
-    # produce identical zone polygons from the full 60-90 km scene.
-    (b10, b12, b13, b14), transform = clip_bands_to_bbox(
-        [b10, b12, b13, b14], transform, crs, site.bbox_wgs84
-    )
-    # Record the actual raster extent AFTER clipping so downstream MRDS
-    # queries are constrained to the true TIR coverage area, not the full
-    # (possibly larger) site.bbox_wgs84.
-    raster_bbox: BBox = raster_bbox_wgs84(transform, b12.shape, crs)
+    # Ratio mosaic path: download_and_mosaic_aster writes per-ratio GeoTIFFs so that
+    # normalization operates on the actual signal (ratios) rather than individual
+    # bands whose independent correction factors would distort the ratios.
+    _ratio_silica_path = paths.aster_dir / f"{granule_id}_ratio_silica.tif"
+    if _ratio_silica_path.exists():
+        silica, carbonate, mafic, b10, transform, crs = load_ratio_mosaic(
+            paths.aster_dir, granule_id
+        )
+        (b10, silica, carbonate, mafic), transform = clip_bands_to_bbox(
+            [b10, silica, carbonate, mafic], transform, crs, site.bbox_wgs84
+        )
+    else:
+        b10, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+            paths.aster_dir, granule_id
+        )
+        # Clip to site bbox so percentile thresholds and zone counts are
+        # site-specific rather than whole-scene artifacts.  Shared-granule sites
+        # (e.g. goldfield/silver_peak on the same ASTER swath) would otherwise
+        # produce identical zone polygons from the full 60-90 km scene.
+        (b10, b12, b13, b14), transform = clip_bands_to_bbox(
+            [b10, b12, b13, b14], transform, crs, site.bbox_wgs84
+        )
+        silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
-    # Valid-pixel footprint — the actual scene shape (diagonal ASTER swath boundary),
-    # not the rectangular bounding box.  Used for spatial clipping of deposits and
-    # for figure 03 boundary annotation.
+    raster_bbox: BBox = raster_bbox_wgs84(transform, silica.shape, crs)
+
     from critical_minerals_aster.spectral import compute_valid_data_footprint
     tir_footprint = compute_valid_data_footprint(b10, transform, crs)
-
-    silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
     cp = site.classification
     assert cp is not None
@@ -1059,6 +1067,15 @@ def download_and_mosaic_aster(
 
     paths.aster_dir.mkdir(parents=True, exist_ok=True)
 
+    def _write_tmp(arr: np.ndarray, profile: dict, path: Path) -> None:
+        """Write a float32 array to a temp GeoTIFF with 0 as nodata sentinel."""
+        p = profile.copy()
+        p.update(dtype=rasterio.float32)
+        out = arr.astype(np.float64).copy()
+        out[~np.isfinite(out)] = 0.0
+        with rasterio.open(path, "w", **p) as dst:
+            dst.write(out.astype(np.float32), 1)
+
     with tempfile.TemporaryDirectory() as tmpdir:
         for granule in covering:
             try:
@@ -1067,45 +1084,73 @@ def download_and_mosaic_aster(
                 print(f"  Warning: could not download granule: {exc}", file=sys.stderr)
 
         mosaic_id = f"{site.id}_mosaic"
-        for band_num in (10, 11, 12, 13, 14):
-            pattern = f"*_TIR_B{band_num}.tif"
-            band_files = sorted(Path(tmpdir).glob(pattern))
-            if not band_files:
-                continue
-            if len(band_files) == 1:
-                shutil.copy(
-                    band_files[0],
-                    paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif",
-                )
-                continue
 
-            # Read the reference (first) granule and normalise each secondary
-            # granule to match its mean/std before merging.  Writing corrected
-            # arrays to temporary GeoTIFFs lets _feathered_mosaic reproject and
-            # distance-weight-blend them without modifying the originals.
-            with rasterio.open(band_files[0]) as ds0:
-                ref_arr = ds0.read(1).astype(np.float64)
-                ref_profile = ds0.profile.copy()
-            ref_arr[ref_arr == 0] = np.nan
+        # Load bands and compute ratios per granule so normalization operates on
+        # the actual signal (ratios) rather than individual bands.  Normalizing
+        # bands independently distorts ratios because each band gets a different
+        # correction factor; normalizing ratios preserves the relative mineralogy
+        # signal that percentile classification depends on.
+        granule_data: list[dict] = []
+        for b10_file in sorted(Path(tmpdir).glob("*_TIR_B10.tif")):
+            prefix = b10_file.stem.replace("_TIR_B10", "")
+            try:
+                with rasterio.open(b10_file) as ds:
+                    b10 = ds.read(1).astype(np.float64)
+                    profile = ds.profile.copy()
+                b10[b10 == 0] = np.nan
+                bands: dict[int, np.ndarray] = {}
+                for bnum in (12, 13, 14):
+                    bf = b10_file.parent / f"{prefix}_TIR_B{bnum}.tif"
+                    with rasterio.open(bf) as ds:
+                        arr = ds.read(1).astype(np.float64)
+                    arr[arr == 0] = np.nan
+                    bands[bnum] = arr
+                granule_data.append({
+                    "b10": b10,
+                    "silica":    band_ratio(bands[13], bands[14]),
+                    "carbonate": band_ratio(bands[13], bands[12]),
+                    "mafic":     band_ratio(bands[12], bands[13]),
+                    "profile": profile,
+                })
+            except Exception as exc:
+                print(f"  Warning: could not load granule {prefix}: {exc}", file=sys.stderr)
 
-            corrected_paths: list[Path] = [band_files[0]]
-            for idx, bf in enumerate(band_files[1:], start=1):
-                with rasterio.open(bf) as ds:
-                    src_arr = ds.read(1).astype(np.float64)
-                    src_profile = ds.profile.copy()
-                src_arr[src_arr == 0] = np.nan
-                normed = _normalise_to_reference(src_arr, ref_arr)
-                # Write corrected array back to a temp GeoTIFF (restoring 0 nodata).
-                tmp_path = Path(tmpdir) / f"normed_{idx}_B{band_num}.tif"
-                write_arr = normed.copy()
-                write_arr[~np.isfinite(write_arr)] = 0
-                src_profile.update(dtype=rasterio.float32)
-                with rasterio.open(tmp_path, "w", **src_profile) as dst:
-                    dst.write(write_arr.astype(np.float32), 1)
-                corrected_paths.append(tmp_path)
+        if not granule_data:
+            return download_aster(site, paths, interactive_login=False)
 
-            out_path = paths.aster_dir / f"{mosaic_id}_TIR_B{band_num}.tif"
-            _feathered_mosaic(corrected_paths, out_path)
+        ref = granule_data[0]
+
+        # Merge each ratio independently: normalize secondary granule ratios to
+        # the reference distribution, then feather-blend.
+        for ratio_name in ("silica", "carbonate", "mafic"):
+            ref_arr = ref[ratio_name]
+            ref_tmp = Path(tmpdir) / f"ref_{ratio_name}.tif"
+            _write_tmp(ref_arr, ref["profile"], ref_tmp)
+            corrected_paths: list[Path] = [ref_tmp]
+
+            for idx, g in enumerate(granule_data[1:], 1):
+                normed = _normalise_to_reference(g[ratio_name], ref_arr)
+                sec_tmp = Path(tmpdir) / f"sec_{idx}_{ratio_name}.tif"
+                _write_tmp(normed, g["profile"], sec_tmp)
+                corrected_paths.append(sec_tmp)
+
+            _feathered_mosaic(
+                corrected_paths,
+                paths.aster_dir / f"{mosaic_id}_ratio_{ratio_name}.tif",
+            )
+
+        # B10 merged unnormalized — used only for valid-pixel footprint computation,
+        # not for ratio derivation, so radiometric consistency across granules is
+        # not required.
+        b10_tmp_paths: list[Path] = []
+        for idx, g in enumerate(granule_data):
+            b10_tmp = Path(tmpdir) / f"b10_{idx}.tif"
+            _write_tmp(g["b10"], g["profile"], b10_tmp)
+            b10_tmp_paths.append(b10_tmp)
+        _feathered_mosaic(
+            b10_tmp_paths,
+            paths.aster_dir / f"{mosaic_id}_TIR_B10.tif",
+        )
 
     return mosaic_id
 
