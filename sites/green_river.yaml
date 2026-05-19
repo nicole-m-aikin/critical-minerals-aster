@@ -1,0 +1,22 @@
+# Green River Basin, WY — Trona/soda ash evaporite deposits
+# Industrial mineral (non-critical); trona beds are deeply buried, no surface expression.
+# Cleanest possible negative control: zero physical basis for TIR alteration signal.
+# Anchors the Energy/Industrial anti-correlation finding alongside Steamboat Springs.
+id: green_river
+name: "Green River Basin, WY"
+bbox_wgs84: [-109.80, 41.30, -109.20, 41.80]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/green_river_faults.geojson
+    type: faults
+    buffer_m: 500

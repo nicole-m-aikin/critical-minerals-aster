@@ -1,0 +1,2109 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.166426097543,
+            41.4534960275543
+          ],
+          [
+            -109.178221632095,
+            41.4424104387923
+          ],
+          [
+            -109.20033254531,
+            41.4198577827495
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.21797193789,
+            41.53551247474
+          ],
+          [
+            -109.227005493406,
+            41.5350127744546
+          ],
+          [
+            -109.243539064363,
+            41.5317932238623
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.250009375131,
+            41.4852806157768
+          ],
+          [
+            -109.260919740346,
+            41.4787307239634
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.178053736969,
+            41.4647876743034
+          ],
+          [
+            -109.179686495066,
+            41.4631473412216
+          ],
+          [
+            -109.181166659041,
+            41.462002924614
+          ],
+          [
+            -109.190520684941,
+            41.4535761984727
+          ],
+          [
+            -109.214104130044,
+            41.4302606016143
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.242325888674,
+            41.5375343176949
+          ],
+          [
+            -109.243142270417,
+            41.5370765579969
+          ],
+          [
+            -109.246644309433,
+            41.5359054593878
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.207137494691,
+            41.5688527717607
+          ],
+          [
+            -109.216071904046,
+            41.5630811802428
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.233146956101,
+            41.5836271037831
+          ],
+          [
+            -109.235153562477,
+            41.5836080351112
+          ],
+          [
+            -109.240601161956,
+            41.5827726330769
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.226151021297,
+            41.5291190882776
+          ],
+          [
+            -109.2273183865,
+            41.5267043960508
+          ],
+          [
+            -109.23423856997,
+            41.5209556865185
+          ],
+          [
+            -109.244615025986,
+            41.5129029199026
+          ],
+          [
+            -109.248078929722,
+            41.510598859026
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.307620663634,
+            41.4562200125368
+          ],
+          [
+            -109.311115030139,
+            41.4554151066488
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.2445388758,
+            41.4876152193226
+          ],
+          [
+            -109.250009375131,
+            41.4852806157768
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.294886865716,
+            41.4469311255223
+          ],
+          [
+            -109.298785608847,
+            41.4442570012679
+          ],
+          [
+            -109.305728573592,
+            41.4400112099342
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.265764507386,
+            41.4930016483336
+          ],
+          [
+            -109.268228876367,
+            41.491079023271
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.216071904046,
+            41.5630811802428
+          ],
+          [
+            -109.233597324672,
+            41.559468720692
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.226151021297,
+            41.5291190882776
+          ],
+          [
+            -109.230362622488,
+            41.527803032281
+          ],
+          [
+            -109.24459203181,
+            41.5241371594569
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.244416527055,
+            41.5264870033151
+          ],
+          [
+            -109.24459203181,
+            41.5241371594569
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.261422983754,
+            41.5276314190749
+          ],
+          [
+            -109.27549965702,
+            41.5226952175801
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.248078929722,
+            41.510598859026
+          ],
+          [
+            -109.25202349861,
+            41.5071427649749
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.278994349614,
+            41.4566014624276
+          ],
+          [
+            -109.294886865716,
+            41.4469311255223
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.262063831098,
+            41.5317474597109
+          ],
+          [
+            -109.273607468163,
+            41.527627599211
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.279497928094,
+            41.4477436518424
+          ],
+          [
+            -109.280779707223,
+            41.4467632653571
+          ],
+          [
+            -109.287180971682,
+            41.4410144684822
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.206786476197,
+            41.5752766968308
+          ],
+          [
+            -109.212325618495,
+            41.5759709834796
+          ],
+          [
+            -109.21987137705,
+            41.575875636824
+          ],
+          [
+            -109.231476145368,
+            41.5736669631817
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.246354424888,
+            41.5311828823288
+          ],
+          [
+            -109.249032452768,
+            41.5305801676917
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.260919740346,
+            41.4787307239634
+          ],
+          [
+            -109.259874485834,
+            41.4776053761375
+          ],
+          [
+            -109.254793170819,
+            41.4754004568507
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.27339422159,
+            41.4536450393417
+          ],
+          [
+            -109.279497928094,
+            41.4477436518424
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.20893036581,
+            41.5812886421752
+          ],
+          [
+            -109.21794103315,
+            41.5796712399938
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.267130224198,
+            41.4861999784523
+          ],
+          [
+            -109.27203607578,
+            41.4815917815687
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.25202349861,
+            41.5071427649749
+          ],
+          [
+            -109.263437445897,
+            41.5013368225218
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.25534183754,
+            41.5644659895766
+          ],
+          [
+            -109.266519235956,
+            41.5623488249558
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.296664454696,
+            41.4824119642558
+          ],
+          [
+            -109.30063948815,
+            41.480092609952
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.216071904046,
+            41.5630811802428
+          ],
+          [
+            -109.219497667112,
+            41.5592665063918
+          ],
+          [
+            -109.229263789758,
+            41.5455603768257
+          ],
+          [
+            -109.23420786196,
+            41.541722818353
+          ],
+          [
+            -109.242325888674,
+            41.5375343176949
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.24459203181,
+            41.5241371594569
+          ],
+          [
+            -109.246682645038,
+            41.515897450555
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.208089520246,
+            41.7922438638528
+          ],
+          [
+            -109.196484838166,
+            41.7923888030415
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.280726243989,
+            41.4667715446101
+          ],
+          [
+            -109.307620663634,
+            41.4562200125368
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.230621528631,
+            41.5838254602372
+          ],
+          [
+            -109.233146956101,
+            41.5836271037831
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.252328256561,
+            41.5522551968721
+          ],
+          [
+            -109.254548476024,
+            41.5520186836093
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.271166341295,
+            41.465760632759
+          ],
+          [
+            -109.295024175004,
+            41.4548772163961
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.263437445897,
+            41.5013368225218
+          ],
+          [
+            -109.26639775139,
+            41.4986550850515
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.282137675167,
+            41.4837356688133
+          ],
+          [
+            -109.296664454696,
+            41.4824119642558
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.254999129361,
+            41.4928070914083
+          ],
+          [
+            -109.267130224198,
+            41.4861999784523
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.295024175004,
+            41.4548772163961
+          ],
+          [
+            -109.303920323315,
+            41.4490940877613
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.260919740346,
+            41.4787307239634
+          ],
+          [
+            -109.269876913909,
+            41.4748397002647
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.246644309433,
+            41.5359054593878
+          ],
+          [
+            -109.256127983788,
+            41.5331360074174
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.175894134923,
+            41.5431989540805
+          ],
+          [
+            -109.203361085034,
+            41.5349326060914
+          ],
+          [
+            -109.221878384973,
+            41.5301795583375
+          ],
+          [
+            -109.226151021297,
+            41.5291190882776
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.249032452768,
+            41.5305801676917
+          ],
+          [
+            -109.255448986791,
+            41.5288940808897
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.219535611051,
+            41.5826657700245
+          ],
+          [
+            -109.21794103315,
+            41.5796712399938
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.275957824764,
+            41.4339877163387
+          ],
+          [
+            -109.299235831891,
+            41.4204721394385
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.220252730752,
+            41.5907300103458
+          ],
+          [
+            -109.220023875052,
+            41.5868008851047
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.172300226101,
+            41.5858928726463
+          ],
+          [
+            -109.207137494691,
+            41.5688527717607
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.250542924105,
+            41.5524573759676
+          ],
+          [
+            -109.252328256561,
+            41.5522551968721
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.249368440651,
+            41.5007722415246
+          ],
+          [
+            -109.265764507386,
+            41.4930016483336
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.295024175004,
+            41.4548772163961
+          ],
+          [
+            -109.306048972111,
+            41.4535954751622
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.242325888674,
+            41.5375343176949
+          ],
+          [
+            -109.243539064363,
+            41.5317932238623
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.219535611051,
+            41.5826657700245
+          ],
+          [
+            -109.225654626644,
+            41.5816091180319
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.27203607578,
+            41.4815917815687
+          ],
+          [
+            -109.279909855059,
+            41.4739508744219
+          ],
+          [
+            -109.283839113061,
+            41.470872385312
+          ],
+          [
+            -109.289294297016,
+            41.4677824568548
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.254793170819,
+            41.4754004568507
+          ],
+          [
+            -109.248239311339,
+            41.4732222341783
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.220023875052,
+            41.5868008851047
+          ],
+          [
+            -109.222991827903,
+            41.58605703032
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.220023875052,
+            41.5868008851047
+          ],
+          [
+            -109.219535611051,
+            41.5826657700245
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.256127983788,
+            41.5331360074174
+          ],
+          [
+            -109.259202721173,
+            41.5323806979554
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.248467648712,
+            41.5525832552405
+          ],
+          [
+            -109.250542924105,
+            41.5524573759676
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.268228876367,
+            41.491079023271
+          ],
+          [
+            -109.282137675167,
+            41.4837356688133
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.234902045876,
+            41.554543967551
+          ],
+          [
+            -109.248467648712,
+            41.5525832552405
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.207137494691,
+            41.5688527717607
+          ],
+          [
+            -109.241478731547,
+            41.5658507026928
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.275095543601,
+            41.4834419286828
+          ],
+          [
+            -109.282137675167,
+            41.4837356688133
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.233597324672,
+            41.559468720692
+          ],
+          [
+            -109.241112578237,
+            41.5582365959319
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.246682645038,
+            41.515897450555
+          ],
+          [
+            -109.247132820471,
+            41.5132500621857
+          ],
+          [
+            -109.248078929722,
+            41.510598859026
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.243539064363,
+            41.5317932238623
+          ],
+          [
+            -109.244416527055,
+            41.5264870033151
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.279497928094,
+            41.4477436518424
+          ],
+          [
+            -109.294886865716,
+            41.4469311255223
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.243539064363,
+            41.5317932238623
+          ],
+          [
+            -109.246354424888,
+            41.5311828823288
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.26639775139,
+            41.4986550850515
+          ],
+          [
+            -109.296664454696,
+            41.4824119642558
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.254793170819,
+            41.4754004568507
+          ],
+          [
+            -109.271166341295,
+            41.465760632759
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.192694637573,
+            41.5520566883414
+          ],
+          [
+            -109.216705309747,
+            41.5468420788088
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.255448986791,
+            41.5288940808897
+          ],
+          [
+            -109.258043061718,
+            41.5280739225547
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.21794103315,
+            41.5796712399938
+          ],
+          [
+            -109.227905417572,
+            41.5776456681596
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.241478731547,
+            41.5658507026928
+          ],
+          [
+            -109.25534183754,
+            41.5644659895766
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.31152707658,
+            41.4415676273139
+          ],
+          [
+            -109.314105863079,
+            41.4485333319096
+          ],
+          [
+            -109.315379987664,
+            41.4545606111717
+          ],
+          [
+            -109.315517302342,
+            41.4597639060511
+          ],
+          [
+            -109.285234711432,
+            41.5576643709515
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.24481185495,
+            41.6785020997068
+          ],
+          [
+            -109.244216718379,
+            41.6808214246407
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.228704910989,
+            41.7683528505238
+          ],
+          [
+            -109.227774080285,
+            41.7714694027955
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.236235658695,
+            41.7281425415369
+          ],
+          [
+            -109.236090671507,
+            41.7307594142543
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.227774080285,
+            41.7714694027955
+          ],
+          [
+            -109.222913863119,
+            41.8027264951669
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.28871467974,
+            41.3887678753329
+          ],
+          [
+            -109.31152707658,
+            41.4415676273139
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.247276281422,
+            41.673707049672
+          ],
+          [
+            -109.24481185495,
+            41.6785020997068
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.241416500755,
+            41.6949204845002
+          ],
+          [
+            -109.239600494425,
+            41.7110604027018
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.285234711432,
+            41.5576643709515
+          ],
+          [
+            -109.282053061952,
+            41.5686544647543
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.285525535615,
+            41.3756947778456
+          ],
+          [
+            -109.28871467974,
+            41.3887678753329
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.282053061952,
+            41.5686544647543
+          ],
+          [
+            -109.260513975823,
+            41.6428538658328
+          ],
+          [
+            -109.247276281422,
+            41.673707049672
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.236090671507,
+            41.7307594142543
+          ],
+          [
+            -109.228704910989,
+            41.7683528505238
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.239600494425,
+            41.7110604027018
+          ],
+          [
+            -109.236235658695,
+            41.7281425415369
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.275713916893,
+            41.3458139527191
+          ],
+          [
+            -109.277377162913,
+            41.3508455883533
+          ],
+          [
+            -109.277804416934,
+            41.3525049996622
+          ],
+          [
+            -109.278636039494,
+            41.3550608728129
+          ],
+          [
+            -109.283503700999,
+            41.3704685900548
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.244216718379,
+            41.6808214246407
+          ],
+          [
+            -109.241416500755,
+            41.6949204845002
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -109.283503700999,
+            41.3704685900548
+          ],
+          [
+            -109.285525535615,
+            41.3756947778456
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "WY",
+        "DESCRIPTION": "Thrust fault, concealed, (teeth on right from origin)",
+        "RuleID": 64,
+        "type": "faults"
+      }
+    }
+  ]
+}

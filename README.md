@@ -1,6 +1,6 @@
 # critical-minerals-aster
 
-Spectral alteration mapping across 15 critical mineral sites in the western US using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs spatial significance tests to determine where — and for which deposit types — the method produces signal above chance.
+Spectral alteration mapping across 30 critical mineral sites in the US using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs spatial significance tests to determine where — and for which deposit types — the method produces signal above chance.
 
 ---
 
@@ -11,30 +11,46 @@ Spectral alteration mapping across 15 critical mineral sites in the western US u
 3. Does the correlation vary by commodity type — and does that pattern make geological sense?
 4. Are observed hit rates statistically significant above the null hypothesis of random deposit distribution?
 5. Which Earth MRI deposit categories are TIR-detectable, and which are systematically invisible to this method?
+6. Do non-critical bulk deposits (stone, sand, gravel) inflate headline hit rates — and is that signal geologically meaningful in its own right?
 
 ---
 
-## Study sites (15)
+## Study sites (30)
 
-| Site | State | Primary Deposit Type | Significance |
+| Site | State | Primary Deposit Type | Critical-only significance |
 |---|---|---|---|
-| Yerington | NV | Porphyry Cu | p = 0.000048 ** |
-| Mountain Pass | CA | Carbonatite REE | p = 0.001 ** |
-| Jerome | AZ | VMS Cu-Zn-Ag | p = 0.010 * |
-| McDermitt | NV/OR | Caldera (Li, Hg, Au) | p = 0.013 * |
-| Silver Peak | NV | Li brine / epithermal | — |
+| Bisbee | AZ | Skarn / VMS Cu-Zn | p < 0.001 ** |
+| McDermitt Caldera | NV/OR | Caldera (Li, Hg, Au) | p = 0.010 * |
+| Mountain Pass | CA | Carbonatite REE | p = 0.008 * |
+| Hanover-Fierro | NM | Cu-Mo-Zn skarn | p = 0.019 * |
+| Yerington | NV | Porphyry Cu | p < 0.001 ** |
+| Jerome | AZ | VMS Cu-Zn-Ag | p = 0.003 * |
+| Thacker Pass | NV | Li clay | borderline (p = 0.080, n = 26) |
 | Jerritt Canyon | NV | Carlin-type Au | — |
-| Tonopah | NV | Epithermal Au-Ag | — |
+| Viburnum Trend | MO | MVT Pb-Zn | — |
 | Darwin | CA | Polymetallic skarn | — |
-| Stillwater | MT | PGM layered intrusion | — |
-| Marysvale | UT | Uranium / epithermal | — |
-| Bear Lodge | WY | Carbonatite REE | — |
-| Oatman | AZ | Low-sulfidation Au | anti-correlated |
-| Goldfield | NV | Epithermal Au | anti-correlated |
-| Climax | CO | Porphyry Mo | anti-correlated |
+| Lemhi Pass | ID/MT | REE phosphate veins | — |
+| Carlin Trend | NV | Carlin-type Au | — |
+| Ajo | AZ | Porphyry Cu | — |
+| Gas Hills | WY | Roll-front U | — |
+| Stillwater Complex | MT | PGM layered intrusion | — |
+| Globe-Miami | AZ | Porphyry Cu | — |
+| Tonopah–Manhattan | NV | Epithermal Au-Ag | — |
+| Ely (Robinson) | NV | Porphyry Cu-Mo | — |
+| Elk Creek | NE | Carbonatite (Nb, REE) | — |
+| Green River Basin | WY | Trona / industrial minerals | false positive (aggregate only) |
+| Silver Peak | NV | Li brine / epithermal | anti-correlated |
+| Marysvale | UT | Uranium / epithermal | anti-correlated |
+| Bear Lodge | WY | Carbonatite REE | anti-correlated |
+| Bagdad | AZ | Porphyry Cu / skarn | anti-correlated |
+| Oatman | NV/AZ | Low-sulfidation Au | anti-correlated |
 | Steamboat Springs | NV | Geothermal / Au-Ag | anti-correlated |
+| Pea Ridge | MO | IOCG (Fe-Cu-Au) | anti-correlated |
+| Goldfield–Cuprite | NV | Epithermal Au | anti-correlated |
+| Bingham Canyon | UT | Porphyry Cu-Mo-Au | anti-correlated |
+| Climax | CO | Porphyry Mo | anti-correlated |
 
-Significance = one-sided binomial test, H₀: hit rate ≤ zone coverage fraction. Anti-correlated sites have deposits actively avoiding anomaly zones (p ≈ 1).
+Significance = one-sided binomial + spatial permutation tests on **critical-mineral deposits only** (Non-Critical earth_mri_category excluded). Anti-correlated sites have p ≈ 1 — deposits actively avoid anomaly zones. Green River was significant in the all-deposits test (p = 0.005) but has only 1 critical deposit (0 hits); the headline rate was driven entirely by aggregate/industrial deposits.
 
 ---
 
@@ -43,9 +59,9 @@ Significance = one-sided binomial test, H₀: hit rate ≤ zone coverage fractio
 | Dataset | Source | Notes |
 |---|---|---|
 | ASTER L1T (v004) | NASA EarthData / LP DAAC | TIR bands B10–B14, 90 m resolution |
-| MRDS national deposit database | USGS mrdata.usgs.gov | ~5,000 deposits across 15 bboxes |
-| USGS Quaternary Faults | USGS QFAULTS REST API | 13 sites |
-| USGS SGMC fault data | USGS FeatureServer | Bear Lodge, Jerome (all-age faults) |
+| MRDS national deposit database | USGS mrdata.usgs.gov | ~8,500 deposits across 30 bboxes |
+| USGS Quaternary Faults | USGS QFAULTS REST API | Most sites |
+| USGS SGMC fault data | USGS FeatureServer | Bear Lodge, Jerome, and others (all-age faults) |
 
 **Note on SWIR availability:** ASTER SWIR bands (B04–B09), standard for clay/argillic mapping, are not available in LP DAAC v004 for these areas. TIR bands (B10–B14, 8–12 µm) are used instead, which are well-suited for silica, carbonate, and mafic mineral mapping in arid volcanic terranes.
 
@@ -69,7 +85,7 @@ Classification thresholds are scene-relative; cross-site comparison of raw score
 
 ### Deposit validation
 
-MRDS deposits within each scene bbox are spatially joined to strong anomaly zones. Hit rate = fraction of deposits falling inside a zone. Results are broken down by commodity group, Earth MRI category, and USGS mineral system.
+MRDS deposits within each scene bbox are spatially joined to strong anomaly zones. Hit rate = fraction of deposits falling inside a zone. Results are broken down by commodity group, Earth MRI category, and USGS mineral system. The primary significance metric uses **critical-mineral deposits only** (Non-Critical excluded).
 
 ### Statistical significance
 
@@ -79,7 +95,7 @@ Two complementary tests evaluate whether observed hit rates exceed chance:
 
 **Spatial permutation test** — Monte Carlo (10,000 iterations). The anomaly zone union is rasterised onto a 1,000×1,000 grid; each iteration samples n_deposit random grid cells and counts zone hits. Returns P(random hits ≥ observed). Mathematically equivalent to placing random points uniformly in the bbox.
 
-Both tests agree throughout (p-values never diverge by more than 0.01), confirming consistency.
+Both tests agree throughout (p-values never diverge by more than 0.02), confirming consistency. Tests are run twice: once on all MRDS deposits and once on critical-mineral deposits only (Non-Critical excluded).
 
 ### Structure proximity
 
@@ -91,26 +107,34 @@ MRDS deposits are annotated with distance to the nearest mapped fault. Deposits 
 
 ### Site-level
 
-4 of 15 sites show hit rates significantly above chance. 5 sites are anti-correlated — deposits actively avoid the anomaly zones. The anti-correlations are geologically coherent: Climax (deep porphyry Mo, no surface expression), Goldfield/Oatman (epithermal Au with eroded/covered alteration), Steamboat Springs (active geothermal surface ≠ MRDS deposit locations).
+**6 of 30 sites** show critical-mineral hit rates significantly above chance (binomial + permutation, p < 0.05). 10 sites are anti-correlated — deposits actively avoid the anomaly zones. The anti-correlations are geologically coherent: Climax (deep porphyry Mo, no surface expression), Goldfield/Oatman (epithermal Au with eroded/covered alteration), Steamboat Springs (active geothermal surface ≠ MRDS deposit locations).
 
-### By Earth MRI category (national pooled)
+### Non-critical inflation
 
-| Category | Deposits | Hits | Expected | Ratio | TIR-detectable? |
-|---|---|---|---|---|---|
-| Base Metals | 951 | 92 | 85 | 1.08 | Yes — porphyry/skarn/VMS halos |
-| Battery Metals – Co/Ni | 202 | 20 | 18 | 1.12 | Maybe |
-| PGM | 25 | 3 | 2.4 | 1.26 | Yes — mafic ratio |
-| REE | 28 | 3 | 3.5 | 0.87 | Yes (carbonatite), but small n |
-| Gold/Silver | 2145 | 147 | 212 | 0.69 | No — placer/Carlin/epithermal |
-| Energy | 289 | 11 | 30 | 0.37 | No — roll-front U |
-| Battery Metals – Li/Brine | 9 | 0 | 0.9 | 0.00 | No — brine-hosted |
-| Industrial | 214 | 11 | 24 | 0.47 | No — sand/gravel/stone |
+Non-critical deposits (stone, sand, gravel) have a **higher** pooled hit rate (9.8%) than critical minerals (7.0%). ASTER TIR detects silica and carbonate enrichment — exactly the mineralogy that makes rock commercially useful as aggregate. This inflates headline hit rates at sites with dense bulk-mineral MRDS coverage.
 
-No category reaches national significance individually — the signal is site-specific rather than category-wide. The strongest per-site results are Base Metals at Mountain Pass (ratio 2.53, p < 0.001) and Yerington (ratio 2.50, p = 0.001).
+**Green River** is the clearest example: 52 of 53 deposits are non-critical, producing a 15.1% all-deposits hit rate (p = 0.005). Critical-only: 1 deposit, 0 hits, p = 1.0. The apparent significance was illusory. **Thacker Pass** is a genuine borderline case: 19.2% critical hit rate but only 26 critical deposits, leaving it underpowered (p = 0.080).
 
-### Dilution finding
+The stone/sand/gravel correlation is also a **real economic signal** for aggregate quarry siting — ASTER TIR can screen for silicified host rock. For that application, use the all-deposits and commodity-level rows in the CSVs rather than the critical-only results.
 
-The whole MRDS catalog dilutes the signal, but the main diluter is **within-category heterogeneity** rather than cross-category mixing. "Gold/Silver" spans placer/Carlin (TIR-invisible) and caldera-hosted/VMS-associated Au (TIR-visible): Jerome and McDermitt both show significant Gold/Silver hits because those deposits are co-spatial with the alteration system. Filtering by mineral system helps but reduces n too much for most individual sites.
+### By Earth MRI category (national pooled, 30 sites)
+
+| Category | Deposits | Hits | Hit rate | TIR-detectable? |
+|---|---|---|---|---|
+| REE | ~120 | ~30 | ~27% avg | Yes — carbonatite + veins |
+| Battery Metals – Co/Ni | ~200 | ~25 | ~13% avg | Yes — mafic/ultramafic halos |
+| Base Metals | ~1,200 | ~100 | ~9% avg | Yes — porphyry/skarn/VMS halos |
+| PGM | ~30 | ~4 | ~12% avg | Yes — mafic ratio |
+| Gold/Silver | ~2,500 | ~160 | ~6% avg | Partial — caldera/VMS yes, Carlin/placer no |
+| Energy | ~400 | ~15 | ~4% avg | No — roll-front U, no surface expression |
+| Industrial | ~400 | ~20 | ~5% avg | No |
+| Non-Critical (aggregate) | ~1,000 | ~100 | ~10% avg | Yes — but different use case |
+
+No category reaches national significance individually; the signal is site-specific.
+
+### Structure proximity
+
+The 6 significant sites span a wide range of mean deposit–fault distances (1–20 km), so structural proximity alone does not predict TIR detectability. The signal is more strongly driven by deposit type and host-rock alteration style.
 
 ---
 
@@ -130,8 +154,9 @@ National synthesis figures in `figures/`:
 
 | Figure | Content |
 |---|---|
-| `05_national_hit_rates.png` | Stacked bar by Earth MRI category across all sites |
-| `06_structure_hit_rate.png` | Log-scale scatter: mean fault distance vs hit rate |
+| `05_national_hit_rates.png` | Stacked bar by Earth MRI category, critical minerals only, sites ordered by critical hit rate |
+| `06_structure_hit_rate.png` | Log-scale scatter: mean fault distance vs critical-mineral hit rate; red = significant sites |
+| `07_hitrate_comparison.png` | Paired dot plot: all-deposits vs critical-only hit rate per site; exposes aggregate inflation |
 | `index.html` | Sortable site gallery (no external deps) |
 
 ---
@@ -141,7 +166,7 @@ National synthesis figures in `figures/`:
 ```
 critical-minerals-aster/
 ├── sites/
-│   ├── index.yaml                   # list of 15 site IDs
+│   ├── index.yaml                   # list of 30 site IDs
 │   └── {site_id}.yaml               # bbox, granule, classification params, structure layers
 ├── src/
 │   └── critical_minerals_aster/
@@ -153,7 +178,7 @@ critical-minerals-aster/
 │       ├── mrds.py                  # MRDS CSV → GeoDataFrame, Earth MRI / mineral-system classifiers
 │       ├── structure.py             # distance-to-fault annotation, buffer flags
 │       ├── significance.py          # binomial + spatial permutation p-values
-│       ├── synthesis.py             # national summary CSV + figures
+│       ├── synthesis.py             # national summary CSV + figures (05, 06, 07)
 │       ├── terrain.py               # hillshade DEM overlay
 │       └── pipeline.py             # run_site() / run_batch() orchestration
 ├── docs/
@@ -169,12 +194,19 @@ critical-minerals-aster/
 │   └── 05_national_synthesis.ipynb
 ├── scripts/
 │   ├── synthesize_national.py
-│   ├── compute_significance.py            # whole-catalog binomial + permutation, all sites
-│   ├── compute_significance_filtered.py   # TIR-detectable systems only
-│   ├── compute_significance_by_category.py # per-(site × Earth MRI category)
+│   ├── compute_significance.py                 # whole-catalog binomial + permutation, all sites
+│   ├── compute_significance_filtered.py        # TIR-detectable systems only
+│   ├── compute_significance_by_category.py     # per-(site × Earth MRI category)
+│   ├── significance_critical_only.py           # critical-mineral-only retest, excludes Non-Critical
+│   ├── fetch_new_site_structures.py            # batch USGS fault fetch for new sites
 │   ├── download_usgs_faults.py
 │   └── download_sgmc_structures.py
 ├── results/                         # generated per-site CSVs + results.duckdb
+│   ├── {site_id}_summary.csv
+│   ├── {site_id}_provenance.json
+│   ├── significance_critical_only.csv          # critical-only p-values, all 30 sites
+│   ├── national_summary.csv
+│   └── results.duckdb
 ├── tests/
 ├── data/                            # not committed (ASTER rasters, MRDS CSV, structure GeoJSONs)
 ├── figures/
@@ -210,23 +242,23 @@ python -m critical_minerals_aster run --site mcdermitt
 # Download from EarthData then process
 python -m critical_minerals_aster run --site mcdermitt --download
 
-# All 15 sites in parallel (4 workers, ~90 s)
-python -m critical_minerals_aster run-batch --all --workers 4
+# All 30 sites in batch
+python -m critical_minerals_aster run-batch --all-sites
 
-# Skip already-processed sites
-python -m critical_minerals_aster run-batch --all --workers 4 --skip-existing
-
-# Regenerate national summary + synthesis figures
-python scripts/synthesize_national.py
+# Regenerate national summary + synthesis figures (05, 06, 07)
+python -m critical_minerals_aster synthesize
 ```
 
 ### 4. Significance tests
 
 ```bash
-# Whole-catalog: binomial + permutation for all 15 sites
+# Whole-catalog: binomial + permutation for all 30 sites
 python scripts/compute_significance.py
 
-# TIR-detectable mineral systems only (filters MRDS before testing)
+# Critical-mineral-only retest (excludes stone/sand/gravel from denominator)
+python scripts/significance_critical_only.py
+
+# TIR-detectable mineral systems only
 python scripts/compute_significance_filtered.py
 
 # Per-(site × Earth MRI category) binomial test + national pooled test
@@ -255,6 +287,7 @@ print(con.execute(\"\"\"
 - **Scene-relative thresholds:** Percentile classification is per-scene; don't compare raw scores across sites.
 - **MRDS uncertainty:** Deposit locations are report-derived and may be offset from true geology.
 - **Significance null model:** Both tests assume deposits are uniformly distributed within the bbox. Spatial clustering of real deposits means p-values are conservative — the true null distribution is not uniform.
+- **Non-critical inflation:** Sites with dense aggregate/stone MRDS coverage (Green River, Silver Peak, Marysvale) show inflated all-deposits hit rates. Use `significance_critical_only.csv` for critical-mineral conclusions.
 - **Anti-correlations are informative:** p ≈ 1 at a site means the method is physically incapable of detecting the dominant deposit type there, not that the zones are wrong.
 
 ---

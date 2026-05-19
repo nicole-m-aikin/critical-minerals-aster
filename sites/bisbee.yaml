@@ -1,0 +1,23 @@
+# Bisbee, AZ — Cu skarn + porphyry Cu (Lavender Pit / Warren district)
+# Opens the skarn deposit class: calc-silicate alteration products (pyroxene, garnet,
+# wollastonite alteration to epidote/chlorite) produce a TIR signature distinct from
+# the phyllic/argillic halo of pure porphyry Cu. Co-spatial porphyry center adds complexity.
+# Arid Sonoran setting = minimal vegetation interference; expected positive.
+id: bisbee
+name: "Bisbee, AZ"
+bbox_wgs84: [-110.15, 31.25, -109.65, 31.70]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/bisbee_faults.geojson
+    type: faults
+    buffer_m: 500

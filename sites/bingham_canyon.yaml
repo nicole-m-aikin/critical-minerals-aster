@@ -1,0 +1,23 @@
+# Bingham Canyon, UT — Kennecott porphyry Cu-Mo-Au (Rio Tinto)
+# World's largest open-pit mine; textbook phyllic/argillic/propylitic alteration halo
+# fully exposed at surface. Unambiguous positive control — if this doesn't register,
+# the method has a systematic flaw. Provides the highest-n porphyry confidence anchor.
+# Note: active mine with large waste dumps may add spectral complexity to margins of bbox.
+id: bingham_canyon
+name: "Bingham Canyon, UT"
+bbox_wgs84: [-112.35, 40.35, -111.90, 40.70]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/bingham_canyon_faults.geojson
+    type: faults
+    buffer_m: 500

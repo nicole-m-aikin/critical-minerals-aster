@@ -1,0 +1,23 @@
+# Pea Ridge, MO — Magnetite-apatite REE deposit (iron-oxide type, Washington County)
+# Iron-oxide Cu-Au (IOCG) affinity; strong Fe-oxide and apatite mineralogy expected to
+# produce a TIR signal. Tests whether Mountain Pass REE result extends to IOCG-style REE.
+# Caveats: Missouri vegetation cover will degrade TIR quality; deposit mined from deep shafts
+# with limited surface alteration expression — interpret null result cautiously.
+id: pea_ridge
+name: "Pea Ridge, MO"
+bbox_wgs84: [-90.90, 37.70, -90.50, 38.10]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/pea_ridge_faults.geojson
+    type: faults
+    buffer_m: 500

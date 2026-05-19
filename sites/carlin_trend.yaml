@@ -1,0 +1,22 @@
+# Carlin Trend, NV — Carlin-type Au deposits (Goldstrike/Bootstrap/Meikle area)
+# Definitive TIR-invisible deposit type: Au is submicron, disseminated in silicified limestone
+# with no diagnostic surface alteration mineralogy in the 8–12 µm range.
+# Expected result: anti-correlated or null. Strong negative control alongside Goldfield/Oatman.
+id: carlin_trend
+name: "Carlin Trend, NV"
+bbox_wgs84: [-116.60, 40.90, -116.10, 41.50]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/carlin_trend_faults.geojson
+    type: faults
+    buffer_m: 500

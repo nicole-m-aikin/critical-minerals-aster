@@ -1,0 +1,20 @@
+# Ely (Robinson), NV — Porphyry Cu-Mo deposit (KGHM/Robinson Mine)
+# Large porphyry Cu-Mo in the Basin and Range; alteration zones well-exposed in high desert
+id: ely_robinson
+name: "Ely (Robinson), NV"
+bbox_wgs84: [-115.25, 39.00, -114.65, 39.45]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/ely_robinson_faults.geojson
+    type: faults
+    buffer_m: 500

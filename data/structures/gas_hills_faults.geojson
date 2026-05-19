@@ -1,0 +1,505 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 101748,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.77390258979636,
+            42.679858411106004
+          ],
+          [
+            -107.77117916555287,
+            42.680441746843435
+          ],
+          [
+            -107.76947022043784,
+            42.68123952807917
+          ],
+          [
+            -107.7664334485519,
+            42.68205175271851
+          ],
+          [
+            -107.76379335922064,
+            42.68320397896685
+          ],
+          [
+            -107.76059658570452,
+            42.684241206008885
+          ],
+          [
+            -107.7585748508008,
+            42.68487842973951
+          ],
+          [
+            -107.75522529361774,
+            42.68585510185289
+          ],
+          [
+            -107.7526618736994,
+            42.686148988705646
+          ],
+          [
+            -107.74946510287819,
+            42.68678954996221
+          ],
+          [
+            -107.74783227381378,
+            42.687075670304644
+          ],
+          [
+            -107.74276656343389,
+            42.688117367063285
+          ],
+          [
+            -107.73872254834906,
+            42.68944461301702
+          ],
+          [
+            -107.73381683959934,
+            42.6910013109263
+          ],
+          [
+            -107.72646161371603,
+            42.69317579900836
+          ],
+          [
+            -107.71871026313177,
+            42.69503750993072
+          ],
+          [
+            -107.71146948710721,
+            42.69700588522734
+          ],
+          [
+            -107.70539652364698,
+            42.69821480775259
+          ],
+          [
+            -107.70149751461534,
+            42.69890927179045
+          ],
+          [
+            -107.69402061911333,
+            42.70047320372869
+          ],
+          [
+            -107.68677984308879,
+            42.70173990718663
+          ],
+          [
+            -107.68085966329544,
+            42.703124385699994
+          ],
+          [
+            -107.67524393602662,
+            42.70427663893319
+          ],
+          [
+            -107.6634791364334,
+            42.70612669929629
+          ],
+          [
+            -107.65685671214142,
+            42.70734006696783
+          ],
+          [
+            -107.6488303576043,
+            42.708610107695485
+          ],
+          [
+            -107.64575582323874,
+            42.70953346068022
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101748,
+        "fault_name": "North Granite Mountains fault system, western section",
+        "section_name": "",
+        "fault_id": "777",
+        "section_id": "",
+        "Location": "Wyoming",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "B",
+        "mapped_certainty": "Good",
+        "strike": "",
+        "total_fault_length": 28,
+        "cooperators": "U.S. Geological Survey",
+        "earthquake": "",
+        "last_review": 927072000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=777&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "777",
+        "Fault_ID_num": 777,
+        "Shape_Length": 15009.644559647368,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/777.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101749,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.64575582323874,
+            42.70953346068022
+          ],
+          [
+            -107.64197126226924,
+            42.708789582226686
+          ],
+          [
+            -107.6355010646887,
+            42.70834349405491
+          ],
+          [
+            -107.62560576520295,
+            42.70875131670776
+          ],
+          [
+            -107.6168699437123,
+            42.70853023831594
+          ],
+          [
+            -107.60588294411964,
+            42.708198615951275
+          ],
+          [
+            -107.59847494041675,
+            42.70825975616287
+          ],
+          [
+            -107.58974634227931,
+            42.70883924023402
+          ],
+          [
+            -107.5801560495786,
+            42.70815649773459
+          ],
+          [
+            -107.57111522040458,
+            42.70775986585302
+          ],
+          [
+            -107.56020433596429,
+            42.708969363180636
+          ],
+          [
+            -107.5531930139178,
+            42.71006384221902
+          ],
+          [
+            -107.54469331459958,
+            42.711666110053514
+          ],
+          [
+            -107.53744532240839,
+            42.71293281417288
+          ],
+          [
+            -107.53385966012088,
+            42.713909503176666
+          ],
+          [
+            -107.53323408773007,
+            42.714020061272564
+          ],
+          [
+            -107.53284463032516,
+            42.71442450884795
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101749,
+        "fault_name": "North Granite Mountains fault system, western section",
+        "section_name": "",
+        "fault_id": "777",
+        "section_id": "",
+        "Location": "Wyoming",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "B",
+        "mapped_certainty": "Good",
+        "strike": "",
+        "total_fault_length": 28,
+        "cooperators": "U.S. Geological Survey",
+        "earthquake": "",
+        "last_review": 927072000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=777&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "777",
+        "Fault_ID_num": 777,
+        "Shape_Length": 12745.883563319594,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/777.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101750,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.64575582323874,
+            42.70953346068022
+          ],
+          [
+            -107.64268073012109,
+            42.71044903416047
+          ],
+          [
+            -107.63831670908094,
+            42.71142572528767
+          ],
+          [
+            -107.62942810931328,
+            42.71350466282054
+          ],
+          [
+            -107.6234312610054,
+            42.71465302919589
+          ],
+          [
+            -107.61431376601176,
+            42.71609474325535
+          ],
+          [
+            -107.60940028683483,
+            42.71730421280532
+          ],
+          [
+            -107.60301453897581,
+            42.71885702787719
+          ],
+          [
+            -107.59981777713774,
+            42.719890380730675
+          ],
+          [
+            -107.59552987394488,
+            42.72189707818636
+          ],
+          [
+            -107.59303479875167,
+            42.72230153579833
+          ],
+          [
+            -107.59170753702108,
+            42.72224820671031
+          ],
+          [
+            -107.58726684836468,
+            42.7225954488126
+          ],
+          [
+            -107.58227725493373,
+            42.723110472149614
+          ],
+          [
+            -107.57697431655525,
+            42.72282438189171
+          ],
+          [
+            -107.57322809119053,
+            42.722488841251796
+          ],
+          [
+            -107.56900907440689,
+            42.721710518674364
+          ],
+          [
+            -107.56613287458136,
+            42.72065774629893
+          ],
+          [
+            -107.56184496510029,
+            42.71951331231237
+          ],
+          [
+            -107.5556881097723,
+            42.71848332968019
+          ],
+          [
+            -107.54921791309005,
+            42.71756779618293
+          ],
+          [
+            -107.54367885343746,
+            42.7162516983126
+          ],
+          [
+            -107.53884925894175,
+            42.71522171170266
+          ],
+          [
+            -107.53424856236695,
+            42.7146495039799
+          ],
+          [
+            -107.53284463032516,
+            42.71442450884795
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101750,
+        "fault_name": "North Granite Mountains fault system, western section",
+        "section_name": "",
+        "fault_id": "777",
+        "section_id": "",
+        "Location": "Wyoming",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "B",
+        "mapped_certainty": "Good",
+        "strike": "",
+        "total_fault_length": 28,
+        "cooperators": "U.S. Geological Survey",
+        "earthquake": "",
+        "last_review": 927072000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=777&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "777",
+        "Fault_ID_num": 777,
+        "Shape_Length": 13099.933529887658,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/777.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101751,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.53284463032516,
+            42.71442450884795
+          ],
+          [
+            -107.53073901074022,
+            42.71408118188914
+          ],
+          [
+            -107.52645110125916,
+            42.71304730392435
+          ],
+          [
+            -107.52083592914917,
+            42.71252843476226
+          ],
+          [
+            -107.51678413824729,
+            42.712303449762004
+          ],
+          [
+            -107.50797997921804,
+            42.711559591964814
+          ],
+          [
+            -107.502440924057,
+            42.711502392277716
+          ],
+          [
+            -107.4980763469597,
+            42.71144519319794
+          ],
+          [
+            -107.48848605785227,
+            42.71201747402877
+          ],
+          [
+            -107.48458760757275,
+            42.71235694317
+          ],
+          [
+            -107.48131417811842,
+            42.71299029900206
+          ],
+          [
+            -107.47312782644269,
+            42.71505036087761
+          ],
+          [
+            -107.46915270944523,
+            42.71550816306622
+          ],
+          [
+            -107.46244639957371,
+            42.71670598831985
+          ],
+          [
+            -107.45379447264577,
+            42.717041595213686
+          ],
+          [
+            -107.44911710935303,
+            42.71727051380538
+          ],
+          [
+            -107.44357805688698,
+            42.71749943683257
+          ],
+          [
+            -107.44085408556947,
+            42.717946119852975
+          ],
+          [
+            -107.43655895632845,
+            42.71801059068975
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101751,
+        "fault_name": "North Granite Mountains fault system, western section",
+        "section_name": "",
+        "fault_id": "777",
+        "section_id": "",
+        "Location": "Wyoming",
+        "linetype": "Moderately Constrained",
+        "age": "undifferentiated Quaternary",
+        "dip_direction": "S",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:250,000",
+        "class": "B",
+        "mapped_certainty": "Good",
+        "strike": "",
+        "total_fault_length": 28,
+        "cooperators": "U.S. Geological Survey",
+        "earthquake": "",
+        "last_review": 927072000000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=777&section_id=",
+        "symbology": "undifferentiated Quaternary Moderately Constrained",
+        "ref_id": "777",
+        "Fault_ID_num": 777,
+        "Shape_Length": 10871.141990268481,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/777.pdf",
+        "type": "faults"
+      }
+    }
+  ]
+}

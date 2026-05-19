@@ -1,0 +1,20 @@
+# Bagdad, AZ — Porphyry Cu-Mo deposit (Freeport-McMoRan)
+# Large open-pit porphyry with well-developed phyllic/argillic alteration halo; surface-expressed
+id: bagdad
+name: "Bagdad, AZ"
+bbox_wgs84: [-113.45, 34.35, -112.95, 34.75]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/bagdad_faults.geojson
+    type: faults
+    buffer_m: 500

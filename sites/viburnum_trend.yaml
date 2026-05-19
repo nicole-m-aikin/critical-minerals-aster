@@ -1,0 +1,24 @@
+# Viburnum Trend, MO — Mississippi Valley Type Pb-Zn district (Old Lead Belt)
+# MVT deposits are entirely subsurface carbonate replacement with no surface alteration halo —
+# physically impossible for ASTER TIR to detect. Opens a new negative-control deposit class
+# alongside Carlin-type Au, roll-front U, and buried evaporite (Green River).
+# Caveats: Missouri forest cover will degrade TIR quality; dense MRDS coverage from
+# historic Pb-Zn mining may inflate baseline deposit density — apply TIR-filtered test.
+id: viburnum_trend
+name: "Viburnum Trend, MO"
+bbox_wgs84: [-91.40, 37.50, -90.90, 38.00]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/viburnum_trend_faults.geojson
+    type: faults
+    buffer_m: 500

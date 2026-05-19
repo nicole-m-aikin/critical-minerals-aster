@@ -1,0 +1,20 @@
+# Globe-Miami, AZ — Porphyry Cu district (Resolution, Miami, Inspiration, Pinto Valley)
+# Major district with multiple overlapping porphyry Cu centers; dense MRDS coverage expected
+id: globe_miami
+name: "Globe-Miami, AZ"
+bbox_wgs84: [-111.05, 33.20, -110.55, 33.65]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/globe_miami_faults.geojson
+    type: faults
+    buffer_m: 500

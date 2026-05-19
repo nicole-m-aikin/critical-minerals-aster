@@ -1,0 +1,23 @@
+# Elk Creek, NE — Carbonatite REE-Nb deposit (NioCorp)
+# Direct analog to Mountain Pass (carbonatite REE); tests whether MP result generalizes.
+# Caveats: Midwest location means higher vegetation cover than arid west and lower ASTER
+# granule density — check granule count before interpreting null result as deposit-type failure.
+# MRDS coverage for this specific deposit may be sparse; expect low n in significance test.
+id: elk_creek
+name: "Elk Creek, NE"
+bbox_wgs84: [-96.35, 40.10, -95.90, 40.50]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/elk_creek_faults.geojson
+    type: faults
+    buffer_m: 500

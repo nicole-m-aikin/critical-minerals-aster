@@ -1,0 +1,22 @@
+# Hanover-Fierro, NM — Cu-Pb-Zn skarn district (Grant County)
+# Second skarn site; extends skarn class beyond Arizona and adds Pb-Zn to the commodity mix.
+# Exposed in semi-arid Mogollon-Datil volcanic field with good TIR conditions.
+# Paired with Bisbee: if both are positive, skarn is a confirmed TIR-visible class.
+id: hanover_fierro
+name: "Hanover-Fierro, NM"
+bbox_wgs84: [-108.25, 32.65, -107.80, 33.05]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/hanover_fierro_faults.geojson
+    type: faults
+    buffer_m: 500

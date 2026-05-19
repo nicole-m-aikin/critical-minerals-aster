@@ -1,0 +1,23 @@
+# Lemhi Pass, ID/MT — REE-thorium vein district (Beaverhead/Lemhi Counties)
+# Third REE subtype after Mountain Pass (carbonatite) and Bear Lodge (alkalic intrusive).
+# Vein-scale mineralization: if TIR fires here, REE signal generalizes across deposit styles;
+# if null, confirms carbonatite/alkalic are the TIR-visible REE subtypes, veins are not.
+# Semi-arid terrain on the ID/MT divide; moderate vegetation, reasonable TIR conditions.
+id: lemhi_pass
+name: "Lemhi Pass, ID/MT"
+bbox_wgs84: [-114.15, 44.75, -113.65, 45.20]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/lemhi_pass_faults.geojson
+    type: faults
+    buffer_m: 500

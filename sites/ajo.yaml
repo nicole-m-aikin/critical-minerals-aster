@@ -1,0 +1,20 @@
+# Ajo, AZ — New Cornelia porphyry Cu deposit
+# Classic isolated porphyry Cu in arid Sonoran Desert; minimal vegetation = clean TIR signal
+id: ajo
+name: "Ajo, AZ"
+bbox_wgs84: [-113.10, 32.15, -112.60, 32.60]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/ajo_faults.geojson
+    type: faults
+    buffer_m: 500

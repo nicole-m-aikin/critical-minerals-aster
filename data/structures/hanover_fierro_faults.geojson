@@ -1,0 +1,566 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 55092,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.90823394536977,
+            32.65296065576168
+          ],
+          [
+            -107.90927720023171,
+            32.65212948396494
+          ],
+          [
+            -107.91062383502974,
+            32.65136597013503
+          ],
+          [
+            -107.91220184170896,
+            32.65057917431223
+          ],
+          [
+            -107.91326263168526,
+            32.65010798933331
+          ],
+          [
+            -107.9161603299922,
+            32.64902243886037
+          ],
+          [
+            -107.91758955679575,
+            32.64884607205485
+          ],
+          [
+            -107.91874523940875,
+            32.64869397777554
+          ],
+          [
+            -107.91910078810663,
+            32.64859637492895
+          ],
+          [
+            -107.91949734040567,
+            32.648462105792355
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55092,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 1411.5584349323474,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55093,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.89505674621492,
+            32.65974427737748
+          ],
+          [
+            -107.8974446577846,
+            32.65917395666027
+          ],
+          [
+            -107.89912168036771,
+            32.658815669224865
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55093,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 468.9133090245166,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55094,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.89505674621492,
+            32.65974427737748
+          ],
+          [
+            -107.89522086123078,
+            32.659551803201715
+          ],
+          [
+            -107.89600400530897,
+            32.65833739428178
+          ],
+          [
+            -107.89645327344381,
+            32.657237930925156
+          ],
+          [
+            -107.89656573622916,
+            32.65680686535139
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55094,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 426.13366135323383,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55095,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.88866481435348,
+            32.667269313858824
+          ],
+          [
+            -107.88896501425343,
+            32.66635653609574
+          ],
+          [
+            -107.88942429411212,
+            32.6648291157463
+          ],
+          [
+            -107.88989018107972,
+            32.66351575736289
+          ],
+          [
+            -107.89057244075822,
+            32.662376130701254
+          ],
+          [
+            -107.89141387022697,
+            32.661607855954244
+          ],
+          [
+            -107.89308104188466,
+            32.66068036829844
+          ],
+          [
+            -107.89505674621492,
+            32.65974427737748
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55095,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 1296.589204831414,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55096,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.8781035524251,
+            32.68044208267097
+          ],
+          [
+            -107.87895920402144,
+            32.67987743181887
+          ],
+          [
+            -107.88040451426185,
+            32.67869141704631
+          ],
+          [
+            -107.88209799757422,
+            32.67684880328494
+          ],
+          [
+            -107.88360780775034,
+            32.67472410198444
+          ],
+          [
+            -107.88374136028362,
+            32.67451398715309
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55096,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 1012.765598834588,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55097,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.87389038277568,
+            32.68824091730155
+          ],
+          [
+            -107.87482024868922,
+            32.68688782094026
+          ],
+          [
+            -107.87559089630346,
+            32.68526695174815
+          ],
+          [
+            -107.87595262990209,
+            32.68372530091975
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55097,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Moderately Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Moderately Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 645.500192865257,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55104,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.89912168036771,
+            32.658815669224865
+          ],
+          [
+            -107.90004049969822,
+            32.65857976295543
+          ],
+          [
+            -107.90108664713537,
+            32.65830528427245
+          ],
+          [
+            -107.9024942011844,
+            32.65746893611722
+          ],
+          [
+            -107.90325508680644,
+            32.65686198503497
+          ],
+          [
+            -107.90500530322058,
+            32.65553561435313
+          ],
+          [
+            -107.90660849506713,
+            32.654230544921724
+          ],
+          [
+            -107.90745314319953,
+            32.65360377630615
+          ],
+          [
+            -107.90823394536977,
+            32.65296065576168
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55104,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Well Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Well Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 1294.6850103360841,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55105,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.88374136028362,
+            32.67451398715309
+          ],
+          [
+            -107.88488007012765,
+            32.67281807623562
+          ],
+          [
+            -107.88633249143186,
+            32.670724230682325
+          ],
+          [
+            -107.88783593973913,
+            32.66839248274409
+          ],
+          [
+            -107.88866481435348,
+            32.667269313858824
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55105,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Well Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Well Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 1103.962358708824,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55106,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.87595262990209,
+            32.68372530091975
+          ],
+          [
+            -107.87597231109163,
+            32.68284679309442
+          ],
+          [
+            -107.87612993667791,
+            32.6822809726492
+          ],
+          [
+            -107.8765676929024,
+            32.68171887768868
+          ],
+          [
+            -107.87698303885546,
+            32.681186871271414
+          ],
+          [
+            -107.87765640611099,
+            32.68069853812668
+          ],
+          [
+            -107.8781035524251,
+            32.68044208267097
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55106,
+        "fault_name": "Blue Mountain fault",
+        "section_name": "",
+        "fault_id": "2084",
+        "section_id": "",
+        "Location": "New Mexico",
+        "linetype": "Well Constrained",
+        "age": "middle and late Quaternary",
+        "dip_direction": "NW",
+        "slip_rate": "Less than 0.2 mm/yr",
+        "slip_sense": "Normal",
+        "mapped_scale": "1:24,000",
+        "class": "A",
+        "mapped_certainty": "Good",
+        "strike": "N. 43\u00b0 E.",
+        "total_fault_length": 15,
+        "cooperators": "New Mexico Bureau of Geology & Mineral Resources",
+        "earthquake": "",
+        "last_review": 1452470400000,
+        "fault_url": "https://earthquake.usgs.gov/cfusion/qfault/show_report_AB_archive.cfm?fault_id=2084&section_id=",
+        "symbology": "middle and late Quaternary Well Constrained",
+        "ref_id": "2084",
+        "Fault_ID_num": 2084,
+        "Shape_Length": 525.3395103563292,
+        "archive_pdf": "https://earthquake.usgs.gov/static/lfs/nshm/qfaults/Reports/2084.pdf",
+        "type": "faults"
+      }
+    }
+  ]
+}

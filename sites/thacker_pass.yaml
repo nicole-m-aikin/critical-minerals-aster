@@ -1,0 +1,23 @@
+# Thacker Pass, NV — Clay-hosted lithium deposit (Lithium Americas)
+# Southern McDermitt caldera; Li hosted in smectite/illite volcanic tuffs — unlike brine Li
+# (Silver Peak), clay Li has real surface mineralogy detectable by ASTER TIR. High-value test:
+# if carbonate/silica ratios fire here, it validates TIR for clay-Li exploration frontier.
+# Bbox intentionally tighter than mcdermitt.yaml (same caldera, different focus area).
+id: thacker_pass
+name: "Thacker Pass, NV"
+bbox_wgs84: [-118.20, 41.70, -117.85, 41.95]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/thacker_pass_faults.geojson
+    type: faults
+    buffer_m: 500

@@ -1,0 +1,23 @@
+# Gas Hills, WY — Roll-front uranium district (Fremont County)
+# Sandstone-hosted roll-front U: mineralization is below surface in reduced-oxidized
+# redox fronts with no clay alteration halo detectable at ASTER TIR scale.
+# Complements Marysvale (vein U) as a second uranium negative control with a different
+# deposit geometry; both expected anti-correlated or null.
+id: gas_hills
+name: "Gas Hills, WY"
+bbox_wgs84: [-107.90, 42.65, -107.40, 43.05]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
+
+structure_layers:
+  - path: data/structures/gas_hills_faults.geojson
+    type: faults
+    buffer_m: 500

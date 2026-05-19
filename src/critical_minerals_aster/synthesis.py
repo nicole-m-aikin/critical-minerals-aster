@@ -41,6 +41,77 @@ def load_site_summaries(
     return pd.concat(frames, ignore_index=True)
 
 
+def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | None:
+    """Generate figures/07_hitrate_comparison.png — all-deposits vs critical-only hit rate per site.
+
+    Each site gets two dots connected by a line: grey for the all-deposits rate
+    (potentially inflated by aggregate/stone) and coloured for the critical-only rate
+    (red = p < 0.05, blue-grey = not significant).  Sites are sorted by all-deposits
+    rate so the inflation story is visible as leftward shifts.
+    """
+    sig_path = Path(results_dir) / "significance_critical_only.csv"
+    if not sig_path.exists():
+        return None
+    figures_dir = Path(figures_dir)
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    sig = pd.read_csv(sig_path).sort_values("hr_all_pct", ascending=True).reset_index(drop=True)
+    n = len(sig)
+    y = np.arange(n)
+
+    fig, ax = plt.subplots(figsize=(9, max(5, n * 0.42)))
+
+    # Connecting lines
+    for i, row in sig.iterrows():
+        ax.plot(
+            [row["hr_all_pct"], row["hr_crit_pct"]],
+            [i, i],
+            color="#dddddd",
+            linewidth=1.2,
+            zorder=1,
+        )
+
+    # All-deposits dots (grey, open)
+    ax.scatter(
+        sig["hr_all_pct"], y,
+        color="#999999", s=55, zorder=2, label="All deposits",
+        edgecolors="#555555", linewidths=0.6,
+    )
+
+    # Critical-only dots (coloured by significance)
+    crit_colors = ["#c0392b" if s else "#5d8aa8" for s in sig["sig_crit"]]
+    ax.scatter(
+        sig["hr_crit_pct"], y,
+        c=crit_colors, s=65, zorder=3, label="Critical minerals only",
+        edgecolors="black", linewidths=0.5,
+    )
+
+    ax.set_yticks(y)
+    ax.set_yticklabels(sig["site_id"], fontsize=8)
+    ax.set_xlabel("Hit rate (% of deposits in strong TIR zones)")
+    ax.set_title(
+        "All-deposit vs critical-mineral hit rates by site\n"
+        "grey = all deposits  ·  red = significant (p < 0.05)  ·  blue = not significant"
+    )
+    ax.axvline(0, color="black", linewidth=0.5, alpha=0.4)
+    ax.grid(axis="x", alpha=0.25, linewidth=0.5)
+
+    from matplotlib.patches import Patch
+    legend_elements = [
+        Patch(facecolor="#999999", edgecolor="#555555", linewidth=0.6, label="All deposits"),
+        Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="Critical only, p < 0.05"),
+        Patch(facecolor="#5d8aa8", edgecolor="black", linewidth=0.5, label="Critical only, not significant"),
+    ]
+    ax.legend(handles=legend_elements, fontsize=8, loc="lower right")
+
+    plt.tight_layout()
+    out = figures_dir / "07_hitrate_comparison.png"
+    plt.savefig(out, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  Saved {out}")
+    return out
+
+
 def write_national_summary(results_dir: Path) -> Path:
     """Write national_summary.csv, national_summary.parquet, and results.duckdb under results/."""
     results_dir = Path(results_dir)
@@ -71,22 +142,26 @@ def write_national_summary(results_dir: Path) -> Path:
     figures_dir = results_dir.parent / "figures"
 
     # --- Task 1: structure-hit rate scatter ---
-    save_structure_hitrate_scatter(national, figures_dir)
+    save_structure_hitrate_scatter(national, results_dir, figures_dir)
 
-    # --- Task 2: national stacked bar (Earth MRI categories) ---
+    # --- Task 2: national stacked bar (Earth MRI categories, critical only) ---
     save_national_figure(results_dir, figures_dir)
 
     # --- Task 3: HTML figure index ---
     write_figure_index(results_dir, figures_dir)
 
+    # --- Task 4: paired all-deposits vs critical-only hit rate comparison ---
+    save_paired_hitrate_figure(results_dir, figures_dir)
+
     return csv_path
 
 
 def save_structure_hitrate_scatter(
-    national_df: pd.DataFrame, figures_dir: Path
+    national_df: pd.DataFrame, results_dir: Path, figures_dir: Path
 ) -> None:
-    """Generate figures/06_structure_hit_rate.png — scatter of structural proximity vs hit rate."""
+    """Generate figures/06_structure_hit_rate.png — structural proximity vs critical-mineral hit rate."""
     figures_dir = Path(figures_dir)
+    results_dir = Path(results_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
 
     df = national_df[national_df["row_type"] == "site"].copy()
@@ -99,49 +174,78 @@ def save_structure_hitrate_scatter(
         )
         return
 
+    # Merge critical-only hit rates and significance flags when available
+    sig_path = results_dir / "significance_critical_only.csv"
+    use_crit = False
+    if sig_path.exists():
+        sig = pd.read_csv(sig_path).set_index("site_id")
+        df = df.set_index("site_id")
+        df["hr_plot"] = sig.reindex(df.index)["hr_crit_pct"]
+        df["sig_crit"] = sig.reindex(df.index)["sig_crit"].fillna(False).astype(bool)
+        df = df.reset_index()
+        use_crit = df["hr_plot"].notna().any()
+    if not use_crit:
+        df["hr_plot"] = df["hit_rate_pct"]
+        df["sig_crit"] = False
+
     out = figures_dir / "06_structure_hit_rate.png"
 
     sizes = np.clip(
         df["n_deposits_bbox"] / df["n_deposits_bbox"].max() * 400, 30, 400
     )
+    point_colors = ["#c0392b" if s else "#95a5a6" for s in df["sig_crit"]]
 
     fig, ax = plt.subplots(figsize=(10, 7))
     ax.scatter(
         df["mean_nearest_structure_m"] / 1000,
-        df["hit_rate_pct"],
+        df["hr_plot"],
         s=sizes,
-        color="#2ecc71",
-        alpha=0.8,
+        c=point_colors,
+        alpha=0.85,
         edgecolors="black",
         linewidths=0.5,
+        zorder=3,
     )
 
     for _, row in df.iterrows():
         ax.annotate(
             row["site_id"],
-            (row["mean_nearest_structure_m"] / 1000, row["hit_rate_pct"]),
+            (row["mean_nearest_structure_m"] / 1000, row["hr_plot"]),
             xytext=(5, 5),
             textcoords="offset points",
             fontsize=8,
         )
 
-    mean_hr = df["hit_rate_pct"].mean()
+    mean_hr = df["hr_plot"].mean()
     ax.axhline(
         mean_hr,
-        color="#e74c3c",
+        color="#2c3e50",
         linestyle="--",
         linewidth=1,
         alpha=0.7,
         label=f"Mean hit rate ({mean_hr:.1f}%)",
     )
 
+    from matplotlib.patches import Patch
+    legend_elements = [
+        ax.lines[0],
+        Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="p < 0.05 (critical-only)"),
+        Patch(facecolor="#95a5a6", edgecolor="black", linewidth=0.5, label="not significant"),
+    ]
+    ax.legend(handles=legend_elements, fontsize=8)
+
     ax.set_xscale("log")
-    ax.set_xlabel("Mean distance to nearest fault (km, log scale)")
-    ax.set_ylabel("MRDS deposit hit rate (%)")
-    ax.set_title(
-        "Structural proximity vs spectral detectability\n15 ASTER study sites"
+    y_label = (
+        "Critical-mineral hit rate (% of critical deposits in strong TIR zones)"
+        if use_crit else "MRDS deposit hit rate (%)"
     )
-    ax.legend()
+    ax.set_xlabel("Mean distance to nearest fault (km, log scale)")
+    ax.set_ylabel(y_label)
+    n_sig = int(df["sig_crit"].sum())
+    ax.set_title(
+        f"Structural proximity vs spectral detectability\n"
+        f"{len(df)} ASTER study sites  ·  {n_sig} significant (critical-only, p < 0.05)"
+    )
     plt.tight_layout()
     plt.savefig(out, dpi=150, bbox_inches="tight")
     plt.close(fig)
@@ -323,10 +427,26 @@ def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
     if national.empty:
         return out
 
+    # Load earth_mri rows, excluding Non-Critical so bars reflect critical-mineral signal only
     earth_mri = load_site_summaries(results_dir, row_types=["earth_mri"])
+    earth_mri = earth_mri[earth_mri["earth_mri_category"] != "Non-Critical"]
 
-    site_order = national.sort_values("hit_rate_pct", ascending=True)["site_name"].tolist()
-    site_hit_rate = national.set_index("site_name")["hit_rate_pct"]
+    # Use critical-only hit rates for bar length and ordering when available
+    sig_path = results_dir / "significance_critical_only.csv"
+    if sig_path.exists():
+        sig = pd.read_csv(sig_path).set_index("site_id")
+        site_id_to_name = national.set_index("site_id")["site_name"]
+        sig["site_name"] = site_id_to_name.reindex(sig.index)
+        sig_by_name = sig.dropna(subset=["site_name"]).set_index("site_name")
+        name_order = national.set_index("site_name").index
+        crit_hr = sig_by_name["hr_crit_pct"].reindex(name_order).fillna(
+            national.set_index("site_name")["hit_rate_pct"]
+        )
+        site_order = crit_hr.sort_values(ascending=True).index.tolist()
+        site_hit_rate = crit_hr
+    else:
+        site_order = national.sort_values("hit_rate_pct", ascending=True)["site_name"].tolist()
+        site_hit_rate = national.set_index("site_name")["hit_rate_pct"]
 
     pivot = earth_mri.pivot_table(
         index="site_name", columns="earth_mri_category",
@@ -369,11 +489,12 @@ def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
                 label=cat, edgecolor="white", linewidth=0.4)
         left = left + vals
 
-    ax.set_xlim(0, 20)
-    ax.set_xlabel("MRDS hit rate (% of deposits in strong TIR zones)")
+    x_max = max(hr_aligned.max() * 1.08, 22)
+    ax.set_xlim(0, x_max)
+    ax.set_xlabel("Critical-mineral hit rate (% of critical deposits in strong TIR zones)")
     ax.set_title(
-        "Alteration\u2013deposit correlation by site\n"
-        "(colour = Earth MRI commodity category of in-zone deposits)"
+        "Alteration\u2013deposit correlation by site (critical minerals only)\n"
+        "(Non-Critical excluded  \u00b7  colour = Earth MRI category of in-zone critical deposits)"
     )
     ax.legend(
         loc="upper left", bbox_to_anchor=(1.01, 1), borderaxespad=0,
