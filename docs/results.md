@@ -1,12 +1,12 @@
 # Results
 
-ASTER TIR alteration mapping across 30 US critical mineral sites. Full figures: [`figures/index.html`](../figures/index.html).
+ASTER TIR alteration mapping across 37 US critical mineral sites. Full figures: [`figures/index.html`](../figures/index.html).
 
 ---
 
 ## Site-level hit rates
 
-**3 of 30 sites** show critical-mineral hit rates significantly above chance (binomial + spatial permutation, p < 0.05 on both tests):
+**3 of 37 sites** show critical-mineral hit rates significantly above chance (binomial + spatial permutation, p < 0.05 on both tests):
 
 | Site | Zone coverage¹ | Critical hit rate | Binomial p | Permutation p | Deposit type |
 |---|---|---|---|---|---|
@@ -18,11 +18,33 @@ ASTER TIR alteration mapping across 30 US critical mineral sites. Full figures: 
 
 Hit rates use **critical-mineral deposits only** (Non-Critical earth_mri_category excluded — see [Non-critical inflation](#non-critical-inflation) below). Deposits are clipped to the actual TIR valid-pixel footprint polygon before counting.
 
-**Near-significant sites** (one test below 0.05, other borderline): McDermitt NV/OR (binom 0.052, perm 0.009), Thacker Pass NV (binom 0.075, perm 0.043), Yerington NV (binom 0.109, perm 0.0002), Hanover-Fierro NM (binom 0.117, perm 0.071). These sites have real signal but do not clear the dual-test threshold after footprint clipping tightened the null model.
+**Near-significant sites** (one test below 0.05, other borderline): McDermitt NV/OR (binom 0.052, perm 0.009), Thacker Pass NV (binom 0.075, perm 0.043), Yerington NV (binom 0.109, perm 0.0002), Hanover-Fierro NM (binom 0.117, perm 0.071), Magnet Cove AR (binom 0.102, perm 0.021). These sites have real signal but do not clear the dual-test threshold.
 
-**11 sites are anti-correlated** (p ≈ 1 — deposits actively avoid anomaly zones): Climax CO, Goldfield NV, Oatman AZ, Steamboat Springs NV, Marysvale UT, Bear Lodge WY, Pea Ridge MO, Bingham Canyon UT, Bagdad AZ, Elk Creek NE, Green River WY.
+**13 sites are anti-correlated** (p ≈ 1 — deposits actively avoid anomaly zones): Climax CO, Goldfield NV, Oatman AZ, Steamboat Springs NV, Marysvale UT, Bear Lodge WY, Pea Ridge MO, Bingham Canyon UT, Bagdad AZ, Elk Creek NE, Green River WY, Ducktown TN, Mineral Park AZ, Pioche NV.
 
 Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with no surface alteration expression; Goldfield and Oatman are epithermal Au systems where the alteration cap is eroded or buried; Steamboat Springs is an active geothermal surface whose MRDS entries represent subsurface economics, not surface alteration. Green River has zero critical-mineral hits (all 53 MRDS records are non-critical); Elk Creek has one critical deposit and zero hits.
+
+### Validation site results (7 new sites)
+
+| Site | Type | Zone coverage | Critical hit rate | Binom p | Perm p | Result |
+|---|---|---|---|---|---|---|
+| Magnet Cove, AR | Carbonatite | 12.7% | 23.1% (6/26) | 0.102 | 0.021 | Near-significant |
+| Iron Springs, UT | Fe skarn | 11.3% | 14.3% (3/21) | 0.430 | 0.160 | Underpowered |
+| Battle Mountain, NV | VMS-skarn | 11.7% | 12.8% (10/78) | 0.430 | 0.096 | Borderline |
+| Iron Hill, CO | Carbonatite | 11.3% | 10.8% (20/185) | 0.619 | 0.091 | Borderline |
+| Pioche, NV | Pb-Zn skarn | 11.8% | 5.9% (16/273) | 0.9997 | 0.973 | Anti-correlated |
+| Ducktown, TN | VMS | 10.7% | 2.9% (4/139) | 0.9999 | 0.999 | Anti-correlated |
+| Mineral Park, AZ | Cu-Mo skarn | 12.2% | 0.0% (0/358) | 1.0000 | 1.000 | Anti-correlated |
+
+**Key findings from validation sites:**
+
+**Ducktown confirms vegetation as the limiting variable.** Despite being a classic VMS deposit with strong alteration, it scores anti-correlated (p ≈ 1). Jerome and Bisbee succeed in arid Arizona; Ducktown fails in forested Tennessee. The deposit type is the same; the surface exposure is not.
+
+**Magnet Cove shows the carbonatite signal extends to more humid settings**, though not enough to clear both significance thresholds (only 26 critical deposits). The 23% hit rate matches the Mountain Pass range, suggesting the TIR carbonatite signature is real and not purely a desert-exposure artifact.
+
+**Mineral Park is a surprise negative.** Despite being in the Mojave Desert with excellent surface exposure, it has zero critical hits. Visual inspection of figure 03 shows the strongest anomaly zones are in the Cerbat Mountains to the west, while MRDS deposits cluster in the eastern portion of the bbox — a spatial mismatch between TIR anomaly and known mineralization. The skarn body may be present but deposits are recorded at a different map location.
+
+**Pioche is anti-correlated despite being a limestone-hosted skarn district.** Carbonate replacement deposits in the Pioche hills may lack the surficial silica/calc-silicate expression that drives the signal at Bisbee and Hanover-Fierro; MRDS records here may also include many non-spatial or poorly-located entries inflating n.
 
 ---
 
