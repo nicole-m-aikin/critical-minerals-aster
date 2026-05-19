@@ -1,0 +1,17 @@
+# Mineral Park, AZ — Cu-Mo-W skarn / porphyry Cu (Cerbat Mountains)
+# Porphyry Cu with well-developed skarn aureole in Mohave County, Mojave Desert.
+# Extremely arid, minimal vegetation — best-case surface exposure conditions.
+# Expected positive; useful as a high-confidence skarn positive control.
+id: mineral_park
+name: "Mineral Park, AZ"
+bbox_wgs84: [-114.35, 35.00, -113.85, 35.45]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

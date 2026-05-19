@@ -1,0 +1,17 @@
+# Ducktown / Copper Basin, TN — Cu-Zn-Fe VMS (most famous US VMS outside AZ)
+# Massive sulfide with strong alteration halo; Polk County TN in the Blue Ridge.
+# Deciduous forest cover — tests whether vegetation masks TIR skarn/VMS signal.
+# If this fails while Jerome/Bisbee succeed, vegetation is the key limiting variable.
+id: ducktown
+name: "Ducktown, TN"
+bbox_wgs84: [-84.62, 34.85, -84.12, 35.30]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

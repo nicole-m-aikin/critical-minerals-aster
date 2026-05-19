@@ -1,0 +1,17 @@
+# Iron Springs, UT — Fe-Cu skarn (Three Peaks / Iron Mountain district)
+# Magnetite-garnet-hematite skarn hosted in limestone; completely different commodity
+# from AZ Cu-Zn skarns. Semi-arid Great Basin setting, well-exposed ore bodies.
+# Tests whether TIR skarn signal generalizes to Fe-dominant calc-silicate mineralogy.
+id: iron_springs
+name: "Iron Springs, UT"
+bbox_wgs84: [-113.55, 37.45, -113.00, 37.95]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

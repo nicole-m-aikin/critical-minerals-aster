@@ -1,0 +1,18 @@
+# Magnet Cove, AR — REE-Nb-Ti carbonatite (Hot Spring County)
+# Classic US carbonatite type locality; strongly anomalous Ti, Nb, REE mineralization.
+# More humid than Mountain Pass — mixed pine/hardwood forest on parts of the intrusion.
+# Tests climate tolerance of the TIR carbonatite signal; failure would implicate
+# vegetation cover rather than deposit type as the limiting factor.
+id: magnet_cove
+name: "Magnet Cove, AR"
+bbox_wgs84: [-93.10, 34.30, -92.60, 34.75]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

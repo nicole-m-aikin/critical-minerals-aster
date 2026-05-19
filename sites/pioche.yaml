@@ -1,0 +1,17 @@
+# Pioche, NV — Pb-Zn-Ag carbonate replacement and skarn (Bristol/Highland district)
+# Carbonate-hosted skarn and replacement deposits in arid Lincoln County NV.
+# Different metal suite (Pb-Zn-Ag) from Bisbee/Hanover-Fierro; tests skarn TIR
+# signal in a Basin and Range limestone terrane with dense MRDS record coverage.
+id: pioche
+name: "Pioche, NV"
+bbox_wgs84: [-114.70, 37.70, -114.20, 38.15]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

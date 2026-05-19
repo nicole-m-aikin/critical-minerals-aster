@@ -1,0 +1,18 @@
+# Iron Hill / Powderhorn, CO — Nb-REE carbonatite complex (Gunnison County)
+# Alkaline-carbonatite intrusive complex with REE-Nb-Ti mineralization.
+# Semi-arid western Colorado; more exposed than eastern US carbonatites.
+# Tests whether TIR carbonatite signal (Mountain Pass) holds at a smaller,
+# less pure carbonatite body in a higher-relief, drier Rocky Mountain setting.
+id: iron_hill
+name: "Iron Hill, CO"
+bbox_wgs84: [-107.35, 38.15, -106.85, 38.60]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
