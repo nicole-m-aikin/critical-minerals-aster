@@ -79,13 +79,28 @@ def cmd_run_batch(args: argparse.Namespace) -> int:
 
     skip_existing = getattr(args, "skip_existing", False)
     workers = getattr(args, "workers", 1)
+    use_mosaic = getattr(args, "mosaic", False)
+
+    if use_mosaic:
+        for site_id in site_ids:
+            site = load_site_by_id(site_id, sites_dir)
+            paths = site_paths_for(site, repo)
+            print(f"  [mosaic] {site_id}: downloading all covering granules …")
+            try:
+                download_and_mosaic_aster(site, paths)
+            except Exception as exc:
+                print(f"  [mosaic] {site_id}: failed ({exc}), skipping", file=sys.stderr)
+        # Data is on disk; run without download flag so run_batch picks up mosaics.
+        download = False
+    else:
+        download = args.download
 
     if workers > 1 and len(site_ids) > 1:
         run_batch_parallel(
             site_ids,
             repo,
             workers=workers,
-            download=args.download,
+            download=download,
             skip_figures=args.skip_figures,
             skip_existing=skip_existing,
         )
@@ -93,7 +108,7 @@ def cmd_run_batch(args: argparse.Namespace) -> int:
         run_batch(
             site_ids,
             repo,
-            download=args.download,
+            download=download,
             skip_figures=args.skip_figures,
             skip_existing=skip_existing,
         )
@@ -160,6 +175,11 @@ def main(argv: list[str] | None = None) -> int:
         help="Run every site listed in sites/index.yaml",
     )
     p_batch.add_argument("--download", action="store_true")
+    p_batch.add_argument(
+        "--mosaic",
+        action="store_true",
+        help="Download ALL covering ASTER granules per site, merge per-band, then process",
+    )
     p_batch.add_argument("--skip-figures", action="store_true")
     p_batch.add_argument(
         "--skip-existing",
