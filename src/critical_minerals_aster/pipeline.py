@@ -153,7 +153,7 @@ def run_classification(
         combined,
         raster_bbox,
         transform,
-        b12.shape,
+        silica.shape,
         crs,
         tir_footprint,
     )
