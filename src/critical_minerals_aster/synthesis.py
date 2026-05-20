@@ -78,8 +78,16 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
         edgecolors="#555555", linewidths=0.6,
     )
 
-    # Critical-only dots (coloured by significance)
-    crit_colors = ["#c0392b" if s else "#5d8aa8" for s in sig["sig_crit"]]
+    # Critical-only dots — red if critical-only significant, orange if all-deposit-only
+    # significant (non-critical driven), grey if not significant on either test.
+    def _crit_color(row):
+        if row["sig_crit"]:
+            return "#c0392b"   # red — significant on critical-only test
+        if row["sig_all"]:
+            return "#e67e22"   # orange — significant on all-deposit test only
+        return "#5d8aa8"       # blue-grey — not significant
+
+    crit_colors = [_crit_color(row) for _, row in sig.iterrows()]
     ax.scatter(
         sig["hr_crit_pct"], y,
         c=crit_colors, s=65, zorder=3, label="Critical minerals only",
@@ -89,9 +97,12 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
     ax.set_yticks(y)
     ax.set_yticklabels(sig["site_id"], fontsize=8)
     ax.set_xlabel("Hit rate (% of deposits in strong TIR zones)")
+    n_sig_crit = int(sig["sig_crit"].sum())
+    n_sig_all_only = int((sig["sig_all"] & ~sig["sig_crit"]).sum())
     ax.set_title(
         "All-deposit vs critical-mineral hit rates by site\n"
-        "grey = all deposits  ·  red = significant (p < 0.05)  ·  blue = not significant"
+        f"grey = all deposits  ·  red = significant critical-only (n={n_sig_crit})"
+        f"  ·  orange = all-deposit only, non-critical driven (n={n_sig_all_only})"
     )
     ax.axvline(0, color="black", linewidth=0.5, alpha=0.4)
     ax.grid(axis="x", alpha=0.25, linewidth=0.5)
@@ -100,7 +111,8 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
     legend_elements = [
         Patch(facecolor="#999999", edgecolor="#555555", linewidth=0.6, label="All deposits"),
         Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="Critical only, p < 0.05"),
-        Patch(facecolor="#5d8aa8", edgecolor="black", linewidth=0.5, label="Critical only, not significant"),
+        Patch(facecolor="#e67e22", edgecolor="black", linewidth=0.5, label="All-deposit only (non-critical driven)"),
+        Patch(facecolor="#5d8aa8", edgecolor="black", linewidth=0.5, label="Not significant"),
     ]
     ax.legend(handles=legend_elements, fontsize=8, loc="lower right")
 

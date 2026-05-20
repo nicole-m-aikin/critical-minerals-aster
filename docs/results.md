@@ -78,7 +78,7 @@ Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled 
 
 ![Paired dot plot: all-deposits hit rate (grey) vs critical-only hit rate (red = significant, blue = not significant) per site. Sites where the grey dot is far right of the coloured dot have aggregate inflation. Green River is the clearest case: all-deposits hits ~17% but critical-only is 0%.](../figures/07_hitrate_comparison.png)
 
-*Figure 07 — All-deposit vs critical-mineral hit rate per site. A long rightward grey tail indicates aggregate inflation. Green River, Silver Peak, and Darwin show the largest gaps. Steamboat Springs is one of the few sites where all-deposit and critical-only rates are nearly equal.*
+*Figure 07 — All-deposit (grey) vs critical-mineral hit rate (coloured) per site, sorted by all-deposit rate. Red = significant on critical-only test (n=12). Orange = significant on all-deposit test only, non-critical driven (n=6). Blue-grey = not significant. A long rightward grey tail with an orange or blue critical dot indicates aggregate inflation — Green River and Silver Peak are the clearest cases. Sites where red and grey dots nearly overlap (Steamboat Springs, Ely-Robinson) have little non-critical inflation.*
 
 **Green River, WY** is the clearest example: nearly all MRDS records in the footprint are non-critical (aggregate, trona, oil shale). The site is binomially significant on all-deposit counts (p = 0.041) but has zero critical-mineral hits.
 
