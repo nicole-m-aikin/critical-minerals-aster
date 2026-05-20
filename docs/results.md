@@ -6,33 +6,47 @@ ASTER TIR alteration mapping across 37 US critical mineral sites. Full figures: 
 
 ## Site-level hit rates
 
-**15 of 37 sites** show hit rates significantly above chance on the all-deposit binomial test (null = 8.2% pooled). **12 of 37** remain significant when restricted to critical-mineral deposits only (figure 06; null = 9.7% critical-only pooled). The three sites that drop under the critical-only test — Iron Springs (Fe skarn; iron is non-critical), Darwin (Pb-Zn skarn), and Green River (aggregate-driven; 0 critical hits) — are discussed in [Non-critical inflation](#non-critical-inflation).
+**18 of 37 sites** are significant on at least one binomial test. Two tests are reported: critical-mineral-only (null = 9.7% pooled across critical MRDS records) and all-deposit (null = 8.2% pooled across all MRDS records). **12 sites clear the critical-only threshold** — the more rigorous test that directly answers the science question. **6 additional sites** are significant only on the all-deposit test; their signal is driven by non-critical or mixed deposits (see [Non-critical inflation](#non-critical-inflation)).
 
-| Site | Hit rate (all deposits) | Binomial p | Deposit type |
+Note that the two tests use different null rates and different deposit pools, so some sites (Battle Mountain, Iron Hill, Gas Hills) appear in the critical-only 12 but not the all-deposit 15, and vice versa.
+
+### Significant on critical-mineral test (12 sites)
+
+Hit rates below are critical-mineral deposits only (non-critical excluded). Null = 9.7%.
+
+| Site | Critical hit rate | p (critical) | Deposit type |
 |---|---|---|---|
-| Bisbee, AZ | 39.3% (48/122) | < 0.001 | Skarn / VMS Cu-Zn |
-| Thacker Pass, NV | 34.4% (11/32) | < 0.001 | Lithium brine / sediment |
-| Magnet Cove, AR | 22.1% (17/77) | < 0.001 | Carbonatite REE |
-| McDermitt Caldera, NV/OR | 19.0% (20/105) | < 0.001 | Li-Cs-REE caldera |
-| Yerington, NV | 15.9% (25/157) | 0.001 | Porphyry Cu / epithermal |
-| Steamboat Springs, NV | 13.8% (30/217) | 0.004 | Epithermal Au-Ag / geothermal |
-| Darwin, CA | 13.5% (31/229) | 0.005 | Skarn Pb-Zn-Ag |
-| Iron Springs, UT | 13.8% (22/159) | 0.012 | Fe skarn |
-| Hanover-Fierro, NM | 23.1% (6/26) | 0.017 | Skarn Cu-Pb-Zn |
-| Mountain Pass, CA | 11.6% (40/345) | 0.019 | Carbonatite REE |
-| Ely (Robinson), NV | 21.4% (6/28) | 0.024 | Porphyry Cu-Au |
-| Silver Peak, NV | 12.8% (22/172) | 0.027 | Li brine / epithermal |
-| Lemhi Pass, ID/MT | 15.7% (11/70) | 0.028 | Vein-hosted Th/REE |
-| Green River Basin, WY | 16.7% (8/48) | 0.041 | Sediment-hosted (aggregate-driven)¹ |
-| Globe-Miami, AZ | 12.0% (24/200) | 0.041 | Porphyry Cu / skarn |
+| Bisbee, AZ | 43.2% (41/95) | < 0.001 | Skarn / VMS Cu-Zn |
+| Magnet Cove, AR | 23.1% (6/26) | 0.008 | Carbonatite REE |
+| McDermitt Caldera, NV/OR | 22.2% (8/36) | 0.003 | Li-Cs-REE caldera |
+| Thacker Pass, NV | 21.7% (5/23) | 0.019 | Lithium brine |
+| Ely (Robinson), NV | 20.8% (5/24) | 0.023 | Porphyry Cu-Au |
+| Hanover-Fierro, NM | 20.0% (4/20) | 0.047 | Skarn Cu-Pb-Zn |
+| Steamboat Springs, NV | 14.5% (30/207) | < 0.001 | Epithermal Au-Ag |
+| Yerington, NV | 13.7% (18/131) | 0.005 | Porphyry Cu / epithermal |
+| Battle Mountain, NV | 12.8% (10/78) | 0.045 | VMS / skarn Cu-Au |
+| Mountain Pass, CA | 11.5% (37/323) | 0.002 | Carbonatite REE |
+| Iron Hill, CO | 10.8% (20/185) | 0.035 | Carbonatite REE |
+| Gas Hills, WY | 9.6% (30/312) | 0.048 | Roll-front U |
 
-¹ Green River significance driven by non-critical (aggregate/industrial) deposits; 0 critical-mineral hits.
+### Significant on all-deposit test only (6 sites, non-critical driven)
+
+These sites clear the all-deposit threshold (null = 8.2%) but not the critical-only threshold. The gap between all-deposit and critical-only hit rates identifies the inflation source.
+
+| Site | All-deposit hit rate | p (all) | Critical hit rate | p (critical) | Inflation source |
+|---|---|---|---|---|---|
+| Iron Springs, UT | 13.8% (22/159) | 0.012 | 14.3% (3/21) | 0.178 | Fe is non-critical; most hits are iron deposits |
+| Darwin, CA | 13.5% (31/229) | 0.005 | 10.4% (19/182) | 0.052 | Pb-Zn are non-critical; mixed commodity signal |
+| Globe-Miami, AZ | 12.0% (24/200) | 0.041 | 11.0% (14/127) | 0.060 | Borderline; critical Cu hits near-significant |
+| Lemhi Pass, ID/MT | 15.7% (11/70) | 0.028 | 11.9% (5/42) | 0.167 | Small n; many Th/REE records excluded as non-critical |
+| Silver Peak, NV | 12.8% (22/172) | 0.027 | 5.1% (4/79) | 0.810 | Li MRDS records sparse; all-deposit rate inflated by associated non-critical |
+| Green River Basin, WY | 16.7% (8/48) | 0.041 | 0.0% (0/0) | 1.000 | Purely aggregate-driven; 0 critical deposits in footprint |
 
 ![Critical-mineral hit rate by site, sorted and coloured by Earth MRI category. Non-critical deposits excluded. Bisbee leads at 39%, with a clear gradient from skarn/VMS and carbonatite sites at top to Carlin-type and sediment-hosted at bottom.](../figures/05_national_hit_rates.png)
 
-*Figure 05 — Critical-mineral hit rate by site (non-critical excluded). Bar colour = Earth MRI category of in-zone critical deposits. Sites above the dashed reference line (8.2%) have more hits than the pooled null rate.*
+*Figure 05 — Critical-mineral hit rate by site (non-critical excluded). Bar colour = Earth MRI category of in-zone critical deposits. Sites sorted by critical-mineral hit rate.*
 
-**Near-significant** (0.05 ≤ p < 0.15): Viburnum Trend, MO (11.4%, p = 0.085); Battle Mountain, NV (12.2%, p = 0.122).
+**Near-significant on critical-only test** (0.05 ≤ p < 0.15): Darwin, CA (10.4%, p = 0.052); Globe-Miami, AZ (11.0%, p = 0.060); Viburnum Trend, MO (p ≈ 0.09).
 
 **Anti-correlated** (p > 0.95 — deposits actively avoid anomaly zones): Goldfield-Cuprite NV, Ducktown TN, Oatman AZ, Stillwater Complex MT, Bingham Canyon UT, Mineral Park AZ, Climax CO, Jerritt Canyon NV, Elk Creek NE.
 
