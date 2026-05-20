@@ -101,7 +101,7 @@ Structural proximity alone does not predict TIR detectability. Significant sites
 
 ![Scatter plot: mean deposit-to-fault distance (log scale, km) vs critical-mineral hit rate. Red dots = significant (critical-only, p<0.05, n=12). No trend is visible; significant sites are scattered across the full distance range from <1 km (Magnet Cove) to >10 km (Mountain Pass, Hanover-Fierro).](../figures/06_structure_hit_rate.png)
 
-*Figure 06 — Structural proximity vs spectral detectability. Point size = number of MRDS deposits in bbox. Red = significant on critical-only binomial test (p < 0.05). No correlation between fault proximity and hit rate; deposit type and surface alteration exposure are the dominant predictors.*
+*Figure 06 — Structural proximity vs spectral detectability. Point size = number of MRDS deposits in bbox. Red = significant on critical-only binomial test (p < 0.05, n=12). Orange = significant on all-deposit test only, significance driven by non-critical (aggregate/Fe) deposits (n=6: Iron Springs, Darwin, Globe-Miami, Silver Peak, Lemhi Pass, Green River). No correlation between fault proximity and hit rate; deposit type and surface alteration exposure are the dominant predictors.*
 
 **Ozark site caveat:** Pea Ridge and Viburnum Trend have structural corridor buffers covering 40–50% of map area, reflecting the density of mapped Missouri Ozark faults rather than real structural control on mineralization. The "% of deposits within 500 m of structure" metric is inflated at these sites.
 
