@@ -182,18 +182,28 @@ def save_structure_hitrate_scatter(
         df = df.set_index("site_id")
         df["hr_plot"] = sig.reindex(df.index)["hr_crit_pct"]
         df["sig_crit"] = sig.reindex(df.index)["sig_crit"].fillna(False).astype(bool)
+        df["sig_all"] = sig.reindex(df.index)["sig_all"].fillna(False).astype(bool)
         df = df.reset_index()
         use_crit = df["hr_plot"].notna().any()
     if not use_crit:
         df["hr_plot"] = df["hit_rate_pct"]
         df["sig_crit"] = False
+        df["sig_all"] = False
 
     out = figures_dir / "06_structure_hit_rate.png"
 
     sizes = np.clip(
         df["n_deposits_bbox"] / df["n_deposits_bbox"].max() * 400, 30, 400
     )
-    point_colors = ["#c0392b" if s else "#95a5a6" for s in df["sig_crit"]]
+
+    def _point_color(row):
+        if row["sig_crit"]:
+            return "#c0392b"          # red — significant on critical-only test
+        if row["sig_all"]:
+            return "#e67e22"          # orange — significant on all-deposit test only (non-critical driven)
+        return "#95a5a6"              # grey — not significant
+
+    point_colors = [_point_color(row) for _, row in df.iterrows()]
 
     fig, ax = plt.subplots(figsize=(10, 7))
     ax.scatter(
@@ -227,9 +237,11 @@ def save_structure_hitrate_scatter(
     )
 
     from matplotlib.patches import Patch
+    n_all_only = int((df["sig_all"] & ~df["sig_crit"]).sum())
     legend_elements = [
         ax.lines[0],
         Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="p < 0.05 (critical-only)"),
+        Patch(facecolor="#e67e22", edgecolor="black", linewidth=0.5, label="p < 0.05 (all-deposit only; non-critical driven)"),
         Patch(facecolor="#95a5a6", edgecolor="black", linewidth=0.5, label="not significant"),
     ]
     ax.legend(handles=legend_elements, fontsize=8)
@@ -244,7 +256,7 @@ def save_structure_hitrate_scatter(
     n_sig = int(df["sig_crit"].sum())
     ax.set_title(
         f"Structural proximity vs spectral detectability\n"
-        f"{len(df)} ASTER study sites  ·  {n_sig} significant (critical-only, p < 0.05)"
+        f"{len(df)} ASTER study sites  ·  {n_sig} significant critical-only  ·  {n_all_only} non-critical driven"
     )
     plt.tight_layout()
     plt.savefig(out, dpi=150, bbox_inches="tight")
