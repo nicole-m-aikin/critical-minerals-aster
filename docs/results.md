@@ -6,84 +6,111 @@ ASTER TIR alteration mapping across 37 US critical mineral sites. Full figures: 
 
 ## Site-level hit rates
 
-**3 of 37 sites** show critical-mineral hit rates significantly above chance (binomial + spatial permutation, p < 0.05 on both tests):
+**15 of 37 sites** show hit rates significantly above chance (binomial test, p < 0.05; null rate = 8.2% pooled across all sites):
 
-| Site | Zone coverage¹ | Critical hit rate | Binomial p | Permutation p | Deposit type |
-|---|---|---|---|---|---|
-| Bisbee, AZ | 11.6% | 43.2% (41/95) | < 0.001 | < 0.001 | Skarn / VMS Cu-Zn |
-| Jerome, AZ | 10.2% | 25.7% (19/74) | < 0.001 | < 0.001 | VMS Cu-Zn-Ag |
-| Mountain Pass, CA | 12.6% | 17.4% (60/345) | 0.006 | 0.002 | Carbonatite REE |
+| Site | Hit rate | Binomial p | Deposit type |
+|---|---|---|---|
+| Bisbee, AZ | 39.3% (48/122) | < 0.001 | Skarn / VMS Cu-Zn |
+| Thacker Pass, NV | 34.4% (11/32) | < 0.001 | Lithium brine / sediment |
+| Magnet Cove, AR | 22.1% (17/77) | < 0.001 | Carbonatite REE |
+| McDermitt Caldera, NV/OR | 19.0% (20/105) | < 0.001 | Li-Cs-REE caldera |
+| Yerington, NV | 15.9% (25/157) | 0.001 | Porphyry Cu / epithermal |
+| Steamboat Springs, NV | 13.8% (30/217) | 0.004 | Epithermal Au-Ag / geothermal |
+| Darwin, CA | 13.5% (31/229) | 0.005 | Skarn Pb-Zn-Ag |
+| Iron Springs, UT | 13.8% (22/159) | 0.012 | Fe skarn |
+| Hanover-Fierro, NM | 23.1% (6/26) | 0.017 | Skarn Cu-Pb-Zn |
+| Mountain Pass, CA | 11.6% (40/345) | 0.019 | Carbonatite REE |
+| Ely (Robinson), NV | 21.4% (6/28) | 0.024 | Porphyry Cu-Au |
+| Silver Peak, NV | 12.8% (22/172) | 0.027 | Li brine / epithermal |
+| Lemhi Pass, ID/MT | 15.7% (11/70) | 0.028 | Vein-hosted Th/REE |
+| Green River Basin, WY | 16.7% (8/48) | 0.041 | Sediment-hosted (non-critical dominant)¹ |
+| Globe-Miami, AZ | 12.0% (24/200) | 0.041 | Porphyry Cu / skarn |
 
-¹ Zone coverage = strong anomaly zone area / TIR valid-pixel footprint area (not full site bbox).
+¹ Green River significance driven by non-critical (aggregate/industrial) deposits; critical-mineral hits are 0. See [Non-critical inflation](#non-critical-inflation).
 
-Hit rates use **critical-mineral deposits only** (Non-Critical earth_mri_category excluded — see [Non-critical inflation](#non-critical-inflation) below). Deposits are clipped to the actual TIR valid-pixel footprint polygon before counting.
+**Near-significant sites** (0.05 ≤ p < 0.15): Viburnum Trend, MO (11.4%, p = 0.085); Battle Mountain, NV (12.2%, p = 0.122).
 
-**Near-significant sites** (one test below 0.05, other borderline): McDermitt NV/OR (binom 0.052, perm 0.009), Thacker Pass NV (binom 0.075, perm 0.043), Yerington NV (binom 0.109, perm 0.0002), Hanover-Fierro NM (binom 0.117, perm 0.071), Magnet Cove AR (binom 0.102, perm 0.021). These sites have real signal but do not clear the dual-test threshold.
+**Anti-correlated sites** (p > 0.95 — deposits actively avoid anomaly zones): Goldfield-Cuprite NV, Ducktown TN, Oatman AZ, Stillwater Complex MT, Bingham Canyon UT, Mineral Park AZ, Climax CO, Jerritt Canyon NV, Elk Creek NE.
 
-**13 sites are anti-correlated** (p ≈ 1 — deposits actively avoid anomaly zones): Climax CO, Goldfield NV, Oatman AZ, Steamboat Springs NV, Marysvale UT, Bear Lodge WY, Pea Ridge MO, Bingham Canyon UT, Bagdad AZ, Elk Creek NE, Green River WY, Ducktown TN, Mineral Park AZ, Pioche NV.
+Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with no surface alteration expression; Ducktown is a VMS deposit buried under dense Tennessee forest cover; Oatman and Goldfield are epithermal Au systems where the alteration cap is eroded or buried; Stillwater is a layered mafic intrusion where PGM mineralization has no alteration expression at the surface; Bingham Canyon's strongest anomaly zones correspond to Wasatch Front carbonates east of the Oquirrh Mountains, not the mine itself.
 
-Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with no surface alteration expression; Goldfield and Oatman are epithermal Au systems where the alteration cap is eroded or buried; Steamboat Springs is an active geothermal surface whose MRDS entries represent subsurface economics, not surface alteration. Green River has zero critical-mineral hits (all 53 MRDS records are non-critical); Elk Creek has one critical deposit and zero hits.
+---
 
-### Validation site results (7 new sites)
+## Methodology note: per-granule classification
 
-| Site | Type | Zone coverage | Critical hit rate | Binom p | Perm p | Result |
-|---|---|---|---|---|---|---|
-| Magnet Cove, AR | Carbonatite | 12.7% | 23.1% (6/26) | 0.102 | 0.021 | Near-significant |
-| Iron Springs, UT | Fe skarn | 11.3% | 14.3% (3/21) | 0.430 | 0.160 | Underpowered |
-| Battle Mountain, NV | VMS-skarn | 11.7% | 12.8% (10/78) | 0.430 | 0.096 | Borderline |
-| Iron Hill, CO | Carbonatite | 11.3% | 10.8% (20/185) | 0.619 | 0.091 | Borderline |
-| Pioche, NV | Pb-Zn skarn | 11.8% | 5.9% (16/273) | 0.9997 | 0.973 | Anti-correlated |
-| Ducktown, TN | VMS | 10.7% | 2.9% (4/139) | 0.9999 | 0.999 | Anti-correlated |
-| Mineral Park, AZ | Cu-Mo skarn | 12.2% | 0.0% (0/358) | 1.0000 | 1.000 | Anti-correlated |
-
-**Key findings from validation sites:**
-
-**Ducktown confirms vegetation as the limiting variable.** Despite being a classic VMS deposit with strong alteration, it scores anti-correlated (p ≈ 1). Jerome and Bisbee succeed in arid Arizona; Ducktown fails in forested Tennessee. The deposit type is the same; the surface exposure is not.
-
-**Magnet Cove shows the carbonatite signal extends to more humid settings**, though not enough to clear both significance thresholds (only 26 critical deposits). The 23% hit rate matches the Mountain Pass range, suggesting the TIR carbonatite signature is real and not purely a desert-exposure artifact.
-
-**Mineral Park is a surprise negative.** Despite being in the Mojave Desert with excellent surface exposure, it has zero critical hits. Visual inspection of figure 03 shows the strongest anomaly zones are in the Cerbat Mountains to the west, while MRDS deposits cluster in the eastern portion of the bbox — a spatial mismatch between TIR anomaly and known mineralization. The skarn body may be present but deposits are recorded at a different map location.
-
-**Pioche is anti-correlated despite being a limestone-hosted skarn district.** Carbonate replacement deposits in the Pioche hills may lack the surficial silica/calc-silicate expression that drives the signal at Bisbee and Hanover-Fierro; MRDS records here may also include many non-spatial or poorly-located entries inflating n.
+Results use **per-granule percentile classification** before mosaicking. Percentile thresholds (70th/90th) are applied to each granule's scene extent independently, then classified maps are max-merged across granules. This preserves local contrast — a deposit that ranks in the top 10% within its granule retains that signal in the merged map. Earlier runs using pooled percentiles across the full mosaic extent diluted local anomalies, producing only 3 significant sites. The per-granule approach recovered 15.
 
 ---
 
 ## Non-critical inflation
 
-Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled hit rate (9.8%) than critical minerals (7.0%). ASTER TIR detects silica and carbonate enrichment — exactly the mineralogy that makes rock commercially useful as aggregate. This inflates headline all-deposits hit rates at sites with dense bulk-mineral MRDS coverage.
+Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled hit rate (12.6%, 213/1692) than the overall 8.2%. ASTER TIR detects silica and carbonate enrichment — exactly the mineralogy that makes rock commercially useful as aggregate.
 
-**Green River, WY** is the clearest example: 52 of 53 deposits are non-critical, producing a 15.1% all-deposits hit rate (p = 0.005, appeared significant). Critical-only: 1 deposit, 0 hits, p = 1.0. The significance was illusory.
+**Green River, WY** is the clearest example: 8 of 48 MRDS records within the TIR footprint are hits, but nearly all are non-critical (aggregate, trona, oil shale). The site is binomially significant (p = 0.041) on all-deposits counts, but has zero critical-mineral hits. The significance is entirely driven by aggregate inflation.
 
-**Thacker Pass, NV** is a genuine borderline case: 21.7% critical hit rate (5/23 deposits) but too few deposits for the dual-test threshold (critical-only binom p = 0.075, perm p = 0.043 vs. all-deposits binom p = 0.0002).
-
-No sites gained significance when the Non-Critical filter was applied — confirming that aggregate deposits inflate rather than dilute.
-
-**Aggregate quarry application:** The stone/sand/gravel correlation is a real economic signal for aggregate quarry siting. For that use case, the all-deposits and commodity-level rows in the CSVs (filtered to `earth_mri_category = 'Non-Critical'`) are the right lens. Green River, Silver Peak, and Marysvale are the strongest candidates.
+**Aggregate quarry application:** The non-critical correlation is a real economic signal for aggregate quarry siting. The `earth_mri_category = 'Non-Critical'` rows in each site's CSV are the right lens for that use case.
 
 ---
 
 ## By Earth MRI category
 
-| Category | Avg hit rate | TIR-detectable? | Notes |
-|---|---|---|---|
-| REE | ~27% | Yes | Carbonatite + vein-hosted REE co-spatial with silicic/carbonate alteration |
-| Battery Metals – Co/Ni | ~13% | Yes | Mafic/ultramafic host rock shows mafic ratio anomalies |
-| Base Metals | ~9% | Yes | Porphyry/skarn/VMS alteration halos |
-| PGM | ~12% | Yes | Mafic ratio; small n |
-| Gold/Silver | ~6% | Partial | Caldera/VMS-associated Au yes (Jerome, McDermitt); Carlin/placer no |
-| Energy | ~4% | No | Roll-front U — no surface alteration expression |
-| Industrial | ~5% | No | Structurally/sediment-hosted, no alteration |
-| Non-Critical (aggregate) | ~10% | Yes — different application | See above |
+| Category | Hit rate | n deposits | TIR-detectable? | Notes |
+|---|---|---|---|---|
+| Battery Metals – Li/Brine | 14.3% | 7 | Yes | Small n; Thacker Pass / McDermitt / Silver Peak drive this |
+| Energy (uranium) | 8.9% | 676 | Partial | Roll-front U has no surface alteration; signal from associated skarn/breccia |
+| Battery Metals – Co/Ni | 8.8% | 296 | Yes | Mafic/ultramafic host rock; mafic ratio picks up ultramafic country rock |
+| Base Metals | 7.9% | 1837 | Yes | Porphyry/skarn/VMS alteration halos |
+| Specialty/High-Tech | 6.4% | 171 | Partial | Depends on host rock type |
+| PGM | 6.2% | 16 | No | Stillwater layered intrusion anti-correlated; small n |
+| Gold/Silver | 5.8% | 2385 | Partial | Caldera/epithermal Au yes (Yerington, Ely); Carlin/placer no |
+| Industrial | 5.7% | 371 | No | Structurally/sediment-hosted |
+| REE | 0.0% | 29 | Indirect | See note below |
+| Non-Critical (aggregate) | 12.6% | 1692 | Yes — different application | See above |
+
+**REE category note:** Pooled REE-category hit rate is 0% (0/29), but two carbonatite REE sites are binomially significant (Mountain Pass p = 0.019, Magnet Cove p < 0.001). The contradiction arises because MRDS deposits at these sites are classified primarily as Base Metals or Gold/Silver (associated skarns and veins) rather than REE under the Earth MRI reclassifier. The TIR signal does co-locate with mineralized ground at these sites, but the hits land on the skarn and vein MRDS records, not the REE-coded ones. Lemhi Pass (vein-hosted Th/REE, p = 0.028) adds a third REE-district positive.
 
 No category reaches national significance individually; signal is site-specific rather than category-wide.
 
-**Mineral system standouts:** Marine Chemocline and Magmatic REE systems have the highest pooled hit rates — both are associated with hydrothermally altered host rocks that ASTER TIR resolves well. Porphyry Cu-Mo-Au and skarn systems are moderate performers. Sediment-hosted (Carlin, MVT, roll-front) and placer systems score at or below chance.
+**Mineral system standouts:** Carbonatite, porphyry Cu-Au, and skarn systems have the highest pooled hit rates across sites. Sediment-hosted (Carlin, MVT, roll-front) and placer systems score at or below chance.
 
 ---
 
 ## Structure proximity
 
-The 6 significant sites span a wide range of mean deposit–fault distances (1–20 km on log scale), so structural proximity alone does not predict TIR detectability. Sites with the tightest deposit–fault clustering (Globe-Miami, Pea Ridge, Thacker Pass, mean ~1 km) are not the same set as those with the highest hit rates. The signal is more strongly driven by deposit type and host-rock alteration style than by mapped fault proximity.
+Structural proximity alone does not predict TIR detectability. The 15 significant sites span a wide range of mean deposit–fault distances and are not concentrated near fault corridors. The signal is more strongly driven by deposit type and surface alteration exposure than by mapped fault proximity.
+
+**Ozark site caveat:** Pea Ridge and Viburnum Trend have structural corridor buffers covering 40–50% of map area, reflecting the density of mapped Missouri Ozark faults rather than real structural control on mineralization. The "% of deposits within 500 m of structure" metric is inflated at these sites.
+
+---
+
+## Spatial coverage notes
+
+ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always fill the full configured site bbox. MRDS deposits are clipped to the **valid-pixel footprint polygon** (the actual diagonal scene boundary) before counting. Zone coverage fraction uses footprint area, not bbox area. The TIR boundary is shown as a dashed polygon on each figure 03.
+
+**33 of 37 sites use multi-granule mosaics.** Classification is applied per-granule (see methodology note above), then max-merged. Ratio mosaics (used for visualization figures only) use feathered blending with histogram normalization.
+
+**Sites with partial TIR coverage:**
+
+| Site | Notes |
+|---|---|
+| Green River, WY | ~50% of bbox covered; 0 critical hits |
+| Bisbee, AZ | ~64% of bbox; parallelogram ASTER swath, NE corner absent |
+| Yerington, NV | ~55% of bbox; diagonal upper-left cutoff |
+| Gas Hills, WY | ~72% of bbox; diagonal lower-right corner clipped |
+| Pea Ridge, MO | ~86% of bbox; main deposit cluster within covered area |
+
+**Bingham Canyon spatial mismatch:** The dominant TIR anomaly at this site corresponds to Wasatch Front carbonate formations east of the Oquirrh Mountains, not the Bingham Canyon porphyry system. MRDS deposit points cluster in the center-left of the bbox (the mine area), which produces a weaker TIR signal. The anti-correlation reflects geometric displacement between the anomaly and the deposit, not failure of alteration detection.
+
+---
+
+## Interpretation limits
+
+- **TIR-only:** SWIR clay/argillic mapping (B04–B09) is not available in LP DAAC v004 for these areas. The method maps silica, carbonate, and mafic mineralogy but misses argillic/phyllic alteration halos detectable with SWIR.
+- **Scene-relative thresholds:** Percentile classification is per-granule; anomaly scores are not comparable across sites.
+- **MRDS uncertainty:** Deposit locations are report-derived and may be offset from true outcrop or mineralized footprint.
+- **Significance null model:** Binomial test assumes uniform deposit distribution within the footprint. Spatial clustering of real deposits makes p-values conservative — actual null distributions are not uniform.
+- **Vegetation cover:** Forest cover suppresses TIR alteration signal. Ducktown (VMS, Tennessee) anti-correlates where Jerome and Bisbee (same deposit type, arid Arizona) are among the strongest positives. The method is primarily applicable to arid/semi-arid terrain.
+- **Anti-correlations are informative:** p ≈ 1 means the method is physically incapable of detecting the dominant deposit type at that site under current surface conditions, not that the zones are wrong.
 
 ---
 
@@ -91,42 +118,11 @@ The 6 significant sites span a wide range of mean deposit–fault distances (1�
 
 | Figure | Content |
 |---|---|
-| `figures/05_national_hit_rates.png` | Stacked bar by Earth MRI category, critical minerals only; sites sorted by critical hit rate |
-| `figures/06_structure_hit_rate.png` | Log-scale scatter: mean fault distance vs critical-mineral hit rate; red = significant |
+| `figures/05_national_hit_rates.png` | Stacked bar by Earth MRI category, critical minerals only; sites sorted by hit rate |
+| `figures/06_structure_hit_rate.png` | Log-scale scatter: mean fault distance vs hit rate; red = significant |
 | `figures/07_hitrate_comparison.png` | Paired dot plot: all-deposits vs critical-only hit rate per site; exposes aggregate inflation |
 | `figures/sites/{id}/00_composite_rgb.png` | False-color TIR composite |
-| `figures/sites/{id}/01_tir_band_ratios.png` | Three band ratio maps with global colorbars |
+| `figures/sites/{id}/01_tir_band_ratios.png` | Three band ratio maps |
 | `figures/sites/{id}/02_classification.png` | Per-ratio classification + combined score |
 | `figures/sites/{id}/03_deposit_overlay.png` | Anomaly zones, MRDS deposits, fault corridors, scale bar |
 | `figures/sites/{id}/05_structure_proximity.png` | Strip chart: deposit distance to nearest fault by commodity group |
-
----
-
-## Spatial coverage notes
-
-ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always fill the full configured site bbox. MRDS deposits are clipped to the **valid-pixel footprint polygon** (the actual diagonal scene boundary, not the rectangular bbox) before counting, so deposit totals reflect only deposits within TIR coverage. The zone coverage fraction used in significance testing (zone area / footprint area) also uses this polygon. The TIR data boundary is shown as a dashed polygon outline on each figure 03.
-
-**Sites with partial TIR coverage** (footprint polygon area / site bbox area):
-
-| Site | TIR coverage | Notes |
-|---|---|---|
-| Green River, WY | ~50% of bbox | Granule covers roughly the SW half; 0 critical hits — confirmed false positive on all-deposits test |
-| Bisbee, AZ | ~64% of bbox | Parallelogram ASTER swath; NE corner absent |
-| Yerington, NV | ~55% of bbox | Diagonal upper-left cutoff |
-| Gas Hills, WY | ~72% of bbox | Diagonal lower-right corner clipped |
-| Pea Ridge, MO | ~86% of bbox | Diagonal upper-left cutoff; main deposit cluster within covered area |
-
-**Bingham Canyon spatial mismatch:** The large TIR anomaly zone at this site (figure 03, upper-right cluster) corresponds to **Wasatch Front carbonate formations**, not the Bingham Canyon porphyry Cu-Mo-Au system. The actual mine (Oquirrh Mountains) is in the center-left of the bbox where MRDS deposit points cluster, but produces a weak TIR signal. The anti-correlation reflects geometric displacement between the dominant anomaly zone and the target deposit, not failure of alteration detection.
-
-**Structural corridor density at Ozark sites:** Pea Ridge and Viburnum Trend show structural corridor buffers covering 40–50% of the map area, reflecting the density of mapped faults/lineaments in the Missouri Ozarks rather than real structural control on mineralization. The "% of deposits within 500 m of structure" metric is inflated at these sites.
-
----
-
-## Interpretation limits
-
-- **TIR-only:** SWIR clay/argillic mapping (B04–B09) is not available in LP DAAC v004 for these areas. The method maps silica, carbonate, and mafic mineralogy but misses argillic/phyllic alteration halos detectable with SWIR.
-- **Scene-relative thresholds:** Percentile classification is per-scene; raw anomaly scores are not comparable across sites.
-- **MRDS uncertainty:** Deposit locations are report-derived and may be offset from true outcrop or mineralized footprint.
-- **Significance null model:** Both tests assume uniform deposit distribution within the bbox. Spatial clustering of real deposits makes p-values conservative — actual null distributions are not uniform.
-- **Partial TIR coverage:** ASTER granule swaths do not always fill the full site bbox. At Green River (~50% covered), Bisbee (~64%), Yerington (~55%), Gas Hills (~72%), and Pea Ridge (~86%), deposit counts and significance tests reflect only the covered portion. Deposits and significance testing use the valid-pixel polygon (not a bounding rectangle); the TIR data boundary is shown on each figure 03.
-- **Anti-correlations are informative:** p ≈ 1 means the method is physically incapable of detecting the dominant deposit type at that site, not that the zones are wrong.

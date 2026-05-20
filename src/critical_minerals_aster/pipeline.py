@@ -103,11 +103,62 @@ def run_classification(
     (diagonal ASTER swath edge) rather than the bounding rectangle.  Use it
     for all deposit and structure clipping instead of the bbox.
     """
-    # Ratio mosaic path: download_and_mosaic_aster writes per-ratio GeoTIFFs so that
-    # normalization operates on the actual signal (ratios) rather than individual
-    # bands whose independent correction factors would distort the ratios.
+    from critical_minerals_aster.spectral import compute_valid_data_footprint
+
+    _cls_silica_path = paths.aster_dir / f"{granule_id}_cls_silica.tif"
     _ratio_silica_path = paths.aster_dir / f"{granule_id}_ratio_silica.tif"
+
+    if _cls_silica_path.exists():
+        # Per-granule classification mosaic path: percentile thresholds were applied
+        # per-granule before merging, so the classified arrays are loaded directly
+        # and classify_percentiles() is skipped.
+        from critical_minerals_aster.spectral import load_classification_mosaic
+        silica_cls, carbonate_cls, mafic_cls, valid_mask, transform, crs = load_classification_mosaic(
+            paths.aster_dir, granule_id
+        )
+        (valid_mask, silica_cls, carbonate_cls, mafic_cls), transform = clip_bands_to_bbox(
+            [valid_mask, silica_cls, carbonate_cls, mafic_cls], transform, crs, site.bbox_wgs84
+        )
+        # Ratio mosaic is still loaded for visualization figures (composite, band ratios).
+        if _ratio_silica_path.exists():
+            silica, carbonate, mafic, _, ratio_transform, ratio_crs = load_ratio_mosaic(
+                paths.aster_dir, granule_id
+            )
+            (silica, carbonate, mafic), _ = clip_bands_to_bbox(
+                [silica, carbonate, mafic], ratio_transform, ratio_crs, site.bbox_wgs84
+            )
+        else:
+            silica = np.full(silica_cls.shape, np.nan, dtype=float)
+            carbonate = np.full(silica_cls.shape, np.nan, dtype=float)
+            mafic = np.full(silica_cls.shape, np.nan, dtype=float)
+
+        raster_bbox: BBox = raster_bbox_wgs84(transform, silica_cls.shape, crs)
+        tir_footprint = compute_valid_data_footprint(valid_mask, transform, crs)
+
+        cp = site.classification
+        assert cp is not None
+        combined = combined_score(silica_cls, carbonate_cls, mafic_cls)
+        zones = vectorize_strong_zones(combined, transform, crs, min_score=cp.strong_score_min)
+        return (
+            zones,
+            silica,
+            carbonate,
+            mafic,
+            silica_cls,
+            carbonate_cls,
+            mafic_cls,
+            combined,
+            raster_bbox,
+            transform,
+            silica_cls.shape,
+            crs,
+            tir_footprint,
+        )
+
     if _ratio_silica_path.exists():
+        # Ratio mosaic path: download_and_mosaic_aster writes per-ratio GeoTIFFs so that
+        # normalization operates on the actual signal (ratios) rather than individual
+        # bands whose independent correction factors would distort the ratios.
         silica, carbonate, mafic, b10, transform, crs = load_ratio_mosaic(
             paths.aster_dir, granule_id
         )
@@ -127,9 +178,7 @@ def run_classification(
         )
         silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
 
-    raster_bbox: BBox = raster_bbox_wgs84(transform, silica.shape, crs)
-
-    from critical_minerals_aster.spectral import compute_valid_data_footprint
+    raster_bbox = raster_bbox_wgs84(transform, silica.shape, crs)
     tir_footprint = compute_valid_data_footprint(b10, transform, crs)
 
     cp = site.classification
@@ -873,6 +922,65 @@ def download_aster(
     return granule_id
 
 
+def _max_mosaic(paths_list: list[Path], out_path: Path) -> None:
+    """Merge uint8 classified maps by taking the elementwise max on a common grid.
+
+    Reprojects each input to the union extent (CRS and resolution of the first
+    file) using nearest-neighbour resampling, then writes max(cls_i) per pixel.
+    Pixels covered by no granule stay 0 (nodata sentinel for classified maps).
+    """
+    import rasterio
+    from rasterio.enums import Resampling
+    from rasterio.transform import from_bounds
+    from rasterio.warp import reproject as warp_reproject, transform_bounds
+
+    datasets = [rasterio.open(p) for p in paths_list]
+    try:
+        ref_ds = datasets[0]
+        dst_crs = ref_ds.crs
+        res_x = abs(ref_ds.transform.a)
+        res_y = abs(ref_ds.transform.e)
+
+        all_bounds = [transform_bounds(ds.crs, dst_crs, *ds.bounds) for ds in datasets]
+        left   = min(b[0] for b in all_bounds)
+        bottom = min(b[1] for b in all_bounds)
+        right  = max(b[2] for b in all_bounds)
+        top    = max(b[3] for b in all_bounds)
+
+        out_width  = max(1, int(round((right - left) / res_x)))
+        out_height = max(1, int(round((top - bottom) / res_y)))
+        out_transform = from_bounds(left, bottom, right, top, out_width, out_height)
+
+        acc = np.zeros((out_height, out_width), dtype=np.uint8)
+
+        for ds in datasets:
+            src_arr = ds.read(1).astype(np.uint8)
+            dst_arr = np.zeros((out_height, out_width), dtype=np.uint8)
+            warp_reproject(
+                source=src_arr,
+                destination=dst_arr,
+                src_transform=ds.transform,
+                src_crs=ds.crs,
+                dst_transform=out_transform,
+                dst_crs=dst_crs,
+                resampling=Resampling.nearest,
+                src_nodata=0,
+                dst_nodata=0,
+            )
+            acc = np.maximum(acc, dst_arr)
+
+        profile = ref_ds.profile.copy()
+        profile.update(
+            height=out_height, width=out_width, transform=out_transform,
+            crs=dst_crs, dtype=rasterio.uint8, count=1, nodata=0,
+        )
+        with rasterio.open(out_path, "w", **profile) as dst:
+            dst.write(acc, 1)
+    finally:
+        for ds in datasets:
+            ds.close()
+
+
 def _feathered_mosaic(corrected_paths: list[Path], out_path: Path) -> None:
     """Merge granules with distance-weighted (feathered) blending at overlaps.
 
@@ -1011,6 +1119,174 @@ def _normalise_to_reference(
     return out.astype(src.dtype)
 
 
+def _build_ratio_mosaic_from_paths(
+    b10_files: list[Path],
+    paths: SitePaths,
+    mosaic_id: str,
+) -> None:
+    """Compute ratio mosaics from a list of local B10 TIF paths.
+
+    Normalizes per-ratio distributions across granules before feather-blending,
+    so radiometric differences between acquisition dates don't distort the ratios.
+    Writes ``{mosaic_id}_ratio_{silica,carbonate,mafic}.tif`` and
+    ``{mosaic_id}_TIR_B10.tif`` into ``paths.aster_dir``.
+    """
+    import tempfile
+
+    import rasterio
+
+    def _write_tmp(arr: np.ndarray, profile: dict, path: Path) -> None:
+        p = profile.copy()
+        p.update(dtype=rasterio.float32)
+        out = arr.astype(np.float64).copy()
+        out[~np.isfinite(out)] = 0.0
+        with rasterio.open(path, "w", **p) as dst:
+            dst.write(out.astype(np.float32), 1)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = Path(tmpdir)
+        granule_data: list[dict] = []
+        for b10_file in b10_files:
+            prefix = b10_file.stem.replace("_TIR_B10", "")
+            try:
+                with rasterio.open(b10_file) as ds:
+                    b10 = ds.read(1).astype(np.float64)
+                    profile = ds.profile.copy()
+                b10[b10 == 0] = np.nan
+                bands: dict[int, np.ndarray] = {}
+                for bnum in (12, 13, 14):
+                    bf = b10_file.parent / f"{prefix}_TIR_B{bnum}.tif"
+                    with rasterio.open(bf) as ds:
+                        arr = ds.read(1).astype(np.float64)
+                    arr[arr == 0] = np.nan
+                    bands[bnum] = arr
+                granule_data.append({
+                    "b10": b10,
+                    "silica":    band_ratio(bands[13], bands[14]),
+                    "carbonate": band_ratio(bands[13], bands[12]),
+                    "mafic":     band_ratio(bands[12], bands[13]),
+                    "profile": profile,
+                })
+            except Exception as exc:
+                print(
+                    f"  Warning: could not load granule {b10_file.name}: {exc}",
+                    file=sys.stderr,
+                )
+
+        if not granule_data:
+            return
+
+        ref = granule_data[0]
+
+        # --- Ratio mosaics (continuous values, used for visualization figures) ---
+        if len(granule_data) == 1:
+            # Single granule: write directly without reprojection to preserve the
+            # original pixel grid.  Bilinear resampling in _feathered_mosaic would
+            # shift edge-pixel values via interpolation with nodata neighbors,
+            # distorting percentile thresholds and moving strong-anomaly zone boundaries.
+            for ratio_name in ("silica", "carbonate", "mafic"):
+                _write_tmp(
+                    ref[ratio_name],
+                    ref["profile"],
+                    paths.aster_dir / f"{mosaic_id}_ratio_{ratio_name}.tif",
+                )
+            _write_tmp(
+                ref["b10"],
+                ref["profile"],
+                paths.aster_dir / f"{mosaic_id}_TIR_B10.tif",
+            )
+        else:
+            for ratio_name in ("silica", "carbonate", "mafic"):
+                ref_arr = ref[ratio_name]
+                ref_tmp = tmpdir / f"ref_{ratio_name}.tif"
+                _write_tmp(ref_arr, ref["profile"], ref_tmp)
+                corrected_paths: list[Path] = [ref_tmp]
+
+                for idx, g in enumerate(granule_data[1:], 1):
+                    normed = _normalise_to_reference(g[ratio_name], ref_arr)
+                    sec_tmp = tmpdir / f"sec_{idx}_{ratio_name}.tif"
+                    _write_tmp(normed, g["profile"], sec_tmp)
+                    corrected_paths.append(sec_tmp)
+
+                _feathered_mosaic(
+                    corrected_paths,
+                    paths.aster_dir / f"{mosaic_id}_ratio_{ratio_name}.tif",
+                )
+
+            b10_tmp_paths: list[Path] = []
+            for idx, g in enumerate(granule_data):
+                b10_tmp = tmpdir / f"b10_{idx}.tif"
+                _write_tmp(g["b10"], g["profile"], b10_tmp)
+                b10_tmp_paths.append(b10_tmp)
+            _feathered_mosaic(
+                b10_tmp_paths,
+                paths.aster_dir / f"{mosaic_id}_TIR_B10.tif",
+            )
+
+        # --- Per-granule classification mosaics (used for science outputs) ---
+        # Classify each granule independently within the site bbox so percentile
+        # thresholds reflect each granule's local scene statistics, then max-merge
+        # the classified maps.  This avoids the pooled-distribution problem where
+        # thresholds computed on the full mosaic extent dilute local anomalies.
+        cp = paths.site.classification
+        if cp is None:
+            from critical_minerals_aster.config import ClassificationParams
+            cp = ClassificationParams()
+
+        cls_tmp: dict[str, list[Path]] = {"silica": [], "carbonate": [], "mafic": []}
+        valid_tmp: list[Path] = []
+
+        for idx, g in enumerate(granule_data):
+            profile = g["profile"]
+            g_transform = profile["transform"]
+            g_crs = profile["crs"]
+
+            # Clip each granule's ratios to the site bbox before classifying so
+            # percentile thresholds are site-specific, matching the single-granule path.
+            (silica_c, carbonate_c, mafic_c), clipped_transform = clip_bands_to_bbox(
+                [g["silica"], g["carbonate"], g["mafic"]],
+                g_transform, g_crs, paths.site.bbox_wgs84,
+            )
+
+            silica_cls, _, _ = classify_percentiles(silica_c, cp.low_pct, cp.high_pct)
+            carbonate_cls, _, _ = classify_percentiles(carbonate_c, cp.low_pct, cp.high_pct)
+            mafic_cls, _, _ = classify_percentiles(mafic_c, cp.low_pct, cp.high_pct)
+
+            # Valid mask: finite silica ratio = pixel has real TIR data from this granule.
+            valid_mask = np.isfinite(silica_c).astype(np.uint8)
+
+            rows, cols = silica_cls.shape
+            p = profile.copy()
+            p.update(
+                dtype="uint8", count=1, height=rows, width=cols,
+                transform=clipped_transform, crs=g_crs, nodata=0,
+            )
+            for name, arr in [
+                ("silica", silica_cls),
+                ("carbonate", carbonate_cls),
+                ("mafic", mafic_cls),
+            ]:
+                tmp_path = tmpdir / f"cls_{idx}_{name}.tif"
+                with rasterio.open(tmp_path, "w", **p) as dst:
+                    dst.write(arr, 1)
+                cls_tmp[name].append(tmp_path)
+
+            valid_path = tmpdir / f"valid_{idx}.tif"
+            with rasterio.open(valid_path, "w", **p) as dst:
+                dst.write(valid_mask, 1)
+            valid_tmp.append(valid_path)
+
+        if len(granule_data) == 1:
+            import shutil
+            for name in ("silica", "carbonate", "mafic"):
+                shutil.copy(cls_tmp[name][0], paths.aster_dir / f"{mosaic_id}_cls_{name}.tif")
+            shutil.copy(valid_tmp[0], paths.aster_dir / f"{mosaic_id}_cls_valid.tif")
+        else:
+            for name in ("silica", "carbonate", "mafic"):
+                _max_mosaic(cls_tmp[name], paths.aster_dir / f"{mosaic_id}_cls_{name}.tif")
+            _max_mosaic(valid_tmp, paths.aster_dir / f"{mosaic_id}_cls_valid.tif")
+
+
 def download_and_mosaic_aster(
     site: SiteConfig,
     paths: SitePaths,
@@ -1027,12 +1303,37 @@ def download_and_mosaic_aster(
     reference (first) granule's mean/std per band, eliminating the seam
     artefacts that arise from different acquisition dates, solar angles, and
     atmospheric conditions.
+
+    When local granule TIF files already exist in ``paths.aster_dir`` (non-mosaic
+    B10 files), earthaccess download is skipped entirely — the local files are
+    used directly to build the ratio mosaics.
     """
-    import shutil
     import tempfile
 
+    mosaic_id = f"{site.id}_mosaic"
+
+    # Short-circuit: if both ratio mosaics (for figures) and classification mosaics
+    # (for science) are already built, nothing to do.
+    ratio_files = [paths.aster_dir / f"{mosaic_id}_ratio_{r}.tif" for r in ("silica", "carbonate", "mafic")]
+    cls_files = [paths.aster_dir / f"{mosaic_id}_cls_{r}.tif" for r in ("silica", "carbonate", "mafic")]
+    valid_file = paths.aster_dir / f"{mosaic_id}_cls_valid.tif"
+    if all(p.is_file() for p in ratio_files) and all(p.is_file() for p in cls_files) and valid_file.is_file():
+        return mosaic_id
+
+    # Prefer local granule TIFs over re-downloading.  A granule is a set of
+    # per-band files sharing the same prefix (everything before "_TIR_B10.tif").
+    local_b10s = [
+        p for p in sorted(paths.aster_dir.glob("*_TIR_B10.tif"))
+        if "mosaic" not in p.name
+    ]
+
+    if local_b10s:
+        # Build mosaic from local files — no earthaccess login needed.
+        _build_ratio_mosaic_from_paths(local_b10s, paths, mosaic_id)
+        return mosaic_id
+
+    # No local files: fall back to earthaccess download.
     import earthaccess
-    import rasterio
 
     from critical_minerals_aster.spectral import score_granule
 
@@ -1067,15 +1368,6 @@ def download_and_mosaic_aster(
 
     paths.aster_dir.mkdir(parents=True, exist_ok=True)
 
-    def _write_tmp(arr: np.ndarray, profile: dict, path: Path) -> None:
-        """Write a float32 array to a temp GeoTIFF with 0 as nodata sentinel."""
-        p = profile.copy()
-        p.update(dtype=rasterio.float32)
-        out = arr.astype(np.float64).copy()
-        out[~np.isfinite(out)] = 0.0
-        with rasterio.open(path, "w", **p) as dst:
-            dst.write(out.astype(np.float32), 1)
-
     with tempfile.TemporaryDirectory() as tmpdir:
         for granule in covering:
             try:
@@ -1083,74 +1375,11 @@ def download_and_mosaic_aster(
             except Exception as exc:
                 print(f"  Warning: could not download granule: {exc}", file=sys.stderr)
 
-        mosaic_id = f"{site.id}_mosaic"
-
-        # Load bands and compute ratios per granule so normalization operates on
-        # the actual signal (ratios) rather than individual bands.  Normalizing
-        # bands independently distorts ratios because each band gets a different
-        # correction factor; normalizing ratios preserves the relative mineralogy
-        # signal that percentile classification depends on.
-        granule_data: list[dict] = []
-        for b10_file in sorted(Path(tmpdir).glob("*_TIR_B10.tif")):
-            prefix = b10_file.stem.replace("_TIR_B10", "")
-            try:
-                with rasterio.open(b10_file) as ds:
-                    b10 = ds.read(1).astype(np.float64)
-                    profile = ds.profile.copy()
-                b10[b10 == 0] = np.nan
-                bands: dict[int, np.ndarray] = {}
-                for bnum in (12, 13, 14):
-                    bf = b10_file.parent / f"{prefix}_TIR_B{bnum}.tif"
-                    with rasterio.open(bf) as ds:
-                        arr = ds.read(1).astype(np.float64)
-                    arr[arr == 0] = np.nan
-                    bands[bnum] = arr
-                granule_data.append({
-                    "b10": b10,
-                    "silica":    band_ratio(bands[13], bands[14]),
-                    "carbonate": band_ratio(bands[13], bands[12]),
-                    "mafic":     band_ratio(bands[12], bands[13]),
-                    "profile": profile,
-                })
-            except Exception as exc:
-                print(f"  Warning: could not load granule {prefix}: {exc}", file=sys.stderr)
-
-        if not granule_data:
+        downloaded_b10s = sorted(Path(tmpdir).glob("*_TIR_B10.tif"))
+        if not downloaded_b10s:
             return download_aster(site, paths, interactive_login=False)
 
-        ref = granule_data[0]
-
-        # Merge each ratio independently: normalize secondary granule ratios to
-        # the reference distribution, then feather-blend.
-        for ratio_name in ("silica", "carbonate", "mafic"):
-            ref_arr = ref[ratio_name]
-            ref_tmp = Path(tmpdir) / f"ref_{ratio_name}.tif"
-            _write_tmp(ref_arr, ref["profile"], ref_tmp)
-            corrected_paths: list[Path] = [ref_tmp]
-
-            for idx, g in enumerate(granule_data[1:], 1):
-                normed = _normalise_to_reference(g[ratio_name], ref_arr)
-                sec_tmp = Path(tmpdir) / f"sec_{idx}_{ratio_name}.tif"
-                _write_tmp(normed, g["profile"], sec_tmp)
-                corrected_paths.append(sec_tmp)
-
-            _feathered_mosaic(
-                corrected_paths,
-                paths.aster_dir / f"{mosaic_id}_ratio_{ratio_name}.tif",
-            )
-
-        # B10 merged unnormalized — used only for valid-pixel footprint computation,
-        # not for ratio derivation, so radiometric consistency across granules is
-        # not required.
-        b10_tmp_paths: list[Path] = []
-        for idx, g in enumerate(granule_data):
-            b10_tmp = Path(tmpdir) / f"b10_{idx}.tif"
-            _write_tmp(g["b10"], g["profile"], b10_tmp)
-            b10_tmp_paths.append(b10_tmp)
-        _feathered_mosaic(
-            b10_tmp_paths,
-            paths.aster_dir / f"{mosaic_id}_TIR_B10.tif",
-        )
+        _build_ratio_mosaic_from_paths(downloaded_b10s, paths, mosaic_id)
 
     return mosaic_id
 

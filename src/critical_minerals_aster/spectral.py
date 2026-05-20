@@ -188,6 +188,47 @@ def band_ratio(a: np.ndarray, b: np.ndarray) -> np.ndarray:
         return np.where(b != 0, a / b, np.nan)
 
 
+def load_classification_mosaic(
+    aster_dir: os.PathLike[str] | str,
+    granule_id: str,
+) -> tuple[
+    np.ndarray,  # silica_cls  (uint8: 0=bg, 1=moderate, 2=strong)
+    np.ndarray,  # carbonate_cls
+    np.ndarray,  # mafic_cls
+    np.ndarray,  # valid_mask  (float: 1.0=valid, NaN=nodata)
+    "rasterio.Affine",
+    "rasterio.crs.CRS",
+]:
+    """Load per-granule classification mosaic files produced by _build_ratio_mosaic_from_paths.
+
+    Classifications were applied per-granule before merging, so percentile
+    thresholds reflect each granule's local scene statistics rather than the
+    pooled mosaic distribution.  Returns classified uint8 arrays ready to pass
+    directly to combined_score(), bypassing classify_percentiles().
+
+    valid_mask has 1.0 where any granule had real data and NaN elsewhere;
+    pass it to compute_valid_data_footprint() in place of B10.
+    """
+    aster_dir = Path(aster_dir)
+    transform = crs = None
+    classes: dict[str, np.ndarray] = {}
+    for name in ("silica", "carbonate", "mafic"):
+        path = aster_dir / f"{granule_id}_cls_{name}.tif"
+        with rasterio.open(path) as src:
+            arr = src.read(1).astype(np.uint8)
+            if transform is None:
+                transform = src.transform
+                crs = src.crs
+        classes[name] = arr
+
+    valid_path = aster_dir / f"{granule_id}_cls_valid.tif"
+    with rasterio.open(valid_path) as src:
+        valid_mask = src.read(1).astype(float)
+    valid_mask[valid_mask == 0] = np.nan
+
+    return classes["silica"], classes["carbonate"], classes["mafic"], valid_mask, transform, crs
+
+
 def load_ratio_mosaic(
     aster_dir: os.PathLike[str] | str,
     granule_id: str,
