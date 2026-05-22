@@ -1223,68 +1223,56 @@ def _build_ratio_mosaic_from_paths(
                 paths.aster_dir / f"{mosaic_id}_TIR_B10.tif",
             )
 
-        # --- Per-granule classification mosaics (used for science outputs) ---
-        # Classify each granule independently within the site bbox so percentile
-        # thresholds reflect each granule's local scene statistics, then max-merge
-        # the classified maps.  This avoids the pooled-distribution problem where
-        # thresholds computed on the full mosaic extent dilute local anomalies.
+        # --- Classification from the bbox-clipped ratio mosaic ---
+        # Read the ratio mosaic written above, clip to the site bbox once, and
+        # classify in a single pass.  Per-granule classify + max-merge inflates
+        # the strong-anomaly fraction: with N independent granules each at the
+        # 70th/90th percentile, P(max ≥ strong) = 1 − 0.9^N, so 3 granules →
+        # ~27% strong and 6 granules → ~47% strong instead of the expected 10%.
         cp = paths.site.classification
         if cp is None:
             from critical_minerals_aster.config import ClassificationParams
             cp = ClassificationParams()
 
-        cls_tmp: dict[str, list[Path]] = {"silica": [], "carbonate": [], "mafic": []}
-        valid_tmp: list[Path] = []
+        with rasterio.open(paths.aster_dir / f"{mosaic_id}_TIR_B10.tif") as ds:
+            mosaic_b10 = ds.read(1).astype(np.float64)
+            mosaic_transform = ds.transform
+            mosaic_crs = ds.crs
+            mosaic_profile = ds.profile.copy()
+        mosaic_b10[mosaic_b10 == 0] = np.nan
 
-        for idx, g in enumerate(granule_data):
-            profile = g["profile"]
-            g_transform = profile["transform"]
-            g_crs = profile["crs"]
+        mosaic_ratios: dict[str, np.ndarray] = {}
+        for rname in ("silica", "carbonate", "mafic"):
+            with rasterio.open(paths.aster_dir / f"{mosaic_id}_ratio_{rname}.tif") as ds:
+                arr = ds.read(1).astype(np.float64)
+            arr[arr == 0] = np.nan
+            mosaic_ratios[rname] = arr
 
-            # Clip each granule's ratios to the site bbox before classifying so
-            # percentile thresholds are site-specific, matching the single-granule path.
-            (silica_c, carbonate_c, mafic_c), clipped_transform = clip_bands_to_bbox(
-                [g["silica"], g["carbonate"], g["mafic"]],
-                g_transform, g_crs, paths.site.bbox_wgs84,
-            )
+        (mosaic_b10_c, sil_c, carb_c, maf_c), cls_transform = clip_bands_to_bbox(
+            [mosaic_b10, mosaic_ratios["silica"], mosaic_ratios["carbonate"], mosaic_ratios["mafic"]],
+            mosaic_transform, mosaic_crs, paths.site.bbox_wgs84,
+        )
 
-            silica_cls, _, _ = classify_percentiles(silica_c, cp.low_pct, cp.high_pct)
-            carbonate_cls, _, _ = classify_percentiles(carbonate_c, cp.low_pct, cp.high_pct)
-            mafic_cls, _, _ = classify_percentiles(mafic_c, cp.low_pct, cp.high_pct)
+        silica_cls, _, _ = classify_percentiles(sil_c, cp.low_pct, cp.high_pct)
+        carbonate_cls, _, _ = classify_percentiles(carb_c, cp.low_pct, cp.high_pct)
+        mafic_cls, _, _ = classify_percentiles(maf_c, cp.low_pct, cp.high_pct)
+        valid_mask = np.isfinite(mosaic_b10_c).astype(np.uint8)
 
-            # Valid mask: finite silica ratio = pixel has real TIR data from this granule.
-            valid_mask = np.isfinite(silica_c).astype(np.uint8)
-
-            rows, cols = silica_cls.shape
-            p = profile.copy()
-            p.update(
-                dtype="uint8", count=1, height=rows, width=cols,
-                transform=clipped_transform, crs=g_crs, nodata=0,
-            )
-            for name, arr in [
-                ("silica", silica_cls),
-                ("carbonate", carbonate_cls),
-                ("mafic", mafic_cls),
-            ]:
-                tmp_path = tmpdir / f"cls_{idx}_{name}.tif"
-                with rasterio.open(tmp_path, "w", **p) as dst:
-                    dst.write(arr, 1)
-                cls_tmp[name].append(tmp_path)
-
-            valid_path = tmpdir / f"valid_{idx}.tif"
-            with rasterio.open(valid_path, "w", **p) as dst:
-                dst.write(valid_mask, 1)
-            valid_tmp.append(valid_path)
-
-        if len(granule_data) == 1:
-            import shutil
-            for name in ("silica", "carbonate", "mafic"):
-                shutil.copy(cls_tmp[name][0], paths.aster_dir / f"{mosaic_id}_cls_{name}.tif")
-            shutil.copy(valid_tmp[0], paths.aster_dir / f"{mosaic_id}_cls_valid.tif")
-        else:
-            for name in ("silica", "carbonate", "mafic"):
-                _max_mosaic(cls_tmp[name], paths.aster_dir / f"{mosaic_id}_cls_{name}.tif")
-            _max_mosaic(valid_tmp, paths.aster_dir / f"{mosaic_id}_cls_valid.tif")
+        rows, cols = silica_cls.shape
+        cls_profile = mosaic_profile.copy()
+        cls_profile.update(
+            dtype="uint8", count=1, height=rows, width=cols,
+            transform=cls_transform, crs=mosaic_crs, nodata=0,
+        )
+        for name, arr in [
+            ("silica", silica_cls),
+            ("carbonate", carbonate_cls),
+            ("mafic", mafic_cls),
+        ]:
+            with rasterio.open(paths.aster_dir / f"{mosaic_id}_cls_{name}.tif", "w", **cls_profile) as dst:
+                dst.write(arr, 1)
+        with rasterio.open(paths.aster_dir / f"{mosaic_id}_cls_valid.tif", "w", **cls_profile) as dst:
+            dst.write(valid_mask, 1)
 
 
 def download_and_mosaic_aster(

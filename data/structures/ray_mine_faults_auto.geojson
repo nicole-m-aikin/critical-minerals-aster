@@ -1,0 +1,5567 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.116176791274,
+            33.1103322367713
+          ],
+          [
+            -111.120088190768,
+            33.1083328147317
+          ],
+          [
+            -111.126910365345,
+            33.1057056935297
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Detachment fault, certain",
+        "RuleID": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.126910365345,
+            33.1057056935297
+          ],
+          [
+            -111.129159818682,
+            33.1030559576349
+          ],
+          [
+            -111.130284867846,
+            33.101532629199
+          ],
+          [
+            -111.130914953372,
+            33.100275906294
+          ],
+          [
+            -111.131140677545,
+            33.0993849258397
+          ],
+          [
+            -111.131146021623,
+            33.0975966660327
+          ],
+          [
+            -111.130592035079,
+            33.0921896347394
+          ],
+          [
+            -111.130354516026,
+            33.0836229329243
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Detachment fault, certain",
+        "RuleID": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.079754035734,
+            33.1275668526717
+          ],
+          [
+            -111.083373844782,
+            33.1265429491495
+          ],
+          [
+            -111.084362785705,
+            33.1261995160307
+          ],
+          [
+            -111.085309427657,
+            33.1257749248987
+          ],
+          [
+            -111.116176791274,
+            33.1103322367713
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Detachment fault, certain",
+        "RuleID": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.921880618646,
+            32.9039220878235
+          ],
+          [
+            -110.923974676015,
+            32.9099807756721
+          ],
+          [
+            -110.931874081535,
+            32.9267615512787
+          ],
+          [
+            -110.932673652206,
+            32.9293621882165
+          ],
+          [
+            -110.933774714555,
+            32.9356524152608
+          ],
+          [
+            -110.934473435861,
+            32.937380237173
+          ],
+          [
+            -110.935274831011,
+            32.9381631997521
+          ],
+          [
+            -110.936177928926,
+            32.9383914421567
+          ],
+          [
+            -110.938076429345,
+            32.9378511780982
+          ],
+          [
+            -110.941172590651,
+            32.936411658571
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.77812813931,
+            33.0161064693169
+          ],
+          [
+            -110.774343335795,
+            33.0122727740126
+          ],
+          [
+            -110.773384530655,
+            33.011193096464
+          ],
+          [
+            -110.772524232074,
+            33.0100662375408
+          ],
+          [
+            -110.771618384416,
+            33.0084476753942
+          ],
+          [
+            -110.770233519116,
+            33.0050083638643
+          ],
+          [
+            -110.76958672223,
+            33.0037668642886
+          ],
+          [
+            -110.768784674903,
+            33.0031835617948
+          ],
+          [
+            -110.767308232648,
+            33.0024659463329
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.823489131927,
+            33.062701460777
+          ],
+          [
+            -110.822521081326,
+            33.060652475048
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.96804848434,
+            33.1702420983441
+          ],
+          [
+            -110.967356665688,
+            33.1687131627482
+          ],
+          [
+            -110.964298489644,
+            33.1639654738449
+          ],
+          [
+            -110.957837808816,
+            33.1547831888376
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.82819931427,
+            33.1032225878821
+          ],
+          [
+            -110.827029345749,
+            33.0947081118295
+          ],
+          [
+            -110.82693240136,
+            33.0929084363257
+          ],
+          [
+            -110.826959096596,
+            33.088847102919
+          ],
+          [
+            -110.826583950252,
+            33.0870177224111
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.146667998841,
+            33.106498089273
+          ],
+          [
+            -111.145822844957,
+            33.1034209427295
+          ],
+          [
+            -111.145127372857,
+            33.1017034087251
+          ],
+          [
+            -111.144168423088,
+            33.1006311162806
+          ],
+          [
+            -111.140504224689,
+            33.0973203774184
+          ],
+          [
+            -111.139181480586,
+            33.0959079440165
+          ],
+          [
+            -111.136010268631,
+            33.0917373428684
+          ],
+          [
+            -111.130354516026,
+            33.0836229329243
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.780793031126,
+            33.0578234729734
+          ],
+          [
+            -110.78024700635,
+            33.0556869520609
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.931867841837,
+            33.1398883603539
+          ],
+          [
+            -110.930979710753,
+            33.1302791179679
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.831579343206,
+            33.1211413787764
+          ],
+          [
+            -110.830365776749,
+            33.1163815658189
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.000154773854,
+            33.2123251336902
+          ],
+          [
+            -110.999494836412,
+            33.2132384118282
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.855940639513,
+            33.0096405900241
+          ],
+          [
+            -110.854993466658,
+            33.0080158209784
+          ],
+          [
+            -110.854600055767,
+            33.0071809763989
+          ],
+          [
+            -110.853672474269,
+            33.0036438995346
+          ],
+          [
+            -110.853107825621,
+            33.0023961646991
+          ],
+          [
+            -110.852583899401,
+            33.0016152802985
+          ],
+          [
+            -110.850513588997,
+            32.9989653031644
+          ],
+          [
+            -110.848615681465,
+            32.9957291363802
+          ],
+          [
+            -110.846630025598,
+            32.9936023602115
+          ],
+          [
+            -110.845845666998,
+            32.9924196957032
+          ],
+          [
+            -110.844970661199,
+            32.9902920109567
+          ],
+          [
+            -110.843481042455,
+            32.9856332730202
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.027879641063,
+            33.1780456751663
+          ],
+          [
+            -111.026691524777,
+            33.1786367508407
+          ],
+          [
+            -111.025490159238,
+            33.1786888713697
+          ],
+          [
+            -111.02460457398,
+            33.1787972911735
+          ],
+          [
+            -111.023402897624,
+            33.1789553748896
+          ],
+          [
+            -111.022050978936,
+            33.1788586557216
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.782891273746,
+            33.0722708954321
+          ],
+          [
+            -110.781445943743,
+            33.0606073840119
+          ],
+          [
+            -110.780793031126,
+            33.0578234729734
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.830365776749,
+            33.1163815658189
+          ],
+          [
+            -110.82819931427,
+            33.1032225878821
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.143906143771,
+            33.1650104510881
+          ],
+          [
+            -111.144391691267,
+            33.1605178785646
+          ],
+          [
+            -111.144242335571,
+            33.1555389526231
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.022050978936,
+            33.1788586557216
+          ],
+          [
+            -111.0192897455,
+            33.1827309960574
+          ],
+          [
+            -111.01798983208,
+            33.1846998275703
+          ],
+          [
+            -111.016617209021,
+            33.1871444659356
+          ],
+          [
+            -111.014995241487,
+            33.1904888723931
+          ],
+          [
+            -111.012919736125,
+            33.1951389607525
+          ],
+          [
+            -111.011790633763,
+            33.1981495261584
+          ],
+          [
+            -111.011076496468,
+            33.2007834540922
+          ],
+          [
+            -111.009865770485,
+            33.206565422092
+          ],
+          [
+            -111.009282903104,
+            33.2087618529162
+          ],
+          [
+            -111.00891380332,
+            33.2096097659109
+          ],
+          [
+            -111.00799751634,
+            33.2112469709691
+          ],
+          [
+            -111.005084437079,
+            33.2158067654
+          ],
+          [
+            -111.003881939664,
+            33.217130502705
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.912347064437,
+            33.142243901153
+          ],
+          [
+            -110.914368158842,
+            33.1443515227549
+          ],
+          [
+            -110.915267374238,
+            33.1448324639927
+          ],
+          [
+            -110.918988187162,
+            33.1443298193036
+          ],
+          [
+            -110.921568457678,
+            33.1437293803432
+          ],
+          [
+            -110.922470562955,
+            33.1432428580119
+          ],
+          [
+            -110.923153059788,
+            33.1425171586363
+          ],
+          [
+            -110.92365609389,
+            33.14123660476
+          ],
+          [
+            -110.92389018048,
+            33.1394282023235
+          ],
+          [
+            -110.923585076677,
+            33.1381088142151
+          ],
+          [
+            -110.922398622274,
+            33.1350930810247
+          ],
+          [
+            -110.922035585219,
+            33.1337849257317
+          ],
+          [
+            -110.921977460627,
+            33.1324476483586
+          ],
+          [
+            -110.922247220216,
+            33.1300867818045
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.079754035734,
+            33.1275668526717
+          ],
+          [
+            -111.075318551018,
+            33.1291729468174
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.039644436165,
+            33.1870490421189
+          ],
+          [
+            -111.037188879657,
+            33.1858513455586
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.814136911641,
+            33.111131148308
+          ],
+          [
+            -110.80723985979,
+            33.09152869006
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.868657238286,
+            33.0294363346679
+          ],
+          [
+            -110.859476194673,
+            33.0171135056121
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.975477657741,
+            33.1532004040177
+          ],
+          [
+            -110.974636885839,
+            33.1519622171442
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.118212690813,
+            33.161165622962
+          ],
+          [
+            -111.11796939739,
+            33.1584643301132
+          ],
+          [
+            -111.117968289767,
+            33.1566625623927
+          ],
+          [
+            -111.118198977132,
+            33.1503505126597
+          ],
+          [
+            -111.11858299973,
+            33.1449470902925
+          ],
+          [
+            -111.118939809662,
+            33.1427097556431
+          ],
+          [
+            -111.11936526256,
+            33.1409414013092
+          ],
+          [
+            -111.121239071886,
+            33.135279453045
+          ],
+          [
+            -111.121906459955,
+            33.1326426618942
+          ],
+          [
+            -111.122181434264,
+            33.1299588974915
+          ],
+          [
+            -111.122250553337,
+            33.1247902770261
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.984827007011,
+            33.1121285307332
+          ],
+          [
+            -110.984832332224,
+            33.1103244880712
+          ],
+          [
+            -110.985310247633,
+            33.1085656065218
+          ],
+          [
+            -110.985170509301,
+            33.1069374408624
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.783301091467,
+            33.0747228713059
+          ],
+          [
+            -110.782891273746,
+            33.0722708954321
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.143767416942,
+            33.1832537326221
+          ],
+          [
+            -111.143631803673,
+            33.1809131820276
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.042571604603,
+            33.1894812430743
+          ],
+          [
+            -111.041305662772,
+            33.1879933551043
+          ],
+          [
+            -111.039644436165,
+            33.1870490421189
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.095012891015,
+            33.2304798925687
+          ],
+          [
+            -111.095984991222,
+            33.2187666449551
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.826583950252,
+            33.0870177224111
+          ],
+          [
+            -110.82583103089,
+            33.0842068590659
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.144242335571,
+            33.1555389526231
+          ],
+          [
+            -111.143867809963,
+            33.1424579544624
+          ],
+          [
+            -111.143830565811,
+            33.1361461577029
+          ],
+          [
+            -111.14400385622,
+            33.1325469214794
+          ],
+          [
+            -111.144776440602,
+            33.1267122424013
+          ],
+          [
+            -111.145015830845,
+            33.1240149383411
+          ],
+          [
+            -111.145024128583,
+            33.1217576339151
+          ],
+          [
+            -111.144777008337,
+            33.1167833003172
+          ],
+          [
+            -111.144790359997,
+            33.1145395166881
+          ],
+          [
+            -111.144899426252,
+            33.1136554134969
+          ],
+          [
+            -111.14571155088,
+            33.1119676930507
+          ],
+          [
+            -111.145987097415,
+            33.1110991801275
+          ],
+          [
+            -111.146667998841,
+            33.106498089273
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.095984991222,
+            33.2187666449551
+          ],
+          [
+            -111.103051751,
+            33.212589026125
+          ],
+          [
+            -111.10519308221,
+            33.2105464475142
+          ],
+          [
+            -111.106450116347,
+            33.209086385446
+          ],
+          [
+            -111.106955492356,
+            33.2083057174306
+          ],
+          [
+            -111.107354490768,
+            33.2074665090235
+          ],
+          [
+            -111.108006950633,
+            33.2052605420481
+          ],
+          [
+            -111.10829786914,
+            33.2030097864079
+          ],
+          [
+            -111.10819235662,
+            33.201214887634
+          ],
+          [
+            -111.107771941474,
+            33.1999005814608
+          ],
+          [
+            -111.10716083645,
+            33.1986450647818
+          ],
+          [
+            -111.106417694352,
+            33.1974279961137
+          ],
+          [
+            -111.105774754832,
+            33.1967069397124
+          ],
+          [
+            -111.103115392146,
+            33.1944924927822
+          ],
+          [
+            -111.096007638649,
+            33.1889733904312
+          ],
+          [
+            -111.094117467408,
+            33.1873805369855
+          ],
+          [
+            -111.093083148987,
+            33.1863507713856
+          ],
+          [
+            -111.090169343887,
+            33.1825509522471
+          ],
+          [
+            -111.085972837088,
+            33.1766029200147
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.867374078446,
+            32.9791617668773
+          ],
+          [
+            -110.862476980048,
+            32.9777199103315
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.822521081326,
+            33.060652475048
+          ],
+          [
+            -110.820515698455,
+            33.0574428792346
+          ],
+          [
+            -110.819329385986,
+            33.0559550660882
+          ],
+          [
+            -110.816852834054,
+            33.0536016532675
+          ],
+          [
+            -110.811135915161,
+            33.0487672350683
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.674311408586,
+            33.1860073363219
+          ],
+          [
+            -110.674478523975,
+            33.1865094203549
+          ],
+          [
+            -110.674946233624,
+            33.1873111808952
+          ],
+          [
+            -110.675783477842,
+            33.1884521562158
+          ],
+          [
+            -110.680202105672,
+            33.1935802624315
+          ],
+          [
+            -110.684479600086,
+            33.1993144502621
+          ],
+          [
+            -110.68628887534,
+            33.2015469948593
+          ],
+          [
+            -110.687657295182,
+            33.2029372827456
+          ],
+          [
+            -110.689855216662,
+            33.2049204447393
+          ],
+          [
+            -110.696266188316,
+            33.2103731447665
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.027879641063,
+            33.1780456751663
+          ],
+          [
+            -111.02656462337,
+            33.1769342341061
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.792936439171,
+            33.0826500595546
+          ],
+          [
+            -110.790053127383,
+            33.0812425773018
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.851673342775,
+            32.9745998830593
+          ],
+          [
+            -110.846771787835,
+            32.9704196526905
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.769798378786,
+            33.030235254256
+          ],
+          [
+            -110.766670141336,
+            33.029097376973
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.959830886564,
+            33.2108663842498
+          ],
+          [
+            -110.963926783848,
+            33.2087140998102
+          ],
+          [
+            -110.967771112428,
+            33.2062481694703
+          ],
+          [
+            -110.970244942465,
+            33.2045124227352
+          ],
+          [
+            -110.972919324083,
+            33.2023076268147
+          ],
+          [
+            -110.977385927339,
+            33.1977917183041
+          ],
+          [
+            -110.978820563797,
+            33.1964547448449
+          ],
+          [
+            -110.980011988579,
+            33.1955529356822
+          ],
+          [
+            -110.982467476814,
+            33.1939747929688
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.933657703599,
+            33.1421511377871
+          ],
+          [
+            -110.931867841837,
+            33.1398883603539
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.802162138935,
+            33.0536400400192
+          ],
+          [
+            -110.799724435546,
+            33.0498791792219
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.851673342775,
+            32.9745998830593
+          ],
+          [
+            -110.858371601047,
+            32.9765223229298
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.766670141336,
+            33.029097376973
+          ],
+          [
+            -110.751921397982,
+            33.0245474035317
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.80723985979,
+            33.09152869006
+          ],
+          [
+            -110.807320655165,
+            33.0865654167304
+          ],
+          [
+            -110.807251896317,
+            33.0843125008541
+          ],
+          [
+            -110.806886367336,
+            33.0802663431209
+          ],
+          [
+            -110.805976137697,
+            33.0725480795117
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.143631803673,
+            33.1809131820276
+          ],
+          [
+            -111.143568693431,
+            33.168285137123
+          ],
+          [
+            -111.143906143771,
+            33.1650104510881
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.767308232648,
+            33.0024659463329
+          ],
+          [
+            -110.766201342928,
+            33.0009078551439
+          ],
+          [
+            -110.765550543149,
+            33.0002007851901
+          ],
+          [
+            -110.764365700324,
+            32.9993010037483
+          ],
+          [
+            -110.760305875788,
+            32.9977123970525
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.772422109796,
+            33.0460775283554
+          ],
+          [
+            -110.771103306602,
+            33.0445551844129
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.927810088816,
+            33.1730441466846
+          ],
+          [
+            -110.929606660096,
+            33.1675812328421
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.696266188316,
+            33.2103731447665
+          ],
+          [
+            -110.700063919486,
+            33.2139610892175
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.002328324041,
+            33.2093169204518
+          ],
+          [
+            -111.000154773854,
+            33.2123251336902
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.037188879657,
+            33.1858513455586
+          ],
+          [
+            -111.027879641063,
+            33.1780456751663
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.130354516026,
+            33.0836229329243
+          ],
+          [
+            -111.126817227118,
+            33.0806183333591
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.782891273746,
+            33.0722708954321
+          ],
+          [
+            -110.780154665827,
+            33.0700944568968
+          ],
+          [
+            -110.778897923643,
+            33.0692646178143
+          ],
+          [
+            -110.777531427094,
+            33.0685540912776
+          ],
+          [
+            -110.776089065125,
+            33.067933613189
+          ],
+          [
+            -110.773592975733,
+            33.0671262908103
+          ],
+          [
+            -110.772018549739,
+            33.0668482976853
+          ],
+          [
+            -110.769339528322,
+            33.0666358939949
+          ],
+          [
+            -110.758516823408,
+            33.0663853457536
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.075318551018,
+            33.1291729468174
+          ],
+          [
+            -111.071043705736,
+            33.1307697721781
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.847089720479,
+            33.0853668660248
+          ],
+          [
+            -110.845531834265,
+            33.0802775094906
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.075179357963,
+            33.1865545618121
+          ],
+          [
+            -111.076188166926,
+            33.1771211879066
+          ],
+          [
+            -111.076278421561,
+            33.1753148576572
+          ],
+          [
+            -111.07617258924,
+            33.1735109030417
+          ],
+          [
+            -111.07521077115,
+            33.1690713405276
+          ],
+          [
+            -111.074151990705,
+            33.1655721726544
+          ],
+          [
+            -111.073089406793,
+            33.1630246175306
+          ],
+          [
+            -111.070390763475,
+            33.1576118444117
+          ],
+          [
+            -111.069896416981,
+            33.1563199894077
+          ],
+          [
+            -111.069657437268,
+            33.1554384051994
+          ],
+          [
+            -111.06947104044,
+            33.1540967656231
+          ],
+          [
+            -111.06951549986,
+            33.1522882033155
+          ],
+          [
+            -111.070417862054,
+            33.1468305134826
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.773187480706,
+            33.0835730952402
+          ],
+          [
+            -110.76840814156,
+            33.0803382233551
+          ],
+          [
+            -110.767555761628,
+            33.0797909081174
+          ],
+          [
+            -110.766631867715,
+            33.0793223804453
+          ],
+          [
+            -110.763577743072,
+            33.0785093003852
+          ],
+          [
+            -110.756474115537,
+            33.0769328387556
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.863104232289,
+            33.1492509212561
+          ],
+          [
+            -110.862886527376,
+            33.1452953352617
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.687861898166,
+            33.1787008003967
+          ],
+          [
+            -110.685397500439,
+            33.1786945817544
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.751921397982,
+            33.0245474035317
+          ],
+          [
+            -110.747633475924,
+            33.0244666120384
+          ],
+          [
+            -110.745500938322,
+            33.0243517630678
+          ],
+          [
+            -110.744450006458,
+            33.024198515135
+          ],
+          [
+            -110.742530525884,
+            33.0237751072767
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.957837808816,
+            33.1547831888376
+          ],
+          [
+            -110.953667373821,
+            33.1527341238961
+          ],
+          [
+            -110.952784974887,
+            33.1522218962466
+          ],
+          [
+            -110.951990444663,
+            33.1515969441692
+          ],
+          [
+            -110.951189515738,
+            33.1504397956477
+          ],
+          [
+            -110.948989619761,
+            33.1463166951859
+          ],
+          [
+            -110.948426456028,
+            33.1455520037058
+          ],
+          [
+            -110.947093404655,
+            33.1440405622917
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.849455364609,
+            33.1416987841894
+          ],
+          [
+            -110.849850722149,
+            33.1385534739578
+          ],
+          [
+            -110.84991131082,
+            33.1372050296126
+          ],
+          [
+            -110.84980055124,
+            33.1349543590175
+          ],
+          [
+            -110.849315588548,
+            33.1295461647138
+          ],
+          [
+            -110.849254764518,
+            33.1272978074216
+          ],
+          [
+            -110.849379328509,
+            33.1259562009724
+          ],
+          [
+            -110.850138891811,
+            33.1219386180955
+          ],
+          [
+            -110.850395324892,
+            33.1157014490557
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.912347064437,
+            33.142243901153
+          ],
+          [
+            -110.913341945021,
+            33.1411463939908
+          ],
+          [
+            -110.913698701953,
+            33.1398590127551
+          ],
+          [
+            -110.914119891447,
+            33.1367270456756
+          ],
+          [
+            -110.914811873592,
+            33.1285958229674
+          ],
+          [
+            -110.914921912723,
+            33.1263408488466
+          ],
+          [
+            -110.914903870959,
+            33.1245458167852
+          ],
+          [
+            -110.914763353787,
+            33.1236594858456
+          ],
+          [
+            -110.913936454568,
+            33.1210317809766
+          ],
+          [
+            -110.913972387179,
+            33.1199065344795
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.858371601047,
+            32.9765223229298
+          ],
+          [
+            -110.862476980048,
+            32.9777199103315
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.914674692763,
+            32.9785606447613
+          ],
+          [
+            -110.913075507403,
+            32.9784219682688
+          ],
+          [
+            -110.911272837461,
+            32.9784297089887
+          ],
+          [
+            -110.906374150842,
+            32.9778510370588
+          ],
+          [
+            -110.903074274986,
+            32.9774718892142
+          ],
+          [
+            -110.900072875162,
+            32.9781708534294
+          ],
+          [
+            -110.897375148126,
+            32.979699887736
+          ],
+          [
+            -110.894372898496,
+            32.9807302198322
+          ],
+          [
+            -110.889374921089,
+            32.9822525899511
+          ],
+          [
+            -110.885175687903,
+            32.9823209361932
+          ],
+          [
+            -110.878977121999,
+            32.981593397149
+          ],
+          [
+            -110.867374078446,
+            32.9791617668773
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.913972387179,
+            33.1199065344795
+          ],
+          [
+            -110.913745809607,
+            33.1186615879767
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.790053127383,
+            33.0812425773018
+          ],
+          [
+            -110.787264852861,
+            33.0798960742297
+          ],
+          [
+            -110.783773303472,
+            33.0775470396158
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.805976137697,
+            33.0725480795117
+          ],
+          [
+            -110.80373089656,
+            33.0564140162108
+          ],
+          [
+            -110.803459676311,
+            33.0555453821463
+          ],
+          [
+            -110.802162138935,
+            33.0536400400192
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.941172590651,
+            32.936411658571
+          ],
+          [
+            -110.946072807102,
+            32.9315901384497
+          ],
+          [
+            -110.949411406635,
+            32.9270000671306
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.745115490098,
+            33.0640065586382
+          ],
+          [
+            -110.743606463253,
+            33.0621182117522
+          ],
+          [
+            -110.74288751548,
+            33.0609237917186
+          ],
+          [
+            -110.74235225342,
+            33.05919304118
+          ],
+          [
+            -110.74176518911,
+            33.0561790414375
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.747757550333,
+            33.0731472451402
+          ],
+          [
+            -110.745115490098,
+            33.0640065586382
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.74176518911,
+            33.0561790414375
+          ],
+          [
+            -110.741076654699,
+            33.0535369153504
+          ],
+          [
+            -110.741105611892,
+            33.0522200096976
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.985392883656,
+            33.1174866017505
+          ],
+          [
+            -110.984827007011,
+            33.1121285307332
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.792005644399,
+            33.0977213562125
+          ],
+          [
+            -110.792007208366,
+            33.0959173105093
+          ],
+          [
+            -110.79164752652,
+            33.095068805021
+          ],
+          [
+            -110.790965327926,
+            33.0943753560791
+          ],
+          [
+            -110.790188211544,
+            33.0937471413792
+          ],
+          [
+            -110.785755307688,
+            33.0907380965841
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.78024700635,
+            33.0556869520609
+          ],
+          [
+            -110.772422109796,
+            33.0460775283554
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.134768760077,
+            33.2016692395384
+          ],
+          [
+            -111.129127453281,
+            33.1902039684916
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.929606660096,
+            33.1675812328421
+          ],
+          [
+            -110.930812073443,
+            33.1660778020043
+          ],
+          [
+            -110.931324467989,
+            33.1652933351365
+          ],
+          [
+            -110.931877446624,
+            33.1640172895199
+          ],
+          [
+            -110.932108708911,
+            33.1631311887569
+          ],
+          [
+            -110.932571627845,
+            33.1577373931996
+          ],
+          [
+            -110.932798270994,
+            33.151418897147
+          ],
+          [
+            -110.9327339624,
+            33.1496125750671
+          ],
+          [
+            -110.932310482202,
+            33.1459952583402
+          ],
+          [
+            -110.932331935767,
+            33.1446670514449
+          ],
+          [
+            -110.932609018422,
+            33.1438193048927
+          ],
+          [
+            -110.933657703599,
+            33.1421511377871
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.783773303472,
+            33.0775470396158
+          ],
+          [
+            -110.783301091467,
+            33.0747228713059
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.850395324892,
+            33.1157014490557
+          ],
+          [
+            -110.849471722032,
+            33.1126131638597
+          ],
+          [
+            -110.849302823487,
+            33.1112847302492
+          ],
+          [
+            -110.849442076729,
+            33.1099566700827
+          ],
+          [
+            -110.850333017743,
+            33.1063992660341
+          ],
+          [
+            -110.850438692859,
+            33.1055041352289
+          ],
+          [
+            -110.850391746003,
+            33.1041510423162
+          ],
+          [
+            -110.849264181557,
+            33.0956278067043
+          ],
+          [
+            -110.848276604277,
+            33.0893688048628
+          ],
+          [
+            -110.847989895275,
+            33.0880402223324
+          ],
+          [
+            -110.847089720479,
+            33.0853668660248
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.717638107852,
+            33.1851786221547
+          ],
+          [
+            -110.714353704578,
+            33.1816104194714
+          ],
+          [
+            -110.712649112699,
+            33.1798701130963
+          ],
+          [
+            -110.71186407587,
+            33.1792481602428
+          ],
+          [
+            -110.710985508251,
+            33.1787342258736
+          ],
+          [
+            -110.71001543105,
+            33.1783260585526
+          ],
+          [
+            -110.707388966467,
+            33.1778666359986
+          ],
+          [
+            -110.705240601448,
+            33.1777848838349
+          ],
+          [
+            -110.702581042031,
+            33.1780062999039
+          ],
+          [
+            -110.696200690352,
+            33.1788207025916
+          ],
+          [
+            -110.693538365921,
+            33.1790509375933
+          ],
+          [
+            -110.691402543179,
+            33.179020844473
+          ],
+          [
+            -110.687861898166,
+            33.1787008003967
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.947093404655,
+            33.1440405622917
+          ],
+          [
+            -110.947766886895,
+            33.1412152811425
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.689554066345,
+            33.0797964488045
+          ],
+          [
+            -110.674753278196,
+            33.0734331464649
+          ],
+          [
+            -110.667491477103,
+            33.0705567682657
+          ],
+          [
+            -110.664521755469,
+            33.069524988626
+          ],
+          [
+            -110.660993210763,
+            33.0684420068737
+          ],
+          [
+            -110.652806778238,
+            33.0662928907339
+          ],
+          [
+            -110.650669378954,
+            33.0660005122272
+          ],
+          [
+            -110.649072642401,
+            33.0659644458079
+          ],
+          [
+            -110.647056182404,
+            33.0665788828371
+          ],
+          [
+            -110.644432514277,
+            33.0681657403298
+          ],
+          [
+            -110.643023295649,
+            33.068775080571
+          ],
+          [
+            -110.641983174111,
+            33.0690088744514
+          ],
+          [
+            -110.640377417575,
+            33.0692026843007
+          ],
+          [
+            -110.637069076893,
+            33.0691953302059
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.756474115537,
+            33.0769328387556
+          ],
+          [
+            -110.755703681722,
+            33.075727122394
+          ],
+          [
+            -110.755460223009,
+            33.0744119390653
+          ],
+          [
+            -110.755443665261,
+            33.0716810176322
+          ],
+          [
+            -110.75533093927,
+            33.0707968077903
+          ],
+          [
+            -110.754939533419,
+            33.0699616621214
+          ],
+          [
+            -110.754319257495,
+            33.0692049908772
+          ],
+          [
+            -110.753281621595,
+            33.0681701148968
+          ],
+          [
+            -110.752107121972,
+            33.0672409470035
+          ],
+          [
+            -110.750829208293,
+            33.0664288235417
+          ],
+          [
+            -110.7472719696,
+            33.0643943271737
+          ],
+          [
+            -110.745115490098,
+            33.0640065586382
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.830527688198,
+            33.0857219879809
+          ],
+          [
+            -110.830770128222,
+            33.082565224495
+          ],
+          [
+            -110.830727357634,
+            33.080767878447
+          ],
+          [
+            -110.830377938142,
+            33.0780703396347
+          ],
+          [
+            -110.829723429219,
+            33.0754219943629
+          ],
+          [
+            -110.828768183204,
+            33.0728386281149
+          ],
+          [
+            -110.82742267669,
+            33.0698848794996
+          ],
+          [
+            -110.826135240869,
+            33.0674092719586
+          ],
+          [
+            -110.823489131927,
+            33.062701460777
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.921880618646,
+            32.9039220878235
+          ],
+          [
+            -110.921474686139,
+            32.8985207028222
+          ],
+          [
+            -110.918873346536,
+            32.892673612714
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.792840199959,
+            33.2190483664383
+          ],
+          [
+            -110.807537141962,
+            33.1953566315035
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.799724435546,
+            33.0498791792219
+          ],
+          [
+            -110.798859701982,
+            33.0477399693938
+          ],
+          [
+            -110.798259071315,
+            33.0464896824938
+          ],
+          [
+            -110.797281061092,
+            33.0448847295422
+          ],
+          [
+            -110.795916963943,
+            33.0429408745301
+          ],
+          [
+            -110.793315699799,
+            33.0395223863318
+          ],
+          [
+            -110.791184916606,
+            33.0369232264932
+          ],
+          [
+            -110.790208226907,
+            33.0358481637529
+          ],
+          [
+            -110.787728069137,
+            33.0334625884885
+          ],
+          [
+            -110.786523176813,
+            33.0319924668621
+          ],
+          [
+            -110.786110909386,
+            33.0311528666274
+          ],
+          [
+            -110.785714538547,
+            33.0298307037931
+          ],
+          [
+            -110.785627684934,
+            33.0289375405085
+          ],
+          [
+            -110.785613998202,
+            33.0271244285588
+          ],
+          [
+            -110.785460579426,
+            33.026222127545
+          ],
+          [
+            -110.785129358903,
+            33.0253691336274
+          ],
+          [
+            -110.78430465337,
+            33.0242108470139
+          ],
+          [
+            -110.783324190746,
+            33.0231289551391
+          ],
+          [
+            -110.782102699352,
+            33.0222360621267
+          ],
+          [
+            -110.780449050933,
+            33.0199397297968
+          ],
+          [
+            -110.77812813931,
+            33.0161064693169
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.865139982708,
+            33.1362550694131
+          ],
+          [
+            -110.868728190821,
+            33.1324907263787
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.955280132725,
+            32.9184282522927
+          ],
+          [
+            -110.951267785949,
+            32.9246464397496
+          ],
+          [
+            -110.950066779737,
+            32.9261691646616
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.965436955146,
+            33.1960435728025
+          ],
+          [
+            -110.968828031564,
+            33.1879624689187
+          ],
+          [
+            -110.969615241417,
+            33.1858068600605
+          ],
+          [
+            -110.970297159735,
+            33.1836241597551
+          ],
+          [
+            -110.970667681552,
+            33.1823050560496
+          ],
+          [
+            -110.970804742007,
+            33.1814120991929
+          ],
+          [
+            -110.970793787052,
+            33.1800568238008
+          ],
+          [
+            -110.970618914711,
+            33.178710530229
+          ],
+          [
+            -110.96999699487,
+            33.1760539579231
+          ],
+          [
+            -110.969350149475,
+            33.1738641648278
+          ],
+          [
+            -110.96804848434,
+            33.1702420983441
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.003881939664,
+            33.217130502705
+          ],
+          [
+            -111.002825612518,
+            33.2182941198376
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.807537141962,
+            33.1953566315035
+          ],
+          [
+            -110.808489055228,
+            33.193821624862
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.862886527376,
+            33.1452953352617
+          ],
+          [
+            -110.863069695659,
+            33.1421294556046
+          ],
+          [
+            -110.863291893945,
+            33.140796967419
+          ],
+          [
+            -110.86388525814,
+            33.1390747649455
+          ],
+          [
+            -110.865139982708,
+            33.1362550694131
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.002328324041,
+            33.2093169204518
+          ],
+          [
+            -110.996438857647,
+            33.1957552065318
+          ],
+          [
+            -110.993661263195,
+            33.188931394136
+          ],
+          [
+            -110.992927911835,
+            33.1867642773875
+          ],
+          [
+            -110.991697693308,
+            33.1819001081729
+          ],
+          [
+            -110.991026128073,
+            33.1797262154748
+          ],
+          [
+            -110.990607536507,
+            33.1788985892324
+          ],
+          [
+            -110.98978875716,
+            33.1777213990151
+          ],
+          [
+            -110.98651847091,
+            33.1735921253401
+          ],
+          [
+            -110.985042113995,
+            33.1707235548054
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.985042113995,
+            33.1707235548054
+          ],
+          [
+            -110.980009857775,
+            33.1613824945073
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.986509382655,
+            33.1376468468081
+          ],
+          [
+            -110.988333937354,
+            33.1359692836421
+          ],
+          [
+            -110.98932511598,
+            33.1349185239867
+          ],
+          [
+            -110.989823745642,
+            33.1340932197248
+          ],
+          [
+            -110.989862710067,
+            33.133191205946
+          ],
+          [
+            -110.989500299139,
+            33.1323613192355
+          ],
+          [
+            -110.986893078265,
+            33.1278599939227
+          ],
+          [
+            -110.986294265789,
+            33.1266061227018
+          ],
+          [
+            -110.985991885677,
+            33.1257514255917
+          ],
+          [
+            -110.985695947385,
+            33.1244412081477
+          ],
+          [
+            -110.985539045841,
+            33.1231039464371
+          ],
+          [
+            -110.985392883656,
+            33.1174866017505
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.685397500439,
+            33.1786945817544
+          ],
+          [
+            -110.682933105408,
+            33.1786883127369
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.910140574826,
+            33.144961906903
+          ],
+          [
+            -110.912347064437,
+            33.142243901153
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.930979710753,
+            33.1302791179679
+          ],
+          [
+            -110.929926457642,
+            33.127243232429
+          ],
+          [
+            -110.92956099873,
+            33.1259305869608
+          ],
+          [
+            -110.929424355992,
+            33.1250397643481
+          ],
+          [
+            -110.929311412608,
+            33.1229966246537
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.999494836412,
+            33.2132384118282
+          ],
+          [
+            -110.997025984839,
+            33.2166727627194
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.980009857775,
+            33.1613824945073
+          ],
+          [
+            -110.97757095783,
+            33.1563736393443
+          ],
+          [
+            -110.975477657741,
+            33.1532004040177
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.022050978936,
+            33.1788586557216
+          ],
+          [
+            -111.018290997669,
+            33.1790644755469
+          ],
+          [
+            -111.016710196331,
+            33.1792744165638
+          ],
+          [
+            -111.01517635173,
+            33.1796782630818
+          ],
+          [
+            -111.012163290876,
+            33.1807046335926
+          ],
+          [
+            -111.010623353001,
+            33.1810317541959
+          ],
+          [
+            -111.008505133646,
+            33.1811153543612
+          ],
+          [
+            -111.003884494472,
+            33.1808337085339
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.953773799029,
+            33.216763397794
+          ],
+          [
+            -110.958219036754,
+            33.2128480107778
+          ],
+          [
+            -110.959830886564,
+            33.2108663842498
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.922247220216,
+            33.1300867818045
+          ],
+          [
+            -110.922699413265,
+            33.1251890984474
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.790963164783,
+            33.22301631037
+          ],
+          [
+            -110.792840199959,
+            33.2190483664383
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.959830886564,
+            33.2108663842498
+          ],
+          [
+            -110.961134599857,
+            33.2094258427433
+          ],
+          [
+            -110.961703299009,
+            33.2086660783556
+          ],
+          [
+            -110.962843232359,
+            33.2066256329906
+          ],
+          [
+            -110.96398264199,
+            33.204091329261
+          ],
+          [
+            -110.964390558876,
+            33.2027790250797
+          ],
+          [
+            -110.964669050089,
+            33.2014463867108
+          ],
+          [
+            -110.965436955146,
+            33.1960435728025
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.90833286264,
+            33.160786456494
+          ],
+          [
+            -110.905258263596,
+            33.158957567888
+          ],
+          [
+            -110.903644542596,
+            33.1577904722226
+          ],
+          [
+            -110.903046506264,
+            33.1570300598842
+          ],
+          [
+            -110.90256649239,
+            33.1562246335546
+          ],
+          [
+            -110.90162037236,
+            33.1541853333386
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.003678516167,
+            33.2129497151352
+          ],
+          [
+            -111.002328324041,
+            33.2093169204518
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.960270107042,
+            33.2252444961196
+          ],
+          [
+            -110.961376305957,
+            33.2242300910247
+          ],
+          [
+            -110.962794186141,
+            33.223671279549
+          ],
+          [
+            -110.965423419332,
+            33.2231240726097
+          ],
+          [
+            -110.966406871549,
+            33.2227725598102
+          ],
+          [
+            -110.967484124949,
+            33.2217648564062
+          ],
+          [
+            -110.97112247792,
+            33.2178442882245
+          ],
+          [
+            -110.972877905461,
+            33.216148914198
+          ],
+          [
+            -110.974081055952,
+            33.2152629513567
+          ],
+          [
+            -110.976636441338,
+            33.2137571092949
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.997025984839,
+            33.2166727627194
+          ],
+          [
+            -110.995851185178,
+            33.2183053573316
+          ],
+          [
+            -110.991233470919,
+            33.2238524426735
+          ],
+          [
+            -110.989191713466,
+            33.2264974084658
+          ],
+          [
+            -110.987349045137,
+            33.2292460904551
+          ],
+          [
+            -110.984253111105,
+            33.234292444405
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.140143625662,
+            33.2156285669901
+          ],
+          [
+            -111.13591729749,
+            33.2054045435394
+          ],
+          [
+            -111.134768760077,
+            33.2016692395384
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.913745809607,
+            33.1186615879767
+          ],
+          [
+            -110.911938254626,
+            33.1176703507158
+          ],
+          [
+            -110.91112115962,
+            33.1170969846868
+          ],
+          [
+            -110.910069373458,
+            33.1160859635289
+          ],
+          [
+            -110.907933770804,
+            33.1136850196585
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.129127453281,
+            33.1902039684916
+          ],
+          [
+            -111.127508350474,
+            33.1873462773165
+          ],
+          [
+            -111.126917168287,
+            33.1860953470465
+          ],
+          [
+            -111.126663124725,
+            33.1852206585911
+          ],
+          [
+            -111.126340021378,
+            33.183419227263
+          ],
+          [
+            -111.126033724612,
+            33.1825648858731
+          ],
+          [
+            -111.1250817296,
+            33.1809602728862
+          ],
+          [
+            -111.122375385924,
+            33.177050503402
+          ],
+          [
+            -111.121486815564,
+            33.1754052077235
+          ],
+          [
+            -111.120937332274,
+            33.1741316552271
+          ],
+          [
+            -111.119981846409,
+            33.1710792776019
+          ],
+          [
+            -111.119231823215,
+            33.1679815953043
+          ],
+          [
+            -111.118824902561,
+            33.1657562751495
+          ],
+          [
+            -111.118212690813,
+            33.161165622962
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Fault, sense of displacement unknown or undefined, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.607144243639,
+            33.1430542479066
+          ],
+          [
+            -110.611770456859,
+            33.1439054038674
+          ],
+          [
+            -110.615857511127,
+            33.1450140504611
+          ],
+          [
+            -110.617416276791,
+            33.1453232880658
+          ],
+          [
+            -110.619029194698,
+            33.1453553024546
+          ],
+          [
+            -110.622229179691,
+            33.1450403463692
+          ],
+          [
+            -110.62383102137,
+            33.144997848399
+          ],
+          [
+            -110.62542098732,
+            33.1452258999885
+          ],
+          [
+            -110.626955794916,
+            33.1456634843503
+          ],
+          [
+            -110.627844382344,
+            33.1461487259034
+          ],
+          [
+            -110.62904618087,
+            33.1470565889697
+          ],
+          [
+            -110.635883766046,
+            33.1534157158975
+          ],
+          [
+            -110.637011100523,
+            33.1543841679667
+          ],
+          [
+            -110.638235993837,
+            33.1552672044746
+          ],
+          [
+            -110.639124705233,
+            33.1557613860137
+          ],
+          [
+            -110.640121912453,
+            33.1561138093377
+          ],
+          [
+            -110.641159874441,
+            33.1563355493817
+          ],
+          [
+            -110.644345771156,
+            33.1567686555274
+          ],
+          [
+            -110.645354704086,
+            33.1570466545486
+          ],
+          [
+            -110.646783815007,
+            33.1576776232332
+          ],
+          [
+            -110.651317147817,
+            33.1601055707675
+          ],
+          [
+            -110.653925654179,
+            33.1616846213366
+          ],
+          [
+            -110.655545137872,
+            33.162861739677
+          ],
+          [
+            -110.658632797522,
+            33.1653756027753
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.069096519323,
+            33.2071757150714
+          ],
+          [
+            -111.065127746228,
+            33.2070016540316
+          ],
+          [
+            -111.063204817023,
+            33.2069172728381
+          ],
+          [
+            -111.061305651849,
+            33.2055877656178
+          ],
+          [
+            -111.060165827196,
+            33.2039940267597
+          ],
+          [
+            -111.057254980248,
+            33.2028769159728
+          ],
+          [
+            -111.054848545418,
+            33.1986769056044
+          ],
+          [
+            -111.052411557986,
+            33.1962312638461
+          ],
+          [
+            -111.049310701186,
+            33.1940519309462
+          ],
+          [
+            -111.047699261008,
+            33.1927617841903
+          ],
+          [
+            -111.046721889487,
+            33.1921702362422
+          ],
+          [
+            -111.04612170169,
+            33.1915400390543
+          ],
+          [
+            -111.045520655103,
+            33.1892707453965
+          ],
+          [
+            -111.046419111423,
+            33.18687480349
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -111.079092448087,
+              33.2333684405236
+            ],
+            [
+              -111.078027539335,
+              33.23081419483
+            ],
+            [
+              -111.077741161812,
+              33.2290171356096
+            ],
+            [
+              -111.077485141058,
+              33.2281468630744
+            ],
+            [
+              -111.076227561644,
+              33.2256648806376
+            ],
+            [
+              -111.072809148595,
+              33.219526545605
+            ],
+            [
+              -111.071319420257,
+              33.2166319791598
+            ],
+            [
+              -111.071357193516,
+              33.2156713230678
+            ],
+            [
+              -111.071476082849,
+              33.2142618728515
+            ],
+            [
+              -111.071355033068,
+              33.2130532569537
+            ],
+            [
+              -111.070994556212,
+              33.2118447761822
+            ],
+            [
+              -111.070154496674,
+              33.2101337001752
+            ],
+            [
+              -111.069096519323,
+              33.2071757150714
+            ],
+            [
+              -111.068855037802,
+              33.2050020159904
+            ],
+            [
+              -111.069789661193,
+              33.2034861244828
+            ],
+            [
+              -111.071679876451,
+              33.201198462189
+            ],
+            [
+              -111.074482412626,
+              33.1963124485452
+            ],
+            [
+              -111.075059440958,
+              33.1928574145259
+            ],
+            [
+              -111.075266750566,
+              33.1910645486216
+            ],
+            [
+              -111.075300776952,
+              33.1897137715172
+            ],
+            [
+              -111.075179357963,
+              33.1865545618121
+            ]
+          ],
+          [
+            [
+              -111.093024510558,
+              33.2544971791942
+            ],
+            [
+              -111.091406162336,
+              33.2532987131195
+            ],
+            [
+              -111.090364744529,
+              33.2522756998648
+            ],
+            [
+              -111.086922298851,
+              33.2482484625814
+            ],
+            [
+              -111.082415542698,
+              33.2426365898081
+            ],
+            [
+              -111.081924345698,
+              33.2418296252315
+            ],
+            [
+              -111.081578362261,
+              33.2409774632011
+            ],
+            [
+              -111.080151120734,
+              33.2363646592793
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.607144243639,
+            33.1430542479066
+          ],
+          [
+            -110.610075357477,
+            33.146856448574
+          ],
+          [
+            -110.611442672392,
+            33.1487932950638
+          ],
+          [
+            -110.612416742604,
+            33.1504019204662
+          ],
+          [
+            -110.614685520499,
+            33.1545018607551
+          ],
+          [
+            -110.616000735821,
+            33.1564475149331
+          ],
+          [
+            -110.616729071887,
+            33.1571127413808
+          ],
+          [
+            -110.617953068683,
+            33.1580095029451
+          ],
+          [
+            -110.622209454484,
+            33.1607533588193
+          ],
+          [
+            -110.623771269928,
+            33.1619893452999
+          ],
+          [
+            -110.625639150373,
+            33.1636118427945
+          ],
+          [
+            -110.6281125591,
+            33.1659870528028
+          ],
+          [
+            -110.63045230031,
+            33.1684587803288
+          ],
+          [
+            -110.632636912351,
+            33.1710292256094
+          ],
+          [
+            -110.634015148982,
+            33.1729658510648
+          ],
+          [
+            -110.635151591478,
+            33.1750280344522
+          ],
+          [
+            -110.635474478331,
+            33.1758949118233
+          ],
+          [
+            -110.635641770688,
+            33.1767793722982
+          ],
+          [
+            -110.635785159774,
+            33.1803652829823
+          ],
+          [
+            -110.635624487102,
+            33.187603436886
+          ],
+          [
+            -110.638381901799,
+            33.1928882433568
+          ],
+          [
+            -110.641301174046,
+            33.2001668896594
+          ],
+          [
+            -110.642641127175,
+            33.2031022741719
+          ],
+          [
+            -110.643454573224,
+            33.2042569258388
+          ],
+          [
+            -110.645123194763,
+            33.2060454237807
+          ],
+          [
+            -110.646447654648,
+            33.207548787425
+          ],
+          [
+            -110.650990695551,
+            33.2113838872341
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.971316810465,
+            33.0279940245305
+          ],
+          [
+            -110.97288363761,
+            33.0244155636345
+          ],
+          [
+            -110.973654230427,
+            33.0222508519735
+          ],
+          [
+            -110.974021009863,
+            33.0209362150057
+          ],
+          [
+            -110.97438039796,
+            33.0173326633105
+          ],
+          [
+            -110.974661158318,
+            33.016011239252
+          ],
+          [
+            -110.975110403995,
+            33.015181459959
+          ],
+          [
+            -110.975706165793,
+            33.0144374022486
+          ],
+          [
+            -110.978875661965,
+            33.0115672678406
+          ],
+          [
+            -110.981409711465,
+            33.0099034279228
+          ],
+          [
+            -110.985410494229,
+            33.0074617206756
+          ],
+          [
+            -110.989211849203,
+            33.0063323273137
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.694909747508,
+            32.9595654727035
+          ],
+          [
+            -110.692087222919,
+            32.9537086612018
+          ],
+          [
+            -110.689598865328,
+            32.9497243944777
+          ],
+          [
+            -110.677026050899,
+            32.9340236072711
+          ],
+          [
+            -110.673123459386,
+            32.9286348781043
+          ],
+          [
+            -110.670683545243,
+            32.9246210348528
+          ],
+          [
+            -110.665576918399,
+            32.9146892365899
+          ],
+          [
+            -110.662176720488,
+            32.9099374605768
+          ],
+          [
+            -110.65896776402,
+            32.9052537667168
+          ],
+          [
+            -110.655699341775,
+            32.9015169957682
+          ],
+          [
+            -110.654289443123,
+            32.8999074171841
+          ],
+          [
+            -110.651312418187,
+            32.8967734667545
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.06364609644,
+            33.1786819512401
+          ],
+          [
+            -111.06059206073,
+            33.1801672816768
+          ],
+          [
+            -111.056481953895,
+            33.1816056678677
+          ],
+          [
+            -111.0502552833,
+            33.1818820987508
+          ],
+          [
+            -111.042837499639,
+            33.1834022451402
+          ],
+          [
+            -111.037188879657,
+            33.1858513455586
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.867501545792,
+            32.9056144599599
+          ],
+          [
+            -110.865235412537,
+            32.9041554280085
+          ],
+          [
+            -110.863252762433,
+            32.9028788283012
+          ],
+          [
+            -110.861333048298,
+            32.9007117289294
+          ],
+          [
+            -110.85125344416,
+            32.8910797352532
+          ],
+          [
+            -110.849571549115,
+            32.8902497809794
+          ],
+          [
+            -110.847069636844,
+            32.8883501133334
+          ],
+          [
+            -110.844573247415,
+            32.8864120646678
+          ],
+          [
+            -110.841677425689,
+            32.8838916194229
+          ],
+          [
+            -110.835694207519,
+            32.8787411148709
+          ],
+          [
+            -110.83237249272,
+            32.8752111941463
+          ],
+          [
+            -110.831131836668,
+            32.8743669707501
+          ],
+          [
+            -110.828844378306,
+            32.8731767370015
+          ],
+          [
+            -110.826366800498,
+            32.8722471513108
+          ],
+          [
+            -110.825668142074,
+            32.8716459172913
+          ],
+          [
+            -110.82300004956,
+            32.8657066182673
+          ],
+          [
+            -110.817624278474,
+            32.8558855316341
+          ],
+          [
+            -110.815715724109,
+            32.8531747115149
+          ],
+          [
+            -110.812543773739,
+            32.8495477734307
+          ],
+          [
+            -110.806866934082,
+            32.8416800951034
+          ],
+          [
+            -110.80306331715,
+            32.8364141778789
+          ],
+          [
+            -110.801419700217,
+            32.8321199123459
+          ],
+          [
+            -110.798518847926,
+            32.8267974668471
+          ],
+          [
+            -110.796367509483,
+            32.8207432423122
+          ],
+          [
+            -110.794403767119,
+            32.8165588499037
+          ],
+          [
+            -110.79192856266,
+            32.8120465630053
+          ],
+          [
+            -110.787154165146,
+            32.8055276744949
+          ],
+          [
+            -110.784881502936,
+            32.8014576083497
+          ],
+          [
+            -110.782900044896,
+            32.7963077576717
+          ],
+          [
+            -110.77950270273,
+            32.7883431092808
+          ],
+          [
+            -110.778471365817,
+            32.7815327636967
+          ],
+          [
+            -110.774973061996,
+            32.7646213088926
+          ],
+          [
+            -110.774674135907,
+            32.7610439758122
+          ],
+          [
+            -110.775071444588,
+            32.7511216812497
+          ],
+          [
+            -110.773775101971,
+            32.7458241476524
+          ],
+          [
+            -110.772673903976,
+            32.7395144078084
+          ],
+          [
+            -110.77146697068,
+            32.7328729472396
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.880087869085,
+            33.0115492566319
+          ],
+          [
+            -110.88322290229,
+            33.0081605875274
+          ],
+          [
+            -110.886320449697,
+            33.006165451065
+          ],
+          [
+            -110.887912073937,
+            33.004971697665
+          ],
+          [
+            -110.888930387974,
+            33.0039352698695
+          ],
+          [
+            -110.891127794719,
+            33.0013664094567
+          ],
+          [
+            -110.892992416077,
+            32.999751121634
+          ],
+          [
+            -110.895373048598,
+            32.9979287505587
+          ],
+          [
+            -110.897019223932,
+            32.9967709887532
+          ],
+          [
+            -110.898312706313,
+            32.9959714849015
+          ],
+          [
+            -110.902916101427,
+            32.9936704279329
+          ],
+          [
+            -110.908672619854,
+            32.9880933426926
+          ],
+          [
+            -110.910376665557,
+            32.9855823656507
+          ],
+          [
+            -110.91268090355,
+            32.9821223755193
+          ],
+          [
+            -110.913972598283,
+            32.9796922383087
+          ],
+          [
+            -110.914674692763,
+            32.9785606447613
+          ],
+          [
+            -110.916276824598,
+            32.9759322456361
+          ],
+          [
+            -110.917279086638,
+            32.973822109309
+          ],
+          [
+            -110.918179751017,
+            32.9719531952749
+          ],
+          [
+            -110.919478233421,
+            32.9679714664941
+          ],
+          [
+            -110.919673625978,
+            32.9652699310108
+          ],
+          [
+            -110.919674725516,
+            32.9640521513134
+          ],
+          [
+            -110.920671585987,
+            32.956881431198
+          ],
+          [
+            -110.92057398493,
+            32.9478517510426
+          ],
+          [
+            -110.921177881871,
+            32.9379226995241
+          ],
+          [
+            -110.920576467873,
+            32.9353221204959
+          ],
+          [
+            -110.917280014598,
+            32.9285815431864
+          ],
+          [
+            -110.916578053967,
+            32.9250337044208
+          ],
+          [
+            -110.917276943258,
+            32.9214507251822
+          ],
+          [
+            -110.918969495916,
+            32.9181322525334
+          ],
+          [
+            -110.919473729268,
+            32.9163938539225
+          ],
+          [
+            -110.921880618646,
+            32.9039220878235
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.095984991222,
+            33.2187666449551
+          ],
+          [
+            -111.095206905557,
+            33.2156733717756
+          ],
+          [
+            -111.094974047863,
+            33.2143363294441
+          ],
+          [
+            -111.094795197781,
+            33.2120904759554
+          ],
+          [
+            -111.094614552866,
+            33.2075783370992
+          ],
+          [
+            -111.094243104886,
+            33.2039570676706
+          ],
+          [
+            -111.093794573369,
+            33.202196241498
+          ],
+          [
+            -111.092917045101,
+            33.2005823103405
+          ],
+          [
+            -111.091749286435,
+            33.1990565320484
+          ],
+          [
+            -111.089166271566,
+            33.1961471857353
+          ],
+          [
+            -111.087768794818,
+            33.1947703661506
+          ],
+          [
+            -111.086259820075,
+            33.1934928260347
+          ],
+          [
+            -111.084234729065,
+            33.1920149232531
+          ],
+          [
+            -111.081689890798,
+            33.1903501620728
+          ],
+          [
+            -111.075179357963,
+            33.1865545618121
+          ],
+          [
+            -111.07002307225,
+            33.1828255111095
+          ],
+          [
+            -111.06364609644,
+            33.1786819512401
+          ],
+          [
+            -111.061517953396,
+            33.176917337944
+          ],
+          [
+            -111.060687602849,
+            33.1763539890744
+          ],
+          [
+            -111.058534487539,
+            33.1751598583992
+          ],
+          [
+            -111.053878558947,
+            33.169632635291
+          ],
+          [
+            -111.053632008232,
+            33.1687735771297
+          ],
+          [
+            -111.053646787315,
+            33.16720407102
+          ],
+          [
+            -111.053924523045,
+            33.1654089461051
+          ],
+          [
+            -111.054161265953,
+            33.1645338924948
+          ],
+          [
+            -111.056512085187,
+            33.1594951069908
+          ],
+          [
+            -111.056808442094,
+            33.1586267852201
+          ],
+          [
+            -111.057122585644,
+            33.157296172013
+          ],
+          [
+            -111.057289592336,
+            33.1559498409512
+          ],
+          [
+            -111.057232694843,
+            33.1550478525405
+          ],
+          [
+            -111.05693222455,
+            33.1537152664894
+          ],
+          [
+            -111.056450830864,
+            33.1524210970791
+          ],
+          [
+            -111.055569778505,
+            33.1507662966488
+          ],
+          [
+            -111.054463316383,
+            33.149224342311
+          ],
+          [
+            -111.053381015349,
+            33.1482235747514
+          ],
+          [
+            -111.052093435797,
+            33.1473942686773
+          ],
+          [
+            -111.050229489973,
+            33.1464839985054
+          ],
+          [
+            -111.048238384926,
+            33.1458105299446
+          ],
+          [
+            -111.046672422858,
+            33.1455698378204
+          ],
+          [
+            -111.043689124088,
+            33.1454017926456
+          ],
+          [
+            -111.039594562598,
+            33.1449002884701
+          ],
+          [
+            -111.038046344952,
+            33.1445331997251
+          ],
+          [
+            -111.034881673631,
+            33.1439974290155
+          ],
+          [
+            -111.033857925686,
+            33.1437474013642
+          ],
+          [
+            -111.031909875991,
+            33.1430150284228
+          ],
+          [
+            -111.028774149287,
+            33.1415906096006
+          ],
+          [
+            -111.026293857668,
+            33.1400239048228
+          ],
+          [
+            -111.021249539769,
+            33.1359229456695
+          ],
+          [
+            -111.01524443235,
+            33.1314205053272
+          ],
+          [
+            -111.012530400891,
+            33.1292424361676
+          ],
+          [
+            -111.01149840731,
+            33.128200704013
+          ],
+          [
+            -111.010589709297,
+            33.1270845371493
+          ],
+          [
+            -111.009808332205,
+            33.1258984466206
+          ],
+          [
+            -111.00937541251,
+            33.1250753890002
+          ],
+          [
+            -111.008574538383,
+            33.1229196220153
+          ],
+          [
+            -111.008126479381,
+            33.1211516943078
+          ],
+          [
+            -111.007906600546,
+            33.1198099548309
+          ],
+          [
+            -111.007791362864,
+            33.1162086479184
+          ],
+          [
+            -111.007873013435,
+            33.1083204743184
+          ],
+          [
+            -111.007900932176,
+            33.1060631646054
+          ],
+          [
+            -111.007632697029,
+            33.1028970869626
+          ],
+          [
+            -111.007263130121,
+            33.1011381650998
+          ],
+          [
+            -111.006754671992,
+            33.1003376478558
+          ],
+          [
+            -111.005655774583,
+            33.0993409676633
+          ],
+          [
+            -111.002798981961,
+            33.0972867071935
+          ],
+          [
+            -110.992559167784,
+            33.0894163317107
+          ],
+          [
+            -110.990865359281,
+            33.0865883680528
+          ],
+          [
+            -110.990252368695,
+            33.0853457794774
+          ],
+          [
+            -110.989670592767,
+            33.083602567775
+          ],
+          [
+            -110.98944807558,
+            33.0822562754563
+          ],
+          [
+            -110.989473960535,
+            33.0754933403428
+          ],
+          [
+            -110.989878484483,
+            33.0687304303221
+          ],
+          [
+            -110.990125080114,
+            33.0669421824766
+          ],
+          [
+            -110.991097329441,
+            33.0629530418795
+          ],
+          [
+            -110.991237387573,
+            33.0616157961668
+          ],
+          [
+            -110.991124367832,
+            33.0602672550742
+          ],
+          [
+            -110.990673340796,
+            33.0580324451562
+          ],
+          [
+            -110.989696940354,
+            33.0545167062603
+          ],
+          [
+            -110.988666001395,
+            33.0514790272569
+          ],
+          [
+            -110.987831488056,
+            33.0493366237972
+          ],
+          [
+            -110.986885887252,
+            33.0472167533142
+          ],
+          [
+            -110.986170469858,
+            33.046003440208
+          ],
+          [
+            -110.982414626231,
+            33.0416281004603
+          ],
+          [
+            -110.974795166297,
+            33.0333438486468
+          ],
+          [
+            -110.973328624375,
+            33.0313861247793
+          ],
+          [
+            -110.971316810465,
+            33.0279940245305
+          ],
+          [
+            -110.96831672847,
+            33.0254112119359
+          ],
+          [
+            -110.966745455562,
+            33.0241907942466
+          ],
+          [
+            -110.964229455013,
+            33.022514556876
+          ],
+          [
+            -110.959690698175,
+            33.0197010573183
+          ],
+          [
+            -110.957069171631,
+            33.0181373930942
+          ],
+          [
+            -110.955136264838,
+            33.0173609528364
+          ],
+          [
+            -110.952113708791,
+            33.016444248417
+          ],
+          [
+            -110.946907113828,
+            33.0153957533931
+          ],
+          [
+            -110.945836302247,
+            33.0150682982507
+          ],
+          [
+            -110.945082517807,
+            33.014470365972
+          ],
+          [
+            -110.944508466493,
+            33.0132455965453
+          ],
+          [
+            -110.943381844379,
+            33.0102367938284
+          ],
+          [
+            -110.941865400145,
+            33.0053944048094
+          ],
+          [
+            -110.941058083301,
+            33.0019279416621
+          ],
+          [
+            -110.940704698644,
+            33.0005905026004
+          ],
+          [
+            -110.941080496267,
+            32.9983851731525
+          ],
+          [
+            -110.942263696972,
+            32.9942610956581
+          ],
+          [
+            -110.942579679373,
+            32.9923804640298
+          ],
+          [
+            -110.942173904071,
+            32.9913925259487
+          ],
+          [
+            -110.941874700403,
+            32.9906211298181
+          ],
+          [
+            -110.94158119385,
+            32.9898407153571
+          ],
+          [
+            -110.941271623623,
+            32.989080588331
+          ],
+          [
+            -110.940977790982,
+            32.9883024252409
+          ],
+          [
+            -110.94067894125,
+            32.9875332814317
+          ],
+          [
+            -110.940273327645,
+            32.9863716918141
+          ],
+          [
+            -110.939076354868,
+            32.9847316212476
+          ],
+          [
+            -110.938178315367,
+            32.9837524454942
+          ],
+          [
+            -110.937574336679,
+            32.9831793363757
+          ],
+          [
+            -110.93697575956,
+            32.9825498489994
+          ],
+          [
+            -110.936377180646,
+            32.9819316331805
+          ],
+          [
+            -110.93577326484,
+            32.981302136908
+          ],
+          [
+            -110.935180065935,
+            32.9806703890446
+          ],
+          [
+            -110.934576168994,
+            32.9800408852868
+          ],
+          [
+            -110.933972281036,
+            32.9794113800552
+          ],
+          [
+            -110.933379105487,
+            32.9787818778713
+          ],
+          [
+            -110.932379821362,
+            32.9778431968156
+          ],
+          [
+            -110.931674472285,
+            32.9769813445686
+          ],
+          [
+            -110.931070642718,
+            32.9763315285528
+          ],
+          [
+            -110.930477515678,
+            32.9756907358609
+          ],
+          [
+            -110.929873694196,
+            32.975049933244
+          ],
+          [
+            -110.929269883492,
+            32.9744091289918
+          ],
+          [
+            -110.928676779809,
+            32.9737728387624
+          ],
+          [
+            -110.927976800862,
+            32.9729718567461
+          ],
+          [
+            -110.927373351281,
+            32.9723310426911
+          ],
+          [
+            -110.926780277243,
+            32.9716902322765
+          ],
+          [
+            -110.926176518642,
+            32.9710426465312
+          ],
+          [
+            -110.923275468721,
+            32.9679107384916
+          ],
+          [
+            -110.921176080749,
+            32.9656317211411
+          ],
+          [
+            -110.919674725516,
+            32.9640521513134
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Normal fault, certain, (U/D designated in source)",
+        "RuleID": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.728296154269,
+            32.8397425327953
+          ],
+          [
+            -110.736655410077,
+            32.8508763165196
+          ],
+          [
+            -110.738500362821,
+            32.8536204230187
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.064658150117,
+            33.1857481850583
+          ],
+          [
+            -111.063095093201,
+            33.1865996182934
+          ],
+          [
+            -111.055254262329,
+            33.1903263906348
+          ],
+          [
+            -111.053358578128,
+            33.1933061011162
+          ],
+          [
+            -111.052411557986,
+            33.1962312638461
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.148405253464,
+            33.2038500928512
+          ],
+          [
+            -111.143565490937,
+            33.2036528248712
+          ],
+          [
+            -111.140915151829,
+            33.2033807448392
+          ],
+          [
+            -111.138853308944,
+            33.2029162770496
+          ],
+          [
+            -111.134768760077,
+            33.2016692395384
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.07002307225,
+            33.1828255111095
+          ],
+          [
+            -111.064658150117,
+            33.1857481850583
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.04237184264,
+            33.2168414242972
+          ],
+          [
+            -111.041709327033,
+            33.2233676501017
+          ],
+          [
+            -111.040520225295,
+            33.2293889155705
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.044940983928,
+            33.2018363267343
+          ],
+          [
+            -111.043228272177,
+            33.2095209956539
+          ],
+          [
+            -111.04237184264,
+            33.2168414242972
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.163665420285,
+            33.2074975890112
+          ],
+          [
+            -111.148405253464,
+            33.2038500928512
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.047699261008,
+            33.1927617841903
+          ],
+          [
+            -111.045806193599,
+            33.1974511184104
+          ],
+          [
+            -111.044940983928,
+            33.2018363267343
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "AZ",
+        "DESCRIPTION": "Thrust fault, certain, (teeth on right from origin)",
+        "RuleID": 63
+      }
+    }
+  ]
+}

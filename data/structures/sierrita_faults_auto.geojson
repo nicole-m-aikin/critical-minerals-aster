@@ -1,0 +1,695 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.01508727837926,
+            31.724817166959973
+          ],
+          [
+            -111.01395927914834,
+            31.726405871195077
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.01136062371128,
+            31.728694948709588
+          ],
+          [
+            -111.00779062355078,
+            31.732994950258437
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.00524062356446,
+            31.733854950000637
+          ],
+          [
+            -110.99735062160934,
+            31.7417549513546
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.99230062186543,
+            31.744834952308338
+          ],
+          [
+            -110.98677061992582,
+            31.751834954271576
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98406062010594,
+            31.755274954189492
+          ],
+          [
+            -110.98197062042716,
+            31.75917495494513
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.97541200436812,
+            31.76071482934781
+          ],
+          [
+            -110.97085932813518,
+            31.76334810915865
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.96640956918937,
+            31.770735973669606
+          ],
+          [
+            -110.96345474701353,
+            31.772054706164777
+          ],
+          [
+            -110.95986985009066,
+            31.77417321600163
+          ],
+          [
+            -110.95707362817318,
+            31.77618767187076
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.95879273143744,
+            31.768718538910694
+          ],
+          [
+            -110.95575556069949,
+            31.769996497700465
+          ],
+          [
+            -110.94996074260068,
+            31.773835131316268
+          ],
+          [
+            -110.94338158027448,
+            31.777757180119753
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.93654332675234,
+            31.775606575770635
+          ],
+          [
+            -110.9333516915996,
+            31.776097218375188
+          ],
+          [
+            -110.93144061117259,
+            31.776914959175187
+          ],
+          [
+            -110.9294967296613,
+            31.777569346687866
+          ],
+          [
+            -110.92699289858899,
+            31.77851815262926
+          ],
+          [
+            -110.92253971436702,
+            31.780556003961042
+          ],
+          [
+            -110.91982211659645,
+            31.783484481719654
+          ],
+          [
+            -110.91711167480543,
+            31.786464905722838
+          ],
+          [
+            -110.91479385967565,
+            31.78877301772488
+          ],
+          [
+            -110.91174453563022,
+            31.792832754349988
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.91524837756502,
+            31.77667189126759
+          ],
+          [
+            -110.91004920358502,
+            31.779537181654156
+          ],
+          [
+            -110.90517803595627,
+            31.782890328632856
+          ],
+          [
+            -110.90206736057021,
+            31.786076282188837
+          ],
+          [
+            -110.89710793076986,
+            31.7894947489001
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.89513593738005,
+            31.79162348696624
+          ],
+          [
+            -110.89276792618882,
+            31.794703411853106
+          ],
+          [
+            -110.89151877836207,
+            31.79627047794442
+          ],
+          [
+            -110.88999218855474,
+            31.799524310642212
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.89076506758418,
+            31.80183355628665
+          ],
+          [
+            -110.8875501193532,
+            31.805297423045296
+          ],
+          [
+            -110.88530625713088,
+            31.80669777572777
+          ],
+          [
+            -110.87983764156621,
+            31.808761110320685
+          ],
+          [
+            -110.87583090387078,
+            31.810485607680814
+          ],
+          [
+            -110.87327358171657,
+            31.813605403944997
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.81843728165357,
+            31.906371078228172
+          ],
+          [
+            -110.81983324024891,
+            31.90561390568576
+          ],
+          [
+            -110.82145107193962,
+            31.90523891807969
+          ],
+          [
+            -110.82491478613066,
+            31.90386982129472
+          ],
+          [
+            -110.82664837832215,
+            31.90297076196648
+          ],
+          [
+            -110.82981329129014,
+            31.901006446376112
+          ],
+          [
+            -110.83161683708943,
+            31.898614947742896
+          ],
+          [
+            -110.83352218626491,
+            31.896475524876116
+          ],
+          [
+            -110.83503891616367,
+            31.894901836976732
+          ],
+          [
+            -110.83594138435934,
+            31.893466501698118
+          ],
+          [
+            -110.83790540340436,
+            31.891037383654655
+          ],
+          [
+            -110.83909492914741,
+            31.888783596156614
+          ],
+          [
+            -110.84072252283032,
+            31.88654444798821
+          ],
+          [
+            -110.84201404059576,
+            31.884067946004542
+          ],
+          [
+            -110.84458060012604,
+            31.882064979155178
+          ],
+          [
+            -110.846995474629,
+            31.87941056766135
+          ],
+          [
+            -110.85005060089284,
+            31.877094977680294
+          ],
+          [
+            -110.85309060042562,
+            31.875094976984673
+          ],
+          [
+            -110.85596812257127,
+            31.872889858721013
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.01707533723958,
+            31.711873587020193
+          ],
+          [
+            -111.01646072609186,
+            31.715180193277014
+          ],
+          [
+            -111.01562295007137,
+            31.718200829313673
+          ],
+          [
+            -111.01508959243941,
+            31.719815557957396
+          ],
+          [
+            -111.01457429543625,
+            31.721616047956456
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.01563401192577,
+            31.693520990312262
+          ],
+          [
+            -111.01580810003794,
+            31.697662227200954
+          ],
+          [
+            -111.0165506240956,
+            31.7081949446227
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.01518062232041,
+            31.68272494215015
+          ],
+          [
+            -111.01569062285667,
+            31.690194942716655
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98938627508133,
+            31.641498000806397
+          ],
+          [
+            -110.99027514727518,
+            31.648159449870786
+          ],
+          [
+            -110.9907160449082,
+            31.655144623703094
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98960061490476,
+            31.660504938657812
+          ],
+          [
+            -110.9893506155578,
+            31.66877494121997
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98194061040847,
+            31.616614932693448
+          ],
+          [
+            -110.98313060956367,
+            31.62179493377634
+          ],
+          [
+            -110.98388441466464,
+            31.624866735340397
+          ],
+          [
+            -110.98520316126468,
+            31.627734518731994
+          ],
+          [
+            -110.98726729844643,
+            31.630690981180507
+          ],
+          [
+            -110.98822580175288,
+            31.632702615673875
+          ],
+          [
+            -110.98822529959465,
+            31.635202395094634
+          ],
+          [
+            -110.9887337891646,
+            31.638317363880113
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98597061536809,
+            31.65997494029117
+          ],
+          [
+            -110.98525061566788,
+            31.66991493969543
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98386061200458,
+            31.60684493030308
+          ],
+          [
+            -110.98403061098557,
+            31.612944932653317
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.98288061111504,
+            31.600634931107592
+          ],
+          [
+            -110.98350061035782,
+            31.59816493021643
+          ],
+          [
+            -110.98371061042012,
+            31.59667493076781
+          ],
+          [
+            -110.98358060982545,
+            31.59534493037871
+          ],
+          [
+            -110.98368963116498,
+            31.593490874704333
+          ],
+          [
+            -110.98360173999757,
+            31.59092016625214
+          ],
+          [
+            -110.98362218026355,
+            31.58821384422977
+          ],
+          [
+            -110.9832612856914,
+            31.584806552262574
+          ],
+          [
+            -110.98240632489954,
+            31.581988440805294
+          ],
+          [
+            -110.98151060933985,
+            31.579244928026615
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Santa Rita fault zone",
+        "age": "late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    }
+  ]
+}
