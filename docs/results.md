@@ -166,6 +166,7 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 - **Significance null model:** Binomial test assumes uniform deposit distribution within the footprint. Spatial clustering of real deposits makes p-values conservative — actual null distributions are not uniform.
 - **Vegetation cover:** Forest cover suppresses TIR alteration signal. Ducktown (VMS, Tennessee) anti-correlates where Bisbee (same deposit type, arid Arizona) is a strong positive. The method is primarily applicable to arid/semi-arid terrain.
 - **Anti-correlations are informative:** p ≈ 1 means the method is physically incapable of detecting the dominant deposit type at that site under current surface conditions, not that the zones are wrong.
+- **Discovery bias:** MRDS records are biased toward surface-exposed occurrences — deposits found historically because they outcrop or have visible alteration. ASTER TIR detects the same exposed, altered rock. Hit rates may therefore partially reflect this circularity rather than discriminating power in a blind exploration context. The deposit-type specificity of significant results (skarn/carbonate detectable; sediment-hosted/placer not) and the anti-correlations at well-known but buried or vegetation-covered systems partially mitigate this concern, but within a significant site the specific deposits landing in zones are likely the most surface-exposed ones — not a random sample of the district.
 
 ---
 
