@@ -6,53 +6,54 @@ ASTER TIR alteration mapping across 37 US critical mineral sites. Full figures: 
 
 ## Site-level hit rates
 
-**18 of 37 sites** are significant on at least one binomial test. Two tests are reported: critical-mineral-only (null = 9.7% pooled across critical MRDS records) and all-deposit (null = 8.2% pooled across all MRDS records). **12 sites clear the critical-only threshold** — the more rigorous test that directly answers the science question. **6 additional sites** are significant only on the all-deposit test; their signal is driven by non-critical or mixed deposits (see [Non-critical inflation](#non-critical-inflation)).
+**13 of 37 sites** are significant on at least one binomial test. Two tests are reported: critical-mineral-only (null = 7.7% pooled across critical MRDS records) and all-deposit (null = 9.0% pooled across all MRDS records). **9 sites clear the critical-only threshold** — the more rigorous test that directly answers the science question. **4 additional sites** are significant only on the all-deposit test; their signal is driven by non-critical or mixed deposits (see [Non-critical inflation](#non-critical-inflation)).
 
-Note that the two tests use different null rates and different deposit pools, so some sites (Battle Mountain, Iron Hill, Gas Hills) appear in the critical-only 12 but not the all-deposit 15, and vice versa.
+Non-critical aggregate deposits have a pooled hit rate of 13.4% — above both null rates — because ASTER TIR detects the silica and carbonate mineralogy that makes rock commercially useful as aggregate. This inflates the all-deposit null above the critical-only null (9.0% vs 7.7%).
 
-### Significant on critical-mineral test (12 sites)
+### Significant on critical-mineral test (9 sites)
 
-Hit rates below are critical-mineral deposits only (non-critical excluded). Null = 9.7%.
+Hit rates below are critical-mineral deposits only (non-critical excluded). Null = 7.7%.
 
 | Site | Critical hit rate | p (critical) | Deposit type |
 |---|---|---|---|
+| Jerome, AZ | 53.1% (43/81) | < 0.001 | VMS Cu-Zn / epithermal Au |
 | Bisbee, AZ | 43.2% (41/95) | < 0.001 | Skarn / VMS Cu-Zn |
-| Magnet Cove, AR | 23.1% (6/26) | 0.008 | Carbonatite REE |
-| McDermitt Caldera, NV/OR | 22.2% (8/36) | 0.003 | Li-Cs-REE caldera |
-| Thacker Pass, NV | 21.7% (5/23) | 0.019 | Lithium brine |
-| Ely (Robinson), NV | 20.8% (5/24) | 0.023 | Porphyry Cu-Au |
-| Hanover-Fierro, NM | 20.0% (4/20) | 0.047 | Skarn Cu-Pb-Zn |
+| Magnet Cove, AR | 23.1% (6/26) | 0.013 | Carbonatite REE |
+| McDermitt Caldera, NV/OR | 22.2% (8/36) | 0.005 | Li-Cs-REE caldera |
+| Thacker Pass, NV | 21.7% (5/23) | 0.028 | Lithium brine |
+| Ely (Robinson), NV | 20.8% (5/24) | 0.034 | Porphyry Cu-Au |
 | Steamboat Springs, NV | 14.5% (30/207) | < 0.001 | Epithermal Au-Ag |
-| Yerington, NV | 13.7% (18/131) | 0.005 | Porphyry Cu / epithermal |
-| Battle Mountain, NV | 12.8% (10/78) | 0.045 | VMS / skarn Cu-Au |
-| Mountain Pass, CA | 11.5% (37/323) | 0.002 | Carbonatite REE |
-| Iron Hill, CO | 10.8% (20/185) | 0.035 | Carbonatite REE |
-| Gas Hills, WY | 9.6% (30/312) | 0.048 | Roll-front U |
+| Yerington, NV | 13.7% (18/131) | 0.012 | Porphyry Cu / epithermal |
+| Mountain Pass, CA | 11.5% (37/323) | 0.011 | Carbonatite REE |
 
-### Significant on all-deposit test only (6 sites, non-critical driven)
+### Significant on all-deposit test only (4 sites, non-critical driven)
 
-These sites clear the all-deposit threshold (null = 8.2%) but not the critical-only threshold. The gap between all-deposit and critical-only hit rates identifies the inflation source.
+These sites clear the all-deposit threshold (null = 9.0%) but not the critical-only threshold. The gap between all-deposit and critical-only hit rates identifies the inflation source.
 
 | Site | All-deposit hit rate | p (all) | Critical hit rate | p (critical) | Inflation source |
 |---|---|---|---|---|---|
-| Iron Springs, UT | 13.8% (22/159) | 0.012 | 14.3% (3/21) | 0.178 | Fe is non-critical; most hits are iron deposits |
-| Darwin, CA | 13.5% (31/229) | 0.005 | 10.4% (19/182) | 0.052 | Pb-Zn are non-critical; mixed commodity signal |
-| Globe-Miami, AZ | 12.0% (24/200) | 0.041 | 11.0% (14/127) | 0.060 | Borderline; critical Cu hits near-significant |
-| Lemhi Pass, ID/MT | 15.7% (11/70) | 0.028 | 11.9% (5/42) | 0.167 | Small n; many Th/REE records excluded as non-critical |
-| Silver Peak, NV | 12.8% (22/172) | 0.027 | 5.1% (4/79) | 0.810 | Li MRDS records sparse; all-deposit rate inflated by associated non-critical |
-| Green River Basin, WY | 16.7% (8/48) | 0.041 | 0.0% (0/0) | 1.000 | Purely aggregate-driven; 0 critical deposits in footprint |
+| Hanover-Fierro, NM | 23.1% (6/26) | 0.025 | 20.0% (4/20) | 0.063 | Small n; critical rate borderline, not significant at α=0.05 |
+| Lemhi Pass, ID/MT | 15.7% (11/70) | 0.048 | 11.9% (5/42) | 0.221 | Small n; many Th/REE records excluded as non-critical |
+| Iron Springs, UT | 13.8% (22/159) | 0.029 | 14.3% (3/21) | 0.217 | Fe is non-critical; most hits are iron deposits |
+| Darwin, CA | 13.5% (31/229) | 0.015 | 10.4% (19/182) | 0.110 | Pb-Zn are non-critical; mixed commodity signal |
 
 ![Critical-mineral hit rate by site, sorted and coloured by Earth MRI category. Non-critical deposits excluded. Bisbee leads at 39%, with a clear gradient from skarn/VMS and carbonatite sites at top to Carlin-type and sediment-hosted at bottom.](../figures/05_national_hit_rates.png)
 
-*Figure 05 — Critical-mineral hit rate by site (non-critical excluded). Bar colour = Earth MRI category of in-zone critical deposits. Sites sorted by critical-mineral hit rate.*
+*Figure 05 — Critical-mineral hit rate by site (non-critical excluded). Bar colour = Earth MRI category of in-zone critical deposits. Sites sorted by critical-mineral hit rate. Jerome leads at 53.1%, followed by Bisbee at 43.2%.*
 
-**Near-significant on critical-only test** (0.05 ≤ p < 0.15): Darwin, CA (10.4%, p = 0.052); Globe-Miami, AZ (11.0%, p = 0.060); Viburnum Trend, MO (p ≈ 0.09).
+**Near-significant on critical-only test** (0.05 ≤ p < 0.15): Hanover-Fierro, NM (20.0%, p = 0.063); Battle Mountain, NV (12.8%, p = 0.077); Iron Hill, CO (10.8%, p = 0.079); Darwin, CA (10.4%, p = 0.110); Viburnum Trend, MO (11.9%, p = 0.112); Globe-Miami, AZ (11.0%, p = 0.112); Gas Hills, WY (9.6%, p = 0.126).
 
 **Anti-correlated** (p > 0.95 — deposits actively avoid anomaly zones): Goldfield-Cuprite NV, Ducktown TN, Oatman AZ, Stillwater Complex MT, Bingham Canyon UT, Mineral Park AZ, Climax CO, Jerritt Canyon NV, Elk Creek NE.
 
 Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with no surface alteration expression; Ducktown is a VMS deposit buried under dense Tennessee forest (see figure below); Oatman and Goldfield are epithermal Au systems where the alteration cap is eroded or buried; Stillwater is a layered mafic intrusion where PGM mineralization has no alteration expression at the surface; Bingham Canyon's strongest anomaly zones correspond to Wasatch Front carbonates east of the Oquirrh Mountains, not the mine itself.
 
-**Bisbee — strongest positive (39.3%):**
+**Jerome — strongest positive (53.1% critical, 58.5% all-deposit):**
+
+![Jerome, AZ deposit overlay. Dense red strong-anomaly zones dominate the right half of the scene. 62 of 106 MRDS deposits (yellow stars) fall within zones; the TIR footprint covers 59% of the bbox.](../figures/sites/jerome/03_deposit_overlay.png)
+
+*Figure — Jerome, AZ. Red zones = strong TIR alteration; yellow stars = MRDS deposits inside zones (n=62); blue circles = deposits outside zones (n=44). The Verde district VMS and epithermal systems produce a strong silica-rich alteration signature. Jerome is the strongest positive in the 37-site survey, requiring three ASTER granules to cover the full bbox.*
+
+**Bisbee — second strongest (43.2%):**
 
 ![Bisbee, AZ deposit overlay. Dense red strong-anomaly zones cluster tightly around the skarn/VMS district in the center of the scene. 48 of 122 MRDS deposits (yellow stars) fall within zones; the TIR data boundary (dashed) cuts the NE corner of the bbox.](../figures/sites/bisbee/03_deposit_overlay.png)
 
@@ -68,21 +69,23 @@ Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with n
 
 ## Methodology note: per-granule classification
 
-Results use **per-granule percentile classification** before mosaicking. Percentile thresholds (70th/90th) are applied within each granule's scene extent independently, then classified maps are max-merged across granules. This preserves local contrast — a deposit that ranks in the top 10% within its granule retains that signal in the merged map. Earlier runs using pooled percentiles across the full mosaic extent diluted local anomalies, producing only 3 significant sites. The per-granule approach recovered 15 (all-deposit test) / 12 (critical-only test).
+Results use **per-granule percentile classification** before mosaicking. Percentile thresholds (70th/90th) are applied within each granule's scene extent independently, then classified maps are max-merged across granules. This preserves local contrast — a deposit that ranks in the top 10% within its granule retains that signal in the merged map. Earlier runs using pooled percentiles across the full mosaic extent diluted local anomalies, producing only 3 significant sites. The per-granule approach recovered 13 significant sites (9 critical-only, 4 all-deposit only).
 
 ---
 
 ## Non-critical inflation
 
-Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled hit rate (12.6%, 213/1,692) than critical minerals. ASTER TIR detects silica and carbonate enrichment — exactly the mineralogy that makes rock commercially useful as aggregate.
+Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled hit rate (13.4%, 228/1,698) than critical minerals (7.7%). ASTER TIR detects silica and carbonate enrichment — exactly the mineralogy that makes rock commercially useful as aggregate. This elevated non-critical rate inflates the all-deposit null (9.0%) above the critical-only null (7.7%).
 
-![Paired dot plot: all-deposits hit rate (grey) vs critical-only hit rate (red = significant, blue = not significant) per site. Sites where the grey dot is far right of the coloured dot have aggregate inflation. Green River is the clearest case: all-deposits hits ~17% but critical-only is 0%.](../figures/07_hitrate_comparison.png)
+![Paired dot plot: all-deposits hit rate (grey) vs critical-only hit rate (red = significant, orange = all-deposit only, blue = not significant) per site. Jerome leads at the top with grey and red dots both far right. Sites where the grey dot extends far right of the coloured dot have aggregate inflation.](../figures/07_hitrate_comparison.png)
 
-*Figure 07 — All-deposit (grey) vs critical-mineral hit rate (coloured) per site, sorted by all-deposit rate. Red = significant on critical-only test (n=12). Orange = significant on all-deposit test only, non-critical driven (n=6). Blue-grey = not significant. A long rightward grey tail with an orange or blue critical dot indicates aggregate inflation — Green River and Silver Peak are the clearest cases. Sites where red and grey dots nearly overlap (Steamboat Springs, Ely-Robinson) have little non-critical inflation.*
+*Figure 07 — All-deposit (grey) vs critical-mineral hit rate (coloured) per site, sorted by all-deposit rate. Red = significant on critical-only test (n=9). Orange = significant on all-deposit test only, non-critical driven (n=4). Blue-grey = not significant. Jerome leads at 53.1% critical / 58.5% all-deposit. A long rightward grey tail with an orange or blue critical dot indicates aggregate inflation — Hanover-Fierro shows this clearly. Sites where red and grey dots nearly overlap (Steamboat Springs, Yerington) have little non-critical inflation.*
 
-**Green River, WY** is the clearest example: nearly all MRDS records in the footprint are non-critical (aggregate, trona, oil shale). The site is binomially significant on all-deposit counts (p = 0.041) but has zero critical-mineral hits.
+**Darwin, CA** is the clearest example within the significant set: the all-deposit rate (13.5%) clears the all-deposit null while the critical-only rate (10.4%) does not clear the critical null. Most hits are Pb-Zn deposits classified as non-critical.
 
-**Iron Springs, UT** is significant on all-deposits (p = 0.012) but Fe skarn is classified non-critical, so it also drops from the critical-only list. The TIR signal is real — the Fe-bearing skarn rocks produce a strong anomaly — but iron does not qualify as a critical mineral.
+**Green River, WY** is an even starker case though no longer significant after the per-granule fix: nearly all MRDS records in the footprint are non-critical (aggregate, trona, oil shale). The site has zero critical-mineral hits.
+
+**Iron Springs, UT** is significant on all-deposits (p = 0.029) but Fe skarn is classified non-critical, so it also drops from the critical-only list. The TIR signal is real — the Fe-bearing skarn rocks produce a strong anomaly — but iron does not qualify as a critical mineral.
 
 **Aggregate quarry application:** The non-critical correlation is a real economic signal for aggregate quarry siting. The `earth_mri_category = 'Non-Critical'` rows in each site's CSV are the right lens for that use case.
 
@@ -115,7 +118,7 @@ Structural proximity alone does not predict TIR detectability. Significant sites
 
 ![Scatter plot: mean deposit-to-fault distance (log scale, km) vs critical-mineral hit rate. Red dots = significant (critical-only, p<0.05, n=12). No trend is visible; significant sites are scattered across the full distance range from <1 km (Magnet Cove) to >10 km (Mountain Pass, Hanover-Fierro).](../figures/06_structure_hit_rate.png)
 
-*Figure 06 — Structural proximity vs spectral detectability. Point size = number of MRDS deposits in bbox. Red = significant on critical-only binomial test (p < 0.05, n=12). Orange = significant on all-deposit test only, significance driven by non-critical (aggregate/Fe) deposits (n=6: Iron Springs, Darwin, Globe-Miami, Silver Peak, Lemhi Pass, Green River). No correlation between fault proximity and hit rate; deposit type and surface alteration exposure are the dominant predictors.*
+*Figure 06 — Structural proximity vs spectral detectability. Point size = number of MRDS deposits in bbox. Red = significant on critical-only binomial test (p < 0.05, n=9). Orange = significant on all-deposit test only, significance driven by non-critical (aggregate/Fe) deposits (n=4: Hanover-Fierro, Lemhi Pass, Iron Springs, Darwin). No correlation between fault proximity and hit rate; deposit type and surface alteration exposure are the dominant predictors.*
 
 **Ozark site caveat:** Pea Ridge and Viburnum Trend have structural corridor buffers covering 40–50% of map area, reflecting the density of mapped Missouri Ozark faults rather than real structural control on mineralization. The "% of deposits within 500 m of structure" metric is inflated at these sites.
 
@@ -143,7 +146,9 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 
 ![Ducktown, TN deposit overlay. Alteration zones are present but dispersed across the forested Tennessee landscape. The VMS deposit cluster (yellow stars) is partially captured but the surrounding forest cover suppresses the signal relative to arid-terrain sites with the same deposit type.](../figures/sites/ducktown/03_deposit_overlay.png)
 
-*Figure — Ducktown, TN. Same VMS deposit type as Bisbee (significant, 39.3%), but in forested Tennessee. Vegetation cover suppresses the TIR alteration signal; p ≈ 1. This contrast directly demonstrates why the method is primarily applicable to arid/semi-arid terrain.*
+*Figure — Ducktown, TN. Same VMS deposit type as Jerome (significant, 53.1%) and Bisbee (significant, 43.2%), but in forested Tennessee. Vegetation cover suppresses the TIR alteration signal; p ≈ 1. This contrast directly demonstrates why the method is primarily applicable to arid/semi-arid terrain.*
+
+**Jerome — multi-granule coverage:** Jerome required three ASTER granules to cover the full bbox. Only 59% of the bbox falls within the combined TIR footprint; the mine district (Verde VMS/epithermal) sits in the covered right half. With a single granule the hit rate was 4.4% (footprint covered only the upper-right corner, missing the mine district entirely).
 
 ---
 
