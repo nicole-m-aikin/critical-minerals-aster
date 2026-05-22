@@ -1,6 +1,6 @@
 # critical-minerals-aster
 
-Spectral alteration mapping across 30 critical mineral sites in the US using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs spatial significance tests to determine where — and for which deposit types — the method produces signal above chance.
+Spectral alteration mapping across 45 US critical mineral sites using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs binomial significance tests to determine where — and for which deposit types — the method produces signal above chance.
 
 **Results and figures:** [`docs/results.md`](docs/results.md) · [`figures/index.html`](figures/index.html)
 
@@ -9,50 +9,33 @@ Spectral alteration mapping across 30 critical mineral sites in the US using AST
 ## Scientific questions
 
 1. Do ASTER-derived TIR alteration zones spatially correlate with known mineral occurrences in the USGS MRDS database?
-2. Which TIR band ratio combinations best distinguish silica, carbonate, and mafic alteration?
-3. Does the correlation vary by commodity type — and does that pattern make geological sense?
+2. Which deposit types are TIR-detectable, and which are systematically invisible?
+3. Does the correlation vary by Earth MRI commodity category in geologically meaningful ways?
 4. Are observed hit rates statistically significant above the null hypothesis of random deposit distribution?
-5. Which Earth MRI deposit categories are TIR-detectable, and which are systematically invisible to this method?
-6. Do non-critical bulk deposits (stone, sand, gravel) inflate headline hit rates — and is that signal geologically meaningful in its own right?
+5. Do non-critical bulk deposits (stone, sand, gravel) inflate headline hit rates — and is that signal geologically meaningful in its own right?
 
 ---
 
-## Study sites (30)
+## Key findings (45 sites)
 
-| Site | State | Primary Deposit Type | Critical-only significance |
-|---|---|---|---|
-| Bisbee | AZ | Skarn / VMS Cu-Zn | p < 0.001 ** |
-| McDermitt Caldera | NV/OR | Caldera (Li, Hg, Au) | p = 0.010 * |
-| Mountain Pass | CA | Carbonatite REE | p = 0.008 * |
-| Hanover-Fierro | NM | Cu-Mo-Zn skarn | p = 0.019 * |
-| Yerington | NV | Porphyry Cu | p < 0.001 ** |
-| Jerome | AZ | VMS Cu-Zn-Ag | p = 0.003 * |
-| Thacker Pass | NV | Li clay | borderline (p = 0.080, n = 26) |
-| Jerritt Canyon | NV | Carlin-type Au | — |
-| Viburnum Trend | MO | MVT Pb-Zn | — |
-| Darwin | CA | Polymetallic skarn | — |
-| Lemhi Pass | ID/MT | REE phosphate veins | — |
-| Carlin Trend | NV | Carlin-type Au | — |
-| Ajo | AZ | Porphyry Cu | — |
-| Gas Hills | WY | Roll-front U | — |
-| Stillwater Complex | MT | PGM layered intrusion | — |
-| Globe-Miami | AZ | Porphyry Cu | — |
-| Tonopah–Manhattan | NV | Epithermal Au-Ag | — |
-| Ely (Robinson) | NV | Porphyry Cu-Mo | — |
-| Elk Creek | NE | Carbonatite (Nb, REE) | — |
-| Green River Basin | WY | Trona / industrial minerals | false positive (aggregate only) |
-| Silver Peak | NV | Li brine / epithermal | anti-correlated |
-| Marysvale | UT | Uranium / epithermal | anti-correlated |
-| Bear Lodge | WY | Carbonatite REE | anti-correlated |
-| Bagdad | AZ | Porphyry Cu / skarn | anti-correlated |
-| Oatman | NV/AZ | Low-sulfidation Au | anti-correlated |
-| Steamboat Springs | NV | Geothermal / Au-Ag | anti-correlated |
-| Pea Ridge | MO | IOCG (Fe-Cu-Au) | anti-correlated |
-| Goldfield–Cuprite | NV | Epithermal Au | anti-correlated |
-| Bingham Canyon | UT | Porphyry Cu-Mo-Au | anti-correlated |
-| Climax | CO | Porphyry Mo | anti-correlated |
+**12 sites** are significant on the critical-mineral-only binomial test (null = 8.5%); **3 additional sites** are significant on the all-deposit test only (non-critical or base-metals driven).
 
-Significance = critical-mineral deposits only (Non-Critical excluded). See [`docs/results.md`](docs/results.md) for full discussion.
+| Site | State | Deposit type | Critical hit rate | p |
+|---|---|---|---|---|
+| Bisbee | AZ | Skarn / carbonate-hosted Cu-Ag | 43.2% | < 0.001 |
+| Eureka | NV | Pb-Zn-Au-Ag skarn / carbonate | 37.2% | < 0.001 |
+| Magnet Cove | AR | Alkalic igneous complex REE/Ti | 23.1% | 0.019 |
+| McDermitt Caldera | NV/OR | Li-Cs-REE sedimentary/caldera | 22.2% | 0.009 |
+| Lordsburg | NM | Porphyry Cu-Mo | 21.8% | < 0.001 |
+| Thacker Pass | NV | Lithium brine | 21.7% | 0.040 |
+| Ely (Robinson) | NV | Porphyry Cu-Au | 20.8% | 0.048 |
+| Sierrita | AZ | Porphyry Cu-Mo | 17.9% | 0.006 |
+| Steamboat Springs | NV | Epithermal / geothermal Au-Ag | 14.5% | 0.003 |
+| Yerington | NV | Porphyry Cu / skarn | 13.7% | 0.028 |
+| Randsburg | CA | Epithermal Au-Ag-W | 11.8% | 0.004 |
+| Mountain Pass | CA | Carbonatite REE | 11.5% | 0.038 |
+
+The method acts as a **deposit-type selector, not a universal detector**: skarn/carbonate-hosted and arid porphyry systems produce the clearest signal; sediment-hosted (Carlin, MVT), placer, and vegetated-terrain deposits anti-correlate or score at chance. See [`docs/results.md`](docs/results.md) for full discussion including anti-correlations, non-critical inflation, and interpretation limits.
 
 ---
 
@@ -61,11 +44,11 @@ Significance = critical-mineral deposits only (Non-Critical excluded). See [`doc
 | Dataset | Source | Notes |
 |---|---|---|
 | ASTER L1T (v004) | NASA EarthData / LP DAAC | TIR bands B10–B14, 90 m resolution |
-| MRDS national deposit database | USGS mrdata.usgs.gov | ~8,500 deposits across 30 bboxes |
+| MRDS national deposit database | USGS mrdata.usgs.gov | ~30,000 deposit records across 45 bboxes |
 | USGS Quaternary Faults | USGS QFAULTS REST API | Most sites |
-| USGS SGMC fault data | USGS FeatureServer | Bear Lodge, Jerome, and others (all-age faults) |
+| USGS SGMC fault data | USGS FeatureServer | All-age faults for select sites |
 
-**Note on SWIR availability:** ASTER SWIR bands (B04–B09), standard for clay/argillic mapping, are not available in LP DAAC v004 for these areas. TIR bands (B10–B14, 8–12 µm) are used instead, suited for silica, carbonate, and mafic mineral mapping in arid volcanic terranes.
+**Note on SWIR availability:** ASTER SWIR bands (B04–B09), standard for clay/argillic mapping, are not available in LP DAAC v004 for these areas. TIR bands (B10–B14, 8–12 µm) are used instead, suited for silica, carbonate, and mafic mineral mapping in arid terrain.
 
 ---
 
@@ -81,16 +64,13 @@ Significance = critical-mineral deposits only (Non-Critical excluded). See [`doc
 
 ### Classification
 
-Percentile-based thresholds (70th/90th) applied per scene produce a 3-class anomaly map per ratio. An additive combined score (0–6) identifies pixels anomalous across multiple indicators. Strong anomaly zones (score ≥ 3) are vectorized to polygons via `rasterio.features.shapes`. Thresholds are scene-relative; cross-site comparison of raw scores is not meaningful.
+Percentile-based thresholds (70th/90th) applied to the bbox-clipped ratio mosaic produce a 3-class map per ratio. An additive combined score (0–6) identifies pixels anomalous across multiple indicators. Strong anomaly zones (score ≥ 3) are vectorized to polygons. Thresholds are scene-relative; cross-site comparison of raw scores is not meaningful.
+
+Multi-granule sites use feathered ratio mosaics with per-granule histogram normalization, classified once on the merged mosaic. This guarantees a 70/20/10 background/moderate/strong pixel distribution and avoids the per-granule max-merge inflation that biases results when N > 1 granules independently contribute classifications.
 
 ### Statistical significance
 
-Two complementary tests per site, run on critical-mineral deposits only:
-
-- **Binomial test** — exact one-sided `scipy.stats.binomtest`; H₀: each deposit has probability p = zone area / bbox area of falling in a zone.
-- **Spatial permutation test** — Monte Carlo (10,000 iterations); anomaly zone rasterised onto a 1,000×1,000 grid, random deposit placements counted each iteration.
-
-Both tests are also run on all deposits combined; results are compared in [`docs/results.md`](docs/results.md).
+Binomial test (`scipy.stats.binomtest`, one-sided, greater) against a pooled null rate derived from the full 45-site survey. Two tests per site: critical-mineral-only (null = 8.5%) and all-deposit (null = 9.5%). MRDS deposits are clipped to the valid-pixel TIR footprint polygon before counting; zone coverage uses footprint area, not bbox area.
 
 ---
 
@@ -108,41 +88,25 @@ pip install -e .
 
 ### 2. EarthData credentials
 
-Create a free account at [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov). The pipeline uses `earthaccess.login(strategy="interactive")` on first run; credentials are cached.
+Create a free account at [urs.earthdata.nasa.gov](https://urs.earthdata.nasa.gov). The pipeline uses `earthaccess.login(strategy="netrc")` on first run; credentials are cached in `~/.netrc`.
 
 ### 3. Run the pipeline
 
 ```bash
-# Single site
+# Single site (data must already be in data/sites/{id}/aster/)
 python -m critical_minerals_aster run --site mcdermitt
 
-# Download from EarthData then process
-python -m critical_minerals_aster run --site mcdermitt --download
+# Download from EarthData, build mosaic, then process
+python -m critical_minerals_aster run --site mcdermitt --mosaic
 
-# All 30 sites
-python -m critical_minerals_aster run-batch --all-sites
+# All 45 sites (skip existing outputs)
+python -m critical_minerals_aster run-batch --all-sites --skip-existing
 
 # Regenerate national summary + synthesis figures
 python -m critical_minerals_aster synthesize
 ```
 
-### 4. Significance tests
-
-```bash
-# Critical-mineral-only (primary result)
-python scripts/significance_critical_only.py
-
-# Whole-catalog baseline
-python scripts/compute_significance.py
-
-# TIR-detectable mineral systems only
-python scripts/compute_significance_filtered.py
-
-# Per-(site × Earth MRI category)
-python scripts/compute_significance_by_category.py
-```
-
-### 5. Query results
+### 4. Query results
 
 ```bash
 python -c "
@@ -163,35 +127,24 @@ print(con.execute(\"\"\"
 ```
 critical-minerals-aster/
 ├── sites/
-│   ├── index.yaml                   # list of 30 site IDs
+│   ├── index.yaml                   # list of 45 site IDs
 │   └── {site_id}.yaml               # bbox, granule, classification params, structure layers
 ├── src/
 │   └── critical_minerals_aster/
 │       ├── config.py                # SiteConfig, ClassificationParams, StructureLayer
 │       ├── paths.py                 # SitePaths — all file/dir paths
-│       ├── spectral.py              # TIR I/O, granule selection, band ratios
+│       ├── spectral.py              # TIR I/O, granule selection, band ratios, mosaic tools
 │       ├── classification.py        # percentile classification, vectorization
 │       ├── metrics.py               # MRDS spatial join, per-site summary CSV
 │       ├── mrds.py                  # MRDS CSV → GeoDataFrame, Earth MRI / mineral-system classifiers
 │       ├── structure.py             # distance-to-fault annotation, buffer flags
-│       ├── significance.py          # binomial + spatial permutation p-values
 │       ├── synthesis.py             # national summary CSV + figures (05, 06, 07)
 │       ├── terrain.py               # hillshade DEM overlay
-│       └── pipeline.py             # run_site() / run_batch() orchestration
+│       └── pipeline.py             # run_site() / run_batch() orchestration, mosaic builder
 ├── docs/
-│   ├── results.md                   # scientific findings, figures, interpretation
-│   ├── roadmap.md                   # live planning doc
-│   ├── architecture.md              # design rationale
-│   └── structure_layers.md          # fault overlay config reference
-├── scripts/
-│   ├── significance_critical_only.py
-│   ├── compute_significance.py
-│   ├── compute_significance_filtered.py
-│   ├── compute_significance_by_category.py
-│   ├── fetch_new_site_structures.py
-│   ├── download_usgs_faults.py
-│   └── download_sgmc_structures.py
-├── results/                         # generated per-site CSVs + results.duckdb
+│   └── results.md                   # scientific findings, figures, interpretation
+├── scripts/                         # standalone analysis scripts (significance, structure fetch)
+├── results/                         # generated per-site CSVs + results.duckdb (gitignored)
 ├── figures/                         # synthesis figures + per-site gallery
 ├── data/                            # not committed (ASTER rasters, MRDS CSV, structure GeoJSONs)
 ├── tests/
@@ -204,13 +157,13 @@ critical-minerals-aster/
 
 ## Dependencies
 
-- `rasterio` — raster I/O, feature extraction, rasterization for permutation test
+- `rasterio` — raster I/O, feature extraction, mosaic blending
 - `geopandas` / `shapely` — vector operations and spatial joins
 - `scipy` — binomial significance tests
 - `earthaccess` — NASA EarthData authentication and download
 - `duckdb` — SQL-queryable national results
 - `numpy` / `pandas` — array and tabular operations
-- `matplotlib` / `contextily` — visualization and basemap tiles
+- `matplotlib` — visualization
 
 ---
 
