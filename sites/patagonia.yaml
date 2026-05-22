@@ -1,0 +1,16 @@
+# Patagonia, AZ — Skarn / epithermal Cu-Pb-Zn-Ag-Au (Harshaw-Duquesne district)
+# Santa Cruz County, AZ; arid Sonoran terrain south of Tucson.
+# Tests skarn class in a smaller, less-mined district than Bisbee; good MRDS density.
+id: patagonia
+name: "Patagonia, AZ"
+bbox_wgs84: [-110.95, 31.25, -110.45, 31.75]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

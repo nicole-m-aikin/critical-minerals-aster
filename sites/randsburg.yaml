@@ -1,0 +1,16 @@
+# Randsburg / Red Mountain, CA — Epithermal Au-Ag-W (Kern/San Bernardino Counties)
+# Mojave Desert; extreme aridity and sparse vegetation = ideal TIR conditions.
+# W (tungsten) is a critical mineral; tests epithermal class in California desert vs. Nevada.
+id: randsburg
+name: "Randsburg, CA"
+bbox_wgs84: [-117.95, 35.10, -117.35, 35.65]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

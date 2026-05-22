@@ -1,0 +1,16 @@
+# Lordsburg / Pyramid Mountains, NM — Skarn Cu-Pb-Zn-Au + VMS (Hidalgo County)
+# Very arid Chihuahuan Desert terrain; Pyramid Mountains district ~30 km south of Lordsburg.
+# Extends skarn class into SW New Mexico; complements Hanover-Fierro further east.
+id: lordsburg
+name: "Lordsburg, NM"
+bbox_wgs84: [-109.05, 31.75, -108.35, 32.55]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

@@ -1,0 +1,16 @@
+# Sierrita / Twin Buttes, AZ — Porphyry Cu-Mo (Freeport-McMoRan Sierrita Mine)
+# Pima County, AZ; ~30 miles south of Tucson in the Sonoran Desert.
+# Large alteration footprint in hyper-arid terrain; tests porphyry Cu class alongside Ely and Yerington.
+id: sierrita
+name: "Sierrita, AZ"
+bbox_wgs84: [-111.35, 31.60, -110.85, 32.05]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

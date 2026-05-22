@@ -1,0 +1,16 @@
+# Morenci, AZ — Porphyry Cu-Mo (Freeport-McMoRan Morenci Mine)
+# One of the largest open-pit Cu mines in the US; Greenlee County, AZ.
+# Propylitic/phyllic alteration halo in an arid Basin-and-Range setting; expected strong positive.
+id: morenci
+name: "Morenci, AZ"
+bbox_wgs84: [-109.60, 32.85, -109.10, 33.30]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

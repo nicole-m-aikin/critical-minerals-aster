@@ -1,0 +1,16 @@
+# Bodie, CA — Epithermal Au-Ag (Bodie Mining District, Mono County)
+# High desert (~2600 m) on the CA-NV border; minimal vegetation, arid rain shadow.
+# Well-documented epithermal system; tests epithermal class outside the Nevada corridor.
+id: bodie
+name: "Bodie, CA"
+bbox_wgs84: [-119.30, 38.00, -118.70, 38.50]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

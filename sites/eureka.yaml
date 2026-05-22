@@ -1,0 +1,16 @@
+# Eureka, NV — Pb-Zn-Au-Ag skarn / carbonate-hosted (Eureka district, Eureka County)
+# Central Nevada Basin and Range; arid terrain, good ASTER coverage.
+# Classic skarn and replacement deposits in limestone; tests skarn class in NV alongside Pioche.
+id: eureka
+name: "Eureka, NV"
+bbox_wgs84: [-116.30, 39.25, -115.60, 39.80]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
