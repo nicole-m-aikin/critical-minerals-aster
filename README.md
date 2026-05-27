@@ -28,7 +28,7 @@ Spectral alteration mapping across 45 US critical mineral sites using ASTER ther
 | McDermitt Caldera | NV/OR | Li-Cs-REE sedimentary/caldera | 22.2% | 0.009 |
 | Lordsburg | NM | Porphyry Cu-Mo | 21.8% | < 0.001 |
 | Thacker Pass | NV | Lithium brine | 21.7% | 0.040 |
-| Ely (Robinson) | NV | Porphyry Cu-Au | 20.8% | 0.048 |
+| Ely (Robinson) | NV | Porphyry Cu-Au | 20.8% | 0.047 |
 | Sierrita | AZ | Porphyry Cu-Mo | 17.9% | 0.006 |
 | Steamboat Springs | NV | Epithermal / geothermal Au-Ag | 14.5% | 0.003 |
 | Yerington | NV | Porphyry Cu / skarn | 13.7% | 0.028 |

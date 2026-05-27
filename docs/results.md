@@ -20,7 +20,7 @@ Hit rates below are critical-mineral deposits only (non-critical excluded). Null
 | McDermitt Caldera, NV/OR | 22.2% (8/36) | 0.009 | Li-Cs-REE sedimentary/caldera |
 | Lordsburg, NM | 21.8% (38/174) | < 0.001 | Porphyry Cu-Mo |
 | Thacker Pass, NV | 21.7% (5/23) | 0.040 | Lithium brine |
-| Ely (Robinson), NV | 20.8% (5/24) | 0.048 | Porphyry Cu-Au |
+| Ely (Robinson), NV | 20.8% (5/24) | 0.047 | Porphyry Cu-Au |
 | Sierrita, AZ | 17.9% (14/78) | 0.006 | Porphyry Cu-Mo |
 | Steamboat Springs, NV | 14.5% (30/207) | 0.003 | Epithermal / geothermal Au-Ag |
 | Yerington, NV | 13.7% (18/131) | 0.028 | Porphyry Cu / skarn |
@@ -31,15 +31,15 @@ Hit rates below are critical-mineral deposits only (non-critical excluded). Null
 
 | Site | All-deposit hit rate | p (all) | Critical hit rate | p (critical) | Inflation source |
 |---|---|---|---|---|---|
-| Hanover-Fierro, NM | 23.1% (6/26) | 0.032 | 20.0% (5/25) | 0.100 | Fe skarn classified non-critical |
-| Iron Springs, UT | 13.8% (22/159) | 0.046 | 14.3% (14/98) | 0.074 | Fe skarn classified non-critical |
-| Darwin, CA | 13.5% (31/229) | 0.028 | 10.4% (19/183) | 0.212 | Pb-Zn classified as base metals (non-critical under current list) |
+| Hanover-Fierro, NM | 23.1% (6/26) | 0.032 | 20.0% (4/20) | 0.083 | Fe skarn classified non-critical |
+| Iron Springs, UT | 13.8% (22/159) | 0.046 | 14.3% (3/21) | 0.261 | Fe skarn classified non-critical |
+| Darwin, CA | 13.5% (31/229) | 0.028 | 10.4% (19/182) | 0.202 | Pb-Zn classified as base metals (non-critical under current list) |
 
 ![Critical-mineral hit rate by site, sorted and coloured by Earth MRI category. Non-critical deposits excluded. Bisbee leads at 43.2%, with a clear gradient from skarn/VMS and carbonatite sites at top.](../figures/05_national_hit_rates.png)
 
 *Figure 05 — Critical-mineral hit rate by site (non-critical excluded). Bar colour = Earth MRI category of in-zone critical deposits. Sites sorted by critical-mineral hit rate. Bisbee leads at 43.2%, followed by Eureka at 37.2%.*
 
-**Near-significant on critical-only test** (p between 0.05–0.15): Ely-Robinson (borderline at 0.048), Battle Mountain NV (12.8%, p = 0.060), Iron Hill CO (10.8%), Viburnum Trend MO (11.9%), Globe-Miami AZ (11.0%).
+**Near-significant on critical-only test** (p between 0.05–0.20): Battle Mountain NV (12.8%, p = 0.122), Iron Hill CO (10.8%, p = 0.155), Viburnum Trend MO (11.9%, p = 0.172), Globe-Miami AZ (11.0%, p = 0.187).
 
 **Anti-correlated** (p > 0.95 — deposits actively avoid anomaly zones): Goldfield-Cuprite NV, Ducktown TN, Oatman AZ, Stillwater Complex MT, Bingham Canyon UT, Mineral Park AZ, Climax CO, Jerritt Canyon NV, Elk Creek NE.
 
@@ -101,18 +101,18 @@ Non-critical deposits (stone, sand, gravel, aggregate) have a **higher** pooled 
 
 | Category | Hit rate | n deposits | TIR-detectable? | Notes |
 |---|---|---|---|---|
-| Battery Metals – Li/Brine | 14.3% | 7 | Yes | Small n; Thacker Pass / McDermitt / Silver Peak drive this |
-| Energy (uranium) | 8.9% | 676 | Partial | Roll-front U has no surface alteration; signal from associated skarn/breccia |
-| Battery Metals – Co/Ni | 8.8% | 296 | Yes | Mafic/ultramafic host rock; mafic ratio picks up ultramafic country rock |
-| Base Metals | 7.9% | 1837 | Yes | Porphyry/skarn/VMS alteration halos |
-| Specialty/High-Tech | 6.4% | 171 | Partial | Depends on host rock type |
-| PGM | 6.2% | 16 | No | Stillwater layered intrusion anti-correlated; small n |
-| Gold/Silver | 5.8% | 2385 | Partial | Caldera/epithermal Au yes (Yerington, Ely); Carlin/placer no |
-| Industrial | 5.7% | 371 | No | Structurally/sediment-hosted |
-| REE | 0.0% | 29 | Indirect | See note below |
-| Non-Critical (aggregate) | 12.6% | 1692 | Yes — different application | See above |
+| PGM | 12.0% | 25 | Partial | Mafic ratio picks up ultramafic country rock; Stillwater layered intrusion anti-correlates |
+| REE | 10.7% | 28 | Partial | Carbonatite/skarn signature (B13/B12); see note below |
+| Battery Metals – Co/Ni | 9.8% | 326 | Partial | Mafic/ultramafic host rock; mafic ratio |
+| Non-Critical (aggregate) | 9.3% | 1766 | Yes — different application | See above |
+| Battery Metals – Li/Brine | 8.3% | 12 | Partial | Very small n; brine-hosted; near-null rate |
+| Base Metals | 8.0% | 2138 | Partial | Porphyry/skarn/VMS alteration halos; site-specific (Bisbee, Eureka strong; Bingham, Mineral Park anti-correlated) |
+| Gold/Silver | 6.4% | 2535 | Partial | Caldera/epithermal Au yes (Yerington, Ely); Carlin/placer no |
+| Energy | 5.8% | 789 | Partial | Roll-front U has no surface alteration; signal from associated skarn/breccia |
+| Specialty/High-Tech | 4.7% | 213 | Partial | Depends on host rock type |
+| Industrial | 3.9% | 414 | No | Structurally/sediment-hosted |
 
-**REE category note:** Pooled REE-category hit rate is 0% (0/29), but two carbonatite REE sites are significant (Mountain Pass p = 0.038, Magnet Cove p = 0.019). The contradiction arises because MRDS deposits at these sites are classified primarily as Base Metals or Gold/Silver (associated skarns and veins) rather than REE under the Earth MRI reclassifier. The TIR signal co-locates with mineralized ground, but the hits land on skarn/vein MRDS records, not the REE-coded ones.
+**REE category note:** Pooled REE-category hit rate is 10.7% (3/28), up from 0% in earlier runs as additional sites were added. Mountain Pass and Magnet Cove remain individually significant (p = 0.038 and p = 0.019). The pooled category p-value (0.71) is not significant given the small total n. At these sites additional hits land on Base Metals or Gold/Silver classified records (associated skarns and veins) rather than REE-coded deposits, reflecting how MRDS commodities are assigned for multi-commodity carbonatite systems.
 
 No category reaches national significance individually; signal is site-specific rather than category-wide. Mineral system standouts: carbonatite, porphyry Cu-Au, and skarn systems have the highest pooled hit rates. Sediment-hosted (Carlin, MVT, roll-front) and placer systems score at or below chance.
 
