@@ -77,7 +77,8 @@ sites/{id}.yaml
 | `mrds.py` | MRDS CSV → GeoDataFrame with CRS reprojection |
 | `structure.py` | Distance-to-fault and buffer annotation for deposits |
 | `synthesis.py` | Aggregate `results/*_summary.csv` → national summary |
-| `pipeline.py` | `run_site()` / `run_batch()` orchestration + figure generation |
+| `basemap.py` | Fetch Esri World Imagery via `contextily`, reproject to hillshade grid, cache to `data/basemap/{site_id}/rgb.tif` |
+| `pipeline.py` | `run_site()` / `run_batch()` orchestration + figure generation; `FIG03_VERSION` controls cache invalidation |
 | `__main__.py` | `argparse` CLI entry point |
 
 ### Site configuration (`sites/`)

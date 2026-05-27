@@ -161,6 +161,7 @@ critical-minerals-aster/
 - `geopandas` / `shapely` — vector operations and spatial joins
 - `scipy` — binomial significance tests
 - `earthaccess` — NASA EarthData authentication and download
+- `contextily` — Esri World Imagery basemap tiles for figure 03 satellite panel
 - `duckdb` — SQL-queryable national results
 - `numpy` / `pandas` — array and tabular operations
 - `matplotlib` — visualization

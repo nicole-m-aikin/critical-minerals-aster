@@ -47,15 +47,15 @@ Anti-correlations are geologically coherent: Climax is a deep porphyry Mo with n
 
 **Bisbee — strongest positive (43.2% critical, 39.3% all-deposit):**
 
-![Bisbee, AZ deposit overlay. Dense red strong-anomaly zones cluster tightly around the skarn/VMS district in the center of the scene. 48 of 122 MRDS deposits (yellow stars) fall within zones; the TIR data boundary (dashed) cuts the NE corner of the bbox.](../figures/sites/bisbee/03_deposit_overlay.png)
+![Bisbee, AZ dual-panel. Left: Esri World Imagery satellite context showing arid terrain of the Warren Mining District; MRDS deposits (blue circles / gold stars) and fault corridors overlay. Right: NASADEM hillshade with dark red strong TIR alteration zones tightly clustered along the skarn/VMS district; TIR dashed boundary clips the NE corner.](../figures/sites/bisbee/03_deposit_overlay.png)
 
-*Figure — Bisbee, AZ. Red zones = strong TIR alteration; yellow stars = MRDS deposits inside zones (n=48); blue circles = deposits outside zones (n=74). The anomaly cluster corresponds spatially to the Warren Mining District skarn and VMS bodies.*
+*Figure — Bisbee, AZ (dual panel). Left: satellite imagery provides land-cover context — the Warren Mining District occupies arid terrain at center. Right: strong TIR alteration zones (dark red) cluster tightly around the skarn/VMS bodies; yellow stars = MRDS deposits in zones (n=48), blue circles = outside zones (n=74). TIR boundary (dashed) cuts the NE corner of the bbox.*
 
 **Climax — anti-correlation example (0.2%, 1/472):**
 
-![Climax, CO deposit overlay. Strong anomaly zones cluster in the upper Rocky Mountain terrain (upper left) while 471 of 472 MRDS deposits cluster in the lower-right valley area — a near-perfect spatial mismatch.](../figures/sites/climax/03_deposit_overlay.png)
+![Climax, CO dual-panel. Left: satellite imagery showing snow-capped Rocky Mountain terrain; 471 of 472 MRDS deposits (blue circles) cluster in the lower-right Climax mine valley. Right: strong TIR anomaly zones concentrate in the upper carbonate terrain of the Sawatch Range while the mine area shows almost no alteration signal — a near-perfect spatial mismatch.](../figures/sites/climax/03_deposit_overlay.png)
 
-*Figure — Climax, CO. The porphyry Mo system produces almost no surface TIR alteration; 471 of 472 deposits fall outside anomaly zones. The zones reflect carbonate-bearing country rock in the surrounding Sawatch Range, not mineralization.*
+*Figure — Climax, CO (dual panel). Left: satellite context shows the deep forested/snow terrain around the mine. Right: anomaly zones cluster in upper carbonate country rock; 471 of 472 deposits fall outside zones. The deep porphyry Mo system has no surface TIR alteration expression.*
 
 ---
 
@@ -150,9 +150,9 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 
 **Ducktown — vegetation anti-correlation:**
 
-![Ducktown, TN deposit overlay. Alteration zones are present but dispersed across the forested Tennessee landscape. The VMS deposit cluster (yellow stars) is partially captured but the surrounding forest cover suppresses the signal relative to arid-terrain sites with the same deposit type.](../figures/sites/ducktown/03_deposit_overlay.png)
+![Ducktown, TN dual-panel. Left: satellite imagery shows dense green forest canopy blanketing the Tennessee landscape — a stark contrast to the arid Bisbee scene. Right: strong TIR anomaly zones appear in the hillshade but deposit points scatter widely outside them; the VMS cluster falls mostly outside zones.](../figures/sites/ducktown/03_deposit_overlay.png)
 
-*Figure — Ducktown, TN. Same VMS deposit type as Bisbee (significant, 43.2%), but in forested Tennessee. Vegetation cover suppresses the TIR alteration signal; p ≈ 1. This contrast directly demonstrates why the method is primarily applicable to arid/semi-arid terrain.*
+*Figure — Ducktown, TN (dual panel). Left: dense forest cover is immediately visible in the satellite panel, distinguishing this site from arid-terrain VMS systems. Right: anomaly zones are present but displaced from the VMS deposit cluster. Same deposit type as Bisbee (significant at 43.2%) but p ≈ 1 here — vegetation suppresses TIR alteration signal.*
 
 **Jerome — multi-granule coverage:** Jerome required three ASTER granules to cover the full bbox. Only 59% of the bbox falls within the combined TIR footprint; the mine district (Verde VMS/epithermal) sits in the covered right half. Jerome's hit rate (4.7% critical, 5 of 106) is below the null rate — the Verde Cu-Zn VMS system does not produce a TIR-detectable alteration signature at the surface, likely due to the same vegetation/overburden suppression that affects Ducktown. This contrasts with the arid-terrain skarn systems (Bisbee, Eureka) that are strongly detectable.
 
@@ -180,5 +180,5 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 | `figures/sites/{id}/00_composite_rgb.png` | False-color TIR composite |
 | `figures/sites/{id}/01_tir_band_ratios.png` | Three band ratio maps |
 | `figures/sites/{id}/02_classification.png` | Per-ratio classification + combined score |
-| `figures/sites/{id}/03_deposit_overlay.png` | Anomaly zones, MRDS deposits, fault corridors, scale bar |
+| `figures/sites/{id}/03_deposit_overlay.png` | Dual panel (20×10 in): left = Esri World Imagery satellite context; right = NASADEM hillshade + strong anomaly zones. Both panels show MRDS deposits, fault corridors, and TIR footprint boundary (dashed). |
 | `figures/sites/{id}/05_structure_proximity.png` | Strip chart: deposit distance to nearest fault by commodity group |

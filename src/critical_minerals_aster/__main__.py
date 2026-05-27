@@ -10,6 +10,7 @@ from critical_minerals_aster.config import list_site_ids, load_site_by_id
 from critical_minerals_aster.paths import site_paths_for
 from critical_minerals_aster.pipeline import (
     download_and_mosaic_aster,
+    fig03_outputs_current,
     run_batch,
     run_batch_parallel,
     run_site,
@@ -22,15 +23,13 @@ def _repo_root() -> Path:
 
 
 def _should_skip(site_id: str, repo_root: Path) -> bool:
-    """Return True if site outputs already exist and can be skipped."""
+    """Return True if dual-panel fig 03 and matching provenance exist."""
     from critical_minerals_aster.config import load_site_by_id
 
     try:
         site = load_site_by_id(site_id, repo_root / "sites")
         paths = site_paths_for(site, repo_root)
-        overlay = paths.figures_dir / "03_deposit_overlay.png"
-        prov = paths.site_provenance_json
-        return overlay.exists() and prov.exists()
+        return fig03_outputs_current(repo_root, paths)
     except Exception:
         return False
 

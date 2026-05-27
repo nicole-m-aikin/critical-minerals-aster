@@ -434,6 +434,197 @@ def save_classification_figure(
     plt.close()
 
 
+FIG03_VERSION = 10
+
+
+def load_tir_footprint_from_provenance(
+    site_id: str,
+    repo_root: Path,
+    zones_crs: Any,
+) -> gpd.GeoDataFrame | None:
+    """Load valid-pixel footprint polygon from site provenance JSON."""
+    prov_path = repo_root / "results" / f"{site_id}_provenance.json"
+    if not prov_path.exists():
+        return None
+    try:
+        prov = json.loads(prov_path.read_text())
+        geojson = prov.get("tir_footprint_wgs84")
+        if geojson is None:
+            return None
+        gdf = gpd.GeoDataFrame.from_features(geojson["features"], crs="EPSG:4326")
+        return gdf.to_crs(zones_crs)
+    except Exception:
+        return None
+
+
+def fig03_outputs_current(repo_root: Path, paths: SitePaths) -> bool:
+    """True when dual-panel fig 03 and matching provenance version exist."""
+    overlay = paths.figures_dir / "03_deposit_overlay.png"
+    prov_path = paths.site_provenance_json
+    if not overlay.exists() or not prov_path.exists():
+        return False
+    try:
+        prov = json.loads(prov_path.read_text())
+        return prov.get("fig03_version") == FIG03_VERSION
+    except Exception:
+        return False
+
+
+def _fig03_view_limits(
+    hs_transform: Any,
+    hs_shape: tuple[int, int] | None,
+    zones: gpd.GeoDataFrame,
+    ax_fallback: Any,
+) -> tuple[tuple[float, float], tuple[float, float]]:
+    if hs_transform is not None and hs_shape is not None:
+        _r = hs_transform
+        _rc, _cc = hs_shape
+        _rx0, _rx1 = _r.c, _r.c + _r.a * _cc
+        _ry0, _ry1 = _r.f + _r.e * _rc, _r.f
+        _mx = (_rx1 - _rx0) * 0.01
+        _my = (_ry1 - _ry0) * 0.01
+        return (_rx0 - _mx, _rx1 + _mx), (_ry0 - _my, _ry1 + _my)
+    if len(zones) > 0:
+        _zb = zones.total_bounds
+        _zm = max(_zb[2] - _zb[0], _zb[3] - _zb[1]) * 0.02
+        return (_zb[0] - _zm, _zb[2] + _zm), (_zb[1] - _zm, _zb[3] + _zm)
+    return ax_fallback.get_xlim(), ax_fallback.get_ylim()
+
+
+def _fig03_hs_extent(hs_transform: Any, hs_shape: tuple[int, int]) -> tuple[float, float, float, float]:
+    rows, cols = hs_shape
+    t = hs_transform
+    return (t.c, t.c + t.a * cols, t.f + t.e * rows, t.f)
+
+
+def _fig03_draw_zones(ax: Any, zones: gpd.GeoDataFrame) -> None:
+    """Draw strong anomaly zones with fill and crisp outlines."""
+    if len(zones) == 0:
+        return
+    small = zones[zones["area_km2"] < 10]
+    large = zones[zones["area_km2"] >= 10]
+    if len(small):
+        small.plot(ax=ax, color="#922b21", alpha=0.65, linewidth=0, zorder=2)
+        small.plot(ax=ax, facecolor="none", edgecolor="#c0392b", linewidth=0.5, alpha=0.80, zorder=2)
+    if len(large):
+        large.plot(ax=ax, color="#4a0000", alpha=0.90, linewidth=0, zorder=2)
+        large.plot(ax=ax, facecolor="none", edgecolor="#4a0000", linewidth=1.2, alpha=0.95, zorder=2)
+
+
+def _fig03_draw_structure(
+    ax: Any,
+    site: SiteConfig,
+    repo_root: Path,
+    zones: gpd.GeoDataFrame,
+    deposits: gpd.GeoDataFrame,
+    tir_footprint: gpd.GeoDataFrame | None,
+    structs: gpd.GeoDataFrame | None,
+) -> tuple[bool, float]:
+    has_structure = False
+    buffer_m = site.structure_layers[0].buffer_m if site.structure_layers else 500.0
+    if structs is None and site.structure_layers:
+        target_crs = zones.crs if len(zones) else deposits.crs
+        structs = load_structure_layers(site, repo_root, target_crs)
+    if structs is None or structs.empty:
+        return has_structure, buffer_m
+    union_geom = structure_buffer_union(structs, buffer_m)
+    if union_geom is not None:
+        if tir_footprint is not None and len(tir_footprint):
+            try:
+                fp_for_clip = tir_footprint
+                if tir_footprint.crs != structs.crs:
+                    fp_for_clip = tir_footprint.to_crs(structs.crs)
+                union_geom = union_geom.intersection(fp_for_clip.union_all())
+            except Exception:
+                pass
+        if union_geom is not None and not union_geom.is_empty:
+            # Filled buffer corridor — already clipped to TIR footprint above.
+            gpd.GeoSeries([union_geom], crs=structs.crs).plot(
+                ax=ax, color="#e67e22", alpha=0.30, linewidth=0, zorder=1,
+            )
+            has_structure = True
+    # Draw individual fault/structure lines clipped to the TIR footprint so they
+    # do not extend into no-data areas outside the scene boundary.
+    if has_structure and tir_footprint is not None and len(tir_footprint):
+        try:
+            fp_for_lines = tir_footprint
+            if tir_footprint.crs != structs.crs:
+                fp_for_lines = tir_footprint.to_crs(structs.crs)
+            structs_clipped = gpd.clip(structs, fp_for_lines)
+        except Exception:
+            structs_clipped = structs
+        if len(structs_clipped):
+            structs_clipped.plot(
+                ax=ax, color="#d35400", linewidth=1.4, alpha=0.85, zorder=2,
+            )
+    elif has_structure:
+        structs.plot(ax=ax, color="#d35400", linewidth=1.4, alpha=0.85, zorder=2)
+    return has_structure, buffer_m
+
+
+def _fig03_prepare_deposits(
+    deposits: gpd.GeoDataFrame,
+) -> tuple[gpd.GeoDataFrame, gpd.GeoDataFrame, int, str, bool]:
+    outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
+    inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
+    n_outside = len(outside)
+    capped_note = ""
+    show_cap = n_outside > 500
+    if show_cap:
+        outside = outside.iloc[:500]
+        capped_note = f" (showing 500 of {n_outside})"
+    return outside, inside, n_outside, capped_note, show_cap
+
+
+def _fig03_draw_deposits(
+    ax: Any,
+    outside: gpd.GeoDataFrame,
+    inside: gpd.GeoDataFrame,
+    n_outside: int,
+) -> None:
+    ms = 10 if n_outside > 100 else 24
+    alpha = 0.80 if n_outside > 100 else 0.9
+    if len(outside):
+        # Two-pass black halo: dark outline ring makes steelblue readable on
+        # both the bright satellite and the gray hillshade panels.
+        outside.plot(ax=ax, color="black", markersize=ms + 9, alpha=0.85, zorder=3)
+        outside.plot(ax=ax, color="steelblue", markersize=ms, alpha=alpha, zorder=3)
+    if len(inside):
+        inside.plot(
+            ax=ax, color="gold", markersize=110, marker="*", zorder=4,
+            edgecolors="black", linewidths=0.7,
+        )
+
+
+def _fig03_draw_tir_footprint(
+    ax: Any,
+    site: SiteConfig,
+    zones: gpd.GeoDataFrame,
+    deposits: gpd.GeoDataFrame,
+    tir_footprint: gpd.GeoDataFrame | None,
+) -> float | None:
+    if tir_footprint is None or not len(tir_footprint):
+        return None
+    plot_crs = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
+    fp_plot = tir_footprint
+    if plot_crs is not None and fp_plot.crs != plot_crs:
+        fp_plot = fp_plot.to_crs(plot_crs)
+    fp_plot.plot(
+        ax=ax, facecolor="none", edgecolor="#1a252f",
+        linewidth=2.2, linestyle="--", alpha=0.85, zorder=5,
+    )
+    try:
+        from shapely.geometry import box as _box
+
+        fp_wgs84 = tir_footprint.to_crs("EPSG:4326").iloc[0].geometry
+        bbox_geom = _box(*site.bbox_wgs84)
+        if bbox_geom.area > 0:
+            return min(100.0, fp_wgs84.area / bbox_geom.area * 100)
+    except Exception:
+        pass
+    return None
+
+
 def save_deposit_overlay_figure(
     site: SiteConfig,
     paths: SitePaths,
@@ -447,242 +638,248 @@ def save_deposit_overlay_figure(
     n_total_deposits: "int | None" = None,
     hs_transform: "rasterio.Affine | None" = None,
     hs_shape: "tuple[int, int] | None" = None,
-) -> None:
-    """Figure 03 — spatial map of strong anomaly zones with MRDS deposit overlay."""
+    basemap_rgb: np.ndarray | None = None,
+    basemap_source: str | None = None,
+    basemap_cached: bool | None = None,
+) -> dict[str, Any]:
+    """Figure 03 — satellite context (left) and strong anomaly zones (right)."""
     import matplotlib.lines as mlines
+    import matplotlib.patches as mpatches
     import matplotlib.ticker
 
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
-    fig, ax = plt.subplots(figsize=(10, 10))
+    fig, (ax_ctx, ax_anom) = plt.subplots(
+        1, 2, figsize=(20, 10), sharex=True, sharey=True,
+        gridspec_kw={"wspace": 0.04},
+        layout="constrained",
+    )
 
-    if len(zones) > 0:
-        small = zones[zones["area_km2"] < 10]
-        large = zones[zones["area_km2"] >= 10]
-        if len(small):
-            small.plot(ax=ax, color="#922b21", alpha=0.70, linewidth=0)
-        if len(large):
-            large.plot(ax=ax, color="#4a0000", alpha=0.90, linewidth=0)
+    outside, inside, n_outside, capped_note, show_cap = _fig03_prepare_deposits(deposits)
+    has_structure, buffer_m = _fig03_draw_structure(
+        ax_anom, site, repo_root, zones, deposits, tir_footprint, structs,
+    )
+    _fig03_draw_structure(
+        ax_ctx, site, repo_root, zones, deposits, tir_footprint, structs,
+    )
 
-    # Draw structural corridor buffer fill before deposit points.
-    # Clip corridor display to TIR footprint so fault buffers don't extend
-    # into no-data areas where we have no spectral information.
-    has_structure = False
-    _buffer_m: float = 500.0
-    if site.structure_layers:
-        if structs is None:
-            target_crs = zones.crs if len(zones) else deposits.crs
-            structs = load_structure_layers(site, repo_root, target_crs)
-        _buffer_m = site.structure_layers[0].buffer_m
-        if structs is not None and not structs.empty:
-            union_geom = structure_buffer_union(structs, _buffer_m)
-            if union_geom is not None:
-                # Clip corridor to TIR footprint (same CRS as structs).
-                if tir_footprint is not None and len(tir_footprint):
-                    try:
-                        _fp_for_clip = tir_footprint
-                        if tir_footprint.crs != structs.crs:
-                            _fp_for_clip = tir_footprint.to_crs(structs.crs)
-                        union_geom = union_geom.intersection(_fp_for_clip.union_all())
-                    except Exception:
-                        pass
-                if union_geom is not None and not union_geom.is_empty:
-                    gpd.GeoSeries([union_geom], crs=structs.crs).plot(
-                        ax=ax, color="#e67e22", alpha=0.18, linewidth=0, zorder=1
-                    )
-                    has_structure = True
+    # Right panel: filled zones + outlines for legibility; outlines make edges crisp
+    # even where small zones scatter over the hillshade.
+    _fig03_draw_zones(ax_anom, zones)
+    _fig03_draw_deposits(ax_ctx, outside, inside, n_outside)
+    _fig03_draw_deposits(ax_anom, outside, inside, n_outside)
 
-    outside = deposits[~deposits["inside_zone"]] if "inside_zone" in deposits.columns else deposits
-    inside = deposits[deposits["inside_zone"]] if "inside_zone" in deposits.columns else gpd.GeoDataFrame()
+    xlim, ylim = _fig03_view_limits(hs_transform, hs_shape, zones, ax_anom)
 
-    # Dense-deposit handling: reduce marker size/alpha for large sets; cap display at 500.
-    _n_outside = len(outside)
-    _outside_capped_note = ""
-    _show_cap_annotation = _n_outside > 500
-    if _n_outside > 500:
-        outside = outside.iloc[:500]
-        _outside_capped_note = f" (showing 500 of {_n_outside})"
-    _outside_ms = 8 if _n_outside > 100 else 20
-    _outside_alpha = 0.5 if _n_outside > 100 else 0.8
+    # Darker background gives hillshade more contrast (visible in no-data swath gaps).
+    for ax in (ax_ctx, ax_anom):
+        ax.set_facecolor("#d0d0d0")
 
-    if len(outside):
-        outside.plot(ax=ax, color="steelblue", markersize=_outside_ms, alpha=_outside_alpha, zorder=3)
-    if len(inside):
-        inside.plot(ax=ax, color="gold", markersize=70, marker="*", zorder=4,
-                    edgecolor="black", linewidth=0.5)
-
-    # Compute view bounds from the hillshade grid (covers full site.bbox_wgs84)
-    # so axes limits always match the configured site area.  Fall back to
-    # zone bounds if hillshade is absent.
+    hs_extent: tuple[float, float, float, float] | None = None
     if hs_transform is not None and hs_shape is not None:
-        _r = hs_transform
-        _rc, _cc = hs_shape
-        _rx0, _rx1 = _r.c, _r.c + _r.a * _cc
-        _ry0, _ry1 = _r.f + _r.e * _rc, _r.f
-        _mx = (_rx1 - _rx0) * 0.01
-        _my = (_ry1 - _ry0) * 0.01
-        _xlim: tuple[float, float] = (_rx0 - _mx, _rx1 + _mx)
-        _ylim: tuple[float, float] = (_ry0 - _my, _ry1 + _my)
-    elif len(zones) > 0:
-        _zb = zones.total_bounds  # xmin, ymin, xmax, ymax
-        _zm = max(_zb[2] - _zb[0], _zb[3] - _zb[1]) * 0.02
-        _xlim = (_zb[0] - _zm, _zb[2] + _zm)
-        _ylim = (_zb[1] - _zm, _zb[3] + _zm)
-    else:
-        _xlim = ax.get_xlim()
-        _ylim = ax.get_ylim()
+        hs_extent = _fig03_hs_extent(hs_transform, hs_shape)
 
-    # Light neutral background — visible where ASTER doesn't cover the bbox
-    # (swath rotation gaps) and at the axes margin.  #f0f0f0 means even the
-    # darkest hillshade shadow (alpha-blended over this) stays above medium gray.
-    ax.set_facecolor("#f0f0f0")
-
-    if hillshade is not None and hs_transform is not None and hs_shape is not None:
-        rows, cols = hs_shape
-        t = hs_transform
-        _hs_extent = (t.c, t.c + t.a * cols, t.f + t.e * rows, t.f)
-        _hs_cmap = plt.cm.gray.copy()
-        _hs_cmap.set_bad(alpha=0.0)  # NaN nodata pixels → show background color
-        ax.imshow(
-            hillshade, cmap=_hs_cmap, alpha=0.35, vmin=0, vmax=1,
-            extent=_hs_extent, origin="upper", zorder=0,
+    if basemap_rgb is not None and hs_extent is not None:
+        ax_ctx.imshow(
+            basemap_rgb, extent=hs_extent, origin="upper", zorder=0, interpolation="bilinear",
+        )
+    elif hillshade is not None and hs_extent is not None:
+        hs_cmap = plt.cm.gray.copy()
+        hs_cmap.set_bad(alpha=0.0)
+        ax_ctx.imshow(
+            hillshade, cmap=hs_cmap, alpha=0.75, vmin=0, vmax=1,
+            extent=hs_extent, origin="upper", zorder=0,
         )
 
-    # TIR valid-data footprint — actual scene polygon (diagonal ASTER swath shape),
-    # not just the bounding rectangle.  Drawn as a dashed boundary in the plot CRS.
-    _tir_coverage_pct: float | None = None
-    if tir_footprint is not None and len(tir_footprint):
-        _plot_crs = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
-        _fp_plot = tir_footprint
-        if _plot_crs is not None and _fp_plot.crs != _plot_crs:
-            _fp_plot = _fp_plot.to_crs(_plot_crs)
-        _fp_plot.plot(
-            ax=ax, facecolor="none", edgecolor="#2c3e50",
-            linewidth=1.2, linestyle="--", alpha=0.7, zorder=5,
+    if hillshade is not None and hs_extent is not None:
+        hs_cmap = plt.cm.gray.copy()
+        hs_cmap.set_bad(alpha=0.0)
+        # Higher alpha (0.55) on right panel so topographic texture reads through zone fill.
+        ax_anom.imshow(
+            hillshade, cmap=hs_cmap, alpha=0.55, vmin=0, vmax=1,
+            extent=hs_extent, origin="upper", zorder=0,
         )
-        # Coverage fraction: footprint area vs site bbox area (both in WGS84 degrees,
-        # which is approximate but good enough for the annotation label).
-        try:
-            from shapely.geometry import box as _box
-            _fp_wgs84 = tir_footprint.to_crs("EPSG:4326").iloc[0].geometry
-            _bbox_geom = _box(*site.bbox_wgs84)
-            if _bbox_geom.area > 0:
-                _tir_coverage_pct = min(100.0, _fp_wgs84.area / _bbox_geom.area * 100)
-        except Exception:
-            pass
 
-    # Restore limits — hillshade imshow may have expanded the view to its own extent.
-    ax.set_xlim(_xlim)
-    ax.set_ylim(_ylim)
+    tir_coverage_pct = _fig03_draw_tir_footprint(ax_ctx, site, zones, deposits, tir_footprint)
+    _fig03_draw_tir_footprint(ax_anom, site, zones, deposits, tir_footprint)
 
-    # Format UTM tick labels as km integers for readability.
+    for ax in (ax_ctx, ax_anom):
+        ax.set_xlim(xlim)
+        ax.set_ylim(ylim)
+
     km_fmt = matplotlib.ticker.FuncFormatter(lambda x, _: f"{x / 1000:.0f}")
-    ax.xaxis.set_major_formatter(km_fmt)
-    ax.yaxis.set_major_formatter(km_fmt)
+    for ax in (ax_ctx, ax_anom):
+        ax.xaxis.set_major_formatter(km_fmt)
+        ax.yaxis.set_major_formatter(km_fmt)
 
-    _crs_label = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
-    _epsg = _crs_label.to_epsg() if _crs_label is not None else None
-    _epsg_suffix = f" (EPSG:{_epsg})" if _epsg else ""
-    ax.set_xlabel(f"Easting (km{_epsg_suffix})")
-    ax.set_ylabel("Northing (km)")
+    crs_label = zones.crs if len(zones) else (deposits.crs if len(deposits) else None)
+    epsg = crs_label.to_epsg() if crs_label is not None else None
+    epsg_suffix = f" (EPSG:{epsg})" if epsg else ""
+    for ax in (ax_ctx, ax_anom):
+        ax.set_xlabel(f"Easting (km{epsg_suffix})")
+    ax_ctx.set_ylabel("Northing (km)")
+    ax_anom.set_ylabel("Northing (km)")
 
-    import matplotlib.patches as _mpatches
-    legend_elements = [
-        mlines.Line2D([], [], color="#922b21", linewidth=6, alpha=0.7, label="Strong anomaly zone (< 10 km²)"),
-        mlines.Line2D([], [], color="#4a0000", linewidth=6, alpha=0.9, label="Strong anomaly zone (≥ 10 km²)"),
-        mlines.Line2D([], [], marker="o", color="w", markerfacecolor="steelblue",
-                      markersize=9, label=f"MRDS deposit (outside zone, n={_n_outside}{_outside_capped_note})"),
-        mlines.Line2D([], [], marker="*", color="w", markerfacecolor="gold",
-                      markeredgecolor="black", markersize=13,
-                      label=f"MRDS deposit (inside zone, n={len(inside)})"),
-    ]
-    if has_structure:
-        legend_elements.append(
-            mlines.Line2D(
-                [], [], color="#e67e22", linewidth=6, alpha=0.25,
-                label=f"Structural corridor (±{_buffer_m:.0f} m)",
-            )
-        )
-    if tir_footprint is not None and len(tir_footprint):
-        legend_elements.append(
-            _mpatches.Patch(
-                facecolor="none", edgecolor="#2c3e50", linewidth=1.2,
-                linestyle="--", alpha=0.7, label="TIR data boundary",
-            )
-        )
-    ax.legend(handles=legend_elements, loc="upper right", framealpha=0.95, fontsize=9)
+    ctx_title = "Satellite imagery"
+    if basemap_rgb is None:
+        ctx_title += " (unavailable — hillshade)"
+    ax_ctx.set_title(ctx_title, fontsize=11)
+    ax_anom.set_title("Strong alteration zones", fontsize=11)
 
-    # TIR coverage percentage — bottom-left, above structure annotation.
-    if _tir_coverage_pct is not None and _tir_coverage_pct < 99.0:
-        ax.text(
+    # Matplotlib legend fills COLUMN-MAJOR (col 0 top→bottom, then col 1, …).
+    # To achieve the desired visual grouping with ncol=3:
+    #   Visual col 0 (left):   fault trace, fault buffer
+    #   Visual col 1 (center): MRDS outside, MRDS inside
+    #   Visual col 2 (right):  TIR boundary, zone <10, zone ≥10
+    #
+    # Items must be ordered so that each column's items are contiguous:
+    #   indices 0,1,2 → col 0;  indices 3,4,5 → col 1;  indices 6,7,8 → col 2
+    #
+    # Blank spacers at the foot of cols 0 and 1 pad those columns to 3 rows so
+    # that all three zone entries stay in col 2 and no item bleeds left.
+    _blank = mlines.Line2D([], [], linewidth=0, markersize=0, label='')
+    _has_tir = tir_footprint is not None and len(tir_footprint) > 0
+
+    _fault_trace = mlines.Line2D(
+        [], [], color="#d35400", linewidth=2.0, alpha=0.85, label="Fault / structure trace"
+    )
+    _fault_buffer = mpatches.Patch(
+        facecolor="#e67e22", edgecolor="none", alpha=0.45,
+        label=f"Fault buffer (±{buffer_m:.0f} m, within TIR)"
+    )
+    _mrds_outside = mlines.Line2D(
+        [], [], marker="o", color="w", markerfacecolor="steelblue",
+        markeredgecolor="black", markeredgewidth=1.0, markersize=9,
+        label=f"MRDS deposit (outside zone, n={n_outside}{capped_note})"
+    )
+    _mrds_inside = mlines.Line2D(
+        [], [], marker="*", color="w", markerfacecolor="gold",
+        markeredgecolor="black", markersize=16,
+        label=f"MRDS deposit (inside zone, n={len(inside)})"
+    )
+    _tir_entry = mpatches.Patch(
+        facecolor="none", edgecolor="#1a252f", linewidth=2.2,
+        linestyle="--", alpha=0.85, label="TIR data boundary"
+    )
+    _zone_small = mpatches.Patch(
+        facecolor="#922b21", alpha=0.70, label="Strong anomaly zone (< 10 km²)"
+    )
+    _zone_large = mpatches.Patch(
+        facecolor="#4a0000", alpha=0.90, label="Strong anomaly zone (≥ 10 km²)"
+    )
+
+    if has_structure and _has_tir:
+        # 9 items → clean 3×3 grid
+        # Col 0: fault trace, fault buffer, blank
+        # Col 1: MRDS outside, MRDS inside, blank
+        # Col 2: TIR boundary, zone <10, zone ≥10
+        legend_elements: list[Any] = [
+            _fault_trace, _fault_buffer, _blank,
+            _mrds_outside, _mrds_inside, _blank,
+            _tir_entry, _zone_small, _zone_large,
+        ]
+    elif has_structure:
+        # No TIR entry → 6 items, 2 rows × 3 cols
+        # Col 0: fault trace, fault buffer
+        # Col 1: MRDS outside, MRDS inside
+        # Col 2: zone <10, zone ≥10
+        legend_elements = [
+            _fault_trace, _fault_buffer,
+            _mrds_outside, _mrds_inside,
+            _zone_small, _zone_large,
+        ]
+    elif _has_tir:
+        # No structure → 5 items (+ 1 blank), 2 rows × 3 cols
+        # Col 0: MRDS outside, MRDS inside
+        # Col 1: TIR boundary, zone <10
+        # Col 2: blank, zone ≥10
+        legend_elements = [
+            _mrds_outside, _mrds_inside,
+            _tir_entry, _zone_small,
+            _blank, _zone_large,
+        ]
+    else:
+        # No structure, no TIR → 4 items, 2 rows × 2 cols
+        legend_elements = [
+            _mrds_outside, _mrds_inside,
+            _zone_small, _zone_large,
+        ]
+
+    _ncol = 3 if (has_structure or _has_tir) else 2
+    # Legend sits just below the suptitle inside the figure bbox.
+    fig.legend(
+        handles=legend_elements, loc="upper center", bbox_to_anchor=(0.5, 0.995),
+        ncol=_ncol, framealpha=0.95, fontsize=8.5,
+    )
+
+    # Context annotations go on the LEFT panel so viewers reading A→B get
+    # geographic/coverage info before interpreting the anomaly zones.
+    if tir_coverage_pct is not None and tir_coverage_pct < 99.0:
+        ax_ctx.text(
             0.02, 0.14,
-            f"TIR data covers {_tir_coverage_pct:.0f}% of site bbox",
-            transform=ax.transAxes, fontsize=8, va="bottom", ha="left",
+            f"TIR data covers {tir_coverage_pct:.0f}% of site bbox",
+            transform=ax_ctx.transAxes, fontsize=8, va="bottom", ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.85, edgecolor="none"),
             zorder=10,
         )
 
-    # Deposit-cap annotation — bottom-right, prominent warning when points are subsampled.
-    if _show_cap_annotation:
-        ax.text(
+    if show_cap:
+        ax_anom.text(
             0.98, 0.03,
-            f"⚠ {_n_outside:,} deposits total\n(displaying 500)",
-            transform=ax.transAxes, fontsize=7.5, va="bottom", ha="right",
+            f"⚠ {n_outside:,} deposits total\n(displaying 500)",
+            transform=ax_anom.transAxes, fontsize=7.5, va="bottom", ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#fff3cd", alpha=0.92, edgecolor="#d4a017"),
             zorder=10,
         )
 
-    # Structure fraction annotation — placed above the scale bar to avoid overlap.
-    # y=0.09 clears the matplotlib-scalebar "lower left" widget (~0.02–0.07 height).
     if has_structure and n_on_structure is not None and n_total_deposits is not None:
-        _pct = (n_on_structure / n_total_deposits * 100) if n_total_deposits > 0 else 0.0
-        ax.text(
+        pct = (n_on_structure / n_total_deposits * 100) if n_total_deposits > 0 else 0.0
+        ax_ctx.text(
             0.02, 0.09,
-            f"{n_on_structure}/{n_total_deposits} deposits ({_pct:.0f}%) within {_buffer_m:.0f} m of structure",
-            transform=ax.transAxes,
-            fontsize=8.5,
-            va="bottom",
-            ha="left",
+            f"{n_on_structure}/{n_total_deposits} deposits ({pct:.0f}%) within {buffer_m:.0f} m of structure",
+            transform=ax_ctx.transAxes, fontsize=8.5, va="bottom", ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.85, edgecolor="none"),
             zorder=10,
         )
 
-    ax.set_title(
-        f"Strong alteration zones vs MRDS deposits\n{site.name}\n{_bbox_annotation(site)}",
-        fontsize=12,
+    fig.suptitle(
+        f"Strong alteration zones vs MRDS deposits — {site.name}\n{_bbox_annotation(site)}",
+        fontsize=12, y=1.01,
     )
 
-    # Scale bar using matplotlib-scalebar.
-    try:
-        from matplotlib_scalebar.scalebar import ScaleBar
-        ax.add_artist(ScaleBar(1, "m", length_fraction=0.2, location="lower left",
-                               box_alpha=0.7, font_properties={"size": 9}))
-    except Exception:
-        # Fallback: manual 10-km line scale bar in the lower-left corner.
-        xlim = ax.get_xlim()
-        ylim = ax.get_ylim()
-        bar_len_m = 10_000
-        bar_x0 = xlim[0] + (xlim[1] - xlim[0]) * 0.05
-        bar_y = ylim[0] + (ylim[1] - ylim[0]) * 0.04
-        ax.plot([bar_x0, bar_x0 + bar_len_m], [bar_y, bar_y],
-                color="black", linewidth=3, solid_capstyle="butt", zorder=10)
-        ax.text(bar_x0 + bar_len_m / 2, bar_y + (ylim[1] - ylim[0]) * 0.015,
-                "10 km", ha="center", va="bottom", fontsize=8, zorder=10)
-
-    # North arrow — simple text annotation in the upper-left corner.
-    ax.annotate(
-        "N\n↑",
-        xy=(0.04, 0.96),
-        xycoords="axes fraction",
-        ha="center",
-        va="top",
-        fontsize=13,
-        fontweight="bold",
+    # N arrow on left panel; scale bar on both panels.
+    ax_ctx.annotate(
+        "N\n↑", xy=(0.04, 0.96), xycoords="axes fraction",
+        ha="center", va="top", fontsize=13, fontweight="bold",
         bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.8, edgecolor="gray"),
     )
 
-    plt.tight_layout()
+    def _add_scalebar(ax: Any) -> None:
+        try:
+            from matplotlib_scalebar.scalebar import ScaleBar
+            ax.add_artist(ScaleBar(1, "m", length_fraction=0.15, location="lower left",
+                                   box_alpha=0.7, font_properties={"size": 9}))
+        except Exception:
+            xlim_bar = ax.get_xlim()
+            ylim_bar = ax.get_ylim()
+            bar_len_m = 10_000
+            bar_x0 = xlim_bar[0] + (xlim_bar[1] - xlim_bar[0]) * 0.05
+            bar_y = ylim_bar[0] + (ylim_bar[1] - ylim_bar[0]) * 0.04
+            ax.plot([bar_x0, bar_x0 + bar_len_m], [bar_y, bar_y],
+                    color="black", linewidth=3, solid_capstyle="butt", zorder=10)
+            ax.text(bar_x0 + bar_len_m / 2, bar_y + (ylim_bar[1] - ylim_bar[0]) * 0.015,
+                    "10 km", ha="center", va="bottom", fontsize=8, zorder=10)
+
+    _add_scalebar(ax_ctx)
+    _add_scalebar(ax_anom)
+
     plt.savefig(paths.figures_dir / "03_deposit_overlay.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
+
+    return {
+        "fig03_version": FIG03_VERSION,
+        "fig03_basemap_source": basemap_source,
+        "fig03_basemap_cached": basemap_cached,
+    }
 
 
 def save_structure_proximity_figure(
@@ -1521,15 +1718,12 @@ def run_site(
     """
     paths = site_paths_for(site, repo_root)
 
-    if skip_existing:
-        overlay_exists = (paths.figures_dir / "03_deposit_overlay.png").exists()
-        prov_exists = paths.site_provenance_json.exists()
-        if overlay_exists and prov_exists:
-            print(
-                f"Skipping {site.id} (outputs exist, use --force to regenerate)",
-                file=sys.stderr,
-            )
-            return pd.DataFrame()
+    if skip_existing and fig03_outputs_current(repo_root, paths):
+        print(
+            f"Skipping {site.id} (outputs exist, use --force to regenerate)",
+            file=sys.stderr,
+        )
+        return pd.DataFrame()
 
     if download:
         granule_id = download_aster(site, paths)
@@ -1671,7 +1865,22 @@ def run_site(
     )
 
     if not skip_figures and _deposits_gdf is not None:
-        save_deposit_overlay_figure(
+        basemap_rgb: np.ndarray | None = None
+        basemap_source: str | None = None
+        basemap_cached: bool | None = None
+        if hs_transform is not None and hs_shape is not None:
+            try:
+                from critical_minerals_aster.basemap import fetch_satellite_basemap_for_site
+
+                _bm = fetch_satellite_basemap_for_site(
+                    site, paths, hs_transform, hs_shape, raster_crs,
+                )
+                if _bm is not None:
+                    basemap_rgb, basemap_source, basemap_cached = _bm
+            except Exception as exc:
+                print(f"  [basemap] Skipped for {site.id}: {exc}", file=sys.stderr)
+
+        fig03_meta = save_deposit_overlay_figure(
             site, paths, zones, _deposits_gdf, repo_root,
             hillshade=hillshade,
             tir_footprint=tir_footprint,
@@ -1680,7 +1889,11 @@ def run_site(
             n_total_deposits=len(_deposits_gdf),
             hs_transform=hs_transform,
             hs_shape=hs_shape,
+            basemap_rgb=basemap_rgb,
+            basemap_source=basemap_source,
+            basemap_cached=basemap_cached,
         )
+        provenance_extra.update(fig03_meta)
         save_commodity_correlation_figure(site, paths, _deposits_gdf)
         # Structure proximity strip chart — only when structure annotation exists.
         if _annotated_gdf is not None and "commodity_group" in _deposits_gdf.columns:
