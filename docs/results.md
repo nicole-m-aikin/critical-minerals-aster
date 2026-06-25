@@ -158,6 +158,37 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 
 ---
 
+## Discovery bias analysis
+
+The key concern with MRDS-based hit rates is circularity: MRDS records skew toward deposits discovered because they crop out or have visible surface alteration — the same signal ASTER detects. To test whether the ASTER TIR signal carries predictive power beyond this circularity, deposits at the 12 significant sites were split by discovery era using the MRDS `disc_yr` field (fallback: `yr_fst_prd`).
+
+**Coverage caveat:** Only 239 of 1,857 critical-mineral deposits at significant sites have a discovery or first-production date (13%). Dated deposits skew toward historic producers. Results are suggestive, not definitive.
+
+### Pooled result (204 pre-1950, 35 post-1950 dated deposits)
+
+| Cohort | n | Hits | Observed hit rate | Null hit rate | Enrichment | Pooled p |
+|---|---|---|---|---|---|---|
+| Pre-1950 | 204 | 52 | 25.5% | 10.5% | 2.4× | < 0.001 |
+| Post-1950 | 35 | 7 | 20.0% | 10.9% | 1.8× | 0.044 |
+
+**Pre-1950 enrichment (2.4×, p < 0.001)** confirms that historically visible alteration is a major component of the signal — as expected for deposits found by surface prospecting. **Post-1950 enrichment is also above the null (1.8×, p = 0.044)**, meaning deposits discovered after modern geophysics and geochemistry also cluster in ASTER anomaly zones above chance. This is partial evidence that the spectral signal captures mineralization-favorable host-rock geology, not purely the outcropping alteration that led to historical discovery.
+
+### Per-site breakdown (significant sites with dated deposits)
+
+| Site | Pre-1950 n | Pre-1950 hit rate | Pre sig? | Post-1950 n | Post-1950 hit rate | Post sig? |
+|---|---|---|---|---|---|---|
+| Bisbee, AZ | 12 | 50.0% | Yes (p=0.001) | 4 | **50.0%** | No (p=0.069, underpowered) |
+| Eureka, NV | 54 | 40.7% | Yes (p<0.001) | 6 | 16.7% | No (p=0.485) |
+| Steamboat Springs, NV | 53 | 20.8% | Yes (p=0.013) | 2 | 0.0% | No (n too small) |
+| Lordsburg, NM | 26 | 15.4% | No (p=0.312) | 5 | 40.0% | No (p=0.095, underpowered) |
+| Others (8 sites) | ≤20 each | Variable | No | ≤7 each | Variable | No |
+
+Bisbee is the most informative single-site result: identical 50% hit rates pre and post-1950 suggest the spectral signal locates the same alteration system regardless of when individual deposits were found — the best available evidence against pure circularity, though the post-1950 cohort (n=4) is too small for a statistically conclusive result.
+
+**Reproducible:** `conda run -n aster-minerals python scripts/discovery_bias_analysis.py`
+
+---
+
 ## Interpretation limits
 
 - **TIR-only:** SWIR clay/argillic mapping (B04–B09) is not available in LP DAAC v004 for these areas. The method maps silica, carbonate, and mafic mineralogy but misses argillic/phyllic alteration halos detectable with SWIR.
@@ -166,7 +197,7 @@ ASTER TIR granules are ~60 × 60 km swaths at an oblique angle and do not always
 - **Significance null model:** Binomial test assumes uniform deposit distribution within the footprint. Spatial clustering of real deposits makes p-values conservative — actual null distributions are not uniform.
 - **Vegetation cover:** Forest cover suppresses TIR alteration signal. Ducktown (VMS, Tennessee) anti-correlates where Bisbee (same deposit type, arid Arizona) is a strong positive. The method is primarily applicable to arid/semi-arid terrain.
 - **Anti-correlations are informative:** p ≈ 1 means the method is physically incapable of detecting the dominant deposit type at that site under current surface conditions, not that the zones are wrong.
-- **Discovery bias:** MRDS records are biased toward surface-exposed occurrences — deposits found historically because they outcrop or have visible alteration. ASTER TIR detects the same exposed, altered rock. Hit rates may therefore partially reflect this circularity rather than discriminating power in a blind exploration context. The deposit-type specificity of significant results (skarn/carbonate detectable; sediment-hosted/placer not) and the anti-correlations at well-known but buried or vegetation-covered systems partially mitigate this concern, but within a significant site the specific deposits landing in zones are likely the most surface-exposed ones — not a random sample of the district.
+- **Discovery bias:** MRDS records are biased toward surface-exposed occurrences found historically because they outcrop or have visible alteration. ASTER TIR detects the same exposed, altered rock. The deposit-era stratification above shows that post-1950 deposits (found after modern methods) also cluster in ASTER zones at 1.8× the null rate (pooled p = 0.044), providing weak evidence against pure circularity — but the dated subset is only 13% of records and the per-site post-1950 n is too small for strong inference. See [Discovery bias analysis](#discovery-bias-analysis) above.
 
 ---
 
