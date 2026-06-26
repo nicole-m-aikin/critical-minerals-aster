@@ -24,17 +24,20 @@ def test_list_site_ids():
     assert "silver_peak" in ids
 
 
-def test_mcdermitt_flat_paths():
+def test_mcdermitt_nested_paths():
     site = load_site_config(REPO / "sites" / "mcdermitt.yaml")
+    assert site.layout == "nested", "mcdermitt should use nested layout"
+    assert site.granule_id is not None, "mcdermitt granule should be pinned"
     paths = site_paths_for(site, REPO)
-    assert paths.aster_dir == REPO / "data" / "aster"
-    assert paths.vectors_dir == REPO / "data" / "vectors"
-    assert paths.figures_dir == REPO / "figures"
+    assert paths.aster_dir == REPO / "data" / "sites" / "mcdermitt" / "aster"
+    assert paths.vectors_dir == REPO / "data" / "sites" / "mcdermitt" / "vectors"
+    assert paths.figures_dir == REPO / "figures" / "sites" / "mcdermitt"
 
 
 def test_silver_peak_nested_paths():
     site = load_site_config(REPO / "sites" / "silver_peak.yaml")
-    assert site.granule_id is None
+    assert site.layout == "nested"
+    assert site.granule_id is not None, "silver_peak granule should be pinned"
     paths = site_paths_for(site, REPO)
     assert paths.aster_dir == REPO / "data" / "sites" / "silver_peak" / "aster"
     assert paths.figures_dir == REPO / "figures" / "sites" / "silver_peak"

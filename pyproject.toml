@@ -15,11 +15,17 @@ dependencies = [
   "shapely>=2.0",
   "pandas>=2.0",
   "pyyaml>=6.0",
+  "scipy>=1.11",
+  "matplotlib>=3.7",
+  "matplotlib-scalebar>=0.8",
+  "contextily>=1.4",
+  "duckdb>=0.9",
+  "pyarrow>=14.0",
+  "earthaccess>=0.8",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
-parquet = ["pyarrow>=14.0"]
 
 [project.scripts]
 critical-minerals-aster = "critical_minerals_aster.__main__:cli"

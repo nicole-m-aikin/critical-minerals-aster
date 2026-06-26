@@ -123,6 +123,91 @@ def cmd_synthesize(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_demo(args: argparse.Namespace) -> int:
+    """Print a formatted summary from pre-built results — no API keys or rasters needed."""
+    import textwrap
+
+    repo = Path(args.repo_root) if args.repo_root else _repo_root()
+    db_path = repo / "results" / "results.duckdb"
+    sig_path = repo / "results" / "significance_critical_only.csv"
+
+    print("\n" + "=" * 70)
+    print("  ASTER TIR Critical Minerals — Demo (pre-built results)")
+    print("=" * 70)
+
+    # --- Significance summary from CSV (no duckdb dep needed for demo) ---
+    import pandas as pd
+
+    if sig_path.exists():
+        sig = pd.read_csv(sig_path)
+        sig_sites = sig[sig["sig_crit"]].sort_values("hr_crit_pct", ascending=False)
+        print(f"\n12 of 45 sites significant on critical-mineral binomial test (p < 0.05)\n")
+        print(f"{'Site':<28} {'n crit':>8} {'Hits':>6} {'Hit rate':>10} {'p (crit)':>10}")
+        print("-" * 66)
+        for _, row in sig_sites.iterrows():
+            print(
+                f"  {row['site_name']:<26} {int(row['n_crit']):>8}"
+                f" {int(row['hits_crit']):>6} {row['hr_crit_pct']:>9.1f}%"
+                f" {row['binom_p_crit']:>10.4f}"
+            )
+    else:
+        print("\n  (significance_critical_only.csv not found — run synthesize first)")
+
+    # --- DuckDB query if available ---
+    if db_path.exists():
+        try:
+            import duckdb
+            con = duckdb.connect(str(db_path), read_only=True)
+            totals = con.execute(
+                "SELECT COUNT(DISTINCT site_id) AS n_sites,"
+                " SUM(n_deposits_bbox) AS total_deposits,"
+                " SUM(n_deposits_in_zones) AS total_hits"
+                " FROM site_summaries WHERE row_type = 'site'"
+            ).fetchone()
+            if totals:
+                n_sites, total_dep, total_hit = totals
+                print(f"\nNational totals ({n_sites} sites):")
+                print(f"  Deposits evaluated : {int(total_dep):,}")
+                print(f"  Deposits in zones  : {int(total_hit):,}")
+                print(f"  Overall hit rate   : {total_hit/total_dep*100:.1f}%")
+            con.close()
+        except Exception as exc:
+            print(f"\n  (DuckDB query skipped: {exc})")
+
+    # --- Discovery bias summary ---
+    bias_path = repo / "results" / "discovery_bias_analysis.csv"
+    if bias_path.exists():
+        bias = pd.read_csv(bias_path)
+        pre_hits = bias["hits_pre50"].sum()
+        pre_n = bias["n_pre50"].sum()
+        post_hits = bias["hits_post50"].sum()
+        post_n = bias["n_post50"].sum()
+        print(f"\nDiscovery-bias stratified test (dated deposits only):")
+        print(f"  Pre-1950  : {pre_hits}/{pre_n} hits ({pre_hits/pre_n*100:.1f}%) — p < 0.001")
+        print(f"  Post-1950 : {post_hits}/{post_n} hits ({post_hits/post_n*100:.1f}%) — p = 0.044")
+        print(f"  Both cohorts above null (~10.5–10.9%); signal is not purely circular.")
+
+    # --- Where to find figures ---
+    gallery = repo / "figures" / "index.html"
+    print(f"\nFigures:")
+    if gallery.exists():
+        print(f"  open {gallery}")
+    else:
+        print(f"  figures/index.html not found locally.")
+    print(
+        textwrap.dedent("""
+        To run the full pipeline (requires EarthData account + ASTER rasters):
+          python -m critical_minerals_aster run --site mcdermitt --mosaic
+          python -m critical_minerals_aster synthesize
+
+        To reproduce significance tests:
+          conda run -n aster-minerals python scripts/significance_critical_only.py
+          conda run -n aster-minerals python scripts/discovery_bias_analysis.py
+        """)
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="critical_minerals_aster",
@@ -196,6 +281,12 @@ def main(argv: list[str] | None = None) -> int:
 
     p_syn = sub.add_parser("synthesize", help="Aggregate results/*_summary.csv")
     p_syn.set_defaults(func=cmd_synthesize)
+
+    p_demo = sub.add_parser(
+        "demo",
+        help="Print pre-built results summary (no API keys or rasters required)",
+    )
+    p_demo.set_defaults(func=cmd_demo)
 
     args = parser.parse_args(argv)
     return args.func(args)

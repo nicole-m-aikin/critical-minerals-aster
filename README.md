@@ -1,8 +1,20 @@
 # critical-minerals-aster
 
-Spectral alteration mapping across 45 US critical mineral sites using ASTER thermal infrared (TIR) band ratio analysis. The pipeline identifies surface alteration zones, validates them against USGS MRDS mineral deposit data, and runs binomial significance tests to determine where — and for which deposit types — the method produces signal above chance.
+[![CI](https://github.com/nicole-m-aikin/critical-minerals-aster/actions/workflows/ci.yml/badge.svg)](https://github.com/nicole-m-aikin/critical-minerals-aster/actions/workflows/ci.yml)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
+![45 sites](https://img.shields.io/badge/sites-45-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**Results and figures:** [`docs/results.md`](docs/results.md) · [`figures/index.html`](figures/index.html)
+Systematic TIR alteration screening across **45 US critical-mineral districts**, validated against 30,000+ USGS MRDS deposit records with explicit statistical uncertainty. The pipeline produces deposit-type-aware prospectivity zones, binomial significance tests with confidence intervals, and a discovery-bias stratification that distinguishes spectral signal from historical circularity.
+
+**Zero-credential demo** (no EarthData account or rasters required):
+```bash
+git clone https://github.com/nicole-m-aikin/critical-minerals-aster.git
+cd critical-minerals-aster && pip install -e .
+python -m critical_minerals_aster demo
+```
+
+**Full results and figures:** [`docs/results.md`](docs/results.md) · [`figures/index.html`](figures/index.html)
 
 ---
 
