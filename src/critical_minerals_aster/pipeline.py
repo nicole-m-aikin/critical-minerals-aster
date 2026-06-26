@@ -22,6 +22,7 @@ from critical_minerals_aster.classification import (
 )
 from critical_minerals_aster.config import BBox, SiteConfig, search_bbox
 from critical_minerals_aster.metrics import compute_site_summary, write_site_summary
+from critical_minerals_aster.significance import add_uncertainty_columns
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.spectral import (
     alteration_ratios,
@@ -1902,6 +1903,13 @@ def run_site(
             _prox_df["commodity_group"] = _deposits_gdf["commodity_group"]
             _prox_df["inside_zone"] = _deposits_gdf.get("inside_zone", False)
             save_structure_proximity_figure(site, paths, _prox_df)
+
+    # Annotate every summary row with Wilson CIs and binomial p-value against
+    # the zone-coverage null.  Uses the TIR footprint polygon as denominator
+    # (same as significance_critical_only.py) so p_cover is consistent.
+    summary = add_uncertainty_columns(
+        summary, zones, tir_footprint, raster_bbox
+    )
 
     write_site_summary(summary, paths.site_summary_csv)
     write_provenance(paths, granule_id, provenance_extra)
