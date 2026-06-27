@@ -214,3 +214,85 @@ def add_uncertainty_columns(
     out["hit_rate_ci_high"] = ci_highs
     out["p_binomial"] = p_vals
     return out
+
+
+# ---------------------------------------------------------------------------
+# MRDS location uncertainty — buffer sensitivity
+# ---------------------------------------------------------------------------
+
+
+def buffer_sensitivity(
+    deposits: gpd.GeoDataFrame,
+    zones: gpd.GeoDataFrame,
+    radii_m: tuple[int, ...] = (0, 250, 500, 1000),
+) -> pd.DataFrame:
+    """Test hit-rate sensitivity to MRDS coordinate uncertainty.
+
+    MRDS deposit coordinates are point estimates georeferenced from historical
+    reports; accuracy varies from tens of metres to >1 km.  This function
+    expands a circular buffer around each deposit point at increasing radii
+    and asks: "does the zone polygon come within *radius* metres of this
+    deposit?"
+
+    At radius = 0 the result equals the standard point-in-polygon hit rate.
+    If the hit rate increases sharply at 250–500 m, zones are spatially offset
+    from deposit centers — either because ASTER detects the alteration *halo*
+    (which peaks away from the ore body) or because MRDS coordinates are
+    systematically imprecise.
+
+    Parameters
+    ----------
+    deposits :
+        GeoDataFrame of deposit points in a *projected* CRS (metres).
+    zones :
+        GeoDataFrame of strong-anomaly zone polygons in the same CRS.
+    radii_m :
+        Buffer radii in metres.  0 uses point-in-polygon; >0 buffers
+        the point and tests polygon intersection.
+
+    Returns
+    -------
+    DataFrame with columns:
+        radius_m, n_deposits, n_hits, hit_rate_pct,
+        hit_rate_ci_low, hit_rate_ci_high, delta_pct
+    where *delta_pct* = hit_rate_pct − hit_rate at radius = 0.
+    """
+    if deposits.crs is None or deposits.crs.is_geographic:
+        raise ValueError("deposits must be in a projected CRS (metres) for buffer_sensitivity")
+    if zones.crs != deposits.crs:
+        zones = zones.to_crs(deposits.crs)
+
+    records = []
+    baseline_hr = None
+
+    for r in radii_m:
+        if r == 0:
+            geoms = deposits.geometry
+            predicate = "within"
+        else:
+            geoms = deposits.geometry.buffer(r)
+            predicate = "intersects"
+
+        buffered = deposits.copy()
+        buffered["geometry"] = geoms
+        joined = gpd.sjoin(buffered, zones, how="left", predicate=predicate)
+        n = len(deposits)
+        hits = int(joined["index_right"].notna().groupby(level=0).any().sum())
+        hr = hits / n * 100 if n else 0.0
+        lo, hi = wilson_ci(hits, n)
+
+        if baseline_hr is None:
+            baseline_hr = hr
+        delta = round(hr - baseline_hr, 1)
+
+        records.append({
+            "radius_m": r,
+            "n_deposits": n,
+            "n_hits": hits,
+            "hit_rate_pct": round(hr, 1),
+            "hit_rate_ci_low": round(lo * 100, 1),
+            "hit_rate_ci_high": round(hi * 100, 1),
+            "delta_pct": delta,
+        })
+
+    return pd.DataFrame(records)

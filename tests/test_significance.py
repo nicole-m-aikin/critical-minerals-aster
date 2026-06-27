@@ -1,4 +1,4 @@
-"""Tests for significance.py — Wilson CI and uncertainty annotation."""
+"""Tests for significance.py — Wilson CI, uncertainty annotation, buffer sensitivity."""
 
 import sys
 from pathlib import Path
@@ -10,7 +10,11 @@ import pytest
 SRC = Path(__file__).resolve().parents[1] / "src"
 sys.path.insert(0, str(SRC))
 
-from critical_minerals_aster.significance import wilson_ci, add_uncertainty_columns  # noqa: E402
+from critical_minerals_aster.significance import (  # noqa: E402
+    wilson_ci,
+    add_uncertainty_columns,
+    buffer_sensitivity,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -152,3 +156,66 @@ def test_add_uncertainty_columns_zero_deposits():
 
     result = add_uncertainty_columns(summary, zones, footprint, bbox)
     assert result.iloc[0]["p_binomial"] == 1.0
+
+
+# ---------------------------------------------------------------------------
+# buffer_sensitivity
+# ---------------------------------------------------------------------------
+
+
+def _make_point_deposits_and_zones():
+    """Deposits just outside a zone at radius 0; inside at radius >= 300 m."""
+    import geopandas as gpd
+    from shapely.geometry import Point, box as shapely_box
+
+    # Zone: square from x=0–100, y=0–100 in EPSG:32611
+    zones = gpd.GeoDataFrame(
+        {"area_km2": [0.01]},
+        geometry=[shapely_box(0, 0, 100, 100)],
+        crs="EPSG:32611",
+    )
+    # 4 deposits: 2 clearly inside (50,50 and 20,20), 2 just outside (at x=200,50 — 100m gap)
+    deposits = gpd.GeoDataFrame(
+        {"commod1": ["Gold"] * 4},
+        geometry=[Point(50, 50), Point(20, 20), Point(200, 50), Point(200, 80)],
+        crs="EPSG:32611",
+    )
+    return deposits, zones
+
+
+def test_buffer_sensitivity_returns_correct_columns():
+    deposits, zones = _make_point_deposits_and_zones()
+    result = buffer_sensitivity(deposits, zones, radii_m=(0, 500))
+    for col in ["radius_m", "n_deposits", "n_hits", "hit_rate_pct",
+                "hit_rate_ci_low", "hit_rate_ci_high", "delta_pct"]:
+        assert col in result.columns
+
+
+def test_buffer_sensitivity_hits_increase_with_radius():
+    """Points just outside zone at r=0 should become hits at larger radius."""
+    deposits, zones = _make_point_deposits_and_zones()
+    result = buffer_sensitivity(deposits, zones, radii_m=(0, 500))
+    hits_0 = result.loc[result["radius_m"] == 0, "n_hits"].iloc[0]
+    hits_500 = result.loc[result["radius_m"] == 500, "n_hits"].iloc[0]
+    assert hits_500 >= hits_0
+
+
+def test_buffer_sensitivity_baseline_delta_zero():
+    """Delta at radius=0 is always 0 (it's the baseline)."""
+    deposits, zones = _make_point_deposits_and_zones()
+    result = buffer_sensitivity(deposits, zones, radii_m=(0, 250, 500))
+    assert result.loc[result["radius_m"] == 0, "delta_pct"].iloc[0] == 0.0
+
+
+def test_buffer_sensitivity_geographic_crs_raises():
+    """Geographic CRS (degrees) should raise ValueError — buffer is meaningless in degrees."""
+    import geopandas as gpd
+    from shapely.geometry import Point, box as shapely_box
+
+    zones = gpd.GeoDataFrame(geometry=[shapely_box(0, 0, 1, 1)], crs="EPSG:4326")
+    deposits = gpd.GeoDataFrame(geometry=[Point(0.5, 0.5)], crs="EPSG:4326")
+    try:
+        buffer_sensitivity(deposits, zones, radii_m=(0, 500))
+        assert False, "Should have raised ValueError"
+    except ValueError:
+        pass
