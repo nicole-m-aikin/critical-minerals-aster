@@ -1,0 +1,20 @@
+# Tilly Foster, NY -- Skarn/Carbonate Replacement
+# Magnesian (dolomite-replacement) Fe skarn - magnetite with serpentine, chondrodite, brucite,
+# clinochlore - in the forested Hudson Highlands, humid continental, thick vegetation and
+# glacial cover. Control.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: tilly_foster_ny
+name: "Tilly Foster, NY"
+bbox_wgs84: [-73.85, 41.18, -73.39, 41.63]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

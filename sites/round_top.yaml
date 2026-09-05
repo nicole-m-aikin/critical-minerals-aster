@@ -1,0 +1,19 @@
+# Round Top Mountain, TX -- Alkaline/Carbonatite
+# Eocene peralkaline rhyolite laccolith (~2 km across) hosting disseminated Y-fluorite HREE
+# mineralization plus Be-Li-F; well exposed above the Diablo Plateau.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: at most weak enrichment; alkaline/carbonatite alteration footprints are small relative to a
+# scene and only patchily TIR-expressive.
+id: round_top
+name: "Round Top Mountain, TX"
+bbox_wgs84: [-105.699, 31.052, -105.249, 31.502]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

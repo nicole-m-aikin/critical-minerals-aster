@@ -1,0 +1,21 @@
+# Summitville, CO -- Epithermal
+# Textbook volcanic-dome-hosted high-sulfidation Au; concentrically zoned vuggy silica ->
+# quartz-alunite -> quartz-kaolinite -> argillic -> propylitic alteration fully exposed in the
+# South Mountain dome. Exposed-cap test of the Phase 6 below-chance epithermal result.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: modest strong-zone enrichment expected (exposed alteration present); tests whether the
+# category's aggregate below-chance / neutral result is driven by buried- or eroded-cap sites
+# in the original sample.
+id: summitville
+name: "Summitville, CO"
+bbox_wgs84: [-106.823, 37.211, -106.373, 37.661]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

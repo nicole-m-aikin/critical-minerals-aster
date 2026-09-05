@@ -1,0 +1,19 @@
+# Lisbon Valley, UT -- Uranium/Energy
+# Utah's largest U district; ore in the basal Moss Back Member of the Triassic Chinle Fm along
+# the SW flank of the Lisbon Valley salt anticline.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: lisbon_valley
+name: "Lisbon Valley, UT"
+bbox_wgs84: [-109.51, 38.04, -109.05, 38.5]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

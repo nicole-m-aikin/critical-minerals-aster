@@ -1,0 +1,18 @@
+# Cerro Gordo, CA — Ag-Pb carbonate replacement (Inyo Mountains, Inyo County)
+# Close geological and climatic analog to Darwin (already in the 45-site survey, ~50 km
+# south) -- same Inyo Mountains carbonate-replacement Ag-Pb mineralization style, same
+# hyper-arid Basin and Range setting. Added to strengthen the Darwin/Cerro Gordo regional
+# pairing within the skarn/carbonate-replacement category.
+id: cerro_gordo
+name: "Cerro Gordo, CA"
+bbox_wgs84: [-118.00, 36.49, -117.50, 36.93]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

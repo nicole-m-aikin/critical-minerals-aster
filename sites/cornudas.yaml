@@ -1,0 +1,19 @@
+# Cornudas Mountains, NM -- Alkaline/Carbonatite
+# Tertiary nepheline-syenite / phonolite laccolith-and-dike cluster (Wind Mountain) with
+# REE-Nb-Zr (+/- Be-Li) in the basal syenite and alkaline dikes.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: at most weak enrichment; alkaline/carbonatite alteration footprints are small relative to a
+# scene and only patchily TIR-expressive.
+id: cornudas
+name: "Cornudas Mountains, NM"
+bbox_wgs84: [-105.745, 31.795, -105.295, 32.245]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

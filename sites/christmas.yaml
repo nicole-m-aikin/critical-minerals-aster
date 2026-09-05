@@ -1,0 +1,17 @@
+# Christmas, AZ — classic Cu skarn (Dripping Spring Mountains, Gila County)
+# Textbook limestone-replacement Cu skarn (garnet-pyroxene calc-silicate alteration in
+# Paleozoic carbonate, Laramide stock intrusion) — same deposit-genesis family as Bisbee,
+# different range and structural setting. Arid central Arizona.
+id: christmas
+name: "Christmas, AZ"
+bbox_wgs84: [-110.90, 33.58, -110.40, 34.02]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

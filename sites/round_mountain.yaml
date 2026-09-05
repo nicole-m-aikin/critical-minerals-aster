@@ -1,0 +1,20 @@
+# Round Mountain, NV -- Epithermal
+# Giant low-sulfidation quartz-adularia hot-springs Au deposit in Round Mountain Tuff;
+# propylitic-to-advanced-argillic alteration halo well exposed in and around the open pit.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: modest strong-zone enrichment expected (exposed alteration present); tests whether the
+# category's aggregate below-chance / neutral result is driven by buried- or eroded-cap sites
+# in the original sample.
+id: round_mountain
+name: "Round Mountain, NV"
+bbox_wgs84: [-117.295, 38.485, -116.845, 38.935]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

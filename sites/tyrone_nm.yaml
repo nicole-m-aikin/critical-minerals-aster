@@ -1,0 +1,20 @@
+# Tyrone, NM -- Porphyry Cu-Mo-Au
+# Laramide porphyry Cu with a well-developed supergene chalcocite blanket SW of Silver City; a
+# separate system from Santa Rita/Chino and from hanover_fierro (~25 km NE).
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: modest strong-zone enrichment expected (exposed alteration present); tests whether the
+# category's aggregate below-chance / neutral result is driven by buried- or eroded-cap sites
+# in the original sample.
+id: tyrone_nm
+name: "Tyrone, NM"
+bbox_wgs84: [-108.58, 32.44, -108.12, 32.89]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

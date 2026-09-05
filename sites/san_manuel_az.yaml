@@ -1,0 +1,21 @@
+# San Manuel-Kalamazoo, AZ -- Porphyry Cu-Mo-Au
+# Textbook porphyry Cu-Mo in Ruin Granite, a single orebody tilted and split by mid-Tertiary
+# normal faulting into the San Manuel and blind Kalamazoo halves; classic alteration/metal
+# zoning studies.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: modest strong-zone enrichment expected (exposed alteration present); tests whether the
+# category's aggregate below-chance / neutral result is driven by buried- or eroded-cap sites
+# in the original sample.
+id: san_manuel_az
+name: "San Manuel-Kalamazoo, AZ"
+bbox_wgs84: [-110.86, 32.38, -110.4, 32.83]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

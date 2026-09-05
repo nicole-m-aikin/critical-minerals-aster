@@ -1,0 +1,697 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.5482768321936,
+            41.676551320226096
+          ],
+          [
+            -115.54921516742363,
+            41.67349971725259
+          ],
+          [
+            -115.54990961364724,
+            41.671359760795475
+          ],
+          [
+            -115.55015349277217,
+            41.66976146412963
+          ],
+          [
+            -115.55029071402507,
+            41.66925758573544
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54319565012952,
+            41.687766098196114
+          ],
+          [
+            -115.54405010157663,
+            41.68540503525696
+          ],
+          [
+            -115.54512567063598,
+            41.68294452830855
+          ],
+          [
+            -115.5457512268571,
+            41.68085012912512
+          ],
+          [
+            -115.54629289839704,
+            41.67946571223422
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54201288241238,
+            41.69251154927573
+          ],
+          [
+            -115.54224954087903,
+            41.69106991572577
+          ],
+          [
+            -115.54255453329101,
+            41.68947161681494
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.54121182682574,
+            41.699805270873014
+          ],
+          [
+            -115.54150181377923,
+            41.69777198504248
+          ],
+          [
+            -115.54164679378127,
+            41.69557481477443
+          ],
+          [
+            -115.54182233985915,
+            41.69431595268962
+          ],
+          [
+            -115.54183733363955,
+            41.693743744201875
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault east of Haystack Mountain",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.50172765501829,
+            41.67480840833121
+          ],
+          [
+            -115.50154486133272,
+            41.67397676319326
+          ],
+          [
+            -115.50122428674379,
+            41.673492332976245
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.50053757591304,
+            41.67212681776611
+          ],
+          [
+            -115.4995686305897,
+            41.67040631304691
+          ],
+          [
+            -115.49855357564115,
+            41.66894135875689
+          ],
+          [
+            -115.49739406530671,
+            41.66717919011674
+          ],
+          [
+            -115.49658513059673,
+            41.665924228332194
+          ],
+          [
+            -115.49601287591297,
+            41.664810371076854
+          ],
+          [
+            -115.4956850743776,
+            41.66381484271699
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49487613966762,
+            41.66253710375395
+          ],
+          [
+            -115.49467778536466,
+            41.66145713173567
+          ],
+          [
+            -115.49499055628874,
+            41.65970272867189
+          ],
+          [
+            -115.4954099985595,
+            41.65819609524268
+          ],
+          [
+            -115.49583722024063,
+            41.65669668189202
+          ],
+          [
+            -115.49614999026636,
+            41.65491172426105
+          ],
+          [
+            -115.49608163655806,
+            41.65344675973495
+          ],
+          [
+            -115.49592161606326,
+            41.65208457279882
+          ],
+          [
+            -115.49576882431153,
+            41.65135237131366
+          ],
+          [
+            -115.49580714644154,
+            41.650299616902075
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.49544044605773,
+            41.648594661797276
+          ],
+          [
+            -115.49543320922982,
+            41.64717525080252
+          ],
+          [
+            -115.49521929520783,
+            41.64568028994327
+          ],
+          [
+            -115.49503593378697,
+            41.643982555945236
+          ],
+          [
+            -115.49489147301122,
+            41.64299480431491
+          ],
+          [
+            -115.49472312243874,
+            41.6418653879839
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed fault zone in southwestern Jarbridge Mountains",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.20346762199623,
+            41.739598884089595
+          ],
+          [
+            -115.20491768791776,
+            41.73793556719858
+          ],
+          [
+            -115.20600106782851,
+            41.736245584746364
+          ],
+          [
+            -115.20719111818765,
+            41.73413616567803
+          ],
+          [
+            -115.20922065226468,
+            41.73113786686235
+          ],
+          [
+            -115.2113418576198,
+            41.72823123104902
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.26410146744325,
+            41.70395838077933
+          ],
+          [
+            -115.26495593955163,
+            41.70332894231282
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.25895130105357,
+            41.70993553928287
+          ],
+          [
+            -115.26008800316296,
+            41.70826111520672
+          ],
+          [
+            -115.26182750267576,
+            41.70626613676423
+          ],
+          [
+            -115.26329255159789,
+            41.704946148327096
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.25584621139194,
+            41.71529157611573
+          ],
+          [
+            -115.25654012042307,
+            41.71395659529158
+          ],
+          [
+            -115.25747125655441,
+            41.71223217493592
+          ],
+          [
+            -115.25800516126036,
+            41.71130885524238
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.2556321707075,
+            41.691335378694674
+          ],
+          [
+            -115.25519714266655,
+            41.68917264829716
+          ],
+          [
+            -115.25473211269174,
+            41.687238803201744
+          ],
+          [
+            -115.25383150670365,
+            41.68453052916384
+          ],
+          [
+            -115.25335092239968,
+            41.682939454334445
+          ],
+          [
+            -115.25289311757469,
+            41.6814861531823
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.25247389000127,
+            41.721036497300624
+          ],
+          [
+            -115.2533816923931,
+            41.71917874710124
+          ],
+          [
+            -115.25416782875952,
+            41.71802653878661
+          ],
+          [
+            -115.25495340637377,
+            41.71671433475303
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.22907333470374,
+            41.7318815326838
+          ],
+          [
+            -115.23057617934317,
+            41.730332657782846
+          ],
+          [
+            -115.23192679637282,
+            41.72891766974675
+          ],
+          [
+            -115.23384188508265,
+            41.72702157530383
+          ],
+          [
+            -115.23544418041054,
+            41.72538492307018
+          ],
+          [
+            -115.2366270074165,
+            41.72362272196685
+          ],
+          [
+            -115.23768705538434,
+            41.72231829180739
+          ],
+          [
+            -115.23874765761278,
+            41.72110496976268
+          ],
+          [
+            -115.24007549336683,
+            41.719533321241556
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.23367369710527,
+            41.653231312318304
+          ],
+          [
+            -115.23430705160138,
+            41.651251899125235
+          ],
+          [
+            -115.23473428585893,
+            41.6498213671823
+          ],
+          [
+            -115.23526819056491,
+            41.64811250478496
+          ],
+          [
+            -115.23571098633813,
+            41.64713974277375
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.23165196669312,
+            41.659788983092504
+          ],
+          [
+            -115.23225476319823,
+            41.65785123478001
+          ],
+          [
+            -115.232620885067,
+            41.65641681633128
+          ],
+          [
+            -115.23329979941938,
+            41.65483017303034
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.22870677984703,
+            41.65199193217012
+          ],
+          [
+            -115.22955347793493,
+            41.65004251675399
+          ],
+          [
+            -115.23040017692111,
+            41.64820365677589
+          ],
+          [
+            -115.23152966555877,
+            41.6460297997359
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.21897175957089,
+            41.74175034474621
+          ],
+          [
+            -115.22052016316826,
+            41.73995702883605
+          ],
+          [
+            -115.22209189511521,
+            41.73751594508114
+          ],
+          [
+            -115.22309138585315,
+            41.7360242963008
+          ],
+          [
+            -115.22349584691995,
+            41.735417637176425
+          ],
+          [
+            -115.22464812132476,
+            41.73418209271862
+          ],
+          [
+            -115.2254570470516,
+            41.733308211697214
+          ],
+          [
+            -115.22677655093142,
+            41.731801557849785
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.20567281713548,
+            41.76096076419921
+          ],
+          [
+            -115.20801514908601,
+            41.75790132775951
+          ],
+          [
+            -115.20926631902046,
+            41.7557768960547
+          ],
+          [
+            -115.21111307378493,
+            41.75355245818602
+          ],
+          [
+            -115.21233368662666,
+            41.751469691685706
+          ],
+          [
+            -115.21311927591904,
+            41.74953970818748
+          ],
+          [
+            -115.21379096961317,
+            41.74811695126821
+          ],
+          [
+            -115.2145004428549,
+            41.746594746964824
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Oneil Basin fault zone",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    }
+  ]
+}

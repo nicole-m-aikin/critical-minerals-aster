@@ -1,0 +1,22 @@
+# Cornwall, PA -- Skarn/Carbonate Replacement
+# Type locality of 'Cornwall-type' Fe skarn: massive magnetite replacing Cambrian carbonate
+# against Triassic diabase, diopside-garnet-actinolite-phlogopite calc-silicate gangue - same
+# genetic family as Bisbee - but in humid (~110 cm/yr) mixed-deciduous-forest / farmland
+# Piedmont. VEGETATION-SUPPRESSION CONTROL: genesis matches the best-performing category,
+# terrain does not.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: cornwall_pa
+name: "Cornwall, PA"
+bbox_wgs84: [-76.64, 40.05, -76.16, 40.5]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

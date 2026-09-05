@@ -1,0 +1,19 @@
+# Mascot-Jefferson City, TN -- Sediment-hosted
+# Largest carbonate-hosted MVT Zn district in the eastern US; sphalerite in strata-bound
+# breccia bodies in Lower Ordovician Knox Group dolostone, NE of Knoxville.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: mascot_jefferson_city
+name: "Mascot-Jefferson City, TN"
+bbox_wgs84: [-83.83, 35.87, -83.37, 36.33]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

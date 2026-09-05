@@ -2,10 +2,10 @@
 
 [![CI](https://github.com/nicole-m-aikin/critical-minerals-aster/actions/workflows/ci.yml/badge.svg)](https://github.com/nicole-m-aikin/critical-minerals-aster/actions/workflows/ci.yml)
 ![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
-![45 sites](https://img.shields.io/badge/sites-45-green)
+![109 sites](https://img.shields.io/badge/sites-109-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Systematic TIR alteration screening across **45 US critical-mineral districts**, validated against 30,000+ USGS MRDS deposit records with explicit statistical uncertainty. The pipeline produces deposit-type-aware prospectivity zones, binomial significance tests with confidence intervals, and a discovery-bias stratification that distinguishes spectral signal from historical circularity.
+Systematic TIR alteration screening across **109 US critical-mineral districts**, validated against USGS MRDS deposit records under a corrected statistical framework: a **site-specific geometric null**, **BH-FDR** multiple-testing correction across both a binomial and a threshold-free continuous-score test, **spatial-clustering declustering** of MRDS records, and classification-threshold sensitivity analysis. 58 of the 109 sites were added in a pre-registered expansion — each carries a written detectability expectation (`results/deposit_system_categories.csv`) recorded before its imagery was processed.
 
 **Zero-credential demo** (no EarthData account or rasters required):
 ```bash
@@ -28,26 +28,17 @@ python -m critical_minerals_aster demo
 
 ---
 
-## Key findings (45 sites)
+## Key findings (109 sites, corrected framework)
 
-**12 sites** are significant on the critical-mineral-only binomial test (null = 8.5%); **3 additional sites** are significant on the all-deposit test only (non-critical or base-metals driven).
+- **20 / 109** sites are FDR-significant on the primary binomial test; **31 / 109** on the continuous-score test (union 33).
+- **13 sites** survive *every* check, including spatial-clustering declustering. **Nine are arid skarn / carbonate-replacement districts spanning AZ, NM, TX and CA** — Bisbee, Courtland-Gleeson, Tombstone, Christmas, Magdalena-Kelly, Organ Mountains, Lake Valley, Shafter, Eagle Mountain. The signal is a Southwest-wide regime, not one Arizona belt.
+- **Skarn/Carbonate Replacement is the only deposit-system category whose median-enrichment 95% CI excludes 1.0** (1.64×, CI 1.02–2.25, n=28).
+- A **systematic humid-terrain control** — 6 skarn districts of the same genesis in vegetated terrain (PA/NY/WA) — shows **0/6 FDR-significant**, supporting the vegetation/exposure hypothesis.
+- **Exposed alteration caps do not rescue epithermal detectability**: 4 well-exposed-cap epithermal sites added, 0/4 significant; the category stays at median 0.44× (n=11).
+- **Not yet demonstrated to be alteration-specific:** three sites — `crooks_gap`, `karnes_county` (roll-front uranium) and `holden` (VMS) — pass every filter despite deposit genesis that predicts no intrusion-related alteration halo (`holden` is a former mine with an exposed tailings field; its signal may be mine waste). These are 2/9 uranium and 1/9 VMS sites, not a category-wide effect. See [`docs/results.md`](docs/results.md#limitations).
+- The **discovery-bias** stratification is unchanged: no era signal (post-1950 enrichment 0.92×, p=0.73); the original circularity claim is retracted.
 
-| Site | State | Deposit type | Critical hit rate | p |
-|---|---|---|---|---|
-| Bisbee | AZ | Skarn / carbonate-hosted Cu-Ag | 43.2% | < 0.001 |
-| Eureka | NV | Pb-Zn-Au-Ag skarn / carbonate | 37.2% | < 0.001 |
-| Magnet Cove | AR | Alkalic igneous complex REE/Ti | 23.1% | 0.019 |
-| McDermitt Caldera | NV/OR | Li-Cs-REE sedimentary/caldera | 22.2% | 0.009 |
-| Lordsburg | NM | Porphyry Cu-Mo | 21.8% | < 0.001 |
-| Thacker Pass | NV | Lithium brine | 21.7% | 0.040 |
-| Ely (Robinson) | NV | Porphyry Cu-Au | 20.8% | 0.047 |
-| Sierrita | AZ | Porphyry Cu-Mo | 17.9% | 0.006 |
-| Steamboat Springs | NV | Epithermal / geothermal Au-Ag | 14.5% | 0.003 |
-| Yerington | NV | Porphyry Cu / skarn | 13.7% | 0.028 |
-| Randsburg | CA | Epithermal Au-Ag-W | 11.8% | 0.004 |
-| Mountain Pass | CA | Carbonatite REE | 11.5% | 0.038 |
-
-The method acts as a **deposit-type selector, not a universal detector**: skarn/carbonate-hosted and arid porphyry systems produce the clearest signal; sediment-hosted (Carlin, MVT), placer, and vegetated-terrain deposits anti-correlate or score at chance. See [`docs/results.md`](docs/results.md) for full discussion including anti-correlations, non-critical inflation, and interpretation limits.
+The method acts as a **deposit-type selector, not a universal detector**. Two sites significant in an earlier 51-site version (Eureka, Lordsburg) are not in the robust set — both lose significance once spatially-clustered MRDS records are deduplicated (Eureka p=0.76, Lordsburg p=0.088 at the 1000 m radius).
 
 ---
 
@@ -56,7 +47,7 @@ The method acts as a **deposit-type selector, not a universal detector**: skarn/
 | Dataset | Source | Notes |
 |---|---|---|
 | ASTER L1T (v004) | NASA EarthData / LP DAAC | TIR bands B10–B14, 90 m resolution |
-| MRDS national deposit database | USGS mrdata.usgs.gov | ~30,000 deposit records across 45 bboxes |
+| MRDS national deposit database | USGS mrdata.usgs.gov | deposit records across 109 bboxes |
 | USGS Quaternary Faults | USGS QFAULTS REST API | Most sites |
 | USGS SGMC fault data | USGS FeatureServer | All-age faults for select sites |
 
@@ -82,7 +73,9 @@ Multi-granule sites use feathered ratio mosaics with per-granule histogram norma
 
 ### Statistical significance
 
-Binomial test (`scipy.stats.binomtest`, one-sided, greater) against a pooled null rate derived from the full 45-site survey. Two tests per site: critical-mineral-only (null = 8.5%) and all-deposit (null = 9.5%). MRDS deposits are clipped to the valid-pixel TIR footprint polygon before counting; zone coverage uses footprint area, not bbox area.
+**Site-specific geometric null:** each site's chance hit rate is its own strong-anomaly-zone area ÷ valid-pixel TIR footprint area (not a pooled survey-wide rate). Two families of tests, FDR-corrected independently (Benjamini–Hochberg, α = 0.05): a one-sided exact **binomial** test and a threshold-free **Mann–Whitney U** test on the continuous 0–6 combined score. Robustness layers: footprint-aware Monte Carlo permutation (10,000 iters, seed 42), **DBSCAN spatial-clustering declustering** at 0/250/500/1000 m in each site's local metric CRS, and a classification-threshold sweep (65/85–75/95 percentiles; score cutoffs 2–4). MRDS deposits are clipped to the footprint polygon before counting. The full analysis chain is `scripts/regenerate_site_summaries.py` → `site_specific_null_significance.py` → `phase3…8` → `fig01–06`.
+
+**Pre-registration:** the 58 expansion sites each carry a written NULL / POSITIVE / POSITIVE-ISH / NULL-TO-WEAK expectation in `results/deposit_system_categories.csv` (`[EXPANSION +58]` rows), recorded before the pipeline was run.
 
 ---
 
@@ -111,7 +104,7 @@ python -m critical_minerals_aster run --site mcdermitt
 # Download from EarthData, build mosaic, then process
 python -m critical_minerals_aster run --site mcdermitt --mosaic
 
-# All 45 sites (skip existing outputs)
+# All sites (skip existing outputs)
 python -m critical_minerals_aster run-batch --all-sites --skip-existing
 
 # Regenerate national summary + synthesis figures
@@ -139,7 +132,7 @@ print(con.execute(\"\"\"
 ```
 critical-minerals-aster/
 ├── sites/
-│   ├── index.yaml                   # list of 45 site IDs
+│   ├── index.yaml                   # list of 109 site IDs
 │   └── {site_id}.yaml               # bbox, granule, classification params, structure layers
 ├── src/
 │   └── critical_minerals_aster/

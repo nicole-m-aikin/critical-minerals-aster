@@ -1,0 +1,20 @@
+# Willsboro-Lewis, NY -- Skarn/Carbonate Replacement
+# Garnet-clinopyroxene-wollastonite skarn: marble replaced by infiltration metasomatism along
+# the margin of the Marcy anorthosite massif; dense Adirondack northern-hardwood/conifer
+# forest, heavy snowpack. Control.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: willsboro_lewis_ny
+name: "Willsboro-Lewis, NY"
+bbox_wgs84: [-73.7, 44.1, -73.24, 44.55]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

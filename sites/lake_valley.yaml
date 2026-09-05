@@ -1,0 +1,20 @@
+# Lake Valley, NM -- Skarn/Carbonate Replacement
+# Bridal Chamber-style Ag-halide + Mn replacement mantos in Mississippian Lake Valley
+# Limestone, ~20 mi from the Hillsboro Laramide porphyry; well-exposed desert foothills,
+# closely comparable to Tombstone.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: lake_valley
+name: "Lake Valley, NM"
+bbox_wgs84: [-107.8, 32.5, -107.34, 32.95]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

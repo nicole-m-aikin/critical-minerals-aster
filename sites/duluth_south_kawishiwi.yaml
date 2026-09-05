@@ -1,0 +1,19 @@
+# Duluth Complex - South Kawishiwi, MN -- Mafic/Ultramafic
+# Basal magmatic Cu-Ni-PGE sulfide of the South Kawishiwi intrusion SE of Ely; humid boreal
+# terrain.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: duluth_south_kawishiwi
+name: "Duluth Complex - South Kawishiwi, MN"
+bbox_wgs84: [-91.93, 47.63, -91.47, 48.07]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

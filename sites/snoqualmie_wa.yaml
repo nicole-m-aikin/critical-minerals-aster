@@ -1,0 +1,20 @@
+# Snoqualmie, WA -- Skarn/Carbonate Replacement
+# Cu-Fe skarn (Guye iron-skarn, andradite-diopside skarn) where the Oligo-Miocene Snoqualmie
+# batholith intrudes Triassic metasedimentary rock at Snoqualmie Pass; wet west-central
+# Cascade crest, dense Douglas-fir/hemlock forest, >250 cm/yr precip. Control.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: snoqualmie_wa
+name: "Snoqualmie, WA"
+bbox_wgs84: [-121.66, 47.2, -121.18, 47.65]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

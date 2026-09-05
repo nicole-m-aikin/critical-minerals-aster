@@ -1,0 +1,280 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.59040060614326,
+            32.78086512265222
+          ],
+          [
+            -110.58928060640996,
+            32.77746512190861
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.58707060528394,
+            32.77456512328646
+          ],
+          [
+            -110.58538060384161,
+            32.76731512080211
+          ],
+          [
+            -110.58403060305622,
+            32.76080512008096
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.58055060330742,
+            32.75641512021264
+          ],
+          [
+            -110.57995060056282,
+            32.754515121370886
+          ],
+          [
+            -110.57937060240131,
+            32.7517451203025
+          ],
+          [
+            -110.57858060058426,
+            32.75013511894493
+          ],
+          [
+            -110.57759060144562,
+            32.74782511826685
+          ],
+          [
+            -110.57646060076826,
+            32.74505511768496
+          ],
+          [
+            -110.57601060140478,
+            32.742865119354086
+          ],
+          [
+            -110.5757106000325,
+            32.73884511721864
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.57575060111378,
+            32.734935116045705
+          ],
+          [
+            -110.57491059996633,
+            32.73199511666692
+          ],
+          [
+            -110.57434060005394,
+            32.72722511665473
+          ],
+          [
+            -110.57338059925587,
+            32.722045115312554
+          ],
+          [
+            -110.57280059839943,
+            32.7188851152698
+          ],
+          [
+            -110.57250059792545,
+            32.71537511374524
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.53385058731779,
+            32.67365511026832
+          ],
+          [
+            -110.5336405863572,
+            32.66887511029023
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.53224058713974,
+            32.66582510896431
+          ],
+          [
+            -110.5308905845577,
+            32.66011510777095
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.52964058512808,
+            32.656375107186854
+          ],
+          [
+            -110.52886058515338,
+            32.65303510683214
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.52809058432614,
+            32.649635106850184
+          ],
+          [
+            -110.52658058370719,
+            32.64554510600829
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.50571057897177,
+            32.625125103652465
+          ],
+          [
+            -110.50213057696887,
+            32.61227510062785
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.5006205763499,
+            32.60783510086938
+          ],
+          [
+            -110.49802057523657,
+            32.59861510105961
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.4962505743266,
+            32.59325509931275
+          ],
+          [
+            -110.49449057256406,
+            32.587555099170594
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Whitlock Wash fault",
+        "age": "undifferentiated Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    }
+  ]
+}

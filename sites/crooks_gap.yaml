@@ -1,0 +1,19 @@
+# Crooks Gap-Green Mountain, WY -- Uranium/Energy
+# Roll-front and fault-controlled U in Eocene Battle Spring Fm sandstone S of Jeffrey City; a
+# separate district from Gas Hills.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: crooks_gap
+name: "Crooks Gap-Green Mountain, WY"
+bbox_wgs84: [-108.03, 42.07, -107.57, 42.53]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

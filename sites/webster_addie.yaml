@@ -1,0 +1,19 @@
+# Webster-Addie, NC -- Mafic/Ultramafic
+# Alpine-type ultramafic ring (dunite-websterite-pyroxenite) with accessory chromite, southern
+# Appalachian ophiolitic belt; humid forested Blue Ridge.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: webster_addie
+name: "Webster-Addie, NC"
+bbox_wgs84: [-83.41, 35.14, -82.95, 35.58]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

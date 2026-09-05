@@ -1,0 +1,19 @@
+# Henry Mountains, UT -- Uranium/Energy
+# Tabular V-U in fluvial Salt Wash Member sandstone on the SE flank of the Henry Mtns (Tony M
+# / Bullfrog deposits near Ticaboo).
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: henry_mountains
+name: "Henry Mountains, UT"
+bbox_wgs84: [-110.88, 37.62, -110.42, 38.08]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

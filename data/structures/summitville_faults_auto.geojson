@@ -1,0 +1,3352 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.753865869445,
+            37.3719656308051
+          ],
+          [
+            -106.756932678299,
+            37.362526303812
+          ],
+          [
+            -106.766879362317,
+            37.339864637336
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.612941994495,
+            37.612475774866
+          ],
+          [
+            -106.61057360691,
+            37.6113394842582
+          ],
+          [
+            -106.601103410878,
+            37.6011240699746
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.652408045487,
+            37.3767766690805
+          ],
+          [
+            -106.63866637016,
+            37.3797992581755
+          ],
+          [
+            -106.633222440299,
+            37.3819591587156
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.594198040627,
+            37.3302107643778
+          ],
+          [
+            -106.593856391562,
+            37.3449715840932
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.712065945938,
+            37.3251010409285
+          ],
+          [
+            -106.711579947487,
+            37.3322790568098
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.743354085824,
+            37.335926250662
+          ],
+          [
+            -106.743389744449,
+            37.3380043727391
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.56852950424,
+            37.5587473876812
+          ],
+          [
+            -106.564274814459,
+            37.5523158922237
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.447886788358,
+            37.2320456021947
+          ],
+          [
+            -106.447892639983,
+            37.2309135838142
+          ],
+          [
+            -106.438525059405,
+            37.2176612951969
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.798976709103,
+            37.49513402341
+          ],
+          [
+            -106.778610449036,
+            37.4837982135811
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.761579179072,
+            37.4615036514554
+          ],
+          [
+            -106.754483811545,
+            37.4558352627742
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.400202085866,
+            37.3969740929378
+          ],
+          [
+            -106.399384778857,
+            37.3914335013187
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.494786530378,
+            37.404818699515
+          ],
+          [
+            -106.489566799351,
+            37.40782562647
+          ],
+          [
+            -106.481967326033,
+            37.4138505593529
+          ],
+          [
+            -106.471017936206,
+            37.4262839223927
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.702551031771,
+            37.4174040533123
+          ],
+          [
+            -106.699629216393,
+            37.4146226496818
+          ],
+          [
+            -106.695840692057,
+            37.4119770593064
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.66118348358,
+            37.4648287617599
+          ],
+          [
+            -106.654561740211,
+            37.4636868014288
+          ],
+          [
+            -106.652673570417,
+            37.4625511183616
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.779806444446,
+            37.3076773305637
+          ],
+          [
+            -106.779186702121,
+            37.3092646902611
+          ],
+          [
+            -106.775869060283,
+            37.3175752253617
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.456331851242,
+            37.2434032676237
+          ],
+          [
+            -106.453993271554,
+            37.2392391372735
+          ],
+          [
+            -106.447886788358,
+            37.2320456021947
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.698606132303,
+            37.4569338144508
+          ],
+          [
+            -106.683029272513,
+            37.4297217000736
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.560878430795,
+            37.5764887722828
+          ],
+          [
+            -106.556539725178,
+            37.5711038128514
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.664216072011,
+            37.4310970886593
+          ],
+          [
+            -106.656531285691,
+            37.4289336470662
+          ],
+          [
+            -106.643303490725,
+            37.4228720565365
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.70541152096,
+            37.6397880880937
+          ],
+          [
+            -106.702101679194,
+            37.6378982491704
+          ],
+          [
+            -106.674577890879,
+            37.6061805680249
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.613476967298,
+            37.4269844005562
+          ],
+          [
+            -106.596929496708,
+            37.4182644927303
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.683029272513,
+            37.4297217000736
+          ],
+          [
+            -106.67291879777,
+            37.4214529840411
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.589590261735,
+            37.3453430048644
+          ],
+          [
+            -106.587721031122,
+            37.3396733802986
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.703891226546,
+            37.7021230921667
+          ],
+          [
+            -106.689670690783,
+            37.6870010380573
+          ],
+          [
+            -106.665020029156,
+            37.665440081538
+          ],
+          [
+            -106.657446893545,
+            37.6544761248898
+          ],
+          [
+            -106.651300386809,
+            37.6408662397246
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.571049701719,
+            37.377796180422
+          ],
+          [
+            -106.567482113535,
+            37.3734507778839
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.388888852298,
+            37.3737337052607
+          ],
+          [
+            -106.379341001401,
+            37.3592634016934
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.476954727646,
+            37.27292711752
+          ],
+          [
+            -106.469461769368,
+            37.2596833288491
+          ],
+          [
+            -106.464299853913,
+            37.252871802851
+          ],
+          [
+            -106.462893231417,
+            37.2521094359853
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.65376857273,
+            37.3945548363109
+          ],
+          [
+            -106.635356476292,
+            37.3831922850977
+          ],
+          [
+            -106.633222440299,
+            37.3819591587156
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.549003331559,
+            37.3499983602921
+          ],
+          [
+            -106.54186887564,
+            37.3414692199073
+          ],
+          [
+            -106.532906989515,
+            37.3342694279713
+          ],
+          [
+            -106.525362184073,
+            37.3297187965748
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.753087905951,
+            37.4207003139837
+          ],
+          [
+            -106.745992365948,
+            37.4199448289556
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.712505745829,
+            37.3489017717812
+          ],
+          [
+            -106.712520396453,
+            37.3390796532556
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.63942850444,
+            37.4553570060499
+          ],
+          [
+            -106.624799645753,
+            37.437958918437
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.458828753608,
+            37.4032068475386
+          ],
+          [
+            -106.458892947219,
+            37.3903596830911
+          ],
+          [
+            -106.46082821748,
+            37.383944993662
+          ],
+          [
+            -106.464163120445,
+            37.3771561896029
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.578535433948,
+            37.4023641896368
+          ],
+          [
+            -106.571942573212,
+            37.3947960998341
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.712065945938,
+            37.3251010409285
+          ],
+          [
+            -106.712070630652,
+            37.3219792135154
+          ],
+          [
+            -106.712085782536,
+            37.3118827330832
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.601158883643,
+            37.5829867800353
+          ],
+          [
+            -106.596921365158,
+            37.5742920101481
+          ],
+          [
+            -106.579944649881,
+            37.5463045797088
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.571942573212,
+            37.3947960998341
+          ],
+          [
+            -106.559249255179,
+            37.3801750543756
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.794777305237,
+            37.2869809981121
+          ],
+          [
+            -106.784859914382,
+            37.2820671001195
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.462893231417,
+            37.2521094359853
+          ],
+          [
+            -106.460554030994,
+            37.2479499134237
+          ],
+          [
+            -106.456331851242,
+            37.2434032676237
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.567482113535,
+            37.3734507778839
+          ],
+          [
+            -106.553156410205,
+            37.3554709379504
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.601103410878,
+            37.6011240699746
+          ],
+          [
+            -106.593080460955,
+            37.5912835496133
+          ],
+          [
+            -106.590247927338,
+            37.5863699716036
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.582287316004,
+            37.4103075991382
+          ],
+          [
+            -106.574265946219,
+            37.4068920469218
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.707190438548,
+            37.4214306672198
+          ],
+          [
+            -106.702551031771,
+            37.4174040533123
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.752652797061,
+            37.3772591206057
+          ],
+          [
+            -106.749342618427,
+            37.3863206262175
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.582410260333,
+            37.5753767531535
+          ],
+          [
+            -106.580331614461,
+            37.5731276331863
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.788595997767,
+            37.3957777976283
+          ],
+          [
+            -106.783869060945,
+            37.390487607767
+          ],
+          [
+            -106.782279713035,
+            37.3886896092219
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.767819183361,
+            37.3353303298197
+          ],
+          [
+            -106.766879362317,
+            37.339864637336
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.654748106496,
+            37.3824632479271
+          ],
+          [
+            -106.652408045487,
+            37.3767766690805
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.712520396453,
+            37.3390796532556
+          ],
+          [
+            -106.711579947487,
+            37.3322790568098
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.650708403325,
+            37.4008983036361
+          ],
+          [
+            -106.649975910754,
+            37.400969085335
+          ],
+          [
+            -106.644295356562,
+            37.4005824263055
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.646111579387,
+            37.6268796832802
+          ],
+          [
+            -106.643786167205,
+            37.6079870894028
+          ],
+          [
+            -106.638130856571,
+            37.5913557854067
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.4635027581,
+            37.4145514920259
+          ],
+          [
+            -106.458828753608,
+            37.4032068475386
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.656605688655,
+            37.3960657513781
+          ],
+          [
+            -106.65376857273,
+            37.3945548363109
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.590247927338,
+            37.5863699716036
+          ],
+          [
+            -106.582410260333,
+            37.5753767531535
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.709280537041,
+            37.5989897714775
+          ],
+          [
+            -106.70541152096,
+            37.6397880880937
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.622598219046,
+            37.4356710983094
+          ],
+          [
+            -106.615836170508,
+            37.4292527283788
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.65076687826,
+            37.3718075399681
+          ],
+          [
+            -106.627807155917,
+            37.3760082720948
+          ],
+          [
+            -106.625916823878,
+            37.3767605387911
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.743354085824,
+            37.335926250662
+          ],
+          [
+            -106.743249491382,
+            37.3273869393701
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.52154361109,
+            37.328159165772
+          ],
+          [
+            -106.519456542614,
+            37.3277612622485
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.697761016148,
+            37.4021574059208
+          ],
+          [
+            -106.688762183214,
+            37.4025232408005
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.713282453478,
+            37.456946343481
+          ],
+          [
+            -106.71047633572,
+            37.4551375590761
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.663226061195,
+            37.4017404263953
+          ],
+          [
+            -106.656605688655,
+            37.3960657513781
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.652408045487,
+            37.3767766690805
+          ],
+          [
+            -106.651928280446,
+            37.3737746972314
+          ],
+          [
+            -106.65076687826,
+            37.3718075399681
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.615836170508,
+            37.4292527283788
+          ],
+          [
+            -106.613476967298,
+            37.4269844005562
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.778610449036,
+            37.4837982135811
+          ],
+          [
+            -106.767239610102,
+            37.4769964680277
+          ],
+          [
+            -106.753045093143,
+            37.466792060346
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.619333293044,
+            37.5598236045335
+          ],
+          [
+            -106.618743607451,
+            37.5705483401026
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.652673570417,
+            37.4625511183616
+          ],
+          [
+            -106.643921739151,
+            37.4587537050523
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.525362184073,
+            37.3297187965748
+          ],
+          [
+            -106.52154361109,
+            37.328159165772
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.753045093143,
+            37.466792060346
+          ],
+          [
+            -106.749727659714,
+            37.4645234372796
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.775869060283,
+            37.3175752253617
+          ],
+          [
+            -106.767819183361,
+            37.3353303298197
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.735116680195,
+            37.4078498133049
+          ],
+          [
+            -106.720972028717,
+            37.3745959425612
+          ],
+          [
+            -106.715314620518,
+            37.359481793738
+          ],
+          [
+            -106.712505745829,
+            37.3489017717812
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.567060814446,
+            37.5845599076926
+          ],
+          [
+            -106.560878430795,
+            37.5764887722828
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.779664122559,
+            37.2797981634322
+          ],
+          [
+            -106.769288987065,
+            37.2737560278897
+          ],
+          [
+            -106.766676979968,
+            37.2708417940222
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.625916823878,
+            37.3767605387911
+          ],
+          [
+            -106.616441760773,
+            37.3782529413643
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.523677621929,
+            37.331880297966
+          ],
+          [
+            -106.52154361109,
+            37.328159165772
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.632130120355,
+            37.3488137048862
+          ],
+          [
+            -106.629007790226,
+            37.3454303473932
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.764913945493,
+            37.4225938219888
+          ],
+          [
+            -106.753087905951,
+            37.4207003139837
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.752652797061,
+            37.3772591206057
+          ],
+          [
+            -106.753865869445,
+            37.3719656308051
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.656605688655,
+            37.3960657513781
+          ],
+          [
+            -106.654748106496,
+            37.3824632479271
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.580331614461,
+            37.5731276331863
+          ],
+          [
+            -106.56852950424,
+            37.5587473876812
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.743389744449,
+            37.3380043727391
+          ],
+          [
+            -106.74274101888,
+            37.3583664590686
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.579944649881,
+            37.5463045797088
+          ],
+          [
+            -106.569582477077,
+            37.5262594803097
+          ],
+          [
+            -106.568170983916,
+            37.5251269868495
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.663226061195,
+            37.4017404263953
+          ],
+          [
+            -106.650708403325,
+            37.4008983036361
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.792395741163,
+            37.4010421063219
+          ],
+          [
+            -106.788595997767,
+            37.3957777976283
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.864767688273,
+            37.4146437092128
+          ],
+          [
+            -106.860033374486,
+            37.4074682610782
+          ],
+          [
+            -106.848664176774,
+            37.3938775303506
+          ],
+          [
+            -106.836362609544,
+            37.3821715158662
+          ],
+          [
+            -106.821701266878,
+            37.3704645211483
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.633222440299,
+            37.3819591587156
+          ],
+          [
+            -106.631109423986,
+            37.3809205037332
+          ],
+          [
+            -106.625916823878,
+            37.3767605387911
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.742641310375,
+            37.3247128013829
+          ],
+          [
+            -106.742320768125,
+            37.3202106142987
+          ],
+          [
+            -106.739957915959,
+            37.3081185975158
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.64508609949,
+            37.661637982321
+          ],
+          [
+            -106.640359383653,
+            37.6536966912228
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.400173484406,
+            37.4018828951425
+          ],
+          [
+            -106.400202085866,
+            37.3969740929378
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.635166904817,
+            37.6415980630329
+          ],
+          [
+            -106.6323337846,
+            37.635172886391
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.784859914382,
+            37.2820671001195
+          ],
+          [
+            -106.779664122559,
+            37.2797981634322
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.682609481695,
+            37.417272849097
+          ],
+          [
+            -106.667074358532,
+            37.4144485758361
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.688762183214,
+            37.4025232408005
+          ],
+          [
+            -106.663226061195,
+            37.4017404263953
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.71047633572,
+            37.4551375590761
+          ],
+          [
+            -106.694856182523,
+            37.4391761840861
+          ],
+          [
+            -106.683029272513,
+            37.4297217000736
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.624799645753,
+            37.437958918437
+          ],
+          [
+            -106.622598219046,
+            37.4356710983094
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.714390390634,
+            37.6722858562667
+          ],
+          [
+            -106.708238137375,
+            37.6545261701962
+          ],
+          [
+            -106.70541152096,
+            37.6397880880937
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.401549427638,
+            37.4083111455737
+          ],
+          [
+            -106.400173484406,
+            37.4018828951425
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.662239651724,
+            37.592662059424
+          ],
+          [
+            -106.658540335485,
+            37.5872291088173
+          ],
+          [
+            -106.654319487935,
+            37.5683334717167
+          ],
+          [
+            -106.653867892265,
+            37.5573790266218
+          ],
+          [
+            -106.655796975829,
+            37.5418901931636
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.643921739151,
+            37.4587537050523
+          ],
+          [
+            -106.63942850444,
+            37.4553570060499
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.604213405341,
+            37.6725325078038
+          ],
+          [
+            -106.599961086213,
+            37.6668538076742
+          ],
+          [
+            -106.592411078627,
+            37.651732653559
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.471017936206,
+            37.4262839223927
+          ],
+          [
+            -106.469608010605,
+            37.4255261081179
+          ],
+          [
+            -106.4635027581,
+            37.4145514920259
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.697761016148,
+            37.4021574059208
+          ],
+          [
+            -106.687844552354,
+            37.3919453969315
+          ],
+          [
+            -106.676493683868,
+            37.3866470994951
+          ],
+          [
+            -106.66467826331,
+            37.3836120980637
+          ],
+          [
+            -106.654748106496,
+            37.3824632479271
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.543561312415,
+            37.3924690509329
+          ],
+          [
+            -106.538836536042,
+            37.3913257600463
+          ],
+          [
+            -106.532678639567,
+            37.3916895901637
+          ],
+          [
+            -106.507587811535,
+            37.3991863518194
+          ],
+          [
+            -106.494786530378,
+            37.404818699515
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.695840692057,
+            37.4119770593064
+          ],
+          [
+            -106.688759433471,
+            37.404035759949
+          ],
+          [
+            -106.688762183214,
+            37.4025232408005
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.689238422367,
+            37.6624420493084
+          ],
+          [
+            -106.672669844062,
+            37.640513331475
+          ],
+          [
+            -106.669354467776,
+            37.634841215333
+          ],
+          [
+            -106.667478860023,
+            37.6257714643647
+          ],
+          [
+            -106.662275519656,
+            37.6174556177924
+          ],
+          [
+            -106.660378077452,
+            37.6121628587551
+          ],
+          [
+            -106.659449972236,
+            37.6068738378222
+          ],
+          [
+            -106.660882645876,
+            37.5964707735603
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.596929496708,
+            37.4182644927303
+          ],
+          [
+            -106.582287316004,
+            37.4103075991382
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.568170983916,
+            37.5251269868495
+          ],
+          [
+            -106.561117419491,
+            37.5103757112731
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.587721031122,
+            37.3396733802986
+          ],
+          [
+            -106.586331044527,
+            37.3328716419157
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.564274814459,
+            37.5523158922237
+          ],
+          [
+            -106.560986431648,
+            37.5466451261543
+          ],
+          [
+            -106.558641605974,
+            37.5398379624861
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.616744574771,
+            37.5927123549184
+          ],
+          [
+            -106.616784721379,
+            37.5935904990936
+          ],
+          [
+            -106.615819753796,
+            37.5973676621916
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.783283231819,
+            37.4747066350795
+          ],
+          [
+            -106.781459539503,
+            37.4739754108521
+          ],
+          [
+            -106.761579179072,
+            37.4615036514554
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.743249491382,
+            37.3273869393701
+          ],
+          [
+            -106.742641310375,
+            37.3247128013829
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.471017936206,
+            37.4262839223927
+          ],
+          [
+            -106.469584184589,
+            37.4304395131666
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.615642880008,
+            37.3295228535748
+          ],
+          [
+            -106.609990144844,
+            37.3215811915406
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.619299372659,
+            37.5425930563345
+          ],
+          [
+            -106.619744421407,
+            37.553928010828
+          ],
+          [
+            -106.619333293044,
+            37.5598236045335
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.574579895733,
+            37.6042112084251
+          ],
+          [
+            -106.574535644722,
+            37.6025858822188
+          ],
+          [
+            -106.572199561452,
+            37.5923778685995
+          ],
+          [
+            -106.569369714695,
+            37.587083362058
+          ],
+          [
+            -106.567060814446,
+            37.5845599076926
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.667074358532,
+            37.4144485758361
+          ],
+          [
+            -106.652316059798,
+            37.411550962069
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.781076152913,
+            37.3039769787049
+          ],
+          [
+            -106.780599792487,
+            37.3062419780671
+          ],
+          [
+            -106.779806444446,
+            37.3076773305637
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.629007790226,
+            37.3454303473932
+          ],
+          [
+            -106.628367047087,
+            37.3442729253057
+          ],
+          [
+            -106.615642880008,
+            37.3295228535748
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.542244346276,
+            37.367534830557
+          ],
+          [
+            -106.523677621929,
+            37.331880297966
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.610400695591,
+            37.6702762561873
+          ],
+          [
+            -106.610412912678,
+            37.6661188612294
+          ],
+          [
+            -106.61471804466,
+            37.6536595403481
+          ],
+          [
+            -106.613795868325,
+            37.6423243727978
+          ],
+          [
+            -106.616677197531,
+            37.6313733280538
+          ],
+          [
+            -106.617014122357,
+            37.6252926827958
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.556539725178,
+            37.5711038128514
+          ],
+          [
+            -106.555683946021,
+            37.5700565805019
+          ],
+          [
+            -106.549078575346,
+            37.5624868905573
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.745992365948,
+            37.4199448289556
+          ],
+          [
+            -106.737008168366,
+            37.4184259216307
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.492666397611,
+            37.3507926671104
+          ],
+          [
+            -106.486016944809,
+            37.3553061787398
+          ],
+          [
+            -106.473668309451,
+            37.3669819654035
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.805603793854,
+            37.4955111830803
+          ],
+          [
+            -106.803713236338,
+            37.491733303215
+          ],
+          [
+            -106.799917388037,
+            37.4875786232025
+          ],
+          [
+            -106.792340225278,
+            37.4811571749538
+          ],
+          [
+            -106.784287714495,
+            37.4758636955081
+          ],
+          [
+            -106.783283231819,
+            37.4747066350795
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.473668309451,
+            37.3669819654035
+          ],
+          [
+            -106.464163120445,
+            37.3771561896029
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.561117419491,
+            37.5103757112731
+          ],
+          [
+            -106.559223668464,
+            37.5069743340952
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.749727659714,
+            37.4645234372796
+          ],
+          [
+            -106.746900827703,
+            37.4626342422291
+          ],
+          [
+            -106.734600042906,
+            37.4543176869975
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.65076687826,
+            37.3718075399681
+          ],
+          [
+            -106.648633692074,
+            37.3650773106557
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.567060814446,
+            37.5845599076926
+          ],
+          [
+            -106.554174633511,
+            37.5912095242595
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, certain",
+        "RuleID": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.619357749678,
+            37.614686505678
+          ],
+          [
+            -106.617014122357,
+            37.6252926827958
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.651300386809,
+            37.6408662397246
+          ],
+          [
+            -106.648375759704,
+            37.6338944113762
+          ],
+          [
+            -106.646111579387,
+            37.6268796832802
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.640359383653,
+            37.6536966912228
+          ],
+          [
+            -106.635166904817,
+            37.6415980630329
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.662239651724,
+            37.592662059424
+          ],
+          [
+            -106.674577890879,
+            37.6061805680249
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.612941994495,
+            37.612475774866
+          ],
+          [
+            -106.615819753796,
+            37.5973676621916
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.638130856571,
+            37.5913557854067
+          ],
+          [
+            -106.634618322538,
+            37.5821615363799
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.6323337846,
+            37.635172886391
+          ],
+          [
+            -106.629627608009,
+            37.6242223450777
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.388888852298,
+            37.3737337052607
+          ],
+          [
+            -106.39222453051,
+            37.3790191731359
+          ],
+          [
+            -106.396615401296,
+            37.3854328314384
+          ],
+          [
+            -106.399384778857,
+            37.3914335013187
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.61277635953,
+            37.6167749893972
+          ],
+          [
+            -106.612941994495,
+            37.612475774866
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.574579895733,
+            37.6042112084251
+          ],
+          [
+            -106.580784071615,
+            37.6207272309207
+          ],
+          [
+            -106.586623059876,
+            37.6368570174271
+          ],
+          [
+            -106.592411078627,
+            37.651732653559
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.616744574771,
+            37.5927123549184
+          ],
+          [
+            -106.618743607451,
+            37.5705483401026
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.367469943686,
+            37.3370580311277
+          ],
+          [
+            -106.379341001401,
+            37.3592634016934
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.554174633511,
+            37.5912095242595
+          ],
+          [
+            -106.541298765235,
+            37.5992387881164
+          ]
+        ]
+      },
+      "properties": {
+        "STATE": "CO",
+        "DESCRIPTION": "Normal fault, concealed",
+        "RuleID": 23
+      }
+    }
+  ]
+}

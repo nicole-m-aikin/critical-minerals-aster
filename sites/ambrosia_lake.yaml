@@ -1,0 +1,19 @@
+# Ambrosia Lake, NM -- Uranium/Energy
+# Largest U district in the US; elongate tabular 'manto' ore in Jurassic Morrison Fm
+# (Westwater Canyon sandstone), Grants Mineral Belt.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: ambrosia_lake
+name: "Ambrosia Lake, NM"
+bbox_wgs84: [-108.1, 35.19, -107.64, 35.65]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

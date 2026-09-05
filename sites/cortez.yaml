@@ -1,0 +1,19 @@
+# Cortez-Pipeline, NV -- Sediment-hosted
+# Multi-Moz Carlin-type disseminated Au (Pipeline, Cortez Hills) in lower-plate Roberts Mtns /
+# Wenban carbonate, Battle Mountain-Eureka trend.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: cortez
+name: "Cortez-Pipeline, NV"
+bbox_wgs84: [-117.01, 40.02, -116.55, 40.48]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

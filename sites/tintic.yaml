@@ -1,0 +1,21 @@
+# Tintic District, UT (East Tintic / Eureka, UT) — Ag-Pb-Zn-Au-Cu carbonate replacement/skarn
+# Included deliberately as a non-guaranteed test case, not a cherry-picked analog: the
+# East Tintic ore bodies are famously BLIND, concealed beneath a volcanic cover sequence
+# with no surface alteration expression, in contrast to the West Tintic (main Tintic)
+# sub-district's more exposed replacement ore. Depending on which part of the district the
+# bbox emphasizes, this site could replicate Bisbee's positive signal or serve as a genuine
+# depth/burial contrast case (same logic as the Bisbee-vs-Climax comparison in Figure 3).
+# Site id "tintic" used (not "eureka") to avoid collision with the existing eureka, NV site.
+id: tintic
+name: "Tintic District, UT"
+bbox_wgs84: [-112.37, 39.74, -111.87, 40.18]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

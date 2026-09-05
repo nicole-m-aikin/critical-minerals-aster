@@ -1,0 +1,19 @@
+# Black Butte, MT -- Sediment-hosted
+# Sedex-style Cu-(Co-Ag): laterally continuous massive-sulfide + barite horizons in dolomitic
+# black shale of the Mesoproterozoic Newland Fm, Belt Basin.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: black_butte
+name: "Black Butte, MT"
+bbox_wgs84: [-111.13, 46.57, -110.67, 47.03]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

@@ -1,0 +1,19 @@
+# Victorio Mountains, NM -- Skarn/Carbonate Replacement
+# W-Be-Mo skarn/tactite plus carbonate-hosted Pb-Zn replacement and porphyry Mo in Paleozoic
+# dolostone/limestone; a full skarn-CRD-porphyry system in a near soil-free desert range.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: victorio
+name: "Victorio Mountains, NM"
+bbox_wgs84: [-108.53, 32, -108.07, 32.45]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

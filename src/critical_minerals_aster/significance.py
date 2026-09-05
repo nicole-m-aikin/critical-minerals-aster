@@ -62,6 +62,7 @@ def run_permutation(
     n_iter: int = 10_000,
     seed: int = 42,
     grid_res: int = 1_000,
+    footprint: gpd.GeoDataFrame | None = None,
 ) -> float:
     """
     Monte Carlo spatial permutation p-value.
@@ -75,6 +76,18 @@ def run_permutation(
     Mathematically equivalent to placing n_deposits random points uniformly
     in the bbox and checking containment, but runs in milliseconds via numpy
     array indexing rather than repeated point-in-polygon tests.
+
+    Parameters
+    ----------
+    footprint :
+        Optional TIR valid-pixel footprint polygon (in ``zones_gdf.crs``).
+        When supplied, random points are drawn only from grid cells inside
+        the footprint rather than the full rectangular bbox — this matches
+        the denominator used by ``coverage_fraction_footprint`` / the
+        site-specific binomial null, so the Monte Carlo and analytical
+        p-values are directly comparable rather than differing by a
+        footprint-vs-bbox area mismatch (see docs/results.md, Phase 3).
+        When omitted, falls back to the original bbox-rectangle behaviour.
     """
     if n_deposits == 0:
         return 1.0
@@ -94,10 +107,28 @@ def run_permutation(
         dtype=np.uint8,
     ).ravel()
 
-    n_cells = len(mask)
     rng = np.random.default_rng(seed)
-    # Sample all iterations at once: shape (n_iter, n_deposits)
-    indices = rng.integers(0, n_cells, size=(n_iter, n_deposits))
+
+    if footprint is not None and len(footprint):
+        fp_geom = unary_union(footprint.geometry)
+        valid = rasterio.features.rasterize(
+            [(fp_geom, 1)],
+            out_shape=(grid_res, grid_res),
+            transform=transform,
+            fill=0,
+            dtype=np.uint8,
+        ).ravel()
+        cell_pool = np.flatnonzero(valid)
+        if len(cell_pool) == 0:
+            return 1.0
+        # Sample n_deposits *positions within the pool* per iteration, then
+        # map back to grid-cell ids — restricts every draw to the footprint.
+        pool_positions = rng.integers(0, len(cell_pool), size=(n_iter, n_deposits))
+        indices = cell_pool[pool_positions]
+    else:
+        n_cells = len(mask)
+        indices = rng.integers(0, n_cells, size=(n_iter, n_deposits))
+
     null_hits = mask[indices].sum(axis=1)
     return float((null_hits >= n_hits).mean())
 

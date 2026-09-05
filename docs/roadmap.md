@@ -1,11 +1,15 @@
 # Project roadmap
 
-Live planning document. Update at the start of each session.  
-Last updated: **2026-05-17** (end of session 2)
+Engineering/build history for the pipeline itself. The scientific analysis has since moved well
+past this document — the survey is now **109 sites** with a corrected statistical framework
+(site-specific null, BH-FDR, spatial-clustering declustering). For current scientific results see
+[`docs/results.md`](results.md); for the analysis code see [`scripts/`](../scripts/).
+
+Last pipeline-engineering update: **2026-05-17**.
 
 ---
 
-## Status: 15 sites fully processed, pipeline mature + scalability foundation in place
+## Status: pipeline mature + scalability foundation in place (as of the entry below)
 
 All 6 original phases (A–F) complete. Sessions 1–2 closed all remaining quality gaps and added the first scalability layer. Active focus: per-site structure proximity figure, sub-row CSV metrics, lazy structure fetch, MRDS-driven site generation.
 

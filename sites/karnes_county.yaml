@@ -1,0 +1,19 @@
+# Karnes County, TX -- Uranium/Energy
+# Core of the South Texas roll-front belt; marginal-marine roll-front U (coffinite) in the
+# Upper Eocene Jackson Group (Panna Maria, Hobson).
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: karnes_county
+name: "Karnes County, TX"
+bbox_wgs84: [-98.13, 28.72, -97.67, 29.18]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

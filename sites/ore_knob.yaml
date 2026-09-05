@@ -1,0 +1,19 @@
+# Ore Knob, NC -- Volcanogenic/VMS
+# Recrystallized massive pyrrhotite-chalcopyrite-pyrite VMS in Carolina gneiss; humid
+# vegetated Blue Ridge, largest NC copper producer.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: ore_knob
+name: "Ore Knob, NC"
+bbox_wgs84: [-81.63, 36.2, -81.17, 36.64]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

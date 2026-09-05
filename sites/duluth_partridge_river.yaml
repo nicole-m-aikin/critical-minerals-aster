@@ -1,0 +1,20 @@
+# Duluth Complex - Partridge River, MN -- Mafic/Ultramafic
+# Basal-contact disseminated Cu-Ni-PGE sulfide of the 1.1 Ga Partridge River intrusion
+# (NorthMet); humid boreal forest and wetland. Mafic protolith, no hydrothermal alteration,
+# heavy vegetation cover.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: duluth_partridge_river
+name: "Duluth Complex - Partridge River, MN"
+bbox_wgs84: [-92.23, 47.35, -91.77, 47.79]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

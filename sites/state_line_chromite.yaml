@@ -1,0 +1,19 @@
+# PA-MD State Line Chromite, PA -- Mafic/Ultramafic
+# Podiform chromite in serpentinized Alpine peridotite of the Baltimore mafic complex;
+# sparsely vegetated serpentine barrens in humid SE PA / Cecil Co., MD.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: state_line_chromite
+name: "PA-MD State Line Chromite, PA"
+bbox_wgs84: [-76.36, 39.5, -75.9, 39.94]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

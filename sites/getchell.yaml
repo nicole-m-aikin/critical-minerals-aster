@@ -1,0 +1,19 @@
+# Getchell Trend, NV -- Sediment-hosted
+# Premier Carlin-type Au trend along the Getchell/Range Front fault, E flank of the Osgood
+# Mtns; micron gold in arsenian pyrite in Paleozoic carbonate. No surface alteration cap.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: getchell
+name: "Getchell Trend, NV"
+bbox_wgs84: [-117.45, 41.02, -116.99, 41.48]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

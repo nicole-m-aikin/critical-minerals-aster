@@ -1,0 +1,19 @@
+# Big Mike, NV -- Volcanogenic/VMS
+# Small Cu(-Zn) VMS pod in mafic volcanic rocks of the Havallah sequence, exposed in arid
+# Pershing County - a minimal-vegetation end-member for the VMS test.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: big_mike
+name: "Big Mike, NV"
+bbox_wgs84: [-117.78, 40.33, -117.32, 40.77]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

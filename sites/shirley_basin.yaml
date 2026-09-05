@@ -1,0 +1,19 @@
+# Shirley Basin, WY -- Uranium/Energy
+# Classic Wyoming sandstone roll-front U in Eocene Wind River Fm arkose; the type area where
+# the roll-front oxidation-reduction model was refined. No intrusion-related alteration.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: shirley_basin
+name: "Shirley Basin, WY"
+bbox_wgs84: [-106.38, 41.97, -105.92, 42.43]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

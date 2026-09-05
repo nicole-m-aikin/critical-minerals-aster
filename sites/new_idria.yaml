@@ -1,0 +1,19 @@
+# New Idria, CA -- Mafic/Ultramafic
+# Coast Range ophiolite serpentinite diapir with podiform chromite (plus Cr-Hg-asbestos);
+# large barren serpentine exposure in the semi-arid southern Diablo Range.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: new_idria
+name: "New Idria, CA"
+bbox_wgs84: [-120.9, 36.18, -120.44, 36.62]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

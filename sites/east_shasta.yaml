@@ -1,0 +1,19 @@
+# East Shasta, CA -- Volcanogenic/VMS
+# Kuroko-type Cu-Zn(-Ag-Pb-Au) VMS in Triassic felsic volcanic rocks NE of Redding; same belt
+# as West Shasta, well exposed.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: east_shasta
+name: "East Shasta, CA"
+bbox_wgs84: [-122.36, 40.56, -121.9, 41]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

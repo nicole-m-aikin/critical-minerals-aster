@@ -1,0 +1,19 @@
+# Dillsburg, PA -- Skarn/Carbonate Replacement
+# Cornwall-type magnetite from 30+ pits where Triassic limestone is contact-metasomatized
+# between two diabase bodies; humid, wooded/agricultural York Co. Piedmont. Control.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: dillsburg_pa
+name: "Dillsburg, PA"
+bbox_wgs84: [-77.23, 39.89, -76.77, 40.34]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

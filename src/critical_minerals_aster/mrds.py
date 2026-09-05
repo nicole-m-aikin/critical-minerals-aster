@@ -236,19 +236,35 @@ _MINERAL_SYSTEM_RULES: list[tuple[str, list[str], list[str], list[str]]] = [
         ["carbonatite", "alkalic", "peralkaline"],
         ["rare earth", "ree", "niobium", "columbium"],
     ),
+    # ── Skarn / Carbonate Replacement ───────────────────────────────────────
+    # Magmatic-hydrothermal fluids replacing carbonate wallrock adjacent to a
+    # porphyry-related intrusion. Genetically related to (and historically
+    # lumped with) Porphyry Cu-Mo-Au below, but split out as its own system
+    # here because skarn's carbonate-replacement mineralogy is a distinct,
+    # strongly TIR-diagnostic surface expression (B13/B12 carbonate ratio)
+    # that a deep porphyry stockwork alone does not produce. Checked BEFORE
+    # Porphyry Cu-Mo-Au in this cascade so "skarn cu"-type model strings are
+    # not absorbed by the broader porphyry rule. See docs/results.md
+    # section 1.5 for the geological rationale and per-site cross-check.
+    (
+        "Skarn / Carbonate Replacement",
+        ["skarn cu", "skarn zn-pb", "skarn fe", "skarn w", "w skarn",
+         "polymetallic replacement"],
+        ["skarn", "contact metasomatic", "contact metamorphic"],
+        [],  # commod fallback deliberately empty — skarn commodities (Cu/Zn/Pb/Fe/W)
+             # overlap heavily with porphyry and base-metal systems; forcing a
+             # commodity-only guess here would be geologically unjustified.
+    ),
     # ── Porphyry Cu-Mo-Au ───────────────────────────────────────────────────
-    # Calc-alkaline arcs; broad spectrum porphyry → skarn → epithermal
+    # Calc-alkaline arcs; porphyry stockwork core, distinct from its skarn
+    # aureole (see Skarn / Carbonate Replacement above)
     (
         "Porphyry Cu-Mo-Au",
-        ["porphyry cu", "porphyry mo", "skarn cu", "skarn zn-pb",
-         "skarn fe", "skarn w", "w skarn", "epithermal quartz-alunite",
+        ["porphyry cu", "porphyry mo", "epithermal quartz-alunite",
          "high sulfidation", "lithocap", "alkalic porphyry",
          "alkaline au-te", "epithermal vein, comstock",
-         "epithermal vein, sado", "epithermal vein",
-         "polymetallic replacement", "replacement mn",
-         "epithermal vein"],
-        ["porphyry", "skarn", "contact metasomatic", "contact metamorphic",
-         "stockwork", "replacement"],
+         "epithermal vein, sado", "epithermal vein"],
+        ["porphyry", "stockwork"],
         ["molybdenum"],
     ),
     # ── Climax-type ─────────────────────────────────────────────────────────
@@ -491,7 +507,7 @@ def _classify_mineral_system(
     dep_type: Any,
     commod1: Any,
 ) -> str:
-    """Infer one of the 24 Earth MRI mineral systems for a single MRDS row.
+    """Infer one of the 25 Earth MRI mineral systems for a single MRDS row.
 
     Uses a three-field cascade (most → least specific):
         1. ``model``    – USGS deposit-model code string
@@ -521,19 +537,24 @@ def reclassify_mrds_mineral_system(
     dep_type_col: str = "dep_type",
     commod_col: str = "commod1",
 ) -> pd.DataFrame:
-    """Add mineral_system column mapping each MRDS row to one of the 24 Earth MRI systems.
+    """Add mineral_system column mapping each MRDS row to one of the 24 OFR
+    2020-1042 systems, plus a 25th "Skarn / Carbonate Replacement" category
+    split out of Porphyry Cu-Mo-Au for this project (see docs/results.md — skarn's carbonate-replacement mineralogy is a distinct,
+    strongly TIR-diagnostic surface expression that a bare porphyry stockwork
+    does not share, and the two of them jointly explain most of the strongest
+    site-level signals in the 45-site survey).
 
     Classification follows USGS OFR 2020-1042 v1.1 (Hofstra & Kreiner 2020)
     using a three-field cascade:  model > dep_type > commod1.  Missing fields
     are treated as empty strings and skipped.
 
-    The 24 systems are:
+    The 25 systems are:
         Placer, Chemical Weathering, Meteoric Recharge, Meteoric Convection,
         Lacustrine Evaporite, Marine Evaporite, Basin Brine Path,
         Marine Chemocline, Petroleum, Hybrid Magmatic REE, Arsenide,
         Volcanogenic Seafloor, Orogenic, Coeur d'Alene-type, Metamorphic,
-        Porphyry Cu-Mo-Au, Porphyry Sn, Reduced Intrusion-Related,
-        Carlin-type, Climax-type, IOA-IOCG,
+        Skarn / Carbonate Replacement, Porphyry Cu-Mo-Au, Porphyry Sn,
+        Reduced Intrusion-Related, Carlin-type, Climax-type, IOA-IOCG,
         Magmatic REE, Mafic Magmatic  (plus "Unknown System").
 
     Parameters

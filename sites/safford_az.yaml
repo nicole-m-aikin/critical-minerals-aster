@@ -1,0 +1,20 @@
+# Safford, AZ -- Porphyry Cu-Mo-Au
+# Laramide porphyry Cu cluster (Dos Pobres, San Juan, Lone Star) with thick supergene/exotic
+# Cu, N-NE of Safford; active Freeport operation, distinct from Morenci.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: modest strong-zone enrichment expected (exposed alteration present); tests whether the
+# category's aggregate below-chance / neutral result is driven by buried- or eroded-cap sites
+# in the original sample.
+id: safford_az
+name: "Safford, AZ"
+bbox_wgs84: [-109.85, 32.75, -109.39, 33.2]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

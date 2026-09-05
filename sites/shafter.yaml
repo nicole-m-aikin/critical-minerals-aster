@@ -1,0 +1,19 @@
+# Shafter (Presidio), TX -- Skarn/Carbonate Replacement
+# Bedding- and fault-controlled Ag replacement orebodies in Permian Mina Grande limestone on
+# the flank of the Chinati caldera; a fully independent Chihuahuan-Desert replicate.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: shafter
+name: "Shafter (Presidio), TX"
+bbox_wgs84: [-104.55, 29.65, -104.09, 30.1]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

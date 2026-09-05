@@ -1,0 +1,20 @@
+# San Francisco (Frisco), UT -- Skarn/Carbonate Replacement
+# Horn Silver fault-controlled Ag-Pb replacement pipe/manto in Paleozoic carbonate with
+# associated Cu-W skarn (Cactus, Frisco Contact); box also spans the adjacent Star Range
+# skarn/CRD. Well-exposed Basin & Range replicate.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: san_francisco_frisco
+name: "San Francisco (Frisco), UT"
+bbox_wgs84: [-113.45, 38.22, -112.99, 38.67]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

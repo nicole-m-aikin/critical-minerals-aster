@@ -1,0 +1,3196 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44720081510413,
+            32.93495450872492
+          ],
+          [
+            -107.44747496925073,
+            32.935296661365115
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44611657820059,
+            32.93305768204505
+          ],
+          [
+            -107.44620878756956,
+            32.933264157987075
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44502335724592,
+            32.900073390715605
+          ],
+          [
+            -107.4453634845653,
+            32.9004265883064
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44330536879092,
+            32.89827175576888
+          ],
+          [
+            -107.44356330116013,
+            32.898492308097985
+          ],
+          [
+            -107.44381088942883,
+            32.898719689650434
+          ],
+          [
+            -107.44409028614345,
+            32.89912469837184
+          ],
+          [
+            -107.4445470067019,
+            32.89962902070693
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44311059696932,
+            32.89809996578314
+          ],
+          [
+            -107.44327307615306,
+            32.8982389787239
+          ],
+          [
+            -107.44330536879092,
+            32.89827175576888
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44248245719344,
+            32.897213808218396
+          ],
+          [
+            -107.44279945828413,
+            32.89769592763793
+          ],
+          [
+            -107.44311059696932,
+            32.89809996578314
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.41380112944707,
+            32.93909175896335
+          ],
+          [
+            -107.41377005492477,
+            32.939346164109715
+          ],
+          [
+            -107.4137528369157,
+            32.93948713501124
+          ],
+          [
+            -107.41370889312863,
+            32.939846897897226
+          ],
+          [
+            -107.41368182060093,
+            32.940273911765615
+          ],
+          [
+            -107.41367864685301,
+            32.9403239812787
+          ],
+          [
+            -107.41369039681692,
+            32.94055130287443
+          ],
+          [
+            -107.41370725909312,
+            32.94087752290862
+          ],
+          [
+            -107.41371167790602,
+            32.94096301682696
+          ],
+          [
+            -107.41375098279295,
+            32.941248850117454
+          ],
+          [
+            -107.413781042219,
+            32.94146743627414
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.41013542816607,
+            32.94699006302271
+          ],
+          [
+            -107.41011797300177,
+            32.94720729164136
+          ],
+          [
+            -107.41006499755284,
+            32.947329830684666
+          ],
+          [
+            -107.41002502521765,
+            32.94742229288519
+          ],
+          [
+            -107.40999562066345,
+            32.9474903102661
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.40813870505481,
+            32.94055983096623
+          ],
+          [
+            -107.40898863078952,
+            32.942128553881844
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.45023999986493,
+            32.93931050877289
+          ],
+          [
+            -107.45111414687464,
+            32.94028874625838
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44536567735292,
+            32.900428865356105
+          ],
+          [
+            -107.44577547890407,
+            32.90086122089796
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.4453634845653,
+            32.9004265883064
+          ],
+          [
+            -107.44536567735292,
+            32.900428865356105
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.4445470067019,
+            32.89962902070693
+          ],
+          [
+            -107.44478535489958,
+            32.89986640892041
+          ],
+          [
+            -107.44502335724592,
+            32.900073390715605
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.41528192583613,
+            32.94868566867305
+          ],
+          [
+            -107.41516630187928,
+            32.949011514950904
+          ],
+          [
+            -107.41543095185018,
+            32.94954768616941
+          ],
+          [
+            -107.41587981394652,
+            32.95004574417834
+          ],
+          [
+            -107.41644084058755,
+            32.95044661328137
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.40999562066345,
+            32.9474903102661
+          ],
+          [
+            -107.40985304455313,
+            32.947819191370215
+          ],
+          [
+            -107.40980187471791,
+            32.94808467763759
+          ],
+          [
+            -107.40981732035091,
+            32.948434804756424
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.4081051439958,
+            32.9367516621506
+          ],
+          [
+            -107.40809965528942,
+            32.93932125121305
+          ],
+          [
+            -107.40802866233082,
+            32.939746100897615
+          ],
+          [
+            -107.40800635806065,
+            32.93994211363814
+          ],
+          [
+            -107.40801117033561,
+            32.939962003105364
+          ],
+          [
+            -107.40808393656859,
+            32.940262753288195
+          ],
+          [
+            -107.40813870505481,
+            32.94055983096623
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44747496925073,
+            32.935296661365115
+          ],
+          [
+            -107.44786492701726,
+            32.93608477593969
+          ],
+          [
+            -107.44834485734769,
+            32.936590983642695
+          ],
+          [
+            -107.44870452122788,
+            32.93704221582421
+          ],
+          [
+            -107.44892987529501,
+            32.93755325521975
+          ],
+          [
+            -107.44985169320191,
+            32.93906738504099
+          ],
+          [
+            -107.45023999986493,
+            32.93931050877289
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44620878756956,
+            32.933264157987075
+          ],
+          [
+            -107.4466981223627,
+            32.93395260065842
+          ],
+          [
+            -107.44701881732587,
+            32.9345405637602
+          ],
+          [
+            -107.44720081510413,
+            32.93495450872492
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44375410242814,
+            32.929714089716875
+          ],
+          [
+            -107.44428261993737,
+            32.930462740011194
+          ],
+          [
+            -107.44510068781884,
+            32.93157807335349
+          ],
+          [
+            -107.44611657820059,
+            32.93305768204505
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44131201256535,
+            32.89521134827802
+          ],
+          [
+            -107.44141389499327,
+            32.89534684174221
+          ],
+          [
+            -107.4414411085565,
+            32.89538303298659
+          ],
+          [
+            -107.44158070585334,
+            32.89556868363226
+          ],
+          [
+            -107.44164484466631,
+            32.89565398222286
+          ],
+          [
+            -107.44166042684323,
+            32.89567470381065
+          ],
+          [
+            -107.44202470177578,
+            32.896278476645264
+          ],
+          [
+            -107.44238854461868,
+            32.89702696399633
+          ],
+          [
+            -107.44247007661217,
+            32.897194978692866
+          ],
+          [
+            -107.44248245719344,
+            32.897213808218396
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.41399985924579,
+            32.94221852089
+          ],
+          [
+            -107.41410042025196,
+            32.94247988064354
+          ],
+          [
+            -107.41423419287248,
+            32.94283783033853
+          ],
+          [
+            -107.4145237342616,
+            32.94315800188609
+          ],
+          [
+            -107.41476907674213,
+            32.9433828216282
+          ],
+          [
+            -107.41486294080784,
+            32.94390901183228
+          ],
+          [
+            -107.41489995139753,
+            32.94443586984452
+          ],
+          [
+            -107.41509058737556,
+            32.944793151992044
+          ],
+          [
+            -107.41505964760054,
+            32.945512547185245
+          ],
+          [
+            -107.41511106986233,
+            32.94605121979474
+          ],
+          [
+            -107.41521798465251,
+            32.94650535426098
+          ],
+          [
+            -107.4152277403565,
+            32.94710443373606
+          ],
+          [
+            -107.41525073363452,
+            32.94764343813464
+          ],
+          [
+            -107.41526010126631,
+            32.94821855536701
+          ],
+          [
+            -107.41528192583613,
+            32.94868566867305
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.41379579255594,
+            32.932734761164824
+          ],
+          [
+            -107.4138779973876,
+            32.93292259990078
+          ],
+          [
+            -107.41392522631368,
+            32.93324392999334
+          ],
+          [
+            -107.41391459475227,
+            32.93378062733584
+          ],
+          [
+            -107.41394818994728,
+            32.93413476783932
+          ],
+          [
+            -107.41398577905204,
+            32.93456629980784
+          ],
+          [
+            -107.4140389979444,
+            32.93500371572065
+          ],
+          [
+            -107.41403315170854,
+            32.9352466900341
+          ],
+          [
+            -107.4140008411044,
+            32.93620720599829
+          ],
+          [
+            -107.41398379916514,
+            32.93667024217317
+          ],
+          [
+            -107.41397208243889,
+            32.93707786905992
+          ],
+          [
+            -107.41390140389066,
+            32.93745316731028
+          ],
+          [
+            -107.4138840026253,
+            32.93775057936703
+          ],
+          [
+            -107.41386589169083,
+            32.938034213303666
+          ],
+          [
+            -107.41383321816733,
+            32.93835289365704
+          ],
+          [
+            -107.41379414863898,
+            32.93854758184144
+          ],
+          [
+            -107.41377355026951,
+            32.938782998243326
+          ],
+          [
+            -107.41380112944707,
+            32.93909175896335
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.413781042219,
+            32.94146743627414
+          ],
+          [
+            -107.41382864214927,
+            32.94175554316679
+          ],
+          [
+            -107.41390359308498,
+            32.941939115350635
+          ],
+          [
+            -107.41399985924579,
+            32.94221852089
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.40981732035091,
+            32.948434804756424
+          ],
+          [
+            -107.41013605429181,
+            32.94871154986203
+          ],
+          [
+            -107.41029020699119,
+            32.94909929037066
+          ],
+          [
+            -107.41014939337548,
+            32.94953722313165
+          ],
+          [
+            -107.41009973270995,
+            32.9498961807542
+          ],
+          [
+            -107.41009056270752,
+            32.950472809802555
+          ],
+          [
+            -107.41015507162638,
+            32.951032996790055
+          ],
+          [
+            -107.4102168146325,
+            32.95142181636446
+          ],
+          [
+            -107.41026183639791,
+            32.95191990301134
+          ],
+          [
+            -107.41037726811527,
+            32.952199023732355
+          ],
+          [
+            -107.41051017655653,
+            32.95241561314585
+          ],
+          [
+            -107.41055343762397,
+            32.952804649007355
+          ],
+          [
+            -107.41059720444292,
+            32.95322484181552
+          ],
+          [
+            -107.4105128436546,
+            32.95372444094882
+          ],
+          [
+            -107.41062608707594,
+            32.95407946189854
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.40898863078952,
+            32.942128553881844
+          ],
+          [
+            -107.40901458311806,
+            32.942181092068545
+          ],
+          [
+            -107.40903822408143,
+            32.942228950869165
+          ],
+          [
+            -107.40918067802085,
+            32.94251733421662
+          ],
+          [
+            -107.40923081120023,
+            32.94259687014085
+          ],
+          [
+            -107.40942640857355,
+            32.94290718108675
+          ],
+          [
+            -107.40973393962456,
+            32.943758966103026
+          ],
+          [
+            -107.40973219329965,
+            32.94376936725337
+          ],
+          [
+            -107.40974351117391,
+            32.94447040965705
+          ],
+          [
+            -107.40984271213073,
+            32.94488995682249
+          ],
+          [
+            -107.40986974692922,
+            32.945419418086146
+          ],
+          [
+            -107.40980235980818,
+            32.94582532882807
+          ],
+          [
+            -107.40988282999301,
+            32.946229512899016
+          ],
+          [
+            -107.40997901440711,
+            32.946462114336875
+          ],
+          [
+            -107.4100946877713,
+            32.946756813913375
+          ],
+          [
+            -107.41013542816607,
+            32.94699006302271
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44912582929952,
+            32.90574688377626
+          ],
+          [
+            -107.44912807598604,
+            32.90572597901311
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44900930792569,
+            32.90716240411506
+          ],
+          [
+            -107.44898884520184,
+            32.90684251105789
+          ],
+          [
+            -107.44900746188779,
+            32.90658075037608
+          ],
+          [
+            -107.44907545357499,
+            32.90621538584289
+          ],
+          [
+            -107.44909575819537,
+            32.906026549935426
+          ],
+          [
+            -107.44912582929952,
+            32.90574688377626
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44780975967903,
+            32.89903773019359
+          ],
+          [
+            -107.44780662815195,
+            32.89885723082502
+          ],
+          [
+            -107.44779585016516,
+            32.89873787170177
+          ],
+          [
+            -107.4477956875701,
+            32.898736087136506
+          ],
+          [
+            -107.44779263958634,
+            32.89870232219011
+          ],
+          [
+            -107.44779227307372,
+            32.89869877493158
+          ],
+          [
+            -107.44773520759529,
+            32.89814752635981
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.42751318462376,
+            32.94239137718654
+          ],
+          [
+            -107.42662457563628,
+            32.94193946892319
+          ],
+          [
+            -107.42614054090332,
+            32.941758315211274
+          ],
+          [
+            -107.42568468632082,
+            32.94157663792927
+          ],
+          [
+            -107.42548307382836,
+            32.94141400128759
+          ],
+          [
+            -107.42536537835643,
+            32.94122603131514
+          ],
+          [
+            -107.42524452889958,
+            32.94085504100162
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.4249076409051,
+            32.93873184071474
+          ],
+          [
+            -107.42480208616429,
+            32.938128178737664
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.39011818694334,
+            32.90920162636753
+          ],
+          [
+            -107.38991115401645,
+            32.90871764419078
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38991115401645,
+            32.90871764419078
+          ],
+          [
+            -107.3898440489664,
+            32.90850912222041
+          ],
+          [
+            -107.38968612334281,
+            32.90811018000764
+          ],
+          [
+            -107.3896279466484,
+            32.907132680275076
+          ],
+          [
+            -107.38979470001628,
+            32.90590048136856
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38276111592043,
+            32.94908636830258
+          ],
+          [
+            -107.38273256656238,
+            32.949014919981494
+          ],
+          [
+            -107.38265637325664,
+            32.94886363910313
+          ],
+          [
+            -107.38258788030947,
+            32.94872764635516
+          ],
+          [
+            -107.3824700869212,
+            32.94860090815941
+          ],
+          [
+            -107.3823013392934,
+            32.94841934293547
+          ],
+          [
+            -107.38221717703276,
+            32.948328788217644
+          ],
+          [
+            -107.38208487225938,
+            32.94816133795776
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38144496814654,
+            32.947296097844585
+          ],
+          [
+            -107.38135340466626,
+            32.94705286565466
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3799600538802,
+            32.94358162015696
+          ],
+          [
+            -107.37996395167022,
+            32.94333406332649
+          ],
+          [
+            -107.37999737438867,
+            32.94318568720933
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3781721127157,
+            32.932731877250724
+          ],
+          [
+            -107.37795547769673,
+            32.93230453668908
+          ],
+          [
+            -107.37764690639662,
+            32.93195910702579
+          ],
+          [
+            -107.37764041786532,
+            32.931881319042304
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.4488002007888,
+            32.90437252198039
+          ],
+          [
+            -107.44876299167143,
+            32.90417498914417
+          ],
+          [
+            -107.44866955430547,
+            32.90337604869216
+          ],
+          [
+            -107.44846665183222,
+            32.90246888301536
+          ],
+          [
+            -107.4481950075785,
+            32.901782884979504
+          ],
+          [
+            -107.44818763241003,
+            32.90137096607576
+          ],
+          [
+            -107.44820562476687,
+            32.90123236231964
+          ],
+          [
+            -107.44822513078493,
+            32.90108209788756
+          ],
+          [
+            -107.44815985111157,
+            32.90075476871597
+          ],
+          [
+            -107.44808171474983,
+            32.90036296891706
+          ],
+          [
+            -107.44803155372267,
+            32.89998357997094
+          ],
+          [
+            -107.44781351194197,
+            32.89922738201777
+          ],
+          [
+            -107.44780975967903,
+            32.89903773019359
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44773520759529,
+            32.89814752635981
+          ],
+          [
+            -107.44773491923608,
+            32.89814473333817
+          ],
+          [
+            -107.4477319988131,
+            32.89811652932106
+          ],
+          [
+            -107.44771623697312,
+            32.897860365865775
+          ],
+          [
+            -107.4477001553329,
+            32.897461522004896
+          ],
+          [
+            -107.44763982088516,
+            32.89689337763332
+          ],
+          [
+            -107.44755262770873,
+            32.896576122130725
+          ],
+          [
+            -107.44743650788185,
+            32.896338612711666
+          ],
+          [
+            -107.44727195897967,
+            32.89613889265758
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.43135183495313,
+            32.94661208612485
+          ],
+          [
+            -107.43037365674532,
+            32.945570553333496
+          ],
+          [
+            -107.42907721082224,
+            32.94412860687219
+          ],
+          [
+            -107.42858839076372,
+            32.9436081466467
+          ],
+          [
+            -107.42751318462376,
+            32.94239137718654
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.42524452889958,
+            32.94085504100162
+          ],
+          [
+            -107.4249076409051,
+            32.93873184071474
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3888706488976,
+            32.91035701466813
+          ],
+          [
+            -107.38974543371113,
+            32.90975866595604
+          ],
+          [
+            -107.38981501900969,
+            32.90971107013638
+          ],
+          [
+            -107.38989669742858,
+            32.909655201144
+          ],
+          [
+            -107.38998177686913,
+            32.90959700703616
+          ],
+          [
+            -107.39014350416299,
+            32.90950367496191
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3767083708423,
+            32.92939175002319
+          ],
+          [
+            -107.37629058775985,
+            32.9285190780462
+          ],
+          [
+            -107.37590879028937,
+            32.927656988254306
+          ],
+          [
+            -107.37542446899383,
+            32.926820555223635
+          ],
+          [
+            -107.37501884371042,
+            32.92641754014624
+          ],
+          [
+            -107.37500981204857,
+            32.926408565066
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37500981204857,
+            32.926408565066
+          ],
+          [
+            -107.37297862507144,
+            32.924607619085826
+          ],
+          [
+            -107.37090016964237,
+            32.923139841811945
+          ],
+          [
+            -107.36875467114703,
+            32.92092667411739
+          ],
+          [
+            -107.36744229090743,
+            32.91933432693072
+          ],
+          [
+            -107.36602561805996,
+            32.91738393905154
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44914093177607,
+            32.90566923414817
+          ],
+          [
+            -107.44917215721534,
+            32.905531398857725
+          ],
+          [
+            -107.44907141205454,
+            32.90536414135222
+          ],
+          [
+            -107.44904377089325,
+            32.90531788564271
+          ],
+          [
+            -107.44901528711222,
+            32.90527021880375
+          ],
+          [
+            -107.44884051538212,
+            32.90473527477066
+          ],
+          [
+            -107.44880924323044,
+            32.90445388419057
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44912807598604,
+            32.90572597901311
+          ],
+          [
+            -107.44914093177607,
+            32.90566923414817
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.44880924323044,
+            32.90445388419057
+          ],
+          [
+            -107.4488002007888,
+            32.90437252198039
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.43667615413369,
+            32.96079247124942
+          ],
+          [
+            -107.43626082255365,
+            32.95995183299907
+          ],
+          [
+            -107.43580938498741,
+            32.95880347204269
+          ],
+          [
+            -107.43589051273904,
+            32.95791187421318
+          ],
+          [
+            -107.43577857097652,
+            32.95696186096987
+          ],
+          [
+            -107.43512561973249,
+            32.9554935269018
+          ],
+          [
+            -107.43460694057227,
+            32.95462934525366
+          ],
+          [
+            -107.43421439116615,
+            32.95412800095354
+          ],
+          [
+            -107.43373765614321,
+            32.9528989658414
+          ],
+          [
+            -107.4337457733201,
+            32.95194751473357
+          ],
+          [
+            -107.43367917132662,
+            32.950835025362444
+          ],
+          [
+            -107.43329679444278,
+            32.94950365094404
+          ],
+          [
+            -107.43280116335781,
+            32.94857845987708
+          ],
+          [
+            -107.43250567961309,
+            32.94813667404817
+          ],
+          [
+            -107.43197117213757,
+            32.947758465348095
+          ],
+          [
+            -107.43162566301132,
+            32.947195824964034
+          ],
+          [
+            -107.43135183495313,
+            32.94661208612485
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.42480208616429,
+            32.938128178737664
+          ],
+          [
+            -107.42473054613168,
+            32.93755001862663
+          ],
+          [
+            -107.42464756605393,
+            32.93689600800446
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.42464756605393,
+            32.93689600800446
+          ],
+          [
+            -107.42448131574264,
+            32.93531928567238
+          ],
+          [
+            -107.42450825711632,
+            32.93369958687919
+          ],
+          [
+            -107.42449501325407,
+            32.93212435169499
+          ],
+          [
+            -107.42450609487143,
+            32.93102093207858
+          ],
+          [
+            -107.42438224234658,
+            32.93026631117333
+          ],
+          [
+            -107.42433211186214,
+            32.92995302512018
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3928138676176,
+            32.9155142991784
+          ],
+          [
+            -107.3928122569383,
+            32.91544567201552
+          ],
+          [
+            -107.39281059685165,
+            32.91537490462851
+          ],
+          [
+            -107.3928080600093,
+            32.91526684176464
+          ],
+          [
+            -107.3927249838118,
+            32.91506192933286
+          ],
+          [
+            -107.39245338896545,
+            32.91474462731112
+          ],
+          [
+            -107.39230030975284,
+            32.91447486313935
+          ],
+          [
+            -107.39211499000466,
+            32.914081858629395
+          ],
+          [
+            -107.39192541493699,
+            32.913507383650035
+          ],
+          [
+            -107.39180681306497,
+            32.913039003124496
+          ],
+          [
+            -107.39182512073046,
+            32.91256834413736
+          ],
+          [
+            -107.39169267941318,
+            32.911926903638204
+          ],
+          [
+            -107.39146496367518,
+            32.91139432334821
+          ],
+          [
+            -107.39095539972014,
+            32.910940691870714
+          ],
+          [
+            -107.39019249019374,
+            32.91045108717645
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3905560312027,
+            32.91574884102697
+          ],
+          [
+            -107.39062111684,
+            32.915646567922906
+          ],
+          [
+            -107.39066233873176,
+            32.91558179512212
+          ],
+          [
+            -107.39072306394665,
+            32.91548637820655
+          ],
+          [
+            -107.3908921969517,
+            32.915039940089024
+          ],
+          [
+            -107.39097899397109,
+            32.91463815336001
+          ],
+          [
+            -107.39094422288139,
+            32.914249208259584
+          ],
+          [
+            -107.39084120588124,
+            32.91395878107846
+          ],
+          [
+            -107.39066918389422,
+            32.913734421226344
+          ],
+          [
+            -107.39043895287342,
+            32.913489390901
+          ],
+          [
+            -107.39023221639054,
+            32.913151997710685
+          ],
+          [
+            -107.39016430106014,
+            32.91299082687804
+          ],
+          [
+            -107.39012388316056,
+            32.91263443737256
+          ],
+          [
+            -107.3901787513598,
+            32.912238589882676
+          ],
+          [
+            -107.3902183949116,
+            32.91211764700207
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38939981319379,
+            32.91745884707422
+          ],
+          [
+            -107.38999722429877,
+            32.91668590875947
+          ],
+          [
+            -107.39011110013405,
+            32.9165347618596
+          ],
+          [
+            -107.39018322227496,
+            32.916439035280796
+          ],
+          [
+            -107.39044746530905,
+            32.91608830716083
+          ],
+          [
+            -107.3905560312027,
+            32.91574884102697
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.39023257392003,
+            32.91207439403771
+          ],
+          [
+            -107.39026255698928,
+            32.91198292428766
+          ],
+          [
+            -107.39022294757346,
+            32.91193489301574
+          ],
+          [
+            -107.39014583618948,
+            32.91165485336433
+          ],
+          [
+            -107.3901470075926,
+            32.91163025318079
+          ],
+          [
+            -107.39014884015577,
+            32.91159181971669
+          ],
+          [
+            -107.39015873779357,
+            32.91138413633933
+          ],
+          [
+            -107.39015997567203,
+            32.91113500221962
+          ],
+          [
+            -107.39018002786581,
+            32.910923927865014
+          ],
+          [
+            -107.39019520759749,
+            32.91075055381727
+          ],
+          [
+            -107.39019249019374,
+            32.91045108717645
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3902183949116,
+            32.91211764700207
+          ],
+          [
+            -107.39023257392003,
+            32.91207439403771
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.39019249019374,
+            32.91045108717645
+          ],
+          [
+            -107.39015378268648,
+            32.91031376989338
+          ],
+          [
+            -107.39011239191146,
+            32.91016692966041
+          ],
+          [
+            -107.39011171907329,
+            32.91008201835569
+          ],
+          [
+            -107.39010850759615,
+            32.90967709293032
+          ],
+          [
+            -107.39014350416299,
+            32.90950367496191
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.39015093502701,
+            32.90946685599121
+          ],
+          [
+            -107.39016705798976,
+            32.90938695769354
+          ],
+          [
+            -107.39011818694334,
+            32.90920162636753
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.39014350416299,
+            32.90950367496191
+          ],
+          [
+            -107.39015093502701,
+            32.90946685599121
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38313552295106,
+            32.950002778113934
+          ],
+          [
+            -107.38312161074226,
+            32.94998852719791
+          ],
+          [
+            -107.38309110126028,
+            32.94991217526615
+          ],
+          [
+            -107.38290106805181,
+            32.94943660829645
+          ],
+          [
+            -107.38282649171356,
+            32.9492499768327
+          ],
+          [
+            -107.38276111592043,
+            32.94908636830258
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38208487225938,
+            32.94816133795776
+          ],
+          [
+            -107.38184861893293,
+            32.94786232433975
+          ],
+          [
+            -107.38144496814654,
+            32.947296097844585
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38135340466626,
+            32.94705286565466
+          ],
+          [
+            -107.38127143609152,
+            32.9468351172578
+          ],
+          [
+            -107.38107467539989,
+            32.946578322103186
+          ],
+          [
+            -107.380998438975,
+            32.9464788271328
+          ],
+          [
+            -107.3806948937489,
+            32.946111022768974
+          ],
+          [
+            -107.38064268456291,
+            32.94592435865339
+          ],
+          [
+            -107.38062145827107,
+            32.94584846683085
+          ],
+          [
+            -107.3804903761048,
+            32.94559496767918
+          ],
+          [
+            -107.38041560123887,
+            32.94545035935948
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37999737438867,
+            32.94318568720933
+          ],
+          [
+            -107.38005003812219,
+            32.94295188979482
+          ],
+          [
+            -107.38034005741505,
+            32.94223377270805
+          ],
+          [
+            -107.38053959390089,
+            32.94167898208261
+          ],
+          [
+            -107.38064244830599,
+            32.94095017499024
+          ],
+          [
+            -107.3805153375916,
+            32.94052573065647
+          ],
+          [
+            -107.38033645157749,
+            32.94011798169784
+          ],
+          [
+            -107.3803951322268,
+            32.93955355719965
+          ],
+          [
+            -107.38031295973451,
+            32.938979498637444
+          ],
+          [
+            -107.38006479295076,
+            32.93858908484741
+          ],
+          [
+            -107.37996663314134,
+            32.93804520469224
+          ],
+          [
+            -107.37978167810917,
+            32.93751930302755
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.38041560123887,
+            32.94545035935948
+          ],
+          [
+            -107.3801202791909,
+            32.944967090321654
+          ],
+          [
+            -107.37992766691926,
+            32.94429002404276
+          ],
+          [
+            -107.37995845577731,
+            32.943683037743675
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37995845577731,
+            32.943683037743675
+          ],
+          [
+            -107.3799600538802,
+            32.94358162015696
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37978167810917,
+            32.93751930302755
+          ],
+          [
+            -107.379666734177,
+            32.93730291988311
+          ],
+          [
+            -107.37955719361125,
+            32.93697250236035
+          ],
+          [
+            -107.37948941572306,
+            32.936612619968756
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37948941572306,
+            32.936612619968756
+          ],
+          [
+            -107.37943540092334,
+            32.936244683338316
+          ],
+          [
+            -107.37929259125106,
+            32.93588975286289
+          ],
+          [
+            -107.37915378177672,
+            32.93554476166934
+          ],
+          [
+            -107.37889343832929,
+            32.935258369365044
+          ],
+          [
+            -107.37860115258695,
+            32.934692007871554
+          ],
+          [
+            -107.37853878794668,
+            32.934161612314924
+          ],
+          [
+            -107.37845967331961,
+            32.93364662596163
+          ],
+          [
+            -107.37842035495794,
+            32.93341100287405
+          ],
+          [
+            -107.37838359679485,
+            32.93319071622614
+          ],
+          [
+            -107.3782054968066,
+            32.93279773074608
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3782054968066,
+            32.93279773074608
+          ],
+          [
+            -107.3781721127157,
+            32.932731877250724
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37764041786532,
+            32.931881319042304
+          ],
+          [
+            -107.37763531004462,
+            32.931820069373416
+          ],
+          [
+            -107.3776186804321,
+            32.931620697019355
+          ],
+          [
+            -107.37760653071787,
+            32.93138439523464
+          ],
+          [
+            -107.37744751364121,
+            32.930679979071805
+          ],
+          [
+            -107.37700682531566,
+            32.92995628536493
+          ],
+          [
+            -107.3767083708423,
+            32.92939175002319
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "unnamed faults west of Caballo Reservoir",
+        "age": "middle and late Quaternary",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37450564876502,
+            32.72047359616329
+          ],
+          [
+            -107.3743559957269,
+            32.720431922320834
+          ],
+          [
+            -107.3739111679645,
+            32.72033044366315
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3731575676794,
+            32.720158521751166
+          ],
+          [
+            -107.37303459819847,
+            32.7201304667639
+          ],
+          [
+            -107.37290319802861,
+            32.720095605287796
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36866615026061,
+            32.71777045305301
+          ],
+          [
+            -107.36813387330194,
+            32.71720981804791
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36281070126999,
+            32.71437837464192
+          ],
+          [
+            -107.36246007623821,
+            32.71418297903764
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3620291310402,
+            32.7137706742469
+          ],
+          [
+            -107.36113563701423,
+            32.71303885696912
+          ],
+          [
+            -107.3589182454484,
+            32.71180571080638
+          ],
+          [
+            -107.35771906281603,
+            32.711573218044016
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.34952140674075,
+            32.70920294532527
+          ],
+          [
+            -107.34839604676013,
+            32.708918154198265
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.34839604676013,
+            32.708918154198265
+          ],
+          [
+            -107.34799261785761,
+            32.70880172196617
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3448341781496,
+            32.70808884693361
+          ],
+          [
+            -107.34330580698305,
+            32.707845517324316
+          ],
+          [
+            -107.34058250311381,
+            32.70761149719524
+          ],
+          [
+            -107.33421674007492,
+            32.707223688099816
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37500965304676,
+            32.72061394302534
+          ],
+          [
+            -107.37450564876502,
+            32.72047359616329
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3739111679645,
+            32.72033044366315
+          ],
+          [
+            -107.3731575676794,
+            32.720158521751166
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37290319802861,
+            32.720095605287796
+          ],
+          [
+            -107.37264689699995,
+            32.72002760318829
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37264689699995,
+            32.72002760318829
+          ],
+          [
+            -107.37192889515293,
+            32.71983709999242
+          ],
+          [
+            -107.37149446988151,
+            32.71958805399687
+          ],
+          [
+            -107.37115935066984,
+            32.71941331991715
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.37115935066984,
+            32.71941331991715
+          ],
+          [
+            -107.37044533734266,
+            32.71904102388981
+          ],
+          [
+            -107.3694181793923,
+            32.718341905887094
+          ],
+          [
+            -107.36875319790995,
+            32.71786213806565
+          ],
+          [
+            -107.36866615026061,
+            32.71777045305301
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36813387330194,
+            32.71720981804791
+          ],
+          [
+            -107.36769510467614,
+            32.71662668234495
+          ],
+          [
+            -107.3670787049827,
+            32.716197074120196
+          ],
+          [
+            -107.36659614708006,
+            32.71592820977089
+          ],
+          [
+            -107.3660440757441,
+            32.715635980274115
+          ],
+          [
+            -107.36587607731124,
+            32.71554198019343
+          ],
+          [
+            -107.36560260678257,
+            32.71535536891714
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36560260678257,
+            32.71535536891714
+          ],
+          [
+            -107.3654730760068,
+            32.715266978938274
+          ],
+          [
+            -107.36519708660205,
+            32.71520361989661
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36511543064105,
+            32.715184874215836
+          ],
+          [
+            -107.3649590761709,
+            32.715148979120904
+          ],
+          [
+            -107.36447707702037,
+            32.71502197890601
+          ],
+          [
+            -107.36398207565439,
+            32.71492597904616
+          ],
+          [
+            -107.36370707619311,
+            32.71482197876645
+          ],
+          [
+            -107.3635662050852,
+            32.71475824376768
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.3635662050852,
+            32.71475824376768
+          ],
+          [
+            -107.3632760770962,
+            32.71462698018263
+          ],
+          [
+            -107.36310607631859,
+            32.71454298003335
+          ],
+          [
+            -107.36303195273122,
+            32.71450167301523
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36303195273122,
+            32.71450167301523
+          ],
+          [
+            -107.36281070126999,
+            32.71437837464192
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.36246007623821,
+            32.71418297903764
+          ],
+          [
+            -107.3620291310402,
+            32.7137706742469
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35771906281603,
+            32.711573218044016
+          ],
+          [
+            -107.35662646978375,
+            32.71131699866908
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35662646978375,
+            32.71131699866908
+          ],
+          [
+            -107.35605896089962,
+            32.71118391069575
+          ],
+          [
+            -107.35489619776553,
+            32.71085222087325
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35489619776553,
+            32.71085222087325
+          ],
+          [
+            -107.35379500695765,
+            32.71053808223122
+          ],
+          [
+            -107.35371802672768,
+            32.71051403326184
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35365377293034,
+            32.71049396082924
+          ],
+          [
+            -107.35286430471258,
+            32.71024733166903
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35286430471258,
+            32.71024733166903
+          ],
+          [
+            -107.35240763176486,
+            32.71010466464405
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35240763176486,
+            32.71010466464405
+          ],
+          [
+            -107.35177133528617,
+            32.70990587872529
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35177133528617,
+            32.70990587872529
+          ],
+          [
+            -107.35082987481728,
+            32.70961174967359
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.35082987481728,
+            32.70961174967359
+          ],
+          [
+            -107.34952140674075,
+            32.70920294532527
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -107.34799261785761,
+            32.70880172196617
+          ],
+          [
+            -107.34664242483277,
+            32.708412038193686
+          ],
+          [
+            -107.345500564597,
+            32.70819493522458
+          ],
+          [
+            -107.3448341781496,
+            32.70808884693361
+          ]
+        ]
+      },
+      "properties": {
+        "fault_name": "Arroyo Cuervo fault",
+        "age": "class B",
+        "slip_rate": "Less than 0.2 mm/yr"
+      }
+    }
+  ]
+}

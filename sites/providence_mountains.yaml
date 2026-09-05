@@ -1,0 +1,19 @@
+# Providence Mountains, CA -- Skarn/Carbonate Replacement
+# Lenticular intrusion-related Ag-Pb (galena) replacement orebodies in the Cambrian Bonanza
+# King Formation; superb bare-rock desert exposure in the eastern Mojave.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: providence_mountains
+name: "Providence Mountains, CA"
+bbox_wgs84: [-115.76, 34.72, -115.3, 35.17]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

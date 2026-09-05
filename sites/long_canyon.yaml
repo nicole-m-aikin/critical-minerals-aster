@@ -1,0 +1,19 @@
+# Long Canyon, NV -- Sediment-hosted
+# Off-trend Carlin-type discovery on the E flank of the Pequop Mtns; sub-5 um gold in oxidized
+# arsenian pyrite in Cambrian Notch Peak dolomite.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: long_canyon
+name: "Long Canyon, NV"
+bbox_wgs84: [-114.81, 40.62, -114.35, 41.08]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

@@ -1,0 +1,19 @@
+# Lemitar Mountains, NM -- Alkaline/Carbonatite
+# ~100+ Cambrian calcite-dolomite carbonatite dikes (bastnasite-fluorite-barite) intruding
+# Proterozoic basement with fenitization, Lemitar + Chupadera Mtns; REE up to ~1.1%.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: at most weak enrichment; alkaline/carbonatite alteration footprints are small relative to a
+# scene and only patchily TIR-expressive.
+id: lemitar
+name: "Lemitar Mountains, NM"
+bbox_wgs84: [-107.175, 33.945, -106.725, 34.395]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

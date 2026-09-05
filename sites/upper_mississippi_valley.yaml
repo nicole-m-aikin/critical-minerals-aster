@@ -1,0 +1,19 @@
+# Upper Mississippi Valley, WI-IL-IA -- Sediment-hosted
+# The classic MVT district; stratabound Zn-Pb in Ordovician Galena/Platteville dolostone,
+# Grant-Lafayette-Iowa-Jo Daviess Cos.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: upper_mississippi_valley
+name: "Upper Mississippi Valley, WI-IL-IA"
+bbox_wgs84: [-90.53, 42.32, -90.07, 42.78]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

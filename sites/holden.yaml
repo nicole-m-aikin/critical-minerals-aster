@@ -1,0 +1,19 @@
+# Holden, WA -- Volcanogenic/VMS
+# Kuroko-type Cu-Zn-Au VMS in Cascade metavolcanics; large exposed gossan/tailings in a
+# montane rain-shadowed setting E of the Cascade crest above Lake Chelan.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: holden
+name: "Holden, WA"
+bbox_wgs84: [-121.01, 47.98, -120.55, 48.42]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

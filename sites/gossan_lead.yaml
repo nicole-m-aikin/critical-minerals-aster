@@ -1,0 +1,19 @@
+# Great Gossan Lead, VA -- Volcanogenic/VMS
+# Besshi-type stratiform pyrrhotite-Cu-Zn massive sulfide, Blue Ridge; a humid vegetated
+# Appalachian analog to Ducktown (VMS genesis + vegetation suppression).
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: gossan_lead
+name: "Great Gossan Lead, VA"
+bbox_wgs84: [-80.95, 36.53, -80.49, 36.97]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

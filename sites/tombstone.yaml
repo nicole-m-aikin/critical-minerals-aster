@@ -1,0 +1,19 @@
+# Tombstone, AZ — Ag-Pb-Zn-Cu carbonate-replacement / fissure veins (Tombstone district)
+# Closest possible geological and climatic analog to Bisbee: same region (Cochise County,
+# ~25 km north of Bisbee), same arid Sonoran setting, same carbonate-replacement style
+# mineralization in Paleozoic limestone. Added specifically to test whether Bisbee's fully
+# robust signal (see docs/learning_log.md) replicates at a matched analog site rather than
+# being a one-off.
+id: tombstone
+name: "Tombstone, AZ"
+bbox_wgs84: [-110.32, 31.49, -109.82, 31.93]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

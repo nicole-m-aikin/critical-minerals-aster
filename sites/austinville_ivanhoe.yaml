@@ -1,0 +1,19 @@
+# Austinville-Ivanhoe, VA -- Sediment-hosted
+# Strata-bound MVT Zn-Pb in the Cambrian Shady Dolomite on a carbonate-ramp platform margin,
+# Wythe Co.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: austinville_ivanhoe
+name: "Austinville-Ivanhoe, VA"
+bbox_wgs84: [-81.16, 36.58, -80.7, 37.04]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

@@ -1,0 +1,20 @@
+# Wet Mountains, CO -- Alkaline/Carbonatite
+# Ediacaran-Cambrian mafic-ultramafic + nepheline-syenite complexes (McClure Mtn, Gem Park)
+# cut by carbonatite, lamprophyre and syenite dikes plus Th-REE fracture veins; three exposed
+# complexes within the box.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: at most weak enrichment; alkaline/carbonatite alteration footprints are small relative to a
+# scene and only patchily TIR-expressive.
+id: wet_mountains
+name: "Wet Mountains, CO"
+bbox_wgs84: [-105.695, 38.045, -105.245, 38.495]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

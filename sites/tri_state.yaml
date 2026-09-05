@@ -1,0 +1,19 @@
+# Tri-State District, MO-KS-OK -- Sediment-hosted
+# Textbook Mississippi Valley-Type Pb-Zn: sphalerite-galena in strata-bound solution breccias
+# in Mississippian cherty limestone (Boone Fm).
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: tri_state
+name: "Tri-State District, MO-KS-OK"
+bbox_wgs84: [-94.93, 36.77, -94.47, 37.23]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

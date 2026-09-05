@@ -1,0 +1,19 @@
+# French Creek - Grace Mine, PA -- Skarn/Carbonate Replacement
+# Two Cornwall-type magnetite skarns (Grace Mine, French Creek Mines at St. Peters) in humid
+# forested Berks/Chester Co. woodland. Vegetation-suppression control.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: french_creek_pa
+name: "French Creek - Grace Mine, PA"
+bbox_wgs84: [-76.06, 39.96, -75.6, 40.41]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

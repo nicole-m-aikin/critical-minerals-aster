@@ -1,0 +1,20 @@
+# Cherry Creek, NV -- Skarn/Carbonate Replacement
+# Intrusion-related scheelite tactite (garnet-pyroxene skarn) plus Ag-Pb carbonate
+# replacement, jasperoid and decalcification in Paleozoic carbonate, Egan Range - same
+# mineralogy as Eureka.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: strong-zone enrichment ABOVE the site-specific null -- this is an independent replication
+# test of the arid skarn/carbonate-replacement success regime outside SE Arizona.
+id: cherry_creek
+name: "Cherry Creek, NV"
+bbox_wgs84: [-115.13, 39.68, -114.67, 40.13]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"

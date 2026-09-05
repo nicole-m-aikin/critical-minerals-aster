@@ -5,6 +5,30 @@ data/dem/
 data/*.csv
 data/mrds/*.csv
 data/*.h5
+
+# Per-site Esri World Imagery cache (regenerable via basemap.py); keep the
+# committed US state-boundary GeoJSON that Figure 1 needs for offline rendering.
+data/basemap/*/
+!data/basemap/us_states.geojson
+
+# Ad-hoc analysis-chain logs written to the repo root during long re-runs
+scratch_*
+*.scratch.log
+scripts/*.log
+
+# ---------------------------------------------------------------------------
+# Pre-publication / internal working material — NOT for the public portfolio repo.
+# These hold unpublished results, candid self-assessment, manuscript drafts, and
+# forward-looking research strategy. Keep local; do not commit until publication.
+# ---------------------------------------------------------------------------
+paper/
+docs/publication_audit.md
+docs/publication_readiness_report.md
+docs/expansion_plan_100_sites.md
+docs/expansion_candidates.md
+docs/session_handoff.md
+docs/learning_log.md
+docs/what_i_learned.md
 __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
@@ -18,9 +42,13 @@ results/*.parquet
 results/*.json
 !results/.gitkeep
 
-# Optional: large per-site generated outputs (uncomment if you do not want them in git)
-# figures/sites/
+# Per-site figure galleries: regenerable via `run --site {id}`, not worth versioning
+# at 100+ sites (~10 MB/site). The original 45 sites' galleries stay tracked (already
+# public, untouched by this rule — .gitignore never untracks an already-tracked file);
+# this only stops NEW site galleries from being added going forward.
+figures/sites/
 # data/sites/*/vectors/
 .DS_Store
 .netrc
 .claude/
+INTERVIEW_PREP.md

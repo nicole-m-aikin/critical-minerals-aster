@@ -1,0 +1,20 @@
+# West Shasta, CA -- Volcanogenic/VMS
+# Kuroko-type Cu-Zn-Au massive sulfide in the Devonian Balaklala Rhyolite, an exposed
+# submarine felsic-arc sequence, semi-arid Klamath Mtns. Tests whether an exposed VMS system
+# can show any TIR signal at all.
+# Added in the +58 expansion (docs/expansion_candidates.md). Pre-registered expectation
+# BEFORE running the pipeline: NO strong-zone enrichment over the site-specific null (deposit style produces no
+# intrusion-related surface alteration, and/or terrain suppresses the spectral signature).
+id: west_shasta
+name: "West Shasta, CA"
+bbox_wgs84: [-122.76, 40.45, -122.3, 40.9]
+layout: nested
+
+classification:
+  low_pct: 70
+  high_pct: 90
+  strong_score_min: 3
+
+temporal:
+  start: "2010-01-01"
+  end: "2023-12-31"
