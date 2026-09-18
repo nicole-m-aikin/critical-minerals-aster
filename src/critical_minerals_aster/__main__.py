@@ -129,7 +129,7 @@ def cmd_demo(args: argparse.Namespace) -> int:
 
     repo = Path(args.repo_root) if args.repo_root else _repo_root()
     db_path = repo / "results" / "results.duckdb"
-    sig_path = repo / "results" / "significance_critical_only.csv"
+    sig_path = repo / "results" / "phase4_fdr_corrected_significance.csv"
 
     print("\n" + "=" * 70)
     print("  ASTER TIR Critical Minerals — Demo (pre-built results)")
@@ -140,18 +140,43 @@ def cmd_demo(args: argparse.Namespace) -> int:
 
     if sig_path.exists():
         sig = pd.read_csv(sig_path)
-        sig_sites = sig[sig["sig_crit"]].sort_values("hr_crit_pct", ascending=False)
-        print(f"\n12 of 45 sites significant on critical-mineral binomial test (p < 0.05)\n")
-        print(f"{'Site':<28} {'n crit':>8} {'Hits':>6} {'Hit rate':>10} {'p (crit)':>10}")
-        print("-" * 66)
+        n_total = len(sig)
+        binomial = sig["sig_fdr_binomial"].fillna(False).astype(bool)
+        mannwhitney = sig["sig_fdr_mannwhitney"].fillna(False).astype(bool)
+        sig_sites = sig[binomial].sort_values("enrichment", ascending=False)
+        print(
+            f"\n{int(binomial.sum())} of {n_total} sites significant on the primary test"
+            " (BH-FDR corrected exact binomial, α = 0.05)"
+        )
+        print(
+            f"{int(mannwhitney.sum())} of {n_total} on the threshold-free continuous-score test"
+            f"  ·  union {int((binomial | mannwhitney).sum())}\n"
+        )
+        print(
+            f"{'Site':<28} {'n crit':>8} {'Hits':>6} {'Hit rate':>10}"
+            f" {'Null':>7} {'Enrich':>8} {'q (binom)':>10}"
+        )
+        print("-" * 82)
         for _, row in sig_sites.iterrows():
+            name = str(row["site_name"])
+            if len(name) > 26:
+                name = name[:25] + "\u2026"
             print(
-                f"  {row['site_name']:<26} {int(row['n_crit']):>8}"
-                f" {int(row['hits_crit']):>6} {row['hr_crit_pct']:>9.1f}%"
-                f" {row['binom_p_crit']:>10.4f}"
+                f"  {name:<26} {int(row['n_crit']):>8}"
+                f" {int(row['hits_crit']):>6} {row['hit_rate_crit_pct']:>9.1f}%"
+                f" {row['p0_null'] * 100:>6.1f}% {row['enrichment']:>7.2f}x"
+                f" {row['q_binomial']:>10.4f}"
             )
+        print(
+            "\nEnrichment is the observed hit rate divided by each site's own geometric"
+            "\nnull (zone area / TIR footprint area). Of these, 13 also survive DBSCAN"
+            "\nspatial declustering at every radius — see docs/results.md."
+        )
     else:
-        print("\n  (significance_critical_only.csv not found — run synthesize first)")
+        print(
+            "\n  (phase4_fdr_corrected_significance.csv not found —"
+            " run scripts/phase4_fdr_correction.py first)"
+        )
 
     # --- DuckDB query if available ---
     if db_path.exists():
@@ -174,18 +199,26 @@ def cmd_demo(args: argparse.Namespace) -> int:
         except Exception as exc:
             print(f"\n  (DuckDB query skipped: {exc})")
 
-    # --- Discovery bias summary ---
-    bias_path = repo / "results" / "discovery_bias_analysis.csv"
+    # --- Discovery bias summary (unconditional framing; see docs/results.md) ---
+    bias_path = repo / "results" / "phase7_discovery_bias_pooled.csv"
     if bias_path.exists():
         bias = pd.read_csv(bias_path)
-        pre_hits = bias["hits_pre50"].sum()
-        pre_n = bias["n_pre50"].sum()
-        post_hits = bias["hits_post50"].sum()
-        post_n = bias["n_post50"].sum()
-        print(f"\nDiscovery-bias stratified test (dated deposits only):")
-        print(f"  Pre-1950  : {pre_hits}/{pre_n} hits ({pre_hits/pre_n*100:.1f}%) — p < 0.001")
-        print(f"  Post-1950 : {post_hits}/{post_n} hits ({post_hits/post_n*100:.1f}%) — p = 0.044")
-        print(f"  Both cohorts above null (~10.5–10.9%); signal is not purely circular.")
+        primary = bias[bias["framing"].str.contains("PRIMARY", na=False)]
+        if not primary.empty:
+            n_sites = int(primary["n_sites"].iloc[0])
+            print(
+                f"\nDiscovery-bias stratification (dated deposits only, {n_sites} sites):"
+            )
+            for _, row in primary.iterrows():
+                print(
+                    f"  {row['cohort']:<10}: {int(row['hits'])}/{int(row['n'])} hits"
+                    f" ({row['hr_pct']:.1f}% vs {row['null_hr_pct']:.1f}% null)"
+                    f" — {row['enrichment']:.2f}x, p = {row['pooled_p']:.2f}"
+                )
+            print(
+                "  No enrichment in either cohort. This test is uninformative rather than"
+                "\n  exculpatory; the earlier circularity claim is retracted."
+            )
 
     # --- Where to find figures ---
     gallery = repo / "figures" / "index.html"
@@ -200,9 +233,11 @@ def cmd_demo(args: argparse.Namespace) -> int:
           python -m critical_minerals_aster run --site mcdermitt --mosaic
           python -m critical_minerals_aster synthesize
 
-        To reproduce significance tests:
-          conda run -n aster-minerals python scripts/significance_critical_only.py
-          conda run -n aster-minerals python scripts/discovery_bias_analysis.py
+        To reproduce the corrected significance chain:
+          conda run -n aster-minerals python scripts/site_specific_null_significance.py
+          conda run -n aster-minerals python scripts/phase3_monte_carlo_and_continuous_score.py
+          conda run -n aster-minerals python scripts/phase4_fdr_correction.py
+          conda run -n aster-minerals python scripts/phase5_clustering_sensitivity.py
         """)
     )
     return 0

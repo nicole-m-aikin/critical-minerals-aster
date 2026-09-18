@@ -41,25 +41,124 @@ def load_site_summaries(
     return pd.concat(frames, ignore_index=True)
 
 
-def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | None:
-    """Generate figures/07_hitrate_comparison.png — all-deposits vs critical-only hit rate per site.
+#: Colours for the two FDR-corrected significance tiers plus the null tier.
+SIG_PRIMARY_COLOR = "#c0392b"    # red   — BH-FDR significant, exact binomial test
+SIG_SECONDARY_COLOR = "#e67e22"  # orange — BH-FDR significant on Mann-Whitney U only
+SIG_NONE_COLOR = "#5d8aa8"       # blue-grey — not significant under FDR
 
-    Each site gets two dots connected by a line: grey for the all-deposits rate
-    (potentially inflated by aggregate/stone) and coloured for the critical-only rate
-    (red = p < 0.05, blue-grey = not significant).  Sites are sorted by all-deposits
+
+def load_fdr_significance(results_dir: Path) -> pd.DataFrame | None:
+    """Load FDR-corrected per-site significance, indexed by ``site_id``.
+
+    Reads ``results/phase4_fdr_corrected_significance.csv`` — the output of the
+    corrected framework described in docs/results.md — and exposes the two
+    significance tiers the synthesis figures colour by:
+
+    ``sig_primary``
+        Benjamini-Hochberg-corrected one-sided exact binomial test against the
+        site's own geometric null.  This is the headline claim.
+    ``sig_secondary_only``
+        Clears BH-FDR on the threshold-free Mann-Whitney U test on the
+        continuous 0-6 score, but *not* on the binomial test.
+
+    Returns ``None`` when the file is absent, so callers can fall back to
+    all-deposit hit rates without significance colouring.
+    """
+    path = Path(results_dir) / "phase4_fdr_corrected_significance.csv"
+    if not path.exists():
+        return None
+    fdr = pd.read_csv(path)
+    binomial = fdr["sig_fdr_binomial"].fillna(False).astype(bool)
+    mannwhitney = fdr["sig_fdr_mannwhitney"].fillna(False).astype(bool)
+    out = pd.DataFrame(
+        {
+            "site_id": fdr["site_id"],
+            "hr_crit_pct": fdr["hit_rate_crit_pct"],
+            "n_crit": fdr["n_crit"],
+            "sig_primary": binomial,
+            "sig_secondary_only": mannwhitney & ~binomial,
+        }
+    )
+    return out.set_index("site_id")
+
+
+def _tier_color(row) -> str:
+    if row["sig_primary"]:
+        return SIG_PRIMARY_COLOR
+    if row["sig_secondary_only"]:
+        return SIG_SECONDARY_COLOR
+    return SIG_NONE_COLOR
+
+
+def _per_site_barh_geometry(n: int) -> tuple[tuple[float, float], float]:
+    """Figure size and y-tick font size for a one-row-per-site horizontal chart.
+
+    Per-row height shrinks once the survey passes ~50 sites so the figure keeps
+    a roughly 2:1 aspect ratio.  Without this the 109-site run rendered a
+    10 x 65 inch strip (6.6:1) whose title and legend were unreadable.
+    """
+    row_h = 0.6 if n <= 50 else max(0.2, 30.0 / n)
+    height = max(4.0, n * row_h)
+    width = 10.0 if n <= 50 else 13.0
+    fontsize = 8.0 if n <= 50 else 6.0
+    return (width, height), fontsize
+
+
+def _fdr_legend_handles(n_primary: int, n_secondary: int):
+    from matplotlib.patches import Patch
+
+    return [
+        Patch(
+            facecolor=SIG_PRIMARY_COLOR, edgecolor="black", linewidth=0.5,
+            label=f"FDR-significant, binomial (n={n_primary})",
+        ),
+        Patch(
+            facecolor=SIG_SECONDARY_COLOR, edgecolor="black", linewidth=0.5,
+            label=f"FDR-significant, continuous score only (n={n_secondary})",
+        ),
+        Patch(
+            facecolor=SIG_NONE_COLOR, edgecolor="black", linewidth=0.5,
+            label="Not significant under FDR",
+        ),
+    ]
+
+
+def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | None:
+    """Generate figures/07_hitrate_comparison.png — all-deposit vs critical-only hit rate per site.
+
+    Each site gets two dots connected by a line: grey for the all-deposit rate
+    (potentially inflated by aggregate/stone) and coloured for the critical-mineral
+    rate, tiered by FDR-corrected significance.  Sites are sorted by all-deposit
     rate so the inflation story is visible as leftward shifts.
     """
-    sig_path = Path(results_dir) / "significance_critical_only.csv"
-    if not sig_path.exists():
+    results_dir = Path(results_dir)
+    fdr = load_fdr_significance(results_dir)
+    if fdr is None:
         return None
+
+    national = load_site_summaries(results_dir, row_types=["site"])
+    if national.empty:
+        return None
+
+    sig = (
+        national.set_index("site_id")[["site_name", "hit_rate_pct"]]
+        .rename(columns={"hit_rate_pct": "hr_all_pct"})
+        .join(fdr, how="inner")
+        .dropna(subset=["hr_crit_pct"])
+        .sort_values("hr_all_pct", ascending=True)
+        .reset_index()
+    )
+    if sig.empty:
+        return None
+
     figures_dir = Path(figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
 
-    sig = pd.read_csv(sig_path).sort_values("hr_all_pct", ascending=True).reset_index(drop=True)
     n = len(sig)
     y = np.arange(n)
+    figsize, tick_fontsize = _per_site_barh_geometry(n)
 
-    fig, ax = plt.subplots(figsize=(9, max(5, n * 0.42)))
+    fig, ax = plt.subplots(figsize=figsize)
 
     # Connecting lines
     for i, row in sig.iterrows():
@@ -78,16 +177,7 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
         edgecolors="#555555", linewidths=0.6,
     )
 
-    # Critical-only dots — red if critical-only significant, orange if all-deposit-only
-    # significant (non-critical driven), grey if not significant on either test.
-    def _crit_color(row):
-        if row["sig_crit"]:
-            return "#c0392b"   # red — significant on critical-only test
-        if row["sig_all"]:
-            return "#e67e22"   # orange — significant on all-deposit test only
-        return "#5d8aa8"       # blue-grey — not significant
-
-    crit_colors = [_crit_color(row) for _, row in sig.iterrows()]
+    crit_colors = [_tier_color(row) for _, row in sig.iterrows()]
     ax.scatter(
         sig["hr_crit_pct"], y,
         c=crit_colors, s=65, zorder=3, label="Critical minerals only",
@@ -95,14 +185,15 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
     )
 
     ax.set_yticks(y)
-    ax.set_yticklabels(sig["site_id"], fontsize=8)
+    ax.set_yticklabels(sig["site_id"], fontsize=tick_fontsize)
+    ax.set_ylim(-1, n)
     ax.set_xlabel("Hit rate (% of deposits in strong TIR zones)")
-    n_sig_crit = int(sig["sig_crit"].sum())
-    n_sig_all_only = int((sig["sig_all"] & ~sig["sig_crit"]).sum())
+    n_primary = int(sig["sig_primary"].sum())
+    n_secondary = int(sig["sig_secondary_only"].sum())
     ax.set_title(
         "All-deposit vs critical-mineral hit rates by site\n"
-        f"grey = all deposits  ·  red = significant critical-only (n={n_sig_crit})"
-        f"  ·  orange = all-deposit only, non-critical driven (n={n_sig_all_only})"
+        f"{n} sites  ·  grey = all deposits, coloured = critical minerals only  ·  "
+        f"significance is BH-FDR corrected (α = 0.05)"
     )
     ax.axvline(0, color="black", linewidth=0.5, alpha=0.4)
     ax.grid(axis="x", alpha=0.25, linewidth=0.5)
@@ -110,9 +201,7 @@ def save_paired_hitrate_figure(results_dir: Path, figures_dir: Path) -> Path | N
     from matplotlib.patches import Patch
     legend_elements = [
         Patch(facecolor="#999999", edgecolor="#555555", linewidth=0.6, label="All deposits"),
-        Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="Critical only, p < 0.05"),
-        Patch(facecolor="#e67e22", edgecolor="black", linewidth=0.5, label="All-deposit only (non-critical driven)"),
-        Patch(facecolor="#5d8aa8", edgecolor="black", linewidth=0.5, label="Not significant"),
+        *_fdr_legend_handles(n_primary, n_secondary),
     ]
     ax.legend(handles=legend_elements, fontsize=8, loc="lower right")
 
@@ -186,21 +275,27 @@ def save_structure_hitrate_scatter(
         )
         return
 
-    # Merge critical-only hit rates and significance flags when available
-    sig_path = results_dir / "significance_critical_only.csv"
+    # Merge critical-mineral hit rates and FDR-corrected significance tiers.
+    # Sites absent from the FDR table are dropped rather than defaulted to
+    # "not significant" — silently recolouring untested sites grey previously
+    # mislabelled 64 of 109 sites when the significance table lagged the survey.
+    fdr = load_fdr_significance(results_dir)
     use_crit = False
-    if sig_path.exists():
-        sig = pd.read_csv(sig_path).set_index("site_id")
-        df = df.set_index("site_id")
-        df["hr_plot"] = sig.reindex(df.index)["hr_crit_pct"]
-        df["sig_crit"] = sig.reindex(df.index)["sig_crit"].fillna(False).astype(bool)
-        df["sig_all"] = sig.reindex(df.index)["sig_all"].fillna(False).astype(bool)
-        df = df.reset_index()
-        use_crit = df["hr_plot"].notna().any()
-    if not use_crit:
+    if fdr is not None:
+        df = df.set_index("site_id").join(fdr, how="inner").reset_index()
+        df = df.dropna(subset=["hr_crit_pct"])
+        if len(df) < 2:
+            print(
+                "Warning: fewer than 2 sites have both structure and FDR data; "
+                "skipping figure 06_structure_hit_rate.png"
+            )
+            return
+        df["hr_plot"] = df["hr_crit_pct"]
+        use_crit = True
+    else:
         df["hr_plot"] = df["hit_rate_pct"]
-        df["sig_crit"] = False
-        df["sig_all"] = False
+        df["sig_primary"] = False
+        df["sig_secondary_only"] = False
 
     out = figures_dir / "06_structure_hit_rate.png"
 
@@ -208,14 +303,7 @@ def save_structure_hitrate_scatter(
         df["n_deposits_bbox"] / df["n_deposits_bbox"].max() * 400, 30, 400
     )
 
-    def _point_color(row):
-        if row["sig_crit"]:
-            return "#c0392b"          # red — significant on critical-only test
-        if row["sig_all"]:
-            return "#e67e22"          # orange — significant on all-deposit test only (non-critical driven)
-        return "#95a5a6"              # grey — not significant
-
-    point_colors = [_point_color(row) for _, row in df.iterrows()]
+    point_colors = [_tier_color(row) for _, row in df.iterrows()]
 
     fig, ax = plt.subplots(figsize=(10, 7))
     ax.scatter(
@@ -229,7 +317,13 @@ def save_structure_hitrate_scatter(
         zorder=3,
     )
 
-    for _, row in df.iterrows():
+    # Label only the FDR-significant sites once the survey is large enough that
+    # annotating every point turns the dense mid-field into unreadable overlap.
+    if use_crit and len(df) > 60:
+        labelled = df[df["sig_primary"] | df["sig_secondary_only"]]
+    else:
+        labelled = df
+    for _, row in labelled.iterrows():
         ax.annotate(
             row["site_id"],
             (row["mean_nearest_structure_m"] / 1000, row["hr_plot"]),
@@ -248,14 +342,9 @@ def save_structure_hitrate_scatter(
         label=f"Mean hit rate ({mean_hr:.1f}%)",
     )
 
-    from matplotlib.patches import Patch
-    n_all_only = int((df["sig_all"] & ~df["sig_crit"]).sum())
-    legend_elements = [
-        ax.lines[0],
-        Patch(facecolor="#c0392b", edgecolor="black", linewidth=0.5, label="p < 0.05 (critical-only)"),
-        Patch(facecolor="#e67e22", edgecolor="black", linewidth=0.5, label="p < 0.05 (all-deposit only; non-critical driven)"),
-        Patch(facecolor="#95a5a6", edgecolor="black", linewidth=0.5, label="not significant"),
-    ]
+    n_primary = int(df["sig_primary"].sum())
+    n_secondary = int(df["sig_secondary_only"].sum())
+    legend_elements = [ax.lines[0], *_fdr_legend_handles(n_primary, n_secondary)]
     ax.legend(handles=legend_elements, fontsize=8)
 
     ax.set_xscale("log")
@@ -265,10 +354,14 @@ def save_structure_hitrate_scatter(
     )
     ax.set_xlabel("Mean distance to nearest fault (km, log scale)")
     ax.set_ylabel(y_label)
-    n_sig = int(df["sig_crit"].sum())
+    label_note = (
+        "  ·  FDR-significant sites labelled" if len(labelled) < len(df) else ""
+    )
     ax.set_title(
         f"Structural proximity vs spectral detectability\n"
-        f"{len(df)} ASTER study sites  ·  {n_sig} significant critical-only  ·  {n_all_only} non-critical driven"
+        f"{len(df)} ASTER study sites with fault data  ·  "
+        f"{n_primary} FDR-significant (binomial)  ·  {n_secondary} continuous-score only"
+        f"{label_note}"
     )
     plt.tight_layout()
     plt.savefig(out, dpi=150, bbox_inches="tight")
@@ -455,15 +548,17 @@ def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
     earth_mri = load_site_summaries(results_dir, row_types=["earth_mri"])
     earth_mri = earth_mri[earth_mri["earth_mri_category"] != "Non-Critical"]
 
-    # Use critical-only hit rates for bar length and ordering when available
-    sig_path = results_dir / "significance_critical_only.csv"
-    if sig_path.exists():
-        sig = pd.read_csv(sig_path).set_index("site_id")
+    # Use critical-mineral hit rates for bar length and ordering when available
+    fdr = load_fdr_significance(results_dir)
+    if fdr is not None:
         site_id_to_name = national.set_index("site_id")["site_name"]
-        sig["site_name"] = site_id_to_name.reindex(sig.index)
-        sig_by_name = sig.dropna(subset=["site_name"]).set_index("site_name")
+        crit_by_name = (
+            fdr.assign(site_name=site_id_to_name.reindex(fdr.index))
+            .dropna(subset=["site_name"])
+            .set_index("site_name")["hr_crit_pct"]
+        )
         name_order = national.set_index("site_name").index
-        crit_hr = sig_by_name["hr_crit_pct"].reindex(name_order).fillna(
+        crit_hr = crit_by_name.reindex(name_order).fillna(
             national.set_index("site_name")["hit_rate_pct"]
         )
         site_order = crit_hr.sort_values(ascending=True).index.tolist()
@@ -504,7 +599,8 @@ def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
     cat_cols = [c for c in CAT_ORDER if c in pivot_abs.columns]
     cat_cols += [c for c in pivot_abs.columns if c not in cat_cols]
 
-    fig, ax = plt.subplots(figsize=(10, max(3, len(site_order) * 0.6)))
+    figsize, tick_fontsize = _per_site_barh_geometry(len(site_order))
+    fig, ax = plt.subplots(figsize=figsize)
     left = pd.Series(0.0, index=pivot_abs.index)
     for cat in cat_cols:
         vals = pivot_abs[cat]
@@ -515,9 +611,11 @@ def save_national_figure(results_dir: Path, figures_dir: Path) -> Path:
 
     x_max = max(hr_aligned.max() * 1.08, 22)
     ax.set_xlim(0, x_max)
+    ax.tick_params(axis="y", labelsize=tick_fontsize)
     ax.set_xlabel("Critical-mineral hit rate (% of critical deposits in strong TIR zones)")
     ax.set_title(
-        "Alteration\u2013deposit correlation by site (critical minerals only)\n"
+        f"Alteration\u2013deposit correlation by site, {len(site_order)} sites "
+        "(critical minerals only)\n"
         "(Non-Critical excluded  \u00b7  colour = Earth MRI category of in-zone critical deposits)"
     )
     ax.legend(
