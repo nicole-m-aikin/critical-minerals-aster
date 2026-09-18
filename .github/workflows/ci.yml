@@ -19,7 +19,12 @@ jobs:
           cache: pip
 
       - name: Install system GDAL (required by rasterio / geopandas)
-        run: sudo apt-get install -y libgdal-dev gdal-bin
+        # apt-get update is required: the runner image ships a stale package
+        # index, so transitive deps that have had a patch release since the
+        # image was built (e.g. libaom-dev) 404 and apt exits 100.
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgdal-dev gdal-bin
 
       - name: Install package and dev dependencies
         run: pip install -e ".[dev]"
