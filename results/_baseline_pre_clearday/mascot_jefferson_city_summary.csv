@@ -1,0 +1,14 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,138,29,21.0,nested,site,,,False,,40,1175.0876913808877,11.96,15.05,28.55,0.0017
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,90,22,24.4,nested,commodity,Other,,False,,26,1290.5341902961957,11.96,16.73,34.25,0.0008
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,3,0,0.0,nested,commodity,Sand/Gravel,,False,,1,662.8444364657229,11.96,0.0,56.15,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,45,7,15.6,nested,commodity,Stone,,False,,13,978.3442438779495,11.96,7.75,28.78,0.2892
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,35,12,34.3,nested,earth_mri,,Base Metals,True,,10,977.2661607340109,11.96,20.83,50.85,0.0005
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,3,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,2503.9670370598697,11.96,0.0,56.15,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,3,0,0.0,nested,earth_mri,,Industrial,True,,3,367.1843998661109,11.96,0.0,56.15,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,97,17,17.5,nested,earth_mri,,Non-Critical,False,,27,1230.3539327226206,11.96,11.24,26.29,0.0682
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,35,12,34.3,nested,mineral_system,,,False,Basin Brine Path,10,977.2661607340109,11.96,20.83,50.85,0.0005
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,2,0,0.0,nested,mineral_system,,,False,Chemical Weathering,1,2350.1921404185455,11.96,0.0,65.76,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,2,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,1589.4776717036684,11.96,0.0,65.76,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,1,0,0.0,nested,mineral_system,,,False,Orogenic,0,2399.227110529287,11.96,0.0,79.35,1.0
+mascot_jefferson_city,"Mascot-Jefferson City, TN",mascot_jefferson_city_mosaic,2899,267.2,0.02,98,17,17.3,nested,mineral_system,,,False,Unknown System,29,1200.8083576540653,11.96,11.12,26.04,0.0737

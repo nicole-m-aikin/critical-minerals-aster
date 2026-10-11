@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,270,20,7.4,nested,site,,,False,,2,23374.550744123717,12.35,4.85,11.16,0.9968
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,153,8,5.2,nested,commodity,Gold/Silver,,False,,0,23686.67202867851,12.35,2.67,9.98,0.999
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,112,10,8.9,nested,commodity,Other,,False,,2,22606.321557841355,12.35,4.92,15.66,0.8978
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,2,1,50.0,nested,commodity,Sand/Gravel,,False,,0,25502.00392570802,12.35,9.45,90.55,0.2317
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,3,1,33.3,nested,commodity,Stone,,False,,0,34718.6193986478,12.35,6.15,79.23,0.3266
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,140,8,5.7,nested,earth_mri,,Base Metals,True,,0,26312.16124106428,12.35,2.92,10.87,0.9971
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,40,3,7.5,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,21447.70575434987,12.35,2.58,19.86,0.8865
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,31,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,22608.256296433236,12.35,0.0,11.03,1.0
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,7,1,14.3,nested,earth_mri,,Industrial,True,,0,19502.85128244754,12.35,2.57,51.31,0.6025
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,49,8,16.3,nested,earth_mri,,Non-Critical,False,,2,17841.183611656248,12.35,8.51,29.04,0.2539
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,3,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,19307.99861756347,12.35,0.0,56.15,1.0
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,79,5,6.3,nested,mineral_system,,,False,Basin Brine Path,0,25412.487846178214,12.35,2.73,13.98,0.9734
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,3,1,33.3,nested,mineral_system,,,False,Hybrid Magmatic REE,0,22218.00657576848,12.35,6.15,79.23,0.3266
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,24,1,4.2,nested,mineral_system,,,False,Marine Chemocline,0,21849.98480641714,12.35,0.74,20.24,0.9577
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,1923.100626852792,12.35,0.0,79.35,1.0
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,70,3,4.3,nested,mineral_system,,,False,Orogenic,0,23117.556708250995,12.35,1.47,11.86,0.9942
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,21560.250185397905,12.35,0.0,79.35,1.0
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,3,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,19307.99861756347,12.35,0.0,56.15,1.0
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,4,1,25.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,27429.587313448974,12.35,4.56,69.94,0.4097
+tombstone,"Tombstone, AZ",tombstone_mosaic,5393,274.35,0.01,85,9,10.6,nested,mineral_system,,,False,Unknown System,2,22389.809888090596,12.35,5.67,18.91,0.7369

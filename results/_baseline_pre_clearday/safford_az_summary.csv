@@ -1,0 +1,23 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,97,11,11.3,nested,site,,,False,,0,18939.929342373893,11.46,6.45,19.17,0.5616
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,11,2,18.2,nested,commodity,Gold/Silver,,False,,0,25039.9651427137,11.46,5.14,47.7,0.3645
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,71,6,8.5,nested,commodity,Other,,False,,0,20909.760883564377,11.46,3.93,17.24,0.8371
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,13,2,15.4,nested,commodity,Sand/Gravel,,False,,0,4578.7235539276735,11.46,4.33,42.24,0.4485
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,1,100.0,nested,commodity,Stone,,False,,0,15696.856410375143,11.46,20.65,100.0,0.1146
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,1920.244295911434,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,51,2,3.9,nested,earth_mri,,Base Metals,True,,0,21703.901405131946,11.46,1.08,13.22,0.9847
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,2,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,34586.98192904985,11.46,0.0,65.76,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,1920.244295911434,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,7,2,28.6,nested,earth_mri,,Gold/Silver,True,,0,26270.89562029383,11.46,8.22,64.11,0.1869
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,0,12950.620997412312,11.46,0.0,65.76,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,33,7,21.2,nested,earth_mri,,Non-Critical,False,,0,12806.741265314706,11.46,10.68,37.75,0.0765
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,earth_mri,,REE,True,,0,26759.99330226041,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,31447.633806095462,11.46,0.0,65.76,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,10753.371990493737,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,26759.99330226041,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,39659.388345772626,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,1920.244295911434,11.46,0.0,79.35,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,10,1,10.0,nested,mineral_system,,,False,Orogenic,0,21972.338683364334,11.46,1.79,40.42,0.7038
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,1,1,100.0,nested,mineral_system,,,False,Placer,0,15487.808011012785,11.46,20.65,100.0,0.1146
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,6,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,14336.999868488341,11.46,0.0,39.03,1.0
+safford_az,"Safford, AZ",safford_az_mosaic,6106,252.52,0.01,74,9,12.2,nested,mineral_system,,,False,Unknown System,0,18566.9146838926,11.46,6.53,21.53,0.4778

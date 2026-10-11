@@ -1,0 +1,15 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,447,88,19.7,nested,site,,,False,,58,3446.0237609274513,13.5,16.27,23.62,0.0002
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,181,38,21.0,nested,commodity,Other,,False,,31,3227.5989141583086,13.5,15.7,27.5,0.0035
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,27,4,14.8,nested,commodity,Sand/Gravel,,False,,3,3421.3446582972538,13.5,5.92,32.48,0.504
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,1,0,0.0,nested,commodity,Stone,,False,,0,1326.467096488261,13.5,0.0,79.35,1.0
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,238,46,19.3,nested,commodity,Uranium,,False,,24,3623.8422050479107,13.5,14.81,24.82,0.0075
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,17,3,17.6,nested,earth_mri,,Base Metals,True,,10,439.29595100361155,13.5,6.19,41.03,0.408
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,1,1,100.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,7500.830633531699,13.5,20.65,100.0,0.135
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,238,46,19.3,nested,earth_mri,,Energy,True,,24,3623.8422050479107,13.5,14.81,24.82,0.0075
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,190,38,20.0,nested,earth_mri,,Non-Critical,False,,24,3475.4802649581598,13.5,14.93,26.26,0.0081
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,2588.0641905245916,13.5,0.0,79.35,1.0
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,760.0609220733073,13.5,0.0,79.35,1.0
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,1,1,100.0,nested,mineral_system,,,False,Marine Chemocline,0,7500.830633531699,13.5,20.65,100.0,0.135
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,239,46,19.2,nested,mineral_system,,,False,Meteoric Recharge,24,3619.508405823964,13.5,14.75,24.72,0.0081
+lisbon_valley,"Lisbon Valley, UT",lisbon_valley_mosaic,3987,287.55,0.01,206,41,19.9,nested,mineral_system,,,False,Unknown System,34,3238.103012558439,13.5,15.02,25.88,0.0067

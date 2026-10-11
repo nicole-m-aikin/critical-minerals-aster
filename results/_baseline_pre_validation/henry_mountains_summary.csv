@@ -1,0 +1,15 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,281,3,1.1,nested,site,,,False,,0,14186.896899651792,7.33,0.36,3.09,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,15,0,0.0,nested,commodity,Gold/Silver,,False,,0,22771.686700960014,7.33,0.0,20.39,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,54,0,0.0,nested,commodity,Other,,False,,0,13752.805261321451,7.33,0.0,6.64,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,14,0,0.0,nested,commodity,Sand/Gravel,,False,,0,10812.833001618726,7.33,0.0,21.53,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,198,3,1.5,nested,commodity,Uranium,,False,,0,13893.492839160272,7.33,0.52,4.36,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,11,0,0.0,nested,earth_mri,,Base Metals,True,,0,24321.420665627356,7.33,0.0,25.88,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,199,3,1.5,nested,earth_mri,,Energy,True,,0,13882.66845352759,7.33,0.51,4.34,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,8,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,18496.781180221962,7.33,0.0,32.44,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,63,0,0.0,nested,earth_mri,,Non-Critical,False,,0,12831.065552166463,7.33,0.0,5.75,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,198,3,1.5,nested,mineral_system,,,False,Meteoric Recharge,0,13893.492839160272,7.33,0.52,4.36,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,9,0,0.0,nested,mineral_system,,,False,Orogenic,0,24973.404399415303,7.33,0.0,29.92,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,4,0,0.0,nested,mineral_system,,,False,Placer,0,14244.631067032831,7.33,0.0,48.99,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,10333.07427945251,7.33,0.0,79.35,1.0
+henry_mountains,"Henry Mountains, UT",henry_mountains_mosaic,2375,150.08,0.01,69,0,0.0,nested,mineral_system,,,False,Unknown System,0,13674.408818928974,7.33,0.0,5.27,1.0

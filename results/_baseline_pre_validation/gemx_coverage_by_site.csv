@@ -1,0 +1,110 @@
+site_id,swir_coverage_frac,swir_granules,swir_best_sensor,master_coverage_frac,master_granules,master_best_sensor,has_swir,swir_tier,site_name,state,category,tier,enrichment
+mcdermitt,1.0,58,AVIRIS-5,1.0,110,MASTER,True,good,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+contact_district,1.0,42,AVIRIS-5,1.0,74,MASTER,True,good,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+cherry_creek,1.0,44,AVIRIS-5,1.0,86,MASTER,True,good,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+san_francisco_frisco,1.0,25,AVIRIS-Classic,1.0,92,MASTER,True,good,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+victorio,1.0,29,AVIRIS-Classic,1.0,34,MASTER,True,good,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+iron_springs,1.0,20,AVIRIS-Classic,1.0,98,MASTER,True,good,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+pioche,1.0,35,AVIRIS-Classic,1.0,104,MASTER,True,good,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+battle_mountain,1.0,76,AVIRIS-Classic,1.0,142,MASTER,True,good,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+alligator_ridge,1.0,37,AVIRIS-5,1.0,102,MASTER,True,good,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+cortez,1.0,54,AVIRIS-5,1.0,122,MASTER,True,good,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+morenci,1.0,45,AVIRIS-Classic,1.0,148,MASTER,True,good,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+getchell,1.0,46,AVIRIS-Classic,1.0,112,MASTER,True,good,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+sierrita,1.0,16,AVIRIS-Classic,1.0,120,MASTER,True,good,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+ray_mine,1.0,9,AVIRIS-Classic,1.0,134,MASTER,True,good,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+lordsburg,1.0,52,AVIRIS-Classic,1.0,72,MASTER,True,good,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+randsburg,1.0,20,AVIRIS-Classic,1.0,239,MASTER,True,good,"Randsburg, CA",CA,Epithermal,null,1.05
+eureka,1.0,49,AVIRIS-5,1.0,158,MASTER,True,good,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+tombstone,1.0,12,AVIRIS-Classic,1.0,148,MASTER,True,good,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+courtland_gleeson,1.0,7,AVIRIS-Classic,1.0,130,MASTER,True,good,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+christmas,1.0,28,AVIRIS-Classic,1.0,102,MASTER,True,good,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+cerro_gordo,1.0,44,AVIRIS-5,1.0,259,MASTER,True,good,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+new_idria,1.0,8,AVIRIS-Classic,1.0,115,MASTER,True,good,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+arizona_strip,1.0,43,AVIRIS-Classic,1.0,146,MASTER,True,good,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+silver_peak,1.0,73,AVIRIS-Classic,1.0,306,MASTER,True,good,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+eagle_mountain,1.0,14,AVIRIS-Classic,1.0,204,MASTER,True,good,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+west_shasta,1.0,8,AVIRIS-Classic,1.0,145,MASTER,True,good,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+round_mountain,1.0,49,AVIRIS-Classic,1.0,157,MASTER,True,good,"Round Mountain, NV",NV,Epithermal,null,1.16
+goldfield,1.0,74,AVIRIS-Classic,1.0,232,MASTER,True,good,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+tonopah,1.0,84,AVIRIS-5,1.0,211,MASTER,True,good,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tyrone_nm,1.0,27,AVIRIS-Classic,1.0,18,MASTER,True,good,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+oatman,1.0,12,AVIRIS-Classic,1.0,236,MASTER,True,good,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+san_manuel_az,1.0,14,AVIRIS-Classic,1.0,126,MASTER,True,good,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+mountain_pass,1.0,55,AVIRIS-Classic,1.0,338,MASTER,True,good,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+jerritt_canyon,1.0,45,AVIRIS-Classic,1.0,140,MASTER,True,good,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+darwin,1.0,33,AVIRIS-Classic,1.0,195,MASTER,True,good,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+safford_az,1.0,30,AVIRIS-Classic,1.0,148,MASTER,True,good,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+round_top,1.0,39,AVIRIS-5,1.0,36,MASTER,True,good,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+east_shasta,1.0,8,AVIRIS-Classic,1.0,129,MASTER,True,good,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+jarbidge,1.0,23,AVIRIS-Classic,1.0,108,MASTER,True,good,"Jarbidge, NV",NV,Epithermal,null,0.1
+jerome,1.0,52,AVIRIS-Classic,1.0,170,MASTER,True,good,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+bagdad,1.0,22,AVIRIS-Classic,1.0,227,MASTER,True,good,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+globe_miami,1.0,10,AVIRIS-Classic,1.0,102,MASTER,True,good,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+ajo,1.0,15,AVIRIS-Classic,1.0,178,MASTER,True,good,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ely_robinson,1.0,56,AVIRIS-Classic,1.0,128,MASTER,True,good,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+thacker_pass,1.0,18,AVIRIS-Classic,1.0,86,MASTER,True,good,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+iron_king,1.0,40,AVIRIS-Classic,1.0,200,MASTER,True,good,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+carlin_trend,1.0,76,AVIRIS-Classic,1.0,152,MASTER,True,good,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+big_mike,1.0,49,AVIRIS-5,1.0,160,MASTER,True,good,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+henry_mountains,1.0,8,AVIRIS-Classic,1.0,30,MASTER,True,good,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+long_canyon,0.9999,35,AVIRIS-5,1.0,92,MASTER,True,good,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+lake_valley,0.9999,35,AVIRIS-5,1.0,18,MASTER,True,good,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lisbon_valley,0.9999,33,AVIRIS-5,0.1739,6,MASTER,True,good,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+bodie,0.9993,51,AVIRIS-5,1.0,72,MASTER,True,good,"Bodie, CA",CA,Epithermal,null,0.2
+uravan,0.9895,22,AVIRIS-5,0.0,0,MASTER,True,good,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+steamboat_springs,0.9842,12,AVIRIS-Classic,1.0,132,MASTER,True,good,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+bisbee,0.9684,10,AVIRIS-Classic,1.0,148,MASTER,True,good,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+providence_mountains,0.9546,19,AVIRIS-Classic,1.0,253,MASTER,True,good,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+mineral_park,0.9369,7,AVIRIS-Classic,1.0,176,MASTER,True,good,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+cornudas,0.9323,19,AVIRIS-5,1.0,24,MASTER,True,good,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+marysvale,0.9152,46,AVIRIS-5,1.0,70,MASTER,True,good,"Marysvale, UT",UT,Epithermal,null,0.4
+patagonia,0.9079,15,AVIRIS-Classic,1.0,136,MASTER,True,good,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+hanover_fierro,0.9054,17,AVIRIS-5,1.0,18,MASTER,True,good,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+shafter,0.8555,16,AVIRIS-5,0.0,0,MASTER,True,good,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+magdalena_kelly,0.8222,19,AVIRIS-5,0.7588,6,MASTER,True,good,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+questa_nm,0.8205,25,AVIRIS-5,0.3784,18,MASTER,True,good,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+yerington,0.7989,28,AVIRIS-5,1.0,78,MASTER,True,good,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+lemitar,0.7183,12,AVIRIS-5,0.594,6,MASTER,True,partial,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+josephine_ophiolite,0.5746,3,AVIRIS-Classic,1.0,147,MASTER,True,partial,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+wet_mountains,0.4641,3,AVIRIS-Classic,1.0,22,MASTER,True,partial,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+organ_mountains,0.394,13,AVIRIS-5,1.0,22,MASTER,True,partial,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+gold_hill,0.3105,7,AVIRIS-5,1.0,36,MASTER,True,partial,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+stillwater,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+cornwall_pa,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+french_creek_pa,0.0,0,AVIRIS-3,0.0,0,MASTER,False,none,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+dillsburg_pa,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+willsboro_lewis_ny,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+tilly_foster_ny,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+snoqualmie_wa,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+summitville,0.0,0,AVIRIS-5,1.0,8,MASTER,False,none,"Summitville, CO",CO,Epithermal,null,0.19
+state_line_chromite,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+republic,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Republic, WA",WA,Epithermal,null,0.7
+bear_lodge,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+gossan_lead,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+climax,0.0,0,AVIRIS-3,0.0419,10,MASTER,False,none,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+tintic,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+karnes_county,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+shirley_basin,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+ore_knob,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+elk_creek,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+holden,0.0,0,AVIRIS-3,0.0,0,MASTER,False,none,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+magnet_cove,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+iron_hill,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+ducktown,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+tri_state,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+upper_mississippi_valley,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+mascot_jefferson_city,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+austinville_ivanhoe,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+black_butte,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+viburnum_trend,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+bingham_canyon,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+webster_addie,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+lemhi_pass,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+crooks_gap,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+pea_ridge,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+duluth_south_kawishiwi,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_partridge_river,0.0,0,AVIRIS-5,0.0,0,MASTER,False,none,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+green_river,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+gas_hills,0.0,0,AVIRIS-Classic,0.0,0,MASTER,False,none,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+ambrosia_lake,0.0,0,AVIRIS-5,1.0,6,MASTER,False,none,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1

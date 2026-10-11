@@ -38,6 +38,8 @@ python -m critical_minerals_aster run --site mcdermitt --skip-figures
 ```bash
 python -m critical_minerals_aster run-batch --all-sites
 python -m critical_minerals_aster synthesize
+python -m critical_minerals_aster gee-parity          # local vs GEE TIR parity (8-site panel)
+python -m critical_minerals_aster gee-parity --gee --project YOUR_GCP_PROJECT
 ```
 
 **Tests:**
@@ -56,8 +58,8 @@ sites/{id}.yaml
     → SiteConfig (config.py)
     → SitePaths  (paths.py)       # resolves data/aster/, vectors/, figures/, results/
     → pipeline.run_site()         # orchestrates all steps
-        ├── spectral.load_tir_bands_10_14()   → B10–B14 numpy arrays
-        ├── spectral.alteration_ratios()       → silica, carbonate, mafic ratios
+        ├── download_and_mosaic_aster()        → AST_05 emissivity QI/CI/MI mosaic + cls rasters
+        ├── spectral.alteration_indices()      → QI, CI, MI (silica, carbonate, mafic slots)
         ├── classification.classify_percentiles() → 3-class maps per ratio
         ├── classification.combined_score()    → additive score 0–6
         ├── classification.vectorize_strong_zones() → GeoDataFrame (GeoJSON)
@@ -77,6 +79,8 @@ sites/{id}.yaml
 | `mrds.py` | MRDS CSV → GeoDataFrame with CRS reprojection |
 | `structure.py` | Distance-to-fault and buffer annotation for deposits |
 | `synthesis.py` | Aggregate `results/*_summary.csv` → national summary |
+| `hyperspectral.py` | GEMx / AVIRIS CMR coverage lookup (no credentials; footprints only) |
+| `gee_parity.py` | Local rasterio vs GEE TIR parity on an 8-site panel (recipe + probes; live `ee` optional) |
 | `basemap.py` | Fetch Esri World Imagery via `contextily`, reproject to hillshade grid, cache to `data/basemap/{site_id}/rgb.tif` |
 | `pipeline.py` | `run_site()` / `run_batch()` orchestration + figure generation; `FIG03_VERSION` controls cache invalidation |
 | `__main__.py` | `argparse` CLI entry point |
@@ -89,13 +93,32 @@ Each site has a YAML with: `id`, `name`, `bbox_wgs84`, `granule_id` (or `null` f
 
 **Layout difference:** `flat` writes to `data/aster/` and `data/vectors/`; `nested` writes to `data/sites/{id}/aster/` and `data/sites/{id}/vectors/`. All path logic lives in `SitePaths`.
 
-### Band ratios
+### Spectral indices (Ninomiya 2003 / Ninomiya et al. 2005)
 
-- **Silica/quartz:** B13/B14
-- **Carbonate/dolomite:** B13/B12
-- **Mafic:** B12/B13
+Computed on **AST_05 v004 daytime surface emissivity** (`spectral.alteration_indices`), stored in the legacy slot names:
+
+- **Quartz index QI** (`silica` slot): B11² / (B10·B12)
+- **Carbonate index CI** (`carbonate` slot): B13 / B14
+- **Mafic index MI** (`mafic` slot): B12 / B13
 
 Classification uses per-scene percentile thresholds (default 70th/90th). Combined score ≥ 3 defines "strong anomaly" zones. Thresholds are scene-relative; cross-site comparison of raw scores is not meaningful.
+
+Legacy (`spectral.alteration_ratios`, still used by `gee_parity` and the bbox script): radiance ratios "silica" B13/B14 (actually CI), "carbonate" B13/B12 and "mafic" B12/B13 (reciprocals of each other). Radiance ratios track surface temperature, so zones moved between outcrop and valley fill with acquisition time — see `docs/data_verification.md` §2.4 and §6.
+
+### Input product and mosaicking
+
+`download_and_mosaic_aster(..., product="AST_05")` (default; `"AST_L1T"` = legacy radiance path):
+- Selection (`select_mosaic_granules`): clear-sky (≤30% scene cloud) **day** scenes, May–Sep first, never mixing day and night, greedy bbox cover. A pinned `granule_id` selects the AST_05 granule of the same acquisition.
+- Per-pixel QA (`ast05_qa_good`): QA_DataPlane quality = good, cloud = clear, cloud adjacency ≤ 1; all bands in [0.5, 1.0].
+- Indices per granule, priority-stacked onto a 90 m bbox grid: the reference granule wins; later granules only fill gaps after mean/std matching on the overlap (no blending).
+- AG100 v003 water and vegetation (NDVI > 0.3) masks removed before classification (`ag100.py`).
+- Writes `{id}_mosaic_ratio_*` (QI/CI/MI), `_cls_*`, `_cls_valid`, `_TIR_B10` (B10 emissivity) and `{id}_mosaic_granules.json` (selection, QA rule, mask fractions).
+
+Night AST_05 (`aster_night/`) is a replication check only (`scripts/day_night_replication.py`), never part of the score.
+
+### Primary null
+
+`scripts/site_specific_null_significance.py`: **bedrock-vs-cover stratified** null (SGMC "Unconsolidated" = cover; `lithology.cover_strata`). Each deposit's null probability is the zone coverage of its own stratum; exact Poisson-binomial p. The geometric null is kept as `*_geometric` columns.
 
 ### Outputs
 
@@ -134,4 +157,6 @@ Coverage: ~84% of critical-mineral MRDS deposits are assigned a system; bulk non
 
 ### EarthData / ASTER data
 
-Raw ASTER TIR rasters live under `data/aster/` (not committed). Files are named `{granule_id}_TIR_B{10-14}.tif`. The `--download` flag triggers `earthaccess.login(strategy="interactive")` on first run; subsequent runs use cached credentials. SWIR bands (B04–B09) are not available in LP DAAC v004 for this area.
+Raw ASTER TIR rasters live under `data/aster/` / `data/sites/{id}/aster/` (not committed). AST_05 files are `{granule_id}_SRE_TIR_B{10-14}.tif` (uint16 × 0.001) plus `_SRE_TIR_QA_DataPlane.tif`; legacy L1T radiance is `{granule_id}_TIR_B{10-14}.tif` (archived in `aster_l1t_day/`, older mixed day/night set in `aster_archive_pre_clearday/`). The ASTER TIR subsystem has been off since 2026-01; V004 archive products remain downloadable. The `--download` flag triggers `earthaccess.login(strategy="interactive")` on first run; subsequent runs use cached credentials. ASTER SWIR bands (B04–B09) are not available in LP DAAC v004. GEMx / AVIRIS coverage of the 109 sites is inventoried by `scripts/gemx_coverage_report.py` (CMR metadata, no login); 71 sites have GEMx-era SWIR flight lines. That is coverage only — no reflectance ingest or mineral ID yet.
+
+**GEE parity** (`gee_parity.py`, `docs/gee_parity.md`) ports the TIR recipe for 8 representative sites to Earth Engine (`ASTER/AST_L1T_003`) and benchmarks it against the local rasterio path. Default run is offline discrepancy probes (clip order, histogram percentiles, radiance UCC, EPSG:4326 resample). Live `ee` is optional (`pip install -e ".[gee]"`). This is a comparison module, not a 109-site rewrite.

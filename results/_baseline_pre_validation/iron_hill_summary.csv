@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,215,22,10.2,nested,site,,,False,,1,11158.950351255582,11.31,6.85,15.01,0.7215
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,44,3,6.8,nested,commodity,Gold/Silver,,False,,0,13816.436710930238,11.31,2.35,18.23,0.888
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,161,16,9.9,nested,commodity,Other,,False,,1,10190.018819504623,11.31,6.21,15.53,0.7438
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,6,1,16.7,nested,commodity,Sand/Gravel,,False,,0,12072.220369173714,11.31,3.01,56.35,0.5132
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,4,2,50.0,nested,commodity,Uranium,,False,,0,19556.18952093341,11.31,15.0,85.0,0.0656
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,18,2,11.1,nested,earth_mri,,Base Metals,True,,0,11327.127002254667,11.31,3.1,32.8,0.62
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,12144.940694642282,11.31,0.0,39.03,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,114,13,11.4,nested,earth_mri,,Energy,True,,1,8929.575637836542,11.31,6.79,18.54,0.5307
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,34,3,8.8,nested,earth_mri,,Gold/Silver,True,,0,13937.959986457849,11.31,3.05,22.96,0.7556
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,4,0,0.0,nested,earth_mri,,Industrial,True,,0,19574.86892110228,11.31,0.0,48.99,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,30,2,6.7,nested,earth_mri,,Non-Critical,False,,0,14431.147057061553,11.31,1.85,21.32,0.8681
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,1,0,0.0,nested,earth_mri,,REE,True,,0,15815.21976883737,11.31,0.0,79.35,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,8,2,25.0,nested,earth_mri,,Specialty/High-Tech,True,,0,12938.128236685912,11.31,7.15,59.07,0.2265
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,9,2,22.2,nested,mineral_system,,,False,Basin Brine Path,0,11297.686194792052,11.31,6.32,54.74,0.2707
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,1,0,0.0,nested,mineral_system,,,False,Chemical Weathering,0,15714.64970804282,11.31,0.0,79.35,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,4,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,19574.86892110228,11.31,0.0,48.99,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,5,2,40.0,nested,mineral_system,,,False,Magmatic REE,0,14215.746787334841,11.31,11.76,76.93,0.1013
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,5,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,10862.160016451702,11.31,0.0,43.45,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,1,0,0.0,nested,mineral_system,,,False,Metamorphic,0,18558.844085595185,11.31,0.0,79.35,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,3,2,66.7,nested,mineral_system,,,False,Meteoric Recharge,0,21649.6148288181,11.31,20.77,93.85,0.0355
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,138,13,9.4,nested,mineral_system,,,False,Orogenic,1,9557.761524645222,11.31,5.59,15.45,0.7951
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,0,7491.441182758618,11.31,0.0,65.76,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,10589.321121355995,11.31,0.0,79.35,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,2,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,10745.438506910477,11.31,0.0,65.76,1.0
+iron_hill,"Iron Hill, CO",iron_hill_mosaic,6071,187.47,0.01,44,3,6.8,nested,mineral_system,,,False,Unknown System,0,14285.218883673946,11.31,2.35,18.23,0.888

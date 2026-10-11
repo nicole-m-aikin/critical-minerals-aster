@@ -1,0 +1,124 @@
+{
+  "site_id": "duluth_partridge_river",
+  "granule_id": "duluth_partridge_river_mosaic",
+  "timestamp_utc": "2026-09-27T22:34:36.142783+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 8470,
+  "raster_bbox_wgs84": [
+    -92.23746353445354,
+    47.34638726068651,
+    -91.76084635254992,
+    47.79417195476962
+  ],
+  "inputs": {
+    "site_config": "sites/duluth_partridge_river.yaml",
+    "site_config_sha256": "88016708dfece3cd75a4f3e3fe78631b25ae51a17d32dbd9b020309b6a4c208c",
+    "bbox_wgs84": [
+      -92.23,
+      47.35,
+      -91.77,
+      47.79
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/duluth_partridge_river_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "duluth_partridge_river",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00408302018171054_20250829071747",
+          "cloud_pct": 3.0,
+          "day_night": "Day",
+          "month": 8,
+          "bbox_coverage": 1.0
+        }
+      ],
+      "created_utc": "2026-09-27T22:34:35+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 78,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3,
+      "duplicate_record": 0,
+      "n_output": 75,
+      "n_flag_shared_coords": 0,
+      "n_flag_score_high": 46,
+      "n_flag_producer": 57
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -92.23099440620707,
+                47.79417195476962
+              ],
+              [
+                -92.23746353445354,
+                47.35043713635992
+              ],
+              [
+                -91.77126854753301,
+                47.34638726068651
+              ],
+              [
+                -91.76138495679993,
+                47.76739055148306
+              ],
+              [
+                -91.93698749855999,
+                47.79182559552923
+              ],
+              [
+                -92.23099440620707,
+                47.79417195476962
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 52,
+  "mean_nearest_structure_m": 554.4463873486189,
+  "inputs_recorded_utc": "2026-09-27T22:46:37.709413+00:00"
+}

@@ -1,0 +1,23 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,121,14,11.6,nested,site,,,False,,10,4778.379228878938,11.67,7.02,18.49,0.5558
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,5,0,0.0,nested,commodity,Antimony,,False,,0,4093.5919069733413,11.67,0.0,43.45,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,20,0,0.0,nested,commodity,Gold/Silver,,False,,0,4384.598794368098,11.67,0.0,16.11,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,1,0,0.0,nested,commodity,Lithium,,False,,0,13179.479246520323,11.67,0.0,79.35,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,19,0,0.0,nested,commodity,Mercury,,False,,0,4109.517617774169,11.67,0.0,16.82,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,3,1,33.3,nested,commodity,Other,,False,,0,6662.927357398061,11.67,6.15,79.23,0.3109
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,22,8,36.4,nested,commodity,Sand/Gravel,,False,,4,3449.6227160832273,11.67,19.73,57.05,0.0024
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,42,4,9.5,nested,commodity,Stone,,False,,3,6171.423604735599,11.67,3.77,22.07,0.7381
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,9,1,11.1,nested,commodity,Uranium,,False,,3,2631.484895885899,11.67,1.99,43.5,0.6727
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,1,0,0.0,nested,earth_mri,,Base Metals,True,,0,4702.975570427857,11.67,0.0,79.35,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,1,1,100.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,717.8937509263853,11.67,20.65,100.0,0.1167
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,11,1,9.1,nested,earth_mri,,Energy,True,,3,3506.74317838577,11.67,1.62,37.74,0.7447
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,19,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,4367.8421219439015,11.67,0.0,16.82,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,84,12,14.3,nested,earth_mri,,Non-Critical,False,,7,5127.760506654204,11.67,8.36,23.33,0.2725
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,5,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,4093.5919069733413,11.67,0.0,43.45,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,4,1,25.0,nested,mineral_system,,,False,Climax-type,1,3101.5791002210062,11.67,4.56,69.94,0.3913
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,1,1,100.0,nested,mineral_system,,,False,Marine Chemocline,0,717.8937509263853,11.67,20.65,100.0,0.1167
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,25,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,4674.624091753898,11.67,0.0,13.32,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,4,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,1,2787.3681631250192,11.67,0.0,48.99,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,13,0,0.0,nested,mineral_system,,,False,Orogenic,1,3895.5320579965028,11.67,0.0,22.81,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,7,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,3939.0646535571973,11.67,0.0,35.43,1.0
+mcdermitt,"McDermitt Caldera, NV/OR",AST_L1T_00407072016185050_20250813033956,8376,425.65,0.01,67,12,17.9,nested,mineral_system,,,False,Unknown System,7,5355.660183094608,11.67,10.55,28.75,0.086

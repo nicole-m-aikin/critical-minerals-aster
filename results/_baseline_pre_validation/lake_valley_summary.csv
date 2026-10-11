@@ -1,0 +1,17 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,190,48,25.3,nested,site,,,False,,0,18273.237673036096,10.53,19.62,31.89,0.0
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,117,24,20.5,nested,commodity,Gold/Silver,,False,,0,17834.296901481386,10.53,14.19,28.71,0.0011
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,68,23,33.8,nested,commodity,Other,,False,,0,19157.448803513726,10.53,23.71,45.66,0.0
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,5,1,20.0,nested,commodity,Sand/Gravel,,False,,0,16519.18035292044,10.53,3.62,62.45,0.4268
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,98,32,32.7,nested,earth_mri,,Base Metals,True,,0,19113.242197324715,10.53,24.18,42.44,0.0
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,21,2,9.5,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,19273.33673488588,10.53,2.65,28.91,0.6646
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,49,11,22.4,nested,earth_mri,,Gold/Silver,True,,0,15393.061163959079,10.53,13.02,35.88,0.0116
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,19,2,10.5,nested,earth_mri,,Non-Critical,False,,0,21102.287083907573,10.53,2.94,31.39,0.6094
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,3,1,33.3,nested,earth_mri,,Specialty/High-Tech,True,,0,12957.966492731219,10.53,6.15,79.23,0.2839
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,45,7,15.6,nested,mineral_system,,,False,Basin Brine Path,0,22548.64669734607,10.53,7.75,28.78,0.1908
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,17,1,5.9,nested,mineral_system,,,False,Marine Chemocline,0,19319.514266191785,10.53,1.05,26.98,0.8493
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,1,1,100.0,nested,mineral_system,,,False,Meteoric Recharge,0,7159.871168696693,10.53,20.65,100.0,0.1053
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,54,22,40.7,nested,mineral_system,,,False,Orogenic,0,10994.95139119232,10.53,28.68,54.03,0.0
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,2,1,50.0,nested,mineral_system,,,False,Placer,0,6350.0970887278545,10.53,9.45,90.55,0.1996
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,2,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,22672.44626742929,10.53,0.0,65.76,1.0
+lake_valley,"Lake Valley, NM",lake_valley_mosaic,3075,170.97,0.01,69,16,23.2,nested,mineral_system,,,False,Unknown System,0,21302.347550226492,10.53,14.81,34.4,0.0019

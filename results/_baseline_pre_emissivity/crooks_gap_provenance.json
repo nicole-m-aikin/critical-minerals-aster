@@ -1,0 +1,124 @@
+{
+  "site_id": "crooks_gap",
+  "granule_id": "crooks_gap_mosaic",
+  "timestamp_utc": "2026-09-27T22:33:54.174753+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 4771,
+  "raster_bbox_wgs84": [
+    -108.03095524287836,
+    42.06010580037501,
+    -107.55211225912916,
+    42.54163172224655
+  ],
+  "inputs": {
+    "site_config": "sites/crooks_gap.yaml",
+    "site_config_sha256": "60e27cfbcf26c08ccecb494c34fd9afba6940a3e206024340bcfb350c9601dfd",
+    "bbox_wgs84": [
+      -108.03,
+      42.07,
+      -107.57,
+      42.53
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/crooks_gap_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "crooks_gap",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00407122018180809_20250828062249",
+          "cloud_pct": 1.0,
+          "day_night": "Day",
+          "month": 7,
+          "bbox_coverage": 1.0
+        }
+      ],
+      "created_utc": "2026-09-27T22:33:53+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 143,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 2,
+      "n_output": 141,
+      "n_flag_shared_coords": 20,
+      "n_flag_score_high": 20,
+      "n_flag_producer": 55
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -108.03095524287836,
+                42.53038492419128
+              ],
+              [
+                -108.00846765341068,
+                42.06010580037501
+              ],
+              [
+                -107.55211225912916,
+                42.07116984763745
+              ],
+              [
+                -107.56967080329994,
+                42.50438511842013
+              ],
+              [
+                -107.80110986631145,
+                42.5362385919694
+              ],
+              [
+                -108.03095524287836,
+                42.53038492419128
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 10,
+  "mean_nearest_structure_m": 6934.618963758625,
+  "inputs_recorded_utc": "2026-09-27T22:46:32.615777+00:00"
+}

@@ -1,0 +1,64 @@
+{
+  "site_id": "patagonia",
+  "granule_id": "patagonia_mosaic",
+  "timestamp_utc": "2026-05-22T22:10:47.915184+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 6057,
+  "raster_bbox_wgs84": [
+    -110.95042836360574,
+    31.24919741907738,
+    -110.44747820880409,
+    31.75138304687889
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -110.93780972448113,
+                31.751377616303277
+              ],
+              [
+                -110.9501872027484,
+                31.706723179791833
+              ],
+              [
+                -110.95042836360574,
+                31.250362630454482
+              ],
+              [
+                -110.45041662793031,
+                31.24919741907738
+              ],
+              [
+                -110.44747820880409,
+                31.75019486286735
+              ],
+              [
+                -110.93780972448113,
+                31.751377616303277
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 96,
+  "mean_nearest_structure_m": 2393.601839865453,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true
+}

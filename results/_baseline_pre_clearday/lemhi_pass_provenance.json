@@ -1,0 +1,111 @@
+{
+  "site_id": "lemhi_pass",
+  "granule_id": "lemhi_pass_mosaic",
+  "timestamp_utc": "2026-05-22T20:12:42.098559+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 3155,
+  "raster_bbox_wgs84": [
+    -114.02732962207581,
+    44.7416630110531,
+    -113.62949984996563,
+    45.21322643694737
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -113.94264061218374,
+                45.20607289482245
+              ],
+              [
+                -114.01612136050706,
+                45.013289354906156
+              ],
+              [
+                -114.0077624058271,
+                44.83165152698666
+              ],
+              [
+                -113.63042863656658,
+                44.77134161594958
+              ],
+              [
+                -113.6507343870155,
+                45.21322643694737
+              ],
+              [
+                -113.94264061218374,
+                45.20607289482245
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 19,
+  "mean_nearest_structure_m": 1901.6227006290271,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true,
+  "inputs": {
+    "site_config": "sites/lemhi_pass.yaml",
+    "site_config_sha256": "246bb21d47ac3485216d5885d39dfcb6bd71461eb6f57e54c0d7a43611887dec",
+    "bbox_wgs84": [
+      -114.15,
+      44.75,
+      -113.65,
+      45.2
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/lemhi_pass_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mrds_validation_site_bbox": {
+      "n_input": 98,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 5,
+      "n_output": 93,
+      "n_flag_shared_coords": 18,
+      "n_flag_score_high": 44,
+      "n_flag_producer": 29
+    }
+  },
+  "inputs_recorded_utc": "2026-09-27T21:50:34.359107+00:00"
+}

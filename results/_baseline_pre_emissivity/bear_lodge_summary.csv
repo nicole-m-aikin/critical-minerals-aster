@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,112,1,0.9,nested,site,,,False,,2,9347.662408103119,12.35,0.16,4.88,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,11,0,0.0,nested,commodity,Gold/Silver,,False,,0,2809.7577509164994,12.35,0.0,25.88,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,3,0,0.0,nested,commodity,Lithium,,False,,0,4845.111186320891,12.35,0.0,56.15,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,57,1,1.8,nested,commodity,Other,,False,,2,6157.171288112333,12.35,0.31,9.29,0.9995
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,18005.788487011738,12.35,0.0,65.76,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,4,0,0.0,nested,commodity,Stone,,False,,0,10587.241334425324,12.35,0.0,48.99,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,35,0,0.0,nested,commodity,Uranium,,False,,0,16347.89186155364,12.35,0.0,9.89,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,1,0,0.0,nested,earth_mri,,Base Metals,True,,1,102.24495646732835,12.35,0.0,79.35,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,3,0,0.0,nested,earth_mri,,Battery Metals – Li/Brine,True,,0,4845.111186320891,12.35,0.0,56.15,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,36,0,0.0,nested,earth_mri,,Energy,True,,0,15994.601680630227,12.35,0.0,9.64,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,8,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,2349.6819612251643,12.35,0.0,32.44,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,9,1,11.1,nested,earth_mri,,Industrial,True,,1,2933.8591642877927,12.35,1.99,43.5,0.6947
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,38,0,0.0,nested,earth_mri,,Non-Critical,False,,0,8830.845500494159,12.35,0.0,9.18,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,1,0,0.0,nested,earth_mri,,REE,True,,0,2890.265774425807,12.35,0.0,79.35,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,16,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,4551.897982989738,12.35,0.0,19.36,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,5,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,22448.982676281914,12.35,0.0,43.45,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,9,1,11.1,nested,mineral_system,,,False,Hybrid Magmatic REE,1,2933.8591642877927,12.35,1.99,43.5,0.6947
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,1,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,5491.7665312729705,12.35,0.0,79.35,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,2,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,3400.836324496076,12.35,0.0,65.76,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,3,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,14207.031430758225,12.35,0.0,56.15,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,29,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,15495.09074149518,12.35,0.0,11.7,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,9,0,0.0,nested,mineral_system,,,False,Orogenic,0,3263.4584399343357,12.35,0.0,29.92,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,0,4609.806897927186,12.35,0.0,65.76,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,15,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,4582.860939006987,12.35,0.0,20.39,1.0
+bear_lodge,"Bear Lodge, WY",bear_lodge_mosaic,4807,295.12,0.01,37,0,0.0,nested,mineral_system,,,False,Unknown System,1,8018.452027872472,12.35,0.0,9.41,1.0

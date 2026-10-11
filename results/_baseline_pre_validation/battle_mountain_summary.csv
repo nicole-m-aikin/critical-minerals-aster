@@ -1,0 +1,22 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,90,11,12.2,nested,site,,,False,,5,3692.127618883369,11.7,6.96,20.57,0.4871
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,29,3,10.3,nested,commodity,Gold/Silver,,False,,0,4078.0187042130747,11.7,3.58,26.39,0.6757
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,49,7,14.3,nested,commodity,Other,,False,,4,3549.000752572224,11.7,7.1,26.67,0.348
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,9,1,11.1,nested,commodity,Sand/Gravel,,False,,0,3723.8216861315927,11.7,1.99,43.5,0.6737
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,1,0,0.0,nested,commodity,Stone,,False,,1,146.3221579200719,11.7,0.0,79.35,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,2,0,0.0,nested,commodity,Uranium,,False,,0,3233.5945340903218,11.7,0.0,65.76,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,35,1,2.9,nested,earth_mri,,Base Metals,True,,0,4445.457603241041,11.7,0.51,14.53,0.9872
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,1,1,100.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,2857.409628802426,11.7,20.65,100.0,0.117
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,3233.5945340903218,11.7,0.0,65.76,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,23,2,8.7,nested,earth_mri,,Gold/Silver,True,,0,4054.786999685758,11.7,2.42,26.8,0.7687
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,17,6,35.3,nested,earth_mri,,Industrial,True,,4,2023.0505547987573,11.7,17.31,58.7,0.0101
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,12,1,8.3,nested,earth_mri,,Non-Critical,False,,1,3310.3258720610247,11.7,1.49,35.39,0.7753
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,6,1,16.7,nested,mineral_system,,,False,Basin Brine Path,1,2691.9941617788427,11.7,3.01,56.35,0.526
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,5,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,4158.5458101757295,11.7,0.0,43.45,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,2,1,50.0,nested,mineral_system,,,False,Meteoric Convection,0,4511.558820066289,11.7,9.45,90.55,0.2203
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,3231.881106438652,11.7,0.0,79.35,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,21,1,4.8,nested,mineral_system,,,False,Orogenic,0,4197.562450020721,11.7,0.85,22.67,0.9267
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,6,0,0.0,nested,mineral_system,,,False,Placer,0,4213.534169313339,11.7,0.0,39.03,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,4487.742344811613,11.7,0.0,65.76,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,3596.5313563579875,11.7,0.0,79.35,1.0
+battle_mountain,"Battle Mountain, NV",battle_mountain_mosaic,3142,148.9,0.01,46,8,17.4,nested,mineral_system,,,False,Unknown System,4,3414.9947917192135,11.7,9.09,30.72,0.1638

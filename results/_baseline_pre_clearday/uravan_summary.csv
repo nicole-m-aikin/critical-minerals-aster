@@ -1,0 +1,20 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,1409,263,18.7,nested,site,,,False,,162,3490.395908753325,12.82,16.72,20.78,0.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,35,4,11.4,nested,commodity,Gold/Silver,,False,,2,4977.0656928951585,12.82,4.54,25.95,0.6727
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,572,111,19.4,nested,commodity,Other,,False,,66,3365.0968023351606,12.82,16.37,22.85,0.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,41,1,2.4,nested,commodity,Sand/Gravel,,False,,1,4950.251394033239,12.82,0.43,12.6,0.9964
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,761,147,19.3,nested,commodity,Uranium,,False,,93,3437.5490907897874,12.82,16.67,22.27,0.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,15,7,46.7,nested,earth_mri,,Base Metals,True,,6,1072.1365954461517,12.82,24.81,69.88,0.0014
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,7314.398754916639,12.82,0.0,79.35,1.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,761,147,19.3,nested,earth_mri,,Energy,True,,93,3437.5490907897874,12.82,16.67,22.27,0.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,30,2,6.7,nested,earth_mri,,Gold/Silver,True,,0,5600.918759587739,12.82,1.85,21.32,0.9117
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,4,1,25.0,nested,earth_mri,,Industrial,True,,0,1611.5432448733154,12.82,4.56,69.94,0.4223
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,564,96,17.0,nested,earth_mri,,Non-Critical,False,,63,3542.0989610799807,12.82,14.15,20.34,0.0024
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,34,10,29.4,nested,earth_mri,,Specialty/High-Tech,True,,0,3128.7935246929974,12.82,16.83,46.17,0.0084
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,1,1,100.0,nested,mineral_system,,,False,Basin Brine Path,0,1957.048200133386,12.82,20.65,100.0,0.1282
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,7314.398754916639,12.82,0.0,79.35,1.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,13,3,23.1,nested,mineral_system,,,False,Marine Evaporite,2,2034.7102453593607,12.82,8.18,50.26,0.2272
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,795,157,19.7,nested,mineral_system,,,False,Meteoric Recharge,93,3424.3444502271577,12.82,17.13,22.66,0.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,28,2,7.1,nested,mineral_system,,,False,Orogenic,0,5486.46427421755,12.82,1.98,22.65,0.8901
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,0,7203.281554770389,12.82,0.0,65.76,1.0
+uravan,"Uravan Mineral Belt, CO",uravan_mosaic,2763,276.78,0.01,569,100,17.6,nested,mineral_system,,,False,Unknown System,67,3500.639287470105,12.82,14.67,20.92,0.0007

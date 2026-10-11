@@ -1,0 +1,18 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,238,19,8.0,nested,site,,,False,,0,27845.305556459345,12.14,5.17,12.13,0.9848
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,93,8,8.6,nested,commodity,Gold/Silver,,False,,0,30492.310888103555,12.14,4.42,16.07,0.8904
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,139,11,7.9,nested,commodity,Other,,False,,0,26130.016681891655,12.14,4.48,13.62,0.9581
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,39951.70133981352,12.14,0.0,79.35,1.0
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,5,0,0.0,nested,commodity,Stone,,False,,0,23874.75794418783,12.14,0.0,43.45,1.0
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,136,5,3.7,nested,earth_mri,,Base Metals,True,,0,28006.33050031538,12.14,1.58,8.32,0.9999
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,9,1,11.1,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,27160.849667712428,12.14,1.99,43.5,0.6882
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,37,5,13.5,nested,earth_mri,,Gold/Silver,True,,0,28770.272177796043,12.14,5.91,27.98,0.4726
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,56,8,14.3,nested,earth_mri,,Non-Critical,False,,0,26953.10815726011,12.14,7.42,25.74,0.3694
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,72,2,2.8,nested,mineral_system,,,False,Basin Brine Path,0,25764.10640221424,12.14,0.77,9.57,0.999
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,1,0,0.0,nested,mineral_system,,,False,Chemical Weathering,0,27410.842070842016,12.14,0.0,79.35,1.0
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,1,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,22476.944369499994,12.14,0.0,79.35,1.0
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,8,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,27375.341695688534,12.14,0.0,32.44,1.0
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,52,2,3.8,nested,mineral_system,,,False,Orogenic,0,34885.083697368325,12.14,1.06,12.98,0.9902
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,3,1,33.3,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,25248.802049147973,12.14,6.15,79.23,0.3219
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,15,1,6.7,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,26408.357046724388,12.14,1.19,29.82,0.8566
+hanover_fierro,"Hanover-Fierro, NM",hanover_fierro_mosaic,3408,157.81,0.01,86,13,15.1,nested,mineral_system,,,False,Unknown System,0,25783.493341402154,12.14,9.05,24.16,0.2415

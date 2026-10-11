@@ -1,0 +1,18 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,32,11,34.4,nested,site,,,False,,10,1370.41913397183,10.07,20.41,51.69,0.0002
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,3,0,0.0,nested,commodity,Gold/Silver,,False,,1,643.8783121548441,10.07,0.0,56.15,1.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,2,1,50.0,nested,commodity,Lithium,,False,,0,3463.4479660465154,10.07,9.45,90.55,0.1912
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,6,6,100.0,nested,commodity,Mercury,,False,,2,720.4246779958085,10.07,60.97,100.0,0.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,5,1,20.0,nested,commodity,Other,,False,,1,2484.3947644677205,10.07,3.62,62.45,0.4117
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,16,3,18.8,nested,commodity,Uranium,,False,,6,1140.647470514221,10.07,6.59,43.01,0.2137
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,1,0,0.0,nested,earth_mri,,Base Metals,True,,0,1303.8029952635723,10.07,0.0,79.35,1.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,2,1,50.0,nested,earth_mri,,Battery Metals – Li/Brine,True,,0,3463.4479660465154,10.07,9.45,90.55,0.1912
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,17,4,23.5,nested,earth_mri,,Energy,True,,7,1076.4756697284863,10.07,9.55,47.26,0.0843
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,3,0,0.0,nested,earth_mri,,Gold/Silver,True,,1,643.8783121548441,10.07,0.0,56.15,1.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,9,6,66.7,nested,earth_mri,,Non-Critical,False,,2,1710.1102264325725,10.07,35.42,87.94,0.0001
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,9,1,11.1,nested,mineral_system,,,False,Climax-type,3,1196.32085574804,10.07,1.99,43.5,0.6152
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,2,1,50.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,3463.4479660465154,10.07,9.45,90.55,0.1912
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,6,6,100.0,nested,mineral_system,,,False,Meteoric Convection,2,720.4246779958085,10.07,60.97,100.0,0.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,7,2,28.6,nested,mineral_system,,,False,Meteoric Recharge,3,1069.0674037850251,10.07,8.22,64.11,0.1514
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,3,0,0.0,nested,mineral_system,,,False,Orogenic,1,643.8783121548441,10.07,0.0,56.15,1.0
+thacker_pass,"Thacker Pass, NV",thacker_pass_mosaic,4773,74.71,0.01,5,1,20.0,nested,mineral_system,,,False,Unknown System,1,2484.3947644677205,10.07,3.62,62.45,0.4117

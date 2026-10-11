@@ -1,0 +1,11 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,39,1,2.6,nested,site,,,False,,1,5482.388970858559,9.59,0.45,13.18,0.9804
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,3,0,0.0,nested,commodity,Other,,False,,0,4488.796052313749,9.59,0.0,56.15,1.0
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,1,715.5808492585684,9.59,0.0,65.76,1.0
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,34,1,2.9,nested,commodity,Uranium,,False,,0,5850.459412000747,9.59,0.52,14.92,0.9675
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,1,0,0.0,nested,earth_mri,,Base Metals,True,,0,8832.998547417432,9.59,0.0,79.35,1.0
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,34,1,2.9,nested,earth_mri,,Energy,True,,0,5850.459412000747,9.59,0.52,14.92,0.9675
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,4,0,0.0,nested,earth_mri,,Non-Critical,False,,1,1516.1378270102377,9.59,0.0,48.99,1.0
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,2316.694804761907,9.59,0.0,65.76,1.0
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,34,1,2.9,nested,mineral_system,,,False,Meteoric Recharge,0,5850.459412000747,9.59,0.52,14.92,0.9675
+shirley_basin,"Shirley Basin, WY",shirley_basin_mosaic,7859,180.74,0.01,3,0,0.0,nested,mineral_system,,,False,Unknown System,1,3421.386748644856,9.59,0.0,56.15,1.0

@@ -1,0 +1,10 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,182,20,11.0,nested,site,,,False,,37,3057.327453031037,11.24,7.23,16.36,0.5776
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,175,20,11.4,nested,commodity,Other,,False,,37,2992.774186034034,11.24,7.52,16.99,0.504
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,5,0,0.0,nested,commodity,Sand/Gravel,,False,,0,3906.4524425004274,11.24,0.0,43.45,1.0
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,2,0,0.0,nested,commodity,Stone,,False,,0,6582.925841595353,11.24,0.0,65.76,1.0
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,70,9,12.9,nested,earth_mri,,Base Metals,True,,20,1956.0857158520676,11.24,6.91,22.66,0.3879
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,13,0,0.0,nested,earth_mri,,Industrial,True,,8,524.5728425048607,11.24,0.0,22.81,1.0
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,99,11,11.1,nested,earth_mri,,Non-Critical,False,,9,4168.567165549908,11.24,6.32,18.81,0.5634
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,65,6,9.2,nested,mineral_system,,,False,Basin Brine Path,20,1962.8882218646006,11.24,4.3,18.71,0.7527
+viburnum_trend,"Viburnum Trend, MO",viburnum_trend_mosaic,10473,227.75,0.01,117,14,12.0,nested,mineral_system,,,False,Unknown System,17,3665.3492481235025,11.24,7.26,19.09,0.4446

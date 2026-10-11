@@ -1,0 +1,13 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,116,14,12.1,nested,site,,,False,,0,14211.731572713205,12.69,7.33,19.24,0.6212
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,80,10,12.5,nested,commodity,Other,,False,,0,11167.324849830382,12.69,6.93,21.5,0.5706
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,16,0,0.0,nested,commodity,Sand/Gravel,,False,,0,25841.27478810552,12.69,0.0,19.36,1.0
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,20,4,20.0,nested,commodity,Stone,,False,,0,17085.723891930636,12.69,8.07,41.6,0.2432
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,1,1,100.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,7074.066711244017,12.69,20.65,100.0,0.1269
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,19,3,15.8,nested,earth_mri,,Industrial,True,,0,11438.010301412303,12.69,5.52,37.57,0.4403
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,96,10,10.4,nested,earth_mri,,Non-Critical,False,,0,14835.04791663181,12.69,5.76,18.12,0.7911
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,18,3,16.7,nested,mineral_system,,,False,Mafic Magmatic,0,11252.488960510545,12.69,5.84,39.22,0.4047
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,1,1,100.0,nested,mineral_system,,,False,Marine Chemocline,0,7074.066711244017,12.69,20.65,100.0,0.1269
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,4,0,0.0,nested,mineral_system,,,False,Orogenic,0,20543.123874480552,12.69,0.0,48.99,1.0
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,14777.394437643996,12.69,0.0,79.35,1.0
+state_line_chromite,"PA-MD State Line Chromite, PA",state_line_chromite_mosaic,6840,216.11,0.01,92,10,10.9,nested,mineral_system,,,False,Unknown System,0,14586.870701073172,12.69,6.01,18.86,0.7452

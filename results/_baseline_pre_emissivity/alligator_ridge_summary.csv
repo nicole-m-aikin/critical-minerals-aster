@@ -1,0 +1,16 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,51,1,2.0,nested,site,,,False,,1,3256.7704438702453,9.44,0.35,10.3,0.9937
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,4,0,0.0,nested,commodity,Antimony,,False,,0,2394.866126716951,9.44,0.0,48.99,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,29,1,3.4,nested,commodity,Gold/Silver,,False,,0,3056.514741190211,9.44,0.61,17.18,0.9437
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,18,0,0.0,nested,commodity,Other,,False,,1,3770.938924222143,9.44,0.0,17.59,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,11,0,0.0,nested,earth_mri,,Base Metals,True,,0,3366.7093961738083,9.44,0.0,25.88,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,28,1,3.6,nested,earth_mri,,Gold/Silver,True,,0,3139.5166674618763,9.44,0.63,17.71,0.9378
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,4,0,0.0,nested,earth_mri,,Non-Critical,False,,1,3756.008050440885,9.44,0.0,48.99,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,8,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,3266.37379859682,9.44,0.0,32.44,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,10,1,10.0,nested,mineral_system,,,False,Carlin-type,0,3841.9651652252005,9.44,1.79,40.42,0.6292
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Evaporite,1,2599.6030513181845,9.44,0.0,65.76,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,21,0,0.0,nested,mineral_system,,,False,Orogenic,0,2523.7631625096765,9.44,0.0,15.46,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,4470.054567447224,9.44,0.0,65.76,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,3,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,3971.471457876158,9.44,0.0,56.15,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,4637.111508278281,9.44,0.0,79.35,1.0
+alligator_ridge,"Alligator Ridge, NV",alligator_ridge_mosaic,6292,194.6,0.01,12,0,0.0,nested,mineral_system,,,False,Unknown System,0,3665.4811210824805,9.44,0.0,24.25,1.0

@@ -1,0 +1,13 @@
+site_id,site_name,coverage_pct,n_crit_total,n_dated,pct_dated,n_pre50,hits_pre50,hr_pre50_pct,binom_p_pre50,sig_pre50,n_post50,hits_post50,hr_post50_pct,binom_p_post50,sig_post50
+bisbee,"Bisbee, AZ",11.6,95,16,16.8,12,6,50.0,0.0012,True,4,2,50.0,0.0685,False
+ely_robinson,"Ely (Robinson), NV",11.9,24,2,8.3,1,0,0.0,1.0,False,1,0,0.0,1.0,False
+eureka,"Eureka, NV",10.5,191,60,31.4,54,22,40.7,0.0,True,6,1,16.7,0.4852,False
+lordsburg,"Lordsburg, NM",10.9,174,31,17.8,26,4,15.4,0.3115,False,5,2,40.0,0.0946,False
+magnet_cove,"Magnet Cove, AR",12.7,26,4,15.4,2,1,50.0,0.238,False,2,0,0.0,1.0,False
+mcdermitt,"McDermitt Caldera, NV/OR",11.7,36,13,36.1,12,3,25.0,0.1568,False,1,0,0.0,1.0,False
+mountain_pass,"Mountain Pass, CA",13.2,323,5,1.5,2,0,0.0,1.0,False,3,1,33.3,0.3449,False
+randsburg,"Randsburg, CA",11.3,549,13,2.4,12,0,0.0,1.0,False,1,0,0.0,1.0,False
+sierrita,"Sierrita, AZ",9.7,78,21,26.9,20,4,20.0,0.1238,False,1,0,0.0,1.0,False
+steamboat_springs,"Steamboat Springs, NV",9.8,207,55,26.6,53,11,20.8,0.0127,True,2,0,0.0,1.0,False
+thacker_pass,"Thacker Pass, NV",10.1,23,2,8.7,0,0,0.0,1.0,False,2,0,0.0,1.0,False
+yerington,"Yerington, NV",10.1,131,17,13.0,10,1,10.0,0.6544,False,7,1,14.3,0.5246,False

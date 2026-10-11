@@ -1,0 +1,24 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,338,10,3.0,nested,site,,,False,,2,9161.798776217409,10.28,1.61,5.36,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,115,2,1.7,nested,commodity,Gold/Silver,,False,,1,9593.480246130799,10.28,0.48,6.12,0.9999
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,2,0,0.0,nested,commodity,Mercury,,False,,0,12924.065466456974,10.28,0.0,65.76,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,209,6,2.9,nested,commodity,Other,,False,,0,9009.078338031986,10.28,1.32,6.12,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,6,1,16.7,nested,commodity,Sand/Gravel,,False,,0,4533.564796967613,10.28,3.01,56.35,0.4785
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,3,0,0.0,nested,commodity,Stone,,False,,0,12864.497661176749,10.28,0.0,56.15,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,3,1,33.3,nested,commodity,Uranium,,False,,1,6299.124236502605,10.28,6.15,79.23,0.2778
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,107,1,0.9,nested,earth_mri,,Base Metals,True,,0,9693.990098479419,10.28,0.17,5.11,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,3,1,33.3,nested,earth_mri,,Energy,True,,1,6299.124236502605,10.28,6.15,79.23,0.2778
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,39,1,2.6,nested,earth_mri,,Gold/Silver,True,,1,8901.612812211408,10.28,0.45,13.18,0.9855
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,1,1,100.0,nested,earth_mri,,Industrial,True,,0,6124.797038696798,10.28,20.65,100.0,0.1028
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,151,5,3.3,nested,earth_mri,,Non-Critical,False,,0,9318.305699035072,10.28,1.42,7.52,0.9996
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,37,1,2.7,nested,earth_mri,,Specialty/High-Tech,True,,0,7572.4815093362595,10.28,0.48,13.82,0.9819
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,33,1,3.0,nested,mineral_system,,,False,Basin Brine Path,0,9907.560682223377,10.28,0.54,15.32,0.9721
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,2,1,50.0,nested,mineral_system,,,False,Magmatic REE,1,1988.4622844698438,10.28,9.45,90.55,0.1951
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,12924.065466456974,10.28,0.0,65.76,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,14920.448140568125,10.28,0.0,79.35,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,80,2,2.5,nested,mineral_system,,,False,Orogenic,1,9234.979113810641,10.28,0.69,8.66,0.9983
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,9,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,9704.660540068318,10.28,0.0,29.92,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,7,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,4041.790730051917,10.28,0.0,35.43,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,24,1,4.2,nested,mineral_system,,,False,Reduced Intrusion-Related,0,8366.723944797153,10.28,0.74,20.24,0.926
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,15,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,8594.559305012144,10.28,0.0,20.39,1.0
+gold_hill,"Gold Hill, UT",gold_hill_mosaic,4514,225.43,0.01,165,5,3.0,nested,mineral_system,,,False,Unknown System,0,9338.4267083609,10.28,1.3,6.9,0.9999

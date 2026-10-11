@@ -1,0 +1,60 @@
+{
+  "site_id": "climax",
+  "granule_id": "climax_mosaic",
+  "timestamp_utc": "2026-05-22T20:11:49.954634+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 2024,
+  "raster_bbox_wgs84": [
+    -106.45827633264227,
+    39.215978914397084,
+    -106.07652635084973,
+    39.58404337682066
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -106.45827633264227,
+                39.579931265568725
+              ],
+              [
+                -106.45071647360676,
+                39.215978914397084
+              ],
+              [
+                -106.1484515905215,
+                39.21935148827835
+              ],
+              [
+                -106.26129577424275,
+                39.58141673328175
+              ],
+              [
+                -106.45827633264227,
+                39.579931265568725
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 21,
+  "mean_nearest_structure_m": 4267.586464947538,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true
+}

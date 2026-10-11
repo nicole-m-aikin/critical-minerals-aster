@@ -123,6 +123,22 @@ def cmd_synthesize(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_gee_parity(args: argparse.Namespace) -> int:
+    """Local vs GEE TIR parity for a representative site panel."""
+    repo = Path(args.repo_root) if args.repo_root else _repo_root()
+    sys.path.insert(0, str(repo / "scripts"))
+    from gee_parity_benchmark import main as gee_parity_main
+
+    argv: list[str] = []
+    if args.sites:
+        argv.extend(["--sites", *args.sites])
+    if args.gee:
+        argv.append("--gee")
+    if args.project:
+        argv.extend(["--project", args.project])
+    return gee_parity_main(argv)
+
+
 def cmd_demo(args: argparse.Namespace) -> int:
     """Print a formatted summary from pre-built results — no API keys or rasters needed."""
     import textwrap
@@ -316,6 +332,28 @@ def main(argv: list[str] | None = None) -> int:
 
     p_syn = sub.add_parser("synthesize", help="Aggregate results/*_summary.csv")
     p_syn.set_defaults(func=cmd_synthesize)
+
+    p_gee = sub.add_parser(
+        "gee-parity",
+        help="Local rasterio vs GEE TIR parity on a representative site panel",
+    )
+    p_gee.add_argument(
+        "--sites",
+        nargs="*",
+        default=[],
+        help="Site ids (default: 8-site panel in gee_parity.DEFAULT_PARITY_SITES)",
+    )
+    p_gee.add_argument(
+        "--gee",
+        action="store_true",
+        help="Also run the live Earth Engine recipe (needs earthengine-api + auth)",
+    )
+    p_gee.add_argument(
+        "--project",
+        default=None,
+        help="GCP Cloud project for ee.Initialize",
+    )
+    p_gee.set_defaults(func=cmd_gee_parity)
 
     p_demo = sub.add_parser(
         "demo",

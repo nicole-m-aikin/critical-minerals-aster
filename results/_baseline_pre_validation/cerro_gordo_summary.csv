@@ -1,0 +1,24 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,282,26,9.2,nested,site,,,False,,21,3662.9399265269312,14.85,6.37,13.17,0.9982
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,144,7,4.9,nested,commodity,Gold/Silver,,False,,12,4067.2361588330937,14.85,2.37,9.69,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,3,0,0.0,nested,commodity,Mercury,,False,,0,2719.3485888615355,14.85,0.0,56.15,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,111,9,8.1,nested,commodity,Other,,False,,8,3451.986585244421,14.85,4.32,14.69,0.9887
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,1,1,100.0,nested,commodity,Sand/Gravel,,False,,0,1309.4392733728191,14.85,20.65,100.0,0.1485
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,22,9,40.9,nested,commodity,Stone,,False,,1,2254.995343220096,14.85,23.26,61.27,0.0028
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,1,0,0.0,nested,commodity,Uranium,,False,,0,5019.158855698827,14.85,0.0,79.35,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,98,4,4.1,nested,earth_mri,,Base Metals,True,,8,3277.497607997368,14.85,1.6,10.03,0.9999
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,2,1,50.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,1,2593.014007293161,14.85,9.45,90.55,0.275
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,1,0,0.0,nested,earth_mri,,Energy,True,,0,5019.158855698827,14.85,0.0,79.35,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,121,6,5.0,nested,earth_mri,,Gold/Silver,True,,11,4174.775902914676,14.85,2.29,10.4,0.9999
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,50,15,30.0,nested,earth_mri,,Non-Critical,False,,1,2946.415701596682,14.85,19.1,43.75,0.0048
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,10,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,4908.043749405732,14.85,0.0,27.75,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,57,3,5.3,nested,mineral_system,,,False,Basin Brine Path,3,2900.8812939394043,14.85,1.81,14.37,0.9938
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,3,2,66.7,nested,mineral_system,,,False,Lacustrine Evaporite,0,1059.5761702123673,14.85,20.77,93.85,0.0596
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,2,1,50.0,nested,mineral_system,,,False,Marine Chemocline,1,2593.014007293161,14.85,9.45,90.55,0.275
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,3,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,2719.3485888615355,14.85,0.0,56.15,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,5019.158855698827,14.85,0.0,79.35,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,103,7,6.8,nested,mineral_system,,,False,Orogenic,7,4012.2154191992227,14.85,3.33,13.37,0.9962
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,6161.719722387835,14.85,0.0,79.35,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,8,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,4598.13853199662,14.85,0.0,32.44,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,3,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,4191.085983729153,14.85,0.0,56.15,1.0
+cerro_gordo,"Cerro Gordo, CA",cerro_gordo_mosaic,582,326.98,0.02,101,13,12.9,nested,mineral_system,,,False,Unknown System,10,3735.431586846272,14.85,7.68,20.78,0.7527

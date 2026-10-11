@@ -1,0 +1,5 @@
+framing,cohort,n_sites,n,hits,hr_pct,null_hr_pct,enrichment,expected_hits,z,pooled_p
+"all_45_sites (PRIMARY, this phase)",pre-1950,100,2181,128,5.9,11.5,0.51,251.6,-8.29,1.0
+"all_45_sites (PRIMARY, this phase)",post-1950,100,469,35,7.5,11.1,0.67,52.0,-2.5,0.9938
+fdr_significant_sites_only (sensitivity),pre-1950,11,248,28,11.3,11.7,0.96,29.1,-0.22,0.5875
+fdr_significant_sites_only (sensitivity),post-1950,11,46,5,10.9,11.4,0.96,5.2,-0.11,0.5421

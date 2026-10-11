@@ -1,0 +1,22 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,603,23,3.8,nested,site,,,False,,55,3131.198717405795,11.8,2.55,5.66,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,211,4,1.9,nested,commodity,Gold/Silver,,False,,15,2913.7870567672417,11.8,0.74,4.77,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,311,7,2.3,nested,commodity,Other,,False,,29,3190.424920713383,11.8,1.09,4.57,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,55,8,14.5,nested,commodity,Sand/Gravel,,False,,9,3970.699593633472,11.8,7.56,26.16,0.3206
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,25,4,16.0,nested,commodity,Stone,,False,,2,2485.2018926997075,11.8,6.4,34.65,0.3405
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,563.0823086106486,11.8,0.0,79.35,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,216,5,2.3,nested,earth_mri,,Base Metals,True,,15,3173.61950257839,11.8,0.99,5.3,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,29,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,3,4046.8355186047397,11.8,0.0,11.7,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,563.0823086106486,11.8,0.0,79.35,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,46,0,0.0,nested,earth_mri,,Gold/Silver,True,,6,2337.077809459258,11.8,0.0,7.71,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,5715.048399751898,11.8,0.0,79.35,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,304,18,5.9,nested,earth_mri,,Non-Critical,False,,31,3140.773008927854,11.8,3.78,9.16,0.9998
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,6,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,2779.013223611442,11.8,0.0,39.03,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,110,4,3.6,nested,mineral_system,,,False,Basin Brine Path,4,3453.1482137698795,11.8,1.42,8.98,0.9994
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,24,0,0.0,nested,mineral_system,,,False,Marine Chemocline,3,4408.990366777494,11.8,0.0,13.8,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,978.8758386589362,11.8,0.0,65.76,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,146,3,2.1,nested,mineral_system,,,False,Orogenic,19,2732.2678359457477,11.8,0.7,5.87,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,1,1443.3695528525807,11.8,0.0,65.76,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,3,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,1966.268523116886,11.8,0.0,56.15,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,4,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,1754.208212302049,11.8,0.0,48.99,1.0
+tintic,"Tintic District, UT",tintic_mosaic,3428,252.37,0.01,312,16,5.1,nested,mineral_system,,,False,Unknown System,28,3159.549746886816,11.8,3.18,8.17,1.0

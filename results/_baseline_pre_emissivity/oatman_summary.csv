@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,426,6,1.4,nested,site,,,False,,0,28444.122119170108,11.4,0.65,3.04,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,361,3,0.8,nested,commodity,Gold/Silver,,False,,0,26681.29197858088,11.4,0.28,2.41,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,41,0,0.0,nested,commodity,Other,,False,,0,42795.16598301529,11.4,0.0,8.57,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,14,3,21.4,nested,commodity,Sand/Gravel,,False,,0,30429.053203943033,11.4,7.57,47.59,0.2088
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,9,0,0.0,nested,commodity,Stone,,False,,0,31684.449651908028,11.4,0.0,29.92,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,19481.02147276668,11.4,0.0,79.35,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,37,0,0.0,nested,earth_mri,,Base Metals,True,,0,55972.6559456232,11.4,0.0,9.41,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,2,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,23183.87942881452,11.4,0.0,65.76,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,19481.02147276668,11.4,0.0,79.35,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,342,3,0.9,nested,earth_mri,,Gold/Silver,True,,0,25269.295926145533,11.4,0.3,2.55,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,4,0,0.0,nested,earth_mri,,Industrial,True,,0,18716.844882758174,11.4,0.0,48.99,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,40,3,7.5,nested,earth_mri,,Non-Critical,False,,0,31584.809654380195,11.4,2.58,19.86,0.8497
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,10,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,58483.76421871467,11.4,0.0,27.75,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,28208.20921702136,11.4,0.0,79.35,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,19481.02147276668,11.4,0.0,79.35,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,349,3,0.9,nested,mineral_system,,,False,Orogenic,0,26169.5821225355,11.4,0.29,2.5,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,0,18691.59962575772,11.4,0.0,65.76,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,9,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,49161.11714976077,11.4,0.0,29.92,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,37426.179935554675,11.4,0.0,79.35,1.0
+oatman,"Oatman, NV/AZ",oatman_mosaic,7506,324.63,0.01,53,3,5.7,nested,mineral_system,,,False,Unknown System,0,34608.02935074951,11.4,1.94,15.37,0.9499

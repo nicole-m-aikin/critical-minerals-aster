@@ -1,0 +1,24 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,124,29,23.4,nested,site,,,False,,18,6492.373839327026,12.52,16.81,31.57,0.0006
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,2,0,0.0,nested,commodity,Antimony,,False,,0,7776.466361802479,12.52,0.0,65.76,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,49,13,26.5,nested,commodity,Gold/Silver,,False,,7,6275.307015750452,12.52,16.21,40.26,0.0061
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,70,15,21.4,nested,commodity,Other,,False,,11,6601.025688567086,12.52,13.44,32.39,0.025
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,2,0,0.0,nested,commodity,Stone,,False,,0,3691.6690166262024,12.52,0.0,65.76,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,1,100.0,nested,commodity,Uranium,,False,,0,12556.243348225767,12.52,20.65,100.0,0.1252
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,53,16,30.2,nested,earth_mri,,Base Metals,True,,8,6810.376561852379,12.52,19.52,43.54,0.0005
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,4,2,50.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,9940.39890855338,12.52,15.0,85.0,0.0791
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,1,100.0,nested,earth_mri,,Energy,True,,0,12556.243348225767,12.52,20.65,100.0,0.1252
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,34,10,29.4,nested,earth_mri,,Gold/Silver,True,,4,6874.222084887514,12.52,16.83,46.17,0.0071
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,28,0,0.0,nested,earth_mri,,Non-Critical,False,,6,5030.928930364904,12.52,0.0,12.06,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,4,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,4299.249594885784,12.52,0.0,48.99,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,3,1,33.3,nested,mineral_system,,,False,Basin Brine Path,0,8298.65735135074,12.52,6.15,79.23,0.3306
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,6,3,50.0,nested,mineral_system,,,False,Coeur d'Alene-type,1,9406.177730564643,12.52,18.76,81.24,0.0293
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,2,2,100.0,nested,mineral_system,,,False,Metamorphic,0,15139.308475917887,12.52,34.24,100.0,0.0157
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,1,100.0,nested,mineral_system,,,False,Meteoric Recharge,0,12556.243348225767,12.52,20.65,100.0,0.1252
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,28,5,17.9,nested,mineral_system,,,False,Orogenic,4,4306.765858674093,12.52,7.88,35.59,0.2689
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,9,2,22.2,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,4508.290698713162,12.52,6.32,54.74,0.3135
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,968.2665378806678,12.52,0.0,79.35,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,1,158.46184190773783,12.52,0.0,79.35,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,5159.137469547274,12.52,0.0,79.35,1.0
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,70,14,20.0,nested,mineral_system,,,False,Unknown System,12,7224.876993424426,12.52,12.3,30.82,0.0501
+holden,"Holden, WA",holden_mosaic,1897,221.94,0.01,2,1,50.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,3847.5708093555804,12.52,9.45,90.55,0.2347

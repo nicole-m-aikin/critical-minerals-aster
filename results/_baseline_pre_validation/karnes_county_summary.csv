@@ -1,0 +1,10 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,84,28,33.3,nested,site,,,False,,2,5949.250535889112,11.77,24.18,43.95,0.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,6,0,0.0,nested,commodity,Other,,False,,0,10690.19126170725,11.77,0.0,39.03,1.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,2,0,0.0,nested,commodity,Stone,,False,,0,6336.362127605513,11.77,0.0,65.76,1.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,76,28,36.8,nested,commodity,Uranium,,False,,2,5564.778594595144,11.77,26.88,48.08,0.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,76,28,36.8,nested,earth_mri,,Energy,True,,2,5564.778594595144,11.77,26.88,48.08,0.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,8,0,0.0,nested,earth_mri,,Non-Critical,False,,0,9601.733978181815,11.77,0.0,32.44,1.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,37,13,35.1,nested,mineral_system,,,False,Basin Brine Path,1,5425.265007308337,11.77,21.83,51.24,0.0002
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,41,15,36.6,nested,mineral_system,,,False,Meteoric Recharge,1,5625.8602919801215,11.77,23.59,51.88,0.0
+karnes_county,"Karnes County, TX",karnes_county_mosaic,6546,273.98,0.01,6,0,0.0,nested,mineral_system,,,False,Unknown System,0,11390.327962181995,11.77,0.0,39.03,1.0

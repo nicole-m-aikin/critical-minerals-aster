@@ -1,0 +1,16 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,132,0,0.0,nested,site,,,False,,0,18212.27945134761,12.56,0.0,2.83,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,107,0,0.0,nested,commodity,Gold/Silver,,False,,0,18641.63943547796,12.56,0.0,3.47,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,25,0,0.0,nested,commodity,Other,,False,,0,16374.618719269714,12.56,0.0,13.32,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,7,0,0.0,nested,earth_mri,,Base Metals,True,,0,11923.608930897377,12.56,0.0,35.43,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,105,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,18721.746034316533,12.56,0.0,3.53,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,19488.307972064536,12.56,0.0,79.35,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,12,0,0.0,nested,earth_mri,,Non-Critical,False,,0,18508.601559415623,12.56,0.0,24.25,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,7,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,16168.68068190215,12.56,0.0,35.43,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,3,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,11789.010545366482,12.56,0.0,56.15,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,1,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,19488.307972064536,12.56,0.0,79.35,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,91,0,0.0,nested,mineral_system,,,False,Orogenic,0,18650.726430823514,12.56,0.0,4.05,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,21,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,19048.6306611104,12.56,0.0,15.46,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,6,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,15615.37367472538,12.56,0.0,39.03,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,3,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,14534.077584712102,12.56,0.0,56.15,1.0
+jarbidge,"Jarbidge, NV",jarbidge_mosaic,2391,162.88,0.01,7,0,0.0,nested,mineral_system,,,False,Unknown System,0,16376.246296996202,12.56,0.0,35.43,1.0

@@ -1,0 +1,60 @@
+{
+  "site_id": "randsburg",
+  "granule_id": "randsburg_mosaic",
+  "timestamp_utc": "2026-05-22T22:11:16.611654+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 3836,
+  "raster_bbox_wgs84": [
+    -117.95697577389599,
+    35.09757763187509,
+    -117.34814648638844,
+    35.65398816624551
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -117.95697577389599,
+                35.65069614634522
+              ],
+              [
+                -117.95046746838895,
+                35.09757763187509
+              ],
+              [
+                -117.34814648638844,
+                35.100803400632294
+              ],
+              [
+                -117.35053079456422,
+                35.65398816624551
+              ],
+              [
+                -117.95697577389599,
+                35.65069614634522
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 35,
+  "mean_nearest_structure_m": 6797.64075036085,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true
+}

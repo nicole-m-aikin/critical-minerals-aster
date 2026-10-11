@@ -1,0 +1,25 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,497,34,6.8,nested,site,,,False,,96,2393.601839865453,11.09,4.94,9.41,0.9995
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,247,20,8.1,nested,commodity,Gold/Silver,,False,,48,2328.7723294741554,11.09,5.3,12.18,0.9505
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,239,12,5.0,nested,commodity,Other,,False,,44,2517.3436934152514,11.09,2.9,8.57,0.9997
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,3,1,33.3,nested,commodity,Sand/Gravel,,False,,1,1209.5811415460055,11.09,6.15,79.23,0.2973
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,6,1,16.7,nested,commodity,Stone,,False,,3,752.6769203363741,11.09,3.01,56.35,0.5061
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,2,0,0.0,nested,commodity,Uranium,,False,,0,2311.700680056185,11.09,0.0,65.76,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,387,27,7.0,nested,earth_mri,,Base Metals,True,,68,2523.144330289299,11.09,4.84,9.96,0.9976
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,15,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,2,1650.5486341782957,11.09,0.0,20.39,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,2311.700680056185,11.09,0.0,65.76,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,48,3,6.2,nested,earth_mri,,Gold/Silver,True,,12,2093.1299007470625,11.09,2.15,16.84,0.9131
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,5,1,20.0,nested,earth_mri,,Industrial,True,,1,2155.101571197973,11.09,3.62,62.45,0.4445
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,35,3,8.6,nested,earth_mri,,Non-Critical,False,,13,1596.0089622727648,11.09,2.96,22.38,0.7613
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,5,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,3335.114189397837,11.09,0.0,43.45,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,202,16,7.9,nested,mineral_system,,,False,Basin Brine Path,27,2530.3959327931125,11.09,4.93,12.48,0.9449
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,2,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,1,802.1357077553031,11.09,0.0,65.76,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,12,0,0.0,nested,mineral_system,,,False,Marine Chemocline,2,1719.392744934841,11.09,0.0,24.25,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,2,1,50.0,nested,mineral_system,,,False,Marine Evaporite,0,1756.5638740328197,11.09,9.45,90.55,0.2096
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,3,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,2024.3600142813211,11.09,0.0,56.15,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,84,6,7.1,nested,mineral_system,,,False,Orogenic,24,2110.88909625781,11.09,3.31,14.72,0.9152
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,3,1,33.3,nested,mineral_system,,,False,Placer,0,2519.1829869092076,11.09,6.15,79.23,0.2973
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,17,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,3730.839471839478,11.09,0.0,18.43,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,5,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,2,2723.9907938046717,11.09,0.0,43.45,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,4,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,2,918.117585140968,11.09,0.0,48.99,1.0
+patagonia,"Patagonia, AZ",patagonia_mosaic,6057,292.97,0.01,163,10,6.1,nested,mineral_system,,,False,Unknown System,38,2337.840585681234,11.09,3.37,10.92,0.9891

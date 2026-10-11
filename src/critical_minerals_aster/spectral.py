@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import os
 import re
+import warnings
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -15,11 +17,21 @@ from shapely.geometry import Polygon, box
 from critical_minerals_aster.config import BBox
 
 REQUIRED_TIR_BANDS = (10, 11, 12, 13, 14)
-_GRANULE_ID_RE = re.compile(r"(AST_L1T_\d+_\d+)")
+DEFAULT_MAX_CLOUD_PCT = 30.0
+CLOUD_SCORE_WEIGHT = 5.0
+# May–September daytime scenes, as in the Nevada ASTER TIR mosaic of
+# Rockwell & Hofstra (2008), limit snow and seasonal thermal contrast.
+PREFERRED_MONTHS: tuple[int, ...] = (5, 6, 7, 8, 9)
+_GRANULE_ID_RE = re.compile(r"(AST_(?:L1T|05|08)_\d+_\d+)")
+_ACQUISITION_RE = re.compile(r"AST_(?:L1T|05|08)_(\d{17})_")
+
+# AST_05 v004: uint16 emissivity x 0.001, 0 = fill (LP DAAC catalogue).
+EMISSIVITY_SCALE = 0.001
+EMISSIVITY_VALID_RANGE = (0.5, 1.0)
 
 
 def extract_granule_id(granule: Any) -> str:
-    """Parse AST_L1T granule id prefix from earthaccess data links."""
+    """Parse the AST_L1T / AST_05 / AST_08 granule id prefix from earthaccess data links."""
     for link in granule.data_links():
         match = _GRANULE_ID_RE.search(str(link))
         if match:
@@ -50,24 +62,90 @@ def _bbox_coverage_fraction(bbox_wgs84: BBox, footprint: Polygon) -> float:
 
 
 def _tir_band_count(granule: Any, bands: Sequence[int] = REQUIRED_TIR_BANDS) -> int:
-    """Count TIR band files present in granule data links."""
+    """Count TIR band files (L1T ``TIR_B10`` or AST_05 ``SRE_TIR_B10``) in granule data links."""
     urls = [str(u).upper() for u in granule.data_links()]
     return sum(
-        1 for band in bands if any(f"TIR_B{band}" in url for url in urls)
+        1 for band in bands if any(f"TIR_B{band}." in url or f"TIR_B{band}_" in url for url in urls)
     )
 
 
-def score_granule(granule: Any, bbox_wgs84: BBox) -> tuple[float, float, int]:
+def granule_cloud_cover(granule: Any) -> float | None:
+    """Scene cloud cover (0–100 %) from CMR UMM ``CloudCover``; None if absent or invalid."""
+    try:
+        value = granule["umm"].get("CloudCover")
+    except (KeyError, TypeError, AttributeError):
+        return None
+    if value is None:
+        return None
+    try:
+        pct = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not np.isfinite(pct) or pct < 0 or pct > 100:
+        return None
+    return pct
+
+
+def granule_month(granule: Any) -> int | None:
+    """Acquisition month (1–12) from CMR UMM ``TemporalExtent``; None if absent."""
+    try:
+        temporal = granule["umm"].get("TemporalExtent", {})
+        stamp = temporal.get("SingleDateTime") or temporal.get("RangeDateTime", {}).get(
+            "BeginningDateTime"
+        )
+        return int(str(stamp)[5:7])
+    except (KeyError, TypeError, AttributeError, ValueError):
+        return None
+
+
+def granule_day_night(granule: Any) -> str | None:
+    """``"Day"`` or ``"Night"`` from CMR UMM ``DataGranule.DayNightFlag``; None otherwise."""
+    try:
+        flag = granule["umm"].get("DataGranule", {}).get("DayNightFlag")
+    except (KeyError, TypeError, AttributeError):
+        return None
+    if not isinstance(flag, str):
+        return None
+    flag = flag.strip().capitalize()
+    return flag if flag in ("Day", "Night") else None
+
+
+def _selection_tier(
+    cloud: float | None, day_night: str | None, max_cloud_pct: float | None
+) -> int:
+    """0 clear day, 1 clear night, 2 cloudy day, 3 cloudy night (unknown = day / clear).
+
+    Radiance ratios are temperature-sensitive, so a clear night scene is preferred
+    over a cloudy day scene, but day is preferred when both are clear.
+    """
+    cloudy = max_cloud_pct is not None and cloud is not None and cloud > max_cloud_pct
+    night = day_night == "Night"
+    return 2 * int(cloudy) + int(night)
+
+
+_TIER_NAMES = ("day_clear", "night_clear", "day_cloudy", "night_cloudy")
+
+
+def score_granule(
+    granule: Any,
+    bbox_wgs84: BBox,
+    cloud_weight: float = CLOUD_SCORE_WEIGHT,
+) -> tuple[float, float, int]:
     """
     Score one granule for ranking.
 
     Returns (coverage_fraction, composite_score, tir_band_count).
-    Composite favors bbox coverage, then band completeness.
+    Composite favors bbox coverage, then band completeness, minus a cloud
+    penalty of ``cloud_weight * cloud_pct / 100`` (with the default weight,
+    10 points of scene cloud cost as much as 5 points of bbox coverage).
+    Unknown cloud cover is not penalized.
     """
     footprint = _granule_footprint(granule)
     coverage = _bbox_coverage_fraction(bbox_wgs84, footprint)
     band_count = _tir_band_count(granule)
-    composite = coverage * 10.0 + band_count
+    cloud = granule_cloud_cover(granule)
+    cloud_penalty = cloud_weight * cloud / 100.0 if cloud is not None else 0.0
+    composite = coverage * 10.0 + band_count - cloud_penalty
     return coverage, composite, band_count
 
 
@@ -75,12 +153,20 @@ def select_granule(
     results: Sequence[Any],
     bbox_wgs84: BBox,
     granule_id_override: str | None = None,
+    max_cloud_pct: float | None = DEFAULT_MAX_CLOUD_PCT,
+    prefer_day: bool = True,
 ) -> Any:
     """
     Choose the best earthaccess ASTER L1T granule for a study bbox.
 
     If ``granule_id_override`` is set (non-empty), return the matching granule
-    from ``results``. Otherwise rank by bbox coverage and TIR B10–B14 availability.
+    from ``results`` regardless of cloud cover. Otherwise granules are ranked
+    first by tier (clear day, clear night, cloudy day, cloudy night; "cloudy"
+    means scene cloud above ``max_cloud_pct``), then by the cloud-penalized
+    composite from ``score_granule``. Unknown cloud counts as clear and unknown
+    day/night as day. Falling back past clear-day emits a warning.
+    ``max_cloud_pct=None`` disables the cloud cutoff; ``prefer_day=False``
+    ignores day/night.
     """
     if not results:
         raise ValueError("No granules in search results")
@@ -95,7 +181,7 @@ def select_granule(
         )
 
     best: Any | None = None
-    best_score = -1.0
+    best_key: tuple[int, float] = (99, np.inf)
     for granule in results:
         try:
             band_count = _tir_band_count(granule)
@@ -107,13 +193,171 @@ def select_granule(
             _, composite, _ = score_granule(granule, bbox_wgs84)
         except (KeyError, IndexError, TypeError, ValueError):
             continue
-        if composite > best_score:
-            best_score = composite
+        day_night = granule_day_night(granule) if prefer_day else None
+        tier = _selection_tier(granule_cloud_cover(granule), day_night, max_cloud_pct)
+        key = (tier, -composite)
+        if key < best_key:
+            best_key = key
             best = granule
 
     if best is None:
         raise ValueError("No granule with TIR bands found in search results")
+    if best_key[0] > 0:
+        cloud = granule_cloud_cover(best)
+        cloud_txt = f"{cloud:g}% cloud" if cloud is not None else "unknown cloud"
+        warnings.warn(
+            f"No clear-sky day granule (<= {max_cloud_pct:g}% cloud); falling back to "
+            f"{extract_granule_id(best)} ({_TIER_NAMES[best_key[0]]}, {cloud_txt})",
+            stacklevel=2,
+        )
     return best
+
+
+@dataclass
+class MosaicSelection:
+    """Granules chosen for a site mosaic, best (reference) first."""
+
+    granules: list[Any]
+    tier: str
+    union_coverage: float
+    records: list[dict[str, Any]] = field(default_factory=list)
+
+
+def select_mosaic_granules(
+    results: Sequence[Any],
+    bbox_wgs84: BBox,
+    *,
+    max_cloud_pct: float | None = DEFAULT_MAX_CLOUD_PCT,
+    min_coverage: float = 0.30,
+    target_coverage: float = 0.98,
+    min_acceptable_coverage: float = 0.90,
+    fallback_coverage_tolerance: float = 0.05,
+    min_gain: float = 0.02,
+    max_granules: int = 6,
+    prefer_day: bool = True,
+    max_size_mb: float | None = None,
+    preferred_months: tuple[int, ...] | None = PREFERRED_MONTHS,
+) -> MosaicSelection:
+    """
+    Choose a small, single-tier set of granules that covers the study bbox.
+
+    Tiers are tried in order (clear day, clear night, cloudy day, cloudy night).
+    Day and night scenes are never mixed in one mosaic. Within each tier,
+    ``preferred_months`` scenes are tried alone before all months (tier name
+    gets an ``_offseason`` suffix if any off-season granule is used). Within a tier the
+    reference granule maximises ``coverage - 0.5 * cloud/100``; further
+    granules are added greedily by new bbox area gained (same cloud penalty)
+    until ``target_coverage`` or ``max_granules`` is reached. The first tier
+    whose union reaches ``min_acceptable_coverage`` wins; otherwise the earliest
+    tier within ``fallback_coverage_tolerance`` of the largest union is used
+    (some bboxes sit on a swath edge that no day pass fully covers) and a
+    warning is emitted.
+    """
+    lon0, lat0, lon1, lat1 = bbox_wgs84
+    study = box(lon0, lat0, lon1, lat1)
+    if study.area == 0:
+        raise ValueError("Degenerate bbox")
+
+    by_tier: dict[int, list[dict[str, Any]]] = {i: [] for i in range(4)}
+    for granule in results:
+        try:
+            if _tir_band_count(granule) < 3:
+                continue
+            if max_size_mb is not None and granule.size() >= max_size_mb:
+                continue
+            footprint = _granule_footprint(granule)
+        except Exception:
+            continue
+        clipped = study.intersection(footprint)
+        coverage = float(clipped.area / study.area)
+        if coverage <= min_coverage:
+            continue
+        cloud = granule_cloud_cover(granule)
+        day_night = granule_day_night(granule)
+        tier = _selection_tier(cloud, day_night if prefer_day else None, max_cloud_pct)
+        by_tier[tier].append({
+            "granule": granule,
+            "geom": clipped,
+            "coverage": coverage,
+            "cloud": cloud,
+            "day_night": day_night,
+            "month": granule_month(granule),
+        })
+
+    def _penalty(c: dict[str, Any]) -> float:
+        return 0.5 * (c["cloud"] or 0.0) / 100.0
+
+    def _greedy(cands: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], float]:
+        if not cands:
+            return [], 0.0
+        chosen = [max(cands, key=lambda c: c["coverage"] - _penalty(c))]
+        union = chosen[0]["geom"]
+        remaining = [c for c in cands if c is not chosen[0]]
+        while remaining and len(chosen) < max_granules and union.area / study.area < target_coverage:
+            gains = [(c["geom"].difference(union).area / study.area, c) for c in remaining]
+            gain, pick = max(gains, key=lambda gc: gc[0] - _penalty(gc[1]))
+            if gain < min_gain:
+                break
+            chosen.append(pick)
+            union = union.union(pick["geom"])
+            remaining.remove(pick)
+        return chosen, float(union.area / study.area)
+
+    def _in_season(c: dict[str, Any]) -> bool:
+        return preferred_months is None or c["month"] is None or c["month"] in preferred_months
+
+    best: tuple[str, list[dict[str, Any]], float] | None = None
+    fallbacks: list[tuple[str, list[dict[str, Any]], float]] = []
+    for tier in range(4):
+        pools = [[c for c in by_tier[tier] if _in_season(c)]]
+        if preferred_months is not None:
+            pools.append(by_tier[tier])
+        for pool in pools:
+            chosen, union_cov = _greedy(pool)
+            if not chosen:
+                continue
+            name = _TIER_NAMES[tier]
+            if not prefer_day:
+                dn = {c["day_night"] for c in chosen}
+                prefix = "night" if dn == {"Night"} else "day" if dn <= {"Day", None} else "mixed"
+                name = f"{prefix}_{'cloudy' if tier >= 2 else 'clear'}"
+            if not all(_in_season(c) for c in chosen):
+                name += "_offseason"
+            if union_cov >= min_acceptable_coverage:
+                best = (name, chosen, union_cov)
+                break
+            fallbacks.append((name, chosen, union_cov))
+        if best is not None:
+            break
+    if best is None and fallbacks:
+        top = max(f[2] for f in fallbacks)
+        best = next(f for f in fallbacks if f[2] >= top - fallback_coverage_tolerance)
+
+    if best is None:
+        return MosaicSelection(granules=[], tier="none", union_coverage=0.0)
+
+    tier_name, chosen, union_cov = best
+    if tier_name != "day_clear" or union_cov < min_acceptable_coverage:
+        warnings.warn(
+            f"Mosaic uses tier {tier_name} with {union_cov:.0%} bbox coverage",
+            stacklevel=2,
+        )
+    records = [
+        {
+            "granule_id": extract_granule_id(c["granule"]),
+            "cloud_pct": c["cloud"],
+            "day_night": c["day_night"],
+            "month": c["month"],
+            "bbox_coverage": round(c["coverage"], 4),
+        }
+        for c in chosen
+    ]
+    return MosaicSelection(
+        granules=[c["granule"] for c in chosen],
+        tier=tier_name,
+        union_coverage=union_cov,
+        records=records,
+    )
 
 
 def clip_bands_to_bbox(
@@ -308,11 +552,84 @@ def load_tir_bands_10_14(
 def alteration_ratios(
     b12: np.ndarray, b13: np.ndarray, b14: np.ndarray
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Silica, carbonate, and mafic ratios (same definitions as notebooks)."""
+    """Legacy radiance recipe, kept for GEE parity and archived comparisons.
+
+    The labels are wrong by the TIR literature (B13/B14 is the carbonate index)
+    and "carbonate" and "mafic" are exact reciprocals. Use ``alteration_indices``.
+    """
     silica = band_ratio(b13, b14)
     carbonate = band_ratio(b13, b12)
     mafic = band_ratio(b12, b13)
     return silica, carbonate, mafic
+
+
+def alteration_indices(
+    b10: np.ndarray, b11: np.ndarray, b12: np.ndarray, b13: np.ndarray, b14: np.ndarray
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Quartz, carbonate and mafic indices of Ninomiya (2003) / Ninomiya et al. (2005).
+
+    QI = B11² / (B10·B12), CI = B13 / B14, MI = B12 / B13. Intended for
+    emissivity (AST_05); on radiance they are temperature-dependent. Returned in
+    the pipeline's (silica, carbonate, mafic) slot order.
+    """
+    with np.errstate(divide="ignore", invalid="ignore"):
+        denom = b10 * b12
+        qi = np.where(denom != 0, b11 * b11 / denom, np.nan)
+    ci = band_ratio(b13, b14)
+    mi = band_ratio(b12, b13)
+    return qi, ci, mi
+
+
+def ast05_qa_good(qa: np.ndarray, max_adjacency: int = 1) -> np.ndarray:
+    """Pixels usable from the AST_05 ``QA_DataPlane``.
+
+    Bits 7–4 quality (0000 good; 0001–0111 suspect; 1xxx bad), bits 3–2 cloud
+    (00 clear, 01 thin, 10 thick), bits 1–0 cloud adjacency (00 far … 11 very
+    near) per the ASTER Level-2 product specification. Keeps good, clear pixels
+    no closer to cloud than ``max_adjacency``.
+    """
+    qa = qa.astype(np.uint8)
+    quality = qa >> 4
+    cloud = (qa >> 2) & 0b11
+    adjacency = qa & 0b11
+    return (quality == 0) & (cloud == 0) & (adjacency <= max_adjacency)
+
+
+def acquisition_token(granule_id: str) -> str | None:
+    """Acquisition datetime (MMDDYYYYhhmmss) shared by AST_L1T / AST_05 / AST_08 of one scene."""
+    m = _ACQUISITION_RE.search(granule_id or "")
+    return m.group(1)[3:] if m else None
+
+
+def load_ast05_granule(
+    directory: os.PathLike[str] | str,
+    granule_id: str,
+) -> tuple[dict[int, np.ndarray], np.ndarray, rasterio.Affine, rasterio.crs.CRS, Profile]:
+    """Load AST_05 emissivity B10–B14 (float, NaN outside QA-good valid pixels).
+
+    Returns (bands, qa_good_mask, transform, crs, profile). Pixels failing the QA
+    rule or with any band outside ``EMISSIVITY_VALID_RANGE`` are NaN in every band.
+    """
+    directory = Path(directory)
+    bands: dict[int, np.ndarray] = {}
+    transform = crs = profile = None
+    for b in REQUIRED_TIR_BANDS:
+        with rasterio.open(directory / f"{granule_id}_SRE_TIR_B{b}.tif") as src:
+            raw = src.read(1)
+            if transform is None:
+                transform, crs, profile = src.transform, src.crs, src.profile.copy()
+        arr = raw.astype(np.float64) * EMISSIVITY_SCALE
+        arr[raw == 0] = np.nan
+        bands[b] = arr
+    with rasterio.open(directory / f"{granule_id}_SRE_TIR_QA_DataPlane.tif") as src:
+        qa_good = ast05_qa_good(src.read(1))
+    lo, hi = EMISSIVITY_VALID_RANGE
+    valid = qa_good.copy()
+    for arr in bands.values():
+        valid &= np.isfinite(arr) & (arr >= lo) & (arr <= hi)
+    for arr in bands.values():
+        arr[~valid] = np.nan
+    return bands, qa_good, transform, crs, profile
 
 
 def compute_valid_data_footprint(

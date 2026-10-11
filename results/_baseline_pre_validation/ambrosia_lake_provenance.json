@@ -1,0 +1,60 @@
+{
+  "site_id": "ambrosia_lake",
+  "granule_id": "ambrosia_lake_mosaic",
+  "timestamp_utc": "2026-08-27T08:44:33.377252+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "0d9f738eac775aa1ffee548d39a31dff0291c9ef",
+  "n_zones": 7153,
+  "raster_bbox_wgs84": [
+    -108.03022300759956,
+    35.181325419846296,
+    -107.6252841456287,
+    35.66153198694347
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -108.02319584502224,
+                35.652528647842445
+              ],
+              [
+                -108.01262200313687,
+                35.181325419846296
+              ],
+              [
+                -107.6252841456287,
+                35.19034802979379
+              ],
+              [
+                -107.64062902712331,
+                35.66153198694347
+              ],
+              [
+                -108.02319584502224,
+                35.652528647842445
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 81,
+  "mean_nearest_structure_m": 1236.9533053041223,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": false
+}

@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,249,24,9.6,nested,site,,,False,,19,7859.028652777357,11.64,6.56,13.94,0.862
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,3,0,0.0,nested,commodity,Gold/Silver,,False,,0,6227.175961911719,11.64,0.0,56.15,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,2,0,0.0,nested,commodity,Mercury,,False,,0,2570.4157078388394,11.64,0.0,65.76,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,161,8,5.0,nested,commodity,Other,,False,,3,10867.748907501393,11.64,2.54,9.5,0.9989
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,74,16,21.6,nested,commodity,Sand/Gravel,,False,,12,2044.5019797732698,11.64,13.77,32.27,0.0102
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,2,0,0.0,nested,commodity,Stone,,False,,0,12023.32996998651,11.64,0.0,65.76,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,7,0,0.0,nested,commodity,Uranium,,False,,4,1146.9135270328172,11.64,0.0,35.43,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,7,2,28.6,nested,earth_mri,,Base Metals,True,,2,8697.132537953143,11.64,8.22,64.11,0.1917
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,2570.4157078388394,11.64,0.0,79.35,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,7,0,0.0,nested,earth_mri,,Energy,True,,4,1146.9135270328172,11.64,0.0,35.43,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,1,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,4248.347021863365,11.64,0.0,79.35,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,233,22,9.4,nested,earth_mri,,Non-Critical,False,,13,8073.6954908023945,11.64,6.32,13.88,0.8767
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,13520.681826341417,11.64,0.0,65.76,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,2570.4157078388394,11.64,0.0,79.35,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,4,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,3958.9980229408993,11.64,0.0,48.99,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,2570.4157078388394,11.64,0.0,65.76,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,7,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,4,1146.9135270328172,11.64,0.0,35.43,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,3,0,0.0,nested,mineral_system,,,False,Orogenic,0,13525.825731378603,11.64,0.0,56.15,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,12692.393033657036,11.64,0.0,79.35,1.0
+iron_springs,"Iron Springs, UT",iron_springs_mosaic,4855,250.82,0.01,229,24,10.5,nested,mineral_system,,,False,Unknown System,15,8056.81775876234,11.64,7.14,15.12,0.7372

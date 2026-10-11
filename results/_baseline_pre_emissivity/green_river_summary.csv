@@ -1,0 +1,12 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,74,2,2.7,nested,site,,,False,,2,22655.437207524836,9.22,0.74,9.33,0.9934
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,28,1,3.6,nested,commodity,Other,,False,,0,32514.126675652562,9.22,0.63,17.71,0.9334
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,34,0,0.0,nested,commodity,Sand/Gravel,,False,,2,20271.613516466656,9.22,0.0,10.15,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,3,1,33.3,nested,commodity,Stone,,False,,0,15821.282118578723,9.22,6.15,79.23,0.2519
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,9,0,0.0,nested,commodity,Uranium,,False,,0,3267.566724773761,9.22,0.0,29.92,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,9,0,0.0,nested,earth_mri,,Energy,True,,0,3267.566724773761,9.22,0.0,29.92,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,6799.307015232314,9.22,0.0,79.35,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,64,2,3.1,nested,earth_mri,,Non-Critical,False,,2,25629.608528416276,9.22,0.86,10.7,0.9846
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,4,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,30408.509409027378,9.22,0.0,48.99,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,9,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,3267.566724773761,9.22,0.0,29.92,1.0
+green_river,"Green River Basin, WY",green_river_mosaic,11464,252.13,0.01,61,2,3.3,nested,mineral_system,,,False,Unknown System,2,25007.54451143876,9.22,0.9,11.19,0.9803

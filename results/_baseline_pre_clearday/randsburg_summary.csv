@@ -1,0 +1,29 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,652,89,13.7,nested,site,,,False,,34,6777.706368700779,11.28,11.23,16.5,0.0345
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,2,1,50.0,nested,commodity,Antimony,,False,,0,5296.503352596117,11.28,9.45,90.55,0.2128
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,406,42,10.3,nested,commodity,Gold/Silver,,False,,19,7190.2792685397835,11.28,7.74,13.69,0.7457
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,1,1,100.0,nested,commodity,Mercury,,False,,0,3732.563258186811,11.28,20.65,100.0,0.1128
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,215,40,18.6,nested,commodity,Other,,False,,14,6105.195955991582,11.28,13.97,24.34,0.0011
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,10,3,30.0,nested,commodity,Sand/Gravel,,False,,0,2109.2361319934653,11.28,10.78,60.32,0.0939
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,11,1,9.1,nested,commodity,Stone,,False,,1,9163.156106560855,11.28,1.62,37.74,0.7318
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,7,1,14.3,nested,commodity,Uranium,,False,,0,7283.05576744048,11.28,2.57,51.31,0.5672
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,45,9,20.0,nested,earth_mri,,Base Metals,True,,5,2956.2960686353017,11.28,10.9,33.82,0.0612
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,4,1,25.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,5803.742026255947,11.28,4.56,69.94,0.3804
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,8,1,12.5,nested,earth_mri,,Energy,True,,1,6378.883337594328,11.28,2.24,47.09,0.616
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,391,41,10.5,nested,earth_mri,,Gold/Silver,True,,18,7164.4189242342945,11.28,7.82,13.92,0.7124
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,0,2735.1918386786774,11.28,0.0,65.76,1.0
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,111,24,21.6,nested,earth_mri,,Non-Critical,False,,10,4875.273276963049,11.28,14.98,30.16,0.0013
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,91,13,14.3,nested,earth_mri,,Specialty/High-Tech,True,,0,9493.09535937008,11.28,8.54,22.92,0.2232
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,7,2,28.6,nested,mineral_system,,,False,Basin Brine Path,0,1379.2067190696005,11.28,8.22,64.11,0.1822
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,1,0,0.0,nested,mineral_system,,,False,Chemical Weathering,0,3241.8914570234824,11.28,0.0,79.35,1.0
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,1,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,3750.9546424385494,11.28,0.0,79.35,1.0
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,2,1,50.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,1614.2654564202396,11.28,9.45,90.55,0.2128
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,3,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,7417.213104674122,11.28,0.0,56.15,1.0
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,3,3,100.0,nested,mineral_system,,,False,Marine Evaporite,1,642.330757757632,11.28,43.85,100.0,0.0014
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,1,1,100.0,nested,mineral_system,,,False,Meteoric Convection,0,3732.563258186811,11.28,20.65,100.0,0.1128
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,7,1,14.3,nested,mineral_system,,,False,Meteoric Recharge,0,7283.05576744048,11.28,2.57,51.31,0.5672
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,366,39,10.7,nested,mineral_system,,,False,Orogenic,19,6561.679780827609,11.28,7.89,14.24,0.6705
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,7,2,28.6,nested,mineral_system,,,False,Placer,2,5017.850694902474,11.28,8.22,64.11,0.1822
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,9667.260332949865,11.28,0.0,79.35,1.0
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,89,13,14.6,nested,mineral_system,,,False,Reduced Intrusion-Related,0,9498.266499825102,11.28,8.74,23.4,0.2004
+randsburg,"Randsburg, CA",randsburg_mosaic,3836,379.83,0.01,164,27,16.5,nested,mineral_system,,,False,Unknown System,12,6271.8500589326095,11.28,11.57,22.89,0.0287

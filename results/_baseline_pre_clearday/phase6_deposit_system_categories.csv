@@ -1,0 +1,10 @@
+category,n_sites,n_high_confidence,median_enrichment,bootstrap_ci_low,bootstrap_ci_high,ci_note,n_fdr_significant,frac_fdr_significant,sites
+Skarn/Carbonate Replacement,28,21,1.64,1.03,2.26,ok,13,0.46,"bisbee, cerro_gordo, cherry_creek, christmas, cornwall_pa, courtland_gleeson, darwin, dillsburg_pa, eagle_mountain, eureka, french_creek_pa, gold_hill, hanover_fierro, iron_springs, lake_valley, magdalena_kelly, organ_mountains, patagonia, pioche, providence_mountains, san_francisco_frisco, shafter, snoqualmie_wa, tilly_foster_ny, tintic, tombstone, victorio, willsboro_lewis_ny"
+Volcanogenic/VMS,9,9,1.19,0.28,1.45,ok,4,0.44,"big_mike, ducktown, east_shasta, gossan_lead, holden, iron_king, jerome, ore_knob, west_shasta"
+Mafic/Ultramafic,7,7,1.16,0.15,1.35,ok,0,0.0,"duluth_partridge_river, duluth_south_kawishiwi, josephine_ophiolite, new_idria, state_line_chromite, stillwater, webster_addie"
+Uranium/Energy,9,8,1.1,0.19,3.13,ok,5,0.56,"ambrosia_lake, arizona_strip, crooks_gap, gas_hills, henry_mountains, karnes_county, lisbon_valley, shirley_basin, uravan"
+Sediment-hosted,12,11,0.81,0.47,1.73,ok,4,0.33,"alligator_ridge, austinville_ivanhoe, black_butte, carlin_trend, cortez, getchell, jerritt_canyon, long_canyon, mascot_jefferson_city, tri_state, upper_mississippi_valley, viburnum_trend"
+Porphyry Cu-Mo-Au,17,16,0.78,0.33,1.37,ok,4,0.24,"ajo, bagdad, bingham_canyon, climax, contact_district, ely_robinson, globe_miami, lordsburg, mineral_park, morenci, questa_nm, ray_mine, safford_az, san_manuel_az, sierrita, tyrone_nm, yerington"
+Alkaline/Carbonatite,10,7,0.7,0.0,1.1,ok,1,0.1,"bear_lodge, cornudas, elk_creek, iron_hill, lemhi_pass, lemitar, magnet_cove, mountain_pass, round_top, wet_mountains"
+Mixed/Other,6,3,0.68,0.15,2.03,ok,2,0.33,"battle_mountain, green_river, mcdermitt, pea_ridge, silver_peak, thacker_pass"
+Epithermal,11,10,0.45,0.2,1.06,ok,0,0.0,"bodie, goldfield, jarbidge, marysvale, oatman, randsburg, republic, round_mountain, steamboat_springs, summitville, tonopah"

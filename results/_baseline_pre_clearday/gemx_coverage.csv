@@ -1,0 +1,764 @@
+site_id,collection,sensor,swir,gemx_only,n_bands,gsd_m,n_granules_all,n_granules_gemx_era,coverage_frac,first_date,last_date,site_name,state,category,tier,enrichment
+mcdermitt,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,master_gemx_2025,MASTER,partial,True,50,~50,86,86,1.0,2025-07-16,2025-09-17,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,44,44,1.0,2025-07-11,2025-09-15,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+mcdermitt,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,23,14,1.0,2025-07-11,2025-09-17,"McDermitt Caldera, NV/OR",NV/OR,Mixed/Other,null,1.9
+silver_peak,master_gemx_2023,MASTER,partial,True,50,~50,87,87,1.0,2023-04-25,2023-09-18,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,master_gemx_2024,MASTER,partial,True,50,~50,78,78,1.0,2024-05-08,2024-06-14,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,master_gemx_2025,MASTER,partial,True,50,~50,141,141,1.0,2025-06-11,2025-09-23,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,41,41,1.0,2025-06-11,2026-06-01,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+silver_peak,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,39,32,1.0,2023-09-18,2025-09-23,"Silver Peak, NV",NV,Mixed/Other,null,0.42
+goldfield,master_gemx_2023,MASTER,partial,True,50,~50,87,87,1.0,2023-04-25,2023-09-18,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,master_gemx_2024,MASTER,partial,True,50,~50,20,20,1.0,2024-05-08,2024-05-21,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,master_gemx_2025,MASTER,partial,True,50,~50,125,125,1.0,2025-06-11,2025-09-23,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,49,49,0.9474,2025-06-12,2026-06-01,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+goldfield,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,32,25,1.0,2023-09-18,2025-09-23,"Goldfield–Cuprite, NV",NV,Epithermal,null,0.44
+tonopah,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,master_gemx_2024,MASTER,partial,True,50,~50,6,6,1.0,2024-05-08,2024-05-08,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,master_gemx_2025,MASTER,partial,True,50,~50,181,181,1.0,2025-05-30,2025-09-23,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,60,60,1.0,2025-05-30,2026-06-01,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+tonopah,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,33,24,1.0,2025-05-30,2025-08-01,"Tonopah–Manhattan, NV",NV,Epithermal,null,0.87
+yerington,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,master_gemx_2024,MASTER,partial,True,50,~50,6,6,1.0,2024-05-08,2024-05-08,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,master_gemx_2025,MASTER,partial,True,50,~50,48,48,1.0,2025-05-30,2025-09-17,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,18,18,0.7989,2025-07-15,2026-06-01,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+yerington,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,33,10,0.7309,2024-06-21,2025-08-06,"Yerington, NV",NV,Porphyry Cu-Mo-Au,null,1.36
+oatman,master_gemx_2023,MASTER,partial,True,50,~50,96,96,1.0,2023-04-25,2023-09-26,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,master_gemx_2024,MASTER,partial,True,50,~50,126,126,1.0,2024-04-24,2024-06-14,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-09-23,2025-09-23,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,master_gemx_2026,MASTER,partial,True,50,~50,8,8,0.5141,2026-03-31,2026-03-31,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+oatman,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,14,12,1.0,2023-09-19,2024-05-22,"Oatman, NV/AZ",NV/AZ,Epithermal,null,0.22
+marysvale,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,master_gemx_2025,MASTER,partial,True,50,~50,70,70,1.0,2025-07-23,2025-09-23,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,34,34,0.9152,2025-07-23,2025-09-23,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Marysvale, UT",UT,Epithermal,null,0.4
+marysvale,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,18,12,0.8671,2025-07-23,2025-09-23,"Marysvale, UT",UT,Epithermal,null,0.4
+mountain_pass,master_gemx_2023,MASTER,partial,True,50,~50,136,136,1.0,2023-04-25,2023-09-26,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,master_gemx_2024,MASTER,partial,True,50,~50,166,166,1.0,2024-04-02,2024-06-14,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,master_gemx_2025,MASTER,partial,True,50,~50,28,28,1.0,2025-08-29,2025-09-23,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,master_gemx_2026,MASTER,partial,True,50,~50,8,8,1.0,2026-03-31,2026-03-31,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,23,23,1.0,2025-06-10,2025-09-23,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+mountain_pass,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,109,32,1.0,2023-08-28,2025-09-23,"Mountain Pass, CA",CA,Alkaline/Carbonatite,null,0.87
+jerritt_canyon,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,master_gemx_2025,MASTER,partial,True,50,~50,116,116,1.0,2025-08-05,2025-09-22,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,30,30,0.7595,2025-07-11,2026-06-02,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+jerritt_canyon,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,18,15,1.0,2025-07-11,2025-09-17,"Jerritt Canyon, NV",NV,Sediment-hosted,null,0.0
+darwin,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,master_gemx_2024,MASTER,partial,True,50,~50,108,108,1.0,2024-05-08,2024-06-14,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,master_gemx_2025,MASTER,partial,True,50,~50,63,63,1.0,2025-06-11,2025-09-23,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,18,18,0.9863,2025-06-11,2025-09-23,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+darwin,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,15,15,1.0,2024-05-08,2025-06-27,"Darwin, CA",CA,Skarn/Carbonate Replacement,null,0.9
+steamboat_springs,master_gemx_2023,MASTER,partial,True,50,~50,64,64,1.0,2023-04-25,2023-09-20,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,master_gemx_2024,MASTER,partial,True,50,~50,44,44,1.0,2024-05-08,2024-06-06,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,master_gemx_2025,MASTER,partial,True,50,~50,24,24,1.0,2025-08-06,2025-09-17,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,3,3,0.3124,2025-07-15,2025-09-17,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+steamboat_springs,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,64,9,0.9842,2023-09-05,2025-09-17,"Steamboat Springs, NV",NV,Epithermal,null,1.48
+climax,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,master_gemx_2026,MASTER,partial,True,50,~50,10,10,0.0419,2026-04-24,2026-04-24,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+climax,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Climax, CO",CO,Porphyry Cu-Mo-Au,null,0.0
+bear_lodge,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+bear_lodge,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Bear Lodge, WY",WY,Alkaline/Carbonatite,null,0.19
+stillwater,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+stillwater,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Stillwater Complex, MT",MT,Mafic/Ultramafic,null,0.17
+jerome,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,master_gemx_2024,MASTER,partial,True,50,~50,100,100,0.8735,2024-04-03,2024-05-28,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,master_gemx_2025,MASTER,partial,True,50,~50,70,70,1.0,2025-06-06,2025-09-23,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,34,34,1.0,2025-05-14,2026-05-15,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+jerome,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,22,18,1.0,2024-04-10,2025-09-12,"Jerome, AZ",AZ,Volcanogenic/VMS,null,0.34
+bagdad,master_gemx_2023,MASTER,partial,True,50,~50,41,41,1.0,2023-04-25,2023-09-25,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,master_gemx_2024,MASTER,partial,True,50,~50,148,148,1.0,2024-04-03,2024-06-14,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,master_gemx_2025,MASTER,partial,True,50,~50,38,38,1.0,2025-05-23,2025-09-23,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,3,3,0.2512,2025-05-14,2025-07-31,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+bagdad,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,21,19,1.0,2023-09-25,2025-07-31,"Bagdad, AZ",AZ,Porphyry Cu-Mo-Au,null,0.32
+globe_miami,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,master_gemx_2024,MASTER,partial,True,50,~50,96,96,1.0,2024-04-11,2024-04-23,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-06,2025-06-06,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,1,1,0.0788,2025-05-14,2025-05-14,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+globe_miami,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2024-04-16,2025-05-14,"Globe-Miami, AZ",AZ,Porphyry Cu-Mo-Au,null,1.02
+ajo,master_gemx_2023,MASTER,partial,True,50,~50,46,46,0.328,2023-04-25,2023-09-25,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,master_gemx_2024,MASTER,partial,True,50,~50,112,112,1.0,2024-04-03,2024-04-24,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,master_gemx_2025,MASTER,partial,True,50,~50,20,20,1.0,2025-05-23,2025-06-06,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,4,4,0.5052,2025-06-06,2025-06-06,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ajo,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,11,11,1.0,2023-09-25,2025-06-06,"Ajo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.92
+ely_robinson,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,master_gemx_2025,MASTER,partial,True,50,~50,104,104,1.0,2025-07-23,2025-09-23,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,39,39,0.9987,2025-08-05,2026-06-05,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+ely_robinson,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,17,17,1.0,2025-08-05,2025-09-23,"Ely (Robinson), NV",NV,Porphyry Cu-Mo-Au,null,1.75
+thacker_pass,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,master_gemx_2025,MASTER,partial,True,50,~50,62,62,1.0,2025-07-16,2025-09-17,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,12,12,1.0,2025-07-16,2025-07-16,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+thacker_pass,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,11,6,1.0,2025-07-16,2025-08-08,"Thacker Pass, NV",NV,Mixed/Other,null,2.16
+elk_creek,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+elk_creek,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Elk Creek, NE",NE,Alkaline/Carbonatite,null,0.0
+carlin_trend,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,master_gemx_2025,MASTER,partial,True,50,~50,128,128,1.0,2025-05-30,2025-09-17,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,59,59,1.0,2025-07-11,2026-06-02,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+carlin_trend,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,24,17,1.0,2025-07-11,2025-09-17,"Carlin Trend, NV",NV,Sediment-hosted,null,0.52
+gas_hills,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+gas_hills,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Gas Hills, WY",WY,Uranium/Energy,null,0.94
+green_river,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+green_river,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Green River Basin, WY",WY,Mixed/Other,null,0.0
+bisbee,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,master_gemx_2024,MASTER,partial,True,50,~50,148,148,1.0,2024-04-11,2024-06-10,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+bisbee,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,10,10,0.9684,2024-04-11,2024-06-10,"Bisbee, AZ",AZ,Skarn/Carbonate Replacement,robust,3.73
+hanover_fierro,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,master_gemx_2024,MASTER,partial,True,50,~50,12,12,0.3711,2024-05-30,2024-06-10,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-05,2025-06-05,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,16,16,0.9054,2026-05-07,2026-05-16,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+hanover_fierro,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,1,1,0.8293,2024-05-30,2024-05-30,"Hanover-Fierro, NM",NM,Skarn/Carbonate Replacement,null,1.99
+pea_ridge,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+pea_ridge,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Pea Ridge, MO",MO,Mixed/Other,null,0.31
+lemhi_pass,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+lemhi_pass,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Lemhi Pass, ID/MT",ID/MT,Alkaline/Carbonatite,null,1.05
+bingham_canyon,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+bingham_canyon,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Bingham Canyon, UT",UT,Porphyry Cu-Mo-Au,null,0.06
+viburnum_trend,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+viburnum_trend,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Viburnum Trend, MO",MO,Sediment-hosted,null,1.06
+iron_springs,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,master_gemx_2025,MASTER,partial,True,50,~50,68,68,1.0,2025-07-23,2025-09-23,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,master_gemx_2026,MASTER,partial,True,50,~50,6,6,1.0,2026-03-31,2026-03-31,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,11,11,0.4169,2025-07-23,2025-07-30,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+iron_springs,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2025-07-23,2025-07-30,"Iron Springs, UT",UT,Skarn/Carbonate Replacement,null,1.26
+pioche,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,master_gemx_2024,MASTER,partial,True,50,~50,6,6,0.2854,2024-05-21,2024-05-21,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,master_gemx_2025,MASTER,partial,True,50,~50,68,68,1.0,2025-07-23,2025-09-23,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,master_gemx_2026,MASTER,partial,True,50,~50,6,6,0.6011,2026-03-31,2026-03-31,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,27,27,1.0,2025-09-08,2025-09-16,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+pioche,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,8,8,1.0,2025-09-08,2025-09-16,"Pioche, NV",NV,Skarn/Carbonate Replacement,null,0.49
+mineral_park,master_gemx_2023,MASTER,partial,True,50,~50,44,44,1.0,2023-04-25,2023-09-26,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,master_gemx_2024,MASTER,partial,True,50,~50,118,118,1.0,2024-05-13,2024-06-14,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-09-23,2025-09-23,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,master_gemx_2026,MASTER,partial,True,50,~50,8,8,0.7778,2026-03-31,2026-03-31,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+mineral_park,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,7,7,0.9369,2023-09-26,2024-05-22,"Mineral Park, AZ",AZ,Porphyry Cu-Mo-Au,null,0.0
+battle_mountain,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,master_gemx_2025,MASTER,partial,True,50,~50,118,118,1.0,2025-05-30,2025-09-17,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,59,59,1.0,2025-06-03,2026-06-02,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+battle_mountain,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,23,17,1.0,2025-06-03,2025-08-21,"Battle Mountain, NV",NV,Mixed/Other,null,1.1
+ducktown,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+ducktown,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Ducktown, TN",TN,Volcanogenic/VMS,null,0.27
+iron_hill,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+iron_hill,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Iron Hill, CO",CO,Alkaline/Carbonatite,null,0.96
+magnet_cove,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+magnet_cove,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Magnet Cove, AR",AR,Alkaline/Carbonatite,null,1.82
+morenci,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,master_gemx_2024,MASTER,partial,True,50,~50,106,106,1.0,2024-04-23,2024-06-10,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,master_gemx_2025,MASTER,partial,True,50,~50,42,42,1.0,2025-06-06,2025-06-06,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,27,27,0.9904,2025-05-15,2026-05-08,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+morenci,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,18,18,1.0,2024-05-30,2025-06-06,"Morenci, AZ",AZ,Porphyry Cu-Mo-Au,null,0.78
+patagonia,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,master_gemx_2024,MASTER,partial,True,50,~50,136,136,1.0,2024-04-11,2024-04-23,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,5,5,0.3518,2026-05-08,2026-05-08,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+patagonia,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,10,10,0.9079,2024-04-11,2024-04-17,"Patagonia, AZ",AZ,Skarn/Carbonate Replacement,null,0.61
+sierrita,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,master_gemx_2024,MASTER,partial,True,50,~50,114,114,1.0,2024-04-11,2024-04-17,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,master_gemx_2025,MASTER,partial,True,50,~50,6,6,0.1299,2025-06-06,2025-06-06,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,7,7,0.4153,2026-05-08,2026-05-08,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+sierrita,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2024-04-16,2024-04-17,"Sierrita, AZ",AZ,Porphyry Cu-Mo-Au,null,1.84
+ray_mine,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,master_gemx_2024,MASTER,partial,True,50,~50,128,128,1.0,2024-04-11,2024-04-23,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-06,2025-06-06,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+ray_mine,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2024-04-10,2024-04-17,"Ray Mine, AZ",AZ,Porphyry Cu-Mo-Au,null,0.76
+lordsburg,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,master_gemx_2024,MASTER,partial,True,50,~50,52,52,1.0,2024-05-30,2024-06-10,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,master_gemx_2025,MASTER,partial,True,50,~50,20,20,0.8161,2025-06-05,2025-06-06,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,43,43,0.8328,2025-05-15,2026-05-16,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+lordsburg,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2024-05-30,2025-06-06,"Lordsburg, NM",NM,Porphyry Cu-Mo-Au,fdr_sig,2.01
+randsburg,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,master_gemx_2024,MASTER,partial,True,50,~50,178,178,1.0,2024-05-08,2024-06-14,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,master_gemx_2025,MASTER,partial,True,50,~50,37,37,1.0,2025-06-27,2025-09-23,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,6,6,0.3399,2025-06-27,2025-09-23,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Randsburg, CA",CA,Epithermal,null,1.05
+randsburg,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,18,14,1.0,2024-05-08,2025-09-23,"Randsburg, CA",CA,Epithermal,null,1.05
+bodie,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,master_gemx_2024,MASTER,partial,True,50,~50,6,6,1.0,2024-05-08,2024-05-08,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,master_gemx_2025,MASTER,partial,True,50,~50,42,42,0.8442,2025-05-30,2025-08-06,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,39,39,0.9993,2025-06-11,2026-06-01,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Bodie, CA",CA,Epithermal,null,0.2
+bodie,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,124,12,0.7044,2024-06-04,2025-07-17,"Bodie, CA",CA,Epithermal,null,0.2
+eureka,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,master_gemx_2024,MASTER,partial,True,50,~50,6,6,0.0857,2024-05-08,2024-05-08,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,master_gemx_2025,MASTER,partial,True,50,~50,128,128,1.0,2025-07-24,2025-09-23,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,34,34,1.0,2025-07-24,2025-08-12,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+eureka,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,16,15,1.0,2025-07-24,2025-08-12,"Eureka, NV",NV,Skarn/Carbonate Replacement,fdr_sig,3.55
+tombstone,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,master_gemx_2024,MASTER,partial,True,50,~50,148,148,1.0,2024-04-11,2024-06-10,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,2,2,0.0141,2026-05-08,2026-05-08,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+tombstone,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,10,10,1.0,2024-04-11,2024-06-10,"Tombstone, AZ",AZ,Skarn/Carbonate Replacement,robust,2.23
+courtland_gleeson,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,master_gemx_2024,MASTER,partial,True,50,~50,124,124,1.0,2024-04-11,2024-06-10,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,master_gemx_2025,MASTER,partial,True,50,~50,6,6,0.287,2025-06-06,2025-06-06,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+courtland_gleeson,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,7,7,1.0,2024-04-23,2024-06-10,"Courtland-Gleeson, AZ",AZ,Skarn/Carbonate Replacement,robust,2.7
+christmas,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,master_gemx_2024,MASTER,partial,True,50,~50,96,96,1.0,2024-04-11,2024-04-23,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-06,2025-06-06,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,14,14,0.7611,2025-05-14,2025-05-14,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+christmas,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,14,14,1.0,2024-04-16,2025-05-14,"Christmas, AZ",AZ,Skarn/Carbonate Replacement,robust,2.74
+cerro_gordo,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,master_gemx_2024,MASTER,partial,True,50,~50,148,148,1.0,2024-05-08,2024-06-14,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,master_gemx_2025,MASTER,partial,True,50,~50,87,87,1.0,2025-06-11,2025-09-23,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,27,27,1.0,2025-06-11,2025-08-29,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+cerro_gordo,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,20,17,1.0,2024-05-08,2025-06-27,"Cerro Gordo, CA",CA,Skarn/Carbonate Replacement,null,0.32
+gold_hill,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,master_gemx_2025,MASTER,partial,True,50,~50,12,12,1.0,2025-08-05,2025-08-12,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,7,7,0.3105,2026-06-05,2026-06-05,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+gold_hill,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Gold Hill, UT",UT,Skarn/Carbonate Replacement,null,0.05
+tintic,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+tintic,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Tintic District, UT",UT,Skarn/Carbonate Replacement,null,0.14
+shirley_basin,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+shirley_basin,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Shirley Basin, WY",WY,Uranium/Energy,null,0.22
+crooks_gap,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+crooks_gap,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Crooks Gap-Green Mountain, WY",WY,Uranium/Energy,robust,3.27
+ambrosia_lake,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,master_gemx_2026,MASTER,partial,True,50,~50,6,6,1.0,2026-03-31,2026-03-31,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+ambrosia_lake,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Ambrosia Lake, NM",NM,Uranium/Energy,null,1.1
+uravan,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,21,21,0.9895,2025-05-08,2026-05-11,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+uravan,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,1,1,0.0305,2025-05-08,2025-05-08,"Uravan Mineral Belt, CO",CO,Uranium/Energy,fdr_sig,1.54
+henry_mountains,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,master_gemx_2026,MASTER,partial,True,50,~50,30,30,1.0,2026-03-31,2026-04-04,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+henry_mountains,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,8,8,1.0,2026-04-04,2026-04-04,"Henry Mountains, UT",UT,Uranium/Energy,null,0.19
+lisbon_valley,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,master_gemx_2026,MASTER,partial,True,50,~50,6,6,0.1739,2026-04-04,2026-04-04,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,30,30,0.9999,2025-05-08,2026-05-11,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+lisbon_valley,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,0.3243,2025-05-08,2025-05-08,"Lisbon Valley, UT",UT,Uranium/Energy,fdr_sig,1.44
+karnes_county,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+karnes_county,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Karnes County, TX",TX,Uranium/Energy,robust,3.13
+arizona_strip,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,master_gemx_2024,MASTER,partial,True,50,~50,34,34,1.0,2024-05-22,2024-06-14,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,master_gemx_2025,MASTER,partial,True,50,~50,106,106,1.0,2025-07-23,2025-09-23,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,master_gemx_2026,MASTER,partial,True,50,~50,6,6,1.0,2026-03-31,2026-03-31,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,27,27,1.0,2025-07-30,2025-09-16,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+arizona_strip,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,21,16,1.0,2025-07-30,2025-09-16,"Arizona Strip, AZ",AZ,Uranium/Energy,null,0.0
+duluth_partridge_river,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_partridge_river,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Duluth Complex - Partridge River, MN",MN,Mafic/Ultramafic,null,1.16
+duluth_south_kawishiwi,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+duluth_south_kawishiwi,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Duluth Complex - South Kawishiwi, MN",MN,Mafic/Ultramafic,null,1.8
+webster_addie,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+webster_addie,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Webster-Addie, NC",NC,Mafic/Ultramafic,null,1.35
+josephine_ophiolite,master_gemx_2023,MASTER,partial,True,50,~50,87,87,1.0,2023-04-25,2023-09-15,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,master_gemx_2024,MASTER,partial,True,50,~50,60,60,1.0,2024-06-06,2024-06-24,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+josephine_ophiolite,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,0.5746,2023-09-05,2024-06-06,"Josephine Ophiolite, OR",OR,Mafic/Ultramafic,null,1.18
+new_idria,master_gemx_2023,MASTER,partial,True,50,~50,33,33,1.0,2023-04-25,2023-09-11,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,master_gemx_2024,MASTER,partial,True,50,~50,82,82,1.0,2024-04-30,2024-05-02,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+new_idria,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,14,8,1.0,2023-09-11,2024-05-01,"New Idria, CA",CA,Mafic/Ultramafic,null,0.15
+state_line_chromite,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+state_line_chromite,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"PA-MD State Line Chromite, PA",PA,Mafic/Ultramafic,null,0.0
+getchell,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,master_gemx_2025,MASTER,partial,True,50,~50,88,88,1.0,2025-05-30,2025-09-17,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,31,31,1.0,2025-06-03,2026-06-02,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+getchell,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,23,15,1.0,2025-06-03,2025-09-17,"Getchell Trend, NV",NV,Sediment-hosted,null,1.31
+cortez,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,master_gemx_2024,MASTER,partial,True,50,~50,6,6,0.1329,2024-05-08,2024-05-08,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,master_gemx_2025,MASTER,partial,True,50,~50,92,92,1.0,2025-05-30,2025-09-17,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,46,46,1.0,2025-06-03,2026-06-02,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+cortez,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,15,8,1.0,2025-06-03,2025-08-12,"Cortez-Pipeline, NV",NV,Sediment-hosted,null,0.63
+alligator_ridge,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,master_gemx_2025,MASTER,partial,True,50,~50,78,78,1.0,2025-07-24,2025-09-17,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,28,28,1.0,2025-08-05,2025-08-12,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+alligator_ridge,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2025-08-05,2025-08-12,"Alligator Ridge, NV",NV,Sediment-hosted,null,0.35
+long_canyon,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,master_gemx_2025,MASTER,partial,True,50,~50,68,68,1.0,2025-08-05,2025-09-22,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,26,26,0.9999,2025-08-05,2026-06-05,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+long_canyon,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,0.7773,2025-08-05,2025-09-22,"Long Canyon, NV",NV,Sediment-hosted,null,2.51
+tri_state,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+tri_state,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,2,0,0.0,,,"Tri-State District, MO-KS-OK",MO-KS-OK,Sediment-hosted,fdr_sig,2.03
+upper_mississippi_valley,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+upper_mississippi_valley,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Upper Mississippi Valley, WI-IL-IA",WI-IL-IA,Sediment-hosted,null,0.39
+mascot_jefferson_city,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+mascot_jefferson_city,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Mascot-Jefferson City, TN",TN,Sediment-hosted,fdr_sig,2.39
+austinville_ivanhoe,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+austinville_ivanhoe,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Austinville-Ivanhoe, VA",VA,Sediment-hosted,null,1.43
+black_butte,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+black_butte,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Black Butte, MT",MT,Sediment-hosted,null,0.67
+magdalena_kelly,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,master_gemx_2025,MASTER,partial,True,50,~50,6,6,0.7588,2025-06-05,2025-06-05,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,19,19,0.8222,2026-05-07,2026-05-19,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+magdalena_kelly,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Magdalena (Kelly), NM",NM,Skarn/Carbonate Replacement,robust,1.98
+lake_valley,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,master_gemx_2025,MASTER,partial,True,50,~50,18,18,1.0,2025-06-05,2025-06-05,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,34,34,0.9999,2025-06-05,2026-05-16,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+lake_valley,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,1,1,0.0823,2025-06-05,2025-06-05,"Lake Valley, NM",NM,Skarn/Carbonate Replacement,robust,2.55
+organ_mountains,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,master_gemx_2025,MASTER,partial,True,50,~50,22,22,1.0,2025-06-05,2025-06-05,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,10,10,0.394,2025-06-05,2026-05-19,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+organ_mountains,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,0.1715,2025-06-05,2025-06-05,"Organ Mountains, NM",NM,Skarn/Carbonate Replacement,robust,2.27
+victorio,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,master_gemx_2024,MASTER,partial,True,50,~50,28,28,0.9717,2024-05-30,2024-06-10,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-05,2025-06-05,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,26,26,0.9998,2025-05-15,2026-05-16,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+victorio,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,1.0,2024-05-30,2025-05-15,"Victorio Mountains, NM",NM,Skarn/Carbonate Replacement,null,1.61
+san_francisco_frisco,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,master_gemx_2025,MASTER,partial,True,50,~50,68,68,1.0,2025-07-23,2025-09-23,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,16,16,0.6107,2025-07-23,2025-09-23,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+san_francisco_frisco,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2025-07-23,2025-09-23,"San Francisco (Frisco), UT",UT,Skarn/Carbonate Replacement,null,1.28
+shafter,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,16,16,0.8555,2026-05-19,2026-05-19,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+shafter,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Shafter (Presidio), TX",TX,Skarn/Carbonate Replacement,robust,2.32
+cherry_creek,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,master_gemx_2025,MASTER,partial,True,50,~50,62,62,1.0,2025-08-05,2025-09-17,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,33,33,1.0,2025-08-05,2025-08-12,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+cherry_creek,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,11,11,1.0,2025-08-05,2025-08-12,"Cherry Creek, NV",NV,Skarn/Carbonate Replacement,null,1.15
+providence_mountains,master_gemx_2023,MASTER,partial,True,50,~50,143,143,1.0,2023-04-25,2023-09-26,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,master_gemx_2024,MASTER,partial,True,50,~50,76,76,1.0,2024-04-02,2024-06-14,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,master_gemx_2025,MASTER,partial,True,50,~50,26,26,1.0,2025-05-23,2025-09-23,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,master_gemx_2026,MASTER,partial,True,50,~50,8,8,0.2545,2026-03-31,2026-03-31,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,5,5,0.5545,2025-06-10,2025-08-29,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+providence_mountains,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,31,14,0.9546,2023-04-25,2025-08-29,"Providence Mountains, CA",CA,Skarn/Carbonate Replacement,robust,1.67
+eagle_mountain,master_gemx_2023,MASTER,partial,True,50,~50,139,139,1.0,2023-04-25,2023-09-26,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,master_gemx_2024,MASTER,partial,True,50,~50,48,48,1.0,2024-04-02,2024-06-14,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,master_gemx_2025,MASTER,partial,True,50,~50,11,11,1.0,2025-05-23,2025-06-27,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,master_gemx_2026,MASTER,partial,True,50,~50,6,6,0.3622,2026-03-17,2026-03-17,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,3,3,0.021,2025-06-02,2025-06-02,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+eagle_mountain,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,24,11,1.0,2023-04-25,2025-05-23,"Eagle Mountain, CA",CA,Skarn/Carbonate Replacement,robust,2.44
+contact_district,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,master_gemx_2025,MASTER,partial,True,50,~50,50,50,1.0,2025-09-15,2025-09-22,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,34,34,1.0,2025-09-22,2026-06-05,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+contact_district,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,8,8,0.9892,2025-09-17,2025-09-22,"Contact District, NV",NV,Porphyry Cu-Mo-Au,fdr_sig,2.7
+west_shasta,master_gemx_2023,MASTER,partial,True,50,~50,109,109,1.0,2023-04-25,2023-09-20,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,master_gemx_2024,MASTER,partial,True,50,~50,36,36,1.0,2024-06-06,2024-06-24,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+west_shasta,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,17,8,1.0,2023-09-15,2024-06-24,"West Shasta, CA",CA,Volcanogenic/VMS,null,1.25
+east_shasta,master_gemx_2023,MASTER,partial,True,50,~50,109,109,1.0,2023-04-25,2023-09-20,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,master_gemx_2024,MASTER,partial,True,50,~50,20,20,1.0,2024-06-06,2024-06-24,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+east_shasta,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,16,8,1.0,2023-09-15,2024-06-06,"East Shasta, CA",CA,Volcanogenic/VMS,null,1.32
+big_mike,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,master_gemx_2025,MASTER,partial,True,50,~50,136,136,1.0,2025-05-30,2025-09-17,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,35,35,1.0,2025-05-30,2026-06-02,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+big_mike,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,20,14,1.0,2025-05-30,2025-08-21,"Big Mike, NV",NV,Volcanogenic/VMS,null,1.41
+iron_king,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,master_gemx_2024,MASTER,partial,True,50,~50,122,122,1.0,2024-04-03,2024-06-14,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,master_gemx_2025,MASTER,partial,True,50,~50,78,78,1.0,2025-06-06,2025-09-23,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,21,21,0.9072,2025-05-14,2025-09-12,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+iron_king,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,21,19,1.0,2024-04-10,2025-09-12,"Iron King, AZ",AZ,Volcanogenic/VMS,null,0.05
+holden,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+holden,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Holden, WA",WA,Volcanogenic/VMS,robust,2.41
+gossan_lead,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+gossan_lead,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Great Gossan Lead, VA",VA,Volcanogenic/VMS,null,1.19
+ore_knob,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+ore_knob,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Ore Knob, NC",NC,Volcanogenic/VMS,null,0.49
+cornwall_pa,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+cornwall_pa,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Cornwall, PA",PA,Skarn/Carbonate Replacement,null,1.73
+french_creek_pa,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+french_creek_pa,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"French Creek - Grace Mine, PA",PA,Skarn/Carbonate Replacement,null,0.0
+dillsburg_pa,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+dillsburg_pa,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Dillsburg, PA",PA,Skarn/Carbonate Replacement,null,4.07
+willsboro_lewis_ny,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+willsboro_lewis_ny,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Willsboro-Lewis, NY",NY,Skarn/Carbonate Replacement,null,0.49
+tilly_foster_ny,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+tilly_foster_ny,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Tilly Foster, NY",NY,Skarn/Carbonate Replacement,null,1.6
+snoqualmie_wa,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+snoqualmie_wa,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Snoqualmie, WA",WA,Skarn/Carbonate Replacement,null,0.14
+summitville,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,master_gemx_2026,MASTER,partial,True,50,~50,8,8,1.0,2026-03-31,2026-03-31,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+summitville,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Summitville, CO",CO,Epithermal,null,0.19
+round_mountain,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,master_gemx_2024,MASTER,partial,True,50,~50,6,6,1.0,2024-05-08,2024-05-08,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,master_gemx_2025,MASTER,partial,True,50,~50,127,127,1.0,2025-05-30,2025-09-23,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,35,35,1.0,2025-05-30,2026-06-02,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Round Mountain, NV",NV,Epithermal,null,1.16
+round_mountain,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,20,14,1.0,2025-05-30,2025-08-01,"Round Mountain, NV",NV,Epithermal,null,1.16
+republic,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+republic,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,0,0.0,,,"Republic, WA",WA,Epithermal,null,0.7
+jarbidge,master_gemx_2023,MASTER,partial,True,50,~50,24,24,1.0,2023-04-25,2023-04-25,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,master_gemx_2025,MASTER,partial,True,50,~50,84,84,1.0,2025-08-21,2025-09-22,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,11,11,0.6618,2025-09-15,2025-09-22,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Jarbidge, NV",NV,Epithermal,null,0.1
+jarbidge,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,12,12,1.0,2025-08-21,2025-09-22,"Jarbidge, NV",NV,Epithermal,null,0.1
+wet_mountains,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,master_gemx_2026,MASTER,partial,True,50,~50,22,22,1.0,2026-04-24,2026-04-24,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,0,0,0.0,,,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+wet_mountains,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,0.4641,2026-04-24,2026-04-24,"Wet Mountains, CO",CO,Alkaline/Carbonatite,null,0.53
+round_top,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,master_gemx_2025,MASTER,partial,True,50,~50,36,36,1.0,2025-06-05,2025-08-25,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,33,33,1.0,2025-08-25,2026-05-09,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+round_top,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,6,6,0.911,2025-08-25,2025-08-25,"Round Top Mountain, TX",TX,Alkaline/Carbonatite,null,0.0
+cornudas,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,master_gemx_2025,MASTER,partial,True,50,~50,24,24,1.0,2025-06-05,2025-08-25,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,17,17,0.9323,2025-06-05,2026-05-09,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+cornudas,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,2,2,0.5743,2025-06-05,2025-06-05,"Cornudas Mountains, NM",NM,Alkaline/Carbonatite,null,0.0
+lemitar,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,master_gemx_2025,MASTER,partial,True,50,~50,6,6,0.594,2025-06-05,2025-06-05,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,12,12,0.7183,2026-05-07,2026-05-19,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+lemitar,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,0,0,0.0,,,"Lemitar Mountains, NM",NM,Alkaline/Carbonatite,null,1.91
+safford_az,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,master_gemx_2024,MASTER,partial,True,50,~50,114,114,1.0,2024-04-23,2024-06-10,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,master_gemx_2025,MASTER,partial,True,50,~50,34,34,1.0,2025-06-06,2025-06-06,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,15,15,0.7939,2025-06-06,2026-05-08,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+safford_az,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,15,15,1.0,2024-04-23,2025-06-06,"Safford, AZ",AZ,Porphyry Cu-Mo-Au,null,0.55
+san_manuel_az,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,master_gemx_2024,MASTER,partial,True,50,~50,120,120,1.0,2024-04-11,2024-04-23,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-06,2025-06-06,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,5,5,0.4694,2026-05-08,2026-05-08,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+san_manuel_az,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,9,9,1.0,2024-04-16,2024-04-17,"San Manuel-Kalamazoo, AZ",AZ,Porphyry Cu-Mo-Au,null,0.82
+tyrone_nm,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,master_gemx_2024,MASTER,partial,True,50,~50,12,12,1.0,2024-05-30,2024-06-10,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,master_gemx_2025,MASTER,partial,True,50,~50,6,6,1.0,2025-06-05,2025-06-05,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,master_gemx_2026,MASTER,partial,True,50,~50,0,0,0.0,,,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,24,24,0.9999,2025-05-15,2026-05-16,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+tyrone_nm,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,3,3,1.0,2024-05-30,2025-05-15,"Tyrone, NM",NM,Porphyry Cu-Mo-Au,null,0.73
+questa_nm,master_gemx_2023,MASTER,partial,True,50,~50,0,0,0.0,,,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,master_gemx_2024,MASTER,partial,True,50,~50,0,0,0.0,,,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,master_gemx_2025,MASTER,partial,True,50,~50,0,0,0.0,,,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,master_gemx_2026,MASTER,partial,True,50,~50,18,18,0.3784,2026-04-24,2026-04-24,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,aviris5_l2a_rfl,AVIRIS-5,full,False,425,12-20,23,23,0.8205,2026-05-08,2026-05-12,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,aviris3_l2a_rfl,AVIRIS-3,full,False,285,~15,0,0,0.0,,,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0
+questa_nm,avirisc_l2_rfl,AVIRIS-Classic,full,False,224,~20,2,2,0.0364,2026-04-24,2026-04-24,"Questa, NM",NM,Porphyry Cu-Mo-Au,null,0.0

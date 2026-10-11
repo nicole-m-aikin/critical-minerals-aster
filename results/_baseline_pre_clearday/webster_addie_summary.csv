@@ -1,0 +1,16 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,393,80,20.4,nested,site,,,False,,3,12069.49620078789,11.41,16.67,24.62,0.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,1,0,0.0,nested,commodity,Gold/Silver,,False,,0,10107.437144310508,11.41,0.0,79.35,1.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,358,71,19.8,nested,commodity,Other,,False,,2,12324.307472068702,11.41,16.03,24.27,0.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,8,3,37.5,nested,commodity,Sand/Gravel,,False,,1,11127.703864256262,11.41,13.68,69.43,0.0535
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,26,6,23.1,nested,commodity,Stone,,False,,0,8926.187071180168,11.41,11.03,42.05,0.0684
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,23,1,4.3,nested,earth_mri,,Base Metals,True,,0,12154.436522945916,11.41,0.77,20.99,0.9384
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,1,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,10107.437144310508,11.41,0.0,79.35,1.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,15,5,33.3,nested,earth_mri,,Industrial,True,,0,14937.57439683918,11.41,15.18,58.29,0.0217
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,354,74,20.9,nested,earth_mri,,Non-Critical,False,,3,11947.991281878492,11.41,16.99,25.44,0.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,2753.724418786358,11.41,0.0,79.35,1.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,5,3,60.0,nested,mineral_system,,,False,Mafic Magmatic,0,13990.616624167518,11.41,23.07,88.24,0.0124
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,2,0,0.0,nested,mineral_system,,,False,Orogenic,0,16541.71001720104,11.41,0.0,65.76,1.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,3,0,0.0,nested,mineral_system,,,False,Placer,0,7817.699743377682,11.41,0.0,56.15,1.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,374,77,20.6,nested,mineral_system,,,False,Unknown System,3,12051.463991366152,11.41,16.8,24.98,0.0
+webster_addie,"Webster-Addie, NC",webster_addie_mosaic,3791,242.9,0.01,8,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,13352.643416817518,11.41,0.0,32.44,1.0

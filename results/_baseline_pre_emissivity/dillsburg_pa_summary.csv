@@ -1,0 +1,15 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,88,11,12.5,nested,site,,,False,,47,1803.6702016277989,12.78,7.13,21.01,0.5796
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,1,0,0.0,nested,commodity,Gold/Silver,,False,,0,1707.9794959382155,12.78,0.0,79.35,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,68,9,13.2,nested,commodity,Other,,False,,36,2130.4517533055114,12.78,7.12,23.28,0.5097
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,6,2,33.3,nested,commodity,Sand/Gravel,,False,,1,1257.3812246091527,12.78,9.68,70.0,0.1728
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,13,0,0.0,nested,commodity,Stone,,False,,10,353.84551345218256,12.78,0.0,22.81,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,2,0,0.0,nested,earth_mri,,Base Metals,True,,0,10559.639675630973,12.78,0.0,65.76,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,2,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,1,296.9672111588325,12.78,0.0,65.76,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,1,0,0.0,nested,earth_mri,,Energy,True,,0,1707.9794959382155,12.78,0.0,79.35,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,1,0,0.0,nested,earth_mri,,Industrial,True,,0,619.264500174383,12.78,0.0,79.35,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,82,11,13.4,nested,earth_mri,,Non-Critical,False,,46,1642.4697557750492,12.78,7.66,22.45,0.4812
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,11,5,45.5,nested,mineral_system,,,False,Chemical Weathering,7,784.4383869803804,12.78,21.27,71.99,0.0081
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,3,0,0.0,nested,mineral_system,,,False,Marine Chemocline,1,404.3996408306827,12.78,0.0,56.15,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,1707.9794959382155,12.78,0.0,79.35,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,4187,213.63,0.02,73,6,8.2,nested,mineral_system,,,False,Unknown System,39,2016.0681790141346,12.78,3.82,16.79,0.9178

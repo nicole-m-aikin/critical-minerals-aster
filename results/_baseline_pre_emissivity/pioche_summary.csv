@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,304,32,10.5,nested,site,,,False,,10,4932.3560350353155,12.81,7.56,14.48,0.902
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,173,19,11.0,nested,commodity,Gold/Silver,,False,,6,4025.5158635105768,12.81,7.14,16.52,0.7953
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,124,11,8.9,nested,commodity,Other,,False,,4,6205.143043512824,12.81,5.03,15.19,0.9323
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,3458.9216704394394,12.81,0.0,79.35,1.0
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,1,1,100.0,nested,commodity,Stone,,False,,0,3642.7432270836384,12.81,20.65,100.0,0.1281
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,5,1,20.0,nested,commodity,Uranium,,False,,0,5296.517594058563,12.81,3.62,62.45,0.4961
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,162,12,7.4,nested,earth_mri,,Base Metals,True,,3,4558.304254026917,12.81,4.29,12.5,0.9897
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,32,4,12.5,nested,earth_mri,,Battery Metals – Co/Ni,True,,2,3497.474520411928,12.81,4.97,28.07,0.6002
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,5,1,20.0,nested,earth_mri,,Energy,True,,0,5296.517594058563,12.81,3.62,62.45,0.4961
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,71,10,14.1,nested,earth_mri,,Gold/Silver,True,,2,4405.175144117805,12.81,7.83,24.02,0.4259
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,33,5,15.2,nested,earth_mri,,Non-Critical,False,,3,9330.33580043647,12.81,6.65,30.92,0.4184
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,1920.6562281331885,12.81,0.0,79.35,1.0
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,99,7,7.1,nested,mineral_system,,,False,Basin Brine Path,1,4429.330813837275,12.81,3.47,13.88,0.9763
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,8,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,2962.7428428435423,12.81,0.0,32.44,1.0
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,18,4,22.2,nested,mineral_system,,,False,Marine Chemocline,1,3243.398479531453,12.81,9.0,45.22,0.1915
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,5,1,20.0,nested,mineral_system,,,False,Meteoric Recharge,0,5296.517594058563,12.81,3.62,62.45,0.4961
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,69,6,8.7,nested,mineral_system,,,False,Orogenic,1,5008.036182169364,12.81,4.05,17.7,0.8908
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,2,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,8684.069043848474,12.81,0.0,65.76,1.0
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,29,3,10.3,nested,mineral_system,,,False,Skarn / Carbonate Replacement,3,4384.998160687771,12.81,3.58,26.39,0.7368
+pioche,"Pioche, NV",pioche_mosaic,4518,241.96,0.01,74,11,14.9,nested,mineral_system,,,False,Unknown System,4,6247.01620836365,12.81,8.51,24.69,0.3475

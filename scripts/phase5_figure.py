@@ -3,10 +3,11 @@
 Phase 5 figure — significance stability across MRDS clustering radii.
 
 Reads results/phase5_clustering_sensitivity.csv and plots p_binomial (log
-scale) vs. clustering radius for the 5 sites that were significant at
-radius=0 (raw, no deduplication) at p<0.05, so a reader can see directly
-whether spatial-clustering correction changes which sites the paper can
-defend.
+scale) vs. clustering radius for a contrast set drawn from the current
+FDR-significant sites: the three declustering-robust sites with the lowest
+worst-case p, and the two non-robust sites with the lowest raw p (the ones
+whose significance most visibly collapses once MRDS point clusters are
+deduplicated).
 
 Usage:
     conda run -n aster-minerals python scripts/phase5_figure.py
@@ -19,45 +20,44 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from critical_minerals_aster.significance import significant_site_sets
+
 REPO_ROOT = Path(__file__).parent.parent
 
-# Colorblind-safe categorical set (Okabe-Ito), assigned by fixed site identity
-# -- never re-cycled if the site list changes.
-# Post-109-site expansion: contrast the declustering-ROBUST set (bisbee + two
-# new NM skarn replication sites) against sites whose raw significance COLLAPSES
-# once MRDS point clusters are deduplicated (eureka -- an original headline site;
-# tri_state -- an MVT district, raw p~0 -> p~1 by 500 m).
-SITE_COLORS = {
-    "bisbee": "#0072B2",             # blue
-    "magdalena_kelly": "#009E73",    # bluish green
-    "organ_mountains": "#56B4E9",    # sky blue
-    "eureka": "#D55E00",             # vermillion
-    "tri_state": "#CC79A7",          # reddish purple
-}
-SITE_LABELS = {
-    "bisbee": "Bisbee, AZ (robust)",
-    "magdalena_kelly": "Magdalena-Kelly, NM (robust, new)",
-    "organ_mountains": "Organ Mtns, NM (robust, new)",
-    "eureka": "Eureka, NV (collapses)",
-    "tri_state": "Tri-State MVT (collapses)",
-}
+# Okabe-Ito, colorblind-safe: blues/green for robust sites, warm hues for collapsing ones.
+ROBUST_COLORS = ["#0072B2", "#009E73", "#56B4E9"]
+COLLAPSE_COLORS = ["#D55E00", "#CC79A7"]
+
+
+def pick_sites(df: pd.DataFrame) -> tuple[list[str], list[str]]:
+    fdr_sites, robust = significant_site_sets(REPO_ROOT)
+    piv = df.pivot_table(index="site_id", columns="radius_m", values="p_binomial")
+    piv = piv[piv.index.isin(fdr_sites)]
+    worst = piv.max(axis=1)
+    raw = piv[piv.columns.min()]
+    robust_ids = worst[worst.index.isin(robust)].sort_values().index[: len(ROBUST_COLORS)].tolist()
+    collapse_ids = raw[~raw.index.isin(robust)].sort_values().index[: len(COLLAPSE_COLORS)].tolist()
+    return robust_ids, collapse_ids
 
 
 def main() -> None:
     df = pd.read_csv(REPO_ROOT / "results" / "phase5_clustering_sensitivity.csv")
-    df = df[df["site_id"].isin(SITE_COLORS)]
+    robust_ids, collapse_ids = pick_sites(df)
+    names = df.drop_duplicates("site_id").set_index("site_id").get("site_name")
 
     fig, ax = plt.subplots(figsize=(7.5, 5.5))
 
-    for site_id in SITE_COLORS:
+    series = [(s, c, "robust") for s, c in zip(robust_ids, ROBUST_COLORS)]
+    series += [(s, c, "not robust") for s, c in zip(collapse_ids, COLLAPSE_COLORS)]
+    for site_id, colour, tag in series:
         sub = df[df["site_id"] == site_id].sort_values("radius_m")
-        # Floor at 1e-6 for log display; p_binomial can be exactly 0.0 for
-        # Bisbee/Eureka at radius=0 (below float precision, not a real zero).
+        # Floor at 1e-6 for log display; p_binomial can underflow to 0.0 at radius 0.
         y = sub["p_binomial"].clip(lower=1e-6)
+        name = names.get(site_id, site_id) if names is not None else site_id
         ax.plot(
             sub["radius_m"], y,
             marker="o", markersize=6, linewidth=2,
-            color=SITE_COLORS[site_id], label=SITE_LABELS[site_id],
+            color=colour, label=f"{name} ({tag})",
         )
 
     ax.axhline(0.05, color="#555555", linewidth=1, linestyle="--", zorder=0)
@@ -66,7 +66,7 @@ def main() -> None:
     ax.set_yscale("log")
     ax.set_xticks([0, 250, 500, 1000])
     ax.set_xlabel("DBSCAN clustering radius (m)")
-    ax.set_ylabel("Binomial p-value (site-specific null, log scale)")
+    ax.set_ylabel("p-value (bedrock/cover-stratified null, log scale)")
     ax.set_title(
         "Significance stability under MRDS spatial-clustering correction\n"
         "(medoid deduplication, min_samples=2)",
@@ -81,7 +81,7 @@ def main() -> None:
     out_path = REPO_ROOT / "figures" / "phase5_clustering_stability.png"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=200)
-    print(f"Saved {out_path}")
+    print(f"Saved {out_path}: robust {robust_ids}, not robust {collapse_ids}")
 
 
 if __name__ == "__main__":

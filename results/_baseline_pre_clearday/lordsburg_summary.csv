@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,252,51,20.2,nested,site,,,False,,5,8910.80338081563,10.87,15.74,25.63,0.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,2,0,0.0,nested,commodity,Antimony,,False,,0,7728.794068075139,10.87,0.0,65.76,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,97,19,19.6,nested,commodity,Gold/Silver,,False,,1,7285.581733433589,10.87,12.91,28.58,0.0079
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,90,22,24.4,nested,commodity,Other,,False,,3,7887.248701094456,10.87,16.73,34.25,0.0002
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,50,9,18.0,nested,commodity,Sand/Gravel,,False,,1,13706.06918289632,10.87,9.77,30.8,0.0881
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,12,1,8.3,nested,commodity,Stone,,False,,0,10633.719495668987,10.87,1.49,35.39,0.7488
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,602.9594949856939,10.87,0.0,79.35,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,94,28,29.8,nested,earth_mri,,Base Metals,True,,0,8127.274412078057,10.87,21.48,39.68,0.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,9,2,22.2,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,14322.898946493522,10.87,6.32,54.74,0.2555
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,602.9594949856939,10.87,0.0,79.35,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,45,2,4.4,nested,earth_mri,,Gold/Silver,True,,1,6121.174260262625,10.87,1.23,14.83,0.9635
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,11,2,18.2,nested,earth_mri,,Industrial,True,,2,5505.759976108773,10.87,5.14,47.7,0.3398
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,80,13,16.2,nested,earth_mri,,Non-Critical,False,,2,11829.865307116284,10.87,9.75,25.84,0.091
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,2,0,0.0,nested,earth_mri,,REE,True,,0,4582.655718332919,10.87,0.0,65.76,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,10,4,40.0,nested,earth_mri,,Specialty/High-Tech,True,,0,6047.88697617909,10.87,16.82,68.73,0.0171
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,33,13,39.4,nested,mineral_system,,,False,Basin Brine Path,0,8689.320716646525,10.87,24.68,56.32,0.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,9,2,22.2,nested,mineral_system,,,False,Hybrid Magmatic REE,2,5109.508105167329,10.87,6.32,54.74,0.2555
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,2,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,4582.655718332919,10.87,0.0,65.76,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,7,1,14.3,nested,mineral_system,,,False,Marine Chemocline,0,17299.00763529422,10.87,2.57,51.31,0.5533
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,4117.664101219759,10.87,0.0,65.76,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,81,12,14.8,nested,mineral_system,,,False,Orogenic,1,6500.107215717648,10.87,8.68,24.13,0.1667
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,3329.5190593569837,10.87,0.0,79.35,1.0
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,2,1,50.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,6537.475097359683,10.87,9.45,90.55,0.2056
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,8,4,50.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5856.337610357055,10.87,21.52,78.48,0.0068
+lordsburg,"Lordsburg, NM",lordsburg_mosaic,8344,467.48,0.01,107,18,16.8,nested,mineral_system,,,False,Unknown System,2,11070.390165172621,10.87,10.91,25.03,0.0403

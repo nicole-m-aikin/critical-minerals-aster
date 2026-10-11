@@ -1,0 +1,124 @@
+{
+  "site_id": "dillsburg_pa",
+  "granule_id": "dillsburg_pa_mosaic",
+  "timestamp_utc": "2026-09-27T22:38:01.981168+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 4187,
+  "raster_bbox_wgs84": [
+    -77.24555064055775,
+    39.882209502344985,
+    -76.75932851618116,
+    40.34840994521843
+  ],
+  "inputs": {
+    "site_config": "sites/dillsburg_pa.yaml",
+    "site_config_sha256": "941faa2ba9301cb85cf8f9f25a01f796598af9147d7db9971f669070faf0d97e",
+    "bbox_wgs84": [
+      -77.23,
+      39.89,
+      -76.77,
+      40.34
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/dillsburg_pa_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "dillsburg_pa",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00406062021160112_20250915153222",
+          "cloud_pct": 10.0,
+          "day_night": "Day",
+          "month": 6,
+          "bbox_coverage": 1.0
+        }
+      ],
+      "created_utc": "2026-09-27T22:38:01+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 114,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 0,
+      "n_output": 114,
+      "n_flag_shared_coords": 4,
+      "n_flag_score_high": 1,
+      "n_flag_producer": 107
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -77.24555064055775,
+                40.34016994748202
+              ],
+              [
+                -77.23053256559986,
+                39.882209502344985
+              ],
+              [
+                -76.91464455374977,
+                39.887856869689436
+              ],
+              [
+                -76.7830814068215,
+                40.31215669077455
+              ],
+              [
+                -77.00892448429774,
+                40.344523656419405
+              ],
+              [
+                -77.24555064055775,
+                40.34016994748202
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 47,
+  "mean_nearest_structure_m": 1803.6702016277989,
+  "inputs_recorded_utc": "2026-09-27T22:46:58.769902+00:00"
+}

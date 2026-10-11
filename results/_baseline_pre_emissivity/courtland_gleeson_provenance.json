@@ -1,0 +1,135 @@
+{
+  "site_id": "courtland_gleeson",
+  "granule_id": "courtland_gleeson_mosaic",
+  "timestamp_utc": "2026-09-27T22:33:14.858342+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 5106,
+  "raster_bbox_wgs84": [
+    -110.08527710562144,
+    31.665542055689496,
+    -109.57344692016976,
+    32.115068101317625
+  ],
+  "inputs": {
+    "site_config": "sites/courtland_gleeson.yaml",
+    "site_config_sha256": "245dcfbad50d380e958fc353c29b73f6d3b4817e2b308d1338b4cb6e7185dafb",
+    "bbox_wgs84": [
+      -110.08,
+      31.67,
+      -109.58,
+      32.11
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/courtland_gleeson_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "courtland_gleeson",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00406092012180901_20250717063253",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 6,
+          "bbox_coverage": 0.965
+        },
+        {
+          "granule_id": "AST_L1T_00406042010180938_20250704095504",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 6,
+          "bbox_coverage": 0.3912
+        }
+      ],
+      "created_utc": "2026-09-27T22:33:14+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 394,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 2,
+      "duplicate_record": 2,
+      "n_output": 390,
+      "n_flag_shared_coords": 39,
+      "n_flag_score_high": 151,
+      "n_flag_producer": 314
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -109.97212502908766,
+                32.114232065046934
+              ],
+              [
+                -110.05054440348673,
+                31.817682301919948
+              ],
+              [
+                -110.08378333408479,
+                31.821985641283185
+              ],
+              [
+                -110.08527710562144,
+                31.670161892254924
+              ],
+              [
+                -109.58028915106895,
+                31.665542055689496
+              ],
+              [
+                -109.57344692016976,
+                32.1103680381975
+              ],
+              [
+                -109.97212502908766,
+                32.114232065046934
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 0,
+  "mean_nearest_structure_m": 33504.011551258176,
+  "inputs_recorded_utc": "2026-09-27T22:46:28.375769+00:00"
+}

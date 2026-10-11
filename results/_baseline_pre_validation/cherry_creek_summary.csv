@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,91,12,13.2,nested,site,,,False,,8,2219.0564331513415,11.0,7.71,21.65,0.2976
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,5,0,0.0,nested,commodity,Antimony,,False,,0,2721.3821351546053,11.0,0.0,43.45,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,47,6,12.8,nested,commodity,Gold/Silver,,False,,4,2059.4837170061037,11.0,5.98,25.17,0.4155
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,37,6,16.2,nested,commodity,Other,,False,,4,2314.86772232128,11.0,7.65,31.14,0.2169
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,2,0,0.0,nested,commodity,Uranium,,False,,0,2940.692157912373,11.0,0.0,65.76,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,6,1,16.7,nested,earth_mri,,Base Metals,True,,1,2005.3372019692424,11.0,3.01,56.35,0.503
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,2940.692157912373,11.0,0.0,65.76,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,41,4,9.8,nested,earth_mri,,Gold/Silver,True,,4,2067.608230705673,11.0,3.86,22.55,0.6743
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,4,1,25.0,nested,earth_mri,,Industrial,True,,1,2109.424243106065,11.0,4.56,69.94,0.3726
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,4,1,25.0,nested,earth_mri,,Non-Critical,False,,1,1814.5841107373722,11.0,4.56,69.94,0.3726
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,34,5,14.7,nested,earth_mri,,Specialty/High-Tech,True,,1,2457.4340298478082,11.0,6.45,30.13,0.3173
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,2,1,50.0,nested,mineral_system,,,False,Basin Brine Path,0,2447.561484587351,11.0,9.45,90.55,0.2079
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,1,0,0.0,nested,mineral_system,,,False,Carlin-type,0,1884.109227571297,11.0,0.0,79.35,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,2,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,1,361.64211753553604,11.0,0.0,65.76,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,2940.692157912373,11.0,0.0,65.76,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,30,2,6.7,nested,mineral_system,,,False,Orogenic,3,2017.7482334392816,11.0,1.85,21.32,0.8573
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,3,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,1,1888.101066120698,11.0,0.0,56.15,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,30,5,16.7,nested,mineral_system,,,False,Reduced Intrusion-Related,1,2385.6803702312613,11.0,7.34,33.56,0.2296
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,2685.308204018842,11.0,0.0,79.35,1.0
+cherry_creek,"Cherry Creek, NV",cherry_creek_mosaic,2204,225.84,0.01,20,4,20.0,nested,mineral_system,,,False,Unknown System,2,2404.888257831648,11.0,8.07,41.6,0.171

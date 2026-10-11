@@ -71,6 +71,19 @@ the sense used throughout docs/results.md: "collapsing
 clustered points into one representative point"), not a merged-evidence
 rule. See docs/results.md for the full derivation.
 
+Null after declustering (bedrock-vs-cover stratified, the Phase 2 primary)
+---------------------------------------------------------------------------
+Every deposit carries its own null probability p_i = zone coverage fraction
+of its stratum (bedrock / cover / unmapped; lithology.cover_strata). After
+declustering, each effective unit keeps the p_i of the point whose hit
+status it uses (the medoid for a cluster, itself for a noise point), and
+E = Σ p_i over effective units; p_binomial is the exact Poisson-binomial
+tail. Re-using the site-level p0 would be wrong here: declustering changes
+the bedrock/cover mix of the deposit set (dense mining camps sit in bedrock),
+so the expected hits must be recomputed from the surviving units.
+p0_null = E / n_effective; enrichment = hits / E. The site-level geometric
+null is kept as p0_geometric / p_binomial_geometric for comparison.
+
 Outputs
 -------
     results/phase5_clustering_sensitivity.csv     -- per site x radius table
@@ -91,9 +104,18 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 import geopandas as gpd
 import numpy as np
 import pandas as pd
+from shapely.geometry import box
+from shapely.ops import unary_union
+from shapely.validation import make_valid
 from sklearn.cluster import DBSCAN
 
 from critical_minerals_aster.config import load_site_by_id
+from critical_minerals_aster.lithology import (
+    assign_cover_stratum,
+    cover_strata,
+    stratified_null,
+    stratum_zone_fractions,
+)
 from critical_minerals_aster.paths import site_paths_for
 from critical_minerals_aster.metrics import read_mrds_national
 from critical_minerals_aster.mrds import (
@@ -120,31 +142,39 @@ def _medoid_index(coords: np.ndarray) -> int:
     return int(dist.sum(axis=1).argmin())
 
 
-def effective_n_hits(deposits: gpd.GeoDataFrame, eps_m: float) -> tuple[int, int]:
-    """Collapse deposits to DBSCAN clusters + noise singletons; return
-    (effective_n, effective_hits) using each cluster's MEDOID point's own
-    hit status (see module docstring for why OR-aggregation is biased and
-    was rejected)."""
+def effective_units(deposits: gpd.GeoDataFrame, eps_m: float) -> pd.DataFrame:
+    """Collapse deposits to DBSCAN clusters + noise singletons.
+
+    Returns one row per effective unit with the ``in_zone`` and ``p_null``
+    of its representative point -- the cluster MEDOID, or the noise point
+    itself (see module docstring for why OR-aggregation is biased and was
+    rejected).
+    """
+    cols = ["in_zone", "p_null"]
     if eps_m == 0 or len(deposits) <= 1:
-        return len(deposits), int(deposits["in_zone"].sum())
+        return deposits[cols].reset_index(drop=True)
 
     coords = np.column_stack([deposits.geometry.x.values, deposits.geometry.y.values])
     labels = DBSCAN(eps=eps_m, min_samples=MIN_SAMPLES).fit_predict(coords)
 
     df = deposits.copy()
     df["_cluster"] = labels
-    n_eff, hits_eff = 0, 0
+    units = []
     for label, grp in df.groupby("_cluster"):
         if label == -1:
             # noise points are NOT merged -- each is its own independent unit
-            n_eff += len(grp)
-            hits_eff += int(grp["in_zone"].sum())
+            units.append(grp[cols])
         else:
             grp_coords = np.column_stack([grp.geometry.x.values, grp.geometry.y.values])
-            medoid_pos = _medoid_index(grp_coords)
-            n_eff += 1
-            hits_eff += int(grp["in_zone"].values[medoid_pos])
-    return n_eff, hits_eff
+            units.append(grp[cols].iloc[[_medoid_index(grp_coords)]])
+    return pd.concat(units, ignore_index=True)
+
+
+def effective_n_hits(deposits: gpd.GeoDataFrame, eps_m: float) -> tuple[int, int]:
+    """(effective_n, effective_hits) after medoid declustering."""
+    d = deposits if "p_null" in deposits.columns else deposits.assign(p_null=0.0)
+    units = effective_units(d, eps_m)
+    return len(units), int(units["in_zone"].sum())
 
 
 def main() -> None:
@@ -153,7 +183,7 @@ def main() -> None:
 
     for _, ss_row in ss.iterrows():
         site_id = ss_row["site_id"]
-        p0 = float(ss_row["p0_null"])
+        p0_geo = float(ss_row["p0_geometric"])
         print(f"{site_id:22s}", end=" ", flush=True)
 
         site = load_site_by_id(site_id, REPO_ROOT / "sites")
@@ -195,21 +225,36 @@ def main() -> None:
         hit_ids = set(joined[joined["index_right"].notna()].index.unique())
         deposits["in_zone"] = deposits.index.isin(hit_ids)
 
+        if footprint is not None and len(footprint):
+            fp_geom = make_valid(unary_union(footprint.geometry.values))
+        else:
+            fp_geom = gpd.GeoSeries([box(*raster_bbox)], crs="EPSG:4326").to_crs(zones.crs).iloc[0]
+        strata = cover_strata(site_id, fp_geom, zones.crs, bbox_wgs84=raster_bbox)
+        frac = stratum_zone_fractions(strata, make_valid(unary_union(zones.geometry.values)))
+        deposits["stratum"] = assign_cover_stratum(deposits, strata)
+        deposits["p_null"] = deposits["stratum"].map(frac["p"]).astype(float)
+
         for radius in RADII_M:
-            n_eff, hits_eff = effective_n_hits(deposits, radius)
-            p_binom, expected = run_binomial(hits_eff, n_eff, p0)
+            units = effective_units(deposits, radius)
+            n_eff, hits_eff = len(units), int(units["in_zone"].sum())
+            strat = stratified_null(units["p_null"].to_numpy(), hits_eff)
+            p_geo, _ = run_binomial(hits_eff, n_eff, p0_geo)
             hit_rate = round(hits_eff / n_eff * 100, 2) if n_eff else 0.0
-            enrichment = round((hit_rate / 100) / p0, 2) if p0 > 0 and n_eff else float("nan")
             rows.append({
                 "site_id": site_id,
                 "radius_m": radius,
                 "n_effective": n_eff,
                 "hits_effective": hits_eff,
                 "hit_rate_pct": hit_rate,
-                "p0_null": p0,
-                "enrichment": enrichment,
-                "p_binomial": round(p_binom, 6),
-                "sig_05": p_binom < 0.05,
+                "p0_null": round(strat["p0_eff"], 4),
+                "expected_hits_null": round(strat["expected"], 2),
+                "enrichment": round(strat["enrichment"], 2) if strat["expected"] > 0 else float("nan"),
+                "p_binomial": strat["p"],
+                "sig_05": strat["p"] < 0.05,
+                "p0_geometric": p0_geo,
+                "enrichment_geometric": round((hit_rate / 100) / p0_geo, 2) if p0_geo > 0 and n_eff else float("nan"),
+                "p_binomial_geometric": p_geo,
+                "sig_05_geometric": p_geo < 0.05,
             })
 
         r0 = [r for r in rows if r["site_id"] == site_id and r["radius_m"] == 0][0]

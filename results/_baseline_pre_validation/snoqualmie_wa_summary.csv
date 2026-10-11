@@ -1,0 +1,17 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,157,11,7.0,nested,site,,,False,,0,20597.614814653534,11.97,3.96,12.11,0.9849
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,1,0,0.0,nested,commodity,Antimony,,False,,0,16887.045588371464,11.97,0.0,79.35,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,67,1,1.5,nested,commodity,Gold/Silver,,False,,0,19188.673590680235,11.97,0.26,7.98,0.9998
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,68,2,2.9,nested,commodity,Other,,False,,0,18851.85799728943,11.97,0.81,10.1,0.9982
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,12,7,58.3,nested,commodity,Sand/Gravel,,False,,0,33778.71063677951,11.97,31.95,80.67,0.0002
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,9,1,11.1,nested,commodity,Stone,,False,,0,27114.053142180244,11.97,1.99,43.5,0.6827
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,68,1,1.5,nested,earth_mri,,Base Metals,True,,0,17382.85286097711,11.97,0.26,7.87,0.9998
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,47,1,2.1,nested,earth_mri,,Gold/Silver,True,,0,19181.954748253705,11.97,0.38,11.11,0.9975
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,40,9,22.5,nested,earth_mri,,Non-Critical,False,,0,27842.28094977123,11.97,12.32,37.5,0.0438
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,2,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,18274.210097694217,11.97,0.0,65.76,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,4,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,20470.61996115185,11.97,0.0,48.99,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,4,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,15637.785112930887,11.97,0.0,48.99,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,39,1,2.6,nested,mineral_system,,,False,Orogenic,0,21128.210204471376,11.97,0.45,13.18,0.9931
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,15,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,17117.480135025715,11.97,0.0,20.39,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,2,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,22249.868626009713,11.97,0.0,65.76,1.0
+snoqualmie_wa,"Snoqualmie, WA",snoqualmie_wa_mosaic,3112,226.48,0.01,93,10,10.8,nested,mineral_system,,,False,Unknown System,0,21119.674928521345,11.97,5.95,18.67,0.6885

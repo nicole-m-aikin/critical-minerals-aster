@@ -1,0 +1,19 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,209,17,8.1,nested,site,,,False,,31,2727.202780452742,11.42,5.14,12.64,0.9512
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,83,1,1.2,nested,commodity,Gold/Silver,,False,,11,2694.136165992804,11.42,0.21,6.51,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,88,8,9.1,nested,commodity,Other,,False,,19,2196.0029548455564,11.42,4.68,16.93,0.8007
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,16,6,37.5,nested,commodity,Sand/Gravel,,False,,1,4782.151846430415,11.42,18.48,61.36,0.0064
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,20,2,10.0,nested,commodity,Stone,,False,,0,3071.47589384412,11.42,2.79,30.1,0.6836
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,2,0,0.0,nested,commodity,Uranium,,False,,0,7589.935945521161,11.42,0.0,65.76,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,94,5,5.3,nested,earth_mri,,Base Metals,True,,22,1859.9473757495055,11.42,2.29,11.85,0.9864
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,4718.337435064923,11.42,0.0,39.03,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,7589.935945521161,11.42,0.0,65.76,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,60,1,1.7,nested,earth_mri,,Gold/Silver,True,,5,3058.3350670421464,11.42,0.29,8.86,0.9993
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,47,11,23.4,nested,earth_mri,,Non-Critical,False,,4,3577.8793036214656,11.42,13.6,37.22,0.0151
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,1,2791.628336528249,11.42,0.0,65.76,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,5,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,5327.94526913875,11.42,0.0,43.45,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,7589.935945521161,11.42,0.0,65.76,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,87,1,1.1,nested,mineral_system,,,False,Orogenic,11,2711.691988469168,11.42,0.2,6.23,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,5654.827912470213,11.42,0.0,79.35,1.0
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,109,16,14.7,nested,mineral_system,,,False,Unknown System,18,2564.3835792906484,11.42,9.24,22.52,0.1772
+jerome,"Jerome, AZ",jerome_mosaic,5575,189.52,0.01,3,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,1,497.561717620659,11.42,0.0,56.15,1.0

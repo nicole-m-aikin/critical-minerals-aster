@@ -1,0 +1,20 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,238,6,2.5,nested,site,,,False,,71,3113.6985336091043,13.25,1.16,5.39,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,107,2,1.9,nested,commodity,Gold/Silver,,False,,18,4901.032584763456,13.25,0.51,6.56,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,127,3,2.4,nested,commodity,Other,,False,,52,1526.3594767274944,13.25,0.81,6.72,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,1,1,100.0,nested,commodity,Sand/Gravel,,False,,1,467.4250286817273,13.25,20.65,100.0,0.1325
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,3,0,0.0,nested,commodity,Uranium,,False,,0,7444.895285401229,13.25,0.0,56.15,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,12,0,0.0,nested,earth_mri,,Base Metals,True,,1,5138.632242038836,13.25,0.0,24.25,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,31,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,15,745.9277163521186,13.25,0.0,11.03,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,3,0,0.0,nested,earth_mri,,Energy,True,,0,7444.895285401229,13.25,0.0,56.15,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,103,2,1.9,nested,earth_mri,,Gold/Silver,True,,17,4890.30476757244,13.25,0.53,6.81,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,36,0,0.0,nested,earth_mri,,Industrial,True,,15,1091.0024312927662,13.25,0.0,9.64,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,28,4,14.3,nested,earth_mri,,Non-Critical,False,,5,2826.840678917941,13.25,5.7,31.49,0.5185
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,25,0,0.0,nested,earth_mri,,PGM,True,,18,472.36805740713663,13.25,0.0,13.32,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,4,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,7075.580124696645,13.25,0.0,48.99,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,65,0,0.0,nested,mineral_system,,,False,Mafic Magmatic,31,909.0232484019024,13.25,0.0,5.58,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,7478.097240191071,13.25,0.0,65.76,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,90,2,2.2,nested,mineral_system,,,False,Orogenic,12,5188.330895809641,13.25,0.61,7.74,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,2,0,0.0,nested,mineral_system,,,False,Placer,1,1695.3617722191684,13.25,0.0,65.76,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,19,0,0.0,nested,mineral_system,,,False,Porphyry Sn,14,465.15479258405884,13.25,0.0,16.82,1.0
+stillwater,"Stillwater Complex, MT",stillwater_mosaic,4906,417.51,0.02,56,4,7.1,nested,mineral_system,,,False,Unknown System,13,2848.8710651298475,13.25,2.81,16.98,0.9496

@@ -1,0 +1,153 @@
+{
+  "site_id": "hanover_fierro",
+  "granule_id": "hanover_fierro_mosaic",
+  "timestamp_utc": "2026-09-27T22:30:40.465493+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 3408,
+  "raster_bbox_wgs84": [
+    -108.26305065221749,
+    32.639571016387094,
+    -107.78636672213507,
+    33.06156199482867
+  ],
+  "inputs": {
+    "site_config": "sites/hanover_fierro.yaml",
+    "site_config_sha256": "f53b5ec8a2079169ff8bf8a2b53e7edfe78f7212732961ee7a383c73b89676aa",
+    "bbox_wgs84": [
+      -108.25,
+      32.65,
+      -107.8,
+      33.05
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/hanover_fierro_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "hanover_fierro",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00405172021180707_20250915100303",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 5,
+          "bbox_coverage": 0.6062
+        },
+        {
+          "granule_id": "AST_L1T_00409082021175255_20250917131101",
+          "cloud_pct": 3.0,
+          "day_night": "Day",
+          "month": 9,
+          "bbox_coverage": 0.4115
+        }
+      ],
+      "created_utc": "2026-09-27T22:30:39+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 262,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 5,
+      "duplicate_record": 0,
+      "n_output": 257,
+      "n_flag_shared_coords": 14,
+      "n_flag_score_high": 106,
+      "n_flag_producer": 203
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "MultiPolygon",
+          "coordinates": [
+            [
+              [
+                [
+                  -107.78798562373863,
+                  33.00588793713993
+                ],
+                [
+                  -107.80115573960319,
+                  32.639571016387094
+                ],
+                [
+                  -107.88450802705097,
+                  32.641669187639685
+                ],
+                [
+                  -107.83556414736101,
+                  32.832699140103095
+                ],
+                [
+                  -107.78798562373863,
+                  33.00588793713993
+                ]
+              ]
+            ],
+            [
+              [
+                [
+                  -107.98368977509517,
+                  33.05539241681344
+                ],
+                [
+                  -107.99757416396892,
+                  32.64442672597488
+                ],
+                [
+                  -108.26305065221749,
+                  32.65050048050918
+                ],
+                [
+                  -108.25038998355079,
+                  33.06156199482867
+                ],
+                [
+                  -107.98368977509517,
+                  33.05539241681344
+                ]
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 0,
+  "mean_nearest_structure_m": 27845.305556459345,
+  "inputs_recorded_utc": "2026-09-27T22:46:12.970951+00:00"
+}

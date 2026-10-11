@@ -1,0 +1,13 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,86,11,12.8,nested,site,,,False,,4,4467.999132075904,12.04,7.29,21.47,0.464
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,4,0,0.0,nested,commodity,Gold/Silver,,False,,0,6729.524544106353,12.04,0.0,48.99,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,77,11,14.3,nested,commodity,Other,,False,,4,4022.5483151345898,12.04,8.17,23.8,0.3206
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,3,0,0.0,nested,commodity,Sand/Gravel,,False,,0,13592.138701950202,12.04,0.0,56.15,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,2,0,0.0,nested,commodity,Stone,,False,,0,3408.5954054441486,12.04,0.0,65.76,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,10,0,0.0,nested,earth_mri,,Base Metals,True,,0,6906.909200372461,12.04,0.0,27.75,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,1,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,4830.359156949291,12.04,0.0,79.35,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,6,4,66.7,nested,earth_mri,,Industrial,True,,0,2461.2325553396727,12.04,30.0,90.32,0.0026
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,69,7,10.1,nested,earth_mri,,Non-Critical,False,,4,4283.783751678489,12.04,5.0,19.49,0.7395
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,6,0,0.0,nested,mineral_system,,,False,Orogenic,0,6113.777443677808,12.04,0.0,39.03,1.0
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,78,11,14.1,nested,mineral_system,,,False,Unknown System,4,4255.346084365142,12.04,8.06,23.51,0.3362
+ore_knob,"Ore Knob, NC",ore_knob_mosaic,3371,205.3,0.02,2,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,7824.133057989886,12.04,0.0,65.76,1.0

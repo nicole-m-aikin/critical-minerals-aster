@@ -1,0 +1,31 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,419,35,8.4,nested,site,,,False,,14,17978.577176783772,11.67,6.07,11.4,0.9886
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,3,0,0.0,nested,commodity,Antimony,,False,,0,34998.84009133654,11.67,0.0,56.15,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,294,30,10.2,nested,commodity,Gold/Silver,,False,,2,18399.770240661433,11.67,7.24,14.19,0.8072
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,6,0,0.0,nested,commodity,Mercury,,False,,1,25895.03753075023,11.67,0.0,39.03,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,90,5,5.6,nested,commodity,Other,,False,,7,16544.04104427723,11.67,2.4,12.35,0.984
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,5953.92901208392,11.67,0.0,65.76,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,13,0,0.0,nested,commodity,Stone,,False,,0,17728.126235440155,11.67,0.0,22.81,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,11,0,0.0,nested,commodity,Uranium,,False,,4,11980.677071780652,11.67,0.0,25.88,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,39,6,15.4,nested,earth_mri,,Base Metals,True,,0,20293.540662572595,11.67,7.25,29.73,0.3006
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,11,1,9.1,nested,earth_mri,,Battery Metals – Co/Ni,True,,4,11280.533966213237,11.67,1.62,37.74,0.7446
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,11,0,0.0,nested,earth_mri,,Energy,True,,4,11980.677071780652,11.67,0.0,25.88,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,281,25,8.9,nested,earth_mri,,Gold/Silver,True,,2,18425.77723092371,11.67,6.1,12.8,0.9428
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,7,2,28.6,nested,earth_mri,,Industrial,True,,0,22460.12048941621,11.67,8.22,64.11,0.1924
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,48,0,0.0,nested,earth_mri,,Non-Critical,False,,4,15991.666301110714,11.67,0.0,7.41,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,22,1,4.5,nested,earth_mri,,Specialty/High-Tech,True,,0,17419.918274788502,11.67,0.81,21.8,0.9348
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,15,1,6.7,nested,mineral_system,,,False,Basin Brine Path,0,18876.12405240701,11.67,1.19,29.82,0.8445
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,2,0,0.0,nested,mineral_system,,,False,Carlin-type,0,18359.386042723985,11.67,0.0,65.76,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,1,0,0.0,nested,mineral_system,,,False,Climax-type,0,7238.82966917342,11.67,0.0,79.35,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,3,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,27262.30207122298,11.67,0.0,56.15,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,1,0,0.0,nested,mineral_system,,,False,Mafic Magmatic,0,24317.510634981638,11.67,0.0,79.35,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,9,1,11.1,nested,mineral_system,,,False,Marine Chemocline,4,10460.40563596704,11.67,1.99,43.5,0.6726
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,6,0,0.0,nested,mineral_system,,,False,Meteoric Convection,1,25895.03753075023,11.67,0.0,39.03,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,11,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,4,11980.677071780652,11.67,0.0,25.88,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,185,20,10.8,nested,mineral_system,,,False,Orogenic,1,20797.832113843,11.67,7.11,16.11,0.6753
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,22,5,22.7,nested,mineral_system,,,False,Placer,0,22115.342007531897,11.67,10.12,43.44,0.1052
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,30,1,3.3,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,14333.895722413183,11.67,0.59,16.67,0.9758
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,3,1,33.3,nested,mineral_system,,,False,Porphyry Sn,0,12031.488347772465,11.67,6.15,79.23,0.3108
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,13,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,14873.101263180708,11.67,0.0,22.81,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,3,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,20815.696787247467,11.67,0.0,56.15,1.0
+tonopah,"Tonopah–Manhattan, NV",tonopah_mosaic,10092,486.8,0.01,115,6,5.2,nested,mineral_system,,,False,Unknown System,4,14456.29065443279,11.67,2.41,10.92,0.9943

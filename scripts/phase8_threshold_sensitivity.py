@@ -25,7 +25,16 @@ recompute the pixel-level coverage fraction p0 = strong_pixels / valid_pixels
 for THAT scenario specifically (the null must be recomputed per scenario --
 a looser threshold produces a larger zone and therefore a larger p0), sample
 each critical-mineral deposit's pixel against the new mask, and rerun the
-one-sided binomial test.
+one-sided test.
+
+The null is the bedrock-vs-cover stratified null of Phase 2, recomputed per
+scenario at pixel level: the strata (lithology.cover_strata: bedrock /
+cover / unmapped, plus a sliver code 0 for valid pixels just outside the
+footprint polygon) are rasterized onto the ratio grid; for each stratum s,
+p_s = strong pixels in s / valid pixels in s; each deposit takes p_s of the
+stratum of its own pixel; E = Σ p_i and p_binomial is the exact
+Poisson-binomial tail. p0_null = E / n. The previous pixel-level geometric
+null (strong / valid over the whole grid) is kept as the *_geometric columns.
 
 Sweep A (percentile thresholds, score_min fixed at nominal 3):
     (65, 85) loose -- (70, 90) nominal -- (75, 95) tight
@@ -56,7 +65,12 @@ import numpy as np
 import pandas as pd
 import rasterio
 
+from shapely.geometry import box
+from shapely.ops import unary_union
+from shapely.validation import make_valid
+
 from critical_minerals_aster.config import load_site_by_id
+from critical_minerals_aster.lithology import cover_strata, rasterize_cover_strata, stratified_null
 from critical_minerals_aster.paths import site_paths_for
 from critical_minerals_aster.classification import classify_percentiles, combined_score
 from critical_minerals_aster.spectral import load_ratio_mosaic, clip_bands_to_bbox
@@ -96,6 +110,33 @@ def load_deposit_pixels(paths, site, raster_bbox, footprint, transform, crs, sha
     rows_px, cols_px = np.asarray(rows_px), np.asarray(cols_px)
     in_bounds = (rows_px >= 0) & (rows_px < shape[0]) & (cols_px >= 0) & (cols_px < shape[1])
     return rows_px[in_bounds], cols_px[in_bounds]
+
+
+def scenario_test(mask, valid, codes, rows_px, cols_px) -> dict:
+    """Stratified (primary) and geometric pixel-level tests for one strong-zone mask."""
+    hit_vals = mask[rows_px, cols_px]
+    n, hits = len(hit_vals), int(hit_vals.sum())
+
+    p0_geo = float(mask.sum()) / float(valid.sum()) if valid.sum() else 0.0
+    p_geo, _ = run_binomial(hits, n, p0_geo)
+
+    p_by_code = {}
+    for code in np.unique(codes[rows_px, cols_px]):
+        in_s = valid & (codes == code)
+        p_by_code[code] = float((mask & in_s).sum()) / float(in_s.sum()) if in_s.sum() else 0.0
+    p_i = np.array([p_by_code[c] for c in codes[rows_px, cols_px]], dtype=float)
+    strat = stratified_null(p_i, hits)
+
+    return {
+        "p0_null": round(strat["p0_eff"], 4), "n_crit": n, "hits_crit": hits,
+        "hit_rate_pct": round(hits / n * 100, 2) if n else 0.0,
+        "expected_hits_null": round(strat["expected"], 2),
+        "enrichment": round(strat["enrichment"], 2) if strat["expected"] > 0 else float("nan"),
+        "p_binomial": strat["p"], "sig_05": strat["p"] < 0.05,
+        "p0_geometric": round(p0_geo, 4),
+        "enrichment_geometric": round((hits / n) / p0_geo, 2) if n and p0_geo else float("nan"),
+        "p_binomial_geometric": p_geo, "sig_05_geometric": p_geo < 0.05,
+    }
 
 
 def main() -> None:
@@ -147,6 +188,13 @@ def main() -> None:
 
         print(f"{site_id:22s}", end=" ", flush=True)
 
+        if footprint is not None and len(footprint):
+            fp_geom = make_valid(unary_union(footprint.geometry.values))
+        else:
+            fp_geom = gpd.GeoSeries([box(*raster_bbox)], crs="EPSG:4326").to_crs(crs).iloc[0]
+        strata = cover_strata(site_id, fp_geom, crs, bbox_wgs84=raster_bbox)
+        codes = rasterize_cover_strata(strata, transform, silica.shape)
+
         # --- Sweep A: percentile thresholds, score_min fixed at 3 ---
         for low_pct, high_pct, label in PCT_SCENARIOS:
             s_cls, _, _ = classify_percentiles(silica, low_pct, high_pct)
@@ -154,19 +202,9 @@ def main() -> None:
             m_cls, _, _ = classify_percentiles(mafic, low_pct, high_pct)
             score = combined_score(s_cls, c_cls, m_cls)
             mask = (score >= 3) & valid
-
-            p0 = float(mask.sum()) / float(valid.sum()) if valid.sum() else 0.0
-            hit_vals = mask[rows_px, cols_px]
-            n, hits = len(hit_vals), int(hit_vals.sum())
-            p_val, _ = run_binomial(hits, n, p0)
-            enrichment = (hits / n) / p0 if n and p0 else float("nan")
-
             pct_rows.append({
                 "site_id": site_id, "scenario": label, "low_pct": low_pct, "high_pct": high_pct,
-                "p0_null": round(p0, 4), "n_crit": n, "hits_crit": hits,
-                "hit_rate_pct": round(hits / n * 100, 2) if n else 0.0,
-                "enrichment": round(enrichment, 2), "p_binomial": round(p_val, 6),
-                "sig_05": p_val < 0.05,
+                **scenario_test(mask, valid, codes, rows_px, cols_px),
             })
 
         # --- Sweep B: score cutoff, percentiles fixed at nominal 70/90 ---
@@ -176,18 +214,9 @@ def main() -> None:
         score = combined_score(s_cls, c_cls, m_cls)
         for score_min in SCORE_SCENARIOS:
             mask = (score >= score_min) & valid
-            p0 = float(mask.sum()) / float(valid.sum()) if valid.sum() else 0.0
-            hit_vals = mask[rows_px, cols_px]
-            n, hits = len(hit_vals), int(hit_vals.sum())
-            p_val, _ = run_binomial(hits, n, p0)
-            enrichment = (hits / n) / p0 if n and p0 else float("nan")
-
             score_rows.append({
                 "site_id": site_id, "score_min": score_min,
-                "p0_null": round(p0, 4), "n_crit": n, "hits_crit": hits,
-                "hit_rate_pct": round(hits / n * 100, 2) if n else 0.0,
-                "enrichment": round(enrichment, 2), "p_binomial": round(p_val, 6),
-                "sig_05": p_val < 0.05,
+                **scenario_test(mask, valid, codes, rows_px, cols_px),
             })
 
         nominal_p = [r for r in pct_rows if r["site_id"] == site_id and r["scenario"] == "nominal"][0]["p_binomial"]
@@ -225,7 +254,7 @@ def main() -> None:
     ax.set_yscale("log")
     ax.set_xticks([0, 1, 2])
     ax.set_xticklabels(["loose\n(65/85)", "nominal\n(70/90)", "tight\n(75/95)"])
-    ax.set_ylabel("Binomial p-value (log scale)")
+    ax.set_ylabel("p-value, bedrock/cover-stratified null (log scale)")
     ax.set_title("Percentile-threshold sensitivity")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)

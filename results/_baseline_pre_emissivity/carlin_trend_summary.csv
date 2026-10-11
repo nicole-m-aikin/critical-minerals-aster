@@ -1,0 +1,19 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,160,12,7.5,nested,site,,,False,,9,3844.549012624535,10.85,4.34,12.65,0.9381
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,4,1,25.0,nested,commodity,Antimony,,False,,0,5381.095521979787,10.85,4.56,69.94,0.3683
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,76,3,3.9,nested,commodity,Gold/Silver,,False,,1,3758.5570425851092,10.85,1.35,10.97,0.9915
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,40,6,15.0,nested,commodity,Mercury,,False,,3,3540.5003399030056,10.85,7.06,29.07,0.2631
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,36,2,5.6,nested,commodity,Other,,False,,3,4549.991846196152,10.85,1.54,18.14,0.9138
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,944.9307491851723,10.85,0.0,79.35,1.0
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,3,0,0.0,nested,commodity,Stone,,False,,2,529.4912957237595,10.85,0.0,56.15,1.0
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,2,0,0.0,nested,earth_mri,,Base Metals,True,,0,4138.116262712943,10.85,0.0,65.76,1.0
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,75,3,4.0,nested,earth_mri,,Gold/Silver,True,,1,3708.32163248519,10.85,1.37,11.11,0.9907
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,31,2,6.5,nested,earth_mri,,Industrial,True,,3,4310.092363316084,10.85,1.79,20.72,0.8642
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,46,6,13.0,nested,earth_mri,,Non-Critical,False,,5,3500.0925861752357,10.85,6.12,25.67,0.3819
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,6,1,16.7,nested,earth_mri,,Specialty/High-Tech,True,,0,5685.060805208494,10.85,3.01,56.35,0.4979
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,3,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,5066.293718363841,10.85,0.0,56.15,1.0
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,10,1,10.0,nested,mineral_system,,,False,Carlin-type,0,6273.836052419962,10.85,1.79,40.42,0.6828
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,40,6,15.0,nested,mineral_system,,,False,Meteoric Convection,3,3540.5003399030056,10.85,7.06,29.07,0.2631
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,30,1,3.3,nested,mineral_system,,,False,Orogenic,1,3452.1566514315446,10.85,0.59,16.67,0.9681
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,17,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,2983.588158413517,10.85,0.0,18.43,1.0
+carlin_trend,"Carlin Trend, NV",carlin_trend_mosaic,6300,252.17,0.01,60,4,6.7,nested,mineral_system,,,False,Unknown System,5,4021.4148084756353,10.85,2.62,15.93,0.902

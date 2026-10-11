@@ -1,0 +1,11 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,15,0,0.0,nested,site,,,False,,0,8349.613896978059,11.31,0.0,20.39,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,7,0,0.0,nested,commodity,Other,,False,,0,6214.069964436173,11.31,0.0,35.43,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,18012.614475648414,11.31,0.0,65.76,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,6,0,0.0,nested,commodity,Uranium,,False,,0,7620.081625386808,11.31,0.0,39.03,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,4,0,0.0,nested,earth_mri,,Base Metals,True,,0,6733.0903524804,11.31,0.0,48.99,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,6,0,0.0,nested,earth_mri,,Energy,True,,0,7620.081625386808,11.31,0.0,39.03,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,5,0,0.0,nested,earth_mri,,Non-Critical,False,,0,10518.271458485688,11.31,0.0,43.45,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,3,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,5522.042780377204,11.31,0.0,56.15,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,6,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,7620.081625386808,11.31,0.0,39.03,1.0
+arizona_strip,"Arizona Strip, AZ",arizona_strip_mosaic,2247,245.58,0.01,6,0,0.0,nested,mineral_system,,,False,Unknown System,0,10492.931726869738,11.31,0.0,39.03,1.0

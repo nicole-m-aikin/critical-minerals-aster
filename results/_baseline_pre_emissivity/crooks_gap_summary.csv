@@ -1,0 +1,11 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,140,7,5.0,nested,site,,,False,,10,6934.618963758625,11.28,2.44,9.96,0.9969
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,1,1,100.0,nested,commodity,Other,,False,,0,19405.973106786594,11.28,20.65,100.0,0.1128
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,10484.608183882354,11.28,0.0,65.76,1.0
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,137,6,4.4,nested,commodity,Uranium,,False,,10,6791.762521544935,11.28,2.02,9.23,0.9987
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,1,1,100.0,nested,earth_mri,,Base Metals,True,,0,19405.973106786594,11.28,20.65,100.0,0.1128
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,137,6,4.4,nested,earth_mri,,Energy,True,,10,6791.762521544935,11.28,2.02,9.23,0.9987
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,2,0,0.0,nested,earth_mri,,Non-Critical,False,,0,10484.608183882354,11.28,0.0,65.76,1.0
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,5075.611413412449,11.28,0.0,79.35,1.0
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,136,6,4.4,nested,mineral_system,,,False,Meteoric Recharge,10,6804.381279692968,11.28,2.04,9.29,0.9986
+crooks_gap,"Crooks Gap-Green Mountain, WY",crooks_gap_mosaic,4771,218.51,0.01,3,1,33.3,nested,mineral_system,,,False,Unknown System,0,13458.396491517102,11.28,6.15,79.23,0.3016

@@ -1,0 +1,17 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,427,61,14.3,nested,site,,,False,,92,2048.218133313005,11.67,11.28,17.92,0.057
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,314,47,15.0,nested,commodity,Gold/Silver,,False,,62,2263.7467532779965,11.67,11.45,19.34,0.0452
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,109,14,12.8,nested,commodity,Other,,False,,30,1293.2920194407093,11.67,7.81,20.41,0.3942
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,3717.57896147757,11.67,0.0,79.35,1.0
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,3,0,0.0,nested,commodity,Stone,,False,,0,6362.084438282458,11.67,0.0,56.15,1.0
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,76,8,10.5,nested,earth_mri,,Base Metals,True,,19,1106.7533714746587,11.67,5.43,19.42,0.6747
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,306,46,15.0,nested,earth_mri,,Gold/Silver,True,,62,2291.8481565532365,11.67,11.46,19.47,0.0443
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,1,1,100.0,nested,earth_mri,,Industrial,True,,0,687.8453405753355,11.67,20.65,100.0,0.1167
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,42,5,11.9,nested,earth_mri,,Non-Critical,False,,10,2029.6419183500077,11.67,5.19,25.0,0.5522
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,2,1,50.0,nested,earth_mri,,Specialty/High-Tech,True,,1,1618.7724380065674,11.67,9.45,90.55,0.2198
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,1,1,100.0,nested,mineral_system,,,False,Mafic Magmatic,0,687.8453405753355,11.67,20.65,100.0,0.1167
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,307,47,15.3,nested,mineral_system,,,False,Orogenic,63,2203.157015803214,11.67,11.71,19.76,0.0325
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,1792.9249044734454,11.67,0.0,79.35,1.0
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,2,1,50.0,nested,mineral_system,,,False,Reduced Intrusion-Related,1,1618.7724380065674,11.67,9.45,90.55,0.2198
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,105,12,11.4,nested,mineral_system,,,False,Unknown System,25,1713.0841861021443,11.67,6.66,18.92,0.5759
+west_shasta,"West Shasta, CA",west_shasta_mosaic,1602,120.44,0.01,11,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,3,1147.9804010254109,11.67,0.0,25.88,1.0

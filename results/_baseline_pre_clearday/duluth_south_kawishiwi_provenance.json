@@ -1,0 +1,107 @@
+{
+  "site_id": "duluth_south_kawishiwi",
+  "granule_id": "duluth_south_kawishiwi_mosaic",
+  "timestamp_utc": "2026-08-27T08:51:29.450065+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "0d9f738eac775aa1ffee548d39a31dff0291c9ef",
+  "n_zones": 3843,
+  "raster_bbox_wgs84": [
+    -91.9396700874455,
+    47.62541064648372,
+    -91.45789009965334,
+    48.07599524854074
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -91.9305522081569,
+                48.07599524854074
+              ],
+              [
+                -91.9396700874455,
+                47.63070006879994
+              ],
+              [
+                -91.4710345394331,
+                47.62541064648372
+              ],
+              [
+                -91.45789009965334,
+                48.070623116585914
+              ],
+              [
+                -91.9305522081569,
+                48.07599524854074
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 10,
+  "mean_nearest_structure_m": 675.9771117236328,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": false,
+  "inputs": {
+    "site_config": "sites/duluth_south_kawishiwi.yaml",
+    "site_config_sha256": "96ed2c3c08f38cace8b6f4e719a296c9abc3f1063f2ff84e2b03f8a8681447d8",
+    "bbox_wgs84": [
+      -91.93,
+      47.63,
+      -91.47,
+      48.07
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/duluth_south_kawishiwi_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mrds_validation_site_bbox": {
+      "n_input": 23,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 0,
+      "n_output": 23,
+      "n_flag_shared_coords": 0,
+      "n_flag_score_high": 19,
+      "n_flag_producer": 12
+    }
+  },
+  "inputs_recorded_utc": "2026-09-27T21:50:58.228048+00:00"
+}

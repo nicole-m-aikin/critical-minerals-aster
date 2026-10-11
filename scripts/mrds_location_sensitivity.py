@@ -46,6 +46,7 @@ from critical_minerals_aster.mrds import (
     filter_mrds_bbox,
     mrds_to_points_gdf,
     reclassify_mrds_earth_mri,
+    validate_mrds,
 )
 from critical_minerals_aster.significance import buffer_sensitivity
 
@@ -104,7 +105,7 @@ def _load_zones(site_id: str) -> gpd.GeoDataFrame | None:
 
 def main() -> None:
     mrds_path = ROOT / "data" / "mrds.csv"
-    mrds_all = pd.read_csv(mrds_path, low_memory=False)
+    mrds_all, _ = validate_mrds(pd.read_csv(mrds_path, low_memory=False))
 
     sig_path = ROOT / "results" / "significance_critical_only.csv"
     sig_df = pd.read_csv(sig_path)

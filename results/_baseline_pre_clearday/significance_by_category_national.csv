@@ -1,0 +1,11 @@
+earth_mri_category,tir_expected,n_deposits,n_hits,expected_hits,hit_vs_expected,p_pooled
+Battery Metals – Co/Ni,MAYBE — some magmatic/skarn settings,326,32,25.9,1.23,0.1273
+Non-Critical,NO   — mixed non-critical,1766,164,153.2,1.07,0.1907
+PGM,YES  — mafic ratio (B12/B13),25,3,2.4,1.26,0.4696
+REE,YES  — carbonate signature (B13/B12),28,3,3.5,0.87,0.7082
+Battery Metals – Li/Brine,NO   — evaporite/brine hosted,12,1,1.1,0.87,0.738
+Base Metals,YES  — porphyry/skarn/VMS alteration halos,2138,170,180.5,0.94,0.8043
+Energy,"NO   — roll-front U, coal, no alteration",789,46,64.0,0.72,0.9922
+Specialty/High-Tech,MAYBE — deposit-type dependent,213,10,20.3,0.49,0.9943
+Gold/Silver,"NO   — placer/Carlin/epithermal, buried/eroded",2535,161,243.9,0.66,1.0
+Industrial,NO   — sand/gravel/stone,414,16,45.2,0.35,1.0

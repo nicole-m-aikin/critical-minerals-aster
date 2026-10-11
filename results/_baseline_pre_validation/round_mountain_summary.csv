@@ -1,0 +1,31 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,439,53,12.1,nested,site,,,False,,51,2805.916198709218,11.12,9.35,15.45,0.2825
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,7,1,14.3,nested,commodity,Antimony,,False,,1,2609.9456966695725,11.12,2.57,51.31,0.5617
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,301,41,13.6,nested,commodity,Gold/Silver,,False,,40,2616.797490560343,11.12,10.2,17.96,0.1007
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,14,0,0.0,nested,commodity,Mercury,,False,,0,5090.135643896102,11.12,0.0,21.53,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,96,8,8.3,nested,commodity,Other,,False,,7,3119.747014622508,11.12,4.28,15.59,0.8497
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,8,2,25.0,nested,commodity,Stone,,False,,3,1405.5564218261322,11.12,7.15,59.07,0.2207
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,13,1,7.7,nested,commodity,Uranium,,False,,0,3374.575608083176,11.12,1.37,33.31,0.7839
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,41,4,9.8,nested,earth_mri,,Base Metals,True,,9,2562.4820168679053,11.12,3.86,22.55,0.6825
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,5,1,20.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,2694.950058055174,11.12,3.62,62.45,0.4452
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,13,1,7.7,nested,earth_mri,,Energy,True,,0,3374.575608083176,11.12,1.37,33.31,0.7839
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,284,40,14.1,nested,earth_mri,,Gold/Silver,True,,33,2673.642610873421,11.12,10.52,18.61,0.0706
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,7,1,14.3,nested,earth_mri,,Industrial,True,,0,2756.883297359772,11.12,2.57,51.31,0.5617
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,60,4,6.7,nested,earth_mri,,Non-Critical,False,,6,3456.718915895869,11.12,2.62,15.93,0.9123
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,29,2,6.9,nested,earth_mri,,Specialty/High-Tech,True,,3,2875.0136490718446,11.12,1.91,21.96,0.8482
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,14,3,21.4,nested,mineral_system,,,False,Basin Brine Path,5,2436.0029377981687,11.12,7.57,47.59,0.1981
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,2,0,0.0,nested,mineral_system,,,False,Carlin-type,0,3803.046364747508,11.12,0.0,65.76,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,3,0,0.0,nested,mineral_system,,,False,Climax-type,0,2342.568219037339,11.12,0.0,56.15,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,3,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,1,4335.725662365528,11.12,0.0,56.15,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,4,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,3173.6738236037827,11.12,0.0,48.99,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,1,1,100.0,nested,mineral_system,,,False,Mafic Magmatic,0,2891.759548706999,11.12,20.65,100.0,0.1112
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,4,1,25.0,nested,mineral_system,,,False,Marine Chemocline,0,1968.468636507726,11.12,4.56,69.94,0.3758
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,20,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,4370.99280181936,11.12,0.0,16.11,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,13,1,7.7,nested,mineral_system,,,False,Meteoric Recharge,1,2683.603302793071,11.12,1.37,33.31,0.7839
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,223,32,14.3,nested,mineral_system,,,False,Orogenic,22,2774.4679943318697,11.12,10.35,19.56,0.0799
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,26,6,23.1,nested,mineral_system,,,False,Placer,4,1464.148897691552,11.12,11.03,42.05,0.0616
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,21,1,4.8,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,1,3219.654864613644,11.12,0.85,22.67,0.9158
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,5061.40042185738,11.12,0.0,79.35,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,18,1,5.6,nested,mineral_system,,,False,Reduced Intrusion-Related,1,2614.6285897503303,11.12,0.99,25.76,0.8801
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,2,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,4415.604732849678,11.12,0.0,65.76,1.0
+round_mountain,"Round Mountain, NV",round_mountain_mosaic,2382,218.02,0.02,84,7,8.3,nested,mineral_system,,,False,Unknown System,16,2844.5506741985955,11.12,4.1,16.22,0.838

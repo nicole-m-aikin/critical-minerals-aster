@@ -18,9 +18,24 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import pandas as pd
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
 REPO_ROOT = Path(__file__).parent.parent
+
+
+def _result_counts() -> tuple[int, int, int]:
+    """Current FDR / union / robust counts from the corrected CSVs."""
+    fdr = pd.read_csv(REPO_ROOT / "results" / "phase4_fdr_corrected_significance.csv")
+    n_bin = int(fdr["sig_fdr_binomial"].fillna(False).sum())
+    n_union = int(
+        (fdr["sig_fdr_binomial"].fillna(False) | fdr["sig_fdr_mannwhitney"].fillna(False)).sum()
+    )
+    clust = pd.read_csv(REPO_ROOT / "results" / "phase5_clustering_sensitivity.csv")
+    piv = clust.pivot_table(index="site_id", columns="radius_m", values="sig_05")
+    stable = set(piv[(piv == True).all(axis=1)].index)  # noqa: E712
+    robust = stable & set(fdr.loc[fdr["sig_fdr_binomial"].fillna(False), "site_id"])
+    return n_bin, n_union, len(robust)
 
 STAGE_COLOR = {
     "data": "#E6F0FA",
@@ -56,7 +71,7 @@ BOXES = [
     ("DBSCAN clustering\nsensitivity (250/500/1000 m)", 3.6, 2.0, 2.6, 1.0, "correct"),
     ("Threshold / score-cutoff\nsensitivity", 0.5, 2.0, 2.6, 1.0, "correct"),
 
-    ("Final result:\n6 FDR-significant (binomial),\n11 union, 4 fully robust", 6.7, 0.3, 5.4, 1.1, "correct"),
+    ("Final result:\n{n_bin} FDR-significant (binomial),\n{n_union} union, {n_rob} fully robust", 6.7, 0.3, 5.4, 1.1, "correct"),
 ]
 
 ARROWS = [
@@ -72,10 +87,12 @@ ARROWS = [
 
 
 def main() -> None:
+    n_bin, n_union, n_rob = _result_counts()
     fig, ax = plt.subplots(figsize=(13, 8))
     centers = {}
 
     for i, (label, x, y, w, h, stage) in enumerate(BOXES):
+        label = label.format(n_bin=n_bin, n_union=n_union, n_rob=n_rob)
         box = FancyBboxPatch(
             (x, y), w, h,
             boxstyle="round,pad=0.08,rounding_size=0.08",

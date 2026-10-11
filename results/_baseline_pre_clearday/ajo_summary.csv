@@ -1,0 +1,14 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,44,4,9.1,nested,site,,,False,,6,2256.767414200779,12.09,3.59,21.16,0.7951
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,15,2,13.3,nested,commodity,Gold/Silver,,False,,3,1979.2819235349982,12.09,3.74,37.88,0.5566
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,27,2,7.4,nested,commodity,Other,,False,,3,1936.0873785300932,12.09,2.06,23.37,0.8546
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,10565.944489147345,12.09,0.0,79.35,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,1,0,0.0,nested,commodity,Stone,,False,,0,6768.233662349451,12.09,0.0,79.35,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,31,4,12.9,nested,earth_mri,,Base Metals,True,,5,1759.383785102141,12.09,5.13,28.85,0.5257
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,4,0,0.0,nested,earth_mri,,Gold/Silver,True,,1,2686.3890706467137,12.09,0.0,48.99,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,9,0,0.0,nested,earth_mri,,Non-Critical,False,,0,3779.034733786784,12.09,0.0,29.92,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,1827.953274691354,12.09,0.0,79.35,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,9,2,22.2,nested,mineral_system,,,False,Orogenic,1,2490.2563826386813,12.09,6.32,54.74,0.2982
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,1934.9797344543558,12.09,0.0,79.35,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,1752.5431663752154,12.09,0.0,65.76,1.0
+ajo,"Ajo, AZ",ajo_mosaic,5471,198.73,0.01,31,2,6.5,nested,mineral_system,,,False,Unknown System,5,2245.723852877097,12.09,1.79,20.72,0.903

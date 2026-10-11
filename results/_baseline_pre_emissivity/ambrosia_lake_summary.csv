@@ -1,0 +1,14 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,315,17,5.4,nested,site,,,False,,81,1236.4760010350697,9.24,3.4,8.47,0.9956
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,18,3,16.7,nested,commodity,Other,,False,,1,1873.6390180788997,9.24,5.84,39.22,0.2284
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,15,1,6.7,nested,commodity,Sand/Gravel,,False,,2,1330.9706119472694,9.24,1.19,29.82,0.7664
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,9,1,11.1,nested,commodity,Stone,,False,,1,1300.8374057649482,9.24,1.99,43.5,0.5821
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,273,12,4.4,nested,commodity,Uranium,,False,,77,1187.1514365184364,9.24,2.53,7.52,0.9992
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,4,0,0.0,nested,earth_mri,,Base Metals,True,,0,1341.5862731918255,9.24,0.0,48.99,1.0
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,273,12,4.4,nested,earth_mri,,Energy,True,,77,1187.1514365184364,9.24,2.53,7.52,0.9992
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,35,5,14.3,nested,earth_mri,,Non-Critical,False,,3,1619.1169308242754,9.24,6.26,29.38,0.2184
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,3,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,1,1120.7201616322805,9.24,0.0,56.15,1.0
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,47,2,4.3,nested,mineral_system,,,False,Basin Brine Path,15,1235.7137020203984,9.24,1.17,14.25,0.9392
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,228,10,4.4,nested,mineral_system,,,False,Meteoric Recharge,63,1173.086202651026,9.24,2.4,7.88,0.9981
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,1912.304455037357,9.24,0.0,79.35,1.0
+ambrosia_lake,"Ambrosia Lake, NM",ambrosia_lake_mosaic,6533,143.87,0.01,39,5,12.8,nested,mineral_system,,,False,Unknown System,3,1590.6522479901778,9.24,5.6,26.71,0.2902

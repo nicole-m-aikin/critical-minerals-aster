@@ -1,0 +1,127 @@
+{
+  "site_id": "karnes_county",
+  "granule_id": "karnes_county_mosaic",
+  "timestamp_utc": "2026-09-27T22:34:26.192858+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 7188,
+  "raster_bbox_wgs84": [
+    -98.134263696811,
+    28.71703692100897,
+    -97.66487914580011,
+    29.184592025613885
+  ],
+  "inputs": {
+    "site_config": "sites/karnes_county.yaml",
+    "site_config_sha256": "9555b70ba3dc84610bbf9515ad01a4db30cee50b227ef54b4e90e957905ce77a",
+    "bbox_wgs84": [
+      -98.13,
+      28.72,
+      -97.67,
+      29.18
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/karnes_county_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "karnes_county",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00405172018172208_20250827021757",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 5,
+          "bbox_coverage": 0.9284
+        },
+        {
+          "granule_id": "AST_L1T_00405172018172159_20250827021746",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 5,
+          "bbox_coverage": 0.3824
+        }
+      ],
+      "created_utc": "2026-09-27T22:34:25+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 84,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 0,
+      "n_output": 84,
+      "n_flag_shared_coords": 2,
+      "n_flag_score_high": 32,
+      "n_flag_producer": 78
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -98.1303976798632,
+                29.184592025613885
+              ],
+              [
+                -98.134263696811,
+                28.720797630547928
+              ],
+              [
+                -97.67081350349032,
+                28.71703692100897
+              ],
+              [
+                -97.66487914580011,
+                29.18075911139596
+              ],
+              [
+                -98.1303976798632,
+                29.184592025613885
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 2,
+  "mean_nearest_structure_m": 5949.250535889112,
+  "inputs_recorded_utc": "2026-09-27T22:46:36.178580+00:00"
+}

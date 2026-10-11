@@ -1,0 +1,6 @@
+test,n,stat,p,note
+spearman_cloud_vs_enrichment,109,-0.11240221081041739,0.24455525601936814,
+spearman_night_fraction_vs_enrichment,109,0.11774630526978642,0.22269929641086625,
+cloud_pct_fdr_sig_vs_not (median sig / not),109,854.0,0.7809560970468987,27.1 / 29.5
+clear_subset_blend_cloud_lt_10pct,25,4.0,,"FDR-sig within subset: ['eagle_mountain', 'lordsburg', 'organ_mountains', 'providence_mountains']; robust: ['eagle_mountain', 'organ_mountains', 'providence_mountains']"
+clear_subset_blend_cloud_lt_30pct,58,12.0,,"FDR-sig within subset: ['bisbee', 'christmas', 'contact_district', 'courtland_gleeson', 'crooks_gap', 'eagle_mountain', 'karnes_county', 'lordsburg', 'organ_mountains', 'providence_mountains', 'shafter', 'tombstone']; robust: ['bisbee', 'christmas', 'courtland_gleeson', 'crooks_gap', 'eagle_mountain', 'karnes_county', 'organ_mountains', 'providence_mountains', 'shafter', 'tombstone']"

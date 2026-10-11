@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,171,4,2.3,nested,site,,,False,,13,10286.851131806412,13.37,0.91,5.86,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,98,0,0.0,nested,commodity,Gold/Silver,,False,,1,13642.52307473783,13.37,0.0,3.77,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,54,0,0.0,nested,commodity,Other,,False,,10,6314.599625974211,13.37,0.0,6.64,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,15,4,26.7,nested,commodity,Sand/Gravel,,False,,2,1305.0514396913718,13.37,10.9,51.95,0.1302
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,4,0,0.0,nested,commodity,Uranium,,False,,0,15380.032704152787,13.37,0.0,48.99,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,51,0,0.0,nested,earth_mri,,Base Metals,True,,4,9065.321281649994,13.37,0.0,7.0,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,7,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,4,2544.9601929036335,13.37,0.0,35.43,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,4,0,0.0,nested,earth_mri,,Energy,True,,0,15380.032704152787,13.37,0.0,48.99,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,82,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,14030.282471407803,13.37,0.0,4.48,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,1,0,0.0,nested,earth_mri,,Industrial,True,,0,2329.5630226396206,13.37,0.0,79.35,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,26,4,15.4,nested,earth_mri,,Non-Critical,False,,5,2483.560781912725,13.37,6.15,33.53,0.4655
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,10,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,9347.390487410696,13.37,0.0,27.75,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,1,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,2329.5630226396206,13.37,0.0,79.35,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,2,0,0.0,nested,mineral_system,,,False,Marine Chemocline,2,179.17504242054255,13.37,0.0,65.76,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,3,0,0.0,nested,mineral_system,,,False,Metamorphic,2,1423.0467068584305,13.37,0.0,56.15,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,4,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,15380.032704152787,13.37,0.0,48.99,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,90,0,0.0,nested,mineral_system,,,False,Orogenic,0,13968.546244255353,13.37,0.0,4.09,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,1,0,0.0,nested,mineral_system,,,False,Placer,0,1440.8591975098204,13.37,0.0,79.35,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,23,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,3,7654.005741620918,13.37,0.0,14.31,1.0
+questa_nm,"Questa, NM",questa_nm_mosaic,1380,276.86,0.02,37,4,10.8,nested,mineral_system,,,False,Unknown System,6,4390.494631955405,13.37,4.29,24.71,0.7473

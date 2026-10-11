@@ -60,10 +60,9 @@ def main() -> None:
     order = list(colors)
 
     fig, ax = plt.subplots(figsize=(7.5, 7))
-    # x-axis is the site-specific null p0 (zone area / footprint area); it never
-    # exceeds ~18% for any site, so cap the view at 25% rather than letting the
-    # (much larger) hit-rate range stretch it.
-    x_max = 25.0
+    # Stratified p0 can exceed the geometric ~18% ceiling when zones concentrate
+    # on the stratum hosting most deposits, so size the x-axis from the data.
+    x_max = max(25.0, float(np.ceil(df["p0_null"].max() * 100 / 5) * 5))
     y_max = df["hit_rate_crit_pct"].max() * 1.08
     ax.plot([0, x_max], [0, x_max], color="#555555", linewidth=1.2, linestyle="--", zorder=1,
             label="No enrichment (y = x)")
@@ -84,10 +83,10 @@ def main() -> None:
 
     ax.set_xlim(0, x_max)
     ax.set_ylim(-2, y_max)
-    ax.set_xlabel("Site-specific null p₀ (%) — zone area / footprint area")
+    ax.set_xlabel("Null hit rate p₀ (%) — bedrock/cover-stratified, Σpᵢ / n")
     ax.set_ylabel("Observed critical-mineral hit rate (%)")
     ax.set_title(
-        f"Figure 4 — observed hit rate vs. site-specific null, all {len(df)} sites\n"
+        f"Figure 4 — observed hit rate vs. stratified null, all {len(df)} sites\n"
         "Point size ∝ n (critical-mineral deposits); above the line = enriched",
         fontsize=11,
     )

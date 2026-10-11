@@ -1,0 +1,104 @@
+{
+  "site_id": "yerington",
+  "granule_id": "AST_L1T_00406192015185146_20250807041315",
+  "timestamp_utc": "2026-09-27T22:45:44.917905+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 6050,
+  "raster_bbox_wgs84": [
+    -119.31331318741104,
+    38.79148018551565,
+    -118.79046911676805,
+    39.20895667345635
+  ],
+  "inputs": {
+    "site_config": "sites/yerington.yaml",
+    "site_config_sha256": "957d21e06af7227c0b87acb8b70d265355b41eda609db0cd18857536af6df489",
+    "bbox_wgs84": [
+      -119.3,
+      38.8,
+      -118.8,
+      39.2
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": "AST_L1T",
+    "aster_product_version": "004",
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/yerington_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mrds_validation_site_bbox": {
+      "n_input": 176,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 1,
+      "n_output": 175,
+      "n_flag_shared_coords": 6,
+      "n_flag_score_high": 47,
+      "n_flag_producer": 85
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -119.31331318741104,
+                39.19990362978653
+              ],
+              [
+                -119.30004682688548,
+                38.79148018551565
+              ],
+              [
+                -118.79046911676805,
+                38.800403050017486
+              ],
+              [
+                -118.80080071349197,
+                39.20895667345635
+              ],
+              [
+                -119.31331318741104,
+                39.19990362978653
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 20,
+  "mean_nearest_structure_m": 3126.2327893302286,
+  "inputs_recorded_utc": "2026-09-27T22:45:58.689852+00:00"
+}

@@ -1,0 +1,104 @@
+site_id,earth_mri_category,n,n_hits,hit_rate_pct,zone_cov_pct,expected,p_binom
+bisbee,Base Metals,94,33,35.1,7.3,6.9,0.0
+mountain_pass,Base Metals,129,41,31.8,12.6,16.2,0.0
+yerington,Base Metals,106,14,13.2,5.3,5.6,0.0014
+viburnum_trend,Base Metals,76,10,13.2,9.0,6.8,0.1401
+ely_robinson,Base Metals,81,5,6.2,3.5,2.9,0.1589
+lemhi_pass,Base Metals,27,3,11.1,6.8,1.8,0.2769
+ajo,Base Metals,39,4,10.3,8.2,3.2,0.3971
+goldfield,Base Metals,44,4,9.1,9.7,4.2,0.625
+darwin,Base Metals,104,10,9.6,10.3,10.7,0.6332
+marysvale,Base Metals,54,5,9.3,11.1,6.0,0.731
+hanover_fierro,Base Metals,135,4,3.0,4.2,5.6,0.8199
+globe_miami,Base Metals,175,8,4.6,5.9,10.4,0.8223
+jerome,Base Metals,93,3,3.2,5.7,5.3,0.9026
+tonopah,Base Metals,39,2,5.1,11.9,4.6,0.9555
+oatman,Base Metals,49,1,2.0,9.4,4.6,0.9921
+climax,Base Metals,280,12,4.3,8.3,23.3,0.9973
+pea_ridge,Base Metals,215,10,4.7,11.2,24.2,0.9998
+bagdad,Base Metals,43,0,0.0,6.3,2.7,1.0
+bingham_canyon,Base Metals,299,1,0.3,10.1,30.3,1.0
+silver_peak,Base Metals,24,0,0.0,7.3,1.7,1.0
+stillwater,Base Metals,12,0,0.0,9.6,1.1,1.0
+bisbee,Battery Metals – Co/Ni,53,7,13.2,7.3,3.9,0.0898
+tonopah,Battery Metals – Co/Ni,12,3,25.0,11.9,1.4,0.1643
+stillwater,Battery Metals – Co/Ni,31,5,16.1,9.6,3.0,0.1692
+marysvale,Battery Metals – Co/Ni,12,2,16.7,11.1,1.3,0.3919
+globe_miami,Battery Metals – Co/Ni,42,2,4.8,5.9,2.5,0.7215
+climax,Battery Metals – Co/Ni,131,6,4.6,8.3,10.9,0.9664
+thacker_pass,Energy,19,4,21.1,9.0,1.7,0.0865
+gas_hills,Energy,449,30,6.7,6.9,30.9,0.5907
+goldfield,Energy,10,1,10.0,9.7,1.0,0.6377
+mcdermitt,Energy,12,1,8.3,8.3,1.0,0.6446
+climax,Energy,66,2,3.0,8.3,5.5,0.9776
+bear_lodge,Energy,36,1,2.8,11.5,4.1,0.9875
+marysvale,Energy,119,5,4.2,11.1,13.2,0.9979
+tonopah,Energy,25,0,0.0,11.9,3.0,1.0
+jerome,Gold/Silver,60,15,25.0,5.7,3.4,0.0
+mcdermitt,Gold/Silver,19,6,31.6,8.3,1.6,0.0033
+yerington,Gold/Silver,27,3,11.1,5.3,1.4,0.1695
+jerritt_canyon,Gold/Silver,94,13,13.8,10.8,10.1,0.2112
+globe_miami,Gold/Silver,28,3,10.7,5.9,1.7,0.2307
+tonopah,Gold/Silver,292,38,13.0,11.9,34.8,0.3069
+mountain_pass,Gold/Silver,99,14,14.1,12.6,12.5,0.3624
+darwin,Gold/Silver,67,8,11.9,10.3,6.9,0.3814
+bagdad,Gold/Silver,48,3,6.2,6.3,3.0,0.5877
+climax,Gold/Silver,231,13,5.6,8.3,19.3,0.9529
+carlin_trend,Gold/Silver,115,8,7.0,12.2,14.1,0.9764
+marysvale,Gold/Silver,46,1,2.2,11.1,5.1,0.9956
+silver_peak,Gold/Silver,87,1,1.1,7.3,6.3,0.9986
+stillwater,Gold/Silver,103,2,1.9,9.6,9.8,0.9996
+ajo,Gold/Silver,18,0,0.0,8.2,1.5,1.0
+bear_lodge,Gold/Silver,16,0,0.0,11.5,1.8,1.0
+bingham_canyon,Gold/Silver,49,0,0.0,10.1,5.0,1.0
+bisbee,Gold/Silver,21,0,0.0,7.3,1.5,1.0
+ely_robinson,Gold/Silver,53,0,0.0,3.5,1.9,1.0
+goldfield,Gold/Silver,459,16,3.5,9.7,44.3,1.0
+hanover_fierro,Gold/Silver,36,0,0.0,4.2,1.5,1.0
+lemhi_pass,Gold/Silver,17,0,0.0,6.8,1.2,1.0
+oatman,Gold/Silver,337,11,3.3,9.4,31.7,1.0
+steamboat_springs,Gold/Silver,208,6,2.9,11.1,23.2,1.0
+goldfield,Industrial,10,1,10.0,9.7,1.0,0.6377
+stillwater,Industrial,36,3,8.3,9.6,3.4,0.6813
+carlin_trend,Industrial,32,3,9.4,12.2,3.9,0.7673
+jerritt_canyon,Industrial,16,1,6.2,10.8,1.7,0.839
+marysvale,Industrial,67,3,4.5,11.1,7.4,0.9836
+mountain_pass,Industrial,58,1,1.7,12.6,7.3,0.9996
+pea_ridge,Industrial,134,1,0.7,11.2,15.1,1.0
+viburnum_trend,Industrial,14,0,0.0,9.0,1.3,1.0
+silver_peak,Non-Critical,126,18,14.3,7.3,9.2,0.0046
+yerington,Non-Critical,33,6,18.2,5.3,1.7,0.0071
+green_river,Non-Critical,68,8,11.8,5.0,3.4,0.0198
+mountain_pass,Non-Critical,26,7,26.9,12.6,3.3,0.0374
+oatman,Non-Critical,48,8,16.7,9.4,4.5,0.0778
+globe_miami,Non-Critical,104,10,9.6,5.9,6.2,0.0907
+bisbee,Non-Critical,57,7,12.3,7.3,4.2,0.1205
+pea_ridge,Non-Critical,45,8,17.8,11.2,5.1,0.1268
+mcdermitt,Non-Critical,104,12,11.5,8.3,8.6,0.1499
+lemhi_pass,Non-Critical,34,4,11.8,6.8,2.3,0.1975
+bagdad,Non-Critical,28,3,10.7,6.3,1.8,0.2563
+viburnum_trend,Non-Critical,123,11,8.9,9.0,11.0,0.547
+marysvale,Non-Critical,195,21,10.8,11.1,21.7,0.5947
+goldfield,Non-Critical,48,4,8.3,9.7,4.6,0.6931
+hanover_fierro,Non-Critical,58,2,3.4,4.2,2.4,0.7033
+ely_robinson,Non-Critical,35,1,2.9,3.5,1.2,0.7162
+jerome,Non-Critical,50,2,4.0,5.7,2.8,0.7829
+stillwater,Non-Critical,30,2,6.7,9.6,2.9,0.7949
+bingham_canyon,Non-Critical,134,10,7.5,10.1,13.6,0.8823
+darwin,Non-Critical,49,2,4.1,10.3,5.0,0.9672
+climax,Non-Critical,138,6,4.3,8.3,11.5,0.9768
+steamboat_springs,Non-Critical,52,2,3.8,11.1,5.8,0.9838
+bear_lodge,Non-Critical,39,1,2.6,11.5,4.5,0.9913
+carlin_trend,Non-Critical,56,2,3.6,12.2,6.8,0.994
+tonopah,Non-Critical,53,1,1.9,11.9,6.3,0.9988
+ajo,Non-Critical,11,0,0.0,8.2,0.9,1.0
+stillwater,PGM,25,3,12.0,9.6,2.4,0.4322
+mountain_pass,REE,25,2,8.0,12.6,3.1,0.8403
+tonopah,Specialty/High-Tech,22,4,18.2,11.9,2.6,0.2631
+silver_peak,Specialty/High-Tech,24,2,8.3,7.3,1.7,0.5302
+globe_miami,Specialty/High-Tech,19,1,5.3,5.9,1.1,0.688
+mountain_pass,Specialty/High-Tech,30,2,6.7,12.6,3.8,0.9057
+bagdad,Specialty/High-Tech,19,0,0.0,6.3,1.2,1.0
+bear_lodge,Specialty/High-Tech,16,0,0.0,11.5,1.8,1.0
+darwin,Specialty/High-Tech,31,0,0.0,10.3,3.2,1.0
+jerritt_canyon,Specialty/High-Tech,10,0,0.0,10.8,1.1,1.0

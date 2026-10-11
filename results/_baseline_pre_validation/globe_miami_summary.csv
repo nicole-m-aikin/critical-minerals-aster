@@ -1,0 +1,20 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,200,24,12.0,nested,site,,,False,,72,1059.6348245807155,10.78,8.2,17.23,0.3207
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,45,6,13.3,nested,commodity,Gold/Silver,,False,,17,1008.3623931492591,10.78,6.26,26.18,0.3563
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,140,15,10.7,nested,commodity,Other,,False,,50,1066.252765310056,10.78,6.6,16.93,0.5503
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,6,2,33.3,nested,commodity,Sand/Gravel,,False,,4,1193.8470121835119,10.78,9.68,70.0,0.13
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,8,1,12.5,nested,commodity,Stone,,False,,0,1228.3122348427337,10.78,2.24,47.09,0.5985
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,1,0,0.0,nested,commodity,Uranium,,False,,1,285.6901291756418,10.78,0.0,79.35,1.0
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,63,8,12.7,nested,earth_mri,,Base Metals,True,,26,840.9773895888865,10.78,6.58,23.11,0.3683
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,40,2,5.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,21,641.1190903928962,10.78,1.38,16.5,0.9392
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,1,285.6901291756418,10.78,0.0,79.35,1.0
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,17,3,17.6,nested,earth_mri,,Gold/Silver,True,,3,1535.1007933330027,10.78,6.19,41.03,0.2752
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,2100.1321760173178,10.78,0.0,79.35,1.0
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,73,10,13.7,nested,earth_mri,,Non-Critical,False,,21,1369.5731993741847,10.78,7.61,23.41,0.2592
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,5,1,20.0,nested,earth_mri,,Specialty/High-Tech,True,,0,967.8492820315805,10.78,3.62,62.45,0.4347
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,12,3,25.0,nested,mineral_system,,,False,Basin Brine Path,5,758.6124137509229,10.78,8.89,53.23,0.1316
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,34,1,2.9,nested,mineral_system,,,False,Marine Chemocline,18,650.7946749843414,10.78,0.52,14.92,0.9793
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,1,599.7993910191792,10.78,0.0,65.76,1.0
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,32,3,9.4,nested,mineral_system,,,False,Orogenic,9,1385.7135900189423,10.78,3.24,24.22,0.6854
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,4,1,25.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,981.3344393237965,10.78,4.56,69.94,0.3664
+globe_miami,"Globe-Miami, AZ",globe_miami_mosaic,5470,138.49,0.01,116,16,13.8,nested,mineral_system,,,False,Unknown System,39,1131.2829791527993,10.78,8.67,21.24,0.1826

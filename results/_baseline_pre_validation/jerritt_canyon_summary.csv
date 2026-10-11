@@ -1,0 +1,13 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,25,0,0.0,nested,site,,,False,,3,2858.568558558183,10.77,0.0,13.32,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,3,0,0.0,nested,commodity,Antimony,,False,,0,2856.2972445654245,10.77,0.0,56.15,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,12,0,0.0,nested,commodity,Gold/Silver,,False,,2,2141.7583442142013,10.77,0.0,24.25,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,10,0,0.0,nested,commodity,Other,,False,,1,3719.422209968789,10.77,0.0,27.75,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,5,0,0.0,nested,earth_mri,,Base Metals,True,,1,4131.045274310386,10.77,0.0,43.45,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,11,0,0.0,nested,earth_mri,,Gold/Silver,True,,2,2078.2193548497926,10.77,0.0,25.88,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,5,0,0.0,nested,earth_mri,,Industrial,True,,0,3307.799145627192,10.77,0.0,43.45,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,4,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,2852.394740229742,10.77,0.0,48.99,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,7349.149739439804,10.77,0.0,65.76,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,16,0,0.0,nested,mineral_system,,,False,Orogenic,2,2374.697516725615,10.77,0.0,19.36,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,1251.6116072048978,10.77,0.0,79.35,1.0
+jerritt_canyon,"Jerritt Canyon, NV",jerritt_canyon_mosaic,5761,166.58,0.01,6,0,0.0,nested,mineral_system,,,False,Unknown System,1,2919.8571017100385,10.77,0.0,39.03,1.0

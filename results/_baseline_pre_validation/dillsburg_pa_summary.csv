@@ -1,0 +1,9 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,50,2,4.0,nested,site,,,False,,21,2416.60144916983,12.29,1.1,13.46,0.9886
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,28,2,7.1,nested,commodity,Other,,False,,8,3929.1509799796477,12.29,1.98,22.65,0.8748
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,22,0,0.0,nested,commodity,Stone,,False,,13,491.538409957335,12.29,0.0,14.87,1.0
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,2,1,50.0,nested,earth_mri,,Base Metals,True,,0,6398.870469363523,12.29,9.45,90.55,0.2307
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,48,1,2.1,nested,earth_mri,,Non-Critical,False,,21,2250.6735733284263,12.29,0.37,10.9,0.9982
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,1,1,100.0,nested,mineral_system,,,False,Basin Brine Path,0,593.2540606905254,12.29,20.65,100.0,0.1229
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,6,1,16.7,nested,mineral_system,,,False,Chemical Weathering,3,691.6336913221595,12.29,3.01,56.35,0.5447
+dillsburg_pa,"Dillsburg, PA",dillsburg_pa_mosaic,2082,135.26,0.02,43,0,0.0,nested,mineral_system,,,False,Unknown System,18,2699.6980523225125,12.29,0.0,8.2,1.0

@@ -1,0 +1,19 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,125,22,17.6,nested,site,,,False,,42,1217.6065188283685,12.61,11.92,25.21,0.0658
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,83,17,20.5,nested,commodity,Other,,False,,32,1205.8274836715186,12.61,13.2,30.38,0.0287
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,5,0,0.0,nested,commodity,Sand/Gravel,,False,,4,326.39585200411955,12.61,0.0,43.45,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,37,5,13.5,nested,commodity,Stone,,False,,6,1364.463633751066,12.61,5.91,27.98,0.5074
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,2,0,0.0,nested,earth_mri,,Base Metals,True,,0,1372.5887622689975,12.61,0.0,65.76,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,3,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,3283.9174663055114,12.61,0.0,56.15,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,0,2192.158089548766,12.61,0.0,65.76,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,116,21,18.1,nested,earth_mri,,Non-Critical,False,,41,1160.2278863079823,12.61,12.16,26.1,0.0554
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,2,1,50.0,nested,earth_mri,,Specialty/High-Tech,True,,1,316.56696963403317,12.61,9.45,90.55,0.2363
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,576.4210652528261,12.61,0.0,79.35,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,10,2,20.0,nested,mineral_system,,,False,Chemical Weathering,2,881.9669331740149,12.61,5.67,50.98,0.3654
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,502.87527916149077,12.61,0.0,79.35,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,1833.8488137243558,12.61,0.0,79.35,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,2,0,0.0,nested,mineral_system,,,False,Metamorphic,0,3504.9784406444214,12.61,0.0,65.76,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,0,0.0,nested,mineral_system,,,False,Orogenic,0,2168.7564592851686,12.61,0.0,79.35,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,1,100.0,nested,mineral_system,,,False,Porphyry Sn,1,130.2586601065756,12.61,20.65,100.0,0.1261
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,2841.7955176276937,12.61,0.0,79.35,1.0
+french_creek_pa,"French Creek - Grace Mine, PA",french_creek_pa_mosaic,5156,217.39,0.01,107,19,17.8,nested,mineral_system,,,False,Unknown System,39,1199.226475190271,12.61,11.67,26.08,0.077

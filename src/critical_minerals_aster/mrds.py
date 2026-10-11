@@ -586,6 +586,103 @@ def reclassify_mrds_mineral_system(
     return out
 
 
+# ---------------------------------------------------------------------------
+# Legacy-data validation (CIM 2018 §2.1.1.1: "validation" = checks for errors,
+# mismatches, duplicates and mislabelling, distinct from "verification" of the
+# underlying data, which lives in scripts/mrds_record_audit.py and
+# docs/data_verification.md).
+# ---------------------------------------------------------------------------
+
+# USGS MRDS record-quality grade (ScienceBase 5d712a5ae4b0c4f70cfd4e54):
+# A = most informative/reliable ... E = generally lacks references.
+_SCORE_RANK = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4}
+
+# dev_stat == "Plant" is a processing facility (mill, smelter, plant), not a
+# mineral occurrence; counting it as a "deposit" is a labelling error.
+_NON_DEPOSIT_DEV_STAT = frozenset({"plant"})
+
+_DEV_STAT_RANK = {
+    "producer": 0,
+    "past producer": 1,
+    "prospect": 2,
+    "occurrence": 3,
+    "unknown": 4,
+}
+
+
+def validate_mrds(mrds: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, int]]:
+    """Apply record-level validation checks to a raw MRDS table.
+
+    Hard exclusions (each counted once, in this order):
+
+    1. ``missing_coords`` — latitude or longitude null / non-numeric.
+    2. ``out_of_range_coords`` — |lat| > 90 or |lon| > 180.
+    3. ``non_deposit_plant`` — ``dev_stat == "Plant"`` (processing facility).
+    4. ``duplicate_record`` — same normalised ``site_name`` at identical
+       coordinates. The retained copy is the one with the best ``score`` grade,
+       then the most advanced ``dev_stat``.
+
+    Flags added (records kept):
+
+    * ``qc_shared_coords`` — shares exact coordinates with another retained
+      record (different name). Handled statistically by DBSCAN declustering,
+      not dropped, because distinct workings are legitimately co-located.
+    * ``qc_score_high`` — ``score`` in A–C.
+    * ``qc_producer`` — ``dev_stat`` is Producer or Past Producer.
+
+    The original index is preserved so downstream joins keyed on it still work.
+    Coordinates are WGS84 per ``data/mrds.met`` (Horizontal_Datum_Name), so no
+    datum shift is applied.
+    """
+    report: dict[str, int] = {"n_input": int(len(mrds))}
+    df = mrds.copy()
+
+    lat = pd.to_numeric(df["latitude"], errors="coerce")
+    lon = pd.to_numeric(df["longitude"], errors="coerce")
+    missing = lat.isna() | lon.isna()
+    report["missing_coords"] = int(missing.sum())
+    df = df.loc[~missing].copy()
+    df["latitude"] = lat[~missing]
+    df["longitude"] = lon[~missing]
+
+    bad_range = (df["latitude"].abs() > 90) | (df["longitude"].abs() > 180)
+    report["out_of_range_coords"] = int(bad_range.sum())
+    df = df.loc[~bad_range]
+
+    dev = df["dev_stat"].astype(str).str.strip().str.lower() if "dev_stat" in df.columns else pd.Series("", index=df.index)
+    plant = dev.isin(_NON_DEPOSIT_DEV_STAT)
+    report["non_deposit_plant"] = int(plant.sum())
+    df = df.loc[~plant].copy()
+    dev = dev.loc[df.index]
+
+    score = df["score"].astype(str).str.strip().str.upper() if "score" in df.columns else pd.Series("", index=df.index)
+    name = df["site_name"].astype(str).str.strip().str.lower() if "site_name" in df.columns else pd.Series("", index=df.index)
+    order = pd.DataFrame(
+        {
+            "_name": name,
+            "_lat": df["latitude"],
+            "_lon": df["longitude"],
+            "_score_rank": score.map(_SCORE_RANK).fillna(len(_SCORE_RANK)),
+            "_dev_rank": dev.map(_DEV_STAT_RANK).fillna(len(_DEV_STAT_RANK)),
+        },
+        index=df.index,
+    ).sort_values(["_score_rank", "_dev_rank"], kind="stable")
+    dup = order.duplicated(["_name", "_lat", "_lon"], keep="first")
+    dup_idx = order.index[dup]
+    report["duplicate_record"] = int(len(dup_idx))
+    df = df.drop(index=dup_idx)
+
+    df["qc_shared_coords"] = df.duplicated(["latitude", "longitude"], keep=False)
+    df["qc_score_high"] = score.loc[df.index].isin(["A", "B", "C"])
+    df["qc_producer"] = dev.loc[df.index].isin(["producer", "past producer"])
+
+    report["n_output"] = int(len(df))
+    report["n_flag_shared_coords"] = int(df["qc_shared_coords"].sum())
+    report["n_flag_score_high"] = int(df["qc_score_high"].sum())
+    report["n_flag_producer"] = int(df["qc_producer"].sum())
+    return df, report
+
+
 def filter_mrds_bbox(mrds: pd.DataFrame, bbox: BBox) -> pd.DataFrame:
     """Subset MRDS rows whose longitude/latitude fall inside bbox (WGS84)."""
     lon0, lat0, lon1, lat1 = bbox
@@ -612,6 +709,12 @@ def spatial_join_deposits_zones(
     zones: gpd.GeoDataFrame,
 ) -> tuple[gpd.GeoDataFrame, gpd.GeoDataFrame, gpd.GeoDataFrame]:
     """Join deposits to zones with predicate 'within'. Returns joined, hits, misses."""
+    if not isinstance(deposits, gpd.GeoDataFrame):
+        # Boolean filtering an empty GeoDataFrame with an object-dtype mask yields a DataFrame,
+        # sometimes without the geometry column.
+        if "geometry" not in deposits.columns:
+            deposits = deposits.assign(geometry=None)
+        deposits = gpd.GeoDataFrame(deposits, geometry="geometry", crs=zones.crs)
     joined = gpd.sjoin(deposits, zones, how="left", predicate="within")
     hits = joined[joined["index_right"].notna()]
     misses = joined[joined["index_right"].isna()]

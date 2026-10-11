@@ -1,0 +1,147 @@
+{
+  "site_id": "ely_robinson",
+  "granule_id": "ely_robinson_mosaic",
+  "timestamp_utc": "2026-09-27T22:30:01.372764+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 9094,
+  "raster_bbox_wgs84": [
+    -115.26112910085185,
+    38.98998412108593,
+    -114.63554617170232,
+    39.46110600957156
+  ],
+  "inputs": {
+    "site_config": "sites/ely_robinson.yaml",
+    "site_config_sha256": "ead4289e8d7ec24d7df3abf44c62a1d14ee283bf2a617a670330ae82755f3b50",
+    "bbox_wgs84": [
+      -115.25,
+      39.0,
+      -114.65,
+      39.45
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/ely_robinson_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "ely_robinson",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00408092023181536_20250929141328",
+          "cloud_pct": 2.0,
+          "day_night": "Day",
+          "month": 8,
+          "bbox_coverage": 0.9241
+        },
+        {
+          "granule_id": "AST_L1T_00408102010183756_20250705161001",
+          "cloud_pct": 2.0,
+          "day_night": "Day",
+          "month": 8,
+          "bbox_coverage": 0.4965
+        }
+      ],
+      "created_utc": "2026-09-27T22:30:00+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 185,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 5,
+      "duplicate_record": 0,
+      "n_output": 180,
+      "n_flag_shared_coords": 26,
+      "n_flag_score_high": 28,
+      "n_flag_producer": 118
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -115.24972507857063,
+                39.46110600957156
+              ],
+              [
+                -115.26112910085185,
+                39.00067776052013
+              ],
+              [
+                -114.88930781346382,
+                38.99454169223186
+              ],
+              [
+                -114.85349135930014,
+                39.10173727936989
+              ],
+              [
+                -114.6482586915023,
+                39.07101751338205
+              ],
+              [
+                -114.63554617170232,
+                39.45023668455984
+              ],
+              [
+                -114.79302257215036,
+                39.453333126533565
+              ],
+              [
+                -114.7989455349645,
+                39.43317433136541
+              ],
+              [
+                -114.94417972306904,
+                39.45610451209611
+              ],
+              [
+                -115.24972507857063,
+                39.46110600957156
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 38,
+  "mean_nearest_structure_m": 2349.3936609783814,
+  "inputs_recorded_utc": "2026-09-27T22:46:08.590896+00:00"
+}

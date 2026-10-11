@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import warnings
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +18,7 @@ from critical_minerals_aster.mrds import (
     reclassify_mrds_earth_mri,
     reclassify_mrds_mineral_system,
     spatial_join_deposits_zones,
+    validate_mrds,
 )
 from critical_minerals_aster.paths import SitePaths
 
@@ -41,13 +44,36 @@ def simplify_commodity(commod: Any) -> str:
     return "Other"
 
 
-def read_mrds_national(paths: SitePaths) -> pd.DataFrame:
+@lru_cache(maxsize=4)
+def _load_mrds_cached(
+    csv_path: str, mtime_ns: int, validate: bool
+) -> tuple[pd.DataFrame, dict[str, int] | None]:
+    raw = pd.read_csv(csv_path, low_memory=False)
+    if not validate:
+        return raw, None
+    return validate_mrds(raw)
+
+
+def read_mrds_national(paths: SitePaths, validate: bool = True) -> pd.DataFrame:
+    """Load the national MRDS table, validated by default (see ``validate_mrds``).
+
+    The parsed table is cached per (path, mtime); callers receive a copy.
+    ``validate=False`` returns the raw CSV for baseline comparisons.
+    """
     csv_path = paths.mrds_csv
     if not csv_path.is_file():
         raise FileNotFoundError(
             f"MRDS CSV not found at {csv_path}. Download via notebook 04 or place under data/mrds/."
         )
-    return pd.read_csv(csv_path, low_memory=False)
+    df, _ = _load_mrds_cached(str(csv_path), csv_path.stat().st_mtime_ns, validate)
+    return df.copy()
+
+
+def mrds_validation_report(paths: SitePaths) -> dict[str, int]:
+    """National-level counts from ``validate_mrds`` for the MRDS file at ``paths``."""
+    csv_path = paths.mrds_csv
+    _, report = _load_mrds_cached(str(csv_path), csv_path.stat().st_mtime_ns, True)
+    return dict(report or {})
 
 
 def compute_site_summary(
@@ -94,8 +120,13 @@ def compute_site_summary(
         try:
             _fp = tir_footprint if tir_footprint.crs == zones.crs else tir_footprint.to_crs(zones.crs)
             deposits = gpd.clip(deposits, _fp)
-        except Exception:
-            pass  # fall back to bbox-only clipping on geometry errors
+        except Exception as exc:
+            warnings.warn(
+                f"{site.id}: TIR footprint clip failed ({exc!r}); "
+                "falling back to bbox-only deposit set",
+                RuntimeWarning,
+                stacklevel=2,
+            )
     joined, _, _ = spatial_join_deposits_zones(deposits, zones)
 
     inside = joined[joined["index_right"].notna()]

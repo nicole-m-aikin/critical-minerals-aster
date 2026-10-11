@@ -1,0 +1,27 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,512,29,5.7,nested,site,,,False,,9,7869.294882968517,11.9,3.97,8.02,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,432,19,4.4,nested,commodity,Gold/Silver,,False,,5,7985.877261397153,11.9,2.83,6.77,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,4,0,0.0,nested,commodity,Lithium,,False,,0,17772.684259308466,11.9,0.0,48.99,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,8,0,0.0,nested,commodity,Mercury,,False,,1,1453.0320656143901,11.9,0.0,32.44,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,47,8,17.0,nested,commodity,Other,,False,,1,7304.656790910841,11.9,8.89,30.14,0.1905
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,20471.503055072815,11.9,0.0,79.35,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,13,1,7.7,nested,commodity,Stone,,False,,2,3653.8083008569292,11.9,1.37,33.31,0.8074
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,7,1,14.3,nested,commodity,Uranium,,False,,0,12167.875636448452,11.9,2.57,51.31,0.5881
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,22,4,18.2,nested,earth_mri,,Base Metals,True,,2,5829.804233069578,11.9,7.31,38.52,0.2622
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,5,3,60.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,6846.012110720495,11.9,23.07,88.24,0.014
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,4,0,0.0,nested,earth_mri,,Battery Metals – Li/Brine,True,,0,17772.684259308466,11.9,0.0,48.99,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,7,1,14.3,nested,earth_mri,,Energy,True,,0,12167.875636448452,11.9,2.57,51.31,0.5881
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,418,16,3.8,nested,earth_mri,,Gold/Silver,True,,3,8095.876921505384,11.9,2.37,6.13,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,10,1,10.0,nested,earth_mri,,Industrial,True,,0,8427.535625576911,11.9,1.79,40.42,0.7184
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,43,4,9.3,nested,earth_mri,,Non-Critical,False,,4,5218.750442773785,11.9,3.68,21.6,0.7689
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,3,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,5856.393807360829,11.9,0.0,56.15,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,8,1,12.5,nested,mineral_system,,,False,Basin Brine Path,2,4970.1396052265145,11.9,2.24,47.09,0.6371
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,4,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,17772.684259308466,11.9,0.0,48.99,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,2,1,50.0,nested,mineral_system,,,False,Marine Chemocline,0,6589.640309167666,11.9,9.45,90.55,0.2239
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,9,1,11.1,nested,mineral_system,,,False,Meteoric Convection,1,1917.1820100242778,11.9,1.99,43.5,0.6803
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,5,1,20.0,nested,mineral_system,,,False,Meteoric Recharge,0,13440.080455061883,11.9,3.62,62.45,0.4693
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,393,14,3.6,nested,mineral_system,,,False,Orogenic,2,8158.60846625014,11.9,2.13,5.89,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,26,1,3.8,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,8235.745388415642,11.9,0.68,18.89,0.9629
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,2,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,8484.45680101647,11.9,0.0,65.76,1.0
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,4,2,50.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,1,4690.525148965515,11.9,15.0,85.0,0.0721
+goldfield,"Goldfield–Cuprite, NV",AST_L1T_00402072010054840_20250702175723,8625,285.0,0.01,59,8,13.6,nested,mineral_system,,,False,Unknown System,3,6176.259045490926,11.9,7.03,24.54,0.4046

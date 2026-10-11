@@ -1,0 +1,9 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,75,19,25.3,nested,site,,,False,,52,554.4463873486189,11.4,16.86,36.21,0.0006
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,75,19,25.3,nested,commodity,Other,,False,,52,554.4463873486189,11.4,16.86,36.21,0.0006
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,1,0,0.0,nested,earth_mri,,Base Metals,True,,0,2245.2811518842736,11.4,0.0,79.35,1.0
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,8,1,12.5,nested,earth_mri,,Battery Metals – Co/Ni,True,,2,1210.0657560167488,11.4,2.24,47.09,0.6202
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,60,18,30.0,nested,earth_mri,,Non-Critical,False,,50,253.9594100984964,11.4,19.9,42.51,0.0001
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,6,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,2403.3512075363983,11.4,0.0,39.03,1.0
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,3,1,33.3,nested,mineral_system,,,False,Porphyry Sn,1,1287.2448415467734,11.4,6.15,79.23,0.3044
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",duluth_partridge_river_mosaic,8470,196.05,0.01,72,18,25.0,nested,mineral_system,,,False,Unknown System,51,523.913118423696,11.4,16.44,36.09,0.001

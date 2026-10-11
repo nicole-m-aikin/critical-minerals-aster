@@ -1,0 +1,19 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,188,46,24.5,nested,site,,,False,,11,5351.7489069644525,11.12,18.87,31.08,0.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,158,41,25.9,nested,commodity,Other,,False,,3,5797.247370646167,11.12,19.74,33.3,0.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,1,3309.528979728851,11.12,0.0,65.76,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,3,0,0.0,nested,commodity,Stone,,False,,0,9559.193040745791,11.12,0.0,56.15,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,25,5,20.0,nested,commodity,Uranium,,False,,7,2194.6829146211026,11.12,8.86,39.13,0.1377
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,4,0,0.0,nested,earth_mri,,Base Metals,True,,0,4135.180539759305,11.12,0.0,48.99,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,4742.396889011471,11.12,0.0,39.03,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,25,5,20.0,nested,earth_mri,,Energy,True,,7,2194.6829146211026,11.12,8.86,39.13,0.1377
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,5796.472944349436,11.12,0.0,79.35,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,151,41,27.2,nested,earth_mri,,Non-Critical,False,,4,5953.597252038072,11.12,20.69,34.75,0.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,1476.9601485854223,11.12,0.0,79.35,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,12538.62598314787,11.12,0.0,79.35,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,5,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,3547.8549938892274,11.12,0.0,43.45,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,4522.682665427361,11.12,0.0,79.35,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,18,3,16.7,nested,mineral_system,,,False,Meteoric Recharge,5,2224.717793858254,11.12,5.84,39.22,0.3236
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,40,11,27.5,nested,mineral_system,,,False,Orogenic,2,6962.660624574241,11.12,16.11,42.84,0.0034
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,1476.9601485854223,11.12,0.0,79.35,1.0
+christmas,"Christmas, AZ",christmas_mosaic,7088,249.84,0.01,122,32,26.2,nested,mineral_system,,,False,Unknown System,4,5338.523815330262,11.12,19.24,34.67,0.0

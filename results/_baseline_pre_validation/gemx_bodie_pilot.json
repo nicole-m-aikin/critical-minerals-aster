@@ -1,0 +1,101 @@
+{
+  "site_id": "bodie",
+  "granule_ur": [
+    "AV520250612t181608_000_L2A_RFL_1",
+    "AV520260601t185224_004_L2A_RFL_1",
+    "AV520250611t190202_000_L2A_RFL_1",
+    "AV520250715t200501_000_L2A_RFL_1",
+    "AV520260601t185224_005_L2A_RFL_1",
+    "AV520260601t185224_003_L2A_RFL_1",
+    "AV520260601t191119_003_L2A_RFL_1",
+    "AV520260601t183345_002_L2A_RFL_1",
+    "AV520260601t175753_004_L2A_RFL_1",
+    "AV520260601t171854_004_L2A_RFL_1",
+    "AV520260601t173737_005_L2A_RFL_1",
+    "AV520260601t175753_002_L2A_RFL_1",
+    "AV520260601t173737_004_L2A_RFL_1"
+  ],
+  "nc_path": [
+    "data/gemx/aviris/bodie/AV520250612t181608_000_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t185224_004_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520250611t190202_000_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520250715t200501_000_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t185224_005_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t185224_003_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t191119_003_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t183345_002_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t175753_004_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t171854_004_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t173737_005_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t175753_002_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/bodie/AV520260601t173737_004_L2A_OE_8b56cd03_RFL_ORT.nc"
+  ],
+  "wavelengths_nm": [
+    2121.27734375,
+    2166.184326171875,
+    2176.16015625,
+    2201.093505859375,
+    2206.079345703125,
+    2211.064697265625,
+    2270.8623046875
+  ],
+  "features_used_nm": {
+    "aloh": 2201.093505859375,
+    "kaolinite": [
+      2166.184326171875,
+      2206.079345703125
+    ],
+    "alunite": [
+      2176.16015625,
+      2211.064697265625
+    ]
+  },
+  "crs": "EPSG:32611",
+  "town_lon": -119.01209,
+  "town_lat": 38.21214,
+  "target_lon": -119.00125,
+  "target_lat": 38.21964,
+  "target_label": "Bodie Bluff",
+  "bbox_centroid": [
+    -119.0,
+    38.25
+  ],
+  "site_bbox_wgs84": [
+    -119.3,
+    38.0,
+    -118.7,
+    38.5
+  ],
+  "mosaic_resolution_m": 10.0,
+  "mosaic_bbox_frac": 0.7943465757284832,
+  "indices_site_bbox": {
+    "aloh": {
+      "name": "aloh",
+      "n_valid": 24160824,
+      "p50": -0.03457639738917351,
+      "p90": 0.03817177191376686,
+      "p99": 0.12703609466552734,
+      "frac_gt_0_05": 0.05516811016048128,
+      "frac_gt_0_10": 0.014594949245108528
+    },
+    "kaolinite": {
+      "name": "kaolinite",
+      "n_valid": 1795348,
+      "p50": 0.012596539221704006,
+      "p90": 0.07199322432279587,
+      "p99": 0.22516486048698425,
+      "frac_gt_0_05": 0.1610918885920724,
+      "frac_gt_0_10": 0.0576450916479702
+    },
+    "alunite": {
+      "name": "alunite",
+      "n_valid": 2663616,
+      "p50": 0.007814762182533741,
+      "p90": 0.0612885057926178,
+      "p99": 0.17330417037010193,
+      "frac_gt_0_05": 0.12925849672024797,
+      "frac_gt_0_10": 0.04487133280472861
+    }
+  },
+  "note": "AVIRIS-5 mosaic onto site.bbox_wgs84, same window as the ASTER figures. Greedy bbox set-cover seeded with town and the science target. First finite pixel wins. Not Tetracorder."
+}

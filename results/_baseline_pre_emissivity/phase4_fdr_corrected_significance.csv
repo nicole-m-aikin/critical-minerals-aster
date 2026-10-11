@@ -1,0 +1,110 @@
+site_id,site_name,n_crit,hits_crit,hit_rate_crit_pct,p0_null,enrichment,p_binomial,p_monte_carlo,p_mannwhitney,auc_continuous_score,q_binomial,sig_fdr_binomial,q_mannwhitney,sig_fdr_mannwhitney
+tri_state,"Tri-State District, MO-KS-OK",1402,255,18.19,0.1277,1.42,0.0,0.0,0.0,0.5784,0.0,True,0.0,True
+josephine_ophiolite,"Josephine Ophiolite, OR",844,137,16.23,0.1186,1.37,0.000103,0.0002,4.7e-05,0.5375,0.0056,True,0.0013,True
+mascot_jefferson_city,"Mascot-Jefferson City, TN",40,13,32.5,0.1152,2.82,0.000367,0.0001,0.032239,0.5808,0.0133,True,0.2156,False
+pea_ridge,"Pea Ridge, MO",357,58,16.25,0.1071,1.52,0.000917,0.0009,0.060736,0.5227,0.025,True,0.361,False
+upper_mississippi_valley,"Upper Mississippi Valley, WI-IL-IA",452,68,15.04,0.1116,1.35,0.007021,0.0073,0.000528,0.5427,0.1531,False,0.0081,True
+republic,"Republic, WA",205,37,18.05,0.1251,1.44,0.013962,0.0138,0.098447,0.525,0.2536,False,0.4051,False
+arizona_strip,"Arizona Strip, AZ",10,3,30.0,0.0867,3.46,0.049187,0.0475,0.027122,0.6675,0.7659,False,0.1985,False
+duluth_south_kawishiwi,"Duluth Complex - South Kawishiwi, MN",10,3,30.0,0.1124,2.67,0.093125,0.0908,0.287271,0.549,1.0,False,0.9915,False
+snoqualmie_wa,"Snoqualmie, WA",104,16,15.38,0.1126,1.37,0.122068,0.1171,0.023951,0.5535,1.0,False,0.1971,False
+ore_knob,"Ore Knob, NC",17,4,23.53,0.1204,1.95,0.139504,0.1425,0.316391,0.532,1.0,False,1.0,False
+state_line_chromite,"PA-MD State Line Chromite, PA",20,4,20.0,0.1269,1.58,0.243204,0.2451,0.492147,0.5012,1.0,False,1.0,False
+ray_mine,"Ray Mine, AZ",232,29,12.5,0.112,1.12,0.2935,0.2936,0.027826,0.5348,1.0,False,0.1985,False
+lemhi_pass,"Lemhi Pass, ID/MT",49,7,14.29,0.1181,1.21,0.357082,0.3545,0.579325,0.4921,1.0,False,1.0,False
+lordsburg,"Lordsburg, NM",245,28,11.43,0.1057,1.08,0.360422,0.3551,0.684805,0.4915,1.0,False,1.0,False
+holden,"Holden, WA",86,12,13.95,0.1247,1.12,0.385407,0.3816,0.653719,0.4882,1.0,False,1.0,False
+christmas,"Christmas, AZ",37,5,13.51,0.1112,1.21,0.394636,0.3905,0.411116,0.5102,1.0,False,1.0,False
+willsboro_lewis_ny,"Willsboro-Lewis, NY",13,2,15.38,0.1044,1.47,0.400082,0.3979,0.909102,0.3979,1.0,False,1.0,False
+providence_mountains,"Providence Mountains, CA",295,32,10.85,0.105,1.03,0.450466,0.4503,0.95255,0.4731,1.0,False,1.0,False
+shafter,"Shafter (Presidio), TX",49,6,12.24,0.1152,1.06,0.502386,0.4951,0.947308,0.4361,1.0,False,1.0,False
+magnet_cove,"Magnet Cove, AR",37,5,13.51,0.1277,1.06,0.519135,0.5138,0.900736,0.4416,1.0,False,1.0,False
+gossan_lead,"Great Gossan Lead, VA",112,14,12.5,0.1235,1.01,0.52356,0.5281,0.000174,0.5935,1.0,False,0.0037,True
+mountain_pass,"Mountain Pass, CA",327,44,13.46,0.1353,0.99,0.54008,0.5462,0.968801,0.4714,1.0,False,1.0,False
+san_manuel_az,"San Manuel-Kalamazoo, AZ",159,17,10.69,0.1083,0.99,0.559981,0.5604,0.895675,0.4725,1.0,False,1.0,False
+iron_springs,"Iron Springs, UT",16,2,12.5,0.1164,1.07,0.570922,0.5673,0.610295,0.4807,1.0,False,1.0,False
+lemitar,"Lemitar Mountains, NM",38,4,10.53,0.1067,0.99,0.588644,0.5889,0.468765,0.5035,1.0,False,1.0,False
+ducktown,"Ducktown, TN",146,16,10.96,0.1161,0.94,0.635176,0.6447,0.996994,0.4372,1.0,False,1.0,False
+organ_mountains,"Organ Mountains, NM",133,13,9.77,0.1044,0.94,0.640659,0.6412,1.0,0.3609,1.0,False,1.0,False
+wet_mountains,"Wet Mountains, CO",193,21,10.88,0.119,0.91,0.701331,0.7059,0.818304,0.4818,1.0,False,1.0,False
+french_creek_pa,"French Creek - Grace Mine, PA",9,1,11.11,0.1261,0.88,0.702727,0.7,0.279959,0.5537,1.0,False,0.9915,False
+steamboat_springs,"Steamboat Springs, NV",222,24,10.81,0.1184,0.91,0.71245,0.7124,0.227406,0.5139,1.0,False,0.839,False
+webster_addie,"Webster-Addie, NC",38,4,10.53,0.1246,0.85,0.713688,0.7184,0.581818,0.4907,1.0,False,1.0,False
+tilly_foster_ny,"Tilly Foster, NY",12,1,8.33,0.1121,0.74,0.759913,0.757,0.690043,0.4605,1.0,False,1.0,False
+cortez,"Cortez-Pipeline, NV",206,20,9.71,0.1109,0.88,0.767089,0.7711,0.077761,0.5274,1.0,False,0.4051,False
+iron_hill,"Iron Hill, CO",195,18,9.23,0.1072,0.86,0.781287,0.7871,0.475298,0.5012,1.0,False,1.0,False
+bagdad,"Bagdad, AZ",116,11,9.48,0.1201,0.79,0.836544,0.8374,0.073188,0.5373,1.0,False,0.4051,False
+duluth_partridge_river,"Duluth Complex - Partridge River, MN",15,1,6.67,0.114,0.59,0.837256,0.8397,0.390482,0.5198,1.0,False,1.0,False
+viburnum_trend,"Viburnum Trend, MO",64,6,9.38,0.1396,0.67,0.898057,0.8954,0.911215,0.4534,1.0,False,1.0,False
+lake_valley,"Lake Valley, NM",122,10,8.2,0.1161,0.71,0.911877,0.9127,0.00148,0.5744,1.0,False,0.0198,True
+ely_robinson,"Ely (Robinson), NV",143,11,7.69,0.1097,0.7,0.923463,0.9249,8e-06,0.5999,1.0,False,0.0003,True
+tonopah,"Tonopah–Manhattan, NV",371,35,9.43,0.1167,0.81,0.925987,0.9286,0.96553,0.4738,1.0,False,1.0,False
+pioche,"Pioche, NV",271,27,9.96,0.1281,0.78,0.936433,0.9358,0.000296,0.5579,1.0,False,0.0053,True
+mcdermitt,"McDermitt Caldera, NV/OR",37,2,5.41,0.1167,0.46,0.940296,0.9368,0.515553,0.4982,1.0,False,1.0,False
+yerington,"Yerington, NV",140,10,7.14,0.1091,0.65,0.94852,0.9486,0.995623,0.4387,1.0,False,1.0,False
+big_mike,"Big Mike, NV",88,6,6.82,0.1167,0.58,0.952595,0.9524,0.398881,0.5076,1.0,False,1.0,False
+san_francisco_frisco,"San Francisco (Frisco), UT",245,22,8.98,0.1242,0.72,0.963049,0.962,0.981476,0.4631,1.0,False,1.0,False
+west_shasta,"West Shasta, CA",656,69,10.52,0.128,0.82,0.967418,0.9668,0.997435,0.4696,1.0,False,1.0,False
+thacker_pass,"Thacker Pass, NV",26,1,3.85,0.1246,0.31,0.968568,0.9671,0.505987,0.4992,1.0,False,1.0,False
+shirley_basin,"Shirley Basin, WY",35,1,2.86,0.0959,0.3,0.970652,0.9732,0.920918,0.4342,1.0,False,1.0,False
+victorio,"Victorio Mountains, NM",65,3,4.62,0.1047,0.44,0.972029,0.973,0.855974,0.4636,1.0,False,1.0,False
+cherry_creek,"Cherry Creek, NV",86,4,4.65,0.0973,0.48,0.972825,0.9713,0.132459,0.5331,1.0,False,0.5249,False
+globe_miami,"Globe-Miami, AZ",271,19,7.01,0.1031,0.68,0.975465,0.9732,0.089238,0.5226,1.0,False,0.4051,False
+getchell,"Getchell Trend, NV",86,5,5.81,0.1195,0.49,0.981357,0.981,0.415255,0.5064,1.0,False,1.0,False
+sierrita,"Sierrita, AZ",293,20,6.83,0.1033,0.66,0.984933,0.9855,0.991127,0.4617,1.0,False,1.0,False
+carlin_trend,"Carlin Trend, NV",114,6,5.26,0.1085,0.48,0.98779,0.9866,0.01153,0.5589,1.0,False,0.1028,False
+silver_peak,"Silver Peak, NV",78,4,5.13,0.1201,0.43,0.987907,0.9861,0.961342,0.4447,1.0,False,1.0,False
+tyrone_nm,"Tyrone, NM",307,22,7.17,0.1086,0.66,0.988709,0.9901,0.976054,0.4688,1.0,False,1.0,False
+alligator_ridge,"Alligator Ridge, NV",47,1,2.13,0.0944,0.23,0.990537,0.9901,0.008633,0.5957,1.0,False,0.0924,False
+eagle_mountain,"Eagle Mountain, CA",126,6,4.76,0.1022,0.47,0.991242,0.9899,0.741396,0.484,1.0,False,1.0,False
+austinville_ivanhoe,"Austinville-Ivanhoe, VA",169,12,7.1,0.1248,0.57,0.99143,0.9933,0.419199,0.5043,1.0,False,1.0,False
+darwin,"Darwin, CA",169,11,6.51,0.1189,0.55,0.992815,0.9931,0.888716,0.474,1.0,False,1.0,False
+ajo,"Ajo, AZ",52,1,1.92,0.0972,0.2,0.995094,0.9947,0.057174,0.5604,1.0,False,0.3599,False
+crooks_gap,"Crooks Gap-Green Mountain, WY",138,7,5.07,0.1128,0.45,0.996374,0.9964,0.76562,0.483,1.0,False,1.0,False
+karnes_county,"Karnes County, TX",76,3,3.95,0.1211,0.33,0.996401,0.9962,0.972171,0.4393,1.0,False,1.0,False
+hanover_fierro,"Hanover-Fierro, NM",182,11,6.04,0.1214,0.5,0.997899,0.9977,0.901034,0.4736,1.0,False,1.0,False
+morenci,"Morenci, AZ",108,4,3.7,0.1094,0.34,0.998235,0.9983,0.0,0.6438,1.0,False,0.0,True
+cerro_gordo,"Cerro Gordo, CA",182,12,6.59,0.1307,0.5,0.998321,0.9987,0.999937,0.4213,1.0,False,1.0,False
+climax,"Climax, CO",713,64,8.98,0.1248,0.72,0.998686,0.9987,0.531712,0.4992,1.0,False,1.0,False
+ambrosia_lake,"Ambrosia Lake, NM",280,12,4.29,0.0924,0.46,0.999458,0.9994,0.971224,0.4686,1.0,False,1.0,False
+contact_district,"Contact District, NV",151,6,3.97,0.1112,0.36,0.999532,0.9989,0.997905,0.4356,1.0,False,1.0,False
+tombstone,"Tombstone, AZ",221,12,5.43,0.1235,0.44,0.999821,0.9999,1.0,0.383,1.0,False,1.0,False
+eureka,"Eureka, NV",198,10,5.05,0.1228,0.41,0.999823,0.9996,1.0,0.398,1.0,False,1.0,False
+jerome,"Jerome, AZ",162,6,3.7,0.1142,0.32,0.999881,0.9997,1.0,0.356,1.0,False,1.0,False
+bodie,"Bodie, CA",246,7,2.85,0.0851,0.33,0.999921,0.9998,0.098417,0.5227,1.0,False,0.4051,False
+uravan,"Uravan Mineral Belt, CO",845,67,7.93,0.1188,0.67,0.999926,0.9999,0.312323,0.5047,1.0,False,1.0,False
+henry_mountains,"Henry Mountains, UT",216,4,1.85,0.0733,0.25,0.999929,1.0,1.0,0.4078,1.0,False,1.0,False
+bear_lodge,"Bear Lodge, WY",74,1,1.35,0.1235,0.11,0.999942,0.9999,0.990338,0.4247,1.0,False,1.0,False
+magdalena_kelly,"Magdalena (Kelly), NM",113,2,1.77,0.1041,0.17,0.999943,0.9999,0.091951,0.5345,1.0,False,0.4051,False
+lisbon_valley,"Lisbon Valley, UT",235,7,2.98,0.0939,0.32,0.999969,1.0,0.999948,0.4301,1.0,False,1.0,False
+summitville,"Summitville, CO",99,2,2.02,0.1243,0.16,0.99997,1.0,0.564528,0.4955,1.0,False,1.0,False
+randsburg,"Randsburg, CA",529,29,5.48,0.1038,0.53,0.999978,1.0,1.0,0.4042,1.0,False,1.0,False
+gold_hill,"Gold Hill, UT",187,5,2.67,0.1028,0.26,0.999984,1.0,1.0,0.3765,1.0,False,1.0,False
+east_shasta,"East Shasta, CA",100,2,2.0,0.1294,0.15,0.999985,1.0,1.0,0.351,1.0,False,1.0,False
+iron_king,"Iron King, AZ",424,21,4.95,0.1117,0.44,0.999998,1.0,0.944948,0.4785,1.0,False,1.0,False
+jerritt_canyon,"Jerritt Canyon, NV",124,1,0.81,0.1043,0.08,0.999999,1.0,0.180416,0.5227,1.0,False,0.6894,False
+long_canyon,"Long Canyon, NV",7,0,0.0,0.1191,0.0,1.0,1.0,0.083708,0.6442,1.0,False,0.4051,False
+new_idria,"New Idria, CA",56,0,0.0,0.1198,0.0,1.0,1.0,0.985884,0.4188,1.0,False,1.0,False
+tintic,"Tintic District, UT",293,5,1.71,0.1138,0.15,1.0,1.0,1.0,0.4178,1.0,False,1.0,False
+courtland_gleeson,"Courtland-Gleeson, AZ",220,4,1.82,0.1128,0.16,1.0,1.0,1.0,0.3521,1.0,False,1.0,False
+patagonia,"Patagonia, AZ",462,17,3.68,0.106,0.35,1.0,1.0,0.367284,0.5044,1.0,False,1.0,False
+battle_mountain,"Battle Mountain, NV",437,14,3.2,0.1168,0.27,1.0,1.0,0.452669,0.5016,1.0,False,1.0,False
+mineral_park,"Mineral Park, AZ",223,0,0.0,0.1017,0.0,1.0,1.0,1.0,0.4029,1.0,False,1.0,False
+bingham_canyon,"Bingham Canyon, UT",349,1,0.29,0.1338,0.02,1.0,1.0,0.704416,0.492,1.0,False,1.0,False
+bisbee,"Bisbee, AZ",198,4,2.02,0.1238,0.16,1.0,1.0,1.0,0.3535,1.0,False,1.0,False
+green_river,"Green River Basin, WY",10,0,0.0,0.0922,0.0,1.0,1.0,0.096093,0.6137,1.0,False,0.4051,False
+black_butte,"Black Butte, MT",99,0,0.0,0.1322,0.0,1.0,1.0,0.997497,0.4218,1.0,False,1.0,False
+gas_hills,"Gas Hills, WY",445,20,4.49,0.1176,0.38,1.0,1.0,0.002065,0.5377,1.0,False,0.0246,True
+cornwall_pa,"Cornwall, PA",5,0,0.0,0.1152,0.0,1.0,1.0,0.411388,0.5277,1.0,False,1.0,False
+elk_creek,"Elk Creek, NE",1,0,0.0,0.1277,0.0,1.0,1.0,,,1.0,False,,False
+marysvale,"Marysvale, UT",285,7,2.46,0.1206,0.2,1.0,1.0,0.966836,0.4699,1.0,False,1.0,False
+goldfield,"Goldfield–Cuprite, NV",509,28,5.5,0.1203,0.46,1.0,1.0,0.999997,0.4439,1.0,False,1.0,False
+safford_az,"Safford, AZ",62,0,0.0,0.1041,0.0,1.0,1.0,0.337603,0.5147,1.0,False,1.0,False
+oatman,"Oatman, NV/AZ",386,3,0.78,0.114,0.07,1.0,1.0,1.0,0.3671,1.0,False,1.0,False
+cornudas,"Cornudas Mountains, NM",1,0,0.0,0.1038,0.0,1.0,1.0,,,1.0,False,,False
+stillwater,"Stillwater Complex, MT",210,2,0.95,0.1325,0.07,1.0,1.0,1.0,0.3469,1.0,False,1.0,False
+round_top,"Round Top Mountain, TX",27,0,0.0,0.1115,0.0,1.0,1.0,0.999986,0.2778,1.0,False,1.0,False
+jarbidge,"Jarbidge, NV",120,0,0.0,0.1256,0.0,1.0,1.0,0.010478,0.5584,1.0,False,0.1019,False
+round_mountain,"Round Mountain, NV",286,10,3.5,0.116,0.3,1.0,1.0,1.0,0.4175,1.0,False,1.0,False
+dillsburg_pa,"Dillsburg, PA",6,0,0.0,0.1278,0.0,1.0,1.0,0.85892,0.3784,1.0,False,1.0,False
+questa_nm,"Questa, NM",145,0,0.0,0.1321,0.0,1.0,1.0,1.0,0.3811,1.0,False,1.0,False

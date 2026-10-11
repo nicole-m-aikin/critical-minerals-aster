@@ -1,0 +1,49 @@
+site_id,site_name,radius_m,n_deposits,n_hits,hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,delta_pct
+bisbee,"Bisbee, AZ",0,95,41,43.2,33.7,53.2,0.0
+bisbee,"Bisbee, AZ",250,95,92,96.8,91.1,98.9,53.7
+bisbee,"Bisbee, AZ",500,95,95,100.0,96.1,100.0,56.8
+bisbee,"Bisbee, AZ",1000,95,95,100.0,96.1,100.0,56.8
+ely_robinson,"Ely (Robinson), NV",0,24,5,20.8,9.2,40.5,0.0
+ely_robinson,"Ely (Robinson), NV",250,24,23,95.8,79.8,99.3,75.0
+ely_robinson,"Ely (Robinson), NV",500,24,24,100.0,86.2,100.0,79.2
+ely_robinson,"Ely (Robinson), NV",1000,24,24,100.0,86.2,100.0,79.2
+eureka,"Eureka, NV",0,191,71,37.2,30.6,44.2,0.0
+eureka,"Eureka, NV",250,191,139,72.8,66.1,78.6,35.6
+eureka,"Eureka, NV",500,191,158,82.7,76.7,87.4,45.5
+eureka,"Eureka, NV",1000,191,171,89.5,84.4,93.1,52.4
+lordsburg,"Lordsburg, NM",0,174,38,21.8,16.3,28.6,0.0
+lordsburg,"Lordsburg, NM",250,174,131,75.3,68.4,81.1,53.4
+lordsburg,"Lordsburg, NM",500,174,161,92.5,87.6,95.6,70.7
+lordsburg,"Lordsburg, NM",1000,174,172,98.9,95.9,99.7,77.0
+magnet_cove,"Magnet Cove, AR",0,26,6,23.1,11.0,42.1,0.0
+magnet_cove,"Magnet Cove, AR",250,26,18,69.2,50.0,83.5,46.2
+magnet_cove,"Magnet Cove, AR",500,26,25,96.2,81.1,99.3,73.1
+magnet_cove,"Magnet Cove, AR",1000,26,26,100.0,87.1,100.0,76.9
+mcdermitt,"McDermitt Caldera, NV/OR",0,36,8,22.2,11.7,38.1,0.0
+mcdermitt,"McDermitt Caldera, NV/OR",250,36,30,83.3,68.1,92.1,61.1
+mcdermitt,"McDermitt Caldera, NV/OR",500,36,35,97.2,85.8,99.5,75.0
+mcdermitt,"McDermitt Caldera, NV/OR",1000,36,36,100.0,90.4,100.0,77.8
+mountain_pass,"Mountain Pass, CA",0,323,37,11.5,8.4,15.4,0.0
+mountain_pass,"Mountain Pass, CA",250,323,139,43.0,37.7,48.5,31.6
+mountain_pass,"Mountain Pass, CA",500,323,171,52.9,47.5,58.3,41.5
+mountain_pass,"Mountain Pass, CA",1000,323,213,65.9,60.6,70.9,54.5
+randsburg,"Randsburg, CA",0,549,65,11.8,9.4,14.8,0.0
+randsburg,"Randsburg, CA",250,549,222,40.4,36.4,44.6,28.6
+randsburg,"Randsburg, CA",500,549,317,57.7,53.6,61.8,45.9
+randsburg,"Randsburg, CA",1000,549,445,81.1,77.6,84.1,69.2
+sierrita,"Sierrita, AZ",0,78,14,17.9,11.0,27.9,0.0
+sierrita,"Sierrita, AZ",250,78,38,48.7,37.9,59.6,30.8
+sierrita,"Sierrita, AZ",500,78,47,60.3,49.2,70.4,42.3
+sierrita,"Sierrita, AZ",1000,78,67,85.9,76.5,91.9,67.9
+steamboat_springs,"Steamboat Springs, NV",0,207,30,14.5,10.3,19.9,0.0
+steamboat_springs,"Steamboat Springs, NV",250,207,168,81.2,75.3,85.9,66.7
+steamboat_springs,"Steamboat Springs, NV",500,207,205,99.0,96.5,99.7,84.5
+steamboat_springs,"Steamboat Springs, NV",1000,207,207,100.0,98.2,100.0,85.5
+thacker_pass,"Thacker Pass, NV",0,23,5,21.7,9.7,41.9,0.0
+thacker_pass,"Thacker Pass, NV",250,23,20,87.0,67.9,95.5,65.2
+thacker_pass,"Thacker Pass, NV",500,23,23,100.0,85.7,100.0,78.3
+thacker_pass,"Thacker Pass, NV",1000,23,23,100.0,85.7,100.0,78.3
+yerington,"Yerington, NV",0,131,18,13.7,8.9,20.7,0.0
+yerington,"Yerington, NV",250,131,56,42.7,34.6,51.3,29.0
+yerington,"Yerington, NV",500,131,70,53.4,44.9,61.8,39.7
+yerington,"Yerington, NV",1000,131,91,69.5,61.1,76.7,55.7

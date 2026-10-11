@@ -1,0 +1,30 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,350,33,9.4,nested,site,,,False,,118,996.3574892900417,11.9,6.79,12.95,0.9381
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,83,15,18.1,nested,commodity,Gold/Silver,,False,,25,952.2217599208416,11.9,11.27,27.7,0.0643
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,1,0,0.0,nested,commodity,Lithium,,False,,0,1355.0285072291122,11.9,0.0,79.35,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,224,14,6.2,nested,commodity,Other,,False,,77,1009.9885099645164,11.9,3.76,10.22,0.9983
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,9,2,22.2,nested,commodity,Sand/Gravel,,False,,2,1403.822924882209,11.9,6.32,54.74,0.2915
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,17,2,11.8,nested,commodity,Stone,,False,,6,947.7354914888617,11.9,3.29,34.34,0.6173
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,16,0,0.0,nested,commodity,Uranium,,False,,8,834.5219224720873,11.9,0.0,19.36,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,60,9,15.0,nested,earth_mri,,Base Metals,True,,22,831.959822403908,11.9,8.1,26.11,0.2814
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,2,1297.400008790478,11.9,0.0,39.03,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Li/Brine,True,,0,1355.0285072291122,11.9,0.0,79.35,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,46,3,6.5,nested,earth_mri,,Energy,True,,23,737.8503414797681,11.9,2.24,17.5,0.9231
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,58,8,13.8,nested,earth_mri,,Gold/Silver,True,,15,977.4791996834922,11.9,7.16,24.93,0.3852
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,6,0,0.0,nested,earth_mri,,Industrial,True,,3,809.1749209786734,11.9,0.0,39.03,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,157,12,7.6,nested,earth_mri,,Non-Critical,False,,48,1130.686448475802,11.9,4.43,12.88,0.9681
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,2,0,0.0,nested,earth_mri,,REE,True,,0,1433.9891285895358,11.9,0.0,65.76,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,14,1,7.1,nested,earth_mri,,Specialty/High-Tech,True,,5,985.1709902745889,11.9,1.27,31.47,0.8302
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,11,2,18.2,nested,mineral_system,,,False,Basin Brine Path,1,1160.404305302255,11.9,5.14,47.7,0.383
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,2,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,1,403.35731583433505,11.9,0.0,65.76,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,1,0,0.0,nested,mineral_system,,,False,Mafic Magmatic,1,44.907682769392316,11.9,0.0,79.35,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,36,3,8.3,nested,mineral_system,,,False,Magmatic REE,17,742.022354686406,11.9,2.87,21.83,0.8184
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,2323.264908765806,11.9,0.0,65.76,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Evaporite,1,1152.1177668417754,11.9,0.0,65.76,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,16,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,8,834.5219224720873,11.9,0.0,19.36,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,15,0,0.0,nested,mineral_system,,,False,Orogenic,5,1122.4199354931957,11.9,0.0,20.39,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,8,0,0.0,nested,mineral_system,,,False,Placer,5,455.1786460743384,11.9,0.0,32.44,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,68,15,22.1,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,17,946.6012989352552,11.9,13.85,33.26,0.0127
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,7,1,14.3,nested,mineral_system,,,False,Porphyry Sn,1,1367.6910324542089,11.9,2.57,51.31,0.5879
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,4,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,3,436.82481550058526,11.9,0.0,48.99,1.0
+wet_mountains,"Wet Mountains, CO",wet_mountains_mosaic,4238,211.82,0.01,178,12,6.7,nested,mineral_system,,,False,Unknown System,58,1078.2324588848358,11.9,3.9,11.41,0.9917

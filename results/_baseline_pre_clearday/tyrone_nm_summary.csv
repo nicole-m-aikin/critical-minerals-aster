@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,187,15,8.0,nested,site,,,False,,24,2971.348492038477,11.07,4.92,12.81,0.9313
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,70,3,4.3,nested,commodity,Gold/Silver,,False,,4,3112.478545058211,11.07,1.47,11.86,0.9872
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,1,0,0.0,nested,commodity,Mercury,,False,,0,2591.202656846869,11.07,0.0,79.35,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,104,9,8.7,nested,commodity,Other,,False,,16,2954.8499585475647,11.07,4.62,15.63,0.826
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,3,1,33.3,nested,commodity,Sand/Gravel,,False,,1,2225.180173731812,11.07,6.15,79.23,0.2967
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,1,1,100.0,nested,commodity,Stone,,False,,0,6823.863659747206,11.07,20.65,100.0,0.1107
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,8,1,12.5,nested,commodity,Uranium,,False,,3,1796.7084162980368,11.07,2.24,47.09,0.6088
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,40,2,5.0,nested,earth_mri,,Base Metals,True,,9,2681.4343198720626,11.07,1.38,16.5,0.9452
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,3,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,2414.2484788628317,11.07,0.0,56.15,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,9,1,11.1,nested,earth_mri,,Energy,True,,3,1872.1216655852452,11.07,1.99,43.5,0.6521
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,59,3,5.1,nested,earth_mri,,Gold/Silver,True,,3,3216.6852529158664,11.07,1.74,13.92,0.9656
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,21,2,9.5,nested,earth_mri,,Industrial,True,,4,2092.9749375171327,11.07,2.65,28.91,0.6924
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,28,2,7.1,nested,earth_mri,,Non-Critical,False,,4,2186.699500283589,11.07,1.98,22.65,0.8321
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,7,0,0.0,nested,earth_mri,,REE,True,,1,3939.583948568708,11.07,0.0,35.43,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,20,5,25.0,nested,earth_mri,,Specialty/High-Tech,True,,0,5087.568876581988,11.07,11.19,46.87,0.0624
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,11,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,3642.8376025651014,11.07,0.0,25.88,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,15,1,6.7,nested,mineral_system,,,False,Hybrid Magmatic REE,2,2224.245706237071,11.07,1.19,29.82,0.8279
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,8,0,0.0,nested,mineral_system,,,False,Magmatic REE,1,3756.564412482984,11.07,0.0,32.44,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,1483.9463419077708,11.07,0.0,79.35,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,2591.202656846869,11.07,0.0,79.35,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,5,1,20.0,nested,mineral_system,,,False,Meteoric Recharge,3,2367.4034514487357,11.07,3.62,62.45,0.4438
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,57,4,7.0,nested,mineral_system,,,False,Orogenic,6,3001.982329421833,11.07,2.76,16.7,0.8887
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,0,3706.068990916502,11.07,0.0,65.76,1.0
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,17,4,23.5,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5000.502868344869,11.07,9.55,47.26,0.1106
+tyrone_nm,"Tyrone, NM",tyrone_nm_mosaic,2498,108.49,0.01,70,5,7.1,nested,mineral_system,,,False,Unknown System,12,2467.270110183152,11.07,3.09,15.66,0.8989

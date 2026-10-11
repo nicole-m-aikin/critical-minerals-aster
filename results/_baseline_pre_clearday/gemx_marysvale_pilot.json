@@ -1,0 +1,101 @@
+{
+  "site_id": "marysvale",
+  "granule_ur": [
+    "AV520250730t173336_004_L2A_RFL_1",
+    "AV520250730t173336_005_L2A_RFL_1",
+    "AV520250730t180135_007_L2A_RFL_1",
+    "AV520250730t210330_002_L2A_RFL_1",
+    "AV520250730t210330_003_L2A_RFL_1",
+    "AV520250723t170921_001_L2A_RFL_1",
+    "AV520250730t180135_009_L2A_RFL_1",
+    "AV520250730t203631_009_L2A_RFL_1",
+    "AV520250723t170921_000_L2A_RFL_1",
+    "AV520250730t173336_003_L2A_RFL_1",
+    "AV520250923t204930_000_L2A_RFL_1",
+    "AV520250730t203631_008_L2A_RFL_1",
+    "AV520250730t203631_010_L2A_RFL_1"
+  ],
+  "nc_path": [
+    "data/gemx/aviris/marysvale/AV520250730t173336_004_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t173336_005_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t180135_007_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t210330_002_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t210330_003_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250723t170921_001_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t180135_009_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t203631_009_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250723t170921_000_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t173336_003_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250923t204930_000_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t203631_008_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/marysvale/AV520250730t203631_010_L2A_OE_da8b3ef7_RFL_ORT.nc"
+  ],
+  "wavelengths_nm": [
+    2121.083984375,
+    2165.979736328125,
+    2175.953369140625,
+    2200.88232421875,
+    2205.8671875,
+    2210.851806640625,
+    2270.642578125
+  ],
+  "features_used_nm": {
+    "aloh": 2200.88232421875,
+    "kaolinite": [
+      2165.979736328125,
+      2205.8671875
+    ],
+    "alunite": [
+      2175.953369140625,
+      2210.851806640625
+    ]
+  },
+  "crs": "EPSG:32612",
+  "town_lon": -112.2302,
+  "town_lat": 38.4494,
+  "target_lon": -112.33257,
+  "target_lat": 38.3816,
+  "target_label": "Alunite Ridge",
+  "bbox_centroid": [
+    -112.235,
+    38.5
+  ],
+  "site_bbox_wgs84": [
+    -112.5,
+    38.2,
+    -111.97,
+    38.8
+  ],
+  "mosaic_resolution_m": 10.0,
+  "mosaic_bbox_frac": 0.7218945938647561,
+  "indices_site_bbox": {
+    "aloh": {
+      "name": "aloh",
+      "n_valid": 22861934,
+      "p50": -0.10290157794952393,
+      "p90": -0.018030976876616478,
+      "p99": 0.06355340778827667,
+      "frac_gt_0_05": 0.014433687018779775,
+      "frac_gt_0_10": 0.003708260202308344
+    },
+    "kaolinite": {
+      "name": "kaolinite",
+      "n_valid": 839500,
+      "p50": 0.016666579991579056,
+      "p90": 0.0530305877327919,
+      "p99": 0.13056381046772003,
+      "frac_gt_0_05": 0.11408933889219773,
+      "frac_gt_0_10": 0.02189874925550923
+    },
+    "alunite": {
+      "name": "alunite",
+      "n_valid": 826405,
+      "p50": 0.018934758380055428,
+      "p90": 0.05845173820853233,
+      "p99": 0.1343955546617508,
+      "frac_gt_0_05": 0.14085224556966622,
+      "frac_gt_0_10": 0.02461625958216613
+    }
+  },
+  "note": "AVIRIS-5 mosaic onto site.bbox_wgs84, same window as the ASTER figures. Greedy bbox set-cover seeded with town and the science target. First finite pixel wins. Not Tetracorder."
+}

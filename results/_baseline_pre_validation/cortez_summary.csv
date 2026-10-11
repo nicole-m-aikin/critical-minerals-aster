@@ -1,0 +1,23 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,288,21,7.3,nested,site,,,False,,17,4275.5598515141755,11.56,4.82,10.89,0.9937
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,4,0,0.0,nested,commodity,Antimony,,False,,0,4939.816005342936,11.56,0.0,48.99,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,157,12,7.6,nested,commodity,Gold/Silver,,False,,13,4380.830436399064,11.56,4.43,12.88,0.9583
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,67,4,6.0,nested,commodity,Other,,False,,1,3954.929330678072,11.56,2.35,14.37,0.9589
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,60,5,8.3,nested,commodity,Stone,,False,,3,4313.855492410451,11.56,3.61,18.07,0.8379
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,35,5,14.3,nested,earth_mri,,Base Metals,True,,2,3892.270889856993,11.56,6.26,29.38,0.3807
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,3212.9629744926096,11.56,0.0,39.03,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,131,7,5.3,nested,earth_mri,,Gold/Silver,True,,11,4506.184129761342,11.56,2.61,10.62,0.9952
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,36,4,11.1,nested,earth_mri,,Industrial,True,,0,3592.607495064768,11.56,4.41,25.32,0.6111
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,68,5,7.4,nested,earth_mri,,Non-Critical,False,,4,4357.7038398572895,11.56,3.18,16.09,0.9062
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,12,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,4990.5105260640885,11.56,0.0,24.25,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,19,3,15.8,nested,mineral_system,,,False,Basin Brine Path,0,3250.18159401436,11.56,5.52,37.57,0.3795
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,14,1,7.1,nested,mineral_system,,,False,Carlin-type,2,5235.045071508115,11.56,1.27,31.47,0.821
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,1,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,2299.7898085089096,11.56,0.0,79.35,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,5,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,3674.0157414467562,11.56,0.0,43.45,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,8339.222281727249,11.56,0.0,79.35,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,120,9,7.5,nested,mineral_system,,,False,Orogenic,9,4573.735339964474,11.56,4.0,13.64,0.945
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,5,0,0.0,nested,mineral_system,,,False,Placer,0,6634.921322818829,11.56,0.0,43.45,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,5,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,5106.703223358305,11.56,0.0,43.45,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,4,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,4930.848913944286,11.56,0.0,48.99,1.0
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,4,1,25.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,1,3073.4875794481363,11.56,4.56,69.94,0.3883
+cortez,"Cortez-Pipeline, NV",cortez_mosaic,2858,231.89,0.01,110,7,6.4,nested,mineral_system,,,False,Unknown System,5,3888.494142282127,11.56,3.12,12.56,0.9762

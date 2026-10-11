@@ -25,6 +25,14 @@ survivors), not the superseded pooled-null 12-site list, since re-using an
 already-corrected list from Phase 4 is the only internally consistent
 choice at this point in the pipeline.
 
+Null: the bedrock-vs-cover stratified null of Phase 2. Each deposit carries
+p_i = zone coverage fraction of its own stratum (lithology.cover_strata), so
+a cohort's expected hits are Σ p_i over that cohort (not n × the site-level
+p0 — pre- and post-1950 discoveries need not share a bedrock/cover mix).
+Per-site cohort p-values are exact Poisson-binomial tails; the pooled z-test
+uses Σ p_i and Σ p_i(1 − p_i). p0_null in the output is the site-level
+stratified E / n from Phase 2, for reference.
+
 This remains explicitly a SECONDARY / supplementary analysis, not a
 headline claim -- see the caveat text this script prints and
 docs/results.md for exactly why: ~14% of critical-mineral
@@ -55,8 +63,17 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 from scipy.stats import norm as sp_norm
+from shapely.geometry import box
+from shapely.ops import unary_union
+from shapely.validation import make_valid
 
 from critical_minerals_aster.config import load_site_by_id
+from critical_minerals_aster.lithology import (
+    assign_cover_stratum,
+    cover_strata,
+    stratified_null,
+    stratum_zone_fractions,
+)
 from critical_minerals_aster.paths import site_paths_for
 from critical_minerals_aster.metrics import read_mrds_national
 from critical_minerals_aster.mrds import (
@@ -65,7 +82,6 @@ from critical_minerals_aster.mrds import (
     reclassify_mrds_earth_mri,
     spatial_join_deposits_zones,
 )
-from critical_minerals_aster.significance import run_binomial
 
 REPO_ROOT = Path(__file__).parent.parent
 CUTOFF = 1950
@@ -81,17 +97,19 @@ def _best_year(row: pd.Series) -> float:
     return float("nan")
 
 
-def _cohort_stats(cohort: pd.DataFrame, label: str, p0: float) -> dict:
+def _cohort_stats(cohort: pd.DataFrame, label: str) -> dict:
     n = len(cohort)
     hits = int(cohort["in_zone"].sum())
     hr = hits / n * 100 if n else 0.0
-    p_val, expected = run_binomial(hits, n, p0)
+    p_i = cohort["p_null"].to_numpy(dtype=float)
+    strat = stratified_null(p_i, hits)
     return {
         f"n_{label}": n,
         f"hits_{label}": hits,
         f"hr_{label}_pct": round(hr, 1),
-        f"expected_{label}": round(expected, 2),
-        f"binom_p_{label}": round(p_val, 4),
+        f"expected_{label}": round(strat["expected"], 2),
+        f"var_{label}": round(float((p_i * (1 - p_i)).sum()), 4),
+        f"binom_p_{label}": round(strat["p"], 4),
     }
 
 
@@ -146,6 +164,14 @@ def main() -> None:
         crit["in_zone"] = crit.index.isin(hit_ids)
         crit["best_year"] = crit.apply(_best_year, axis=1)
 
+        if footprint is not None and len(footprint):
+            fp_geom = make_valid(unary_union(footprint.geometry.values))
+        else:
+            fp_geom = gpd.GeoSeries([box(*raster_bbox)], crs="EPSG:4326").to_crs(zones.crs).iloc[0]
+        strata = cover_strata(site_id, fp_geom, zones.crs, bbox_wgs84=raster_bbox)
+        frac = stratum_zone_fractions(strata, make_valid(unary_union(zones.geometry.values)))
+        crit["p_null"] = assign_cover_stratum(crit, strata).map(frac["p"]).astype(float)
+
         n_total_crit += len(crit)
         n_total_dated += int(crit["best_year"].notna().sum())
 
@@ -162,8 +188,8 @@ def main() -> None:
             "n_dated": len(dated),
             "pct_dated": round(len(dated) / len(crit) * 100, 1),
             "fdr_significant_current": site_id in fdr_sites,
-            **_cohort_stats(pre, "pre50", p0),
-            **_cohort_stats(post, "post50", p0),
+            **_cohort_stats(pre, "pre50"),
+            **_cohort_stats(post, "post50"),
         }
         records.append(row)
 
@@ -177,12 +203,9 @@ def main() -> None:
 
     def _pooled_test(df: pd.DataFrame, n_col: str, hits_col: str) -> dict:
         obs_hits = df[hits_col].sum()
-        exp_list, var_list = [], []
-        for _, r in df.iterrows():
-            n_i, p_i = r[n_col], r["p0_null"]
-            exp_list.append(n_i * p_i)
-            var_list.append(n_i * p_i * (1 - p_i))
-        exp_hits, var_total = sum(exp_list), sum(var_list)
+        label = hits_col.removeprefix("hits_")
+        exp_hits = float(df[f"expected_{label}"].sum())
+        var_total = float(df[f"var_{label}"].sum())
         if var_total == 0 or df.empty:
             z, p_val = 0.0, 1.0
         else:
@@ -199,14 +222,14 @@ def main() -> None:
         }
 
     pooled_rows = []
-    for label, subset in [
+    for framing, subset in [
         ("all_45_sites (PRIMARY, this phase)", out_df),
         ("fdr_significant_sites_only (sensitivity)", out_df[out_df["fdr_significant_current"]]),
     ]:
         pre_stats = _pooled_test(subset, "n_pre50", "hits_pre50")
         post_stats = _pooled_test(subset, "n_post50", "hits_post50")
-        pooled_rows.append({"framing": label, "cohort": "pre-1950", "n_sites": len(subset), **pre_stats})
-        pooled_rows.append({"framing": label, "cohort": "post-1950", "n_sites": len(subset), **post_stats})
+        pooled_rows.append({"framing": framing, "cohort": "pre-1950", "n_sites": len(subset), **pre_stats})
+        pooled_rows.append({"framing": framing, "cohort": "post-1950", "n_sites": len(subset), **post_stats})
 
     pooled_df = pd.DataFrame(pooled_rows)
     pooled_path = REPO_ROOT / "results" / "phase7_discovery_bias_pooled.csv"

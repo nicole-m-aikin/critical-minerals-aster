@@ -1,0 +1,111 @@
+{
+  "site_id": "hanover_fierro",
+  "granule_id": "hanover_fierro_mosaic",
+  "timestamp_utc": "2026-05-22T20:12:35.688781+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 4722,
+  "raster_bbox_wgs84": [
+    -108.01352965651843,
+    32.66142004607321,
+    -107.78889450359522,
+    33.06148553088742
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -108.01352965651843,
+                33.05653427306309
+              ],
+              [
+                -108.00422885185479,
+                32.781924844984516
+              ],
+              [
+                -107.97221831750115,
+                32.66618828986972
+              ],
+              [
+                -107.78971062911685,
+                32.692534820299834
+              ],
+              [
+                -107.8013002917453,
+                33.06148553088742
+              ],
+              [
+                -108.01352965651843,
+                33.05653427306309
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 0,
+  "mean_nearest_structure_m": 16646.4236477959,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true,
+  "inputs": {
+    "site_config": "sites/hanover_fierro.yaml",
+    "site_config_sha256": "f53b5ec8a2079169ff8bf8a2b53e7edfe78f7212732961ee7a383c73b89676aa",
+    "bbox_wgs84": [
+      -108.25,
+      32.65,
+      -107.8,
+      33.05
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/hanover_fierro_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mrds_validation_site_bbox": {
+      "n_input": 31,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 0,
+      "duplicate_record": 0,
+      "n_output": 31,
+      "n_flag_shared_coords": 0,
+      "n_flag_score_high": 4,
+      "n_flag_producer": 7
+    }
+  },
+  "inputs_recorded_utc": "2026-09-27T21:50:33.548127+00:00"
+}

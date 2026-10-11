@@ -1,0 +1,22 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,152,31,20.4,nested,site,,,False,,7,6552.37653098498,10.74,14.76,27.49,0.0003
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,31,9,29.0,nested,commodity,Gold/Silver,,False,,1,4791.62491170077,10.74,16.1,46.59,0.0042
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,109,20,18.3,nested,commodity,Other,,False,,5,6469.543171020622,10.74,12.2,26.65,0.0119
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,7,1,14.3,nested,commodity,Sand/Gravel,,False,,0,12294.29123489965,10.74,2.57,51.31,0.5486
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,2,1,50.0,nested,commodity,Stone,,False,,1,2017.7990367587454,10.74,9.45,90.55,0.2033
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,3,0,0.0,nested,commodity,Uranium,,False,,0,17381.6726959767,10.74,0.0,56.15,1.0
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,72,16,22.2,nested,earth_mri,,Base Metals,True,,1,4981.798225861383,10.74,14.17,33.09,0.0036
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,29,6,20.7,nested,earth_mri,,Battery Metals – Co/Ni,True,,3,6631.823617076852,10.74,9.85,38.39,0.0842
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,3,0,0.0,nested,earth_mri,,Energy,True,,0,17381.6726959767,10.74,0.0,56.15,1.0
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,4,1,25.0,nested,earth_mri,,Gold/Silver,True,,0,7178.063371359671,10.74,4.56,69.94,0.3653
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,4,1,25.0,nested,earth_mri,,Industrial,True,,0,5504.184833762808,10.74,4.56,69.94,0.3653
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,39,7,17.9,nested,earth_mri,,Non-Critical,False,,3,8532.14134067553,10.74,8.98,32.67,0.1193
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,9321.352357703048,10.74,0.0,79.35,1.0
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,56,14,25.0,nested,mineral_system,,,False,Basin Brine Path,1,4400.561253239318,10.74,15.52,37.69,0.002
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,1,1,100.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,634.0177660646094,10.74,20.65,100.0,0.1074
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,27,4,14.8,nested,mineral_system,,,False,Marine Chemocline,3,6639.493384328059,10.74,5.92,32.48,0.3289
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,4,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,15366.592611408287,10.74,0.0,48.99,1.0
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,11,2,18.2,nested,mineral_system,,,False,Orogenic,0,6061.612531421707,10.74,5.14,47.7,0.3342
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,1,1,100.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5233.895388809196,10.74,20.65,100.0,0.1074
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,6744.659497872854,10.74,0.0,79.35,1.0
+magdalena_kelly,"Magdalena (Kelly), NM",magdalena_kelly_mosaic,6054,237.6,0.01,51,9,17.6,nested,mineral_system,,,False,Unknown System,3,8421.701964851745,10.74,9.57,30.25,0.0917

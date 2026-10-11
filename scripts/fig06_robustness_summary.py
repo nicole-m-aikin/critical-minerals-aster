@@ -55,7 +55,7 @@ def main() -> None:
     ax = axes[0]
     labels = [
         "Pooled null\n(raw p<0.05)",
-        "Site-specific\nnull (Phase 2)",
+        "Bedrock/cover-\nstratified null\n(Phase 2)",
         "+ BH-FDR\n(Phase 4, primary)",
         "+ spatial-clustering\nrobust (Phase 5)",
     ]
@@ -68,7 +68,7 @@ def main() -> None:
     ax.set_ylabel("Number of sites called significant")
     ax.set_ylim(0, max(counts) + 6)
     ax.set_title(f"Sites significant, at each correction stage ({n_total}-site survey)\n"
-                 "(FDR ⊂ site-specific-raw; clustering-robust ⊂ FDR. Pooled vs. site-specific "
+                 "(FDR ⊂ stratified-raw; clustering-robust ⊂ FDR. Pooled vs. stratified "
                  "are different sets, not nested)", fontsize=9.5)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -87,17 +87,23 @@ def main() -> None:
     cohort_labels = primary["cohort"].values
 
     ax.bar(x - width / 2, observed, width, label="Observed hit rate", color="#0072B2", zorder=3)
-    ax.bar(x + width / 2, null, width, label="Site-specific null (pooled)", color="#999999", zorder=3)
+    ax.bar(x + width / 2, null, width, label="Stratified null (pooled)", color="#999999", zorder=3)
     for i, row in enumerate(primary.itertuples()):
         ax.text(i, max(row.hr_pct, row.null_hr_pct) + 1.5,
-                f"{row.enrichment:.2f}×\np={row.pooled_p:.2f}", ha="center", fontsize=9)
+                f"{row.enrichment:.2f}×\np={row.pooled_p:.2g}", ha="center", fontsize=9)
 
     ax.set_xticks(x)
     ax.set_xticklabels(cohort_labels)
     ax.set_ylabel("Hit rate (%)")
     ax.set_ylim(0, max(list(observed) + list(null)) + 6)
+    sig = (primary["pooled_p"] < 0.05).values
+    verdict = (
+        "enriched in both cohorts" if sig.all()
+        else "no signal in either cohort" if not sig.any()
+        else "enriched in " + " and ".join(c for c, s in zip(cohort_labels, sig) if s) + " only"
+    )
     ax.set_title(
-        f"Discovery-era split, corrected (Phase 7)\nunconditional across {int(primary['n_sites'].iloc[0])} dated-record sites — no signal in either cohort",
+        f"Discovery-era split, corrected (Phase 7)\nunconditional across {int(primary['n_sites'].iloc[0])} dated-record sites — {verdict}",
         fontsize=10.5,
     )
     ax.spines["top"].set_visible(False)

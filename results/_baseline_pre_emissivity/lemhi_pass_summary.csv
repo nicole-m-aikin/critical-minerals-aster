@@ -1,0 +1,18 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,81,11,13.6,nested,site,,,False,,18,1972.5920621040375,11.81,7.76,22.7,0.3587
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,15,1,6.7,nested,commodity,Gold/Silver,,False,,1,2539.9773482099486,11.81,1.19,29.82,0.8481
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,49,7,14.3,nested,commodity,Other,,False,,16,1737.3505866875516,11.81,7.1,26.67,0.3567
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,4,1,25.0,nested,commodity,Sand/Gravel,,False,,0,1890.360745830118,11.81,4.56,69.94,0.395
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,4,0,0.0,nested,commodity,Stone,,False,,0,2844.3123890190936,11.81,0.0,48.99,1.0
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,9,2,22.2,nested,commodity,Uranium,,False,,1,1956.8250577989909,11.81,6.32,54.74,0.2882
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,21,3,14.3,nested,earth_mri,,Base Metals,True,,7,1861.0511994476071,11.81,4.98,34.64,0.4585
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,3,1,33.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,3,273.70238403433854,11.81,6.15,79.23,0.314
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,10,2,20.0,nested,earth_mri,,Energy,True,,2,1782.128618960276,11.81,5.67,50.98,0.3342
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,15,1,6.7,nested,earth_mri,,Gold/Silver,True,,1,2539.9773482099486,11.81,1.19,29.82,0.8481
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,32,4,12.5,nested,earth_mri,,Non-Critical,False,,5,1998.619633661633,11.81,4.97,28.07,0.532
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,1,588.8165875599835,11.81,0.0,65.76,1.0
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,1,1,100.0,nested,mineral_system,,,False,Marine Chemocline,1,219.90899120545492,11.81,20.65,100.0,0.1181
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,6,2,33.3,nested,mineral_system,,,False,Meteoric Recharge,1,1695.3572234983342,11.81,9.68,70.0,0.1514
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,25,2,8.0,nested,mineral_system,,,False,Orogenic,6,1917.6592292493171,11.81,2.22,24.97,0.812
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,8,0,0.0,nested,mineral_system,,,False,Placer,0,3097.776422503246,11.81,0.0,32.44,1.0
+lemhi_pass,"Lemhi Pass, ID/MT",lemhi_pass_mosaic,3434,214.45,0.02,39,6,15.4,nested,mineral_system,,,False,Unknown System,9,1935.5533182526333,11.81,7.25,29.73,0.3103

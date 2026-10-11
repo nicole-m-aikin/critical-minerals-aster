@@ -1,0 +1,1174 @@
+{
+  "hypothesis": "complementary (not coincident) is not an artifact of score \u2265 3 and overlap p90",
+  "score_cuts": [
+    2,
+    3,
+    4
+  ],
+  "swir_percentiles": [
+    80,
+    90,
+    95
+  ],
+  "jaccard_max": 0.2,
+  "sites": [
+    {
+      "site_id": "goldfield",
+      "site_name": "Goldfield\u2013Cuprite, NV",
+      "n_overlap": 214060,
+      "published_score_min": 3,
+      "published_swir_pct": 90,
+      "published_jaccard": 0.07511814124442111,
+      "published_lift": 1.826733274459819,
+      "grid": [
+        {
+          "score_min": 2,
+          "swir_pct": 80,
+          "swir_threshold": 0.02699441835284233,
+          "n_overlap": 214060,
+          "n_strong": 62205,
+          "n_high": 33365,
+          "n_both": 11375,
+          "jaccard": 0.13510303462200843,
+          "lift": 1.1731958088092174,
+          "frac_strong": 0.29059609455292906,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 90,
+          "swir_threshold": 0.04267424717545509,
+          "n_overlap": 214060,
+          "n_strong": 62205,
+          "n_high": 16683,
+          "n_both": 6365,
+          "jaccard": 0.0877652606759235,
+          "lift": 1.3129085750606315,
+          "frac_strong": 0.29059609455292906,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 95,
+          "swir_threshold": 0.0647658258676529,
+          "n_overlap": 214060,
+          "n_strong": 62205,
+          "n_high": 8342,
+          "n_both": 3273,
+          "jaccard": 0.048651782263578795,
+          "lift": 1.3501625153341852,
+          "frac_strong": 0.29059609455292906,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 80,
+          "swir_threshold": 0.02699441835284233,
+          "n_overlap": 214060,
+          "n_strong": 16078,
+          "n_high": 33365,
+          "n_both": 3628,
+          "jaccard": 0.0791880388519044,
+          "lift": 1.4477035720158398,
+          "frac_strong": 0.07510978230402691,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 90,
+          "swir_threshold": 0.04267424717545509,
+          "n_overlap": 214060,
+          "n_strong": 16078,
+          "n_high": 16683,
+          "n_both": 2289,
+          "jaccard": 0.07511814124442111,
+          "lift": 1.826733274459819,
+          "frac_strong": 0.07510978230402691,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 95,
+          "swir_threshold": 0.0647658258676529,
+          "n_overlap": 214060,
+          "n_strong": 16078,
+          "n_high": 8342,
+          "n_both": 1110,
+          "jaccard": 0.047619047619047616,
+          "lift": 1.7715617305458475,
+          "frac_strong": 0.07510978230402691,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 80,
+          "swir_threshold": 0.02699441835284233,
+          "n_overlap": 214060,
+          "n_strong": 3204,
+          "n_high": 33365,
+          "n_both": 791,
+          "jaccard": 0.022108558331935826,
+          "lift": 1.5839022217283092,
+          "frac_strong": 0.014967766046902737,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 90,
+          "swir_threshold": 0.04267424717545509,
+          "n_overlap": 214060,
+          "n_strong": 3204,
+          "n_high": 16683,
+          "n_both": 575,
+          "jaccard": 0.02977423363711682,
+          "lift": 2.302696540910507,
+          "frac_strong": 0.014967766046902737,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 95,
+          "swir_threshold": 0.0647658258676529,
+          "n_overlap": 214060,
+          "n_strong": 3204,
+          "n_high": 8342,
+          "n_both": 227,
+          "jaccard": 0.020054775156815974,
+          "lift": 1.8180201204979034,
+          "frac_strong": 0.014967766046902737,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        }
+      ],
+      "pin_grid": [
+        {
+          "score_min": 2,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Goldfield",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.008667091839015484,
+              "both": false
+            },
+            "target": {
+              "label": "district",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": 0.023720694705843925,
+              "both": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "site_id": "marysvale",
+      "site_name": "Marysvale, UT",
+      "n_overlap": 171067,
+      "published_score_min": 3,
+      "published_swir_pct": 90,
+      "published_jaccard": 0.00968418787324474,
+      "published_lift": 0.5862640385516976,
+      "grid": [
+        {
+          "score_min": 2,
+          "swir_pct": 80,
+          "swir_threshold": 0.024273643270134926,
+          "n_overlap": 171067,
+          "n_strong": 53250,
+          "n_high": 6845,
+          "n_both": 3411,
+          "jaccard": 0.060175710959000775,
+          "lift": 1.6008656796880627,
+          "frac_strong": 0.31128154465794106,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 90,
+          "swir_threshold": 0.036015529185533524,
+          "n_overlap": 171067,
+          "n_strong": 53250,
+          "n_high": 3423,
+          "n_both": 1832,
+          "jaccard": 0.03340566364581244,
+          "lift": 1.7193535802408177,
+          "frac_strong": 0.31128154465794106,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 95,
+          "swir_threshold": 0.048211194574832916,
+          "n_overlap": 171067,
+          "n_strong": 53250,
+          "n_high": 1712,
+          "n_both": 946,
+          "jaccard": 0.017513329383886257,
+          "lift": 1.7751456934754948,
+          "frac_strong": 0.31128154465794106,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 80,
+          "swir_threshold": 0.024273643270134926,
+          "n_overlap": 171067,
+          "n_strong": 15344,
+          "n_high": 6845,
+          "n_both": 385,
+          "jaccard": 0.017657310585213724,
+          "lift": 0.627068415327934,
+          "frac_strong": 0.08969585016397084,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 90,
+          "swir_threshold": 0.036015529185533524,
+          "n_overlap": 171067,
+          "n_strong": 15344,
+          "n_high": 3423,
+          "n_both": 180,
+          "jaccard": 0.00968418787324474,
+          "lift": 0.5862640385516976,
+          "frac_strong": 0.08969585016397084,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 95,
+          "swir_threshold": 0.048211194574832916,
+          "n_overlap": 171067,
+          "n_strong": 15344,
+          "n_high": 1712,
+          "n_both": 88,
+          "jaccard": 0.005186232909005186,
+          "lift": 0.5730685317649811,
+          "frac_strong": 0.08969585016397084,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 80,
+          "swir_threshold": 0.024273643270134926,
+          "n_overlap": 171067,
+          "n_strong": 4511,
+          "n_high": 6845,
+          "n_both": 98,
+          "jaccard": 0.008704920945105703,
+          "lift": 0.5429327450357126,
+          "frac_strong": 0.026369784938065202,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 90,
+          "swir_threshold": 0.036015529185533524,
+          "n_overlap": 171067,
+          "n_strong": 4511,
+          "n_high": 3423,
+          "n_both": 41,
+          "jaccard": 0.005194476118079311,
+          "lift": 0.4542243056590398,
+          "frac_strong": 0.026369784938065202,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 95,
+          "swir_threshold": 0.048211194574832916,
+          "n_overlap": 171067,
+          "n_strong": 4511,
+          "n_high": 1712,
+          "n_both": 21,
+          "jaccard": 0.003386004514672686,
+          "lift": 0.4651670527081257,
+          "frac_strong": 0.026369784938065202,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        }
+      ],
+      "pin_grid": [
+        {
+          "score_min": 2,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 2,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 3,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": true,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 80,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 90,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        },
+        {
+          "score_min": 4,
+          "swir_pct": 95,
+          "pins": {
+            "town": {
+              "label": "Marysvale",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": false,
+              "alunite": null,
+              "both": false
+            },
+            "target": {
+              "label": "Alunite Ridge",
+              "in_overlap": true,
+              "in_strong_zone": false,
+              "alunite_high": true,
+              "alunite": 0.06668832153081894,
+              "both": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "jaccard_stays_below_0.20": true,
+    "no_coincidence_flip": true,
+    "published_pin_story_holds": false,
+    "cutoff_fragile": true,
+    "note": "Pre-registered.  Complementary means the maps do not occupy the same pixels, not that SWIR explains the epithermal TIR nulls."
+  },
+  "checks": [
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 2,
+      "swir_pct": 80,
+      "value": 0.13510303462200843,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 2,
+      "swir_pct": 90,
+      "value": 0.0877652606759235,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 2,
+      "swir_pct": 95,
+      "value": 0.048651782263578795,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 3,
+      "swir_pct": 80,
+      "value": 0.0791880388519044,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 3,
+      "swir_pct": 90,
+      "value": 0.07511814124442111,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 3,
+      "swir_pct": 95,
+      "value": 0.047619047619047616,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 4,
+      "swir_pct": 80,
+      "value": 0.022108558331935826,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 4,
+      "swir_pct": 90,
+      "value": 0.02977423363711682,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "goldfield",
+      "score_min": 4,
+      "swir_pct": 95,
+      "value": 0.020054775156815974,
+      "pass": true
+    },
+    {
+      "rule": "published_pin_story",
+      "site_id": "goldfield",
+      "pin": "town",
+      "expected": {
+        "in_strong_zone": false,
+        "alunite_high": true
+      },
+      "got": {
+        "in_strong_zone": false,
+        "alunite_high": false
+      },
+      "pass": false
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 2,
+      "swir_pct": 80,
+      "value": 0.060175710959000775,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 2,
+      "swir_pct": 90,
+      "value": 0.03340566364581244,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 2,
+      "swir_pct": 95,
+      "value": 0.017513329383886257,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 3,
+      "swir_pct": 80,
+      "value": 0.017657310585213724,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 3,
+      "swir_pct": 90,
+      "value": 0.00968418787324474,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 3,
+      "swir_pct": 95,
+      "value": 0.005186232909005186,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 4,
+      "swir_pct": 80,
+      "value": 0.008704920945105703,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 4,
+      "swir_pct": 90,
+      "value": 0.005194476118079311,
+      "pass": true
+    },
+    {
+      "rule": "jaccard_below_0.20",
+      "site_id": "marysvale",
+      "score_min": 4,
+      "swir_pct": 95,
+      "value": 0.003386004514672686,
+      "pass": true
+    },
+    {
+      "rule": "published_pin_story",
+      "site_id": "marysvale",
+      "pin": "town",
+      "expected": {
+        "in_strong_zone": true,
+        "alunite_high": false
+      },
+      "got": {
+        "in_strong_zone": true,
+        "alunite_high": false
+      },
+      "pass": true
+    },
+    {
+      "rule": "published_pin_story",
+      "site_id": "marysvale",
+      "pin": "target",
+      "expected": {
+        "in_strong_zone": false,
+        "alunite_high": true
+      },
+      "got": {
+        "in_strong_zone": false,
+        "alunite_high": true
+      },
+      "pass": true
+    }
+  ],
+  "note": "Reuse of existing Goldfield and Marysvale GeoTIFFs.  Not Tetracorder.  Not a 24-site test."
+}

@@ -1,0 +1,16 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,259,37,14.3,nested,site,,,False,,48,3842.467476747557,13.03,10.55,19.07,0.3001
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,1,0,0.0,nested,commodity,Gold/Silver,,False,,0,10034.678077783787,13.03,0.0,79.35,1.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,244,33,13.5,nested,commodity,Other,,False,,42,3910.8530666666993,13.03,9.79,18.39,0.4377
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,1,1,100.0,nested,commodity,Sand/Gravel,,False,,1,344.12469472223535,13.03,20.65,100.0,0.1303
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,13,3,23.1,nested,commodity,Stone,,False,,5,2351.701956802822,13.03,8.18,50.26,0.2349
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,120,19,15.8,nested,earth_mri,,Base Metals,True,,20,3145.36817368363,13.03,10.38,23.41,0.2148
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,6408.687273753593,13.03,0.0,79.35,1.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,1,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,10034.678077783787,13.03,0.0,79.35,1.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,136,18,13.2,nested,earth_mri,,Non-Critical,False,,28,4359.259978956761,13.03,8.54,19.95,0.51
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,8452.173145924555,13.03,0.0,79.35,1.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,47,17,36.2,nested,mineral_system,,,False,Basin Brine Path,18,734.6031721392866,13.03,23.97,50.46,0.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,8,3,37.5,nested,mineral_system,,,False,Chemical Weathering,2,961.1179916348609,13.03,13.68,69.43,0.0747
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,2,0,0.0,nested,mineral_system,,,False,Orogenic,0,8221.68267576869,13.03,0.0,65.76,1.0
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,172,17,9.9,nested,mineral_system,,,False,Unknown System,28,4638.55870750562,13.03,6.26,15.26,0.9141
+gossan_lead,"Great Gossan Lead, VA",gossan_lead_mosaic,2087,262.43,0.01,30,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,4623.610680382928,13.03,0.0,11.35,1.0

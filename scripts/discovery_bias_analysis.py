@@ -52,6 +52,7 @@ from critical_minerals_aster.mrds import (
     mrds_to_points_gdf,
     reclassify_mrds_earth_mri,
     spatial_join_deposits_zones,
+    validate_mrds,
 )
 from critical_minerals_aster.significance import run_binomial
 
@@ -142,7 +143,7 @@ def _best_year(row: pd.Series) -> float | None:
 
 def main() -> None:
     mrds_path = ROOT / "data" / "mrds.csv"
-    mrds_all = pd.read_csv(mrds_path, low_memory=False)
+    mrds_all, _ = validate_mrds(pd.read_csv(mrds_path, low_memory=False))
 
     sig_path = ROOT / "results" / "significance_critical_only.csv"
     sig_df = pd.read_csv(sig_path)

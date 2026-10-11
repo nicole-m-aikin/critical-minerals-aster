@@ -1,0 +1,23 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,273,33,12.1,nested,site,,,False,,24,3287.532331957852,11.84,8.74,16.49,0.4771
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,209,23,11.0,nested,commodity,Gold/Silver,,False,,4,3863.583435146706,11.84,7.45,15.97,0.6769
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,11,4,36.4,nested,commodity,Mercury,,False,,3,1471.3419287383924,11.84,15.17,64.62,0.0326
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,31,3,9.7,nested,commodity,Other,,False,,10,1347.50659567772,11.84,3.35,24.9,0.7275
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,19,3,15.8,nested,commodity,Sand/Gravel,,False,,5,1556.9016592559174,11.84,5.52,37.57,0.3945
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,1,0,0.0,nested,commodity,Stone,,False,,1,436.22917053958923,11.84,0.0,79.35,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,2,0,0.0,nested,commodity,Uranium,,False,,1,1016.2811501491308,11.84,0.0,65.76,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,9,0,0.0,nested,earth_mri,,Base Metals,True,,1,1367.8339225607067,11.84,0.0,29.92,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,1,1016.2811501491308,11.84,0.0,65.76,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,205,23,11.2,nested,earth_mri,,Gold/Silver,True,,4,3896.311952936536,11.84,7.59,16.27,0.6401
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,51,9,17.6,nested,earth_mri,,Non-Critical,False,,16,1521.251802880673,11.84,9.57,30.25,0.1434
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,6,1,16.7,nested,earth_mri,,Specialty/High-Tech,True,,2,1137.5777870407992,11.84,3.01,56.35,0.5305
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,5,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,891.9204058674757,11.84,0.0,43.45,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,1,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,1,386.40140521584476,11.84,0.0,79.35,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,10,4,40.0,nested,mineral_system,,,False,Meteoric Convection,3,1342.8324225662475,11.84,16.82,68.73,0.0229
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,1,1016.2811501491308,11.84,0.0,65.76,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,98,10,10.2,nested,mineral_system,,,False,Orogenic,3,3674.9479099099544,11.84,5.64,17.77,0.737
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,1,1556.0678999904676,11.84,0.0,65.76,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,64,7,10.9,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,4023.4965480140245,11.84,5.4,20.9,0.6458
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,3,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,1,1020.4419362667109,11.84,0.0,56.15,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,2,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,1668.6735850545,11.84,0.0,65.76,1.0
+steamboat_springs,"Steamboat Springs, NV",steamboat_springs_mosaic,3064,138.48,0.01,86,12,14.0,nested,mineral_system,,,False,Unknown System,14,2907.3250423374,11.84,8.17,22.82,0.3178

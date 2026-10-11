@@ -1,0 +1,20 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,33,0,0.0,nested,site,,,False,,0,10257.923478256389,11.15,0.0,10.43,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,11,0,0.0,nested,commodity,Gold/Silver,,False,,0,10225.83030824768,11.15,0.0,25.88,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,19,0,0.0,nested,commodity,Other,,False,,0,9599.27343867623,11.15,0.0,16.82,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,3,0,0.0,nested,commodity,Uranium,,False,,0,14547.048685629328,11.15,0.0,56.15,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,14,0,0.0,nested,earth_mri,,Base Metals,True,,0,9051.812720387132,11.15,0.0,21.53,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,13694.653048401526,11.15,0.0,79.35,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,3,0,0.0,nested,earth_mri,,Energy,True,,0,14547.048685629328,11.15,0.0,56.15,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,2,0,0.0,nested,earth_mri,,Gold/Silver,True,,0,10825.18465949012,11.15,0.0,65.76,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,4156.72031557782,11.15,0.0,79.35,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,6,0,0.0,nested,earth_mri,,Non-Critical,False,,0,6651.452522677061,11.15,0.0,39.03,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,6,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,14789.082136855171,11.15,0.0,39.03,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,9856.287658448819,11.15,0.0,65.76,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,1,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,7210.291550016031,11.15,0.0,79.35,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,3,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,7419.21664266151,11.15,0.0,56.15,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,9,0,0.0,nested,mineral_system,,,False,Orogenic,0,9135.926544451238,11.15,0.0,29.92,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,4349.01566126682,11.15,0.0,79.35,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,7,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,15486.78018131274,11.15,0.0,35.43,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,7,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,9908.761487728263,11.15,0.0,35.43,1.0
+round_top,"Round Top Mountain, TX",round_top_mosaic,3575,210.95,0.01,3,0,0.0,nested,mineral_system,,,False,Unknown System,0,8329.937247649208,11.15,0.0,56.15,1.0

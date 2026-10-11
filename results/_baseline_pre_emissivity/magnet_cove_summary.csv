@@ -1,0 +1,20 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,120,22,18.3,nested,site,,,False,,46,1306.7836171972167,12.77,12.43,26.2,0.0508
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,commodity,Gold/Silver,,False,,1,420.740725286368,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,83,18,21.7,nested,commodity,Other,,False,,32,1098.6576106176371,12.77,14.18,31.7,0.0162
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,23,2,8.7,nested,commodity,Sand/Gravel,,False,,7,2330.914265519123,12.77,2.42,26.8,0.8115
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,13,2,15.4,nested,commodity,Stone,,False,,6,891.8218115519946,12.77,4.33,42.24,0.5087
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,2,0,0.0,nested,earth_mri,,Base Metals,True,,1,546.5417359334454,12.77,0.0,65.76,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,2,1,50.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,1010.8154621564354,12.77,9.45,90.55,0.2392
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,earth_mri,,Gold/Silver,True,,1,420.740725286368,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,18,1,5.6,nested,earth_mri,,Industrial,True,,9,555.2439188014813,12.77,0.99,25.76,0.9146
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,83,17,20.5,nested,earth_mri,,Non-Critical,False,,30,1632.6953956239688,12.77,13.2,30.38,0.032
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,14,3,21.4,nested,earth_mri,,Specialty/High-Tech,True,,5,555.033611927414,12.77,7.57,47.59,0.2618
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,1,120.83283391419133,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,1,270.27024825163096,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,5,1,20.0,nested,mineral_system,,,False,Magmatic REE,2,569.9071989173392,12.77,3.62,62.45,0.4951
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,1,100.0,nested,mineral_system,,,False,Marine Chemocline,0,612.3419001078564,12.77,20.65,100.0,0.1277
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,5,1,20.0,nested,mineral_system,,,False,Meteoric Recharge,1,620.4181516431753,12.77,3.62,62.45,0.4951
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,mineral_system,,,False,Orogenic,1,420.740725286368,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,1,337.34895349745614,12.77,0.0,79.35,1.0
+magnet_cove,"Magnet Cove, AR",magnet_cove_mosaic,3650,289.51,0.02,105,19,18.1,nested,mineral_system,,,False,Unknown System,39,1420.0083109505329,12.77,11.9,26.54,0.0732

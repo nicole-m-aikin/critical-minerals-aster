@@ -1,0 +1,94 @@
+{
+  "site_id": "goldfield",
+  "granule_ur": [
+    "AV520250627t181139_005_L2A_RFL_1",
+    "AV520260601t193702_001_L2A_RFL_1",
+    "AV520260601t195308_003_L2A_RFL_1",
+    "AV520250612t184114_007_L2A_RFL_1",
+    "AV520250801t204339_008_L2A_RFL_1",
+    "AV520250627t172359_001_L2A_RFL_1",
+    "AV520260601t195308_002_L2A_RFL_1",
+    "AV520250627t181139_006_L2A_RFL_1",
+    "AV520250627t181139_004_L2A_RFL_1",
+    "AV520250612t181608_007_L2A_RFL_1"
+  ],
+  "nc_path": [
+    "data/gemx/aviris/goldfield/AV520250627t181139_005_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520260601t193702_001_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520260601t195308_003_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250612t184114_007_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250801t204339_008_L2A_OE_da8b3ef7_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250627t172359_001_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520260601t195308_002_L2A_OE_8b56cd03_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250627t181139_006_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250627t181139_004_L2A_OE_25ef84e2_RFL_ORT.nc",
+    "data/gemx/aviris/goldfield/AV520250612t181608_007_L2A_OE_25ef84e2_RFL_ORT.nc"
+  ],
+  "wavelengths_nm": [
+    2121.1875,
+    2166.099853515625,
+    2176.076904296875,
+    2201.0146484375,
+    2206.001220703125,
+    2210.987548828125,
+    2270.798583984375
+  ],
+  "features_used_nm": {
+    "aloh": 2201.0146484375,
+    "kaolinite": [
+      2166.099853515625,
+      2206.001220703125
+    ],
+    "alunite": [
+      2176.076904296875,
+      2210.987548828125
+    ]
+  },
+  "crs": "EPSG:32611",
+  "town_lon": -117.23563,
+  "town_lat": 37.70854,
+  "district_lon": -117.14341,
+  "district_lat": 37.71938,
+  "bbox_centroid": [
+    -117.35,
+    37.8
+  ],
+  "site_bbox_wgs84": [
+    -117.65,
+    37.55,
+    -117.05,
+    38.05
+  ],
+  "mosaic_resolution_m": 10.0,
+  "mosaic_bbox_frac": 0.6860942746027514,
+  "indices_site_bbox": {
+    "aloh": {
+      "name": "aloh",
+      "n_valid": 20258377,
+      "p50": 0.03923206031322479,
+      "p90": 0.09700612723827362,
+      "p99": 0.215548574924469,
+      "frac_gt_0_05": 0.40162314088636025,
+      "frac_gt_0_10": 0.09300315617583778
+    },
+    "kaolinite": {
+      "name": "kaolinite",
+      "n_valid": 7623868,
+      "p50": 0.00903620570898056,
+      "p90": 0.04223255440592766,
+      "p99": 0.11708836257457733,
+      "frac_gt_0_05": 0.07924455145340921,
+      "frac_gt_0_10": 0.01727312172771092
+    },
+    "alunite": {
+      "name": "alunite",
+      "n_valid": 10880924,
+      "p50": 0.014055096544325352,
+      "p90": 0.05121229216456413,
+      "p99": 0.12410470098257065,
+      "frac_gt_0_05": 0.10345160025012581,
+      "frac_gt_0_10": 0.023469973689734438
+    }
+  },
+  "note": "AVIRIS-5 mosaic onto site.bbox_wgs84 / EPSG:32611, the same window as the ASTER figures. Scenes chosen by greedy bbox set-cover (ASTER mosaic analogue; flight lines cannot pass a 30% single-scene gate), seeded with town and district. First finite pixel wins. Not Tetracorder."
+}

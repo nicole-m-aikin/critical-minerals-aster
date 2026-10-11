@@ -1,0 +1,17 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,265,11,4.2,nested,site,,,False,,5,6894.160013691088,10.73,2.33,7.28,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,110,3,2.7,nested,commodity,Gold/Silver,,False,,0,6437.404575395566,10.73,0.93,7.71,0.9996
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,147,7,4.8,nested,commodity,Other,,False,,5,7218.411218383422,10.73,2.33,9.5,0.9968
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,4569.128341474237,10.73,0.0,65.76,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,6,1,16.7,nested,commodity,Stone,,False,,0,8098.865758219105,10.73,3.01,56.35,0.4938
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,22,1,4.5,nested,earth_mri,,Base Metals,True,,0,7268.518954651078,10.73,0.81,21.8,0.9176
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,2,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,11726.69993025404,10.73,0.0,65.76,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,110,3,2.7,nested,earth_mri,,Gold/Silver,True,,0,6437.404575395566,10.73,0.93,7.71,0.9996
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,1,159.65208338469532,10.73,0.0,79.35,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,130,7,5.4,nested,earth_mri,,Non-Critical,False,,4,7194.7494722185365,10.73,2.63,10.7,0.9889
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,9,1,11.1,nested,mineral_system,,,False,Basin Brine Path,0,6804.183399976011,10.73,1.99,43.5,0.6399
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,5,0,0.0,nested,mineral_system,,,False,Chemical Weathering,1,7437.057462820261,10.73,0.0,43.45,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,132,2,1.5,nested,mineral_system,,,False,Orogenic,0,6423.276002330081,10.73,0.42,5.36,1.0
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,20,1,5.0,nested,mineral_system,,,False,Placer,0,6574.384716668843,10.73,0.89,23.61,0.8966
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,94,6,6.4,nested,mineral_system,,,False,Unknown System,4,7351.92010114833,10.73,2.96,13.23,0.9459
+ducktown,"Ducktown, TN",ducktown_mosaic,5346,236.47,0.01,5,1,20.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,11617.76991307242,10.73,3.62,62.45,0.433

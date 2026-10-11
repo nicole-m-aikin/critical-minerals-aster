@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,377,58,15.4,nested,site,,,False,,6,10389.16976591191,11.97,12.09,19.37,0.0278
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,91,22,24.2,nested,commodity,Gold/Silver,,False,,1,9911.730221569027,11.97,16.54,33.9,0.0009
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,2,0,0.0,nested,commodity,Mercury,,False,,0,2360.0676831063897,11.97,0.0,65.76,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,231,28,12.1,nested,commodity,Other,,False,,3,11360.33459754895,11.97,8.52,16.96,0.5015
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,43,8,18.6,nested,commodity,Sand/Gravel,,False,,2,6943.858624861467,11.97,9.74,32.62,0.1357
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,5,0,0.0,nested,commodity,Stone,,False,,0,7708.963899625456,11.97,0.0,43.45,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,5,0,0.0,nested,commodity,Uranium,,False,,0,9732.27676376366,11.97,0.0,43.45,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,199,33,16.6,nested,earth_mri,,Base Metals,True,,4,11545.900440117606,11.97,12.06,22.37,0.0332
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,7,1,14.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,10314.155295012732,11.97,2.57,51.31,0.5903
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,5,0,0.0,nested,earth_mri,,Energy,True,,0,9732.27676376366,11.97,0.0,43.45,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,10,3,30.0,nested,earth_mri,,Gold/Silver,True,,0,7730.600808863684,11.97,10.78,60.32,0.108
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,22,1,4.5,nested,earth_mri,,Industrial,True,,0,12031.135591248394,11.97,0.81,21.8,0.9394
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,129,20,15.5,nested,earth_mri,,Non-Critical,False,,2,8629.016146944088,11.97,10.27,22.74,0.1363
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,5,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,8617.653845918265,11.97,0.0,43.45,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,119,22,18.5,nested,mineral_system,,,False,Basin Brine Path,2,10573.586458164627,11.97,12.54,26.41,0.0251
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,15,1,6.7,nested,mineral_system,,,False,Hybrid Magmatic REE,0,13387.363621499968,11.97,1.19,29.82,0.8522
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,4,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,9044.986357583595,11.97,0.0,48.99,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,4,1,25.0,nested,mineral_system,,,False,Marine Evaporite,0,6173.33684164968,11.97,4.56,69.94,0.3994
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Convection,0,2360.0676831063897,11.97,0.0,65.76,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,5,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,9732.27676376366,11.97,0.0,43.45,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,35,8,22.9,nested,mineral_system,,,False,Orogenic,1,11340.108874279018,11.97,12.07,39.02,0.0511
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,4,1,25.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,8164.639115329596,11.97,4.56,69.94,0.3994
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,6,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,11197.757028257825,11.97,0.0,39.03,1.0
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,12,1,8.3,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,13695.749780849697,11.97,1.49,35.39,0.7834
+san_francisco_frisco,"San Francisco (Frisco), UT",san_francisco_frisco_mosaic,2344,252.24,0.01,171,24,14.0,nested,mineral_system,,,False,Unknown System,3,9837.994387847424,11.97,9.62,20.03,0.2328

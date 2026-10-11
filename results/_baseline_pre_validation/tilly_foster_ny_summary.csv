@@ -1,0 +1,19 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,155,29,18.7,nested,site,,,False,,11,12108.186866870396,12.48,13.35,25.58,0.0167
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,94,12,12.8,nested,commodity,Other,,False,,2,13700.231606482988,12.48,7.46,21.0,0.513
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,31,13,41.9,nested,commodity,Sand/Gravel,,False,,3,8957.790499729279,12.48,26.42,59.23,0.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,29,4,13.8,nested,commodity,Stone,,False,,6,9886.430802124027,12.48,5.5,30.56,0.4976
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,commodity,Uranium,,False,,0,24549.194602306572,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,3,2,66.7,nested,earth_mri,,Base Metals,True,,1,3025.993512606794,12.48,20.77,93.85,0.0428
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,20911.700784309247,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,earth_mri,,Energy,True,,0,24549.194602306572,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,145,27,18.6,nested,earth_mri,,Non-Critical,False,,10,12082.35479224289,12.48,13.12,25.74,0.0215
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,5,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,14057.728713051238,12.48,0.0,43.45,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,1,100.0,nested,mineral_system,,,False,Basin Brine Path,1,466.6151460710933,12.48,20.65,100.0,0.1248
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,10,2,20.0,nested,mineral_system,,,False,Chemical Weathering,0,16994.275215888578,12.48,5.67,50.98,0.3603
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,20911.700784309247,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,24549.194602306572,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,3,0,0.0,nested,mineral_system,,,False,Orogenic,0,11564.692515440574,12.48,0.0,56.15,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,8104.104159452375,12.48,0.0,79.35,1.0
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,1,1,100.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,507.261232296914,12.48,20.65,100.0,0.1248
+tilly_foster_ny,"Tilly Foster, NY",tilly_foster_ny_mosaic,2500,228.3,0.02,137,25,18.2,nested,mineral_system,,,False,Unknown System,10,11807.25006376108,12.48,12.68,25.55,0.0326

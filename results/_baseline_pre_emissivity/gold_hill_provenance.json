@@ -1,0 +1,139 @@
+{
+  "site_id": "gold_hill",
+  "granule_id": "gold_hill_mosaic",
+  "timestamp_utc": "2026-09-27T22:33:37.612786+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 4514,
+  "raster_bbox_wgs84": [
+    -114.24117113261605,
+    39.74743970680424,
+    -113.7026895274904,
+    40.21318828152852
+  ],
+  "inputs": {
+    "site_config": "sites/gold_hill.yaml",
+    "site_config_sha256": "76f538c42e8c2603139cbfee539cc643db91130d399d1c2b1d9b40358d064803",
+    "bbox_wgs84": [
+      -114.22,
+      39.76,
+      -113.72,
+      40.2
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/gold_hill_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "gold_hill",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00409132019183141_20250905081030",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 9,
+          "bbox_coverage": 0.6227
+        },
+        {
+          "granule_id": "AST_L1T_00406112020183153_20250909005353",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 6,
+          "bbox_coverage": 0.4988
+        }
+      ],
+      "created_utc": "2026-09-27T22:33:36+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 350,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 1,
+      "duplicate_record": 2,
+      "n_output": 347,
+      "n_flag_shared_coords": 21,
+      "n_flag_score_high": 246,
+      "n_flag_producer": 150
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -114.24117113261605,
+                40.19977084143031
+              ],
+              [
+                -114.22155073803121,
+                39.78385442693773
+              ],
+              [
+                -114.0143223851135,
+                39.75377455404359
+              ],
+              [
+                -114.00485381734163,
+                39.77751882275355
+              ],
+              [
+                -113.99960170033745,
+                39.75334594577681
+              ],
+              [
+                -113.7026895274904,
+                39.76064504233557
+              ],
+              [
+                -113.72059542640163,
+                40.21318828152852
+              ],
+              [
+                -114.24117113261605,
+                40.19977084143031
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 2,
+  "mean_nearest_structure_m": 9161.798776217409,
+  "inputs_recorded_utc": "2026-09-27T22:46:30.277340+00:00"
+}

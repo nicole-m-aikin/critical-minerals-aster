@@ -16,6 +16,9 @@ dependencies:
   - pip
   - pip:
       - earthaccess
+      - netCDF4
       - spectral
       - matplotlib-scalebar
       - contextily
+      # Optional: live GEE parity (scripts/gee_parity_benchmark.py --gee)
+      # - earthengine-api

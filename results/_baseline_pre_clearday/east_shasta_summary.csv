@@ -1,0 +1,16 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,128,15,11.7,nested,site,,,False,,5,3626.433729776116,9.83,7.23,18.44,0.2759
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,16,1,6.2,nested,commodity,Gold/Silver,,False,,1,2352.2440401603226,9.83,1.11,28.33,0.8091
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,3,1,33.3,nested,commodity,Mercury,,False,,0,5855.279534581582,9.83,6.15,79.23,0.2669
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,101,13,12.9,nested,commodity,Other,,False,,3,3794.814835013005,9.83,7.68,20.78,0.1917
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,7940.010556413955,9.83,0.0,79.35,1.0
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,7,0,0.0,nested,commodity,Stone,,False,,1,2537.9236103293456,9.83,0.0,35.43,1.0
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,60,6,10.0,nested,earth_mri,,Base Metals,True,,0,3895.970210032135,9.83,4.66,20.15,0.5457
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,12,1,8.3,nested,earth_mri,,Gold/Silver,True,,1,2369.6081387105223,9.83,1.49,35.39,0.7112
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,4,3,75.0,nested,earth_mri,,Industrial,True,,0,3472.0509636070606,9.83,30.06,95.44,0.0035
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,52,5,9.6,nested,earth_mri,,Non-Critical,False,,4,3617.34237097039,9.83,4.18,20.61,0.589
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,9,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,3916.5952333407413,9.83,0.0,29.92,1.0
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,3,1,33.3,nested,mineral_system,,,False,Meteoric Convection,0,5855.279534581582,9.83,6.15,79.23,0.2669
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,17,1,5.9,nested,mineral_system,,,False,Orogenic,1,2287.4676867819103,9.83,1.05,26.98,0.8279
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,97,13,13.4,nested,mineral_system,,,False,Unknown System,4,3780.967122459888,9.83,8.0,21.59,0.1557
+east_shasta,"East Shasta, CA",east_shasta_mosaic,3345,135.67,0.01,2,0,0.0,nested,mineral_system,,,False,Volcanogenic Seafloor,0,2863.780076814911,9.83,0.0,65.76,1.0

@@ -1,0 +1,23 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,256,11,4.3,nested,site,,,False,,53,2229.034758753818,12.38,2.42,7.53,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,95,0,0.0,nested,commodity,Gold/Silver,,False,,27,1207.9465793747759,12.38,0.0,3.89,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,147,7,4.8,nested,commodity,Other,,False,,25,2614.0815097522923,12.38,2.33,9.5,0.9995
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,3,2,66.7,nested,commodity,Sand/Gravel,,False,,0,6439.231626669759,12.38,20.77,93.85,0.0422
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,10,2,20.0,nested,commodity,Stone,,False,,1,3766.0952437021683,12.38,5.67,50.98,0.3563
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,14629.343949755692,12.38,0.0,79.35,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,106,0,0.0,nested,earth_mri,,Base Metals,True,,13,1440.5657155590611,12.38,0.0,3.5,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,57,3,5.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,22,1506.9982232589082,12.38,1.81,14.37,0.9781
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,14629.343949755692,12.38,0.0,79.35,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,25,0,0.0,nested,earth_mri,,Gold/Silver,True,,6,1330.3052609574909,12.38,0.0,13.32,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,9,1,11.1,nested,earth_mri,,Industrial,True,,3,2488.237223412712,12.38,1.99,43.5,0.6955
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,58,7,12.1,nested,earth_mri,,Non-Critical,False,,9,4512.981434164685,12.38,5.97,22.88,0.5879
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,37,0,0.0,nested,mineral_system,,,False,Basin Brine Path,6,1453.2119205611432,12.38,0.0,9.41,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,1,0,0.0,nested,mineral_system,,,False,Chemical Weathering,1,130.98516553370604,12.38,0.0,79.35,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,4,1,25.0,nested,mineral_system,,,False,Hybrid Magmatic REE,1,1754.6074807008818,12.38,4.56,69.94,0.4105
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,39,3,7.7,nested,mineral_system,,,False,Marine Chemocline,13,1823.8937859597372,12.38,2.65,20.32,0.8768
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,10618.601019531594,12.38,0.0,65.76,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,14629.343949755692,12.38,0.0,79.35,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,50,0,0.0,nested,mineral_system,,,False,Orogenic,11,1461.7017617445931,12.38,0.0,7.14,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,1225.4764018316996,12.38,0.0,65.76,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,6,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,3,414.17262950847424,12.38,0.0,39.03,1.0
+bisbee,"Bisbee, AZ",bisbee_mosaic,6045,298.57,0.01,114,7,6.1,nested,mineral_system,,,False,Unknown System,18,2848.2031735323267,12.38,3.01,12.13,0.9905

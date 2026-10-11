@@ -1,0 +1,131 @@
+{
+  "site_id": "jerritt_canyon",
+  "granule_id": "jerritt_canyon_mosaic",
+  "timestamp_utc": "2026-09-27T22:28:54.754824+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 8319,
+  "raster_bbox_wgs84": [
+    -116.05815814815897,
+    41.19348935550942,
+    -115.38787223605742,
+    41.70735274429884
+  ],
+  "inputs": {
+    "site_config": "sites/jerritt_canyon.yaml",
+    "site_config_sha256": "a285501d5826fa6977e204fda0e1b232ab3bb8ba1c4847382be36bb7f875d8bd",
+    "bbox_wgs84": [
+      -116.05,
+      41.2,
+      -115.4,
+      41.7
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/jerritt_canyon_faults.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "jerritt_canyon",
+      "tier": "day_clear",
+      "union_bbox_coverage": 1.0,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00407222018184522_20250828133325",
+          "cloud_pct": 3.0,
+          "day_night": "Day",
+          "month": 7,
+          "bbox_coverage": 0.9502
+        },
+        {
+          "granule_id": "AST_L1T_00407192011184337_20250711001004",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 7,
+          "bbox_coverage": 0.693
+        }
+      ],
+      "created_utc": "2026-09-27T22:28:53+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 150,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 7,
+      "duplicate_record": 2,
+      "n_output": 141,
+      "n_flag_shared_coords": 17,
+      "n_flag_score_high": 40,
+      "n_flag_producer": 51
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -116.05080073364253,
+                41.70735274429884
+              ],
+              [
+                -116.05723852046243,
+                41.26478582301507
+              ],
+              [
+                -115.60100232703486,
+                41.1961019193857
+              ],
+              [
+                -115.40036387003526,
+                41.19348935550942
+              ],
+              [
+                -115.38787223605742,
+                41.699963945295444
+              ],
+              [
+                -116.05080073364253,
+                41.70735274429884
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 7,
+  "mean_nearest_structure_m": 4726.850339101394,
+  "inputs_recorded_utc": "2026-09-27T22:46:01.655565+00:00"
+}

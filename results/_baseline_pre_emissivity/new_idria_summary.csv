@@ -1,0 +1,18 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,181,6,3.3,nested,site,,,False,,4,14599.585502375041,11.98,1.53,7.04,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,62,1,1.6,nested,commodity,Mercury,,False,,0,16738.309143406193,11.98,0.29,8.59,0.9996
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,110,5,4.5,nested,commodity,Other,,False,,3,13626.02897357402,11.98,1.96,10.2,0.9979
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,2,0,0.0,nested,commodity,Sand/Gravel,,False,,0,2787.2345035114877,11.98,0.0,65.76,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,7,0,0.0,nested,commodity,Stone,,False,,1,14330.307562647693,11.98,0.0,35.43,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,3,0,0.0,nested,earth_mri,,Base Metals,True,,2,459.2439141984889,11.98,0.0,56.15,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,15400.065945136608,11.98,0.0,79.35,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,51,0,0.0,nested,earth_mri,,Industrial,True,,1,15102.746494209552,11.98,0.0,7.0,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,125,6,4.8,nested,earth_mri,,Non-Critical,False,,1,14713.257796913627,11.98,2.22,10.08,0.9982
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,16349.882423260127,11.98,0.0,79.35,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,45,0,0.0,nested,mineral_system,,,False,Mafic Magmatic,1,14980.23362783869,11.98,0.0,7.87,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,10,5,50.0,nested,mineral_system,,,False,Marine Evaporite,0,4315.3437549604805,11.98,23.66,76.34,0.0037
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,61,1,1.6,nested,mineral_system,,,False,Meteoric Convection,0,16702.023344725632,11.98,0.29,8.72,0.9996
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,1,0,0.0,nested,mineral_system,,,False,Orogenic,0,1133.9431572032427,11.98,0.0,79.35,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,18951.742862920397,11.98,0.0,79.35,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,16349.882423260127,11.98,0.0,79.35,1.0
+new_idria,"New Idria, CA",new_idria_mosaic,4260,240.38,0.01,62,0,0.0,nested,mineral_system,,,False,Unknown System,3,14032.290849288544,11.98,0.0,5.83,1.0

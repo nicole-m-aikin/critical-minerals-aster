@@ -1,0 +1,22 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,952,156,16.4,nested,site,,,False,,404,973.5305277693935,11.86,14.17,18.87,0.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,333,40,12.0,nested,commodity,Gold/Silver,,False,,158,892.4783753057702,11.86,8.95,15.94,0.4917
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,17,3,17.6,nested,commodity,Mercury,,False,,7,847.5701007798892,11.86,6.19,41.03,0.3278
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,564,103,18.3,nested,commodity,Other,,False,,229,999.0894077275328,11.86,15.29,21.66,0.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,22,8,36.4,nested,commodity,Sand/Gravel,,False,,2,1496.8284852896352,11.86,19.73,57.05,0.0027
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,16,2,12.5,nested,commodity,Stone,,False,,8,1173.776194480151,11.86,3.5,36.02,0.5819
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,60,8,13.3,nested,earth_mri,,Base Metals,True,,25,1331.2906973473005,11.86,6.91,24.17,0.4198
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,70,10,14.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,20,1242.9954850166564,11.86,7.95,24.34,0.3158
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,309,40,12.9,nested,earth_mri,,Gold/Silver,True,,150,877.747556799707,11.86,9.65,17.15,0.3027
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,398,79,19.8,nested,earth_mri,,Industrial,True,,168,901.9603189216804,11.86,16.23,24.05,0.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,108,19,17.6,nested,earth_mri,,Non-Critical,False,,37,1161.3375465656954,11.86,11.56,25.85,0.0509
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,5,0,0.0,nested,earth_mri,,PGM,True,,4,566.0580959440233,11.86,0.0,43.45,1.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,2,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,727.494576852554,11.86,0.0,65.76,1.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,1,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,720.5875057518376,11.86,0.0,79.35,1.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,420,81,19.3,nested,mineral_system,,,False,Mafic Magmatic,175,923.2675807784263,11.86,15.8,23.33,0.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,9,0,0.0,nested,mineral_system,,,False,Marine Chemocline,2,873.7112595605157,11.86,0.0,29.92,1.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,15,2,13.3,nested,mineral_system,,,False,Meteoric Convection,7,777.6045365903555,11.86,3.74,37.88,0.5458
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,309,36,11.7,nested,mineral_system,,,False,Orogenic,150,873.4773225447491,11.86,8.54,15.71,0.5722
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,30,8,26.7,nested,mineral_system,,,False,Placer,12,965.7711487930476,11.86,14.18,44.45,0.0207
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,751.2227598971342,11.86,0.0,79.35,1.0
+josephine_ophiolite,"Josephine Ophiolite, OR",josephine_ophiolite_mosaic,3797,220.98,0.01,167,29,17.4,nested,mineral_system,,,False,Unknown System,58,1312.286058256621,11.86,12.37,23.83,0.023

@@ -1,0 +1,13 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,143,25,17.5,nested,site,,,False,,6,17525.485550492882,11.92,12.13,24.54,0.0321
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,100,13,13.0,nested,commodity,Other,,False,,1,19604.597355968846,11.92,7.76,20.98,0.4142
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,17,7,41.2,nested,commodity,Sand/Gravel,,False,,2,14320.132739668943,11.92,21.61,63.99,0.0022
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,26,5,19.2,nested,commodity,Stone,,False,,3,11624.709290354842,11.92,8.51,37.88,0.1912
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,6,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,20299.69530909935,11.92,0.0,39.03,1.0
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,126,24,19.0,nested,earth_mri,,Non-Critical,False,,6,17914.41204709992,11.92,13.15,26.78,0.0136
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,11,1,9.1,nested,earth_mri,,Specialty/High-Tech,True,,0,11557.303993754198,11.92,1.62,37.74,0.7525
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,5,0,0.0,nested,mineral_system,,,False,Metamorphic,0,18798.461358137134,11.92,0.0,43.45,1.0
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,4,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,12142.806886503737,11.92,0.0,48.99,1.0
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,1,1,100.0,nested,mineral_system,,,False,Orogenic,1,63.44855095234836,11.92,20.65,100.0,0.1192
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,3,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,22237.25834554798,11.92,0.0,56.15,1.0
+willsboro_lewis_ny,"Willsboro-Lewis, NY",willsboro_lewis_ny_mosaic,2796,227.27,0.01,130,24,18.5,nested,mineral_system,,,False,Unknown System,5,17667.735967662968,11.92,12.73,26.0,0.0195

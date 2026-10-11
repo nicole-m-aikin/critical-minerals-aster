@@ -1,0 +1,21 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,52,8,15.4,nested,site,,,False,,0,8412.308818146372,10.66,8.01,27.52,0.1853
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,13,1,7.7,nested,commodity,Gold/Silver,,False,,0,6131.868671632567,10.66,1.37,33.31,0.769
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,32,7,21.9,nested,commodity,Other,,False,,0,6992.06441383891,10.66,11.02,38.76,0.0482
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,4,0,0.0,nested,commodity,Sand/Gravel,,False,,0,17995.049083878344,10.66,0.0,48.99,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,2,0,0.0,nested,commodity,Stone,,False,,0,16240.024079350249,10.66,0.0,65.76,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,29519.460075329065,10.66,0.0,79.35,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,5,2,40.0,nested,earth_mri,,Base Metals,True,,0,9669.052671172558,10.66,11.76,76.93,0.0913
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,29519.460075329065,10.66,0.0,79.35,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,10,1,10.0,nested,earth_mri,,Gold/Silver,True,,0,3456.4565019902097,10.66,1.79,40.42,0.6761
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,13,1,7.7,nested,earth_mri,,Industrial,True,,0,7035.076814928258,10.66,1.37,33.31,0.769
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,17,2,11.8,nested,earth_mri,,Non-Critical,False,,0,12087.050653901135,10.66,3.29,34.34,0.5544
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,3,0,0.0,nested,earth_mri,,REE,True,,0,4493.93612616483,10.66,0.0,56.15,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,3,2,66.7,nested,earth_mri,,Specialty/High-Tech,True,,0,4864.3673345454545,10.66,20.77,93.85,0.0317
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,3,1,33.3,nested,mineral_system,,,False,Basin Brine Path,0,14973.94645320135,10.66,6.15,79.23,0.2869
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,11,1,9.1,nested,mineral_system,,,False,Hybrid Magmatic REE,0,7057.5417698388765,10.66,1.62,37.74,0.7106
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,3,0,0.0,nested,mineral_system,,,False,Magmatic REE,0,4493.93612616483,10.66,0.0,56.15,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,12,1,8.3,nested,mineral_system,,,False,Orogenic,0,5830.103993376055,10.66,1.49,35.39,0.7415
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,3871.8821255890207,10.66,0.0,79.35,1.0
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,3,2,66.7,nested,mineral_system,,,False,Reduced Intrusion-Related,0,4864.3673345454545,10.66,20.77,93.85,0.0317
+victorio,"Victorio Mountains, NM",victorio_mosaic,4622,121.23,0.01,19,3,15.8,nested,mineral_system,,,False,Unknown System,0,11209.327330923537,10.66,5.52,37.57,0.3303

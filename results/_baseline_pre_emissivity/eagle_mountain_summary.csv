@@ -1,0 +1,17 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,144,8,5.6,nested,site,,,False,,0,13099.193560190812,10.22,2.84,10.58,0.9834
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,114,6,5.3,nested,commodity,Gold/Silver,,False,,0,13977.113077988486,10.22,2.43,11.01,0.9798
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,24,1,4.2,nested,commodity,Other,,False,,0,9557.373952093303,10.22,0.74,20.24,0.9247
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,5,1,20.0,nested,commodity,Stone,,False,,0,10130.969875669998,10.22,3.62,62.45,0.4166
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,12861.157548200303,10.22,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,9,0,0.0,nested,earth_mri,,Base Metals,True,,0,7765.1628882016685,10.22,0.0,29.92,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,15755.854919374366,10.22,0.0,65.76,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,112,6,5.4,nested,earth_mri,,Gold/Silver,True,,0,14165.210537083962,10.22,2.48,11.2,0.9769
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,0,16804.951389386333,10.22,0.0,65.76,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,18,2,11.1,nested,earth_mri,,Non-Critical,False,,0,8864.92701502528,10.22,3.1,32.8,0.5619
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,5203.527632281638,10.22,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,3,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,3459.2251568200086,10.22,0.0,56.15,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,12861.157548200303,10.22,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,114,7,6.1,nested,mineral_system,,,False,Orogenic,0,14068.397919798224,10.22,3.01,12.13,0.9531
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5203.527632281638,10.22,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,4538,178.01,0.01,25,1,4.0,nested,mineral_system,,,False,Unknown System,0,10161.765966381492,10.22,0.71,19.54,0.9324

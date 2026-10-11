@@ -1,0 +1,22 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,171,22,12.9,nested,site,,,False,,0,14942.407015246888,12.01,8.65,18.71,0.3999
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,49,2,4.1,nested,commodity,Gold/Silver,,False,,0,13857.98392612637,12.01,1.13,13.71,0.9855
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,2,1,50.0,nested,commodity,Mercury,,False,,0,35393.66758003407,12.01,9.45,90.55,0.2258
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,44,5,11.4,nested,commodity,Other,,False,,0,14918.899106162282,12.01,4.95,23.98,0.6217
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,10649.973518322413,12.01,0.0,79.35,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,72,14,19.4,nested,commodity,Stone,,False,,0,15218.750563521831,12.01,11.95,30.03,0.046
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,3,0,0.0,nested,commodity,Uranium,,False,,0,14163.82576797444,12.01,0.0,56.15,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,9,0,0.0,nested,earth_mri,,Base Metals,True,,0,15562.172747778295,12.01,0.0,29.92,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,3,0,0.0,nested,earth_mri,,Energy,True,,0,14163.82576797444,12.01,0.0,56.15,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,43,2,4.7,nested,earth_mri,,Gold/Silver,True,,0,14044.630263423347,12.01,1.28,15.46,0.972
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,3,0,0.0,nested,earth_mri,,Industrial,True,,0,12546.793476658584,12.01,0.0,56.15,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,93,18,19.4,nested,earth_mri,,Non-Critical,False,,0,14845.996800609852,12.01,12.61,28.53,0.0273
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,20,2,10.0,nested,earth_mri,,Specialty/High-Tech,True,,0,17518.169167969718,12.01,2.79,30.1,0.7115
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,1,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,19492.10481465992,12.01,0.0,79.35,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,2,1,50.0,nested,mineral_system,,,False,Meteoric Convection,0,35393.66758003407,12.01,9.45,90.55,0.2258
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,3,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,14163.82576797444,12.01,0.0,56.15,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,50,1,2.0,nested,mineral_system,,,False,Orogenic,0,12753.16929883321,12.01,0.35,10.5,0.9983
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,3,1,33.3,nested,mineral_system,,,False,Placer,0,18263.38644123361,12.01,6.15,79.23,0.3188
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,18,2,11.1,nested,mineral_system,,,False,Reduced Intrusion-Related,0,17406.781156878817,12.01,3.1,32.8,0.6546
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,4,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,16489.601205334864,12.01,0.0,48.99,1.0
+silver_peak,"Silver Peak, NV",AST_L1T_00408012010184449_20250705114939,2714,144.12,0.01,90,17,18.9,nested,mineral_system,,,False,Unknown System,0,15007.23991575608,12.01,12.14,28.18,0.0386

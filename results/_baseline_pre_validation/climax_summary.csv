@@ -1,0 +1,25 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,472,1,0.2,nested,site,,,False,,21,4267.586464947538,9.04,0.04,1.19,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,116,0,0.0,nested,commodity,Gold/Silver,,False,,4,3702.004739290205,9.04,0.0,3.21,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,315,1,0.3,nested,commodity,Other,,False,,12,4435.825589593171,9.04,0.06,1.78,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,7,0,0.0,nested,commodity,Sand/Gravel,,False,,1,4054.5018064765463,9.04,0.0,35.43,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,26,0,0.0,nested,commodity,Stone,,False,,4,5090.634358315258,9.04,0.0,12.87,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,8,0,0.0,nested,commodity,Uranium,,False,,0,3355.649376774127,9.04,0.0,32.44,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,135,0,0.0,nested,earth_mri,,Base Metals,True,,6,4321.224236613317,9.04,0.0,2.77,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,126,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,6,4093.5126648123223,9.04,0.0,2.96,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,8,0,0.0,nested,earth_mri,,Energy,True,,0,3355.649376774127,9.04,0.0,32.44,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,81,0,0.0,nested,earth_mri,,Gold/Silver,True,,3,3151.8384689469203,9.04,0.0,4.53,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,1,8973.399261450779,9.04,0.0,65.76,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,117,1,0.9,nested,earth_mri,,Non-Critical,False,,5,5048.732579871544,9.04,0.15,4.68,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,3,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,8120.107459773996,9.04,0.0,56.15,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,118,0,0.0,nested,mineral_system,,,False,Basin Brine Path,6,4160.561820498051,9.04,0.0,3.15,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,1,0,0.0,nested,mineral_system,,,False,Coeur d'Alene-type,0,2671.759523677179,9.04,0.0,79.35,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,1,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,1,240.82652452050667,9.04,0.0,79.35,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,123,0,0.0,nested,mineral_system,,,False,Marine Chemocline,6,4021.127529722956,9.04,0.0,3.03,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,7,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,3672.8205867668867,9.04,0.0,35.43,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,76,0,0.0,nested,mineral_system,,,False,Orogenic,2,3559.2246291766596,9.04,0.0,4.81,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,8,0,0.0,nested,mineral_system,,,False,Placer,1,2338.979031653026,9.04,0.0,32.44,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,2,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,2779.5122974629066,9.04,0.0,65.76,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,2158.2562277153565,9.04,0.0,79.35,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,8,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,6358.884416918337,9.04,0.0,32.44,1.0
+climax,"Climax, CO",climax_mosaic,2024,78.43,0.01,127,1,0.8,nested,mineral_system,,,False,Unknown System,5,5136.474331467248,9.04,0.14,4.33,1.0

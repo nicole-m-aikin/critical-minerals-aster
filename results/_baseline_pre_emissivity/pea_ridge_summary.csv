@@ -1,0 +1,12 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,398,69,17.3,nested,site,,,False,,185,1253.0676398272901,10.71,13.93,21.36,0.0
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,1,1,100.0,nested,commodity,Gold/Silver,,False,,0,530.5213935703724,10.71,20.65,100.0,0.1071
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,369,59,16.0,nested,commodity,Other,,False,,172,1259.766252885501,10.71,12.6,20.08,0.0012
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,1519.9790001542744,10.71,0.0,79.35,1.0
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,27,9,33.3,nested,commodity,Stone,,False,,13,1178.3952941772934,10.71,18.64,52.18,0.0014
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,223,35,15.7,nested,earth_mri,,Base Metals,True,,106,1193.9253731998597,10.71,11.51,21.05,0.014
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,134,23,17.2,nested,earth_mri,,Industrial,True,,59,1371.417564260691,10.71,11.72,24.44,0.0156
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,41,11,26.8,nested,earth_mri,,Non-Critical,False,,20,1187.941678457564,10.71,15.69,41.93,0.0032
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,216,35,16.2,nested,mineral_system,,,False,Basin Brine Path,103,1184.9816007174234,10.71,11.89,21.7,0.0087
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,2,0,0.0,nested,mineral_system,,,False,Chemical Weathering,0,3992.619733684869,10.71,0.0,65.76,1.0
+pea_ridge,"Pea Ridge, MO",pea_ridge_mosaic,8079,154.56,0.01,180,34,18.9,nested,mineral_system,,,False,Unknown System,82,1304.3314190496012,10.71,13.84,25.23,0.0008

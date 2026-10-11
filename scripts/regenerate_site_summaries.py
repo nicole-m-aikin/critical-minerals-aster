@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
@@ -43,7 +44,8 @@ from critical_minerals_aster.metrics import (
     write_site_summary,
     read_mrds_national,
 )
-from critical_minerals_aster.mrds import filter_mrds_bbox, mrds_to_points_gdf
+from critical_minerals_aster.mrds import filter_mrds_bbox, mrds_to_points_gdf, validate_mrds
+from critical_minerals_aster.pipeline import input_provenance
 from critical_minerals_aster.structure import (
     load_structure_layers,
     annotate_deposits_with_structure,
@@ -76,6 +78,9 @@ def load_cached_structs(site, target_crs) -> "gpd.GeoDataFrame | None":
 def main() -> None:
     site_ids = load_site_ids()
     n_ok, n_skip = 0, 0
+    validation_rows: list[dict] = []
+    first_paths = site_paths_for(load_site_by_id(site_ids[0], REPO_ROOT / "sites"), REPO_ROOT)
+    mrds_raw = read_mrds_national(first_paths, validate=False)
 
     for site_id in site_ids:
         print(f"{site_id:22s}", end=" ", flush=True)
@@ -118,12 +123,13 @@ def main() -> None:
             continue
 
         local = filter_mrds_bbox(mrds, raster_bbox)
+        _, site_validation = validate_mrds(filter_mrds_bbox(mrds_raw, raster_bbox))
         deposits = mrds_to_points_gdf(local, zones.crs)
         if tir_footprint is not None and len(tir_footprint):
             try:
                 deposits = gpd.clip(deposits, tir_footprint)
-            except Exception:
-                pass
+            except Exception as exc:
+                print(f"WARN footprint clip failed ({exc!r}); bbox-only", end=" ")
 
         structs = load_cached_structs(site, zones.crs)
         n_on_structure = None
@@ -153,6 +159,16 @@ def main() -> None:
         summary = add_uncertainty_columns(summary, zones, tir_footprint, raster_bbox)
         write_site_summary(summary, paths.site_summary_csv)
 
+        prov["inputs"] = {
+            **input_provenance(site, paths, granule_id),
+            "mrds_validation_site_bbox": site_validation,
+        }
+        prov["inputs_recorded_utc"] = datetime.now(timezone.utc).isoformat()
+        tmp = prov_path.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(prov, indent=2))
+        tmp.replace(prov_path)
+        validation_rows.append({"site_id": site_id, **site_validation})
+
         site_row = summary[summary["row_type"] == "site"].iloc[0]
         print(
             f"n={int(site_row['n_deposits_bbox']):4d}  hits={int(site_row['n_deposits_in_zones']):3d}"
@@ -161,6 +177,10 @@ def main() -> None:
         )
         n_ok += 1
 
+    if validation_rows:
+        out = REPO_ROOT / "results" / "mrds_validation_report.csv"
+        pd.DataFrame(validation_rows).to_csv(out, index=False)
+        print(f"MRDS validation counts per site -> {out.relative_to(REPO_ROOT)}")
     print(f"\n{n_ok} sites regenerated, {n_skip} skipped.")
 
 

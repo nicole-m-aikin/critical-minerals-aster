@@ -1,0 +1,110 @@
+site_id,category,confidence,mrds_top1,mrds_top1_n,mrds_top2,mrds_top2_n,mrds_n_geology_typed,status
+ajo,Porphyry Cu-Mo-Au,high,Porphyry Cu-Mo-Au,2,Placer,1,3,consistent
+alligator_ridge,Sediment-hosted,high,Carlin-type,10,Orogenic,3,15,consistent
+austinville_ivanhoe,Sediment-hosted,high,Volcanogenic Seafloor,33,Basin Brine Path,29,81,consistent
+bisbee,Skarn/Carbonate Replacement,high,Marine Chemocline,4,Skarn / Carbonate Replacement,4,12,consistent
+bodie,Epithermal,high,Placer,8,Porphyry Cu-Mo-Au,6,21,consistent
+carlin_trend,Sediment-hosted,high,Carlin-type,26,Porphyry Cu-Mo-Au,15,66,consistent
+cerro_gordo,Skarn/Carbonate Replacement,high,Orogenic,10,Skarn / Carbonate Replacement,3,14,consistent
+cherry_creek,Skarn/Carbonate Replacement,medium,Orogenic,6,Coeur d'Alene-type,3,11,consistent
+climax,Porphyry Cu-Mo-Au,high,Placer,8,Skarn / Carbonate Replacement,8,21,consistent
+contact_district,Porphyry Cu-Mo-Au,medium,Skarn / Carbonate Replacement,23,Orogenic,14,41,consistent
+cornwall_pa,Skarn/Carbonate Replacement,high,Chemical Weathering,4,Skarn / Carbonate Replacement,1,6,consistent
+cortez,Sediment-hosted,high,Orogenic,37,Carlin-type,12,73,consistent
+courtland_gleeson,Skarn/Carbonate Replacement,high,Skarn / Carbonate Replacement,5,Orogenic,3,10,consistent
+crooks_gap,Uranium/Energy,high,Meteoric Recharge,6,Basin Brine Path,1,7,consistent
+darwin,Skarn/Carbonate Replacement,high,Orogenic,8,Skarn / Carbonate Replacement,3,11,consistent
+east_shasta,Volcanogenic/VMS,high,Orogenic,4,Volcanogenic Seafloor,2,6,consistent
+ely_robinson,Porphyry Cu-Mo-Au,high,Porphyry Cu-Mo-Au,3,Reduced Intrusion-Related,1,4,consistent
+eureka,Skarn/Carbonate Replacement,high,Skarn / Carbonate Replacement,26,Carlin-type,4,37,consistent
+french_creek_pa,Skarn/Carbonate Replacement,high,Chemical Weathering,7,Skarn / Carbonate Replacement,1,8,consistent
+getchell,Sediment-hosted,high,Skarn / Carbonate Replacement,27,Carlin-type,14,55,consistent
+gold_hill,Skarn/Carbonate Replacement,high,Orogenic,32,Skarn / Carbonate Replacement,16,48,consistent
+goldfield,Epithermal,high,Orogenic,30,Porphyry Cu-Mo-Au,26,62,consistent
+gossan_lead,Volcanogenic/VMS,high,Volcanogenic Seafloor,30,Basin Brine Path,22,62,consistent
+iron_springs,Skarn/Carbonate Replacement,high,Orogenic,9,Skarn / Carbonate Replacement,1,10,consistent
+jarbidge,Epithermal,high,Orogenic,47,Porphyry Cu-Mo-Au,21,73,consistent
+josephine_ophiolite,Mafic/Ultramafic,high,Placer,30,Mafic Magmatic,29,74,consistent
+long_canyon,Sediment-hosted,medium,Orogenic,3,Carlin-type,1,5,consistent
+magdalena_kelly,Skarn/Carbonate Replacement,high,Orogenic,2,Skarn / Carbonate Replacement,1,3,consistent
+mascot_jefferson_city,Sediment-hosted,high,Basin Brine Path,10,Chemical Weathering,2,13,consistent
+morenci,Porphyry Cu-Mo-Au,high,Orogenic,6,Porphyry Cu-Mo-Au,4,16,consistent
+mountain_pass,Alkaline/Carbonatite,high,Orogenic,13,Magmatic REE,2,15,consistent
+oatman,Epithermal,high,Orogenic,29,Porphyry Cu-Mo-Au,3,34,consistent
+ore_knob,Volcanogenic/VMS,high,Orogenic,6,Volcanogenic Seafloor,2,8,consistent
+patagonia,Skarn/Carbonate Replacement,medium,Orogenic,17,Skarn / Carbonate Replacement,4,28,consistent
+pioche,Skarn/Carbonate Replacement,high,Skarn / Carbonate Replacement,29,Orogenic,28,74,consistent
+questa_nm,Porphyry Cu-Mo-Au,high,Porphyry Cu-Mo-Au,4,Placer,1,7,consistent
+safford_az,Porphyry Cu-Mo-Au,high,Porphyry Cu-Mo-Au,6,Orogenic,3,11,consistent
+san_francisco_frisco,Skarn/Carbonate Replacement,high,Orogenic,15,Skarn / Carbonate Replacement,12,30,consistent
+shafter,Skarn/Carbonate Replacement,high,Orogenic,16,Skarn / Carbonate Replacement,9,31,consistent
+shirley_basin,Uranium/Energy,high,Meteoric Recharge,12,,0,12,consistent
+snoqualmie_wa,Skarn/Carbonate Replacement,medium,Coeur d'Alene-type,11,Porphyry Cu-Mo-Au,8,21,consistent
+steamboat_springs,Epithermal,high,Porphyry Cu-Mo-Au,57,Orogenic,3,64,consistent
+stillwater,Mafic/Ultramafic,high,Orogenic,17,Mafic Magmatic,11,30,consistent
+summitville,Epithermal,high,Porphyry Cu-Mo-Au,17,Coeur d'Alene-type,16,48,consistent
+tintic,Skarn/Carbonate Replacement,medium,Orogenic,66,Skarn / Carbonate Replacement,4,71,consistent
+tombstone,Skarn/Carbonate Replacement,high,Orogenic,5,Skarn / Carbonate Replacement,4,10,consistent
+tonopah,Epithermal,high,Porphyry Cu-Mo-Au,30,Orogenic,23,85,consistent
+upper_mississippi_valley,Sediment-hosted,high,Basin Brine Path,27,,0,27,consistent
+viburnum_trend,Sediment-hosted,high,Basin Brine Path,3,,0,3,consistent
+webster_addie,Mafic/Ultramafic,high,Volcanogenic Seafloor,8,Mafic Magmatic,4,17,consistent
+west_shasta,Volcanogenic/VMS,high,Volcanogenic Seafloor,11,Orogenic,8,20,consistent
+wet_mountains,Alkaline/Carbonatite,high,Porphyry Cu-Mo-Au,98,Magmatic REE,56,183,consistent
+willsboro_lewis_ny,Skarn/Carbonate Replacement,high,Skarn / Carbonate Replacement,3,Orogenic,1,4,consistent
+yerington,Porphyry Cu-Mo-Au,high,Orogenic,11,Skarn / Carbonate Replacement,11,29,consistent
+arizona_strip,Uranium/Energy,medium,,0,,0,0,no_check
+battle_mountain,Mixed/Other,low,Coeur d'Alene-type,8,Orogenic,6,28,no_check
+cornudas,Alkaline/Carbonatite,medium,,0,,0,0,no_check
+duluth_partridge_river,Mafic/Ultramafic,high,,0,,0,0,no_check
+elk_creek,Alkaline/Carbonatite,high,,0,,0,0,no_check
+gas_hills,Uranium/Energy,high,,0,,0,0,no_check
+green_river,Mixed/Other,high,Marine Evaporite,3,,0,3,no_check
+hanover_fierro,Skarn/Carbonate Replacement,high,,0,,0,0,no_check
+lisbon_valley,Uranium/Energy,high,Basin Brine Path,1,,0,1,no_check
+magnet_cove,Alkaline/Carbonatite,high,,0,,0,0,no_check
+mcdermitt,Mixed/Other,high,Meteoric Convection,15,Porphyry Cu-Mo-Au,7,29,no_check
+pea_ridge,Mixed/Other,medium,Chemical Weathering,2,,0,2,no_check
+silver_peak,Mixed/Other,low,Orogenic,26,Skarn / Carbonate Replacement,4,33,no_check
+thacker_pass,Mixed/Other,high,Climax-type,9,Meteoric Convection,3,13,no_check
+tri_state,Sediment-hosted,high,,0,,0,0,no_check
+ambrosia_lake,Uranium/Energy,high,Basin Brine Path,48,,0,48,review
+bagdad,Porphyry Cu-Mo-Au,high,Orogenic,17,Volcanogenic Seafloor,1,19,review
+bear_lodge,Alkaline/Carbonatite,high,Basin Brine Path,5,,0,5,review
+big_mike,Volcanogenic/VMS,high,Meteoric Convection,17,Coeur d'Alene-type,5,42,review
+bingham_canyon,Porphyry Cu-Mo-Au,high,Placer,12,Orogenic,6,26,review
+black_butte,Sediment-hosted,high,Orogenic,4,Volcanogenic Seafloor,1,5,review
+christmas,Skarn/Carbonate Replacement,high,Orogenic,40,,0,40,review
+dillsburg_pa,Skarn/Carbonate Replacement,high,Chemical Weathering,6,,0,6,review
+ducktown,Volcanogenic/VMS,high,Orogenic,41,Placer,20,72,review
+duluth_south_kawishiwi,Mafic/Ultramafic,high,Volcanogenic Seafloor,7,,0,7,review
+eagle_mountain,Skarn/Carbonate Replacement,medium,Orogenic,6,,0,6,review
+globe_miami,Porphyry Cu-Mo-Au,high,Orogenic,20,,0,20,review
+henry_mountains,Uranium/Energy,high,Placer,3,,0,3,review
+holden,Volcanogenic/VMS,high,Coeur d'Alene-type,14,Porphyry Cu-Mo-Au,5,23,review
+iron_hill,Alkaline/Carbonatite,high,Orogenic,106,Placer,2,111,review
+iron_king,Volcanogenic/VMS,high,Orogenic,61,,0,61,review
+jerome,Volcanogenic/VMS,high,Orogenic,25,Lacustrine Evaporite,1,26,review
+jerritt_canyon,Sediment-hosted,high,Orogenic,3,Placer,1,4,review
+karnes_county,Uranium/Energy,high,Basin Brine Path,37,,0,37,review
+lake_valley,Skarn/Carbonate Replacement,high,Placer,2,Orogenic,1,3,review
+lemhi_pass,Alkaline/Carbonatite,medium,Orogenic,15,Placer,8,23,review
+lemitar,Alkaline/Carbonatite,medium,Orogenic,3,Chemical Weathering,1,5,review
+lordsburg,Porphyry Cu-Mo-Au,high,Orogenic,24,Placer,1,25,review
+marysvale,Epithermal,medium,Orogenic,76,Placer,1,77,review
+mineral_park,Porphyry Cu-Mo-Au,high,Orogenic,132,Placer,1,135,review
+new_idria,Mafic/Ultramafic,high,Orogenic,2,Porphyry Cu-Mo-Au,1,3,review
+organ_mountains,Skarn/Carbonate Replacement,high,Orogenic,15,,0,15,review
+providence_mountains,Skarn/Carbonate Replacement,medium,Orogenic,4,,0,4,review
+randsburg,Epithermal,high,Orogenic,30,Placer,7,39,review
+ray_mine,Porphyry Cu-Mo-Au,high,Orogenic,29,Lacustrine Evaporite,3,37,review
+republic,Epithermal,high,Orogenic,36,Placer,6,45,review
+round_mountain,Epithermal,high,Orogenic,40,Placer,26,109,review
+round_top,Alkaline/Carbonatite,high,Orogenic,8,Skarn / Carbonate Replacement,7,16,review
+san_manuel_az,Porphyry Cu-Mo-Au,high,Orogenic,5,Lacustrine Evaporite,2,9,review
+sierrita,Porphyry Cu-Mo-Au,high,Orogenic,3,Placer,1,4,review
+state_line_chromite,Mafic/Ultramafic,high,Orogenic,4,Placer,1,6,review
+tilly_foster_ny,Skarn/Carbonate Replacement,medium,Chemical Weathering,10,Orogenic,3,14,review
+tyrone_nm,Porphyry Cu-Mo-Au,high,Orogenic,27,Placer,2,30,review
+uravan,Uranium/Energy,high,Placer,2,Basin Brine Path,1,3,review
+victorio,Skarn/Carbonate Replacement,high,Orogenic,4,Placer,1,5,review

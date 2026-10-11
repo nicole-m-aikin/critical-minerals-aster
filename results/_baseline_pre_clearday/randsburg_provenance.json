@@ -1,0 +1,107 @@
+{
+  "site_id": "randsburg",
+  "granule_id": "randsburg_mosaic",
+  "timestamp_utc": "2026-05-22T22:11:16.611654+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 3836,
+  "raster_bbox_wgs84": [
+    -117.95697577389599,
+    35.09757763187509,
+    -117.34814648638844,
+    35.65398816624551
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -117.95697577389599,
+                35.65069614634522
+              ],
+              [
+                -117.95046746838895,
+                35.09757763187509
+              ],
+              [
+                -117.34814648638844,
+                35.100803400632294
+              ],
+              [
+                -117.35053079456422,
+                35.65398816624551
+              ],
+              [
+                -117.95697577389599,
+                35.65069614634522
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 35,
+  "mean_nearest_structure_m": 6797.64075036085,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true,
+  "inputs": {
+    "site_config": "sites/randsburg.yaml",
+    "site_config_sha256": "9aa45492d4236c5c487891b5d1831399909fb27ec457ff81c4b77018a9b81412",
+    "bbox_wgs84": [
+      -117.95,
+      35.1,
+      -117.35,
+      35.65
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/randsburg_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mrds_validation_site_bbox": {
+      "n_input": 662,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 4,
+      "duplicate_record": 4,
+      "n_output": 654,
+      "n_flag_shared_coords": 8,
+      "n_flag_score_high": 81,
+      "n_flag_producer": 339
+    }
+  },
+  "inputs_recorded_utc": "2026-09-27T21:50:46.228542+00:00"
+}

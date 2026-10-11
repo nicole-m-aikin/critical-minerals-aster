@@ -1,0 +1,64 @@
+{
+  "site_id": "jerritt_canyon",
+  "granule_id": "jerritt_canyon_mosaic",
+  "timestamp_utc": "2026-05-22T20:11:40.245036+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "ad4f4706425f02e257ba02b389b68cd5244b1203",
+  "n_zones": 5761,
+  "raster_bbox_wgs84": [
+    -115.84888347235089,
+    41.19348935550942,
+    -115.38787223605742,
+    41.70541697671099
+  ],
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -115.64306439122981,
+                41.70326115299464
+              ],
+              [
+                -115.80544192015071,
+                41.22677833745122
+              ],
+              [
+                -115.60207532934625,
+                41.19611495103973
+              ],
+              [
+                -115.40036387003526,
+                41.19348935550942
+              ],
+              [
+                -115.38787223605742,
+                41.699963945295444
+              ],
+              [
+                -115.64306439122981,
+                41.70326115299464
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 3,
+  "mean_nearest_structure_m": 2858.568558558183,
+  "fig03_version": 10,
+  "fig03_basemap_source": "Esri.WorldImagery",
+  "fig03_basemap_cached": true
+}

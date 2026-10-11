@@ -1,0 +1,26 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,281,39,13.9,nested,site,,,False,,86,1788.0442025358354,11.2,10.32,18.41,0.0943
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,94,7,7.4,nested,commodity,Gold/Silver,,False,,28,1519.3462122687602,11.2,3.65,14.58,0.9128
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,164,25,15.2,nested,commodity,Other,,False,,52,1942.408521516508,11.2,10.54,21.54,0.0688
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,3,0,0.0,nested,commodity,Sand/Gravel,,False,,0,2995.496739836544,11.2,0.0,56.15,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,12,4,33.3,nested,commodity,Stone,,False,,5,1070.866360599129,11.2,13.81,60.94,0.0372
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,8,3,37.5,nested,commodity,Uranium,,False,,1,2403.7491104874816,11.2,13.68,69.43,0.051
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,171,19,11.1,nested,earth_mri,,Base Metals,True,,55,1558.1382837950732,11.2,7.23,16.7,0.5502
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,6,2,33.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,1,1256.8680766894634,11.2,9.68,70.0,0.1386
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,8,3,37.5,nested,earth_mri,,Energy,True,,1,2403.7491104874816,11.2,13.68,69.43,0.051
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,38,3,7.9,nested,earth_mri,,Gold/Silver,True,,13,1816.5519236999519,11.2,2.72,20.8,0.8139
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,1,0,0.0,nested,earth_mri,,Industrial,True,,0,575.910965247538,11.2,0.0,79.35,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,49,10,20.4,nested,earth_mri,,Non-Critical,False,,14,2663.1700842548385,11.2,11.48,33.64,0.0426
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,1,0,0.0,nested,earth_mri,,REE,True,,1,22.224159251937948,11.2,0.0,79.35,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,7,2,28.6,nested,earth_mri,,Specialty/High-Tech,True,,1,1300.7329551415555,11.2,8.22,64.11,0.1801
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,37,2,5.4,nested,mineral_system,,,False,Basin Brine Path,9,1318.468319031933,11.2,1.5,17.7,0.93
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,1,0,0.0,nested,mineral_system,,,False,Magmatic REE,1,22.224159251937948,11.2,0.0,79.35,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,5,2,40.0,nested,mineral_system,,,False,Marine Chemocline,1,1008.9861530543036,11.2,11.76,76.93,0.0996
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,11,4,36.4,nested,mineral_system,,,False,Marine Evaporite,0,3740.2381070553806,11.2,15.17,64.62,0.0271
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,6,3,50.0,nested,mineral_system,,,False,Meteoric Recharge,1,2297.6909794983817,11.2,18.76,81.24,0.0216
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,87,10,11.5,nested,mineral_system,,,False,Orogenic,31,1538.9504774124134,11.2,6.36,19.88,0.5151
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,2,0,0.0,nested,mineral_system,,,False,Placer,1,437.7908334073417,11.2,0.0,65.76,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,8,2,25.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,1,1280.7768055466622,11.2,7.15,59.07,0.2232
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,7,1,14.3,nested,mineral_system,,,False,Reduced Intrusion-Related,1,1443.6453602429933,11.2,2.57,51.31,0.5645
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,2,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,1,336.520005384686,11.2,0.0,65.76,1.0
+ray_mine,"Ray Mine, AZ",ray_mine_mosaic,7346,236.7,0.01,115,15,13.0,nested,mineral_system,,,False,Unknown System,39,2068.4532865280617,11.2,8.07,20.41,0.3054

@@ -1,0 +1,18 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,151,43,28.5,nested,site,,,False,,0,14262.078159676226,11.25,21.88,36.14,0.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,118,32,27.1,nested,commodity,Gold/Silver,,False,,0,15031.329484720813,11.25,19.91,35.77,0.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,25,9,36.0,nested,commodity,Other,,False,,0,10499.300779810166,11.25,20.25,55.48,0.0011
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,1,0,0.0,nested,commodity,Sand/Gravel,,False,,0,25196.023840122598,11.25,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,6,2,33.3,nested,commodity,Stone,,False,,0,13222.870338412862,11.25,9.68,70.0,0.1396
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,12861.157548200303,11.25,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,10,2,20.0,nested,earth_mri,,Base Metals,True,,0,10299.201063882992,11.25,5.67,50.98,0.3123
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,2,1,50.0,nested,earth_mri,,Energy,True,,0,15755.854919374366,11.25,9.45,90.55,0.2123
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,116,32,27.6,nested,earth_mri,,Gold/Silver,True,,0,15231.116969480796,11.25,20.27,36.34,0.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,2,1,50.0,nested,earth_mri,,Industrial,True,,0,16804.951389386333,11.25,9.45,90.55,0.2123
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,20,7,35.0,nested,earth_mri,,Non-Critical,False,,0,10672.354138135244,11.25,18.12,56.71,0.0047
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,1,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,5203.527632281638,11.25,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,4,0,0.0,nested,mineral_system,,,False,Basin Brine Path,0,10870.805028868734,11.25,0.0,48.99,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,12861.157548200303,11.25,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,118,32,27.1,nested,mineral_system,,,False,Orogenic,0,15119.519925113273,11.25,19.91,35.77,0.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,1,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5203.527632281638,11.25,0.0,79.35,1.0
+eagle_mountain,"Eagle Mountain, CA",eagle_mountain_mosaic,3676,199.09,0.01,27,11,40.7,nested,mineral_system,,,False,Unknown System,0,11404.538727843967,11.25,24.51,59.27,0.0001

@@ -1,0 +1,15 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,57,12,21.1,nested,site,,,False,,36,523.363039396673,11.59,12.47,33.29,0.0284
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,24,4,16.7,nested,commodity,Other,,False,,16,477.8900685595324,11.59,6.68,35.85,0.3005
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,5,1,20.0,nested,commodity,Sand/Gravel,,False,,3,623.2068073912076,11.59,3.62,62.45,0.4598
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,28,7,25.0,nested,commodity,Stone,,False,,17,544.5106272580553,11.59,12.68,43.36,0.0369
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,2,0,0.0,nested,earth_mri,,Base Metals,True,,1,537.9507120566142,11.59,0.0,65.76,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,2,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,2,329.0032534518809,11.59,0.0,65.76,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,1,1,100.0,nested,earth_mri,,Industrial,True,,1,151.9269422042724,11.59,20.65,100.0,0.1159
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,52,11,21.2,nested,earth_mri,,Non-Critical,False,,32,537.420353315175,11.59,12.24,34.03,0.0338
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,2,0,0.0,nested,mineral_system,,,False,Basin Brine Path,1,537.9507120566142,11.59,0.0,65.76,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,4,0,0.0,nested,mineral_system,,,False,Chemical Weathering,3,344.6886646836562,11.59,0.0,48.99,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,1,1,100.0,nested,mineral_system,,,False,Mafic Magmatic,1,151.9269422042724,11.59,20.65,100.0,0.1159
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,1,0,0.0,nested,mineral_system,,,False,Orogenic,1,469.75112979062175,11.59,0.0,79.35,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,1,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,1,300.50646975813703,11.59,0.0,79.35,1.0
+cornwall_pa,"Cornwall, PA",cornwall_pa_mosaic,3943,243.8,0.01,48,11,22.9,nested,mineral_system,,,False,Unknown System,29,551.1427629376975,11.59,13.31,36.54,0.0194

@@ -11,6 +11,24 @@ data/*.h5
 data/basemap/*/
 !data/basemap/us_states.geojson
 
+# Cached CMR granule-footprint responses backing scripts/gemx_coverage_report.py.
+# Regenerable with no credentials (CMR metadata search is public); a full
+# 109-site refresh takes ~3 min, versus ~15 s from this cache.
+data/gemx/
+
+# Cached USMIN WFS (GML) and Overpass (JSON) responses for MRDS verification.
+data/usmin/
+
+# Cached CMR granule-metadata responses backing scripts/audit_granule_cloud_cover.py
+# (public, regenerable with no credentials).
+data/cmr_cache/
+
+# Per-site SGMC geologic-unit polygons (regenerable via scripts/lithology_matched_null.py)
+data/lithology/
+
+# AG100 v003 emissivity tiles (~44 MB each; regenerable via critical_minerals_aster.ag100)
+data/ag100/
+
 # Ad-hoc analysis-chain logs written to the repo root during long re-runs
 scratch_*
 *.scratch.log
@@ -52,3 +70,8 @@ figures/sites/
 .netrc
 .claude/
 INTERVIEW_PREP.md
+
+# Raw ASTER granules (archived radiance, clear-day L1T, night AST_05); recorded in data/MANIFEST.sha256
+data/sites/*/aster_archive_pre_clearday/
+data/sites/*/aster_l1t_day/
+data/sites/*/aster_night/

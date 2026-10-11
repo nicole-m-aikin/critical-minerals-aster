@@ -1,0 +1,25 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,218,11,5.0,nested,site,,,False,,19,4713.066501367384,12.28,2.84,8.81,0.9999
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,5,0,0.0,nested,commodity,Antimony,,False,,0,7936.456047355861,12.28,0.0,43.45,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,158,4,2.5,nested,commodity,Gold/Silver,,False,,12,4879.938397488913,12.28,0.99,6.33,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,50,7,14.0,nested,commodity,Other,,False,,6,4079.171029209565,12.28,6.95,26.19,0.4178
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,3,0,0.0,nested,commodity,Stone,,False,,1,3223.631068915824,12.28,0.0,56.15,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,2,0,0.0,nested,commodity,Uranium,,False,,0,1553.2527954182929,12.28,0.0,65.76,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,86,7,8.1,nested,earth_mri,,Base Metals,True,,8,4498.865628652614,12.28,4.0,15.86,0.9159
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,2,0,0.0,nested,earth_mri,,Energy,True,,0,1553.2527954182929,12.28,0.0,65.76,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,95,2,2.1,nested,earth_mri,,Gold/Silver,True,,9,4831.021562417339,12.28,0.58,7.35,0.9999
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,3,0,0.0,nested,earth_mri,,Industrial,True,,0,5343.584396227198,12.28,0.0,56.15,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,20,1,5.0,nested,earth_mri,,Non-Critical,False,,2,4980.7102112626435,12.28,0.89,23.61,0.9273
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,12,1,8.3,nested,earth_mri,,Specialty/High-Tech,True,,0,5237.295149962225,12.28,1.49,35.39,0.7925
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,23,4,17.4,nested,mineral_system,,,False,Basin Brine Path,6,2539.246701676029,12.28,6.98,37.14,0.3107
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,5,0,0.0,nested,mineral_system,,,False,Carlin-type,0,5730.794509639052,12.28,0.0,43.45,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,2,1,50.0,nested,mineral_system,,,False,Coeur d'Alene-type,1,488.1172618093274,12.28,9.45,90.55,0.2306
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,2,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,6674.843178791341,12.28,0.0,65.76,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,2,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,1553.2527954182929,12.28,0.0,65.76,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,60,1,1.7,nested,mineral_system,,,False,Orogenic,1,5798.48985384017,12.28,0.29,8.86,0.9996
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,1,0,0.0,nested,mineral_system,,,False,Placer,0,4588.545854673848,12.28,0.0,79.35,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,7452.778226065599,12.28,0.0,79.35,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,3,0,0.0,nested,mineral_system,,,False,Porphyry Sn,0,5188.600767579187,12.28,0.0,56.15,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,4,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,2159.0990918427724,12.28,0.0,48.99,1.0
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,28,2,7.1,nested,mineral_system,,,False,Skarn / Carbonate Replacement,1,4997.056631278379,12.28,1.98,22.65,0.8746
+eureka,"Eureka, NV",eureka_mosaic,4350,410.76,0.01,87,3,3.4,nested,mineral_system,,,False,Unknown System,10,4584.930166462702,12.28,1.18,9.65,0.999

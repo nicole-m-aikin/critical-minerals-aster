@@ -1,0 +1,9 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,1628,315,19.3,nested,site,,,False,,115,4782.282519280216,12.77,17.5,21.34,0.0
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,1598,309,19.3,nested,commodity,Other,,False,,113,4665.534093149044,12.77,17.47,21.35,0.0
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,22,4,18.2,nested,commodity,Sand/Gravel,,False,,0,13099.057478900657,12.77,7.31,38.52,0.3067
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,8,2,25.0,nested,commodity,Stone,,False,,2,5231.649500025753,12.77,7.15,59.07,0.2721
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,1402,255,18.2,nested,earth_mri,,Base Metals,True,,106,3203.6515307087916,12.77,16.26,20.29,0.0
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,226,60,26.5,nested,earth_mri,,Non-Critical,False,,9,14575.382722718874,12.77,21.22,32.66,0.0
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,1402,255,18.2,nested,mineral_system,,,False,Basin Brine Path,106,3203.6515307087916,12.77,16.26,20.29,0.0
+tri_state,"Tri-State District, MO-KS-OK",tri_state_mosaic,5884,259.87,0.01,226,60,26.5,nested,mineral_system,,,False,Unknown System,9,14575.382722718874,12.77,21.22,32.66,0.0

@@ -1,0 +1,25 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,258,50,19.4,nested,site,,,False,,36,3361.7432765410317,12.51,15.02,24.64,0.0011
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,188,36,19.1,nested,commodity,Gold/Silver,,False,,20,2889.3742925503934,12.51,14.16,25.37,0.0061
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,30,6,20.0,nested,commodity,Other,,False,,4,6554.259647247786,12.51,9.5,37.31,0.1649
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,24,6,25.0,nested,commodity,Sand/Gravel,,False,,3,4030.528637114974,12.51,12.0,44.9,0.0705
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,15,2,13.3,nested,commodity,Stone,,False,,9,1771.18414586104,12.51,3.74,37.88,0.5764
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,commodity,Uranium,,False,,0,4199.159452003587,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,28,3,10.7,nested,earth_mri,,Base Metals,True,,3,4320.6457545275,12.51,3.71,27.2,0.6983
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,3,1,33.3,nested,earth_mri,,Battery Metals – Co/Ni,True,,1,4854.179850079926,12.51,6.15,79.23,0.3303
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,earth_mri,,Energy,True,,0,4199.159452003587,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,165,32,19.4,nested,earth_mri,,Gold/Silver,True,,17,3000.42904398651,12.51,14.09,26.09,0.0077
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,2,0,0.0,nested,earth_mri,,Industrial,True,,0,7845.86289363055,12.51,0.0,65.76,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,53,13,24.5,nested,earth_mri,,Non-Critical,False,,15,3737.1556948442444,12.51,14.93,37.57,0.0121
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,6,1,16.7,nested,earth_mri,,Specialty/High-Tech,True,,0,3126.369224465412,12.51,3.01,56.35,0.5516
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,5,1,20.0,nested,mineral_system,,,False,Basin Brine Path,1,6544.071409644499,12.51,3.62,62.45,0.4874
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,2,0,0.0,nested,mineral_system,,,False,Hybrid Magmatic REE,0,7845.86289363055,12.51,0.0,65.76,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,13395.874770600238,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,2934.140310334164,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,mineral_system,,,False,Meteoric Recharge,0,4199.159452003587,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,169,32,18.9,nested,mineral_system,,,False,Orogenic,16,2876.8495094504897,12.51,13.74,25.51,0.0109
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,4,2,50.0,nested,mineral_system,,,False,Placer,2,372.9782751492534,12.51,15.0,85.0,0.079
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,1,0,0.0,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,1515.1566200279851,12.51,0.0,79.35,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,3,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,5810.867785532389,12.51,0.0,56.15,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,2,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,5026.962083362905,12.51,0.0,65.76,1.0
+republic,"Republic, WA",republic_mosaic,3341,181.15,0.01,69,15,21.7,nested,mineral_system,,,False,Unknown System,17,4082.7151251896194,12.51,13.64,32.82,0.022

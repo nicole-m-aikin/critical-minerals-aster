@@ -133,6 +133,149 @@ def run_permutation(
     return float((null_hits >= n_hits).mean())
 
 
+def run_permutation_stratified(
+    zones_gdf: gpd.GeoDataFrame,
+    bbox_wgs84: tuple,
+    strata: dict,
+    n_per_stratum: dict[str, int],
+    n_hits: int,
+    n_iter: int = 10_000,
+    seed: int = 42,
+    grid_res: int = 1_000,
+    chunk: int = 1_000,
+) -> float:
+    """Monte Carlo p-value with random deposits drawn WITHIN their own stratum.
+
+    Same grid machinery as ``run_permutation``, but each iteration places
+    ``n_per_stratum[s]`` points uniformly in stratum ``s`` (geometries in
+    ``zones_gdf.crs``), so stratum counts are preserved exactly — the
+    simulation counterpart of the Poisson-binomial stratified null. Deposits
+    whose stratum has no grid cell contribute no random hits (their
+    analytical p_i is ~0 too). Returns P(random_hits ≥ n_hits).
+    """
+    n_total = int(sum(n_per_stratum.values()))
+    if n_total == 0:
+        return 1.0
+
+    import rasterio.features
+    from rasterio.transform import from_bounds as rio_from_bounds
+
+    minx, miny, maxx, maxy = _bbox_in_crs(bbox_wgs84, zones_gdf.crs)
+    transform = rio_from_bounds(minx, miny, maxx, maxy, grid_res, grid_res)
+    shape = (grid_res, grid_res)
+    mask = rasterio.features.rasterize(
+        [(unary_union(zones_gdf.geometry), 1)], out_shape=shape, transform=transform,
+        fill=0, dtype=np.uint8,
+    ).ravel()
+
+    pools = []
+    for name, n_s in n_per_stratum.items():
+        geom = strata.get(name)
+        if n_s <= 0 or geom is None or geom.is_empty:
+            continue
+        cells = np.flatnonzero(rasterio.features.rasterize(
+            [(geom, 1)], out_shape=shape, transform=transform, fill=0, dtype=np.uint8,
+        ).ravel())
+        if len(cells):
+            pools.append((cells, int(n_s)))
+
+    rng = np.random.default_rng(seed)
+    exceed = 0
+    for start in range(0, n_iter, chunk):
+        size = min(chunk, n_iter - start)
+        null_hits = np.zeros(size, dtype=np.int64)
+        for cells, n_s in pools:
+            pos = rng.integers(0, len(cells), size=(size, n_s))
+            null_hits += mask[cells[pos]].sum(axis=1, dtype=np.int64)
+        exceed += int((null_hits >= n_hits).sum())
+    return exceed / n_iter
+
+
+def _mwu_u_and_var(x: np.ndarray, y: np.ndarray) -> tuple[float, float]:
+    """Mann–Whitney U for ``x`` (ties count ½) and its tie-corrected null variance."""
+    from scipy.stats import rankdata
+
+    n1, n2 = len(x), len(y)
+    ranks = rankdata(np.concatenate([x, y]))
+    u = float(ranks[:n1].sum() - n1 * (n1 + 1) / 2)
+    n = n1 + n2
+    _, t = np.unique(np.concatenate([x, y]), return_counts=True)
+    tie = float((t ** 3 - t).sum()) / (n * (n - 1)) if n > 1 else 0.0
+    var = n1 * n2 / 12.0 * ((n + 1) - tie)
+    return u, var
+
+
+def stratified_mannwhitney(
+    deposit_scores: np.ndarray,
+    deposit_strata: np.ndarray,
+    background_scores: np.ndarray,
+    background_strata: np.ndarray,
+    min_background: int = 3,
+) -> dict:
+    """One-sided stratified rank-sum test: deposits vs background of the SAME stratum.
+
+    Within each stratum s, U_s compares that stratum's deposit scores only to
+    that stratum's background pixels, so a detector that simply scores
+    bedrock above alluvial cover cannot generate signal. Strata combine with
+    deposit-count weights w_s = n_s / n:
+
+        AUC = Σ w_s · U_s / (n_s · m_s)       (0.5 = no discrimination)
+        Var = Σ w_s² · Var0(U_s) / (n_s · m_s)²   (tie-corrected)
+        z = (AUC − 0.5) / √Var,  p = P(Z ≥ z)
+
+    AUC reads as P(a deposit pixel outscores a random background pixel from
+    the deposit's own stratum). With a single stratum this is the standard
+    asymptotic Mann–Whitney test without continuity correction. Deposits in
+    strata with fewer than ``min_background`` background pixels are dropped.
+    """
+    deposit_scores = np.asarray(deposit_scores, dtype=float)
+    background_scores = np.asarray(background_scores, dtype=float)
+    deposit_strata = np.asarray(deposit_strata)
+    background_strata = np.asarray(background_strata)
+
+    parts = []
+    for s in np.unique(deposit_strata):
+        x = deposit_scores[deposit_strata == s]
+        y = background_scores[background_strata == s]
+        if len(x) == 0 or len(y) < min_background:
+            continue
+        u, var = _mwu_u_and_var(x, y)
+        parts.append((len(x), len(y), u, var))
+
+    n_used = sum(p[0] for p in parts)
+    if n_used == 0:
+        return {"p": float("nan"), "auc": float("nan"), "z": float("nan"), "n_used": 0}
+    auc, var_auc = 0.0, 0.0
+    for n_s, m_s, u, var in parts:
+        w = n_s / n_used
+        auc += w * u / (n_s * m_s)
+        var_auc += w ** 2 * var / (n_s * m_s) ** 2
+    if var_auc <= 0:
+        return {"p": float("nan"), "auc": auc, "z": float("nan"), "n_used": n_used}
+    from scipy.stats import norm
+
+    z = (auc - 0.5) / np.sqrt(var_auc)
+    return {"p": float(norm.sf(z)), "auc": float(auc), "z": float(z), "n_used": int(n_used)}
+
+
+def significant_site_sets(repo_root) -> tuple[tuple[str, ...], frozenset[str]]:
+    """(FDR-significant site ids, clustering-robust subset) from the current results.
+
+    FDR = ``sig_fdr_binomial`` in ``results/phase4_fdr_corrected_significance.csv``;
+    robust = FDR sites with ``sig_05`` at every declustering radius in
+    ``results/phase5_clustering_sensitivity.csv``.
+    """
+    from pathlib import Path
+
+    results = Path(repo_root) / "results"
+    fdr = pd.read_csv(results / "phase4_fdr_corrected_significance.csv")
+    fdr_sites = tuple(sorted(fdr.loc[fdr["sig_fdr_binomial"].astype(bool), "site_id"]))
+    p5 = pd.read_csv(results / "phase5_clustering_sensitivity.csv")
+    piv = p5.pivot(index="site_id", columns="radius_m", values="sig_05").fillna(False).astype(bool)
+    robust = frozenset(piv.index[piv.all(axis=1)]) & frozenset(fdr_sites)
+    return fdr_sites, robust
+
+
 # ---------------------------------------------------------------------------
 # Wilson score confidence interval
 # ---------------------------------------------------------------------------

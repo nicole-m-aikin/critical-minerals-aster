@@ -2,11 +2,15 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
+import shutil
 import subprocess
 import sys
+import warnings
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -20,13 +24,17 @@ from critical_minerals_aster.classification import (
     combined_score,
     vectorize_strong_zones,
 )
-from critical_minerals_aster.config import BBox, SiteConfig, search_bbox
+from critical_minerals_aster.config import BBox, ClassificationParams, SiteConfig, search_bbox
 from critical_minerals_aster.metrics import compute_site_summary, write_site_summary
 from critical_minerals_aster.significance import add_uncertainty_columns
 from critical_minerals_aster.paths import SitePaths, site_paths_for
 from critical_minerals_aster.spectral import (
-    alteration_ratios,
+    DEFAULT_MAX_CLOUD_PCT,
+    acquisition_token,
+    alteration_indices,
     band_ratio,
+    granule_day_night,
+    load_ast05_granule,
     clip_bands_to_bbox,
     extract_granule_id,
     load_ratio_mosaic,
@@ -41,6 +49,17 @@ from critical_minerals_aster.structure import (
 )
 
 _GRANULE_ID_RE = re.compile(r"(AST_L1T_\d+_\d+)")
+# 2010–2023 bbox searches return up to a few hundred granules; the old caps
+# (10 / 20) truncated to the first results in CMR order rather than the best.
+ASTER_SEARCH_COUNT = 500
+# TES surface emissivity is temperature-independent; at-sensor radiance ratios
+# track surface temperature (docs/data_verification.md §2.4).
+DEFAULT_INPUT_PRODUCT = "AST_05"
+AST05_VERSION = "004"
+# A selected granule whose QA-good pixels cover < this share of its bbox
+# footprint is excluded and the selection redone (at most QA_RESELECT_ROUNDS builds).
+QA_MIN_VALID_SHARE = 0.5
+QA_RESELECT_ROUNDS = 4
 
 
 def _bbox_annotation(site: "SiteConfig") -> str:
@@ -54,15 +73,16 @@ def _bbox_annotation(site: "SiteConfig") -> str:
 
 
 def resolve_granule_id(site: SiteConfig, paths: SitePaths) -> str:
-    if site.granule_id:
-        return site.granule_id
+    # A built mosaic wins over a pinned granule: the pin only steers scene
+    # selection (download_and_mosaic_aster), the mosaic carries the masks.
     aster_dir = paths.aster_dir
-    if not aster_dir.is_dir():
-        raise FileNotFoundError(f"ASTER directory not found: {aster_dir}")
-    # Check for a pre-built mosaic before scanning for individual granule files.
     mosaic_b10 = aster_dir / f"{site.id}_mosaic_TIR_B10.tif"
     if mosaic_b10.is_file():
         return f"{site.id}_mosaic"
+    if site.granule_id:
+        return site.granule_id
+    if not aster_dir.is_dir():
+        raise FileNotFoundError(f"ASTER directory not found: {aster_dir}")
     for name in sorted(aster_dir.iterdir()):
         match = _GRANULE_ID_RE.search(name.name)
         if match and "TIR_B10" in name.name:
@@ -167,17 +187,17 @@ def run_classification(
             [b10, silica, carbonate, mafic], transform, crs, site.bbox_wgs84
         )
     else:
-        b10, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+        b10, b11, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
             paths.aster_dir, granule_id
         )
         # Clip to site bbox so percentile thresholds and zone counts are
         # site-specific rather than whole-scene artifacts.  Shared-granule sites
         # (e.g. goldfield/silver_peak on the same ASTER swath) would otherwise
         # produce identical zone polygons from the full 60-90 km scene.
-        (b10, b12, b13, b14), transform = clip_bands_to_bbox(
-            [b10, b12, b13, b14], transform, crs, site.bbox_wgs84
+        (b10, b11, b12, b13, b14), transform = clip_bands_to_bbox(
+            [b10, b11, b12, b13, b14], transform, crs, site.bbox_wgs84
         )
-        silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
+        silica, carbonate, mafic = alteration_indices(b10, b11, b12, b13, b14)
 
     raster_bbox = raster_bbox_wgs84(transform, silica.shape, crs)
     tir_footprint = compute_valid_data_footprint(b10, transform, crs)
@@ -247,13 +267,12 @@ def compute_global_limits(
             site = load_site_by_id(site_id, sites_dir)
             paths = site_paths_for(site, repo_root)
             granule_id = resolve_granule_id(site, paths)
-            _, _, b12, b13, b14, _, transform, crs = load_tir_bands_10_14(
+            silica, carbonate, mafic, _, transform, crs = load_ratio_mosaic(
                 paths.aster_dir, granule_id
             )
-            (b12, b13, b14), _ = clip_bands_to_bbox(
-                [b12, b13, b14], transform, crs, site.bbox_wgs84
+            (silica, carbonate, mafic), _ = clip_bands_to_bbox(
+                [silica, carbonate, mafic], transform, crs, site.bbox_wgs84
             )
-            silica, carbonate, mafic = alteration_ratios(b12, b13, b14)
             flat = silica.ravel()
             all_silica.append(flat[np.isfinite(flat)][::subsample])
             flat = carbonate.ravel()
@@ -301,9 +320,9 @@ def save_band_ratio_figure(
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     ratios = [
-        (silica, "Silica/quartz (B13/B14)", "magma", "silica"),
-        (carbonate, "Carbonate/dolomite (B13/B12)", "YlOrBr", "carbonate"),
-        (mafic, "Mafic minerals (B12/B13)", "PuBu", "mafic"),
+        (silica, "Quartz index QI (B11²/B10·B12)", "magma", "silica"),
+        (carbonate, "Carbonate index CI (B13/B14)", "YlOrBr", "carbonate"),
+        (mafic, "Mafic index MI (B12/B13)", "PuBu", "mafic"),
     ]
     for ax, (ratio, title, cmap, key) in zip(axes, ratios):
         if global_limits is not None and key in global_limits:
@@ -415,7 +434,7 @@ def save_classification_figure(
     paths.figures_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 4, figsize=(18, 5))
     arrays = [silica_cls, carbonate_cls, mafic_cls, combined]
-    titles = ["Silica classes", "Carbonate classes", "Mafic classes", "Combined score"]
+    titles = ["Quartz (QI) classes", "Carbonate (CI) classes", "Mafic (MI) classes", "Combined score"]
     for ax, arr, title in zip(axes, arrays, titles):
         im = ax.imshow(arr, cmap="YlOrRd" if title != "Combined score" else "viridis")
         if hillshade is not None:
@@ -435,7 +454,16 @@ def save_classification_figure(
     plt.close()
 
 
-FIG03_VERSION = 10
+FIG03_VERSION = 12
+
+# Provider terms require on-map attribution wherever tiles are displayed.
+_BASEMAP_ATTRIBUTION = {
+    "Esri.WorldImagery": (
+        "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, "
+        "Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+    ),
+    "CartoDB.Positron": "© OpenStreetMap contributors © CARTO",
+}
 
 
 def load_tir_footprint_from_provenance(
@@ -683,6 +711,11 @@ def save_deposit_overlay_figure(
         ax_ctx.imshow(
             basemap_rgb, extent=hs_extent, origin="upper", zorder=0, interpolation="bilinear",
         )
+        ax_ctx.text(
+            0.995, 0.005, _BASEMAP_ATTRIBUTION.get(basemap_source or "", _BASEMAP_ATTRIBUTION["Esri.WorldImagery"]),
+            transform=ax_ctx.transAxes, ha="right", va="bottom", fontsize=6.5, color="#222222",
+            bbox={"facecolor": "white", "alpha": 0.7, "edgecolor": "none", "pad": 1.5}, zorder=20,
+        )
     elif hillshade is not None and hs_extent is not None:
         hs_cmap = plt.cm.gray.copy()
         hs_cmap.set_bad(alpha=0.0)
@@ -844,7 +877,7 @@ def save_deposit_overlay_figure(
 
     fig.suptitle(
         f"Strong alteration zones vs MRDS deposits — {site.name}\n{_bbox_annotation(site)}",
-        fontsize=12, y=1.01,
+        fontsize=12, y=1.0, va="bottom",
     )
 
     # N arrow on left panel; scale bar on both panels.
@@ -1055,6 +1088,70 @@ def save_commodity_correlation_figure(
     plt.close(fig)
 
 
+@lru_cache(maxsize=16)
+def _sha256_file(path_str: str, mtime_ns: int) -> str:
+    h = hashlib.sha256()
+    with open(path_str, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def sha256_file(path: Path) -> str | None:
+    """SHA-256 of *path*, cached per (path, mtime); None if the file is missing."""
+    if not path.is_file():
+        return None
+    return _sha256_file(str(path), path.stat().st_mtime_ns)
+
+
+def input_provenance(
+    site: SiteConfig,
+    paths: SitePaths,
+    granule_id: str,
+) -> dict[str, Any]:
+    """Record every input that can change a site's outputs (CIM 2018 §2.3–2.4:
+    track data sources and any parameter that, when varied, changes results)."""
+    from critical_minerals_aster.metrics import mrds_validation_report
+
+    repo_root = paths.repo_root
+    site_yaml = repo_root / "sites" / f"{site.id}.yaml"
+    cls = site.classification or ClassificationParams()
+    m = re.search(r"AST_L1T_(\d{3})", granule_id or "")
+
+    if site.structure_layers:
+        structure_source = [layer.path for layer in site.structure_layers]
+    else:
+        auto = repo_root / "data" / "structures" / f"{site.id}_faults_auto.geojson"
+        structure_source = [str(auto.relative_to(repo_root))] if auto.is_file() else []
+
+    mrds_path = paths.mrds_csv
+    inputs: dict[str, Any] = {
+        "site_config": str(site_yaml.relative_to(repo_root)),
+        "site_config_sha256": sha256_file(site_yaml),
+        "bbox_wgs84": list(site.bbox_wgs84),
+        "classification": {
+            "low_pct": cls.low_pct,
+            "high_pct": cls.high_pct,
+            "strong_score_min": cls.strong_score_min,
+        },
+        "aster_product": "AST_L1T" if m else None,
+        "aster_product_version": m.group(1) if m else None,
+        "mrds_csv": str(mrds_path.relative_to(repo_root)) if mrds_path.is_file() else None,
+        "mrds_sha256": sha256_file(mrds_path),
+        "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+        "mrds_validation_national": mrds_validation_report(paths) if mrds_path.is_file() else None,
+        "structure_source": structure_source,
+        "basemap_source": "Esri World Imagery via contextily (figures only)",
+    }
+    selection_file = mosaic_selection_path(paths, granule_id or "")
+    if selection_file.is_file():
+        selection = json.loads(selection_file.read_text())
+        inputs["mosaic_selection"] = selection
+        inputs["aster_product"] = selection.get("product", "AST_L1T")
+        inputs["aster_product_version"] = selection.get("product_version", inputs["aster_product_version"])
+    return inputs
+
+
 def write_provenance(
     paths: SitePaths,
     granule_id: str,
@@ -1111,7 +1208,7 @@ def download_aster(
         short_name="AST_L1T",
         bounding_box=bbox,
         temporal=(site.temporal_start, site.temporal_end),
-        count=10,
+        count=ASTER_SEARCH_COUNT,
     )
     target = select_granule(results, site.bbox_wgs84, granule_id_override=site.granule_id)
     granule_id = extract_granule_id(target)
@@ -1351,18 +1448,19 @@ def _build_ratio_mosaic_from_paths(
                     b10 = ds.read(1).astype(np.float64)
                     profile = ds.profile.copy()
                 b10[b10 == 0] = np.nan
-                bands: dict[int, np.ndarray] = {}
-                for bnum in (12, 13, 14):
+                bands: dict[int, np.ndarray] = {10: b10}
+                for bnum in (11, 12, 13, 14):
                     bf = b10_file.parent / f"{prefix}_TIR_B{bnum}.tif"
                     with rasterio.open(bf) as ds:
                         arr = ds.read(1).astype(np.float64)
                     arr[arr == 0] = np.nan
                     bands[bnum] = arr
+                qi, ci, mi = alteration_indices(*(bands[b] for b in (10, 11, 12, 13, 14)))
                 granule_data.append({
                     "b10": b10,
-                    "silica":    band_ratio(bands[13], bands[14]),
-                    "carbonate": band_ratio(bands[13], bands[12]),
-                    "mafic":     band_ratio(bands[12], bands[13]),
+                    "silica": qi,
+                    "carbonate": ci,
+                    "mafic": mi,
                     "profile": profile,
                 })
             except Exception as exc:
@@ -1477,16 +1575,38 @@ def download_and_mosaic_aster(
     site: SiteConfig,
     paths: SitePaths,
     interactive_login: bool = True,
+    *,
+    product: str = DEFAULT_INPUT_PRODUCT,
 ) -> str:
-    """Download all bbox-covering ASTER granules, merge per-band, return mosaic granule_id.
+    """Build the site index mosaic; returns the mosaic granule_id.
 
-    Always searches the full archive for every granule covering >5% of the site
-    bbox (and has ≥3 TIR bands), regardless of whether ``site.granule_id`` is
-    pinned.  Falls back to single-granule download only when no granule meets
-    the coverage threshold.
+    ``product="AST_05"`` (default) uses TES surface emissivity
+    (``download_and_mosaic_ast05``); ``"AST_L1T"`` is the legacy at-sensor
+    radiance path (``download_and_mosaic_l1t``), whose indices are
+    temperature-dependent.
+    """
+    if product == "AST_05":
+        return download_and_mosaic_ast05(site, paths, interactive_login=interactive_login)
+    if product == "AST_L1T":
+        return download_and_mosaic_l1t(site, paths, interactive_login=interactive_login)
+    raise ValueError(f"Unknown input product {product!r}")
+
+
+def download_and_mosaic_l1t(
+    site: SiteConfig,
+    paths: SitePaths,
+    interactive_login: bool = True,
+) -> str:
+    """Legacy: download bbox-covering AST_L1T radiance granules and merge them.
+
+    Searches the full archive (ignoring a pinned ``site.granule_id``) and picks
+    a small single-tier set via ``select_mosaic_granules``: clear-sky day scenes
+    first, never mixing day and night, greedily covering the bbox. The choice is
+    recorded in ``{mosaic_id}_granules.json``. Falls back to single-granule
+    download only when no granule qualifies.
 
     Before merging, each secondary granule is linearly normalised to the
-    reference (first) granule's mean/std per band, eliminating the seam
+    reference (first, clearest) granule's mean/std per band, eliminating the seam
     artefacts that arise from different acquisition dates, solar angles, and
     atmospheric conditions.
 
@@ -1513,60 +1633,377 @@ def download_and_mosaic_aster(
         if "mosaic" not in p.name
     ]
 
+    selection_file = mosaic_selection_path(paths, mosaic_id)
     if local_b10s:
-        # Build mosaic from local files — no earthaccess login needed.
+        # Build mosaic from local files — no earthaccess login needed. When a
+        # selection record exists, keep its granules in its (reference-first) order.
+        if selection_file.is_file():
+            order = [r["granule_id"] for r in json.loads(selection_file.read_text())["granules"]]
+            by_id = {p.name.split("_TIR_B10")[0]: p for p in local_b10s}
+            local_b10s = [by_id[g] for g in order if g in by_id] or local_b10s
         _build_ratio_mosaic_from_paths(local_b10s, paths, mosaic_id)
         return mosaic_id
 
     # No local files: fall back to earthaccess download.
     import earthaccess
 
-    from critical_minerals_aster.spectral import score_granule
-
     if interactive_login:
         earthaccess.login(strategy="netrc")
 
-    bbox = search_bbox(site)
-    results = earthaccess.search_data(
-        short_name="AST_L1T",
-        bounding_box=bbox,
-        temporal=(site.temporal_start, site.temporal_end),
-        count=20,
-    )
-
-    covering = []
-    for g in results:
-        try:
-            coverage, _, band_count = score_granule(g, site.bbox_wgs84)
-            # Skip bundles larger than the per-site cap (default 20 MB keeps
-            # TIR-only extracts; sites where only full VNIR+SWIR+TIR bundles
-            # exist set a higher cap in their YAML).
-            # 30% coverage threshold avoids edge-clipping granules that would
-            # leave large nodata gaps in the merged output.
-            if coverage > 0.30 and band_count >= 3 and g.size() < site.max_bundle_mb:
-                covering.append(g)
-        except Exception:
-            continue
-
-    if not covering:
-        # No granule meets the threshold — fall back to best single granule.
+    selection = plan_mosaic_selection(site)
+    if not selection.granules:
         return download_aster(site, paths, interactive_login=False)
 
     paths.aster_dir.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        for granule in covering:
+        for granule in selection.granules:
             try:
                 earthaccess.download(granule, tmpdir)
             except Exception as exc:
                 print(f"  Warning: could not download granule: {exc}", file=sys.stderr)
 
-        downloaded_b10s = sorted(Path(tmpdir).glob("*_TIR_B10.tif"))
+        # Keep the TIR band files (VNIR/SWIR/QA are discarded) so mosaics can be
+        # rebuilt with a different ratio recipe without re-downloading.
+        for tif in Path(tmpdir).glob("*_TIR_B1[0-4].tif"):
+            shutil.move(str(tif), paths.aster_dir / tif.name)
+        by_id = {p.name.split("_TIR_B10")[0]: p for p in paths.aster_dir.glob("*_TIR_B10.tif")}
+        downloaded_b10s = [
+            by_id[r["granule_id"]] for r in selection.records if r["granule_id"] in by_id
+        ]
         if not downloaded_b10s:
             return download_aster(site, paths, interactive_login=False)
 
         _build_ratio_mosaic_from_paths(downloaded_b10s, paths, mosaic_id)
 
+    write_mosaic_selection(selection_file, site, selection, downloaded_b10s)
+    return mosaic_id
+
+
+def mosaic_selection_path(paths: SitePaths, mosaic_id: str) -> Path:
+    return paths.aster_dir / f"{mosaic_id}_granules.json"
+
+
+def plan_mosaic_selection(site: SiteConfig, *, search_results: list | None = None):
+    """CMR search + clear-sky/day-first granule selection for a site mosaic (no login)."""
+    from critical_minerals_aster.spectral import select_mosaic_granules
+
+    if search_results is None:
+        import earthaccess
+
+        search_results = earthaccess.search_data(
+            short_name="AST_L1T",
+            bounding_box=search_bbox(site),
+            temporal=(site.temporal_start, site.temporal_end),
+            count=ASTER_SEARCH_COUNT,
+        )
+    # Bundles above the per-site size cap are full VNIR+SWIR+TIR downloads.
+    return select_mosaic_granules(
+        search_results,
+        site.bbox_wgs84,
+        max_cloud_pct=DEFAULT_MAX_CLOUD_PCT,
+        max_size_mb=site.max_bundle_mb,
+    )
+
+
+def write_mosaic_selection(
+    out_path: Path, site: SiteConfig, selection, used_b10s: list[Path]
+) -> None:
+    used = {p.name.split("_TIR_B10")[0] for p in used_b10s}
+    payload = {
+        "site_id": site.id,
+        "tier": selection.tier,
+        "union_bbox_coverage": round(selection.union_coverage, 4),
+        "max_cloud_pct": DEFAULT_MAX_CLOUD_PCT,
+        "granules": [r for r in selection.records if r["granule_id"] in used],
+        "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    out_path.write_text(json.dumps(payload, indent=2) + "\n")
+
+
+def search_ast05(site: SiteConfig, *, day_night: str | None = "Day") -> list:
+    """CMR search for AST_05 v004 granules over the site (no login needed)."""
+    import earthaccess
+
+    results = earthaccess.search_data(
+        short_name="AST_05",
+        version=AST05_VERSION,
+        bounding_box=search_bbox(site),
+        temporal=(site.temporal_start, site.temporal_end),
+        count=ASTER_SEARCH_COUNT,
+    )
+    if day_night is not None:
+        results = [g for g in results if granule_day_night(g) == day_night]
+    return results
+
+
+def plan_ast05_selection(
+    site: SiteConfig, *, day_night: str = "Day", search_results: list | None = None
+):
+    """Clear-sky, single-tier, May–September-first AST_05 granule set for a site.
+
+    A pinned ``site.granule_id`` (any ASTER product) selects the AST_05 granule of
+    the same acquisition when it covers >= 90% of the bbox.
+    """
+    from critical_minerals_aster.spectral import select_mosaic_granules
+
+    results = search_results if search_results is not None else search_ast05(site, day_night=day_night)
+    prefer_day = day_night != "Night"
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        if site.granule_id:
+            token = acquisition_token(site.granule_id)
+            pinned = [g for g in results if acquisition_token(extract_granule_id(g)) == token]
+            if pinned:
+                sel = select_mosaic_granules(
+                    pinned, site.bbox_wgs84, max_cloud_pct=None, prefer_day=prefer_day
+                )
+                if sel.union_coverage >= 0.90:
+                    return sel
+        return select_mosaic_granules(results, site.bbox_wgs84, prefer_day=prefer_day)
+
+
+def _target_grid(bbox_wgs84: BBox, crs, ref_transform, res: float = 90.0):
+    """Bbox grid in ``crs`` snapped to the reference granule's pixel lattice."""
+    import math
+
+    from rasterio.transform import Affine
+    from rasterio.warp import transform_bounds
+
+    x0, y0, x1, y1 = transform_bounds("EPSG:4326", crs, *bbox_wgs84, densify_pts=21)
+    ox, oy = ref_transform.c, ref_transform.f
+    left = ox + math.floor((x0 - ox) / res) * res
+    right = ox + math.ceil((x1 - ox) / res) * res
+    top = oy - math.floor((oy - y1) / res) * res
+    bottom = oy - math.ceil((oy - y0) / res) * res
+    width = int(round((right - left) / res))
+    height = int(round((top - bottom) / res))
+    return Affine(res, 0.0, left, 0.0, -res, top), (height, width)
+
+
+def _to_grid(arr: np.ndarray, src_transform, src_crs, dst_transform, dst_shape, dst_crs) -> np.ndarray:
+    from rasterio.enums import Resampling
+    from rasterio.warp import reproject as warp_reproject
+
+    out = np.full(dst_shape, np.nan, dtype=np.float32)
+    warp_reproject(
+        source=arr.astype(np.float32),
+        destination=out,
+        src_transform=src_transform,
+        src_crs=src_crs,
+        dst_transform=dst_transform,
+        dst_crs=dst_crs,
+        resampling=Resampling.nearest,
+        src_nodata=np.nan,
+        dst_nodata=np.nan,
+    )
+    return out
+
+
+def _match_to_reference(sec: np.ndarray, ref: np.ndarray, min_overlap: int = 500) -> tuple[np.ndarray, str]:
+    """Linear mean/std match of ``sec`` to ``ref``, on overlap pixels when there are enough."""
+    overlap = np.isfinite(sec) & np.isfinite(ref)
+    if overlap.sum() >= min_overlap:
+        s, r, how = sec[overlap], ref[overlap], "overlap"
+    else:
+        s, r, how = sec[np.isfinite(sec)], ref[np.isfinite(ref)], "whole_image"
+    s, r = s.astype(np.float64), r.astype(np.float64)
+    s_mean, s_std = s.mean(), s.std()
+    if s.size < min_overlap or r.size < min_overlap or s_std <= 1e-6 * abs(s_mean):
+        return sec, "none"
+    out = (sec - s_mean) / s_std * r.std() + r.mean()
+    return out.astype(sec.dtype), how
+
+
+def build_emissivity_index_mosaic(
+    site: SiteConfig,
+    granule_ids: list[str],
+    src_dir: Path,
+    out_dir: Path,
+    mosaic_id: str,
+    *,
+    repo_root: Path,
+    apply_surface_masks: bool = True,
+) -> dict[str, Any]:
+    """Per-granule QI/CI/MI on AST_05 emissivity, priority-stacked onto the bbox grid.
+
+    The first granule is the reference. Each later granule only fills pixels
+    still empty, after its indices are mean/std-matched to the reference on
+    the overlap (Rockwell & Hofstra 2008 histogram-match index maps rather
+    than blending). Water and vegetated pixels (AG100 land/water map, mean
+    NDVI > ``NDVI_VEGETATION_THRESHOLD``) are removed before classification,
+    so the valid mask, the footprint and the null all exclude them.
+    """
+    import rasterio
+
+    names = ("silica", "carbonate", "mafic", "b10")
+    stacked: dict[str, np.ndarray] = {}
+    grid = None
+    stats: dict[str, Any] = {"granules": [], "matching": []}
+    for i, gid in enumerate(granule_ids):
+        bands, qa_good, transform, crs, _ = load_ast05_granule(src_dir, gid)
+        if grid is None:
+            dst_transform, dst_shape = _target_grid(site.bbox_wgs84, crs, transform)
+            grid = (dst_transform, dst_shape, crs)
+        dst_transform, dst_shape, dst_crs = grid
+        qi, ci, mi = alteration_indices(*(bands[b] for b in (10, 11, 12, 13, 14)))
+        layers = {
+            n: _to_grid(a, transform, crs, dst_transform, dst_shape, dst_crs)
+            for n, a in zip(names, (qi, ci, mi, bands[10]))
+        }
+        stats["granules"].append({
+            "granule_id": gid,
+            "qa_good_frac_of_granule": round(float(qa_good.mean()), 4),
+            "valid_frac_of_bbox": round(float(np.isfinite(layers["silica"]).mean()), 4),
+        })
+        if i == 0:
+            stacked = layers
+            continue
+        fill = ~np.isfinite(stacked["silica"]) & np.isfinite(layers["silica"])
+        for n in names:
+            if n != "b10":
+                layers[n], how = _match_to_reference(layers[n], stacked[n])
+                stats["matching"].append({"granule_id": gid, "index": n, "method": how})
+            stacked[n][fill] = layers[n][fill]
+
+    if grid is None:
+        raise ValueError("No AST_05 granules to mosaic")
+    dst_transform, dst_shape, dst_crs = grid
+    covered = np.isfinite(stacked["silica"]) & np.isfinite(stacked["carbonate"]) & np.isfinite(stacked["mafic"])
+    stats["valid_frac_of_bbox_before_masks"] = round(float(covered.mean()), 4)
+
+    stats["surface_masks"] = None
+    if apply_surface_masks:
+        try:
+            from critical_minerals_aster.ag100 import NDVI_VEGETATION_THRESHOLD, ag100_masks
+
+            masks = ag100_masks(site.bbox_wgs84, dst_transform, dst_shape, dst_crs, repo_root=repo_root)
+        except ImportError:
+            masks = None
+        if masks is not None:
+            water = masks["water"].astype(bool)
+            veg = np.nan_to_num(masks["ndvi"], nan=0.0) > NDVI_VEGETATION_THRESHOLD
+            drop = (water | veg) & covered
+            stats["surface_masks"] = {
+                "source": "AG100 v003",
+                "ndvi_threshold": NDVI_VEGETATION_THRESHOLD,
+                "water_frac_of_valid": round(float((water & covered).sum() / max(covered.sum(), 1)), 4),
+                "vegetation_frac_of_valid": round(float((veg & covered).sum() / max(covered.sum(), 1)), 4),
+            }
+            for n in names:
+                stacked[n][drop] = np.nan
+            covered &= ~drop
+        else:
+            warnings.warn(f"{site.id}: AG100 masks unavailable; water/vegetation not masked")
+
+    for n in names:
+        stacked[n][~covered] = np.nan
+    stats["valid_frac_of_bbox"] = round(float(covered.mean()), 4)
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    profile = {
+        "driver": "GTiff", "height": dst_shape[0], "width": dst_shape[1], "count": 1,
+        "crs": dst_crs, "transform": dst_transform, "compress": "deflate",
+    }
+    for n, fname in (("silica", "ratio_silica"), ("carbonate", "ratio_carbonate"),
+                     ("mafic", "ratio_mafic"), ("b10", "TIR_B10")):
+        with rasterio.open(out_dir / f"{mosaic_id}_{fname}.tif", "w", dtype="float32",
+                           nodata=0.0, **profile) as dst:
+            dst.write(np.nan_to_num(stacked[n], nan=0.0).astype(np.float32), 1)
+
+    cp = site.classification or ClassificationParams()
+    for n in ("silica", "carbonate", "mafic"):
+        cls, _, _ = classify_percentiles(stacked[n].astype(np.float64), cp.low_pct, cp.high_pct)
+        with rasterio.open(out_dir / f"{mosaic_id}_cls_{n}.tif", "w", dtype="uint8",
+                           nodata=0, **profile) as dst:
+            dst.write(cls.astype(np.uint8), 1)
+    with rasterio.open(out_dir / f"{mosaic_id}_cls_valid.tif", "w", dtype="uint8",
+                       nodata=0, **profile) as dst:
+        dst.write(covered.astype(np.uint8), 1)
+    return stats
+
+
+def download_and_mosaic_ast05(
+    site: SiteConfig,
+    paths: SitePaths,
+    *,
+    interactive_login: bool = True,
+    day_night: str = "Day",
+    out_dir: Path | None = None,
+    mosaic_id: str | None = None,
+) -> str:
+    """Select, download (cached) and mosaic AST_05 emissivity for a site.
+
+    Writes the ``{mosaic_id}_ratio_*`` (QI/CI/MI), ``_cls_*``, ``_TIR_B10``
+    (B10 emissivity) rasters and ``{mosaic_id}_granules.json`` into ``out_dir``
+    (default ``paths.aster_dir``). Granule COGs are kept in ``out_dir``.
+    """
+    import earthaccess
+
+    out_dir = out_dir or paths.aster_dir
+    mosaic_id = mosaic_id or f"{site.id}_mosaic"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    candidates = search_ast05(site, day_night=day_night)
+    logged_in = False
+
+    # Scene cloud cover misses granules the per-pixel QA largely rejects (common
+    # at night), so drop those and reselect; keep the best build.
+    excluded: list[str] = []
+    best = None
+    for _ in range(QA_RESELECT_ROUNDS):
+        pool = [g for g in candidates if extract_granule_id(g) not in excluded]
+        selection = plan_ast05_selection(site, day_night=day_night, search_results=pool)
+        if not selection.granules:
+            break
+        missing = [
+            g for g in selection.granules
+            if not (out_dir / f"{extract_granule_id(g)}_SRE_TIR_QA_DataPlane.tif").is_file()
+        ]
+        if missing:
+            if interactive_login and not logged_in:
+                earthaccess.login(strategy="netrc")
+                logged_in = True
+            earthaccess.download(missing, str(out_dir), show_progress=False)
+        granule_ids = [r["granule_id"] for r in selection.records]
+        stats = build_emissivity_index_mosaic(
+            site, granule_ids, out_dir, out_dir, mosaic_id, repo_root=paths.repo_root
+        )
+        if best is None or stats["valid_frac_of_bbox_before_masks"] > best[1]["valid_frac_of_bbox_before_masks"]:
+            best = (selection, stats)
+        cov = {r["granule_id"]: r["bbox_coverage"] for r in selection.records}
+        poor = [
+            g["granule_id"] for g in stats["granules"]
+            if g["valid_frac_of_bbox"] < QA_MIN_VALID_SHARE * cov.get(g["granule_id"], 1.0)
+        ]
+        if not poor:
+            break
+        excluded.extend(poor)
+    if best is None:
+        raise ValueError(f"{site.id}: no AST_05 {day_night} granule covers the bbox")
+    selection, stats = best
+    best_ids = [r["granule_id"] for r in selection.records]
+    if best_ids != granule_ids:
+        stats = build_emissivity_index_mosaic(
+            site, best_ids, out_dir, out_dir, mosaic_id, repo_root=paths.repo_root
+        )
+    stats["qa_excluded_granules"] = excluded
+    payload = {
+        "site_id": site.id,
+        "product": "AST_05",
+        "product_version": AST05_VERSION,
+        "day_night": day_night,
+        "tier": selection.tier,
+        "union_bbox_coverage": round(selection.union_coverage, 4),
+        "max_cloud_pct": DEFAULT_MAX_CLOUD_PCT,
+        "qa_rule": "QA_DataPlane quality==0000, cloud==00, adjacency<=01; all bands in [0.5, 1.0]",
+        "indices": {"silica": "QI = B11^2/(B10*B12)", "carbonate": "CI = B13/B14",
+                    "mafic": "MI = B12/B13"},
+        "mosaicking": "priority stack, reference first; later granules mean/std-matched on overlap",
+        "granules": selection.records,
+        "build": stats,
+        "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    (out_dir / f"{mosaic_id}_granules.json").write_text(json.dumps(payload, indent=2) + "\n")
     return mosaic_id
 
 
@@ -1791,8 +2228,13 @@ def run_site(
         if tir_footprint is not None and len(tir_footprint):
             try:
                 _deposits_gdf = gpd.clip(_deposits_gdf, tir_footprint)
-            except Exception:
-                pass  # fall back to bbox-only clipping on geometry errors
+            except Exception as exc:
+                warnings.warn(
+                    f"{site.id}: TIR footprint clip failed ({exc!r}); "
+                    "deposit figures use the bbox-only set",
+                    RuntimeWarning,
+                    stacklevel=2,
+                )
         joined, hits, _ = spatial_join_deposits_zones(_deposits_gdf, zones)
         hit_ids = joined[joined["index_right"].notna()].index.unique()
         _deposits_gdf["inside_zone"] = _deposits_gdf.index.isin(hit_ids)
@@ -1818,6 +2260,7 @@ def run_site(
     provenance_extra: dict[str, Any] = {
         "n_zones": len(zones),
         "raster_bbox_wgs84": list(raster_bbox),
+        "inputs": input_provenance(site, paths, granule_id),
     }
     if tir_footprint is not None:
         import json as _json

@@ -1,0 +1,151 @@
+{
+  "site_id": "lordsburg",
+  "granule_id": "lordsburg_mosaic",
+  "timestamp_utc": "2026-09-27T22:32:36.893369+00:00",
+  "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:59:26) [Clang 19.1.7 ]",
+  "packages": {
+    "rasterio": "1.4.4",
+    "geopandas": "1.1.3"
+  },
+  "git_commit": "eb525241554e84faf18cdd373d838dea14d6d039",
+  "n_zones": 13417,
+  "raster_bbox_wgs84": [
+    -109.06719061707392,
+    31.769285500594645,
+    -108.32742915825399,
+    32.56283031436409
+  ],
+  "inputs": {
+    "site_config": "sites/lordsburg.yaml",
+    "site_config_sha256": "aa101f9c7b58610dfeea0ee5a31a25ec1f729924e663ec096b37ad6cec239d1d",
+    "bbox_wgs84": [
+      -109.05,
+      31.75,
+      -108.35,
+      32.55
+    ],
+    "classification": {
+      "low_pct": 70,
+      "high_pct": 90,
+      "strong_score_min": 3
+    },
+    "aster_product": null,
+    "aster_product_version": null,
+    "mrds_csv": "data/mrds.csv",
+    "mrds_sha256": "ac1b70dcc8159ad4a691739f62c13ec738af3453f4840db7fafe4ed1c1253e37",
+    "mrds_datum": "WGS84 (data/mrds.met Horizontal_Datum_Name)",
+    "mrds_validation_national": {
+      "n_input": 304632,
+      "missing_coords": 19,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 3008,
+      "duplicate_record": 2217,
+      "n_output": 299388,
+      "n_flag_shared_coords": 21180,
+      "n_flag_score_high": 66391,
+      "n_flag_producer": 170619
+    },
+    "structure_source": [
+      "data/structures/lordsburg_faults_auto.geojson"
+    ],
+    "basemap_source": "Esri World Imagery via contextily (figures only)",
+    "mosaic_selection": {
+      "site_id": "lordsburg",
+      "tier": "day_clear",
+      "union_bbox_coverage": 0.9787,
+      "max_cloud_pct": 30.0,
+      "granules": [
+        {
+          "granule_id": "AST_L1T_00405182018180431_20250827023141",
+          "cloud_pct": 0.0,
+          "day_night": "Day",
+          "month": 5,
+          "bbox_coverage": 0.8446
+        },
+        {
+          "granule_id": "AST_L1T_00409242016180931_20250816040542",
+          "cloud_pct": 1.0,
+          "day_night": "Day",
+          "month": 9,
+          "bbox_coverage": 0.5571
+        }
+      ],
+      "created_utc": "2026-09-27T22:32:35+00:00"
+    },
+    "mrds_validation_site_bbox": {
+      "n_input": 411,
+      "missing_coords": 0,
+      "out_of_range_coords": 0,
+      "non_deposit_plant": 2,
+      "duplicate_record": 1,
+      "n_output": 408,
+      "n_flag_shared_coords": 17,
+      "n_flag_score_high": 142,
+      "n_flag_producer": 219
+    }
+  },
+  "tir_footprint_wgs84": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -109.0506271909853,
+                32.56283031436409
+              ],
+              [
+                -109.05842053617398,
+                32.19930310897563
+              ],
+              [
+                -108.99276790113325,
+                32.18934871626158
+              ],
+              [
+                -109.06439508648009,
+                31.916093267257516
+              ],
+              [
+                -109.06531203503268,
+                31.87227161388969
+              ],
+              [
+                -108.41823623861369,
+                31.779613091836637
+              ],
+              [
+                -108.341803118162,
+                32.05884828496197
+              ],
+              [
+                -108.33348264339834,
+                32.344340682379084
+              ],
+              [
+                -108.45154781770695,
+                32.36139103109536
+              ],
+              [
+                -108.3982902097427,
+                32.55101647616966
+              ],
+              [
+                -109.0506271909853,
+                32.56283031436409
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "n_deposits_on_structure": 6,
+  "mean_nearest_structure_m": 8191.895445404569,
+  "inputs_recorded_utc": "2026-09-27T22:46:24.352234+00:00"
+}

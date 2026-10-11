@@ -1,0 +1,28 @@
+site_id,site_name,granule_id,n_zones,total_anomaly_km2,median_zone_km2,n_deposits_bbox,n_deposits_in_zones,hit_rate_pct,layout,row_type,commodity_group,earth_mri_category,is_critical_mineral,mineral_system,n_deposits_on_structure,mean_nearest_structure_m,null_hit_rate_pct,hit_rate_ci_low,hit_rate_ci_high,p_binomial
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,348,23,6.6,nested,site,,,False,,0,19527.702497819,10.33,4.44,9.72,0.9938
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,170,12,7.1,nested,commodity,Gold/Silver,,False,,0,19207.982283752444,10.33,4.08,11.93,0.9435
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,1,0,0.0,nested,commodity,Lithium,,False,,0,31450.041550169048,10.33,0.0,79.35,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,157,7,4.5,nested,commodity,Other,,False,,0,19537.76344314135,10.33,2.18,8.92,0.9976
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,2,1,50.0,nested,commodity,Sand/Gravel,,False,,0,4334.632157869214,10.33,9.45,90.55,0.196
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,8,2,25.0,nested,commodity,Stone,,False,,0,16823.228474909854,10.33,7.15,59.07,0.1969
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,10,1,10.0,nested,commodity,Uranium,,False,,0,28814.948676471766,10.33,1.79,40.42,0.6641
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,244,13,5.3,nested,earth_mri,,Base Metals,True,,0,17668.38958180342,10.33,3.14,8.9,0.9982
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,5,0,0.0,nested,earth_mri,,Battery Metals – Co/Ni,True,,0,30420.533735299403,10.33,0.0,43.45,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,1,0,0.0,nested,earth_mri,,Battery Metals – Li/Brine,True,,0,31450.041550169048,10.33,0.0,79.35,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,10,1,10.0,nested,earth_mri,,Energy,True,,0,28814.948676471766,10.33,1.79,40.42,0.6641
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,24,3,12.5,nested,earth_mri,,Gold/Silver,True,,0,23565.824286533756,10.33,4.34,31.0,0.4578
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,7,3,42.9,nested,earth_mri,,Industrial,True,,0,25483.089438552714,10.33,15.82,74.95,0.0281
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,55,3,5.5,nested,earth_mri,,Non-Critical,False,,0,22456.846259057496,10.33,1.87,14.85,0.9329
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,2,0,0.0,nested,earth_mri,,Specialty/High-Tech,True,,0,16881.630547375113,10.33,0.0,65.76,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,103,7,6.8,nested,mineral_system,,,False,Basin Brine Path,0,16982.038678853947,10.33,3.33,13.37,0.9173
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,6,2,33.3,nested,mineral_system,,,False,Hybrid Magmatic REE,0,29117.46221418433,10.33,9.68,70.0,0.1209
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,2,0,0.0,nested,mineral_system,,,False,Lacustrine Evaporite,0,28356.08839682313,10.33,0.0,65.76,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,1,0,0.0,nested,mineral_system,,,False,Marine Chemocline,0,33706.59839265433,10.33,0.0,79.35,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,2,0,0.0,nested,mineral_system,,,False,Marine Evaporite,0,24575.309150053756,10.33,0.0,65.76,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,8,1,12.5,nested,mineral_system,,,False,Meteoric Recharge,0,28524.865803273515,10.33,2.24,47.09,0.5822
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,44,2,4.5,nested,mineral_system,,,False,Orogenic,0,17820.21512411326,10.33,1.26,15.14,0.95
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,3,0,0.0,nested,mineral_system,,,False,Placer,0,16748.60056613042,10.33,0.0,56.15,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,15,1,6.7,nested,mineral_system,,,False,Porphyry Cu-Mo-Au,0,13584.20740044514,10.33,1.19,29.82,0.8053
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,3,0,0.0,nested,mineral_system,,,False,Reduced Intrusion-Related,0,17512.63980363145,10.33,0.0,56.15,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,4,0,0.0,nested,mineral_system,,,False,Skarn / Carbonate Replacement,0,24645.926326652116,10.33,0.0,48.99,1.0
+sierrita,"Sierrita, AZ",sierrita_mosaic,5365,230.62,0.01,157,10,6.4,nested,mineral_system,,,False,Unknown System,0,21113.359167119736,10.33,3.5,11.33,0.9684

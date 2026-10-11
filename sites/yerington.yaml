@@ -2,7 +2,7 @@
 id: yerington
 name: "Yerington, NV"
 bbox_wgs84: [-119.3, 38.8, -118.8, 39.2]
-granule_id: "AST_L1T_00403082010185704_20250703035429"
+granule_id: "AST_L1T_00406192015185146_20250807041315"  # clear-sky day (0% cloud, month 6); was "AST_L1T_00403082010185704_20250703035429"
 layout: nested
 
 classification:

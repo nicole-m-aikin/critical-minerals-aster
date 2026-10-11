@@ -1,0 +1,401 @@
+site_id,dep_id,mrds_site_name,latitude,longitude,commod1,earth_mri_category,score,dev_stat,qc_shared_coords,qc_score_high,qc_producer,grade_group,inside_zone,hit_status,stratum,stratum_N,stratum_n,weight,dist_usmin_m,nearest_usmin_type,nearest_usmin_layer,verified_usmin,verified_500m,verified_1000m,verification_status
+bisbee,10026901,Higgins Mine,31.4382,-109.92065,"Copper, Lead, Manganese",Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,120.9,Adit,point,True,True,True,verified_250m
+bisbee,10046236,Southwest Mine,31.44014,-109.91648,"Copper, Lead, Zinc, Gold",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,15.4,Mine Shaft,point,True,True,True,verified_250m
+bisbee,10046239,Trish Mag Mine,31.43153,-109.91009,"Copper, Lead, Zinc, Gold",Base Metals,B,Past Producer,True,True,True,A-C,True,hit,A-C|hit,17,5,3.4,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10046243,Gardner Shaft,31.43236,-109.90676,"Copper, Lead, Zinc",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10109007,Danville-Hanchetta Claims,31.41403,-109.90509,Manganese,Battery Metals – Co/Ni,B,Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10027111,Waterloo Mine,31.41014,-109.89732,Manganese,Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,31,5,6.2,462.7,Mine Dump,polygon,False,True,True,verified_500m
+bisbee,10046245,Briggs Mine,31.42125,-109.89815,Copper,Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,31,5,6.2,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10102423,Easter Sunday Mine,31.42958,-109.83148,"Silica, Gold, Silver",Gold/Silver,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,31,5,6.2,14.2,Adit,point,True,True,True,verified_250m
+bisbee,10102424,Mammoth Claim,31.43181,-109.90426,Manganese,Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,31,5,6.2,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10104075,Bay State Mine,31.4157,-109.90232,Manganese,Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,31,5,6.2,42.4,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10112776,Holbrook Mine,31.43374,-109.91065,Copper,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,24,5,4.8,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10136791,Wade Hampton Mine,31.41014,-109.91625,"Copper, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,24,5,4.8,0.0,Gravel/Borrow Pit - Undifferentiated,polygon,True,True,True,verified_250m
+bisbee,10160862,White Tail Deer Mine,31.41704,-109.91895,Copper,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,24,5,4.8,0.0,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10185320,Southwest Mine,31.43844,-109.91785,"Gold, Lead, Zinc, Copper",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,24,5,4.8,39.7,Adit,point,True,True,True,verified_250m
+bisbee,10210032,Government Draw Prospect,31.61484,-109.98846,Fluorine-Fluorite,Industrial,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,24,5,4.8,6069.1,Adit,point,False,False,False,not_verified
+bisbee,10161506,Glance,31.37014,-109.83065,Copper,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,23,5,4.6,18.0,Mine Shaft,point,True,True,True,verified_250m
+bisbee,10186036,Dallas Mine,31.42154,-109.90315,Copper,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,23,5,4.6,0.6,Mine Dump,polygon,True,True,True,verified_250m
+bisbee,10209494,Wellington Claims,31.69514,-109.88205,"Gold, Silver",Gold/Silver,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,23,5,4.6,331.0,Adit,point,False,True,True,verified_500m
+bisbee,10258100,Sunrise,31.43594,-109.91955,"Copper, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,23,5,4.6,18.4,Mine Shaft,point,True,True,True,verified_250m
+bisbee,10282977,Junction Mine,31.43094,-109.89375,Copper,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,23,5,4.6,74.4,Mine Dump,polygon,True,True,True,verified_250m
+christmas,10027091,Snakebit Mine,33.75702,-110.58986,Uranium,Energy,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,4,4,1.0,1682.6,Prospect Pit,point,False,False,False,not_verified
+christmas,10027388,Ramsdell Mine,33.76591,-110.67625,Manganese,Battery Metals – Co/Ni,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,4,4,1.0,289.2,Prospect Pit,point,False,True,True,verified_500m
+christmas,10185970,Devils Chasm Group,33.81677,-110.8743,Uranium,Energy,C,Prospect,False,True,False,A-C,True,hit,A-C|hit,4,4,1.0,4695.4,Adit,point,False,False,False,not_verified
+christmas,10233924,Samsel Property,33.90147,-110.8924,Tungsten,Specialty/High-Tech,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,4,4,1.0,3285.6,Prospect Pit,point,False,False,False,not_verified
+christmas,10026831,Apache Manganese Mine,33.79368,-110.69569,"Manganese, Copper",Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,12,6,2.0,28.9,Adit,point,True,True,True,verified_250m
+christmas,10026840,Accord Mine,33.79757,-110.7143,Manganese,Battery Metals – Co/Ni,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,12,6,2.0,52.6,Adit,point,True,True,True,verified_250m
+christmas,10027474,Sue Mine,33.7584,-110.86098,Uranium,Energy,B,Producer,False,True,True,A-C,False,miss,A-C|miss,12,6,2.0,5130.0,Adit,point,False,False,False,not_verified
+christmas,10092684,Walnut No. 2 Claim,34.00729,-110.87237,"Copper, Iron, Uranium",Energy,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,12,6,2.0,1300.8,Adit,point,False,False,False,not_verified
+christmas,10209805,Sue Mine,33.75977,-110.8515,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,12,6,2.0,5862.7,Adit,point,False,False,False,not_verified
+christmas,10258286,Snakebit Mine,33.77288,-110.60209,Uranium,Energy,C,Prospect,False,True,False,A-C,False,miss,A-C|miss,12,6,2.0,1536.9,Prospect Pit,point,False,False,False,not_verified
+christmas,10048205,Quartzite Claims,33.88618,-110.8782,Uranium,Energy,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,8,5,1.6,2397.7,Prospect Pit,point,False,False,False,not_verified
+christmas,10233579,Iris Deposit,33.71258,-110.8979,Uranium,Energy,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,8,5,1.6,1315.3,Adit,point,False,False,False,not_verified
+christmas,10233936,Major Hoople,33.92227,-110.884,Uranium,Energy,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,8,5,1.6,1509.3,Prospect Pit,point,False,False,False,not_verified
+christmas,10234208,Mule Shoe Bend Erythrite Occurance,33.80288,-110.50489,Cobalt,Battery Metals – Co/Ni,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,8,5,1.6,1072.8,Prospect Pit,point,False,False,False,not_verified
+christmas,10282930,Big Buck Deposit,33.83067,-110.8701,Uranium,Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,8,5,1.6,3754.2,Adit,point,False,False,False,not_verified
+christmas,10136590,Grindstone,33.83897,-110.8632,Uranium,Energy,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,3742.6,Adit,point,False,False,False,not_verified
+christmas,10209519,Walnut Creek Area,34.00837,-110.8674,Uranium,Energy,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,969.9,Adit,point,False,False,True,verified_1000m
+christmas,10233833,Ancient Claims,33.84397,-110.8813,Copper,Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,2014.3,Adit,point,False,False,False,not_verified
+christmas,10283111,Hillside Deposit,33.78068,-110.58959,Uranium,Energy,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,102.4,Prospect Pit,point,True,True,True,verified_250m
+christmas,10283265,Wedge Claim No 2,33.81698,-110.48709,Lead,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,13,5,2.6,2094.9,Prospect Pit,point,False,False,False,not_verified
+contact_district,10045628,Magnolia Claim,41.78102,-114.80728,Copper,Base Metals,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,13,5,2.6,62.9,Adit,point,True,True,True,verified_250m
+contact_district,10045953,Blue Lode,41.78102,-114.80672,"Copper, Gold, Silver, Molybdenum",Base Metals,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,13,5,2.6,45.1,Adit,point,True,True,True,verified_250m
+contact_district,10045966,Mammoth Mine,41.78074,-114.80367,Copper,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,13,5,2.6,62.6,Adit,point,True,True,True,verified_250m
+contact_district,10045976,Effie Fay Group,41.76769,-114.79033,Copper,Base Metals,B,Past Producer,True,True,True,A-C,True,hit,A-C|hit,13,5,2.6,5.5,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10046004,Alice Mine,41.78185,-114.80395,Copper,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,13,5,2.6,46.1,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10045939,New York Group,41.77712,-114.83201,Copper,Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,55,5,11.0,48.3,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10045977,Empire Mine,41.77769,-114.78839,Copper,Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,55,5,11.0,36.4,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10046005,Antelope Mine,41.77963,-114.76811,Copper,Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,55,5,11.0,29.2,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10046026,Yellow Girl Mine,41.75463,-114.7895,Copper,Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,55,5,11.0,28.7,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10104039,Allen No. 2,41.78297,-114.78117,Copper,Base Metals,B,Past Producer,True,True,True,A-C,False,miss,A-C|miss,55,5,11.0,4.7,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10046091,Opal Hill Claims,41.7163,-114.59061,Copper,Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,36,5,7.2,26.7,Adit,point,True,True,True,verified_250m
+contact_district,10124385,Bonanza,41.7777,-114.8342,Copper,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,36,5,7.2,172.0,Mine Shaft,point,True,True,True,verified_250m
+contact_district,10149284,Dry Creek Mill,41.58461,-114.81059,Barium-Barite,Industrial,D,Producer,True,False,True,D-E,True,hit,D-E|hit,36,5,7.2,757.9,Gravel Pit,polygon,False,False,True,verified_1000m
+contact_district,10173514,Contact Sheelite Deposits,41.77631,-114.72649,Tungsten,Specialty/High-Tech,E,Occurrence,False,False,False,D-E,True,hit,D-E|hit,36,5,7.2,725.6,Prospect Pit,point,False,False,True,verified_1000m
+contact_district,10221567,Green Monster,41.76851,-114.76399,Copper,Base Metals,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,36,5,7.2,239.1,Prospect Pit,point,True,True,True,verified_250m
+contact_district,10124247,Semsco Property,41.73051,-114.82869,Copper,Base Metals,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,60,5,12.0,33.3,Adit,point,True,True,True,verified_250m
+contact_district,10149290,Blanchard Mine,41.68431,-114.65169,Copper,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,60,5,12.0,17.9,Adit,point,True,True,True,verified_250m
+contact_district,10149373,Independence Claims Nos.1-10,41.65711,-114.81059,Copper,Base Metals,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,60,5,12.0,1223.0,Gravel Pit,point,False,False,False,not_verified
+contact_district,10173827,Silkworm,41.60521,-114.65839,Lead,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,60,5,12.0,12.8,Adit,point,True,True,True,verified_250m
+contact_district,10246446,Arizona Mining Claims,41.68271,-114.70729,Copper,Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,60,5,12.0,13.1,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10027041,Telephone  Mine,31.69319,-110.06983,"Silver, Manganese",Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,43,5,8.6,7.9,Adit,point,True,True,True,verified_250m
+courtland_gleeson,10046208,Christmas Mine,31.86985,-109.94872,"Copper, Silver, Gold, Lead",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,43,5,8.6,31.4,Prospect Pit,point,True,True,True,verified_250m
+courtland_gleeson,10046273,Maud Hill Mine Group,31.73985,-109.81176,"Copper, Lead, Silver, Gold",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,43,5,8.6,22.0,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10048117,Mystery Mine,31.74485,-109.81759,"Silver, Zinc, Lead",Base Metals,B,Producer,False,True,True,A-C,True,hit,A-C|hit,43,5,8.6,8.4,Adit,point,True,True,True,verified_250m
+courtland_gleeson,10305551,Abril Mine,31.90953,-109.99376,"Copper, Zinc",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,43,5,8.6,150.4,Adit,point,True,True,True,verified_250m
+courtland_gleeson,10027021,Herschel Mine,31.70485,-110.07316,"Silver, Lead, Gold, Copper",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,100,5,20.0,5.2,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10046267,Humbot Mine,31.7668,-109.81509,"Copper, Silver, Gold",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,100,5,20.0,18.2,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10103730,Empire No. 2 Shaft.,32.01819,-110.05649,"Copper, Silver",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,100,5,20.0,19.2,Prospect Pit,point,True,True,True,verified_250m
+courtland_gleeson,10104059,Burrito De Fierro Mine,31.9443,-110.05899,"Zinc, Copper, Silver, Lead",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,100,5,20.0,144.4,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10160924,Johnson Camp,32.10292,-110.06876,Copper,Base Metals,A,Producer,False,True,True,A-C,False,miss,A-C|miss,100,5,20.0,140.7,Open Pit Mine or Quarry,point,True,True,True,verified_250m
+courtland_gleeson,10136693,Intervener Mine,31.70843,-110.06926,"Lead, Silver",Base Metals,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,50,5,10.0,44.3,Adit,point,True,True,True,verified_250m
+courtland_gleeson,10161232,Copper-Gold,31.89323,-109.81315,"Copper, Silver",Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,50,5,10.0,312.0,Mine Shaft,point,False,True,True,verified_500m
+courtland_gleeson,10161421,Unnamed Working,31.89733,-109.98706,Copper,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,50,5,10.0,513.2,Adit,point,False,False,True,verified_1000m
+courtland_gleeson,10161526,Gordon Spring Prospects,31.85043,-109.97566,"Lead, Zinc",Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,50,5,10.0,189.6,Prospect Pit,point,True,True,True,verified_250m
+courtland_gleeson,10232565,Hubbard Mine,31.94763,-110.03096,Zinc,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,50,5,10.0,36.4,Adit,point,True,True,True,verified_250m
+courtland_gleeson,10136619,Humbot Mine,31.76683,-109.81485,"Copper, Silver",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,97,5,19.4,29.3,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10161293,Tribute Mine,31.70293,-110.06986,"Gold, Lead, Silver",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,97,5,19.4,19.6,Mine Shaft,point,True,True,True,verified_250m
+courtland_gleeson,10161400,Eagle Roost Mine,31.68453,-110.06676,"Silver, Manganese",Battery Metals – Co/Ni,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,97,5,19.4,34.7,Prospect Pit,point,True,True,True,verified_250m
+courtland_gleeson,10185936,Chicora Mine,32.09732,-110.06596,"Copper, Silica, Silver",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,97,5,19.4,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+courtland_gleeson,10258451,Herron Mine,31.77403,-109.82315,"Copper, Silver",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,97,5,19.4,32.0,Adit,point,True,True,True,verified_250m
+crooks_gap,10107391,Sheep Mountain Operation,42.38028,-107.82306,Uranium,Energy,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,10,5,2.0,769.2,Open Pit Mine,polygon,False,False,True,verified_1000m
+crooks_gap,10157278,Reserve Mine,42.3908,-107.8192,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,10,5,2.0,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+crooks_gap,10181542,Sundog Mine,42.36885,-107.83069,Uranium,Energy,C,Prospect,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,64.5,Strip Mine,polygon,True,True,True,verified_250m
+crooks_gap,10182106,Beatrice Claims,42.4186,-107.8314,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,10,5,2.0,137.5,Open Pit Mine,point,True,True,True,verified_250m
+crooks_gap,10254729,Snowball Mine,42.36487,-107.838,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,10,5,2.0,0.0,Strip Mine,polygon,True,True,True,verified_250m
+crooks_gap,10018878,Wasatch Claims,42.10999,-107.60991,Uranium,Energy,C,Producer,False,True,True,A-C,False,miss,A-C|miss,10,5,2.0,8040.8,Prospect Pit,point,False,False,False,not_verified
+crooks_gap,10081145,Hazel Claims,42.41944,-107.83111,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,10,5,2.0,78.2,Open Pit Mine,point,True,True,True,verified_250m
+crooks_gap,10181475,B 17-66,42.31275,-107.95899,Uranium,Energy,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,10,5,2.0,135.0,Prospect Pit,point,True,True,True,verified_250m
+crooks_gap,10230703,"B 17-63,65",42.29825,-107.97929,Uranium,Energy,C,Occurrence,True,True,False,A-C,False,miss,A-C|miss,10,5,2.0,113.4,Prospect Pit,point,True,True,True,verified_250m
+crooks_gap,10400452,Golden Goose Mine,42.38833,-107.82139,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,10,5,2.0,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+crooks_gap,10133510,Unknown,42.25465,-107.86259,Uranium,Energy,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,38,5,7.6,576.7,Prospect Pit,point,False,False,True,verified_1000m
+crooks_gap,10181734,N H,42.38245,-107.82239,Uranium,Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,38,5,7.6,531.0,Open Pit Mine,polygon,False,False,True,verified_1000m
+crooks_gap,10181778,Heald,42.3689,-107.7072,Uranium,Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,38,5,7.6,551.6,Prospect Pit,point,False,False,True,verified_1000m
+crooks_gap,10206271,Sun #4,42.37275,-107.82319,Uranium,Energy,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,38,5,7.6,542.8,Strip Mine,polygon,False,False,True,verified_1000m
+crooks_gap,10279219,Continental Sec. 16,42.39935,-107.82379,Uranium,Energy,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,38,5,7.6,612.1,Adit,point,False,False,True,verified_1000m
+crooks_gap,10157712,Pay Dirt North Incline,42.49855,-107.82399,Uranium,Energy,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,81,5,16.2,1210.3,Gravel Pit,point,False,False,False,not_verified
+crooks_gap,10206391,Diehl,42.25435,-107.64878,Uranium,Energy,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,81,5,16.2,143.4,Prospect Pit,point,True,True,True,verified_250m
+crooks_gap,10206467,Split Rock Mill,42.48495,-107.82959,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,81,5,16.2,1072.1,Gravel Pit,point,False,False,False,not_verified
+crooks_gap,10230353,Unknown,42.28305,-107.64848,Uranium,Energy,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,81,5,16.2,706.5,Prospect Pit,point,False,False,True,verified_1000m
+crooks_gap,10279303,Unknown,42.29715,-107.62898,Uranium,Energy,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,81,5,16.2,1092.5,Prospect Pit,point,False,False,False,not_verified
+eagle_mountain,10035717,Carlyle,34.07726,-115.70139,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,36.1,Adit,point,True,True,True,verified_250m
+eagle_mountain,10035719,Brooklyn,34.03546,-115.67868,Gold,Gold/Silver,C,Past Producer,True,True,True,A-C,True,hit,A-C|hit,5,5,1.0,15.6,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10036181,Dorris May,34.06948,-115.64083,"Gold, Iron",Gold/Silver,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,5,5,1.0,208.2,Adit,point,True,True,True,verified_250m
+eagle_mountain,10099486,Mission Gold Mines,33.98948,-115.69139,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,53.9,Open Pit Mine or Quarry,point,True,True,True,verified_250m
+eagle_mountain,10103369,O.K.,34.04226,-115.70222,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,5.6,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+eagle_mountain,10008129,Black Eagle,33.88171,-115.55304,"Lead, Silver",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,5,1.4,17.2,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10035720,Goldstone,34.06532,-115.71139,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,5,1.4,19.3,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10064462,Black Eagle Mine,33.88143,-115.55304,"Lead, Silver",Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,5,1.4,14.1,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10103368,Top Nest,34.06282,-115.69833,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,5,1.4,77.1,Adit,point,True,True,True,verified_250m
+eagle_mountain,10103370,Jupiter,34.06726,-115.70916,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,5,1.4,2.5,Prospect Pit,point,True,True,True,verified_250m
+eagle_mountain,10116721,Unnamed Prospect,34.07504,-115.67913,Copper,Base Metals,E,Prospect,False,False,False,D-E,True,hit,D-E|hit,31,5,6.2,572.5,Adit,point,False,False,True,verified_1000m
+eagle_mountain,10188871,Unnamed Prospect,34.04034,-115.65393,Gold,Gold/Silver,E,Prospect,False,False,False,D-E,True,hit,D-E|hit,31,5,6.2,827.1,Prospect Pit,point,False,False,True,verified_1000m
+eagle_mountain,10212963,O. K. Mine,34.04254,-115.70253,Gold,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,31,5,6.2,31.4,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+eagle_mountain,10236768,Desert King Mine,33.99584,-115.69473,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,31,5,6.2,23.6,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10262760,Unnamed Prospect,34.06814,-115.67553,Gold,Gold/Silver,E,Prospect,False,False,False,D-E,True,hit,D-E|hit,31,5,6.2,160.4,Prospect Pit,point,True,True,True,verified_250m
+eagle_mountain,10165015,Unnamed Prospect,34.05284,-115.69143,Gold,Gold/Silver,E,Prospect,False,False,False,D-E,False,miss,D-E|miss,88,5,17.6,72.7,Prospect Pit,point,True,True,True,verified_250m
+eagle_mountain,10189004,Little Yoyo Claims,34.04364,-115.70913,Gold,Gold/Silver,E,Prospect,False,False,False,D-E,False,miss,D-E|miss,88,5,17.6,14.2,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10189121,Golden Harvest,34.04894,-115.66913,Gold,Gold/Silver,E,Prospect,False,False,False,D-E,False,miss,D-E|miss,88,5,17.6,14.9,Mine Shaft,point,True,True,True,verified_250m
+eagle_mountain,10212977,Pinto Chief Mine,34.01784,-115.68253,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,88,5,17.6,245.0,Prospect Pit,point,True,True,True,verified_250m
+eagle_mountain,10261278,Unnamed Prospect,33.68065,-115.48022,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,88,5,17.6,92.9,Prospect Pit,point,True,True,True,verified_250m
+eureka,10044754,Stibnite Prospect,39.4691,-116.01257,Antimony,Specialty/High-Tech,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,36,5,7.2,126.0,Prospect Pit,point,True,True,True,verified_250m
+eureka,10044778,Dead Broke Tunnel,39.46882,-115.99951,"Silver, Gold, Lead",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,36,5,7.2,137.5,Mine Shaft,point,True,True,True,verified_250m
+eureka,10044804,Mayberry Tunnel,39.47854,-115.98312,"Gold, Lead, Silver",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,36,5,7.2,48.8,Prospect Pit,point,True,True,True,verified_250m
+eureka,10044811,Ruby Hill Tunnel,39.4816,-116.00312,"Lead, Silver",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,36,5,7.2,24.2,Adit,point,True,True,True,verified_250m
+eureka,10295212,Mountain View Mine,39.58322,-116.25091,Zinc,Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,36,5,7.2,1969.8,Prospect Pit,point,False,False,False,not_verified
+eureka,10044703,Antelope Mine,39.34937,-116.14923,"Zinc, Silver, Lead",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,47,5,9.4,30.9,Mine Shaft,point,True,True,True,verified_250m
+eureka,10044794,Excelsior Tunnel,39.46493,-115.99201,"Gold, Silver, Lead",Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,47,5,9.4,58.3,Adit,point,True,True,True,verified_250m
+eureka,10047573,Ratto Canyon Deposit,39.40049,-115.99062,Gold,Gold/Silver,C,Producer,False,True,True,A-C,False,miss,A-C|miss,47,5,9.4,302.6,Prospect Pit,point,False,True,True,verified_500m
+eureka,10086667,Eagle Roost,39.6777,-115.86701,"Silver, Lead",Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,47,5,9.4,44.3,Prospect Pit,point,True,True,True,verified_250m
+eureka,10310482,South Eureka Property,39.44993,-115.97784,Gold,Gold/Silver,B,Producer,True,True,True,A-C,False,miss,A-C|miss,47,5,9.4,23.9,Adit,point,True,True,True,verified_250m
+eureka,10125440,Charter Tunnel,39.49322,-115.9976,Silver,Gold/Silver,D,Unknown,False,False,False,D-E,True,hit,D-E|hit,32,5,6.4,52.3,Prospect Pit,point,True,True,True,verified_250m
+eureka,10173546,Jackson Mine,39.49663,-115.9853,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,32,5,6.4,18.1,Mine Shaft,point,True,True,True,verified_250m
+eureka,10173689,Frazer Tunnel,39.47573,-115.984,Silver,Gold/Silver,D,Unknown,False,False,False,D-E,True,hit,D-E|hit,32,5,6.4,59.2,Prospect Pit,point,True,True,True,verified_250m
+eureka,10197518,Eureka-Hamburg Mine & Mill,39.49852,-115.9848,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,32,5,6.4,21.3,Mine Shaft,point,True,True,True,verified_250m
+eureka,10246641,Orange Mine,39.46713,-115.994,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,32,5,6.4,94.5,Adit,point,True,True,True,verified_250m
+eureka,10149130,Excelsior Tunnel,39.46493,-115.992,Gold,Gold/Silver,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,70,5,14.0,57.5,Adit,point,True,True,True,verified_250m
+eureka,10198399,North Star,39.41743,-115.64149,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,70,5,14.0,1163.7,Gravel/Borrow Pit - Undifferentiated,point,False,False,False,not_verified
+eureka,10222175,Bullwacker Mine,39.52272,-115.997,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,70,5,14.0,80.8,Prospect Pit,point,True,True,True,verified_250m
+eureka,10222888,Maryland,39.39993,-115.85949,Silver,Gold/Silver,D,Prospect,True,False,False,D-E,False,miss,D-E|miss,70,5,14.0,340.7,Prospect Pit,point,False,True,True,verified_500m
+eureka,10271124,Union Carbide Beryl Deposit,39.28433,-115.93779,Beryllium,Specialty/High-Tech,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,70,5,14.0,1097.2,Gravel Pit,point,False,False,False,not_verified
+holden,10008997,Little Jap,48.21315,-120.58563,Silver,Gold/Silver,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,2751.1,Borrow Pit,point,False,False,False,not_verified
+holden,10048438,Round Mountain,48.21843,-120.55702,Copper,Base Metals,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,4853.8,Borrow Pit,point,False,False,False,not_verified
+holden,10048602,P.I.,47.97899,-120.78341,"Gold, Silver, Copper, Zinc",Base Metals,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,4793.6,Gravel/Borrow Pit - Undifferentiated,point,False,False,False,not_verified
+holden,10048605,Coon Lake,48.38649,-120.83509,"Silver, Gold",Gold/Silver,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,19275.1,Prospect Pit,point,False,False,False,not_verified
+holden,10130684,Blue Jay,48.21622,-120.55009,Copper,Base Metals,C,Prospect,False,True,False,A-C,True,hit,A-C|hit,10,5,2.0,5209.6,Borrow Pit,point,False,False,False,not_verified
+holden,10008495,Glacier Peak,48.1976,-120.98037,"Molybdenum, Copper",Base Metals,A,Prospect,False,True,False,A-C,False,miss,A-C|miss,20,5,4.0,55.5,Prospect Pit,point,True,True,True,verified_250m
+holden,10048597,Mary Green,48.24121,-120.8212,"Copper, Silver",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,20,5,4.0,5668.1,Adit,point,False,False,False,not_verified
+holden,10048607,Cougar,48.12676,-120.64313,"Zinc, Copper, Gold",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,20,5,4.0,8159.6,Borrow Pit,point,False,False,False,not_verified
+holden,10048609,Peacock,48.14288,-120.8712,"Gold, Silver, Copper",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,20,5,4.0,1720.7,Prospect Pit,point,False,False,False,not_verified
+holden,10155601,Esmeralda,48.15842,-120.8848,Gold,Gold/Silver,C,Prospect,False,True,False,A-C,False,miss,A-C|miss,20,5,4.0,319.5,Prospect Pit,point,False,True,True,verified_500m
+holden,10180081,Agenda,48.19672,-120.59589,Graphite,Battery Metals – Co/Ni,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,19,5,3.8,1379.0,Borrow Pit,point,False,False,False,not_verified
+holden,10203702,Sunday Morning,48.20702,-120.56369,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,19,5,3.8,3912.5,Borrow Pit,point,False,False,False,not_verified
+holden,10203991,Coon Lake Prospect,48.38592,-120.8379,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,19,5,3.8,19492.3,Prospect Pit,point,False,False,False,not_verified
+holden,10228165,Blue Jay Extension,48.21672,-120.55289,Copper,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,19,5,3.8,5042.5,Borrow Pit,point,False,False,False,not_verified
+holden,10276770,Hunter,48.20042,-120.55039,Silver,Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,19,5,3.8,4768.5,Borrow Pit,point,False,False,False,not_verified
+holden,10135292,Cougar and Mtn Lion,48.12762,-120.63699,Copper,Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,44,5,8.8,7958.6,Borrow Pit,point,False,False,False,not_verified
+holden,10191020,A.E.F.,48.12542,-120.84289,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,44,5,8.8,2542.8,Adit,point,False,False,False,not_verified
+holden,10204072,Black Devil,48.20902,-120.837,Beryllium,Specialty/High-Tech,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,44,5,8.8,3930.5,Adit,point,False,False,False,not_verified
+holden,10227600,Red Cap,48.14152,-120.8706,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,44,5,8.8,1846.0,Prospect Pit,point,False,False,False,not_verified
+holden,10253288,Chub,48.20202,-120.54229,Silver,Gold/Silver,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,44,5,8.8,5382.7,Borrow Pit,point,False,False,False,not_verified
+karnes_county,10062905,Luckett Mine,28.90998,-98.1142,Uranium,Energy,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,12,5,2.4,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+karnes_county,10062959,Nuhn Mine,28.89887,-98.12948,Uranium,Energy,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,12,5,2.4,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+karnes_county,10062960,Sickenius Mine,28.88582,-98.09698,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,12,5,2.4,20.4,Quarry,point,True,True,True,verified_250m
+karnes_county,10062966,Weddington-Susquehanna Mine,28.85582,-98.11837,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,12,5,2.4,1012.6,Quarry,point,False,False,False,not_verified
+karnes_county,10062979,Garcia Mine,28.87248,-98.07114,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,12,5,2.4,84.8,Quarry,point,True,True,True,verified_250m
+karnes_county,10062948,Banduch-Cochran Mine,29.0947,-97.74113,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,20,5,4.0,0.0,Disturbed Surface,polygon,True,True,True,verified_250m
+karnes_county,10062968,Pfeil Mine,28.81555,-98.12253,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,20,5,4.0,709.6,Quarry,polygon,False,False,True,verified_1000m
+karnes_county,10062975,Moczygemba Mine,28.92109,-98.07392,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,20,5,4.0,91.8,Quarry,polygon,True,True,True,verified_250m
+karnes_county,10062978,Stoeltje Mine,28.95304,-98.00948,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,20,5,4.0,19.0,Quarry,polygon,True,True,True,verified_250m
+karnes_county,10062983,Duziuk-Lyssy Mine,28.82194,-98.10225,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,20,5,4.0,40.6,Quarry,point,True,True,True,verified_250m
+karnes_county,10130137,Garcia-Turner Pit,28.88056,-98.07751,Uranium,Energy,D,Producer,False,False,True,D-E,True,hit,D-E|hit,16,5,3.2,1099.7,Quarry,point,False,False,False,not_verified
+karnes_county,10154096,Climax Pit,28.89606,-98.12921,Uranium,Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,16,5,3.2,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+karnes_county,10203093,Karnes County Pits,28.89136,-98.13171,Uranium,Energy,E,Producer,False,False,True,D-E,True,hit,D-E|hit,16,5,3.2,11.9,Open Pit Mine,polygon,True,True,True,verified_250m
+karnes_county,10276069,Sickenius Pit,28.88746,-98.09951,Uranium,Energy,D,Producer,False,False,True,D-E,True,hit,D-E|hit,16,5,3.2,287.0,Quarry,point,False,True,True,verified_500m
+karnes_county,10300287,Lauw Pit,28.87886,-98.12781,Uranium,Energy,D,Producer,False,False,True,D-E,True,hit,D-E|hit,16,5,3.2,1396.6,Open Pit Mine,polygon,False,False,False,not_verified
+karnes_county,10130468,Niechwietz Pits,28.90606,-98.08311,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,28,5,5.6,1778.6,Quarry,polygon,False,False,False,not_verified
+karnes_county,10178798,Trial Pit,28.94716,-97.98251,Uranium,Energy,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,28,5,5.6,1730.4,Quarry,point,False,False,False,not_verified
+karnes_county,10202867,Cochran Pit,29.11106,-97.7303,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,28,5,5.6,1998.9,Disturbed Surface,polygon,False,False,False,not_verified
+karnes_county,10203199,Winerich Pit,28.97086,-97.83361,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,28,5,5.6,0.0,Disturbed Surface,polygon,True,True,True,verified_250m
+karnes_county,10251084,Ft Worth Natl Pit,28.98056,-97.94591,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,28,5,5.6,605.0,Tailings - Undifferentiated,polygon,False,False,True,verified_1000m
+lake_valley,10011587,Blue Bell No. 2 Prospect,32.75762,-107.64338,Copper,Base Metals,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,16,5,3.2,1841.3,Adit,point,False,False,False,not_verified
+lake_valley,10011611,Petroglyph Mine,32.93428,-107.54421,"Zinc, Lead, Copper",Base Metals,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,16,5,3.2,105.5,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10072170,Rattlesnake Mine 1877,32.94233,-107.55393,"Silver, Gold",Gold/Silver,B,Producer,False,True,True,A-C,True,hit,A-C|hit,16,5,3.2,21.9,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10097772,Vanadinite Mine,32.91844,-107.52338,"Lead, Vanadium, Zinc",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,16,5,3.2,260.9,Adit,point,False,True,True,verified_500m
+lake_valley,10127016,Rattlesnake,32.94231,-107.5539,"Silver, Gold, Copper",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,16,5,3.2,25.5,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10011590,Caledonia Mine 1880's,32.93733,-107.7181,"Lead, Silver",Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,38,5,7.6,17.0,Prospect Pit,point,True,True,True,verified_250m
+lake_valley,10011748,Matchless Group 1910's,32.93205,-107.72699,"Lead, Zinc, Silver",Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,38,5,7.6,65.0,Adit,point,True,True,True,verified_250m
+lake_valley,10094394,Gypsy Iv Group,32.93928,-107.69338,"Silver, Copper, Lead, Zinc",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,38,5,7.6,18.5,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10097792,National Defense Group 1958,32.934,-107.52699,Manganese,Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,38,5,7.6,265.8,Adit,point,False,True,True,verified_500m
+lake_valley,10224091,Superior,32.93481,-107.72,"Silver, Lead, Copper",Base Metals,C,Past Producer,True,True,True,A-C,False,miss,A-C|miss,38,5,7.6,38.8,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10151115,Jayhawk Group,32.83182,-107.6706,Copper,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,30,5,6.0,80.3,Adit,point,True,True,True,verified_250m
+lake_valley,10175145,Unnamed Prospect,32.80322,-107.6695,Copper,Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,30,5,6.0,956.9,Adit,point,False,False,True,verified_1000m
+lake_valley,10198807,Hall Mine,32.91621,-107.5248,Lead,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,30,5,6.0,5.6,Adit,point,True,True,True,verified_250m
+lake_valley,10199221,Jackpot Mine,32.95511,-107.5623,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,30,5,6.0,42.7,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10224224,Opportunity,32.94041,-107.5506,"Silver, Gold, Copper",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,30,5,6.0,27.4,Prospect Pit,point,True,True,True,verified_250m
+lake_valley,10151473,Mine No 77 & Superior Group,32.93341,-107.7164,Silver,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,87,5,17.4,44.2,Mine Shaft,point,True,True,True,verified_250m
+lake_valley,10199197,Eighty-Five Mine,32.95571,-107.547,"Copper, Gold",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,87,5,17.4,18.5,Prospect Pit,point,True,True,True,verified_250m
+lake_valley,10199303,Gypsy Iv Group,32.93931,-107.6937,Silver,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,87,5,17.4,8.8,Adit,point,True,True,True,verified_250m
+lake_valley,10224059,Unnamed Mine,32.93401,-107.5306,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,87,5,17.4,53.0,Adit,point,True,True,True,verified_250m
+lake_valley,10272761,Morning Glory Mine,32.94791,-107.5345,"Copper, Gold",Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,87,5,17.4,193.9,Mine Shaft,point,True,True,True,verified_250m
+lisbon_valley,10015029,Frisco Mine,38.05443,-109.23791,"Uranium, Vanadium",Energy,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,95.2,Adit,point,True,True,True,verified_250m
+lisbon_valley,10015075,Jimbo Bob Shaft,38.11221,-109.22847,"Uranium, Vanadium",Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,9.1,Mine Shaft,point,True,True,True,verified_250m
+lisbon_valley,10089651,Rio Algom,38.26582,-109.28652,Uranium,Energy,B,Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,763.1,Mine Shaft,point,False,False,True,verified_1000m
+lisbon_valley,10097942,Gilman,38.11805,-109.2268,"Uranium, Vanadium",Energy,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,80.2,Adit,point,True,True,True,verified_250m
+lisbon_valley,10228298,Lisbon Mine & Mill,38.26579,-109.28679,Uranium,Energy,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,17,5,3.4,786.6,Mine Shaft,point,False,False,True,verified_1000m
+lisbon_valley,10015070,Good Hope #3,38.10888,-109.20291,"Uranium, Vanadium",Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,52,5,10.4,846.7,Prospect Pit,point,False,False,True,verified_1000m
+lisbon_valley,10079027,Unknown,38.40471,-109.4632,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,52,5,10.4,517.4,Prospect Pit,point,False,False,True,verified_1000m
+lisbon_valley,10155154,Woods Mine,38.11829,-109.11848,"Uranium, Vanadium",Energy,C,Producer,False,True,True,A-C,False,miss,A-C|miss,52,5,10.4,21.1,Adit,point,True,True,True,verified_250m
+lisbon_valley,10179080,Jimbo Bob Incline,38.10939,-109.21759,Uranium,Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,52,5,10.4,54.8,Adit,point,True,True,True,verified_250m
+lisbon_valley,10300788,Blackbird,38.14279,-109.13738,"Uranium, Vanadium",Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,52,5,10.4,197.7,Mine Shaft,point,True,True,True,verified_250m
+lisbon_valley,10015065,Unknown,38.1136,-109.22291,"Uranium, Vanadium",Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,33,5,6.6,22.8,Adit,point,True,True,True,verified_250m
+lisbon_valley,10072294,Frisco-Sunset-East Canyon Area,38.04999,-109.21736,"Uranium, Vanadium",Energy,E,Occurrence,False,False,False,D-E,True,hit,D-E|hit,33,5,6.6,1397.1,Adit,point,False,False,False,not_verified
+lisbon_valley,10078950,Chipmonk #3 Mines,38.45221,-109.38819,"Uranium, Vanadium",Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,33,5,6.6,442.3,Adit,point,False,True,True,verified_500m
+lisbon_valley,10079030,Blue Bonnet Top,38.40166,-109.43348,"Uranium, Vanadium",Energy,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,33,5,6.6,44.1,Adit,point,True,True,True,verified_250m
+lisbon_valley,10179750,Muleshoe Wash Manganese Deposit,38.35529,-109.4368,Manganese,Battery Metals – Co/Ni,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,33,5,6.6,146.3,Prospect Pit,point,True,True,True,verified_250m
+lisbon_valley,10078958,Buckskin #2,38.47666,-109.30375,"Uranium, Vanadium",Energy,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,155,5,31.0,90.1,Adit,point,True,True,True,verified_250m
+lisbon_valley,10093655,Blue Jay-Magee-Prince Albert,38.34999,-109.38402,Uranium,Energy,E,Occurrence,False,False,False,D-E,False,miss,D-E|miss,155,5,31.0,354.8,Adit,point,False,True,True,verified_500m
+lisbon_valley,10093657,Brushy Basin Group,38.24999,-109.06735,Uranium,Energy,E,Occurrence,False,False,False,D-E,False,miss,D-E|miss,155,5,31.0,1688.0,Open Pit Mine,point,False,False,False,not_verified
+lisbon_valley,10108283,Brushy Basin #1,38.25471,-109.06429,"Uranium, Vanadium",Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,155,5,31.0,1368.1,Open Pit Mine,point,False,False,False,not_verified
+lisbon_valley,10203416,Mi-Vida Mine,38.19029,-109.25679,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,155,5,31.0,74.3,Adit,point,True,True,True,verified_250m
+lordsburg,10009974,Ward Tungsten Mine,32.10874,-108.98007,Tungsten,Specialty/High-Tech,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,23,5,4.6,7.6,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10010023,Lone Star Prospect,32.26845,-108.74869,Fluorine-Fluorite,Industrial,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,23,5,4.6,21.7,Prospect Pit,point,True,True,True,verified_250m
+lordsburg,10010048,Johnny Bull Mine,32.16013,-108.99841,"Copper, Silver",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,23,5,4.6,9.7,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10062662,Kuykendal Property,31.95846,-108.90841,Manganese,Battery Metals – Co/Ni,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,23,5,4.6,531.9,Prospect Pit,point,False,False,True,verified_1000m
+lordsburg,10222894,Nelly Bly,32.25013,-108.75893,"Silver, Lead, Gold, Copper",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,23,5,4.6,172.0,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10009993,Nancy Lee Mine,32.42373,-108.52562,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,58,5,11.6,16.5,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10010031,Campbell,32.24735,-108.77007,Fluorine-Fluorite,Industrial,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,58,5,11.6,100.4,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10013305,Malone Mines,32.54429,-108.52618,Gold,Gold/Silver,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,58,5,11.6,36.9,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10094269,Ruby Silver Group,32.45095,-108.51979,Silver,Gold/Silver,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,58,5,11.6,18.1,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10101445,Animas Mine,32.12819,-108.77785,Fluorine-Fluorite,Industrial,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,58,5,11.6,13.6,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10125991,Scheelite Group,32.10573,-108.99783,"Tungsten, Molybdenum",Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,15,5,3.0,1525.5,Prospect Pit,point,False,False,False,not_verified
+lordsburg,10150437,Judita Group,32.31682,-108.72143,Lead,Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,15,5,3.0,199.9,Prospect Pit,point,True,True,True,verified_250m
+lordsburg,10150508,Owl,32.28432,-108.75063,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,15,5,3.0,22.1,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10223173,Battleship,32.31702,-108.75203,"Lead, Gold, Copper, Silver",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,15,5,3.0,30.0,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10296170,Rincon,31.84544,-108.70672,"Zinc, Silver, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,15,5,3.0,132.0,Prospect Pit,point,True,True,True,verified_250m
+lordsburg,10126259,Mineral Mountain Mine,32.21123,-109.02423,"Silver, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,76,5,15.2,35.5,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10174382,New Year Prospect,32.14183,-108.97843,"Zinc, Lead, Antimony",Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,76,5,15.2,873.0,Mine Shaft,point,False,False,True,verified_1000m
+lordsburg,10174513,Crystal Mine,32.11953,-108.94503,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,76,5,15.2,7.2,Adit,point,True,True,True,verified_250m
+lordsburg,10174821,Mikesell Group,32.31952,-108.75893,"Silver, Lead, Gold, Copper",Base Metals,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,76,5,15.2,93.7,Mine Shaft,point,True,True,True,verified_250m
+lordsburg,10247149,Crescent Deposit,32.42652,-108.53232,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,76,5,15.2,49.4,Prospect Pit,point,True,True,True,verified_250m
+magdalena_kelly,10008852,Water Canyon Manganese Mine 1914,34.02231,-107.12309,Manganese,Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,13,5,2.6,174.8,Mine Shaft,point,True,True,True,verified_250m
+magdalena_kelly,10012505,Maggie Merchant Claim,34.03703,-107.1417,"Silver, Lead",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,13,5,2.6,110.6,Mine Shaft,point,True,True,True,verified_250m
+magdalena_kelly,10012511,Wagon Wheel Group,34.06287,-107.13198,"Silver, Copper, Zinc, Lead",Base Metals,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,13,5,2.6,51.3,Prospect Pit,point,True,True,True,verified_250m
+magdalena_kelly,10094249,Carretas Canyon Group,33.9837,-106.99337,"Tungsten, Lead, Manganese",Battery Metals – Co/Ni,B,Occurrence,False,True,False,A-C,True,hit,A-C|hit,13,5,2.6,0.0,Open Pit Mine,polygon,True,True,True,verified_250m
+magdalena_kelly,10101430,Buckeye Mine,34.0187,-107.13559,Copper,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,13,5,2.6,43.2,Mine Shaft,point,True,True,True,verified_250m
+magdalena_kelly,10012336,Kelly Mine,34.08676,-107.20143,"Zinc, Lead",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,43,5,8.6,50.0,Mine Shaft,point,True,True,True,verified_250m
+magdalena_kelly,10012500,El Tigre Mine,34.04065,-107.15809,"Zinc, Lead",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,43,5,8.6,191.8,Adit,point,True,True,True,verified_250m
+magdalena_kelly,10087570,Hardscrabble Mine,34.11342,-107.19699,"Zinc, Lead, Copper",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,43,5,8.6,69.3,Adit,point,True,True,True,verified_250m
+magdalena_kelly,10094474,Copper Lode Claim,33.99842,-107.19392,Gold,Gold/Silver,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,43,5,8.6,22.3,Mine Shaft,point,True,True,True,verified_250m
+magdalena_kelly,10101740,Papa Mine,34.07898,-107.18448,"Gold, Lead, Copper, Silver",Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,43,5,8.6,388.9,Prospect Pit,point,False,True,True,verified_500m
+magdalena_kelly,10126856,Germany,34.08619,-107.1964,"Lead, Copper, Zinc, Silver",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,11,5,2.2,267.8,Adit,point,False,True,True,verified_500m
+magdalena_kelly,10150739,Graphic Waldo,34.09179,-107.2098,"Zinc, Silver, Lead, Copper",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,11,5,2.2,12.6,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+magdalena_kelly,10150907,Connelly,34.05839,-107.19059,Zinc,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,11,5,2.2,539.4,Adit,point,False,False,True,verified_1000m
+magdalena_kelly,10175292,Patterson Mill,34.07429,-107.2364,"Lead, Zinc",Base Metals,D,Unknown,False,False,False,D-E,True,hit,D-E|hit,11,5,2.2,1626.3,Gravel Pit,polygon,False,False,False,not_verified
+magdalena_kelly,10272797,Enterprise Tunnels,34.06979,-107.1895,"Zinc, Lead",Base Metals,D,Unknown,False,False,False,D-E,True,hit,D-E|hit,11,5,2.2,135.3,Adit,point,True,True,True,verified_250m
+magdalena_kelly,10175233,Mockingbird Mine,34.10619,-107.207,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,46,5,9.2,8.2,Adit,point,True,True,True,verified_250m
+magdalena_kelly,10223948,Buena Vista,33.90429,-107.12309,Manganese,Battery Metals – Co/Ni,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,46,5,9.2,0.0,Strip Mine,polygon,True,True,True,verified_250m
+magdalena_kelly,10223962,Iron Mask,34.06649,-107.21,Copper,Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,46,5,9.2,1265.6,Adit,point,False,False,False,not_verified
+magdalena_kelly,10247911,Morning Star,34.06949,-107.2089,"Zinc, Silver, Lead, Gold",Base Metals,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,46,5,9.2,1359.4,Adit,point,False,False,False,not_verified
+magdalena_kelly,10272736,Cavern and Grand Ledge,34.06399,-107.1903,"Lead, Copper",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,46,5,9.2,412.9,Adit,point,False,True,True,verified_500m
+mascot_jefferson_city,10025337,Coy Zinc Mine,36.12231,-83.47739,Zinc,Base Metals,B,Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,18.5,Mine Shaft,point,True,True,True,verified_250m
+mascot_jefferson_city,10025338,Jefferson City Zinc Mine,36.10009,-83.47878,Zinc,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,142.1,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10154509,Lost Creek,36.07929,-83.49709,Zinc,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,1379.1,Open Pit Mine or Quarry,point,False,False,False,not_verified
+mascot_jefferson_city,10226093,Jefferson City Mine,36.10009,-83.47879,Zinc,Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,142.9,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10305318,Beaver Creek,36.07569,-83.63819,Zinc,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,5,5,1.0,2079.0,Open Pit Mine,polygon,False,False,False,not_verified
+mascot_jefferson_city,10025336,Young Zinc Mine,36.0762,-83.61267,Zinc,Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,16,5,3.2,51.4,Mine Shaft,point,True,True,True,verified_250m
+mascot_jefferson_city,10025339,Davis - Bible Zinc Mine,36.10926,-83.49545,Zinc,Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,16,5,3.2,0.0,Open Pit Mine or Quarry,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10080280,Zinc Mine,36.10981,-83.49572,Zinc,Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,16,5,3.2,0.0,Open Pit Mine or Quarry,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10129521,Coy,36.12229,-83.48879,Zinc,Base Metals,A,Producer,False,True,True,A-C,False,miss,A-C|miss,16,5,3.2,494.8,Open Pit Mine or Quarry,point,False,True,True,verified_500m
+mascot_jefferson_city,10276059,Chucky Pike,36.12369,-83.45269,Zinc,Base Metals,B,Prospect,False,True,False,A-C,False,miss,A-C|miss,16,5,3.2,2027.1,Quarry,point,False,False,False,not_verified
+mascot_jefferson_city,10129187,Jefferson City Concentrator,36.10009,-83.47629,Zinc,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,7,5,1.4,37.4,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10129740,"Gattiker, Carr, and Emert Prospects",36.11679,-83.46739,Zinc,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,7,5,1.4,1104.8,Mine Shaft,point,False,False,False,not_verified
+mascot_jefferson_city,10178627,Zinc Prospect,36.04539,-83.8066,Zinc,Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,7,5,1.4,281.4,Quarry,polygon,False,True,True,verified_500m
+mascot_jefferson_city,10251196,Jefferson City Open Cut Mine,36.11179,-83.49569,Zinc,Base Metals,D,Producer,False,False,True,D-E,True,hit,D-E|hit,7,5,1.4,178.3,Open Pit Mine or Quarry,polygon,True,True,True,verified_250m
+mascot_jefferson_city,10275833,Spout Hollow Pit,36.05039,-83.7999,Zinc,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,7,5,1.4,1100.7,Quarry,polygon,False,False,False,not_verified
+mascot_jefferson_city,10129726,Trotter Zinc Prospect,35.95679,-83.53679,Zinc,Base Metals,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,1168.5,Open Pit Mine or Quarry,point,False,False,False,not_verified
+mascot_jefferson_city,10154153,Young Mill,36.07649,-83.61379,Zinc,Base Metals,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,74.7,Mine Shaft,point,True,True,True,verified_250m
+mascot_jefferson_city,10226456,Swann Prospect,36.24449,-83.57049,Manganese,Battery Metals – Co/Ni,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,2476.6,Quarry,polygon,False,False,False,not_verified
+mascot_jefferson_city,10299832,American Zinc Co. Prospects,36.14589,-83.45959,Zinc,Base Metals,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,2006.3,Quarry,point,False,False,False,not_verified
+mascot_jefferson_city,10300235,Asarco New Market Concentrator,36.09649,-83.54159,Zinc,Base Metals,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,13,5,2.6,185.0,Mine Shaft,point,True,True,True,verified_250m
+organ_mountains,10012962,Devils Canyon Prospect,32.25736,-106.53445,Barium-Barite,Industrial,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,15,5,3.0,29.2,Prospect Pit,point,True,True,True,verified_250m
+organ_mountains,10013001,Quickstrike Mine,32.43735,-106.55529,Silver,Gold/Silver,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,15,5,3.0,36.6,Adit,point,True,True,True,verified_250m
+organ_mountains,10013577,Sunshine Prospect,32.46124,-106.47834,Fluorine-Fluorite,Industrial,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,15,5,3.0,1684.0,Prospect Pit,point,False,False,False,not_verified
+organ_mountains,10062675,Blue Star Mine,32.19042,-106.59279,Fluorine-Fluorite,Industrial,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,15,5,3.0,95.8,Prospect Pit,point,True,True,True,verified_250m
+organ_mountains,10199322,Bishop's Cap Mine,32.20044,-106.58527,Fluorine-Fluorite,Industrial,B,Prospect,False,True,False,A-C,True,hit,A-C|hit,15,5,3.0,341.2,Prospect Pit,point,False,True,True,verified_500m
+organ_mountains,10009936,Rickardite Mine,32.45624,-106.56529,"Lead, Zinc",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,39,5,7.8,484.3,Prospect Pit,point,False,True,True,verified_500m
+organ_mountains,10062673,Galloway Mine,32.42346,-106.5564,"Silver, Lead",Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,39,5,7.8,1202.4,Prospect Pit,point,False,False,False,not_verified
+organ_mountains,10062742,Crested Butte Prospect,32.43874,-106.57279,"Silver, Lead, Gold",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,39,5,7.8,1056.9,Mine Shaft,point,False,False,False,not_verified
+organ_mountains,10062744,Eureka Prospect,32.46735,-106.52224,"Silver, Copper",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,39,5,7.8,1686.5,Adit,point,False,False,False,not_verified
+organ_mountains,10105276,Memphis Mine,32.43124,-106.59224,"Zinc, Copper, Lead",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,39,5,7.8,32.4,Mine Shaft,point,True,True,True,verified_250m
+organ_mountains,10149999,Tortugas,32.29073,-106.69617,Fluorine-Fluorite,Industrial,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,18,5,3.6,14.3,Mine Shaft,point,True,True,True,verified_250m
+organ_mountains,10150542,Garcia and Morris,32.18374,-106.59887,Fluorine-Fluorite,Industrial,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,18,5,3.6,24.0,Prospect Pit,point,True,True,True,verified_250m
+organ_mountains,10174948,Devils Canyon,32.26374,-106.54196,Barium-Barite,Industrial,E,Past Producer,False,False,True,D-E,True,hit,D-E|hit,18,5,3.6,1019.1,Prospect Pit,point,False,False,False,not_verified
+organ_mountains,10222822,Galena,32.53703,-106.50557,Lead,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,18,5,3.6,715.2,Prospect Pit,point,False,False,True,verified_1000m
+organ_mountains,10295830,Grant Prospect,32.19544,-106.59637,Fluorine-Fluorite,Industrial,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,18,5,3.6,17.3,Prospect Pit,point,True,True,True,verified_250m
+organ_mountains,10150085,Crested Butte Prospect,32.44263,-106.56977,"Silver, Gold",Gold/Silver,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,61,5,12.2,598.0,Mine Shaft,point,False,False,True,verified_1000m
+organ_mountains,10174457,Poor Man's Friend,32.42043,-106.58557,"Lead, Silver",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,61,5,12.2,869.0,Prospect Pit,point,False,False,True,verified_1000m
+organ_mountains,10174511,Buck Deer Prospect,32.46903,-106.54277,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,61,5,12.2,1334.3,Adit,point,False,False,False,not_verified
+organ_mountains,10174695,Torpedo,32.42843,-106.59307,Copper,Base Metals,D,Producer,False,False,True,D-E,False,miss,D-E|miss,61,5,12.2,18.9,Mine Shaft,point,True,True,True,verified_250m
+organ_mountains,10247493,Swanson - Lauer,32.46043,-106.57057,Magnesite,Industrial,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,61,5,12.2,528.5,Prospect Pit,point,False,False,True,verified_1000m
+providence_mountains,10077220,Francis,35.05057,-115.49305,Copper,Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,18,5,3.6,84.5,Mine Shaft,point,True,True,True,verified_250m
+providence_mountains,10188678,Silver King,34.99172,-115.49973,"Gold, Silver",Gold/Silver,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,18,5,3.6,13.0,Adit,point,True,True,True,verified_250m
+providence_mountains,10213686,Gold Star North Prospects,34.97692,-115.42583,"Gold, Silver",Gold/Silver,C,Prospect,False,True,False,A-C,True,hit,A-C|hit,18,5,3.6,797.4,Mine Shaft,point,False,False,True,verified_1000m
+providence_mountains,10236806,Bonanza King Mine,34.98142,-115.50643,"Gold, Silver",Gold/Silver,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,18,5,3.6,17.1,Mine Shaft,point,True,True,True,verified_250m
+providence_mountains,10262749,Unnamed Prospect,35.00782,-115.49913,Silver,Gold/Silver,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,18,5,3.6,237.4,Mine Shaft,point,True,True,True,verified_250m
+providence_mountains,10035781,Beverly Glen,35.12834,-115.3325,Gold,Gold/Silver,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,62,5,12.4,21.5,Mine Shaft,point,True,True,True,verified_250m
+providence_mountains,10189180,Blue Rock Nos. 1-6 Mine,35.06641,-115.49913,Tungsten,Specialty/High-Tech,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,62,5,12.4,25.7,Prospect Pit,point,True,True,True,verified_250m
+providence_mountains,10238164,Unnamed Prospect,35.00752,-115.54253,"Gold, Silver",Gold/Silver,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,62,5,12.4,680.6,Adit,point,False,False,True,verified_1000m
+providence_mountains,10262036,Unnamed Prospect,35.02032,-115.49773,Gold,Gold/Silver,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,62,5,12.4,983.1,Mine Shaft,point,False,False,True,verified_1000m
+providence_mountains,10286839,Silver Lode,34.80722,-115.65504,Silver,Gold/Silver,C,Prospect,False,True,False,A-C,False,miss,A-C|miss,62,5,12.4,55.8,Prospect Pit,point,True,True,True,verified_250m
+providence_mountains,10116377,Adams-Anna Ore,34.90222,-115.50723,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,37,5,7.4,474.4,Adit,point,False,True,True,verified_500m
+providence_mountains,10140933,Unnamed Prospect,35.04671,-115.67334,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,37,5,7.4,65.3,Prospect Pit,point,True,True,True,verified_250m
+providence_mountains,10164596,Foshay Pass Barite,34.91362,-115.53723,Barium-Barite,Industrial,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,37,5,7.4,1342.8,Prospect Pit,point,False,False,False,not_verified
+providence_mountains,10165343,Lone Tree Prospect,34.97312,-115.58004,Copper,Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,37,5,7.4,18.8,Adit,point,True,True,True,verified_250m
+providence_mountains,10238088,Pilot,34.87112,-115.53083,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,37,5,7.4,148.5,Prospect Pit,point,True,True,True,verified_250m
+providence_mountains,10140578,Unnamed Prospect,34.84142,-115.53833,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,183,5,36.6,244.3,Mine Shaft,point,True,True,True,verified_250m
+providence_mountains,10165424,"Del No. 2 Prospect, South Extensio",35.03641,-115.52553,Silver,Gold/Silver,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,183,5,36.6,990.9,Prospect Pit,point,False,False,True,verified_1000m
+providence_mountains,10165442,Unnamed Prospect,35.11891,-115.38773,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,183,5,36.6,680.4,Mine Shaft,point,False,False,True,verified_1000m
+providence_mountains,10189682,Unnamed Prospect,35.04221,-115.49003,Gold,Gold/Silver,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,183,5,36.6,312.8,Prospect Pit,point,False,True,True,verified_500m
+providence_mountains,10262104,Unnamed Prospect,35.11111,-115.44803,Gold,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,183,5,36.6,30.9,Prospect Pit,point,True,True,True,verified_250m
+shafter,10085715,Presidio Mine,29.813,-104.32938,"Silver, Lead, Gold, Zinc",Base Metals,A,Past Producer,False,True,True,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,6.9,Mine Dump,polygon,True,True,True,verified_250m
+shafter,10085718,Macdaniel Prospect,29.79883,-104.35605,"Silver, Lead",Base Metals,C,Occurrence,False,True,False,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,24.9,Prospect Pit,point,True,True,True,verified_250m
+shafter,10085719,Perry Mine,29.80828,-104.3566,"Silver, Lead, Zinc, Gold",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,30.6,Prospect Pit,point,True,True,True,verified_250m
+shafter,10085720,Montezuma Mine,29.80939,-104.36438,"Lead, Zinc, Silver",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,6.1,Mine Shaft,point,True,True,True,verified_250m
+shafter,10085724,Ross Mine,29.81605,-104.38743,"Lead, Silver",Base Metals,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,9.2,Mine Shaft,point,True,True,True,verified_250m
+shafter,10100558,Carr Mine,29.80439,-104.35605,"Lead, Silver",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,11,6,1.8333333333333333,413.3,Prospect Pit,point,False,True,True,verified_500m
+shafter,10085737,San Antonio Mine,29.89465,-104.47716,"Silver, Lead, Zinc",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,15,6,2.5,22.2,Mine Shaft,point,True,True,True,verified_250m
+shafter,10085739,New Camp Prospect,29.88854,-104.49688,"Silver, Lead, Zinc",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,15,6,2.5,1269.5,Prospect Pit,point,False,False,False,not_verified
+shafter,10085740,Runaway Prospect,29.91521,-104.48882,"Silver, Lead, Zinc",Base Metals,C,Occurrence,False,True,False,A-C,False,miss,A-C|miss,15,6,2.5,1675.1,Adit,point,False,False,False,not_verified
+shafter,10085745,Unnamed Prospects,30.03382,-104.34549,"Molybdenum, Silver",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,15,6,2.5,12411.0,Open Pit Mine,point,False,False,False,not_verified
+shafter,10085746,Papaloti South Prospect,29.96132,-104.32938,"Molybdenum, Lead, Zinc, Copper",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,15,6,2.5,10114.9,Prospect Pit,point,False,False,False,not_verified
+shafter,10085747,Ojo Bonito Prospect,29.97465,-104.35827,"Silver, Lead, Zinc, Copper",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,15,6,2.5,12138.8,Open Pit Mine,point,False,False,False,not_verified
+shafter,10085721,Unnamed Prospect,29.80605,-104.36549,"Zinc, Lead, Silver",Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,3,3,1.0,391.4,Mine Shaft,point,False,True,True,verified_500m
+shafter,10085738,Unnamed Prospect,29.89771,-104.48938,"Silver, Lead, Zinc",Base Metals,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,3,3,1.0,33.0,Prospect Pit,point,True,True,True,verified_250m
+shafter,10085749,Unnamed Prospect,29.72828,-104.21521,Manganese,Battery Metals – Co/Ni,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,3,3,1.0,6374.6,Prospect Pit,point,False,False,False,not_verified
+shafter,10129848,Mac Daniel Or Leland Prospect,29.81352,-104.36379,"Lead, Gold, Silver, Zinc",Base Metals,D,Prospect,True,False,False,D-E,False,miss,D-E|miss,20,5,4.0,455.2,Mine Shaft,point,False,True,True,verified_500m
+shafter,10154378,Chinati Mine,29.81352,-104.36379,"Lead, Silver, Zinc, Gold",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,20,5,4.0,455.2,Mine Shaft,point,False,True,True,verified_500m
+shafter,10154486,Gleim Mine,29.81352,-104.36379,"Gold, Lead, Silver, Zinc",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,20,5,4.0,455.2,Mine Shaft,point,False,True,True,verified_500m
+shafter,10251045,Cibolo Mine,29.81352,-104.36379,"Zinc, Gold, Silver, Lead",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,20,5,4.0,455.2,Mine Shaft,point,False,True,True,verified_500m
+shafter,10300389,Sullivan Mine,29.81352,-104.36379,"Gold, Lead, Silver, Zinc",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,20,5,4.0,455.2,Mine Shaft,point,False,True,True,verified_500m
+tombstone,10027040,Randolph Mine,31.69069,-110.11233,Silver,Gold/Silver,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,27,5,5.4,10.7,Prospect Pit,point,True,True,True,verified_250m
+tombstone,10046210,Free Coinage Mine,31.70124,-110.10399,"Silver, Gold, Manganese",Battery Metals – Co/Ni,B,Past Producer,False,True,True,A-C,True,hit,A-C|hit,27,5,5.4,22.6,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10048117,Mystery Mine,31.74485,-109.81759,"Silver, Zinc, Lead",Base Metals,B,Producer,False,True,True,A-C,True,hit,A-C|hit,27,5,5.4,8.4,Adit,point,True,True,True,verified_250m
+tombstone,10048126,Quartzite Mine,31.67485,-110.0801,"Gold, Silver",Gold/Silver,B,Producer,False,True,True,A-C,True,hit,A-C|hit,27,5,5.4,7.9,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10305551,Abril Mine,31.90953,-109.99376,"Copper, Zinc",Base Metals,C,Past Producer,False,True,True,A-C,True,hit,A-C|hit,27,5,5.4,150.4,Adit,point,True,True,True,verified_250m
+tombstone,10026967,Abril Mine,31.90846,-109.99177,"Zinc, Copper, Lead",Base Metals,B,Producer,False,True,True,A-C,False,miss,A-C|miss,79,5,15.8,7.8,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10046255,Mona Mine,31.77485,-109.81787,"Copper, Lead, Silver",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,79,5,15.8,94.1,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10102438,Sulphuret  Mine,31.70791,-110.07149,"Silver, Lead, Zinc, Gold",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,79,5,15.8,252.3,Adit,point,False,True,True,verified_500m
+tombstone,10104062,Florida Mine Group,31.65236,-110.1201,Manganese,Battery Metals – Co/Ni,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,79,5,15.8,0.0,Prospect Pit,polygon,True,True,True,verified_250m
+tombstone,10161252,San Juan Mine,31.88323,-109.98316,Zinc,Base Metals,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,79,5,15.8,13.3,Adit,point,True,True,True,verified_250m
+tombstone,10112898,San Pedro Mine,31.70403,-110.11426,"Gold, Manganese, Silver",Battery Metals – Co/Ni,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,26,5,5.2,34.7,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10137183,Merrimac Mine,31.70343,-110.10316,"Gold, Silver",Gold/Silver,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,26,5,5.2,11.9,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10137202,Unnamed Workings,31.81983,-109.93896,Zinc,Base Metals,D,Prospect,False,False,False,D-E,True,hit,D-E|hit,26,5,5.2,66.0,Adit,point,True,True,True,verified_250m
+tombstone,10161238,Cobre Loma,31.89123,-109.96376,Copper,Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,26,5,5.2,167.5,Adit,point,True,True,True,verified_250m
+tombstone,10185988,Black Prince,31.86293,-109.95676,"Barium-Barite, Tungsten",Specialty/High-Tech,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,26,5,5.2,15.6,Mine Shaft,point,True,True,True,verified_250m
+tombstone,10137056,Superior,31.64594,-110.11596,Lead,Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,89,5,17.8,0.0,Prospect Pit,polygon,True,True,True,verified_250m
+tombstone,10161444,Stout Prospect,31.50684,-110.01066,Fluorine-Fluorite,Industrial,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,89,5,17.8,2636.3,Prospect Pit,point,False,False,False,not_verified
+tombstone,10161522,Unnamed Working,31.85183,-109.95376,Silver,Gold/Silver,D,Prospect,False,False,False,D-E,False,miss,D-E|miss,89,5,17.8,495.1,Prospect Pit,point,False,True,True,verified_500m
+tombstone,10186000,Bisbee Blue,31.59904,-109.88595,Copper,Base Metals,D,Producer,False,False,True,D-E,False,miss,D-E|miss,89,5,17.8,5252.4,Mine Shaft,point,False,False,False,not_verified
+tombstone,10258426,Defense Mine,31.70293,-110.06986,"Lead, Silver",Base Metals,D,Past Producer,True,False,True,D-E,False,miss,D-E|miss,89,5,17.8,19.6,Mine Shaft,point,True,True,True,verified_250m
+tri_state,10123713,Unknown - Zn/Pb,37.02567,-94.52333,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,1568.7,Prospect Pit,point,False,False,False,not_verified
+tri_state,10146800,Unknown - Zn/Pb,37.08037,-94.49963,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,2146.9,Tailings - Undifferentiated,polygon,False,False,False,not_verified
+tri_state,10148086,Unknown - Zn/Pb,37.04287,-94.52023,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,1507.6,Prospect Pit,point,False,False,False,not_verified
+tri_state,10195965,Sarabell Mine,37.11947,-94.53103,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,48.0,Prospect Pit,point,True,True,True,verified_250m
+tri_state,10195982,Kramer #1 Shaft,37.09537,-94.60833,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,88.3,Prospect Pit,point,True,True,True,verified_250m
+tri_state,10244014,Nine Spot Mine,37.06427,-94.51023,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,1637.1,Prospect Pit,point,False,False,False,not_verified
+tri_state,10244395,Unknown - Zn/Pb,37.05697,-94.51193,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,1444.4,Prospect Pit,point,False,False,False,not_verified
+tri_state,10268412,Davis Mine,37.07317,-94.55943,"Zinc, Lead",Base Metals,E,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,51.8,Prospect Pit,point,True,True,True,verified_250m
+tri_state,10269709,Unknown - Zn/Pb,37.04947,-94.51803,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,1104.7,Prospect Pit,point,False,False,False,not_verified
+tri_state,10294131,Unknown - Zn/Pb,37.03617,-94.46803,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,True,hit,D-E|hit,330,10,33.0,878.3,Quarry,point,False,False,True,verified_1000m
+tri_state,10147152,Unknown - Zn/Pb,37.08677,-94.47193,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,316.4,Prospect Pit,point,False,True,True,verified_500m
+tri_state,10172164,Unknown - Zn/Pb,37.04197,-94.55713,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,691.1,Prospect Pit,point,False,False,True,verified_1000m
+tri_state,10195662,Mary Ellen Mine,37.06837,-94.53413,"Lead, Zinc",Base Metals,E,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,286.7,Prospect Pit,point,False,True,True,verified_500m
+tri_state,10195929,Barr & Son Mine,37.12977,-94.58853,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,19.3,Prospect Pit,point,True,True,True,verified_250m
+tri_state,10196337,Unknown - Zn/Pb,37.08837,-94.46883,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,312.7,Prospect Pit,point,False,True,True,verified_500m
+tri_state,10220049,Unknown - Zn/Pb,37.20397,-94.51213,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,2238.6,Open Pit Mine,polygon,False,False,False,not_verified
+tri_state,10243978,Unknown - Zn/Pb,37.14007,-94.52743,"Zinc, Lead",Base Metals,E,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,235.3,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+tri_state,10268636,Old Hooligan,37.09817,-94.52993,"Lead, Zinc",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,202.4,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+tri_state,10268967,Paragon Mine,37.08617,-94.56633,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,33.4,Mine Shaft,point,True,True,True,verified_250m
+tri_state,10293114,Unknown - Zn/Pb,37.20677,-94.55773,"Zinc, Lead",Base Metals,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,1066,10,106.6,3143.2,Prospect Pit,point,False,False,False,not_verified
+uravan,10014257,Cashin Mine,38.31082,-108.94957,"Silver, Copper",Base Metals,A,Producer,False,True,True,A-C,True,hit,A-C|hit,2,2,1.0,25.5,Adit,point,True,True,True,verified_250m
+uravan,10014259,La Sal District,38.3111,-108.94957,"Copper, Silver",Base Metals,B,Producer,False,True,True,A-C,True,hit,A-C|hit,2,2,1.0,3.9,Adit,point,True,True,True,verified_250m
+uravan,10014255,Chipeta Placer District,38.36805,-108.73623,"Gold, Silver",Gold/Silver,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,108.2,Tailings - Undifferentiated,polygon,True,True,True,verified_250m
+uravan,10014256,Vixen Placer District,38.43777,-108.83929,"Gold, Silver",Gold/Silver,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,515.1,Prospect Pit,point,False,False,True,verified_1000m
+uravan,10014258,Cliffdweller Mine,38.3161,-108.95235,"Copper, Silver",Base Metals,B,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,4.0,Adit,point,True,True,True,verified_250m
+uravan,10014260,Morning Glory Mines,38.39666,-108.9204,"Silver, Copper",Base Metals,B,Occurrence,False,True,False,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,13.6,Adit,point,True,True,True,verified_250m
+uravan,10017984,"Club Group, J. M",38.36916,-108.74985,"Uranium, Vanadium",Energy,C,Producer,True,True,True,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,129.2,Prospect Pit,point,True,True,True,verified_250m
+uravan,10287934,J. J. Mine,38.21829,-108.73377,"Vanadium, Uranium",Energy,C,Past Producer,False,True,True,A-C,False,miss,A-C|miss,7,6,1.1666666666666667,281.3,Air Shaft,point,False,True,True,verified_500m
+uravan,10018508,"Lode Claims, Lost Brothers",38.12419,-108.82452,Uranium,Energy,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,165,6,27.5,87.7,Prospect Pit,point,True,True,True,verified_250m
+uravan,10190931,St. Patrick #9,38.36889,-108.96318,Uranium,Energy,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,165,6,27.5,2479.2,Gravel Pit,point,False,False,False,not_verified
+uravan,10240122,Main Street Mine #3,38.14639,-108.86678,Uranium,Energy,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,165,6,27.5,21.4,Prospect Pit,point,True,True,True,verified_250m
+uravan,10240397,Unknown,38.24079,-108.80678,Uranium,Energy,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,165,6,27.5,393.3,Prospect Pit,point,False,True,True,verified_500m
+uravan,10255995,Denver,38.31889,-108.94178,Gold,Gold/Silver,D,Occurrence,False,False,False,D-E,True,hit,D-E|hit,165,6,27.5,593.7,Prospect Pit,point,False,False,True,verified_1000m
+uravan,10264821,Radium Hill #50,38.15109,-108.86288,Uranium,Energy,D,Past Producer,True,False,True,D-E,True,hit,D-E|hit,165,6,27.5,10.3,Open Pit Mine,point,True,True,True,verified_250m
+uravan,10143407,Unknown,38.29939,-108.96628,Uranium,Energy,D,Occurrence,False,False,False,D-E,False,miss,D-E|miss,671,6,111.83333333333333,1450.8,Prospect Pit,point,False,False,False,not_verified
+uravan,10167185,Placer Mine,38.45939,-108.86988,Gold,Gold/Silver,D,Unknown,False,False,False,D-E,False,miss,D-E|miss,671,6,111.83333333333333,13.0,Placer Mine,point,True,True,True,verified_250m
+uravan,10191090,Unknown,38.41639,-108.89648,Uranium,Energy,D,Occurrence,True,False,False,D-E,False,miss,D-E|miss,671,6,111.83333333333333,628.3,Prospect Pit,point,False,False,True,verified_1000m
+uravan,10215062,Morning Star,38.20939,-108.96708,Uranium,Energy,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,671,6,111.83333333333333,55.0,Prospect Pit,point,True,True,True,verified_250m
+uravan,10240409,Durita Development Leach Plant,38.1675,-108.56817,Uranium,Energy,D,Producer,False,False,True,D-E,False,miss,D-E|miss,671,6,111.83333333333333,4926.0,Tailings - Undifferentiated,polygon,False,False,False,not_verified
+uravan,10264505,Rim Rock Blues #17,38.18859,-108.80208,Uranium,Energy,D,Past Producer,False,False,True,D-E,False,miss,D-E|miss,671,6,111.83333333333333,37.8,Adit,point,True,True,True,verified_250m

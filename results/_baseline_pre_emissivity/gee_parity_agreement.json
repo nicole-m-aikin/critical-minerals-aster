@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-09-22T11:39:45.505847+00:00",
+  "panel": [
+    "goldfield",
+    "bisbee",
+    "christmas",
+    "tombstone",
+    "mcdermitt",
+    "eureka",
+    "mountain_pass",
+    "marysvale"
+  ],
+  "n_rows": 29,
+  "summary_by_probe": {
+    "probe:clip_order": {
+      "n_sites": 8.0,
+      "mean_jaccard_strong": 0.6757398126646429,
+      "mean_abs_strong_frac_delta": 0.024384070869043498,
+      "mean_kappa": 0.599981830264775
+    },
+    "probe:histogram_percentile": {
+      "n_sites": 8.0,
+      "mean_jaccard_strong": 0.9996004482104491,
+      "mean_abs_strong_frac_delta": 4.652933706964478e-05,
+      "mean_kappa": 0.9994896339668078
+    },
+    "probe:radiance_ucc": {
+      "n_sites": 5.0,
+      "mean_jaccard_strong": 0.9982776201088395,
+      "mean_abs_strong_frac_delta": 7.540718889172959e-05,
+      "mean_kappa": 0.9983321153180228
+    },
+    "probe:reproject_4326": {
+      "n_sites": 8.0,
+      "mean_jaccard_strong": 0.6933432747157369,
+      "mean_abs_strong_frac_delta": 0.0026516955530216137,
+      "mean_kappa": 0.6448559708342987
+    }
+  },
+  "gee_live": null,
+  "notes": "Offline probes isolate implementation choices. gee_live is populated only with --gee. GEE hosts ASTER/AST_L1T_003; local rasters are LP DAAC v004."
+}
