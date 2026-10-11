@@ -69,7 +69,7 @@ uncertainty information and is reported as "insufficient n" rather than a
 misleadingly narrow interval. Categories need at least ~5 sites before a
 bootstrap CI is worth interpreting as anything beyond a rough sketch, and
 even at n=6-7 the interval should be read as suggestive, not precise --
-this project reports it anyway, labelled, because CLAUDE.md's operating
+this project reports it anyway, labelled, because the project's operating
 rule is to always report uncertainty rather than hide it, not because n=6
 enrichment values support a strong quantitative claim.
 

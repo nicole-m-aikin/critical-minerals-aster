@@ -52,8 +52,6 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 data/mrds.csv
-data/mrds-csv.zip
-data/mrds.met
 data/mrds_mcdermitt.geojson
 results/*.csv
 results/*.parquet
@@ -65,7 +63,6 @@ results/*.json
 # public, untouched by this rule — .gitignore never untracks an already-tracked file);
 # this only stops NEW site galleries from being added going forward.
 figures/sites/
-# data/sites/*/vectors/
 .DS_Store
 .netrc
 .claude/
@@ -75,3 +72,10 @@ INTERVIEW_PREP.md
 data/sites/*/aster_archive_pre_clearday/
 data/sites/*/aster_l1t_day/
 data/sites/*/aster_night/
+
+# AI-assistant instructions and batch-run logs (local only)
+CLAUDE.md
+logs/
+*.log
+.ruff_cache/
+.mypy_cache/
