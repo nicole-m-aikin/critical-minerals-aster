@@ -11,9 +11,10 @@ per-site outputs in `results/`; figures are in [`figures/`](../figures/).
 
 Input since 2026-10-09: **AST_05 v004 daytime surface emissivity**, Ninomiya quartz/carbonate/mafic
 indices, per-pixel QA and AG100 water/vegetation masks. Primary null: **bedrock-vs-cover stratified**.
-See [`docs/data_verification.md`](data_verification.md) §2.4–2.6 for why: the earlier radiance
-results depended on acquisition temperature. Earlier numbers are in `results/_baseline_pre_clearday/`
-(mixed day/night radiance) and `results/_baseline_pre_emissivity/` (clear-day radiance).
+Since 2026-10-12, B10–B12 are **detector moment-matched** before indices (QI striping suppressed;
+see `figures/verification_destripe_pioche.png`). See [`docs/data_verification.md`](data_verification.md)
+§2.4–2.6. Earlier numbers are in `results/_baseline_pre_clearday/` (mixed day/night radiance),
+`results/_baseline_pre_emissivity/` (clear-day radiance), and `results/_baseline_pre_destripe/`.
 
 | Stage | Sites (of 108 testable) |
 |---|---|
@@ -30,7 +31,7 @@ results depended on acquisition temperature. Earlier numbers are in `results/_ba
 |---|---|
 | 3 | courtland_gleeson, pioche, providence_mountains |
 | 2 | eureka, lordsburg, shafter, sierrita, tombstone |
-| 1 | contact_district, iron_king, magdalena_kelly, san_francisco_frisco, silver_peak, tintic, tri_state, victorio |
+| 1 | contact_district, iron_king, san_francisco_frisco, silver_peak, tintic, tri_state, victorio |
 | 0 | darwin, mcdermitt, mountain_pass |
 
 Under the finer 8-class SGMC lithology null, 13 of the 19 stay significant. Of the three-check
@@ -38,14 +39,53 @@ sites, only Providence Mountains survives; Courtland-Gleeson and Pioche collapse
 their zones track the carbonate host package. That makes Providence Mountains the only site to
 pass every replication and verification test.
 
-Most primary sites are still arid **skarn / carbonate-replacement** and polymetallic replacement
-districts (14 of 28 skarn/CRD sites are FDR-significant). But the category CI now touches 1.0
-(1.44×, 1.00–1.63). Only Mafic/Ultramafic (1.59×, 1.26–1.96, 1 of 7 FDR) and Mixed/Other have CIs
-above 1.
+### Combined TIR + SWIR screening
 
-The method behaves as a **deposit-type selector, not a universal detector**, and the per-site
-results are less stable than the earlier headline implied: 11 of the original 20 FDR sites do not
-reproduce on emissivity.
+Practical workflow: **ASTER TIR host filter → GEMx SWIR clay check where flown.**
+
+**FDR-cohort spatial correspondence** (19 primary sites; AVIRIS-5 where available):
+`results/gemx_host_vs_alteration.csv`, `figures/verification_tir_swir_combined.png` —
+
+| Verdict | n | Reading |
+|---|---|---|
+| complementary | **14** | TIR zones do not coincide with SWIR clay (Jaccard &lt; 0.15, lift &lt; 1.1) |
+| insufficient | 2 | Sierrita (lift 1.13, mixed); Tombstone (almost no AVIRIS-5 in bbox) |
+| no_coverage | 3 | Courtland-Gleeson, Tintic, Tri-State (Classic-only or none) |
+| overlapping | **0** | — |
+
+**109-site deposit census** (equal-area; not FDR-selected):
+`results/gemx_census_manifest.csv` selects one full-SWIR product per site (AVIRIS-5 preferred
+when coverage ≥ 0.75; else max coverage). **71 / 109** have usable GEMx SWIR; **38** have none
+(not missing at random — mostly humid / eastern controls). On currently processed shared footprints (40 sites / 4759 critical-mineral MRDS points,
+including TIR-null districts; 3 sites temporarily use legacy AVIRIS-5 TIFFs while Classic
+reprocess is pending; remaining covered sites continue via `scripts/gemx_census_build.py`
+with post-TIFF cube cleanup):
+
+| Metric (equal-area) | ASTER TIR | GEMx SWIR |
+|---|---|---|
+| Deposit hit rate | 21.2% | **30.4%** |
+| Map coverage | 13.5% | 13.5% (matched) |
+| Pooled enrichment | 1.57× | **2.25×** |
+| Median distance to map | 127 m | 127 m |
+| Sites where nearer | **25 / 40** | 11 / 40 (3 ties) |
+
+At matched map area on the unbiased (non-FDR) census, **SWIR hits more deposits** while
+**TIR is still nearer at more sites** (site sign-test p = 0.029). The FDR-only comparison had
+overstated TIR's hit-rate advantage by selecting TIR-significant sites and comparing unequal
+coverages. Figure: `figures/verification_tir_swir_census_deposit_comparison.png`.
+
+TIR is still a host-package screener in arid CRD/skarn districts, not a clay-alteration detector;
+SWIR does the alteration job where GEMx flew.
+
+**Prospectivity ML (early triage):** site-blocked GroupKFold + era pre/post-1950 GBM on the
+shared TIR+HSI feature contract — see [`docs/prospectivity_ml.md`](prospectivity_ml.md).
+Headline numbers are **site-mean** metrics in `results/prospectivity_site_cv.csv` (not
+pixel-pooled); era-block is a separate robustness panel
+(`results/prospectivity_era_block.json`). Do not average the two.
+
+Most primary sites are still arid **skarn / carbonate-replacement** and polymetallic replacement
+districts (14 of 28 skarn/CRD sites are FDR-significant). That category interval reaches 1.0
+(1.44×, 1.00–1.63). The method is a **deposit-type / host-package selector**, not a universal ore detector.
 
 ---
 

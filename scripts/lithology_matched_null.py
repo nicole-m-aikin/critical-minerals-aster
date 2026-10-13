@@ -27,13 +27,16 @@ Deposit set, zones and footprint mirror scripts/regenerate_site_summaries.py
 minerals as in scripts/site_specific_null_significance.py. Unconditioned
 n / hits / p0 are cross-checked against results/phase4_fdr_corrected_significance.csv.
 
-SGMC polygons are fetched from the ScienceBase ArcGIS FeatureServer layer 3
-(SGMC_Geology), bbox-bounded and paged, and cached to
-data/lithology/{site_id}_sgmc_units.geojson (gitignored; re-runs are offline).
+Geology polygons default to USGS SGMC (ScienceBase FeatureServer layer 3),
+cached at data/lithology/{site_id}_sgmc_units.geojson. Finer sources
+(NBMG 1:100k, Texas 1:250k, local AZGS GeoPackage) are available via
+``--geology-source`` / site YAML ``lithology_source:`` (see
+``critical_minerals_aster.fine_geology``).
 
 Outputs
 -------
-    results/lithology_matched_null.csv            — one row per site
+    results/lithology_matched_null.csv            — SGMC baseline (default)
+    results/lithology_matched_null_{source}.csv   — non-SGMC runs (comparable columns)
     results/lithology_zone_deposit_fractions.csv  — long format, site × class
     figures/verification_lithology_null.png       — 20 FDR sites, unconditioned vs conditioned
 
@@ -41,6 +44,11 @@ Usage:
     conda run -n aster-minerals python scripts/lithology_matched_null.py
     conda run -n aster-minerals python scripts/lithology_matched_null.py --sites bisbee holden
     conda run -n aster-minerals python scripts/lithology_matched_null.py --refresh   # re-fetch SGMC
+    conda run -n aster-minerals python scripts/lithology_matched_null.py \\
+        --sites pioche --geology-source nbmg_100k
+    conda run -n aster-minerals python scripts/lithology_matched_null.py \\
+        --sites courtland_gleeson --geology-source azgs_local \\
+        --geology-path data/lithology/CourtlandGleeson.gpkg
 """
 
 from __future__ import annotations
@@ -66,14 +74,17 @@ from shapely.validation import make_valid
 from statsmodels.stats.multitest import multipletests
 
 from critical_minerals_aster.config import load_site_by_id
+from critical_minerals_aster.fine_geology import (
+    SOURCE_LABELS,
+    assign_unit_keys,
+    load_fine_units,
+)
 from critical_minerals_aster.lithology import (
     SGMC_SOURCE,
     UNMAPPED,
-    add_lith_class,
     assign_strata,
     build_strata,
     host_restricted_test,
-    load_sgmc_units,
     stratified_test,
     stratum_table,
 )
@@ -130,7 +141,13 @@ def load_site_inputs(site_id: str):
     return site, zones, footprint, raster_bbox, deposits
 
 
-def analyse_site(site_id: str, refresh: bool) -> tuple[dict, list[dict]]:
+def analyse_site(
+    site_id: str,
+    refresh: bool,
+    *,
+    geology_source: str = "sgmc",
+    geology_path: Path | None = None,
+) -> tuple[dict, list[dict]]:
     site, zones, footprint, raster_bbox, deposits = load_site_inputs(site_id)
     zone_union = make_valid(unary_union(zones.geometry.values))
     fp_geom = make_valid(unary_union(footprint.geometry.values))
@@ -141,8 +158,24 @@ def analyse_site(site_id: str, refresh: bool) -> tuple[dict, list[dict]]:
     p0 = min(float(zone_union.area / footprint.iloc[0].geometry.area), 1.0)
     p_unc, exp_unc = run_binomial(hits, n, p0)
 
-    units = load_sgmc_units(site_id, raster_bbox, REPO_ROOT, refresh=refresh)
-    units = add_lith_class(units.to_crs(zones.crs)) if len(units) else units.assign(lith_class=[])
+    requested = geology_source or getattr(site, "lithology_source", None) or "sgmc"
+    units = load_fine_units(
+        site_id,
+        raster_bbox,
+        requested,
+        REPO_ROOT,
+        refresh=refresh,
+        geology_path=geology_path,
+        site_name=site.name,
+    )
+    source = units.attrs.get("geology_source", requested)
+    if len(units):
+        units = units.to_crs(zones.crs)
+        if "lith_class" not in units.columns:
+            from critical_minerals_aster.fine_geology import normalize_units_lithology
+            units = normalize_units_lithology(units)
+    else:
+        units = units.assign(lith_class=[])
     strata = build_strata(units, fp_geom, "lith_class")
     labels = assign_strata(deposits, strata, "lith_class")
     tab = stratum_table(strata, zone_union, labels, deposits["hit"], "lith_class")
@@ -151,12 +184,19 @@ def analyse_site(site_id: str, refresh: bool) -> tuple[dict, list[dict]]:
 
     unit_res = {"p": float("nan"), "enrichment": float("nan"), "n_strata": 0}
     if len(units):
-        units["unit"] = units["STATE"].astype(str) + ":" + units["SGMC_LABEL"].astype(str)
-        u_strata = build_strata(units, fp_geom, "unit")
-        u_tab = stratum_table(u_strata, zone_union, assign_strata(deposits, u_strata, "unit"),
-                              deposits["hit"], "unit")
-        u = stratified_test(u_tab)
-        unit_res = {"p": u["p"], "enrichment": u["enrichment"], "n_strata": int((u_tab["area"] > 0).sum())}
+        units = assign_unit_keys(units)
+        if "unit" in units.columns:
+            u_strata = build_strata(units, fp_geom, "unit")
+            u_tab = stratum_table(
+                u_strata, zone_union, assign_strata(deposits, u_strata, "unit"),
+                deposits["hit"], "unit",
+            )
+            u = stratified_test(u_tab)
+            unit_res = {
+                "p": u["p"],
+                "enrichment": u["enrichment"],
+                "n_strata": int((u_tab["area"] > 0).sum()),
+            }
 
     fp_area = float(tab["area"].sum())
     zone_area_fp = float(tab["zone_area"].sum())
@@ -192,10 +232,13 @@ def analyse_site(site_id: str, refresh: bool) -> tuple[dict, list[dict]]:
         "unmapped_area_frac": round(float(tab.loc[tab["lith_class"] == UNMAPPED, "area"].sum()) / fp_area, 4)
         if fp_area > 0 else np.nan,
         "n_sgmc_units": len(units),
+        "n_geology_units": len(units),
         "enrichment_unit": round(unit_res["enrichment"], 3) if n else np.nan,
         "p_unit": unit_res["p"],
         "n_unit_strata": unit_res["n_strata"],
-        "data_source": SGMC_SOURCE,
+        "geology_source": source,
+        "geology_source_requested": requested,
+        "data_source": SOURCE_LABELS.get(source, SGMC_SOURCE),
     }
 
     frac_rows = []
@@ -315,10 +358,34 @@ def make_figure(df: pd.DataFrame, out_path: Path) -> None:
     plt.close(fig)
 
 
+def _output_stems(geology_source: str) -> tuple[str, str]:
+    """Baseline SGMC keeps legacy filenames; other sources get a suffix for comparison."""
+    if geology_source in ("sgmc", None, ""):
+        return "lithology_matched_null", "lithology_zone_deposit_fractions"
+    return (
+        f"lithology_matched_null_{geology_source}",
+        f"lithology_zone_deposit_fractions_{geology_source}",
+    )
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("--sites", nargs="*", help="subset of site ids (default: all in sites/index.yaml)")
-    ap.add_argument("--refresh", action="store_true", help="re-fetch SGMC polygons, ignoring cache")
+    ap.add_argument("--refresh", action="store_true", help="re-fetch geology polygons, ignoring cache")
+    ap.add_argument(
+        "--geology-source",
+        choices=["sgmc", "nbmg_100k", "tx_250k", "azgs_local", "auto"],
+        default="sgmc",
+        help="geology units for stratification (default: sgmc baseline filenames). "
+        "Per-site YAML lithology_source: is used when this flag is omitted only if you "
+        "wire analyse_site(geology_source=None); the CLI default keeps SGMC.",
+    )
+    ap.add_argument(
+        "--geology-path",
+        type=Path,
+        default=None,
+        help="local GeoPackage/GeoJSON for --geology-source azgs_local",
+    )
     ap.add_argument("--figure-only", action="store_true",
                     help="redraw the figure from results/lithology_matched_null.csv")
     args = ap.parse_args()
@@ -329,6 +396,11 @@ def main() -> None:
         print(f"Saved {fig_path}")
         return
 
+    geology_source = args.geology_source
+    geology_path = args.geology_path
+    if geology_source == "azgs_local" and geology_path is None:
+        ap.error("--geology-source azgs_local requires --geology-path")
+
     site_ids = args.sites or load_site_ids()
     ref = pd.read_csv(REPO_ROOT / "results" / "phase4_fdr_corrected_significance.csv").set_index("site_id")
 
@@ -337,7 +409,12 @@ def main() -> None:
         t0 = time.time()
         print(f"{site_id:24s}", end=" ", flush=True)
         try:
-            row, fr = analyse_site(site_id, args.refresh)
+            row, fr = analyse_site(
+                site_id,
+                args.refresh,
+                geology_source=geology_source,
+                geology_path=geology_path,
+            )
         except Exception as exc:
             print(f"SKIP — {exc!r}")
             failed.append((site_id, repr(exc)))
@@ -348,7 +425,7 @@ def main() -> None:
             f"n={row['n']:4d} hits={row['hits']:3d} p0={row['p0_unconditioned']:.4f} "
             f"E_unc={row['enrichment_unconditioned']:.2f} E_lith={row['enrichment_lith']:.2f} "
             f"p_lith={row['p_lith']:.3g} p_host={row['p_host']:.3g} "
-            f"host={row['dominant_host_lith']} ({time.time() - t0:.1f}s)"
+            f"host={row['dominant_host_lith']} src={row['geology_source']} ({time.time() - t0:.1f}s)"
         )
 
     df = pd.DataFrame(rows)
@@ -372,9 +449,10 @@ def main() -> None:
     ]
     df = df[lead + [c for c in df.columns if c not in lead]].sort_values("p_lith")
 
-    out_csv = REPO_ROOT / "results" / "lithology_matched_null.csv"
+    stem, frac_stem = _output_stems(geology_source)
+    out_csv = REPO_ROOT / "results" / f"{stem}.csv"
     df.to_csv(out_csv, index=False)
-    fr_csv = REPO_ROOT / "results" / "lithology_zone_deposit_fractions.csv"
+    fr_csv = REPO_ROOT / "results" / f"{frac_stem}.csv"
     pd.DataFrame(frac_rows).to_csv(fr_csv, index=False)
     print(f"\nSaved {out_csv}\nSaved {fr_csv}")
 

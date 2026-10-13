@@ -580,6 +580,123 @@ def alteration_indices(
     return qi, ci, mi
 
 
+# ASTER TIR has 10 detectors per band (whiskbroom). Mis-gain between detectors
+# produces periodic along-track striping. Moment-matching equalizes each
+# detector class to the scene mean/std (Iwasaki & Tonooka-style; see roadmap).
+ASTER_TIR_N_DETECTORS = 10
+
+
+def _detector_slices(length: int, detector: int, n_detectors: int) -> np.ndarray:
+    return np.arange(detector, length, n_detectors)
+
+
+def destripe_amplitude(
+    arr: np.ndarray, n_detectors: int = ASTER_TIR_N_DETECTORS, axis: int = 0
+) -> float:
+    """Peak-to-peak difference of per-detector means (finite pixels only)."""
+    if arr.ndim != 2:
+        raise ValueError("destripe_amplitude expects a 2-D array")
+    means: list[float] = []
+    length = arr.shape[axis]
+    for d in range(n_detectors):
+        idx = _detector_slices(length, d, n_detectors)
+        slab = arr[idx, :] if axis == 0 else arr[:, idx]
+        if np.isfinite(slab).any():
+            means.append(float(np.nanmean(slab)))
+    if len(means) < 2:
+        return 0.0
+    return float(max(means) - min(means))
+
+
+def destripe_scan_axis(
+    arr: np.ndarray, n_detectors: int = ASTER_TIR_N_DETECTORS
+) -> int:
+    """Axis (0=rows, 1=cols) with stronger period-``n_detectors`` mean modulation."""
+    a0 = destripe_amplitude(arr, n_detectors=n_detectors, axis=0)
+    a1 = destripe_amplitude(arr, n_detectors=n_detectors, axis=1)
+    return 0 if a0 >= a1 else 1
+
+
+def destripe_moment_match(
+    arr: np.ndarray,
+    n_detectors: int = ASTER_TIR_N_DETECTORS,
+    axis: int | None = None,
+) -> np.ndarray:
+    """Equalize mean and std of each detector class to the scene statistics.
+
+    ``axis`` is the along-track / detector-cycle axis (0 = rows, 1 = columns).
+    When ``axis`` is None, the stronger of the two is chosen. NaNs are preserved.
+    Constant or all-NaN inputs are returned unchanged.
+    """
+    if arr.ndim != 2:
+        raise ValueError("destripe_moment_match expects a 2-D array")
+    out = np.array(arr, dtype=np.float64, copy=True)
+    finite = np.isfinite(out)
+    if not finite.any():
+        return out
+    global_vals = out[finite]
+    g_mean = float(global_vals.mean())
+    g_std = float(global_vals.std())
+    if g_std <= 1e-12 * max(abs(g_mean), 1.0):
+        return out
+    if axis is None:
+        axis = destripe_scan_axis(out, n_detectors=n_detectors)
+    length = out.shape[axis]
+    for d in range(n_detectors):
+        idx = _detector_slices(length, d, n_detectors)
+        if axis == 0:
+            slab = out[idx, :]
+            mask = finite[idx, :]
+        else:
+            slab = out[:, idx]
+            mask = finite[:, idx]
+        if not mask.any():
+            continue
+        vals = slab[mask]
+        d_mean = float(vals.mean())
+        d_std = float(vals.std())
+        if d_std <= 1e-12 * max(abs(d_mean), 1.0):
+            corrected = slab - d_mean + g_mean
+        else:
+            corrected = (slab - d_mean) / d_std * g_std + g_mean
+        if axis == 0:
+            out[idx, :] = np.where(mask, corrected, out[idx, :])
+        else:
+            out[:, idx] = np.where(mask, corrected, out[:, idx])
+    return out
+
+
+def destripe_emissivity_bands(
+    bands: dict[int, np.ndarray],
+    *,
+    band_ids: Sequence[int] = (10, 11, 12),
+    n_detectors: int = ASTER_TIR_N_DETECTORS,
+    axis: int | None = None,
+) -> tuple[dict[int, np.ndarray], dict[str, Any]]:
+    """Destripe selected emissivity bands in place-safe copy; return stats.
+
+    Axis is chosen from B11 (QI's squared numerator) when ``axis`` is None, then
+    applied to every band so the indices stay internally consistent.
+    """
+    if axis is None and 11 in bands:
+        axis = destripe_scan_axis(bands[11], n_detectors=n_detectors)
+    elif axis is None:
+        axis = 0
+    out = {b: a.copy() for b, a in bands.items()}
+    stats: dict[str, Any] = {"axis": axis, "n_detectors": n_detectors, "bands": {}}
+    for b in band_ids:
+        if b not in out:
+            continue
+        before = destripe_amplitude(out[b], n_detectors=n_detectors, axis=axis)
+        out[b] = destripe_moment_match(out[b], n_detectors=n_detectors, axis=axis)
+        after = destripe_amplitude(out[b], n_detectors=n_detectors, axis=axis)
+        stats["bands"][str(b)] = {
+            "amplitude_before": round(before, 6),
+            "amplitude_after": round(after, 6),
+        }
+    return out, stats
+
+
 def ast05_qa_good(qa: np.ndarray, max_adjacency: int = 1) -> np.ndarray:
     """Pixels usable from the AST_05 ``QA_DataPlane``.
 

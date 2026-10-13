@@ -20,5 +20,6 @@ dependencies:
       - spectral
       - matplotlib-scalebar
       - contextily
+      - pyarrow
       # Optional: live GEE parity (scripts/gee_parity_benchmark.py --gee)
       # - earthengine-api

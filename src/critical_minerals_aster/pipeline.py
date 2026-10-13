@@ -33,6 +33,7 @@ from critical_minerals_aster.spectral import (
     acquisition_token,
     alteration_indices,
     band_ratio,
+    destripe_emissivity_bands,
     granule_day_night,
     load_ast05_granule,
     clip_bands_to_bbox,
@@ -454,7 +455,7 @@ def save_classification_figure(
     plt.close()
 
 
-FIG03_VERSION = 12
+FIG03_VERSION = 13  # QI destriping on by default in AST_05 mosaic build
 
 # Provider terms require on-map attribution wherever tiles are displayed.
 _BASEMAP_ATTRIBUTION = {
@@ -1824,6 +1825,7 @@ def build_emissivity_index_mosaic(
     *,
     repo_root: Path,
     apply_surface_masks: bool = True,
+    destripe: bool = True,
 ) -> dict[str, Any]:
     """Per-granule QI/CI/MI on AST_05 emissivity, priority-stacked onto the bbox grid.
 
@@ -1833,15 +1835,22 @@ def build_emissivity_index_mosaic(
     than blending). Water and vegetated pixels (AG100 land/water map, mean
     NDVI > ``NDVI_VEGETATION_THRESHOLD``) are removed before classification,
     so the valid mask, the footprint and the null all exclude them.
+
+    When ``destripe`` is True (default), B10–B12 are moment-matched across the
+    10 TIR detectors before indices are computed, to suppress whiskbroom
+    striping that otherwise appears in QI.
     """
     import rasterio
 
     names = ("silica", "carbonate", "mafic", "b10")
     stacked: dict[str, np.ndarray] = {}
     grid = None
-    stats: dict[str, Any] = {"granules": [], "matching": []}
+    stats: dict[str, Any] = {"granules": [], "matching": [], "destripe": destripe}
     for i, gid in enumerate(granule_ids):
         bands, qa_good, transform, crs, _ = load_ast05_granule(src_dir, gid)
+        destripe_stats = None
+        if destripe:
+            bands, destripe_stats = destripe_emissivity_bands(bands)
         if grid is None:
             dst_transform, dst_shape = _target_grid(site.bbox_wgs84, crs, transform)
             grid = (dst_transform, dst_shape, crs)
@@ -1855,6 +1864,7 @@ def build_emissivity_index_mosaic(
             "granule_id": gid,
             "qa_good_frac_of_granule": round(float(qa_good.mean()), 4),
             "valid_frac_of_bbox": round(float(np.isfinite(layers["silica"]).mean()), 4),
+            "destripe": destripe_stats,
         })
         if i == 0:
             stacked = layers
@@ -1931,6 +1941,7 @@ def download_and_mosaic_ast05(
     day_night: str = "Day",
     out_dir: Path | None = None,
     mosaic_id: str | None = None,
+    destripe: bool = True,
 ) -> str:
     """Select, download (cached) and mosaic AST_05 emissivity for a site.
 
@@ -1966,7 +1977,8 @@ def download_and_mosaic_ast05(
             earthaccess.download(missing, str(out_dir), show_progress=False)
         granule_ids = [r["granule_id"] for r in selection.records]
         stats = build_emissivity_index_mosaic(
-            site, granule_ids, out_dir, out_dir, mosaic_id, repo_root=paths.repo_root
+            site, granule_ids, out_dir, out_dir, mosaic_id,
+            repo_root=paths.repo_root, destripe=destripe,
         )
         if best is None or stats["valid_frac_of_bbox_before_masks"] > best[1]["valid_frac_of_bbox_before_masks"]:
             best = (selection, stats)
@@ -1984,7 +1996,8 @@ def download_and_mosaic_ast05(
     best_ids = [r["granule_id"] for r in selection.records]
     if best_ids != granule_ids:
         stats = build_emissivity_index_mosaic(
-            site, best_ids, out_dir, out_dir, mosaic_id, repo_root=paths.repo_root
+            site, best_ids, out_dir, out_dir, mosaic_id,
+            repo_root=paths.repo_root, destripe=destripe,
         )
     stats["qa_excluded_granules"] = excluded
     payload = {
@@ -1996,6 +2009,12 @@ def download_and_mosaic_ast05(
         "union_bbox_coverage": round(selection.union_coverage, 4),
         "max_cloud_pct": DEFAULT_MAX_CLOUD_PCT,
         "qa_rule": "QA_DataPlane quality==0000, cloud==00, adjacency<=01; all bands in [0.5, 1.0]",
+        "destripe": {
+            "enabled": destripe,
+            "method": "moment_match_per_detector",
+            "n_detectors": 10,
+            "bands": [10, 11, 12],
+        },
         "indices": {"silica": "QI = B11^2/(B10*B12)", "carbonate": "CI = B13/B14",
                     "mafic": "MI = B12/B13"},
         "mosaicking": "priority stack, reference first; later granules mean/std-matched on overlap",

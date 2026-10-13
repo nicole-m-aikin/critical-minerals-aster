@@ -34,6 +34,16 @@ scratch_*
 *.scratch.log
 scripts/*.log
 
+# Agent implementation plans. Working notes, not part of the public method.
+docs/superpowers/
+
+# Regenerable EMIT pilot rasters and the prospectivity feature store / map GeoTIFFs.
+data/emit/
+data/prospectivity/
+
+# Local pre-destripe comparison tables. Same role as the other results/ baselines.
+results/_baseline_pre_destripe/
+
 # ---------------------------------------------------------------------------
 # Pre-publication / internal working material — NOT for the public portfolio repo.
 # These hold unpublished results, candid self-assessment, manuscript drafts, and

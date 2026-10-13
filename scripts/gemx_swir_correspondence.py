@@ -3,12 +3,18 @@
 Same pre-specified rules as the Goldfield test, on the shared 90 m grid
 where both TIR and SWIR are valid.  Not Tetracorder.
 
+Verdict heuristic (Al-OH primary) — see ``gemx_site_select.correspondence_verdict``:
+overlapping if Jaccard ≥ 0.15 or lift ≥ 1.3; complementary if Jaccard < 0.15
+and lift < 1.1; else insufficient (mixed / inconclusive); plus no_coverage / error.
+
 Usage:
     conda run -n aster-minerals python scripts/gemx_swir_correspondence.py --site marysvale
+    conda run -n aster-minerals python scripts/gemx_swir_correspondence.py --primary-fdr
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -33,14 +39,21 @@ from gemx_goldfield_correspondence import (  # noqa: E402
     _warp_class,
     median_enrichment,
 )
+from gemx_site_select import (  # noqa: E402
+    add_site_select_args,
+    aviris5_coverage_by_site,
+    correspondence_verdict,
+    resolve_pins,
+    sites_from_namespace,
+)
 from gemx_swir_pilot import (  # noqa: E402
-    SITE_PINS,
     _epsg_label,
     _hillshade_overlay,
     _load_hillshade,
     _load_site_basemap,
     _site_id_from_argv,
     _town_xy,
+    swir_tifs_exist,
 )
 
 
@@ -70,6 +83,12 @@ def _crs_epsg_from_aster(aster_dir: Path, site_id: str) -> int:
     return int(epsg)
 
 
+def _aster_dir(site) -> Path:
+    from critical_minerals_aster.paths import site_paths_for
+
+    return site_paths_for(site, ROOT).aster_dir
+
+
 def ensure_mosaic_cls(site) -> Path:
     """Write ``*_mosaic_cls_*.tif`` from existing ratio mosaics if missing.
 
@@ -80,7 +99,7 @@ def ensure_mosaic_cls(site) -> Path:
     from critical_minerals_aster.classification import classify_percentiles
     from critical_minerals_aster.spectral import load_ratio_mosaic
 
-    aster_dir = ROOT / "data" / "sites" / site.id / "aster"
+    aster_dir = _aster_dir(site)
     mosaic_id = f"{site.id}_mosaic"
     needed = [
         aster_dir / f"{mosaic_id}_cls_silica.tif",
@@ -129,7 +148,7 @@ def compute(site) -> tuple[dict, dict]:
     from rasterio.warp import Resampling
     from scipy.ndimage import distance_transform_edt
 
-    pins = SITE_PINS[site.id]
+    pins = resolve_pins(site, sites_dir=ROOT / "sites")
     aster_dir = ensure_mosaic_cls(site)
     swir_dir = ROOT / "data" / "gemx" / "aviris" / site.id
     crs_epsg = _crs_epsg_from_aster(aster_dir, site.id)
@@ -174,10 +193,12 @@ def compute(site) -> tuple[dict, dict]:
     dist_m = np.where(overlap, dist_m, np.nan)
 
     indices = {}
+    high_counts = {}
     for key, arr in depths.items():
         indices[key] = _index_block(arr, overlap, strong, key)
         p90 = indices[key]["overlap_p90"]
         high = overlap & np.isfinite(arr) & (arr >= p90)
+        high_counts[key] = int(np.count_nonzero(high))
         d_high = dist_m[high]
         d_all = dist_m[overlap]
         indices[key]["median_dist_m_high"] = float(np.nanmedian(d_high)) if d_high.size else None
@@ -188,6 +209,7 @@ def compute(site) -> tuple[dict, dict]:
         indices[key]["frac_overlap_within_500m"] = (
             float(np.mean(d_all <= 500.0)) if d_all.size else None
         )
+        indices[key]["n_high"] = high_counts[key]
 
     silica_idx = {
         key: _index_block(arr, overlap, silica_strong, key)
@@ -227,6 +249,7 @@ def compute(site) -> tuple[dict, dict]:
         "strong_score_min": STRONG_MIN,
         "n_overlap": int(np.count_nonzero(overlap)),
         "n_strong": int(np.count_nonzero(strong)),
+        "n_aloh_high": high_counts.get("aloh"),
         "n_silica_strong": int(np.count_nonzero(silica_strong)),
         "frac_strong_on_overlap": float(np.mean(strong[overlap])) if np.any(overlap) else None,
         "frac_silica_strong_on_overlap": (
@@ -272,7 +295,7 @@ def save_figure(site, stats: dict, arrays: dict) -> Path:
     from matplotlib_scalebar.scalebar import ScaleBar
     from rasterio.plot import plotting_extent
 
-    pins = SITE_PINS[site.id]
+    pins = resolve_pins(site, sites_dir=ROOT / "sites")
     crs = arrays["crs"]
     rgb, bbox_extent = _load_site_basemap(site.id)
     hillshade, hs_extent = _load_hillshade(site, crs)
@@ -430,18 +453,154 @@ def save_figure(site, stats: dict, arrays: dict) -> Path:
     return out
 
 
+def summary_row_from_stats(
+    stats: dict,
+    *,
+    status: str = "ok",
+    swir_coverage: float | None = None,
+) -> dict:
+    """Flatten correspondence stats into a host-vs-alteration CSV row."""
+    idx = stats.get("indices_in_strong") or {}
+    aloh = idx.get("aloh") or {}
+    kao = idx.get("kaolinite") or {}
+    alun = idx.get("alunite") or {}
+    j_aloh = aloh.get("jaccard_p90")
+    lift_aloh = aloh.get("lift_p90")
+    n_strong = stats.get("n_strong")
+    n_overlap = stats.get("n_overlap")
+    n_swir_high = aloh.get("n_high", stats.get("n_aloh_high"))
+    row = {
+        "site_id": stats.get("site_id"),
+        "status": status,
+        "swir_coverage": swir_coverage,
+        "jaccard_aloh": j_aloh,
+        "lift_aloh": lift_aloh,
+        "jaccard_kaolinite": kao.get("jaccard_p90"),
+        "jaccard_alunite": alun.get("jaccard_p90"),
+        "n_tir_strong": n_strong,
+        "n_swir_high": n_swir_high,
+        "n_overlap": n_overlap,
+    }
+    row["verdict"] = correspondence_verdict(
+        status=status,
+        swir_coverage=swir_coverage,
+        jaccard_aloh=j_aloh,
+        lift_aloh=lift_aloh,
+        n_overlap=n_overlap,
+        n_tir_strong=n_strong,
+    )
+    return row
+
+
+def run_site_correspondence(
+    site_id: str,
+    *,
+    write_figure: bool = True,
+    write_json: bool = True,
+) -> dict:
+    """Correspondence for one site; returns a status/verdict CSV row."""
+    from critical_minerals_aster.config import load_site_by_id
+
+    cov_map = aviris5_coverage_by_site(ROOT)
+    cov = cov_map.get(site_id, 0.0)
+    base = {
+        "site_id": site_id,
+        "status": "ok",
+        "swir_coverage": cov,
+        "jaccard_aloh": None,
+        "lift_aloh": None,
+        "jaccard_kaolinite": None,
+        "jaccard_alunite": None,
+        "n_tir_strong": None,
+        "n_swir_high": None,
+        "verdict": "no_coverage",
+    }
+    if cov <= 0 and not swir_tifs_exist(site_id):
+        base["status"] = "no_coverage"
+        base["verdict"] = "no_coverage"
+        print(f"[{site_id}] no AVIRIS-5 coverage", flush=True)
+        return base
+    if not swir_tifs_exist(site_id):
+        base["status"] = "insufficient"
+        base["verdict"] = "insufficient"
+        print(f"[{site_id}] SWIR GeoTIFFs missing", flush=True)
+        return base
+
+    site = load_site_by_id(site_id, ROOT / "sites")
+    try:
+        aster_dir = _aster_dir(site)
+        b10 = aster_dir / f"{site_id}_mosaic_TIR_B10.tif"
+        if not b10.is_file():
+            base["status"] = "insufficient"
+            base["verdict"] = "insufficient"
+            print(f"[{site_id}] TIR mosaic missing ({b10})", flush=True)
+            return base
+        stats, arrays = compute(site)
+        row = summary_row_from_stats(stats, status="ok", swir_coverage=cov)
+        if write_json:
+            stats_path = ROOT / "results" / f"{site_id}_correspondence.json"
+            stats_path.write_text(json.dumps(stats, indent=2))
+            print(f"[{site_id}] Wrote {stats_path.relative_to(ROOT)}", flush=True)
+        if write_figure:
+            try:
+                fig_path = save_figure(site, stats, arrays)
+                print(f"[{site_id}] Wrote {fig_path.relative_to(ROOT)}", flush=True)
+            except FileNotFoundError as exc:
+                print(f"[{site_id}] figure skipped: {exc}", flush=True)
+        return row
+    except Exception as exc:
+        base["status"] = "error"
+        base["verdict"] = "error"
+        base["error"] = str(exc)
+        print(f"[{site_id}] error: {exc}", flush=True)
+        return base
+
+
 def main() -> None:
     from critical_minerals_aster.config import load_site_by_id
 
-    site_id = _site_id_from_argv("marysvale")
-    site = load_site_by_id(site_id, ROOT / "sites")
-    stats, arrays = compute(site)
-    stats_path = ROOT / "results" / f"{site_id}_correspondence.json"
-    stats_path.write_text(json.dumps(stats, indent=2))
-    fig_path = save_figure(site, stats, arrays)
-    print(json.dumps(stats, indent=2))
-    print(f"Wrote {stats_path.relative_to(ROOT)}")
-    print(f"Wrote {fig_path.relative_to(ROOT)}")
+    parser = argparse.ArgumentParser(
+        description="ASTER strong zones vs AVIRIS-5 SWIR band-depth correspondence",
+    )
+    add_site_select_args(parser)
+    parser.add_argument("--skip-figure", action="store_true")
+    args = parser.parse_args()
+    if not any([args.site, args.sites, args.primary_fdr, args.all_covered]):
+        # Legacy default
+        site_ids = [_site_id_from_argv("marysvale")]
+    else:
+        site_ids = sites_from_namespace(args, ROOT)
+
+    rows = []
+    for sid in site_ids:
+        rows.append(
+            run_site_correspondence(
+                sid,
+                write_figure=not args.skip_figure,
+            )
+        )
+    if len(rows) == 1 and rows[0].get("status") == "ok":
+        # Keep single-site console dump of full JSON when present
+        site = load_site_by_id(rows[0]["site_id"], ROOT / "sites")
+        stats_path = ROOT / "results" / f"{site.id}_correspondence.json"
+        if stats_path.is_file():
+            print(stats_path.read_text())
+    elif len(rows) > 1:
+        import csv
+
+        out = ROOT / "results" / "gemx_host_vs_alteration.csv"
+        fields = [
+            "site_id", "status", "swir_coverage", "jaccard_aloh", "lift_aloh",
+            "jaccard_kaolinite", "jaccard_alunite", "n_tir_strong", "n_swir_high",
+            "verdict",
+        ]
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with out.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+            w.writeheader()
+            for r in rows:
+                w.writerow(r)
+        print(f"Wrote {out.relative_to(ROOT)} ({len(rows)} rows)")
 
 
 if __name__ == "__main__":

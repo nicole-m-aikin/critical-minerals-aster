@@ -199,8 +199,12 @@ All 109 sites were rebuilt with the following changes (`scripts/rebuild_emissivi
 
 Day mosaics: median 97.9% of the bbox QA-valid before masks. Only Duluth–South Kawishiwi (53%)
 and Tilly Foster (80%) are lower, both humid eastern sites. Vegetation masking matters mostly in
-the east (§2.6). The QI maps show faint cross-track detector striping, inherited from B10/B11
-emissivity (e.g. `figures/sites/pioche/01_tir_band_ratios.png`). No destriping was applied.
+the east (§2.6). QI whiskbroom striping is suppressed by moment-matching B10–B12 across the 10
+TIR detectors before indices (`destripe_moment_match`, default on; see
+`figures/verification_destripe_pioche.png` — native-granule QI amplitude 0.0033 → 0.00002).
+Disable with `--no-destripe` on `rebuild_emissivity_mosaics.py`. After the destriped rebuild
+(2026-10-12), the primary FDR set is still **19** sites (magdalena_kelly left; hanover_fierro
+joined); 10 remain clustering-robust.
 
 **Result** (`results/phase4_fdr_corrected_significance.csv`, 108 testable sites):
 
@@ -267,6 +271,22 @@ AG100 FDR):
 These are acquisition checks. The data-verification tests in §3 add lithology, mine-waste and
 record-quality checks. The combined table (§3.5a) leaves Providence Mountains as the only site that
 passes everything; Courtland-Gleeson and Pioche fail the 8-class lithology null.
+
+**GEMx SWIR host-vs-alteration (FDR cohort + 109-site census).**
+FDR batch: `scripts/gemx_host_vs_alteration.py --primary-fdr` →
+`results/gemx_host_vs_alteration.csv`, figure `figures/verification_tir_swir_combined.png`.
+Among the 19 primary FDR sites: **14 complementary**, 2 insufficient, 3 no AVIRIS-5,
+**0 overlapping**.
+
+National census: `scripts/gemx_census_manifest.py` + `scripts/gemx_census_build.py` +
+`scripts/gemx_deposit_comparison.py` → `results/gemx_census_*.csv` /
+`figures/verification_tir_swir_census_deposit_comparison.png`. Frame = all 109 sites;
+**71 covered / 38 no SWIR**. Dual-sensor ingest supports AVIRIS-5 L2A netCDF and
+AVIRIS-Classic L2 ENVI. Equal-area deposit comparison (processed subset): TIR and SWIR hit
+rates are similar (~28–29%), but TIR is nearer at 13/18 sites. Missing SWIR is
+geographically clustered (humid/eastern), so the 71 are not a random sample of the 109.
+AZGS OFR-20-02 GeoPackage for Courtland still needs a manual drop into `data/lithology/` for
+the finer-geology null. NBMG 24k covers only ~19% of the Pioche footprint.
 
 ![Day vs night](../figures/verification_day_night_replication.png)
 

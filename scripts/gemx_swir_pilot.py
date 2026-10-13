@@ -1,15 +1,17 @@
-"""AVIRIS-5 Al-OH / kaolinite / alunite mosaic onto an ASTER study bbox.
+"""AVIRIS Al-OH / kaolinite / alunite mosaic onto an ASTER study bbox.
 
-Same chain as the Goldfield pilot, parameterized by ``--site``.
-Not Tetracorder.  Not a drill target.
+Collection-aware: census selects AVIRIS-5 or Classic per site.  Batch-capable
+via ``--primary-fdr`` / ``--all-covered`` / ``--sites``.  Not Tetracorder.
 
 Usage:
     conda run -n aster-minerals python scripts/gemx_swir_pilot.py --site marysvale
     conda run -n aster-minerals python scripts/gemx_swir_pilot.py --site marysvale --from-tif
+    conda run -n aster-minerals python scripts/gemx_swir_pilot.py --primary-fdr --from-tif
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -18,13 +20,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "src"))
 
 from critical_minerals_aster.aviris import (
-    download_rfl_ort,
+    COLLECTION_GSD_M,
+    COLLECTION_SENSORS,
+    download_swir_product,
     mosaic_to_bbox,
-    read_rfl_subset,
+    read_swir_subset,
     select_granules_painting_bbox,
+    wavelength_targets_ok,
     write_geotiff,
 )
 from critical_minerals_aster.config import load_site_by_id
@@ -36,33 +42,19 @@ from critical_minerals_aster.hyperspectral import (
     continuum_removed_band_depth,
     doublet_score,
 )
+from gemx_site_select import (  # noqa: E402
+    AVIRIS5_COLLECTION,
+    SITE_PINS,
+    add_site_select_args,
+    aviris5_coverage_by_site,
+    census_collection_by_site,
+    resolve_pins,
+    select_census_collection,
+    sites_from_namespace,
+)
 
-# Town / deposit pins (lon, lat).  Real GNIS / published points, not bbox edges.
-SITE_PINS = {
-    "goldfield": {
-        "town": (-117.23563, 37.70854),
-        "town_label": "Goldfield",
-        "target": (-117.14341, 37.71938),
-        "target_label": "district",
-    },
-    "marysvale": {
-        "town": (-112.2302, 38.4494),
-        "town_label": "Marysvale",
-        "target": (-112.33257, 38.38160),
-        "target_label": "Alunite Ridge",
-    },
-    # GNIS populated place Bodie (1658094) and GNIS cliff Bodie Bluff
-    # (219578). Low-sulfidation negative control: alunite-like should
-    # stay rare. Not a high-sulfidation analog.
-    "bodie": {
-        "town": (-119.01209, 38.21214),
-        "town_label": "Bodie",
-        "town_offset": (-10, -10),
-        "target": (-119.00125, 38.21964),
-        "target_label": "Bodie Bluff",
-        "target_offset": (10, 8),
-    },
-}
+# Re-export for gemx_swir_sensitivity / correspondence imports.
+__all__ = ["SITE_PINS", "resolve_pins", "main", "run_site", "swir_tifs_exist"]
 
 SHOULDERS = ALOH_CONTINUUM_NM
 TARGETS = (
@@ -77,6 +69,7 @@ TARGETS = (
 
 
 def _site_id_from_argv(default: str = "marysvale") -> str:
+    """Legacy single-site argv parse (kept for sensitivity scripts)."""
     if "--site" in sys.argv:
         i = sys.argv.index("--site")
         if i + 1 < len(sys.argv):
@@ -84,14 +77,31 @@ def _site_id_from_argv(default: str = "marysvale") -> str:
     return default
 
 
-def _paths(site_id: str) -> dict:
+def _paths(site_id: str, collection_key: str = AVIRIS5_COLLECTION) -> dict:
     return {
-        "cache": ROOT / "data" / "gemx" / "cmr_cache" / f"{site_id}__aviris5_l2a_rfl.json",
+        "collection_key": collection_key,
+        "sensor": COLLECTION_SENSORS.get(collection_key, collection_key),
+        "cache": ROOT / "data" / "gemx" / "cmr_cache" / f"{site_id}__{collection_key}.json",
         "out": ROOT / "data" / "gemx" / "aviris" / site_id,
         "fig": ROOT / "figures" / f"gemx_{site_id}_aloh.png",
         "stats": ROOT / "results" / f"gemx_{site_id}_pilot.json",
+        "provenance": ROOT / "results" / f"gemx_{site_id}_swir_provenance.json",
         "basemap": ROOT / "data" / "basemap" / site_id / "rgb.tif",
     }
+
+
+def _census_pick(site_id: str) -> tuple[str, float, str] | None:
+    picked = census_collection_by_site(ROOT)
+    return picked.get(site_id)
+
+
+SWIR_KEYS = ("aloh", "kaolinite", "alunite")
+
+
+def swir_tifs_exist(site_id: str, paths: dict | None = None) -> bool:
+    """True if Al-OH / kaolinite / alunite GeoTIFFs are already on disk."""
+    p = paths or _paths(site_id)
+    return all((p["out"] / f"{site_id}_{key}.tif").is_file() for key in SWIR_KEYS)
 
 
 def _depth_at(stack, actual_w, feature_nm):
@@ -213,7 +223,7 @@ def _save_figure(panels, transform, crs, site, stats: dict, fig_path: Path) -> P
 
     from critical_minerals_aster.spectral import compute_valid_data_footprint
 
-    pins = SITE_PINS[site.id]
+    pins = resolve_pins(site, sites_dir=ROOT / "sites")
     titles = {
         "aloh": "a  Any Al–OH clay\n(one dip at 2.20 μm)",
         "kaolinite": "b  Kaolinite-like\n(both 2.16 and 2.21 μm)",
@@ -367,39 +377,161 @@ def _figure_from_tifs(site, paths: dict) -> Path:
     return _save_figure(panels, transform, crs, site, stats, paths["fig"])
 
 
-def main(site_id: str) -> None:
-    if site_id not in SITE_PINS:
-        raise SystemExit(f"unknown site {site_id!r}; known: {sorted(SITE_PINS)}")
+def run_site(
+    site_id: str,
+    *,
+    from_tif: bool = False,
+    skip_if_no_coverage: bool = True,
+) -> dict:
+    """Run band-depth mosaic (or figure-from-tif) for one site.
+
+    Returns a status dict suitable for batch CSV rows.  Does not raise on
+    missing coverage when ``skip_if_no_coverage`` is True.
+    """
     site = load_site_by_id(site_id, ROOT / "sites")
-    pins = SITE_PINS[site_id]
-    paths = _paths(site_id)
+    pins = resolve_pins(site, sites_dir=ROOT / "sites")
+    pick = _census_pick(site_id)
+    if pick is None:
+        row = {
+            "site_id": site_id,
+            "status": "no_coverage",
+            "swir_coverage": 0.0,
+            "collection": "",
+            "sensor": "",
+            "pins_source": pins.get("pins_source", "site_pins"),
+        }
+        if skip_if_no_coverage:
+            print(f"[{site_id}] skip: no full-SWIR coverage", flush=True)
+            return row
+        raise FileNotFoundError(f"{site_id}: no full-SWIR census collection")
+    collection_key, cov, sensor = pick
+    paths = _paths(site_id, collection_key)
+
+    row = {
+        "site_id": site_id,
+        "status": "ok",
+        "swir_coverage": cov,
+        "collection": collection_key,
+        "sensor": sensor,
+        "pins_source": pins.get("pins_source", "site_pins"),
+    }
+
+    have_tifs = swir_tifs_exist(site_id, paths)
+    # Existing AVIRIS-5 TIFFs are only resumable when census selected AVIRIS-5.
+    if have_tifs and collection_key != AVIRIS5_COLLECTION:
+        # Allow resume for Classic only when a provenance file matches.
+        prov = paths["provenance"]
+        if prov.is_file():
+            import json as _json
+            meta = _json.loads(prov.read_text())
+            if meta.get("collection") == collection_key:
+                pass  # OK to resume
+            else:
+                have_tifs = False
+        else:
+            # Legacy AVIRIS-5 TIFFs under a Classic census pick need reprocess.
+            have_tifs = False
+    if skip_if_no_coverage and cov <= 0 and not have_tifs:
+        row["status"] = "no_coverage"
+        print(f"[{site_id}] skip: no SWIR coverage", flush=True)
+        return row
+
+    # Resume: existing GeoTIFFs skip multi-GB cube download.
+    if have_tifs:
+        try:
+            fig_path = _figure_from_tifs(site, paths)
+            print(f"[{site_id}] Wrote {fig_path.relative_to(ROOT)} (from-tif)", flush=True)
+            row["status"] = "ok_from_tif"
+        except Exception as exc:
+            row["status"] = "error"
+            row["error"] = str(exc)
+            print(f"[{site_id}] error: {exc}", flush=True)
+        return row
+
+    if from_tif:
+        row["status"] = "insufficient"
+        print(f"[{site_id}] --from-tif but GeoTIFFs missing", flush=True)
+        return row
+
+    if not paths["cache"].is_file() and cov <= 0:
+        row["status"] = "no_coverage"
+        print(f"[{site_id}] skip: no CMR cache / coverage", flush=True)
+        return row
+
+    try:
+        main(site_id, collection_key=collection_key)
+        row["status"] = "ok"
+    except Exception as exc:
+        row["status"] = "error"
+        row["error"] = str(exc)
+        print(f"[{site_id}] error: {exc}", flush=True)
+    return row
+
+
+def main(site_id: str, collection_key: str | None = None) -> None:
+    site = load_site_by_id(site_id, ROOT / "sites")
+    pins = resolve_pins(site, sites_dir=ROOT / "sites")
+    if collection_key is None:
+        pick = _census_pick(site_id)
+        if pick is None:
+            raise FileNotFoundError(f"{site_id}: no full-SWIR census collection")
+        collection_key, cov, sensor = pick
+    else:
+        sensor = COLLECTION_SENSORS.get(collection_key, collection_key)
+        cov = None
+    paths = _paths(site_id, collection_key)
+    resolution = float(COLLECTION_GSD_M.get(collection_key, 10.0))
     town = pins["town"]
     target = pins["target"]
+    if not paths["cache"].is_file():
+        raise FileNotFoundError(
+            f"missing CMR cache {paths['cache']}; "
+            "run gemx_coverage_report first or place the cache JSON"
+        )
     granules = select_granules_painting_bbox(
         paths["cache"], site.bbox_wgs84, must_contain=(town, target), min_gain=0.02,
     )
     if not granules:
-        raise FileNotFoundError("no AVIRIS-5 footprint intersects the ASTER study bbox")
-    print(f"Granules painting the ASTER bbox ({len(granules)}):")
+        raise FileNotFoundError(
+            f"no {sensor} footprint intersects the ASTER study bbox"
+        )
+    print(f"{sensor} granules painting the ASTER bbox ({len(granules)}):")
     for g in granules:
         print(f"  {g}")
 
-    per_scene = {k: [] for k in ("aloh", "kaolinite", "alunite")}
+    per_scene = {k: [] for k in SWIR_KEYS}
     transforms = []
-    nc_paths = []
+    product_paths = []
     wavelengths = None
     features = None
     crs = None
     used = []
     for granule_ur in granules:
         try:
-            nc_path = download_rfl_ort(granule_ur, paths["out"])
-            stack, actual_w, transform, crs = read_rfl_subset(nc_path, TARGETS)
+            product = download_swir_product(
+                granule_ur, paths["out"], collection_key=collection_key,
+            )
+            if collection_key == AVIRIS5_COLLECTION:
+                cube_path = product
+                hdr_path = None
+            else:
+                hdr_path, cube_path = product
+            stack, actual_w, transform, crs = read_swir_subset(
+                cube_path, TARGETS, collection_key=collection_key, hdr_path=hdr_path,
+            )
+            if not wavelength_targets_ok(actual_w, TARGETS):
+                raise ValueError("insufficient_spectral_sampling")
         except Exception as exc:
             print(f"  skip {granule_ur}: {exc}", flush=True)
             continue
         used.append(granule_ur)
-        nc_paths.append(str(nc_path.relative_to(ROOT)))
+        if collection_key == AVIRIS5_COLLECTION:
+            product_paths.append(str(Path(cube_path).relative_to(ROOT)))
+        else:
+            product_paths.append({
+                "hdr": str(Path(hdr_path).relative_to(ROOT)),
+                "bin": str(Path(cube_path).relative_to(ROOT)),
+            })
         print(f"{granule_ur} wavelengths (nm):",
               ", ".join(f"{w:.1f}" for w in actual_w), flush=True)
         panels, features = _indices_for_cube(stack, actual_w)
@@ -408,19 +540,22 @@ def main(site_id: str) -> None:
         transforms.append(transform)
         wavelengths = [float(x) for x in actual_w]
     if not used:
-        raise RuntimeError("no AVIRIS-5 cubes could be read")
+        raise RuntimeError(f"no {sensor} cubes could be read")
 
     mosaics = {}
     mosaic_t = mosaic_crs = None
     for key, layers in per_scene.items():
         mosaics[key], mosaic_t, mosaic_crs = mosaic_to_bbox(
-            layers, transforms, crs, site.bbox_wgs84, resolution=10.0,
+            layers, transforms, crs, site.bbox_wgs84, resolution=resolution,
         )
 
     stats = {
         "site_id": site_id,
+        "collection": collection_key,
+        "sensor": sensor,
+        "swir_coverage": cov,
         "granule_ur": used,
-        "nc_path": nc_paths,
+        "product_paths": product_paths,
         "wavelengths_nm": wavelengths,
         "features_used_nm": features,
         "crs": _epsg_label(mosaic_crs),
@@ -429,22 +564,29 @@ def main(site_id: str) -> None:
         "target_lon": target[0],
         "target_lat": target[1],
         "target_label": pins["target_label"],
-        "bbox_centroid": [
-            (site.bbox_wgs84[0] + site.bbox_wgs84[2]) / 2,
-            (site.bbox_wgs84[1] + site.bbox_wgs84[3]) / 2,
-        ],
+        "pins_source": pins.get("pins_source", "site_pins"),
+        "bbox_centroid": list(bbox_centroid_xy(site)),
         "site_bbox_wgs84": list(site.bbox_wgs84),
-        "mosaic_resolution_m": 10.0,
+        "mosaic_resolution_m": resolution,
         "mosaic_bbox_frac": float(np.mean(np.isfinite(next(iter(mosaics.values()))))),
         "indices_site_bbox": {k: _summarize(k, v) for k, v in mosaics.items()},
         "note": (
-            "AVIRIS-5 mosaic onto site.bbox_wgs84, same window as the ASTER "
+            f"{sensor} mosaic onto site.bbox_wgs84, same window as the ASTER "
             "figures. Greedy bbox set-cover seeded with town and the science "
             "target. First finite pixel wins. Not Tetracorder."
         ),
     }
     paths["stats"].parent.mkdir(parents=True, exist_ok=True)
     paths["stats"].write_text(json.dumps(stats, indent=2))
+    paths["provenance"].write_text(json.dumps({
+        "site_id": site_id,
+        "collection": collection_key,
+        "sensor": sensor,
+        "granule_ur": used,
+        "mosaic_resolution_m": resolution,
+        "wavelengths_nm": wavelengths,
+        "features_used_nm": features,
+    }, indent=2))
     print("on ASTER bbox:", json.dumps(stats["indices_site_bbox"], indent=2))
     for key, arr in mosaics.items():
         write_geotiff(paths["out"] / f"{site_id}_{key}.tif", arr, mosaic_t, mosaic_crs)
@@ -453,11 +595,31 @@ def main(site_id: str) -> None:
     print(f"Wrote {fig_path.relative_to(ROOT)}")
 
 
+def bbox_centroid_xy(site) -> tuple[float, float]:
+    from gemx_site_select import bbox_centroid
+
+    return bbox_centroid(site.bbox_wgs84)
+
+
+def _build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        description="AVIRIS-5 Al-OH / kaolinite / alunite mosaic on ASTER bbox",
+    )
+    add_site_select_args(p)
+    p.add_argument(
+        "--from-tif",
+        action="store_true",
+        help="Rebuild figures from existing GeoTIFFs; skip cube download",
+    )
+    return p
+
+
 if __name__ == "__main__":
-    site_id = _site_id_from_argv("marysvale")
-    site = load_site_by_id(site_id, ROOT / "sites")
-    if "--from-tif" in sys.argv:
-        path = _figure_from_tifs(site, _paths(site_id))
-        print(f"Wrote {path.relative_to(ROOT)}")
+    args = _build_parser().parse_args()
+    # Backward-compatible default: single marysvale when no selection flags.
+    if not any([args.site, args.sites, args.primary_fdr, args.all_covered]):
+        site_ids = ["marysvale"]
     else:
-        main(site_id)
+        site_ids = sites_from_namespace(args, ROOT)
+    for sid in site_ids:
+        run_site(sid, from_tif=args.from_tif)

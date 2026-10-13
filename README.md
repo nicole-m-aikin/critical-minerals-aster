@@ -5,7 +5,7 @@
 ![109 sites](https://img.shields.io/badge/sites-109-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Systematic TIR alteration screening across **109 US critical-mineral districts** from ASTER surface emissivity, validated against USGS MRDS deposit records under a corrected statistical framework: a **bedrock/cover-stratified site-specific null**, **BH-FDR** multiple-testing correction across both a binomial and a threshold-free continuous-score test, **spatial-clustering declustering** of MRDS records, and classification-threshold sensitivity analysis. 58 of the 109 sites were added in a pre-registered expansion — each carries a written detectability expectation (`results/deposit_system_categories.csv`) recorded before its imagery was processed.
+Systematic **TIR host-rock screening** across **109 US critical-mineral districts** from ASTER surface emissivity, with a **GEMx SWIR clay check** where AVIRIS-5 flew, validated against USGS MRDS under a corrected statistical framework: a **bedrock/cover-stratified site-specific null**, **BH-FDR** multiple-testing correction across both a binomial and a threshold-free continuous-score test, **spatial-clustering declustering** of MRDS records, and classification-threshold sensitivity analysis. 58 of the 109 sites were added in a pre-registered expansion — each carries a written detectability expectation (`results/deposit_system_categories.csv`) recorded before its imagery was processed.
 
 **Zero-credential demo** (no EarthData account or rasters required):
 ```bash
@@ -54,14 +54,17 @@ temperature ([`docs/data_verification.md`](docs/data_verification.md) §2.4–2.
   of each humid skarn control.
 - **Single-scene results are acquisition-sensitive:** day–night site enrichment agrees only
   moderately (ρ 0.35), and 11 of the 20 radiance-era FDR sites did not reproduce.
-- **GEMx / AVIRIS coverage (inventory, not a mineral result):** 71 / 109 sites, including 17 of
-  the 19 primary sites, so SWIR can test alteration-specificity there. See
-  [`docs/results.md`](docs/results.md#gemx--aviris-coverage).
+- **Combined method:** ASTER TIR as the arid **host-rock filter**; GEMx SWIR as the
+  **clay-alteration check**. FDR cohort: **14/19 complementary**, 0 overlapping
+  (`figures/verification_tir_swir_combined.png`). Equal-area census on the 40 processed
+  shared footprints: SWIR hit rate 30.4% vs TIR 21.2% at the same map area, and TIR is
+  nearer at 25 of 40 sites. 71/109 sites have SWIR coverage; 38 have none
+  (`figures/verification_tir_swir_census_deposit_comparison.png`).
 - **Discovery-era split:** both cohorts are enriched by similar amounts (pre-1950 1.39×, post-1950
   1.32×). This is secondary, with ~14% dated coverage.
 
-The method acts as a **deposit-type selector and host-package targeting tool, not a demonstrated
-alteration detector** ([`docs/results.md`](docs/results.md#limitations)).
+The method is a **two-sensor screen** (TIR host → SWIR clay), not a single fused ore detector
+([`docs/results.md`](docs/results.md)).
 
 ---
 
@@ -76,9 +79,15 @@ alteration detector** ([`docs/results.md`](docs/results.md#limitations)).
 | MRDS national deposit database | USGS mrdata.usgs.gov | deposit records across 109 bboxes |
 | USGS Quaternary Faults | USGS QFAULTS REST API | Most sites |
 | USGS SGMC fault data | USGS FeatureServer | All-age faults for select sites |
-| GEMx / AVIRIS / MASTER | NASA CMR / ORNL DAAC (Earth MRI) | Footprints at 71 / 109 sites; one Goldfield AVIRIS-5 scene has band-depth indices. No USGS derived mineral maps ingested. |
+| GEMx / AVIRIS / MASTER | NASA CMR / ORNL DAAC (Earth MRI) | Footprints at 71 / 109 sites; census picks AVIRIS-5 or Classic per site (`results/gemx_census_manifest.csv`). Band-depth indices, not USGS mineral maps. |
 
-**Note on SWIR availability:** ASTER SWIR bands (B04–B09), standard for clay/argillic mapping, are not available in LP DAAC v004 for these areas. TIR bands (B10–B14, 8–12 µm) are used instead. USGS Earth MRI's GEMx campaign (AVIRIS-C / AVIRIS-5, 2023–) supplies the SWIR that ASTER cannot: 71 sites have usable flight-line coverage, including 24 of the 28 epithermal and porphyry nulls. A one-scene Goldfield pilot now maps Al-OH plus kaolinite-like and alunite-like doublets; that is a band-depth index, not Tetracorder, and not a 24-site test.
+**Note on SWIR availability:** ASTER SWIR bands (B04–B09) are unavailable in LP DAAC v004. TIR is the 109-site host filter; GEMx AVIRIS-5 / Classic supply the clay check on 71 sites (38 uncovered). Band-depth indices, not Tetracorder. Resume downloads with `scripts/gemx_census_build.py`.
+
+**Early-exploration prospectivity ML** (sensor-agnostic triage ranker, not drill targets):
+see [`docs/prospectivity_ml.md`](docs/prospectivity_ml.md). Feature store + site-/era-blocked
+GBM MVP live under `src/critical_minerals_aster/prospectivity/` and
+`scripts/prospectivity_*.py`. Global HSI inventory starts with EMIT
+(`scripts/emit_coverage_inventory.py`).
 
 ---
 

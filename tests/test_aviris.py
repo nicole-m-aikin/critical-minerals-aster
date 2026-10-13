@@ -72,3 +72,31 @@ def test_select_granules_painting_bbox_greedy_and_seeds(tmp_path):
     assert "west" in picked
     assert "east" in picked
     assert "west_dup" not in picked
+
+
+def test_select_granules_seeds_at_most_one_per_point(tmp_path):
+    """Overlapping Classic strips through a town must not all be force-seeded."""
+    import json
+
+    cache = tmp_path / "cache.json"
+    # Three strips all contain (0, 0.5); mid has the largest site intersection.
+    cache.write_text(json.dumps([
+        {"granule_ur": "narrow",
+         "geometry_wkt": "POLYGON ((-0.1 0, 0.1 0, 0.1 1, -0.1 1, -0.1 0))"},
+        {"granule_ur": "mid",
+         "geometry_wkt": "POLYGON ((-0.5 0, 0.5 0, 0.5 1, -0.5 1, -0.5 0))"},
+        {"granule_ur": "wide",
+         "geometry_wkt": "POLYGON ((-0.3 0, 0.3 0, 0.3 1, -0.3 1, -0.3 0))"},
+        {"granule_ur": "east_fill",
+         "geometry_wkt": "POLYGON ((0.6 0, 1.5 0, 1.5 1, 0.6 1, 0.6 0))"},
+    ]))
+    bbox = (-1.0, 0.0, 1.5, 1.0)
+    picked = select_granules_painting_bbox(
+        cache, bbox, must_contain=((0.0, 0.5),), min_gain=0.05,
+    )
+    assert picked.count("mid") == 1
+    assert "narrow" not in picked or picked.index("narrow") > 0
+    # Only one of the three town-overlapping strips is seeded (the largest).
+    seeded_town = [g for g in picked if g in {"narrow", "mid", "wide"}]
+    assert seeded_town[0] == "mid"
+    assert len(set(seeded_town) & {"narrow", "mid", "wide"}) >= 1

@@ -132,7 +132,7 @@ def _archive_l1t(aster_dir: Path) -> int:
     return len(files)
 
 
-def build_site(site_id: str, day_night: str, skip_figures: bool) -> str:
+def build_site(site_id: str, day_night: str, skip_figures: bool, destripe: bool = True) -> str:
     import earthaccess
 
     earthaccess.login(strategy="netrc")
@@ -140,14 +140,18 @@ def build_site(site_id: str, day_night: str, skip_figures: bool) -> str:
     paths = site_paths_for(site, REPO)
     if day_night == "Night":
         out = night_dir(site_id)
-        download_and_mosaic_ast05(site, paths, interactive_login=False, day_night="Night",
-                                  out_dir=out, mosaic_id=f"{site_id}_night_mosaic")
+        download_and_mosaic_ast05(
+            site, paths, interactive_login=False, day_night="Night",
+            out_dir=out, mosaic_id=f"{site_id}_night_mosaic", destripe=destripe,
+        )
         return "night mosaic built"
     paths.aster_dir.mkdir(parents=True, exist_ok=True)
     moved = _archive_l1t(paths.aster_dir)
-    gid = download_and_mosaic_ast05(site, paths, interactive_login=False)
+    gid = download_and_mosaic_ast05(
+        site, paths, interactive_login=False, destripe=destripe,
+    )
     run_site(site, REPO, download=False, skip_figures=skip_figures)
-    return f"{gid} ({moved} L1T files archived)"
+    return f"{gid} ({moved} L1T files archived; destripe={destripe})"
 
 
 def _run_parallel(fn, site_ids: list[str], workers: int, *args) -> list[str]:
@@ -174,18 +178,23 @@ def main(argv: list[str] | None = None) -> int:
     mode.add_argument("--execute", action="store_true", help="Build mosaics (+ pipeline for day)")
     ap.add_argument("--night", action="store_true", help="Night replication instead of day")
     ap.add_argument("--skip-figures", action="store_true")
+    ap.add_argument("--no-destripe", action="store_true",
+                    help="Skip TIR detector moment-matching (default: destripe on)")
     ap.add_argument("--workers", type=int, default=4)
     args = ap.parse_args(argv)
 
     site_ids = list_site_ids(REPO / "sites") if args.all else args.sites
     day_night = "Night" if args.night else "Day"
+    destripe = not args.no_destripe
     if args.prefetch:
         import earthaccess
 
         earthaccess.login(strategy="netrc")
         failed = _run_parallel(prefetch_site, site_ids, args.workers, day_night)
     elif args.execute:
-        failed = _run_parallel(build_site, site_ids, args.workers, day_night, args.skip_figures)
+        failed = _run_parallel(
+            build_site, site_ids, args.workers, day_night, args.skip_figures, destripe,
+        )
     else:
         write_plan(site_ids, day_night)
         return 0

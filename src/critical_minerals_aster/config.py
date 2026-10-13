@@ -46,6 +46,9 @@ class SiteConfig:
     # Default 150 accepts both so all coverage-qualifying granules are used.
     # Override per-site in YAML only if download bandwidth is a hard constraint.
     max_bundle_mb: float = 150.0
+    # Optional finer geology for lithology-conditioned nulls:
+    # sgmc | nbmg_100k | tx_250k | azgs_local | auto (see fine_geology.py).
+    lithology_source: str | None = None
 
 
 def _as_classification(obj: Any) -> ClassificationParams:
@@ -102,6 +105,7 @@ def load_site_config(path: Union[str, Path]) -> SiteConfig:
         temporal_end=temporal.get("end", "2023-12-31"),
         structure_layers=_as_structure_layers(raw.get("structure_layers")),
         max_bundle_mb=float(raw.get("max_bundle_mb", 150.0)),
+        lithology_source=raw.get("lithology_source") or None,
     )
 
 

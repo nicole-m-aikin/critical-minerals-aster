@@ -11,6 +11,10 @@ Stoeser 2017, USGS DS 1052, doi:10.5066/F7WH2N65), polygon layer 3
 ``SGMC_Geology`` of the ScienceBase-hosted ArcGIS FeatureServer. Source map
 scales range 1:50,000-1:1,000,000 (most western states ~1:500,000).
 
+Finer-scale loaders (NBMG 1:100k, Texas 1:250k, local AZGS GeoPackage) live in
+``fine_geology.load_fine_units`` and map attributes onto the same
+``GENERALIZED_LITH`` / ``lith_class`` scheme used here.
+
 Functions
 ---------
 fetch_sgmc_units          — paged, bbox-bounded FeatureServer query (retries/backoff)
